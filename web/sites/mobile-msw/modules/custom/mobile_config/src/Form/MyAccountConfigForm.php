@@ -289,6 +289,30 @@ class MyAccountConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['verify_password_group']['modal_header'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal header blurb'),
+      '#default_value' => $this->get('modal_header'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['modal_top'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal top blurb'),
+      '#default_value' => $this->get('modal_top'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['modal_bottom'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal bottom blurb'),
+      '#default_value' => $this->get('modal_bottom'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
     $form['verify_password_group']['message_timeout'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Message timeout'),
