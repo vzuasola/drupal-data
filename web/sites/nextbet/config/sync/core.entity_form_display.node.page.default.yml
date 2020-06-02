@@ -16,6 +16,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.page
   module:
+    - conditional_fields
     - entity_reference_views_select
     - field_group
     - image
@@ -192,7 +193,8 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
   promote:
     type: boolean_checkbox
     settings:
