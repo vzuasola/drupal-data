@@ -83,3 +83,19 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
       ];
     }
 }
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_webcomposer_form_validation_alter().
+ */
+function mobile_config_webcomposer_form_validation_alter(&$validations) {
+  // confirm password validation
+  $validations['match_password'] = [
+    'title' => 'Validate password to be match',
+    'description' => 'Validation for password if match',
+    'error' => 'Password not match',
+  ];
+}
