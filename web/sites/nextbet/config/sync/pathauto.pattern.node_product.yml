@@ -1,24 +1,22 @@
-uuid: 4df40dcf-d0f9-4a00-9f03-afe183918527
+uuid: 3918e0bf-45cb-417d-b6bb-d7c61218a229
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node_pattern
-label: 'node pattern'
+id: node_product
+label: 'node alias override'
 type: 'canonical_entities:node'
-pattern: '/[node:title]'
+pattern: '/[node:field_product]/[node:title]'
 selection_criteria:
-  2b7b4cc9-524a-41da-ba6b-a723c7aa47da:
+  21c658c8-a188-4f29-8f6c-c46ed5e57bdd:
     id: node_type
     bundles:
-      game: game
       page: page
-      promotion: promotion
     negate: false
     context_mapping:
       node: node
-    uuid: 2b7b4cc9-524a-41da-ba6b-a723c7aa47da
+    uuid: 21c658c8-a188-4f29-8f6c-c46ed5e57bdd
 selection_logic: and
-weight: -9
+weight: -10
 relationships: {  }
