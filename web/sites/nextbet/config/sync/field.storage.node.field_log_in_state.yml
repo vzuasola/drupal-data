@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - node
-    - radio
+    - options
 _core:
   default_config_hash: xbXZuyY-5CrGwmknDU3EbJgro5ZgvgCTd8TDbBTra_4
 id: node.field_log_in_state
@@ -23,7 +23,7 @@ settings:
       value: '2'
       label: Both
   allowed_values_function: ''
-module: radio
+module: options
 locked: false
 cardinality: 1
 translatable: true
