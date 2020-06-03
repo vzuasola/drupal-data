@@ -23,7 +23,7 @@ settings:
       value: '2'
       label: Both
   allowed_values_function: ''
-module: options
+module: radio
 locked: false
 cardinality: 3
 translatable: true

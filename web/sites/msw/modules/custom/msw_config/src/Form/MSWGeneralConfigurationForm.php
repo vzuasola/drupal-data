@@ -87,6 +87,22 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#default_value' => $this->get('registration_keep_alive_url'),
       '#translatable' => TRUE,
     ];
-  }
 
+    $form['registration_setting']['registration']['registation_icore_error_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Icore Error Mapping'),
+      '#default_value' => $this->get('registation_icore_error_mapping'),
+      '#description' => $this->t('Icore Registration Response Code Mapping Message. Format example: {StatusCode}|{Message}'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['registration_setting']['registration']['registration_jpay_integration'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Jpay Integration'),
+      '#default_value' => $this->get('registration_jpay_integration'),
+      '#description' => $this->t('JPay API url for registration account creation.'),
+      '#required' => TRUE,
+    ];
+  }
 }

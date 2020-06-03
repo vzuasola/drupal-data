@@ -53,6 +53,7 @@ module:
   mobile_promotions: 0
   mobile_slots: 0
   mobile_sponsor_list_v2: 0
+  nextbet_forms: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -87,6 +88,7 @@ module:
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
   webcomposer_editor: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
