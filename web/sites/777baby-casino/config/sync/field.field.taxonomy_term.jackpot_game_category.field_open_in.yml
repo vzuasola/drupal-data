@@ -1,4 +1,4 @@
-uuid: 7027fb1b-d878-421a-a8de-3be392f28d91
+uuid: 2984c529-1f62-4cf8-a97c-dc32cfa730d3
 langcode: ja
 status: true
 dependencies:
@@ -17,7 +17,7 @@ required: false
 translatable: false
 default_value:
   -
-    value: '''_self'''
+    value: _self
 default_value_callback: ''
 settings: {  }
 field_type: list_string
