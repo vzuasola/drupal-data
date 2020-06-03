@@ -47,7 +47,7 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#type' => 'textfield',
         '#title' => 'Slots - Lobby Page Title.',
         '#description' => 'Slots Lobby Page Title.',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_language_select') ?? '',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_slot_title') ?? '',
         '#required' => TRUE,
         '#translatable' => TRUE,
       ];
@@ -56,7 +56,7 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#type' => 'textfield',
         '#title' => 'Live Dealer - Lobby Page Title.',
         '#description' => 'Live Dealer Lobby Page Title.',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_language_select') ?? '',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_live_dealer_title') ?? '',
         '#required' => TRUE,
         '#translatable' => TRUE,
       ];
@@ -65,7 +65,7 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#type' => 'textfield',
         '#title' => 'Arcade - Lobby Page Title.',
         '#description' => 'Arcade Lobby Page Title.',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_language_select') ?? '',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_arcade_title') ?? '',
         '#required' => TRUE,
         '#translatable' => TRUE,
       ];
