@@ -1,12 +1,12 @@
-uuid: 4a572a24-b33c-4e5a-8d7d-3cf0dbf11228
+uuid: f1837f45-25b9-40f2-845a-08e3b14304fa
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_post_body
-field_name: field_post_body
+id: node.field_android_blurb_content
+field_name: field_android_blurb_content
 entity_type: node
 type: text_with_summary
 settings: {  }

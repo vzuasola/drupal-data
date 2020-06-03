@@ -1,10 +1,10 @@
-uuid: 11de1c73-8ccd-429a-a6a4-5f28863bce9c
+uuid: 3fd09605-3874-4cf7-8fe0-ab590b0811a9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.page
+    - field.storage.node.field_android_main_image
+    - node.type.mobile
   module:
     - content_translation
     - image
@@ -14,11 +14,11 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-id: node.page.field_image
-field_name: field_image
+id: node.mobile.field_android_main_image
+field_name: field_android_main_image
 entity_type: node
-bundle: page
-label: 'Banner Image'
+bundle: mobile
+label: 'Android Main Image'
 description: ''
 required: false
 translatable: true
