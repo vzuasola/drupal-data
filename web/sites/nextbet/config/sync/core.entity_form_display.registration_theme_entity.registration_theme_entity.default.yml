@@ -10,12 +10,12 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_form_title_color
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
+    - field.field.registration_theme_entity.registration_theme_entity.field_product_name
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
-    - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
@@ -34,7 +34,7 @@ third_party_settings:
       children:
         - field_login_destination_url
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: details
       format_settings:
         id: ''
@@ -44,29 +44,13 @@ third_party_settings:
       label: Login
     group_forms:
       children:
-        - field_background_color
         - field_form_title_color
         - field_form_font_color
         - field_link_color
         - field_error_color
-        - field_asterisk_color
-        - field_separator_color
         - field_registration_button_font_c
         - field_registration_button_form_h
         - field_registration_button_form_c
-      parent_name: ''
-      weight: 6
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: Forms
-    group_2_columns_layout:
-      children:
-        - field_enable_two_columns
-        - field_content_two_columns
       parent_name: ''
       weight: 7
       format_type: details
@@ -75,13 +59,22 @@ third_party_settings:
         classes: ''
         open: false
         required_fields: true
-      label: '2 Columns Layout'
-    group_registration_steps:
-      children:
-        - field_banner_highlight
-        - field_banner_font_color
+      label: Forms
+    group_2_columns_layout:
+      children: {  }
       parent_name: ''
       weight: 8
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: '2 Columns Layout'
+    group_registration_steps:
+      children: {  }
+      parent_name: ''
+      weight: 9
       format_type: details
       format_settings:
         id: ''
@@ -95,7 +88,7 @@ third_party_settings:
         - field_success_message_color
         - field_steptwo_content
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: details
       format_settings:
         id: ''
@@ -104,9 +97,7 @@ third_party_settings:
         required_fields: true
       label: 'Step 2'
     group_tripwire_popup:
-      children:
-        - field_tripwire_toggle
-        - field_tripwire_content
+      children: {  }
       parent_name: ''
       weight: 12
       format_type: details
@@ -118,11 +109,7 @@ third_party_settings:
       label: 'Tripwire Popup'
     group_background_banner:
       children:
-        - field_steptwo_banner_mobile
-        - field_steptwo_banner_tablet
         - field_steptwo_banner
-        - field_background_image
-        - field_theme_alternative_text
       parent_name: ''
       weight: 13
       format_type: details
@@ -139,12 +126,12 @@ mode: default
 content:
   field_application:
     type: options_select
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_default_regvia:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -152,7 +139,7 @@ content:
     type: string_textfield
     region: content
   field_error_color:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -170,7 +157,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_link_color:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -183,31 +170,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_registration_button_font_c:
-    weight: 13
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_registration_button_form_c:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_registration_button_form_h:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_registration_form:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_registration_theme_code:
+  field_product_name:
     weight: 1
     settings:
       size: 60
@@ -215,11 +178,37 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_separator_color:
+  field_registration_button_font_c:
     weight: 12
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_registration_button_form_c:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_registration_button_form_h:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_registration_form:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_registration_theme_code:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_steptwo_banner:
     weight: 18
@@ -253,7 +242,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 10
+    weight: 11
     region: content
     settings:
       include_locked: true

@@ -146,6 +146,17 @@ class MSWCantLoginForm extends FormBase {
             '#translatable' => true,
         ];
 
+        //Forgot Password Setting
+        $content = $this->get('forgot_password_success_message');
+        $form['page_forgot_password_setting']['forgot_password_success_message'] = [
+            '#type' => 'text_format',
+            '#title' => $this->t('Forgot Password Success Message'),
+            '#default_value' => $content['value'],
+            '#format' => $content['format'],
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+        ];
+
         $form['page_confirmation_message_setting'] = [
             '#type' => 'details',
             '#title' => t('Confirmation Message Setting'),

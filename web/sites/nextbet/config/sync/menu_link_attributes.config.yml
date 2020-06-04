@@ -13,3 +13,7 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
+  productList:
+    label: 'List of Product'
+    type: textarea
+    description: 'Enter product where you want to enable this menu'

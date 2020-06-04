@@ -5,6 +5,7 @@
  */
 function games_config_uninstall() {
    \Drupal::configFactory()->getEditable('games_config.games_configuration')->delete();
+   \Drupal::configFactory()->getEditable('games_config.games_loading_configuration')->delete();
  }
 
 /**

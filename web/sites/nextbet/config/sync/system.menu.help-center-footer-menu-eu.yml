@@ -1,0 +1,8 @@
+uuid: 389a93cb-6db4-467b-87cc-e4ccbe3d1d8a
+langcode: eu
+status: true
+dependencies: {  }
+id: help-center-footer-menu-eu
+label: 'Help Center Footer Menu EU'
+description: ''
+locked: false
