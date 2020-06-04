@@ -1,0 +1,4 @@
+change_password__active_tab: edit-field-success-message-group
+integration_error: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nCHANGE_PASSWORD_FAILED|There was an error changing your password.  Please try again or you may contact us: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> Live Chat </a> (Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|Your password has been successfully changed."
+change_password_mobile_success_message: 'Your password has been successfully changed.'
+change_password_mobile_failed_message: 'There was an error changing your password.  Please try again or you may contact us: <a href="/linkto:avaya" class="live-chat-popup-trigger"> Live Chat </a> (Code: 800)'

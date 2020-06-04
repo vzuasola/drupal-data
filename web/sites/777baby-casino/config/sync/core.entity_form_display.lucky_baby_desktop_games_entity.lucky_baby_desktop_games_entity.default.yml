@@ -17,6 +17,7 @@ dependencies:
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_game_title
     - image.style.thumbnail
   module:
+    - conditional_fields
     - entity_reference_views_select
     - field_group
     - image
@@ -76,7 +77,25 @@ content:
   field_game_category:
     weight: 13
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        05864bd3-6073-49f5-9d64-8d36648645ab:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '52'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: lucky_baby_desktop_games_entity
+          bundle: lucky_baby_desktop_games_entity
     type: erviews_options_buttons
     region: content
   field_game_code:
@@ -98,13 +117,49 @@ content:
   field_game_filter:
     weight: 14
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        f41765a6-25b0-460d-8b86-bd2fea52a34c:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '52'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: lucky_baby_desktop_games_entity
+          bundle: lucky_baby_desktop_games_entity
     type: options_select
     region: content
   field_game_filter_games:
     weight: 15
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        9e04b1e2-4d4b-4d9b-b164-47bbc43df871:
+          dependee: field_game_provider
+          settings:
+            state: '!visible'
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '52'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: lucky_baby_desktop_games_entity
+          bundle: lucky_baby_desktop_games_entity
     type: options_select
     region: content
   field_game_provider:

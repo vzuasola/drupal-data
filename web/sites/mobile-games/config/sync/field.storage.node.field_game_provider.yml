@@ -33,9 +33,6 @@ settings:
       value: sa_gaming
       label: 'SA Gaming'
     -
-      value: pg_soft
-      label: PGSoft
-    -
       value: asia_gaming
       label: 'Asia Gaming'
     -
@@ -47,6 +44,9 @@ settings:
     -
       value: pgsoft
       label: PGSoft
+    -
+      value: onegame
+      label: 'One Game'
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,0 +1,8 @@
+uuid: 72a8b35e-d57f-455b-8eb9-feffad94b23e
+langcode: pl
+status: true
+dependencies: {  }
+id: information-footer-menu-pl
+label: 'Information Footer Menu PL'
+description: ''
+locked: false
