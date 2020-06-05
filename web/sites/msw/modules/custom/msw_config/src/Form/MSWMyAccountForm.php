@@ -54,6 +54,14 @@ class MSWMyAccountForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $form['page_profile_setting']['account_menu'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Account menu label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('account_menu'),
+            '#translatable' => true,
+        ];
+
         $form['page_profile_setting']['server_side_validation'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Server-side Validation Mapping'),
