@@ -38,6 +38,7 @@ class MSWMyAccountForm extends FormBase {
             '#title' => t('My Account Configuration'),
         ];
 
+        $this->myAccountTabs($form);
         $this->sectionPageSetting($form);
 
         return $form;
@@ -235,5 +236,34 @@ class MSWMyAccountForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
+    }
+
+    /**
+    *
+    */
+    private function myAccountTabs(array &$form) {
+        $form['tabs'] = [
+        '#type' => 'details',
+        '#title' => t('My Account Tabs'),
+        '#group' => 'advanced',
+        ];
+
+        $form['tabs']['my_profile_tab'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('My Profile Tab'),
+        '#description' => $this->t('Tab title for my profile'),
+        '#default_value' => $this->get('my_profile_tab'),
+        '#required' => TRUE,
+        '#translatable' => TRUE,
+        ];
+
+        $form['tabs']['change_password_tab'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Change Password Tab'),
+        '#description' => $this->t('Tab title for change password'),
+        '#default_value' => $this->get('change_password_tab'),
+        '#required' => TRUE,
+        '#translatable' => TRUE,
+        ];
     }
 }
