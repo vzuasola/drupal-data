@@ -40,6 +40,7 @@ class MSWMyAccountForm extends FormBase {
 
         $this->myAccountTabs($form);
         $this->sectionPageSetting($form);
+        $this->contactPreferences($form);
 
         return $form;
     }
@@ -266,4 +267,49 @@ class MSWMyAccountForm extends FormBase {
         '#translatable' => TRUE,
         ];
     }
+
+    /**
+    *
+    */
+    private function contactPreferences(array &$form) {
+        $form['preferences'] = [
+          '#type' => 'details',
+          '#title' => t('Contact Preferences'),
+          '#group' => 'advanced',
+        ];
+
+        $form['preferences']['contact_preference_yes'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Label for Yes'),
+          '#description' => 'This will appear on verification profile submit',
+          '#default_value' => $this->get('contact_preference_yes'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+        ];
+
+        $form['preferences']['contact_preference_no'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('No label'),
+          '#description' => 'This will appear on verification profile submit',
+          '#default_value' => $this->get('contact_preference_no'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+        ];
+
+        $form['preferences']['contact_preference_top_blurb'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Top blurb'),
+          '#default_value' => $this->get('contact_preference_top_blurb'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+        ];
+
+        $form['preferences']['contact_preference_bottom_blurb'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Bottom blurb'),
+          '#default_value' => $this->get('contact_preference_bottom_blurb'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+        ];
+      }
 }
