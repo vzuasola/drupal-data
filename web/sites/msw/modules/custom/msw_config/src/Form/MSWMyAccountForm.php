@@ -222,11 +222,12 @@ class MSWMyAccountForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $c = $this->get('change_password_integration_error');
         $form['page_change_password_setting']['change_password_integration_error'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Integration Error Messages'),
             '#description' => $this->t('Integration error list.'),
-            '#default_value' => $this->get('change_password_integration_error'),
+            '#default_value' => $c['value'],
             '#translatable' => TRUE,
         ];
 
