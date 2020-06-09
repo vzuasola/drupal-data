@@ -314,20 +314,23 @@ class MSWMyAccountForm extends FormBase {
         ];
       }
 
-      private function customerSupport(array &$form) {
+    /**
+    *
+    */
+    private function customerSupport(array &$form) {
         $form['support'] = [
-          '#type' => 'details',
-          '#title' => t('Customer Support'),
-          '#group' => 'advanced',
+            '#type' => 'details',
+            '#title' => t('Customer Support'),
+            '#group' => 'advanced',
         ];
 
         $content = $this->get('customer_support_blurb');
         $form['support']['customer_support_blurb'] = [
-          '#type' => 'text_format',
-          '#title' => $this->t('Customer support blurb'),
-          '#default_value' => $content['value'],
-          '#required' => TRUE,
-          '#translatable' => TRUE,
+            '#type' => 'text_format',
+            '#title' => $this->t('Customer support blurb'),
+            '#default_value' => $content['value'],
+            '#required' => TRUE,
+            '#translatable' => TRUE,
         ];
-      }
+    }
 }
