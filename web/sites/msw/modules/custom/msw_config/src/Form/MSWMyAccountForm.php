@@ -41,6 +41,7 @@ class MSWMyAccountForm extends FormBase {
         $this->myAccountTabs($form);
         $this->sectionPageSetting($form);
         $this->contactPreferences($form);
+        $this->customerSupport($form);
 
         return $form;
     }
@@ -308,6 +309,23 @@ class MSWMyAccountForm extends FormBase {
           '#type' => 'textfield',
           '#title' => $this->t('Bottom blurb'),
           '#default_value' => $this->get('contact_preference_bottom_blurb'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+        ];
+      }
+
+      private function customerSupport(array &$form) {
+        $form['support'] = [
+          '#type' => 'details',
+          '#title' => t('Customer Support'),
+          '#group' => 'advanced',
+        ];
+
+        $content = $this->get('customer_support_blurb');
+        $form['support']['customer_support_blurb'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Customer support blurb'),
+          '#default_value' => $content['value'],
           '#required' => TRUE,
           '#translatable' => TRUE,
         ];
