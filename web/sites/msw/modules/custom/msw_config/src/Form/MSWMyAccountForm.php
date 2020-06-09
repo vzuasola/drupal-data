@@ -56,14 +56,6 @@ class MSWMyAccountForm extends FormBase {
             '#group' => 'advanced',
         ];
 
-        $form['page_profile_setting']['account_menu'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Account menu label'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('account_menu'),
-            '#translatable' => true,
-        ];
-
         $form['page_profile_setting']['server_side_validation'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Server-side Validation Mapping'),
@@ -250,9 +242,27 @@ class MSWMyAccountForm extends FormBase {
         '#group' => 'advanced',
         ];
 
+        $form['tabs']['account_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('My Account tab label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('account_tab'),
+            '#translatable' => true,
+            '#description' => 'Label for the account tab',
+        ];
+
+        $form['tabs']['history_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('History tab label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('history_tab'),
+            '#translatable' => true,
+            '#description' => 'Label for the history tab',
+        ];
+
         $form['tabs']['my_profile_tab'] = [
         '#type' => 'textfield',
-        '#title' => $this->t('My Profile Tab'),
+        '#title' => $this->t('Profile Tab'),
         '#description' => $this->t('Tab title for my profile'),
         '#default_value' => $this->get('my_profile_tab'),
         '#required' => TRUE,
