@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: quicklinks-id
 label: 'Quicklinks ID'
-description: ''
+description: 'ID - Prili'
 locked: false
