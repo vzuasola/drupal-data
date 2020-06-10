@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: quicklinks-th
 label: 'Quicklinks TH'
-description: ''
+description: TH-AMY
 locked: false
