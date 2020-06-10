@@ -70,7 +70,7 @@ content:
     type: metatag_empty_formatter
     region: content
   field_open_in:
-    weight: 6
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
