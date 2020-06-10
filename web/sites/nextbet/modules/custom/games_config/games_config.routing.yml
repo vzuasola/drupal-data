@@ -21,3 +21,11 @@ games_config.sort.games:
     _title: 'Sort Games'
   requirements:
     _permission: 'administer site configuration'
+
+games_config.sort.game_categories:
+  path: 'admin/games/category/sorting'
+  defaults:
+    _controller: '\Drupal\games_config\Controller\GamesController::getList'
+    _title: 'Manage Game Categories'
+  requirements:
+    _permission: 'administer site configuration'
