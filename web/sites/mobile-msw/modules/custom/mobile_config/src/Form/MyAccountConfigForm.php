@@ -41,12 +41,34 @@ class MyAccountConfigForm extends FormBase {
     ];
 
     $this->myAccountTabs($form);
+    $this->myProfile($form);
     $this->contactPreferences($form);
     $this->customerSupport($form);
     $this->sectionPageSetting($form);
     $this->fieldMessage($form);
+    $this->verifyPassword($form);
 
     return $form;
+  }
+
+  /**
+   *
+   */
+  private function myProfile(array &$form) {
+    $form['my_profile'] = [
+      '#type' => 'details',
+      '#title' => t('My profile config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['my_profile']['no_update'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('No update text'),
+      '#description' => $this->t('Text when profile is submit but no update'),
+      '#default_value' => $this->get('no_update'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
@@ -85,18 +107,28 @@ class MyAccountConfigForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['preferences']['contact_preference_top_blurb'] = [
+    $form['preferences']['contact_preference_yes'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Top blurb'),
-      '#default_value' => $this->get('contact_preference_top_blurb'),
+      '#title' => $this->t('Label for Yes'),
+      '#description' => 'This will appear on verification profile submit',
+      '#default_value' => $this->get('contact_preference_yes'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
 
-    $form['preferences']['contact_preference_check_blurb'] = [
+    $form['preferences']['contact_preference_no'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Checkbox blurb'),
-      '#default_value' => $this->get('contact_preference_check_blurb'),
+      '#title' => $this->t('No label'),
+      '#description' => 'This will appear on verification profile submit',
+      '#default_value' => $this->get('contact_preference_no'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['preferences']['contact_preference_top_blurb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Top blurb'),
+      '#default_value' => $this->get('contact_preference_top_blurb'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -229,6 +261,72 @@ class MyAccountConfigForm extends FormBase {
       '#title' => $this->t('Failed Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function verifyPassword(array &$form) {
+    $form['verify_password_group'] = [
+      '#type' => 'details',
+      '#title' => 'Verify Password',
+      '#group' => 'advanced',
+    ];
+
+    $form['verify_password_group']['modal_current'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal current label'),
+      '#default_value' => $this->get('modal_current'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['modal_new'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal new label'),
+      '#default_value' => $this->get('modal_new'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['modal_header'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal header blurb'),
+      '#default_value' => $this->get('modal_header'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['modal_top'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal top blurb'),
+      '#default_value' => $this->get('modal_top'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['modal_bottom'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal bottom blurb'),
+      '#default_value' => $this->get('modal_bottom'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['message_timeout'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Message timeout'),
+      '#default_value' => $this->get('message_timeout'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['verify_password_group']['server_side_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Server side mapping'),
+      '#description' => 'UPDATE_PROFILE_SUCCESS|Profile updated <br>
+                        UPDATE_PROFILE_FAILED|Update failed',
+      '#default_value' => $this->get('server_side_mapping'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
