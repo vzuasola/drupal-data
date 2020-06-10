@@ -1,7 +1,7 @@
 field_settings:
   label: 'First Name'
   placeholder: 'First Name'
-  annotation: ''
+  annotation: 'Please enter your Given Name as indicated in your bank account. (e.g. <u>Joe</u> Smith)'
 field_validations:
   required:
     enable: 1

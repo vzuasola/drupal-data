@@ -1,7 +1,7 @@
 field_settings:
   label: Email
   placeholder: Email
-  annotation: ''
+  annotation: 'Please enter a valid email address to receive latest promotions, updates and exclusive offers.'
 field_validations:
   required:
     enable: 1
