@@ -1,7 +1,7 @@
 field_settings:
   label: 'Last Name'
   placeholder: 'Last Name'
-  annotation: ''
+  annotation: 'Please enter your Last Name as indicated in your bank account. (e.g. Joe <u>Smith</u>)'
 field_validations:
   required:
     enable: 0
