@@ -2,8 +2,8 @@
 # Deposit and withdrawal entity menu items definition
 
 deposit_and_withdrawal.list:
-  title: 'Jamboree deposit and withdrawal entity'
-  description: 'List jamboree deposit and withdrawal entities'
+  title: 'Lucky Baby deposit and withdrawal entity'
+  description: 'List Lucky Baby deposit and withdrawal entities'
   parent: system.admin_config
   route_name: deposit_and_withdrawal.admin_settings
 

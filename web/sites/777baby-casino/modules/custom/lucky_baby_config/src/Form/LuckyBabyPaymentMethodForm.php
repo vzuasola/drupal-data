@@ -10,7 +10,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "jamboree_payment_method_form",
+ *   id = "lucky_baby_payment_method_form",
  *   route = {
  *     "title" = "Payment Method Page Configuration",
  *     "path" = "/admin/config/lucky_baby/payment_method_page_configuration",
