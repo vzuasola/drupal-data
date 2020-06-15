@@ -106,7 +106,7 @@ class GeneralForm extends FormBase {
         '_blank' => $this->t('New Window'),
         '_self' => $this->t('Same Window')
       ],
-      '#default_value' => '_blank',
+      '#default_value' => $this->get('transfer_link_target'),
       '#translatable' => TRUE,
     ];
 
