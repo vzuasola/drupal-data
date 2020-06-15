@@ -50,7 +50,7 @@ class HeaderForm extends FormBase {
     $form['product_tab'] = [
       '#type' => 'select',
       '#title' => $this->t('Product'),
-      '#default_value' => $this->entityTypeManager()->getStorage('field_product')->loadMultiple(),
+      '#default_value' => \Drupal::entityTypeManager()->getStorage('field_product')->loadMultiple(),
       '#required' => TRUE,
     ];
 
