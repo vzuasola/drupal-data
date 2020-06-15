@@ -1,0 +1,31 @@
+uuid: 98c90a18-bd78-4b11-9498-165e613a62d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.mobile
+  module:
+    - user
+id: node.mobile.teaser
+targetEntityType: node
+bundle: mobile
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_android_banner_image: true
+  field_android_blurb_content: true
+  field_android_blurb_position: true
+  field_android_main_content: true
+  field_android_main_image: true
+  field_android_tab_title: true
+  field_mobile_banner_image: true
+  field_mobile_blurb_content: true
+  field_mobile_blurb_position: true
+  field_mobile_main_content: true
+  field_mobile_main_image: true
+  field_mobile_tab_title: true
+  langcode: true

@@ -576,24 +576,7 @@ class GeneralConfiguration extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
-    $mobile = $this->get('text_over_banner_mobile');
-    $form['text_over_banner']['text_over_banner_mobile'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Mobile'),
-      '#description' => $this->t('Above content will display in mobile view.'),
-      '#default_value' => $mobile['value'],
-      '#format' => $mobile['format'],
-      '#translatable' => TRUE,
-    ];
-    $tablet = $this->get('text_over_banner_tablet');
-    $form['text_over_banner']['text_over_banner_tablet'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('<br><br> Tablet'),
-      '#description' => $this->t('Above content will display in tablet view.'),
-      '#default_value' => $tablet['value'],
-      '#format' => $tablet['format'],
-      '#translatable' => TRUE,
-    ];
+
     $desktop_left = $this->get('text_over_banner_desktop_left');
     $form['text_over_banner']['text_over_banner_desktop_left'] = [
       '#type' => 'text_format',
