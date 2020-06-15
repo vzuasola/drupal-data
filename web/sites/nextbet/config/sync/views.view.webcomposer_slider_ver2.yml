@@ -11,6 +11,7 @@ dependencies:
     - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
     - taxonomy.vocabulary.product
+    - taxonomy.vocabulary.slider_routes
   module:
     - datetime
     - draggableviews
@@ -1549,6 +1550,52 @@ display:
           type: select
           limit: true
           vid: product
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_routes_target_id:
+          id: field_routes_target_id
+          table: webcomposer_slider_v2_entity__field_routes
+          field: field_routes_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_routes_target_id_op
+            label: Routes
+            description: ''
+            use_operator: false
+            operator: field_routes_target_id_op
+            identifier: route
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: slider_routes
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
