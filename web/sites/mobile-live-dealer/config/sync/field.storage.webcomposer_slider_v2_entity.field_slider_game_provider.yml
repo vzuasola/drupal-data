@@ -54,6 +54,9 @@ settings:
       value: skywind
       label: Skywind
     -
+      value: voidbridge
+      label: Voidbridge
+    -
       value: cq9
       label: 'CQ9 Gaming'
   allowed_values_function: ''
