@@ -161,7 +161,7 @@ class ProductTabs extends ResourceBase {
           // Find the sub filter of product term
           $findChildren = \Drupal::entityTypeManager()
             ->getStorage('taxonomy_term')
-            ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
+            ->loadTree('product', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
             if (in_array($key, $value->parents)) {
