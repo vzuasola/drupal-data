@@ -1,0 +1,21 @@
+uuid: 8e2ce194-2d75-4cf8-a65a-2371f84f4d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target
+    - taxonomy.vocabulary.product
+  module:
+    - options
+id: taxonomy_term.product.field_target
+field_name: field_target
+entity_type: taxonomy_term
+bundle: product
+label: Target
+description: 'Enter value for target attribute.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
