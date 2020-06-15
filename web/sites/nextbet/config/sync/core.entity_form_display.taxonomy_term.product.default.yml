@@ -3,6 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.product.field_class
+    - field.field.taxonomy_term.product.field_enable_disable
+    - field.field.taxonomy_term.product.field_product_id
+    - field.field.taxonomy_term.product.field_product_tag
+    - field.field.taxonomy_term.product.field_target
+    - field.field.taxonomy_term.product.field_this_product_kebab
     - taxonomy.vocabulary.product
   module:
     - path
@@ -20,6 +26,48 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_class:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enable_disable:
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_product_id:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_tag:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_target:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_this_product_kebab:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   langcode:
     type: language_select
     weight: 6
