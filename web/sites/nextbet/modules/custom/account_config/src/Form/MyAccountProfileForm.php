@@ -39,6 +39,76 @@ class MyAccountProfileForm extends FormBase {
             '#type' => 'vertical_tabs',
         ];
 
+                $form['field_labels_generic_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Generic Configuration',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['field_labels_generic_configuration']['primary_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for primary mobile number tagging'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('primary_label'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_generic_configuration']['add_mobile_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for adding mobile number link'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('add_mobile_label'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_generic_configuration']['no_changed_detected_message'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Message if no changed has been detected'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('no_changed_detected_message'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_generic_configuration']['male_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for Male'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('male_label'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_generic_configuration']['female_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for Female'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('female_label'),
+            '#translatable' => true,
+        ];
+
+        $form['contact_preference'] = [
+            '#type' => 'details',
+            '#title' => 'Contact Prefrence',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['contact_preference']['contact_preference_yes_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Contact Preference True Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('contact_preference_yes_label'),
+            '#translatable' => true,
+        ];
+
+        $form['contact_preference']['contact_preference_no_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Contact Preference False Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('contact_preference_no_label'),
+            '#translatable' => true,
+        ];
+
         $form['field_labels_country_mapping'] = [
             '#type' => 'details',
             '#title' => 'Country Mapping',
@@ -60,6 +130,122 @@ class MyAccountProfileForm extends FormBase {
             '#size' => 25,
             '#required' => TRUE,
             '#default_value' => $this->get('country_code_mapping'),
+        ];
+
+        $form['field_labels_modal_preview'] = [
+            '#type' => 'details',
+            '#title' => 'Modal Preview',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_header'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Header'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_header'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_top_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Modal Preview Top Blurb'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_top_blurb'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_current_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Current Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_current_label'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_new_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview New Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_new_label'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_bottom_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Modal Preview Bottom Blurb'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_bottom_blurb'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Password Placeholder'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_modal_preview']['modal_preview_btn'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Button'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_btn'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_validation_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Validation Configuration',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['field_labels_validation_configuration']['server_side_validation'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Server-side Validation Mapping'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('server_side_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation'] = [
+            '#type' => 'details',
+            '#title' => 'Password',
+            '#open' => False,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation']['required_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Error Message'),
+            '#required' => true,
+            '#default_value' => $this->get('required_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Format Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('password_format_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation']['password_min_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Min Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('password_min_length_validation'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation']['password_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Max Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('password_max_length_validation'),
+            '#translatable' => TRUE,
         ];
 
         return $form;
