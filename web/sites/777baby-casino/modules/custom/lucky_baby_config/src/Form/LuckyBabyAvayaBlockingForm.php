@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "lucky_babyy_avaya_blocking",
+ *   id = "lucky_baby_avaya_blocking",
  *   route = {
  *     "title" = "Avaya Blocking Configuration",
  *     "path" = "/admin/config/lucky_baby/avaya_blocking_configuration",
