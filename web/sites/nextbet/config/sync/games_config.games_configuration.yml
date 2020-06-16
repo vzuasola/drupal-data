@@ -1,5 +1,5 @@
 games_configuration_tab__active_tab: edit-drawer
-game_promotion_link: '{domain:entry}/{lang}/promotions[query:(product=games&{tracking})]'
+game_promotion_link: '{domain:entry}/{lang}/promotions[query:(product=slots&{tracking})]'
 game_promotion_link_target: _blank
 game_real_play_text: 'Play For Real'
 game_real_play_disabled: 0
@@ -7,7 +7,7 @@ kebab_menu_text: More
 home_categories_text: Home
 favorites_text: Favorites
 recently_played_text: 'Recently Played'
-allgames_categories_text: ''
+allgames_categories_text: All
 disable_jackpot_ticker: 0
 play_text: 'PLAY NOW'
 play_for_fun_text: 'Free Play'
@@ -24,7 +24,7 @@ html5_lightbox_content:
   format: basic_html
 pas_error_lightbox_title: ''
 pas_error_lightbox_content:
-  value: "<p>&nbsp;\r\n</p>\r\n<p>Unable to launch game due to login authentication error. Please re-login.\r\n</p>\r\n<p><a class=\"btn btn-ok btn-small btn-yellow\" href=\"#\" target=\"_blank\">OK</a>\r\n</p>\r\n"
+  value: "<p>&nbsp;</p>\r\n\r\n<p>Unable to launch game due to login authentication error. Please re-login.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-small btn-yellow\" href=\"#\" target=\"_blank\">OK</a></p>\r\n"
   format: basic_html
 filter_icon: Filter
 filter_header: 'Filter Games'
