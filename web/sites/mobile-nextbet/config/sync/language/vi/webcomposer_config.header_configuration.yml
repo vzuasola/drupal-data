@@ -1,8 +1,8 @@
-header_settings_tab__active_tab: edit-announcement-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: 'Cá cược trên di động với Nextbet'
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 registration_link_mobile: ''
 capslock_notification: 'Đang bật CAP LOCK'
 mobile_remember: 'Nhớ Thông Tin'
@@ -29,7 +29,7 @@ lobby_page_title: 'Đặt cược trực tuyến của bạn bất cứ đâu v�
 promotion_page_title: 'Khuyến mãi cá cược Giải thưởng đặc biệt tại Nextbet Di động'
 links_title: 'LINK NHANH'
 join_now_text: 'THAM GIA NGAY'
-join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+join_now_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 login_issue_text: 'Không thể đăng nhập '
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: Balance
