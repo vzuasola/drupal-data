@@ -1,5 +1,5 @@
-name: Nextbet Header configurations
+name: Nextbet Product Header configurations
 type: module
-description: Nextbet header configurations
+description: Nextbet product header configurations
 core: 8.x
 package: Web Composer
