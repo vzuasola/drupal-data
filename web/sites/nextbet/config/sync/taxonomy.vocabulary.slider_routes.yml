@@ -1,0 +1,9 @@
+uuid: a3558201-1593-4fa0-b8b1-8a2c4eadba08
+langcode: en
+status: true
+dependencies: {  }
+name: 'Slider Routes'
+vid: slider_routes
+description: 'List of routes which can be used for tagging sliders.'
+hierarchy: 0
+weight: 0

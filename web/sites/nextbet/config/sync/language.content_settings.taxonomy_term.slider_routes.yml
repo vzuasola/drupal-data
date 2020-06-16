@@ -1,0 +1,18 @@
+uuid: 5a02ba5d-5934-48e6-bc0f-7dd64dca2bd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_routes
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.slider_routes
+target_entity_type_id: taxonomy_term
+target_bundle: slider_routes
+default_langcode: site_default
+language_alterable: false
