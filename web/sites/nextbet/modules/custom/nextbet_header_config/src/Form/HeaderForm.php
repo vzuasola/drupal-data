@@ -11,12 +11,12 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "nextbet_header_config",
  *   route = {
- *     "title" = "Header Configuration",
+ *     "title" = "Product Header Configuration",
  *     "path" = "/admin/config/nextbet/config/header",
  *   },
  *   menu = {
- *     "title" = "Header Configuration",
- *     "description" = "Provides per product configuration for header components",
+ *     "title" = "Product Header Configuration",
+ *     "description" = "Provides product configuration for header components",
  *     "parent" = "nextbet_config.list",
  *   },
  * )
