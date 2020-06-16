@@ -15,5 +15,6 @@ ignored_config_entities:
   26: 'mobile_slots.*'
   28: 'mobile_live_dealer.*'
   30: 'mobile_arcade.*'
+  32: 'webcomposer_form_manager.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
