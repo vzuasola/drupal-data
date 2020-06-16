@@ -104,5 +104,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('JPay API url for registration account creation.'),
       '#required' => TRUE,
     ];
+
+    $form['registration_setting']['registration']['registration_site_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Site ID'),
+      '#default_value' => $this->get('registration_site_id'),
+      '#description' => $this->t('Site ID of MSW.'),
+      '#required' => TRUE,
+    ];
   }
 }

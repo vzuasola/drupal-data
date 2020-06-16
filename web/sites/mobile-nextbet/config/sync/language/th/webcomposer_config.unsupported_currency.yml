@@ -1,0 +1,7 @@
+unsupported_currency_configuration_form__active_tab: ''
+unsupported_currencies_title: ไม่รองรับสกุลเงินนี้
+unsupported_currencies_message:
+  value: "<p>ขออภัยค่ะ สกุลเงินในบัญชีของคุณไม่สามารถใช้งานในเกมส์ <b>{game_provider}&nbsp;</b><b>{game_name}</b>.\r\n  <br />\r\n  กรุณาลองใช้เกมส์อื่น\r\n</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: OK
+game_provider_mapping: "voidbridge|Voidbridge\r\nskywind|Skywind"

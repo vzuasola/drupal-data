@@ -40,6 +40,7 @@ dependencies:
     - node.type.promotion
   module:
     - color_field
+    - conditional_fields
     - entity_reference_views_select
     - field_group
     - image
@@ -252,7 +253,8 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: text_textarea
     region: content
   field_banner_link:
@@ -268,7 +270,8 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: link_default
     region: content
   field_banner_link_target:
@@ -280,7 +283,8 @@ content:
   field_banner_link_target_post:
     weight: 14
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: options_select
     region: content
   field_body_post:
@@ -289,7 +293,8 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: text_textarea_with_summary
     region: content
   field_hide_countdown:
@@ -319,7 +324,8 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: image_image
     region: content
   field_link_target:
