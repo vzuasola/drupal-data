@@ -72,6 +72,14 @@ class GamesSearchArcadeForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['search_configuration']['games_filter_hide'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Hide Filter for Arcade Lobby'),
+      '#default_value' => $this->get('games_filter_hide'),
+      '#description' => 'Hide Filter for Arcade Lobby.',
+      '#translatable' => TRUE,
+    ];
+
     $form['search_configuration']['search_blurb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search Blurb. You may use {keyword}, {count} placeholders.'),

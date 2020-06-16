@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: quicklinks-vn
 label: 'Quicklinks VN'
-description: ''
+description: 'Tracy - add quicklinks items for VN'
 locked: false
