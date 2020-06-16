@@ -1,8 +1,8 @@
 field_settings:
-  markup: "I am at least 18 years old and have read and accepted the <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">Terms and Conditions</a>\r\n</u></strong>."
+  markup: "I am at least 18 years old and have read and accepted the <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-mobile\">Terms and Conditions</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-tablet\">Terms and Conditions</a>\r\n</u></strong>.\r\n\r\n"
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alpha:
     enable: 0

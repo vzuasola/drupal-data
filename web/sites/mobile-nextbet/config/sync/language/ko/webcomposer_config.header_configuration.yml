@@ -1,8 +1,8 @@
-header_settings_tab__active_tab: edit-logo-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: '넥스트벳에 오신것을 환영합니다'
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 registration_link_mobile: ''
 capslock_notification: 'Caps Lock이 켜져 있습니다'
 mobile_remember: '아이디 기억하기  '
@@ -29,7 +29,7 @@ lobby_page_title: '넥스트벳 모바일로 언제 어디서나 베팅하세요
 promotion_page_title: '넥스트벳 모바일 베팅 혜택에서 독점 보상!'
 links_title: 바로가기
 join_now_text: 가입하기
-join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+join_now_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 login_issue_text: '아직 넥스트벳 멤버가 아니시라구요?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: Balance

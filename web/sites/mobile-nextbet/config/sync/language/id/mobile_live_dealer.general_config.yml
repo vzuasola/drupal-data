@@ -4,5 +4,5 @@ title_provider_drawer: 'Provider Game'
 all_quicklaunch_title: Semua
 all_quicklaunch_alt: ''
 games_transfer_title: 'Transfer Instan'
-games_transfer_link: '{cashier}/transaction/transfer[query:(ticket={ticket.token}&{tracking})]'
+games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
 games_maintenance_text: 'PEMELIHARAAN BERLANGSUNG'

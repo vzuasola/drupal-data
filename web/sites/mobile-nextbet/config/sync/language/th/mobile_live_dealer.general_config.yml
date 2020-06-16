@@ -4,5 +4,5 @@ title_provider_drawer: ผู้ให้บริการ
 all_quicklaunch_title: ทั้งหมด
 all_quicklaunch_alt: ''
 games_transfer_title: โอน
-games_transfer_link: '{cashier}/transaction/transfer[query:(ticket={ticket.token}&{tracking})]'
+games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
 games_maintenance_text: กำลังดำเนินการปรับปรุง
