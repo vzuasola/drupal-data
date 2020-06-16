@@ -1,8 +1,8 @@
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: 移动端投注就在N世博
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 registration_link_mobile: ''
 capslock_notification: 大写锁定已开启
 mobile_remember: 记住用户名
@@ -29,7 +29,7 @@ lobby_page_title: 体验随时随地的在线投注就在N世博手机客户端�
 promotion_page_title: N世博移动端投注优惠活动独家奖励!
 links_title: 快速链接
 join_now_text: 立即注册
-join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+join_now_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 login_issue_text: 无法登录？
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: Balance
