@@ -57,10 +57,10 @@ class HeaderForm extends FormBase {
       '#group' => 'header_settings_tab'
     ];
 
-    $this->sectionLogo($form, $value->name);
-    $this->sectionCashier($form, $value->name);
-    $this->sectionOther($form, $value->name);
-    $this->sectionBalance($form, $value->name);
+    $this->sectionLogo($form, $value);
+    $this->sectionCashier($form, $value);
+    $this->sectionOther($form, $value);
+    $this->sectionBalance($form, $value);
 
     return $form;
   }
