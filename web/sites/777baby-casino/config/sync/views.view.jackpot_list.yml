@@ -765,52 +765,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_jackpot_category_target_id:
-          id: field_jackpot_category_target_id
-          table: jackpot_entity__field_jackpot_category
-          field: field_jackpot_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_jackpot_category_target_id_op
-            label: 'Jackpot Category'
-            description: ''
-            use_operator: false
-            operator: field_jackpot_category_target_id_op
-            identifier: field_jackpot_category_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: jackpot_game_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -835,5 +789,4 @@ display:
         - 'languages:language_interface'
         - request_format
         - url
-        - user
       tags: {  }
