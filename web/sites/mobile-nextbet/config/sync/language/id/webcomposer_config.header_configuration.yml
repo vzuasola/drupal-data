@@ -1,8 +1,8 @@
-header_settings_tab__active_tab: edit-logo-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: 'Judi mobile di Nextbet'
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 registration_link_mobile: ''
 capslock_notification: 'Caps Lock aktif'
 mobile_remember: 'Ingat Username'
@@ -29,7 +29,7 @@ lobby_page_title: 'Pasang taruhan online Anda dimana saja dengan Nextbet Mobile!
 promotion_page_title: 'Hadiah Eksklusif di Promosi Taruhan Nextbet Mobile'
 links_title: 'LINK CEPAT'
 join_now_text: GABUNG
-join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+join_now_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 login_issue_text: 'Tidak bisa Login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: Balance
