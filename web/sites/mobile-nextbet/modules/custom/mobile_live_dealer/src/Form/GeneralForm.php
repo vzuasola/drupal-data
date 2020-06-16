@@ -99,6 +99,17 @@ class GeneralForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['general']['transfer_link_target'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Instant Transfer link target'),
+      '#options' => [
+        '_blank' => $this->t('New Window'),
+        '_self' => $this->t('Same Window')
+      ],
+      '#default_value' => $this->get('transfer_link_target'),
+      '#translatable' => TRUE,
+    ];
+
     $form['general']['games_maintenance_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Games maintenance text'),

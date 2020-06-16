@@ -10,6 +10,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_include_in_page
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
@@ -247,6 +248,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_include_in_page:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_log_in_state:
     weight: 1
