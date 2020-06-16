@@ -59,7 +59,7 @@ class LuckyBabyAvayaBlockingForm extends FormBase {
       '#title' => $this->t('Users List'),
       '#default_value' => $d,
       '#format' => $d['format'],
-      '#description' => 'One username per line ',
+      '#description' => 'One username per line',
     ];
   }
 }
