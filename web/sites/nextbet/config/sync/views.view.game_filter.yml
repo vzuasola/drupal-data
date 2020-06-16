@@ -10,7 +10,7 @@ dependencies:
     - taxonomy
     - webcomposer_rest_extra
 id: game_filter
-label: 'Game FIlter'
+label: 'Game Filter'
 module: views
 description: ''
 tag: ''
