@@ -39,7 +39,53 @@ class MyAccountProfileForm extends FormBase {
             '#type' => 'vertical_tabs',
         ];
 
-                $form['field_labels_generic_configuration'] = [
+        $form['header_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Header Configuration',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+
+        $form['header_configuration']['welcome_text'] = [
+          '#type' => 'textfield',
+          '#title' => t('Welcome text'),
+          '#required' => TRUE,
+          '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
+          '#default_value' => $this->get('welcome_text'),
+          '#translatable' => TRUE,
+        ];
+
+        $form['header_configuration']['product_menu_new_tag'] = [
+          '#type' => 'textfield',
+          '#title' => t('New Tag'),
+          '#required' => TRUE,
+          '#description' => $this->t('Text for new tag'),
+          '#default_value' => $this->get('product_menu_new_tag'),
+          '#translatable' => TRUE,
+        ];
+
+        $form['header_configuration']['help_tooltip'] = [
+          '#type' => 'textfield',
+          '#title' => t('Help Tooltip'),
+          '#required' => TRUE,
+          '#description' => $this->t('Tooltip for help'),
+          '#default_value' => $this->get('help_tooltip'),
+          '#translatable' => TRUE,
+        ];
+
+        $form['header_configuration']['error_mid_down'] = [
+          '#type' => 'textarea',
+          '#title' => t('Error Message MID Down'),
+          '#size' => 500,
+          '#required' => TRUE,
+          '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+          '#default_value' => $this->get('error_mid_down'),
+          '#translatable' => TRUE,
+        ];
+
+
+        $form['field_labels_generic_configuration'] = [
             '#type' => 'details',
             '#title' => 'Generic Configuration',
             '#open' => False,
