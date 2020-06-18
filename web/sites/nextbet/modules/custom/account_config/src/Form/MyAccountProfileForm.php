@@ -256,44 +256,6 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
 
-        $form['field_labels_validation_configuration']['password_validation'] = [
-            '#type' => 'details',
-            '#title' => 'Password',
-            '#open' => False,
-        ];
-
-        $form['field_labels_validation_configuration']['password_validation']['required_validation'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Required Error Message'),
-            '#required' => true,
-            '#default_value' => $this->get('required_validation'),
-            '#translatable' => true,
-        ];
-
-        $form['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Password Format Error Message'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('password_format_validation'),
-            '#translatable' => true,
-        ];
-
-        $form['field_labels_validation_configuration']['password_validation']['password_min_length_validation'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Password Min Length Error Message'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('password_min_length_validation'),
-            '#translatable' => TRUE,
-        ];
-
-        $form['field_labels_validation_configuration']['password_validation']['password_max_length_validation'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Password Max Length Error Message'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('password_max_length_validation'),
-            '#translatable' => TRUE,
-        ];
-
         return $form;
     }
 }
