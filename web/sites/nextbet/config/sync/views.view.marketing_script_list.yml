@@ -1,4 +1,4 @@
-uuid: afbe4da3-44e7-4e33-81d7-5b9337a2c52e
+uuid: c0cb50f6-39dd-4b2c-8a36-39ccf06eafdb
 langcode: en
 status: true
 dependencies:
@@ -200,7 +200,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/marketing_script
+      path: api/marketing_scripts
       pager:
         type: none
         options:
@@ -208,6 +208,7 @@ display:
       style:
         type: serializer
         options:
+          grouping: {  }
           uses_fields: false
           formats: {  }
       row:
