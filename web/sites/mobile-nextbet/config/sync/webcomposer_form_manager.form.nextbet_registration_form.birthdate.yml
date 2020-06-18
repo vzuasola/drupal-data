@@ -84,5 +84,5 @@ field_validations:
     enable: 0
     error_message: 'Password not match.'
   allowed_date:
-    enable: 0
+    enable: 1
     error_message: 'Please enter a valid date'
