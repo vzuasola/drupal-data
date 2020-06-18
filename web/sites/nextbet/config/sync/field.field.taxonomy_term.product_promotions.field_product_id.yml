@@ -1,14 +1,14 @@
-uuid: 0dd791b2-7d60-47cf-90a8-80b77bebcd97
+uuid: e572413d-d87c-47ec-ac27-194356af9f6c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_product_id
-    - taxonomy.vocabulary.product
-id: taxonomy_term.product.field_product_id
+    - taxonomy.vocabulary.product_promotions
+id: taxonomy_term.product_promotions.field_product_id
 field_name: field_product_id
 entity_type: taxonomy_term
-bundle: product
+bundle: product_promotions
 label: 'Product ID'
 description: 'The unique ID for this term'
 required: true
