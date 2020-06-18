@@ -38,7 +38,7 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-jpay-integration
+general_settings_tab__active_tab: edit-error-settings
 value: null
 format: null
 enable_reg_relic_custom_headers: 0
@@ -66,5 +66,6 @@ mbtc_restriction_message: 'Bitcoin currency is only available in Dafasports.'
 iovation_portal_ids: '22,123,26,128,29,131,48,141,2,105,9,111,27,129,46,139,3,106,10,112,28,130,47,140'
 _core:
   default_config_hash: 5t1zX0k3ePnUyefB7MQsMW5RWN-KzQyPOtTljWnYL8Y
-jpay_api: 'http://cms-jpayws.games.prd/api/cashier/'
+jpay_api: 'http://nb-tct.jpaysystem.com/api/cashier'
 jpay_siteid: '106'
+forbidden_request_error_message: 'Forbidden request. Please try again.'
