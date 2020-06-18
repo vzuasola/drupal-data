@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_product_subfilter
     - node.type.promotion
-    - taxonomy.vocabulary.product
+    - taxonomy.vocabulary.product_promotions
 id: node.promotion.field_product_subfilter
 field_name: field_product_subfilter
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      product: product
+      product_promotions: product_promotions
     sort:
       field: name
       direction: asc
