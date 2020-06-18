@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_product
     - node.type.promotion
     - system.menu.admin
-    - taxonomy.vocabulary.product
+    - taxonomy.vocabulary.product_promotions
   module:
     - draggableviews
     - node
@@ -464,7 +464,7 @@ display:
           exposed: true
           expose:
             operator_id: field_product_target_id_op
-            label: Product
+            label: 'Product Promotions'
             description: ''
             use_operator: false
             operator: field_product_target_id_op
@@ -493,7 +493,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: product
+          vid: product_promotions
           hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
