@@ -3,8 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.product.field_class
+    - field.field.taxonomy_term.product.field_enable_disable
+    - field.field.taxonomy_term.product.field_product_id
+    - field.field.taxonomy_term.product.field_product_tag
+    - field.field.taxonomy_term.product.field_target
+    - field.field.taxonomy_term.product.field_this_product_kebab
     - taxonomy.vocabulary.product
   module:
+    - options
     - text
 id: taxonomy_term.product.default
 targetEntityType: taxonomy_term
@@ -18,5 +25,55 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_class:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_enable_disable:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_product_id:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_tag:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_target:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_this_product_kebab:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
 hidden:
   langcode: true
