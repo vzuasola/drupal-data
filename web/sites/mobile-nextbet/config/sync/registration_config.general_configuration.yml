@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: 5t1zX0k3ePnUyefB7MQsMW5RWN-KzQyPOtTljWnYL8Y
+generic_error_message: 'Account registration failed. Please contact our <a href="mailto:ensupport@dafabet.com">Customer Support</a> for assistance.'
+error_code_mapping: "ExternalPlayerAccountCreationFailed|(i-1000)\r\nPrincipalExist|(i-1001)\r\nEmailExist|(i-1002)\r\nCouponNotFound|(i-1003)\r\nPlayerUnderAge|(i-1004)\r\nMandatoryField|(i-1005)\r\nNicknameExist|(i-1006)\r\nInvalidNickname|(i-1007)\r\nPortalNotActive|(i-1008)\r\nPortalNotExist|(i-1009)\r\nInternalError|(i-1010)\r\nInvalidContactInfoSubType|(i-1011)\r\nCaptchaError|(c-2000)\r\nMismatched captcha|(c-2001)\r\nExpired captcha|(c-2002)"
+unauthenticated_error_message: 'We are unable to authenticate you on Dafabet as it seems your account has been logged out. Please login to your account.'
+forbidden_request_error_message: 'Forbidden request. Please try again.'
+jpay_api: 'http://nb-tct.jpaysystem.com/api/cashier'
+jpay_siteid: '106'
+
