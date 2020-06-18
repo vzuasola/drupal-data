@@ -11,7 +11,7 @@ field_name: field_alias
 entity_type: webcomposer_download_page
 bundle: webcomposer_download_page
 label: Alias
-description: 'Specify download page url path. Example: pt'
+description: 'Specify the URL alias to identify which download page to display.'
 required: true
 translatable: false
 default_value: {  }
