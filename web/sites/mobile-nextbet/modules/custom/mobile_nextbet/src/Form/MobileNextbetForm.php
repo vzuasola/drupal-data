@@ -39,8 +39,6 @@ class MobileNextbetForm extends FormBase {
     ];
 
     $this->sectionNextbetConfigs($form);
-    $this->generalConfig($form);
-    $this->restrictionConfig($form);
 
     return $form;
   }
