@@ -119,7 +119,7 @@ class ProductTabs extends ResourceBase {
   private function getProductTabs($state, $type) {
     // You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
-    $query->condition('vid', "product");
+    $query->condition('vid', "product_promotions");
     $query->sort('weight', 'ASC');
     $tids = $query->execute();
     $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
@@ -161,7 +161,7 @@ class ProductTabs extends ResourceBase {
           // Find the sub filter of product term
           $findChildren = \Drupal::entityTypeManager()
             ->getStorage('taxonomy_term')
-            ->loadTree('product', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
+            ->loadTree('product_promotions', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
             if (in_array($key, $value->parents)) {
