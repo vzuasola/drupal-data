@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.webcomposer_download_page.webcomposer_download_page.field_alias
     - field.field.webcomposer_download_page.webcomposer_download_page.field_download_step
   module:
     - paragraphs
@@ -14,9 +15,17 @@ targetEntityType: webcomposer_download_page
 bundle: webcomposer_download_page
 mode: default
 content:
+  field_alias:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_download_step:
     type: entity_reference_paragraphs
-    weight: 6
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -28,7 +37,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
@@ -42,7 +51,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
