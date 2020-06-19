@@ -1,14 +1,14 @@
-uuid: 2ad73575-d0f0-4d83-8ad8-5b03d5aca1a3
+uuid: 67aad320-cdcf-4bd8-becb-1ad1cc5f5364
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_class
-    - taxonomy.vocabulary.product
-id: taxonomy_term.product.field_class
+    - taxonomy.vocabulary.product_promotions
+id: taxonomy_term.product_promotions.field_class
 field_name: field_class
 entity_type: taxonomy_term
-bundle: product
+bundle: product_promotions
 label: Class
 description: 'Enter value for class attribute.'
 required: false

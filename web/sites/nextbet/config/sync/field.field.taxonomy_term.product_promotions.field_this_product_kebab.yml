@@ -1,14 +1,14 @@
-uuid: 8ba5f2c2-5cc0-478a-984e-8e97ab8c590e
+uuid: 43b91baf-4ea7-49fe-b154-9a9d92d59c28
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_this_product_kebab
-    - taxonomy.vocabulary.product
-id: taxonomy_term.product.field_this_product_kebab
+    - taxonomy.vocabulary.product_promotions
+id: taxonomy_term.product_promotions.field_this_product_kebab
 field_name: field_this_product_kebab
 entity_type: taxonomy_term
-bundle: product
+bundle: product_promotions
 label: 'Show in Kebab'
 description: 'If checked will show this product on the secondary menu'
 required: false

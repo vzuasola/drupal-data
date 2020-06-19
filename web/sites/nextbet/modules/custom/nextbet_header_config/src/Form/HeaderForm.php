@@ -59,7 +59,6 @@ class HeaderForm extends FormBase {
 
     $this->sectionLogo($form, $value);
     $this->sectionCashier($form, $value);
-    $this->sectionOther($form, $value);
     $this->sectionBalance($form, $value);
 
     return $form;
@@ -199,26 +198,6 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Product Balance Mapping'),
       '#description' => $this->t('Provide a product mapping that will show up below the username'),
       '#default_value' => $this->get($value . '_balance_mapping'),
-      '#translatable' => TRUE,
-    ];
-  }
-
-  /**
-   *
-   */
-  private function sectionOther(&$form, $value) {
-    $form[$value . '_header_other_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Others'),
-      '#collapsible' => TRUE,
-    ];
-
-    $form[$value . '_header_other_group'][$value . '_lobby_page_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Lobby Page Title.'),
-      '#description' => $this->t('Lobby Page Title.'),
-      '#default_value' => $this->get($value . '_lobby_page_title'),
-      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
   }
