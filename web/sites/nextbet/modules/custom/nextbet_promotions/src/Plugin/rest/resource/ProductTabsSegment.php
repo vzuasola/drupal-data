@@ -61,7 +61,13 @@ class ProductTabsSegment extends ResourceBase {
    * @param Symfony\Component\HttpFoundation\Request $current_request
    *   The current request
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, AccountProxyInterface $current_user, Request $current_request) {
+  public function __construct(array $configuration,
+  $plugin_id,
+  $plugin_definition,
+  array $serializer_formats,
+  LoggerInterface $logger,
+  AccountProxyInterface $current_user,
+  Request $current_request) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
     $this->currentUser = $current_user;
     $this->currentRequest = $current_request;
