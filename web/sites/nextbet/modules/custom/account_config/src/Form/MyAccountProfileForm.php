@@ -92,14 +92,6 @@ class MyAccountProfileForm extends FormBase {
             '#group' => 'profile',
         ];
 
-        $form['field_labels_generic_configuration']['primary_label'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Label for primary mobile number tagging'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('primary_label'),
-            '#translatable' => true,
-        ];
-
         $form['field_labels_generic_configuration']['add_mobile_label'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Label for adding mobile number link'),
@@ -114,22 +106,6 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#default_value' => $this->get('no_changed_detected_message'),
             '#translatable' => TRUE,
-        ];
-
-        $form['field_labels_generic_configuration']['male_label'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Label for Male'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('male_label'),
-            '#translatable' => TRUE,
-        ];
-
-        $form['field_labels_generic_configuration']['female_label'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Label for Female'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('female_label'),
-            '#translatable' => true,
         ];
 
         $form['contact_preference'] = [
@@ -222,22 +198,6 @@ class MyAccountProfileForm extends FormBase {
             '#title' => $this->t('Modal Preview Bottom Blurb'),
             '#required' => TRUE,
             '#default_value' => $this->get('modal_preview_bottom_blurb'),
-            '#translatable' => true,
-        ];
-
-        $form['field_labels_modal_preview']['modal_preview_placeholder'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Modal Preview Password Placeholder'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('modal_preview_placeholder'),
-            '#translatable' => true,
-        ];
-
-        $form['field_labels_modal_preview']['modal_preview_btn'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Modal Preview Button'),
-            '#required' => TRUE,
-            '#default_value' => $this->get('modal_preview_btn'),
             '#translatable' => true,
         ];
 
