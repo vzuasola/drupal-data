@@ -46,7 +46,8 @@ class LuckyBaby404ImageEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['luckybaby404imageentity_settings']['#markup'] = 'Settings form for Lucky Baby 404 Image Entity entities. Manage field settings here.';
+    $form['luckybaby404imageentity_settings']['#markup'] = 'Settings form for Lucky Baby
+    404 Image Entity entities. Manage field settings here.';
     return $form;
   }
 
