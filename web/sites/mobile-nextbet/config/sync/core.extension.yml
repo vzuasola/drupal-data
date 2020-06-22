@@ -62,6 +62,7 @@ module:
   quickedit: 0
   rdf: 0
   registration_config: 0
+  registration_theme: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
