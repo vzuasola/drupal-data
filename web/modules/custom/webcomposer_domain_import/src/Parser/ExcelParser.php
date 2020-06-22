@@ -52,6 +52,7 @@ class ExcelParser {
     try {
       // Attempt to read excel file.
       $excelReader = \PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile($path);
+      $excelReader->setReadDataOnly(true);
       $excelReader->setLoadAllSheets();
       $excel = $excelReader->load($path);
     }
