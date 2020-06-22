@@ -14,8 +14,6 @@ modal_preview_top_blurb: 'Please review list of changes. '
 modal_preview_current_label: Current
 modal_preview_new_label: New
 modal_preview_bottom_blurb: 'Enter your password to save changes to your account'
-modal_preview_placeholder: Password
-modal_preview_btn: 'Save Changes'
 server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Code: 700)"
 required_validation: 'This is a required field.'
 password_format_validation: 'This field can only contain alphanumeric values. '
