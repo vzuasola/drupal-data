@@ -33,17 +33,20 @@ settings:
       value: sa_gaming
       label: 'SA Gaming'
     -
+      value: pg_soft
+      label: PGSoft
+    -
       value: asia_gaming
       label: 'Asia Gaming'
     -
       value: ruby_play
       label: 'Ruby Play'
     -
-      value: pas
-      label: PAS
-    -
       value: pgsoft
       label: PGSoft
+    -
+      value: playtech
+      label: Playtech
   allowed_values_function: ''
 module: options
 locked: false
