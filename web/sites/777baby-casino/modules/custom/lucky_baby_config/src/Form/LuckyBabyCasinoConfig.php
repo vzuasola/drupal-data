@@ -207,6 +207,13 @@ class LuckyBabyCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['page_setting']['my_account_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('My Account Page Title'),
+      '#default_value' => $this->get('my_account_title') ?? "My Account Title",
+      '#translatable' => true,
+    ];
+
     $form['page_setting']['gallery'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Gallery Page Title'),
@@ -364,6 +371,13 @@ class LuckyBabyCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Gallery'),
       '#default_value' => $this->get('gallery_breadcrumb'),
+      '#translatable' => true,
+    ];
+
+    $form['inner_breadcrumb']['my_account_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('My Account'),
+      '#default_value' => $this->get('my_account_breadcrumb') ?? "My Account Breadcrumb",
       '#translatable' => true,
     ];
 
