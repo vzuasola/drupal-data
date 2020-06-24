@@ -37,6 +37,7 @@ module:
   filter: 0
   games_collection: 0
   games_config: 0
+  games_search: 0
   image: 0
   imce: 0
   lang_dropdown: 0
@@ -102,6 +103,7 @@ module:
   webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
+  webcomposer_site_maintenance: 0
   webcomposer_sitemap: 0
   webcomposer_slider_v2: 0
   webcomposer_social_media: 0
