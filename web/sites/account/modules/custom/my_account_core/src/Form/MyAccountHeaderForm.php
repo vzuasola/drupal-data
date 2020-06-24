@@ -2,24 +2,22 @@
 
 namespace Drupal\my_account_core\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Path\PathValidatorInterface;
+use Drupal\Core\Routing\RequestContext;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * My Account header configuration.
+ * Implements the vertical tabs demo form controller.
  *
- * @WebcomposerConfigPlugin(
- *   id = "my_account_core.header",
- *   route = {
- *     "title" = "My Account Header Configuration",
- *     "path" = "/admin/config/my_account/header",
- *   },
- *   menu = {
- *     "title" = "My Account Header",
- *     "description" = "My Account header configuration",
- *     "parent" = "my_account_form_profile.config",
- *   },
- * )
+ * This example demonstrates the use of \Drupal\Core\Render\Element\VerticalTabs
+ * to group input elements according category.
+ *
+ * @see \Drupal\Core\Form\FormBase
+ * @see \Drupal\Core\Form\ConfigFormBase
  */
 class MyAccountHeaderForm extends FormBase {
 
@@ -87,4 +85,16 @@ class MyAccountHeaderForm extends FormBase {
     return $form;
   }
 
+    /**
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container)
+    {
+        return new static(
+            $container->get('config.factory'),
+            $container->get('path.alias_manager'),
+            $container->get('path.validator'),
+            $container->get('router.request_context')
+        );
+    }
 }
