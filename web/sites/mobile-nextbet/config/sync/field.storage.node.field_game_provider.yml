@@ -39,11 +39,11 @@ settings:
       value: ruby_play
       label: 'Ruby Play'
     -
-      value: pas
-      label: PAS
-    -
       value: pgsoft
       label: PGSoft
+    -
+      value: playtech
+      label: Playtech
   allowed_values_function: ''
 module: options
 locked: false
