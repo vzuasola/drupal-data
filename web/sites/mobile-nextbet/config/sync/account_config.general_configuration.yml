@@ -23,3 +23,5 @@ welcome_text: Welcome
 product_menu_new_tag: New
 help_tooltip: Help
 error_mid_down: 'An error occurred. Please try again later.'
+my_profile_tab: 'My Accounts'
+change_password_tab: 'Change Password'
