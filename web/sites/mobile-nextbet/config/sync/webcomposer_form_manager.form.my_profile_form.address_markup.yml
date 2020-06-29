@@ -1,18 +1,17 @@
 field_settings:
-  label: 'Current Password'
-  placeholder: 'Current Password'
+  markup: 'Home Address<hr>'
 field_validations:
   required:
-    enable: 1
-    error_message: 'This is a required field.'
+    enable: 0
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
     parameters:
       spaces: 1
   alphanumeric:
-    enable: 1
-    error_message: "Password must contain 6-10 alphanumeric characters only with no special characters and spaces.\r\n"
+    enable: 0
+    error_message: 'Field should be alphanumeric'
     parameters:
       spaces: 1
   alpha_multi:
@@ -37,13 +36,13 @@ field_validations:
     enable: 0
     error_message: 'Field does not contain a valid email address'
   min_length:
-    enable: 1
-    error_message: 'Please enter at least 6 characters.'
+    enable: 0
+    error_message: 'Minimum requirement not met'
     parameters:
-      length: '6'
+      length: '2'
   max_length:
-    enable: 1
-    error_message: 'Please enter no more than 10 characters.'
+    enable: 0
+    error_message: 'Maximum requirement not met'
     parameters:
       length: '10'
   regex:
