@@ -1,5 +1,5 @@
 join_now_text: 'JOIN NOW'
-join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+join_now_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 login_issue_text: 'Can''t login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 sc_lang_text: SC
@@ -8,12 +8,12 @@ balance_error_text: 'Error Retrieving.'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
-welcome_text: '{username}'
+welcome_text: 'Welcome {username}'
 profile_link: '/my-account[query:({tracking})]'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+lobby_page_title: 'Place your online bets anywhere with Nextbet mobile!'
 critical_announcement: '0'
 critical_announcement_content:
   value: "<p>This is a critical announcement test test test</p>\r\n"
@@ -24,11 +24,11 @@ news_announcement_content:
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: N/A
-header_settings_tab__active_tab: edit-header-other-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: 'Mobile gambling with NextBet'
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 registration_link_mobile: ''
 password_mask_toggle: 0
 caps_lock_toggle: 0
@@ -48,13 +48,16 @@ product_balance_id: ''
 total_balance_label: 'Total Balance:'
 balance_mapping: ''
 balance_label_override: ''
-currency_balance_mapping: ''
-excluded_balance_mapping: ''
+currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,KHR,MMK\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,KHR,MMK\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n10|INR\r\n1|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,LAK,MMK\r\n2|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n5|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,KHR,MMK\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n3|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,LAK,MMK\r\n7|RMB"
+excluded_balance_mapping: '7'
 currency_label_mapping: ''
 value: null
 format: null
 promotion_page_title: 'Nextbet mobile betting promotions offer huge rewards!'
 links_title: Quicklinks
-mobile_slot_title: 'Slots - Lobby Page Title.'
-mobile_live_dealer_title: 'Live Dealer - Lobby Page Title.'
-mobile_arcade_title: 'Arcade - Lobby Page Title.'
+mobile_slot_title: 'Nextbet now offers the most secure mobile Slots in Asia!'
+mobile_live_dealer_title: 'Play Live Dealer mobile at Nextbet!'
+mobile_arcade_title: 'Play your favorite mobile Arcade games with Nextbet!'
+logo_title_slots: 'Mobile Slots'
+logo_title_live_dealer: 'Mobile Live Dealer'
+logo_title_arcade: 'Mobile Arcade'

@@ -1,0 +1,18 @@
+uuid: 6fe28c7e-5349-40a9-ab5f-568a175a0df3
+langcode: ja
+status: true
+dependencies:
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.field_enable
+field_name: field_enable
+entity_type: deposit_and_withdrawal_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
