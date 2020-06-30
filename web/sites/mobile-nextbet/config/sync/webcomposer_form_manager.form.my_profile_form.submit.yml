@@ -1,9 +1,8 @@
 field_settings:
-  label: 'Postal Code'
-  placeholder: 'Postal Code'
+  label: 'Save Changes'
 field_validations:
   required:
-    enable: 1
+    enable: 0
     error_message: 'Field should be required'
   alpha:
     enable: 0
