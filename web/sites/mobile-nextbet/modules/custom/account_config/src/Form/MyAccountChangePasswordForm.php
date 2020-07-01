@@ -61,18 +61,22 @@ class MyAccountChangePasswordForm extends FormBase {
       '#group' => 'change_password',
     ];
 
+    $content = $this->get('change_password_mobile_success_message');
     $form['field_success_message_group']['change_password_mobile_success_message'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => $this->t('Success Message'),
-      '#default_value' => $this->get('change_password_mobile_success_message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
 
+    $content = $this->get('change_password_mobile_failed_message');
     $form['field_success_message_group']['change_password_mobile_failed_message'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => $this->t('Failed Message'),
-      '#default_value' => $this->get('change_password_mobile_failed_message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
