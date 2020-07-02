@@ -1,0 +1,5 @@
+name: Webcomposer Playtech Integration
+type: module
+description: Webcomposer Playtech Integration Configuration
+core: 8.x
+package: Web Composer
