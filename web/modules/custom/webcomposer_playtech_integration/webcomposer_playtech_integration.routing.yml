@@ -1,0 +1,7 @@
+webcomposer_playtech_integration.admin_settings:
+    path: 'admin/config/webcomposer/playtech-integration'
+    defaults:
+      _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+      _title: 'Webcomposer Playtech Integration'
+    requirements:
+      _permission: 'administer site configuration'
