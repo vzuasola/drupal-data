@@ -50,7 +50,7 @@ class AvayaChatConfiguration extends FormBase {
       '#type' => 'details',
       '#title' => 'Field Configuration',
     ];
-    
+
     $form['field_configuration']['base_url'] = [
       '#rows' => 3,
       '#type' => 'textarea',
@@ -107,7 +107,7 @@ class AvayaChatConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Live Chat Text'),
       '#description' => $this->t('Text that will be displayed inside the chatbox'),
-      '#default_value' => $this->get('livechat_text'),      
+      '#default_value' => $this->get('livechat_text'),
       '#translatable' => TRUE,
       '#maxlength' => 500,
     ];
