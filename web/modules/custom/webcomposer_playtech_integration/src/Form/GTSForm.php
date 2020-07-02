@@ -42,8 +42,7 @@ class GTSForm extends FormBase {
     return $form;
   }
 
-  private function buildPlaytechForm(&$form)
-  {
+  private function buildPlaytechForm(&$form) {
     $form['general_config']['module_toggle'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Toggle Playtech Integraton Module'),
@@ -70,8 +69,7 @@ class GTSForm extends FormBase {
 
   }
 
-  private function contentTab(&$form, $value)
-  {
+  private function contentTab(&$form, $value) {
     $form = array(
       '#type' => 'details',
       '#title' => $this->t($value),
@@ -160,8 +158,7 @@ class GTSForm extends FormBase {
     ];
   }
 
-  private function errorConfig(&$form, $value)
-  {
+  private function errorConfig(&$form, $value) {
     $form = [
       '#type' => 'details',
       '#title' => $this->t('Error Handling'),
