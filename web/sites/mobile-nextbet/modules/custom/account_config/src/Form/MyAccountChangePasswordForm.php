@@ -61,7 +61,7 @@ class MyAccountChangePasswordForm extends FormBase {
       '#group' => 'change_password',
     ];
 
-    $content = $this->get('change_password_mobile_success_message');
+    $content = $this->get('change_password_success_message');
     $form['field_success_message_group']['change_password_mobile_success_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Success Message'),
@@ -71,7 +71,7 @@ class MyAccountChangePasswordForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $content = $this->get('change_password_mobile_failed_message');
+    $content = $this->get('change_password_failed_message');
     $form['field_success_message_group']['change_password_mobile_failed_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Failed Message'),
