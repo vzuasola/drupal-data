@@ -45,6 +45,12 @@ class AvayaChatConfiguration extends FormBase {
       '#title' => 'Global Configuration',
     ];
 
+    $form['header_configuration'] = [
+      '#group' => 'avaya',
+      '#type' => 'details',
+      '#title' => 'Field Configuration',
+    ];
+
     $form['field_configuration']['base_url'] = [
       '#rows' => 3,
       '#type' => 'textarea',
@@ -95,6 +101,15 @@ class AvayaChatConfiguration extends FormBase {
         ' (eg. https://www.cs-livechat.com)'
       ),
       '#default_value' => $this->get('xdomain_proxy'),
+    ];
+
+    $form['header_configuration']['livechat_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Chat Text'),
+      '#description' => $this->t('Text that will be displayed inside the chatbox'),
+      '#default_value' => $this->get('livechat_text'),
+      '#translatable' => TRUE,
+      '#maxlength' => 500,
     ];
 
     return $form;
