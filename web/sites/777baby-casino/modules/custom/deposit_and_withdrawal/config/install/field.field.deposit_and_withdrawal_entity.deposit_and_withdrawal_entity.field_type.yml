@@ -1,0 +1,21 @@
+uuid: d208a16e-e87e-426d-a5f2-5fcde0c3cbeb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.deposit_and_withdrawal_entity.field_type
+  module:
+    - deposit_and_withdrawal
+    - options
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_type
+field_name: field_type
+entity_type: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+label: Type
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

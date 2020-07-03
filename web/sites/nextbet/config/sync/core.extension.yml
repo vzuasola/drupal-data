@@ -35,6 +35,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  games_category: 0
   games_collection: 0
   games_config: 0
   games_search: 0
@@ -45,6 +46,7 @@ module:
   language_access: 0
   libraries: 0
   link: 0
+  live_dealer_games_config: 0
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
@@ -53,6 +55,7 @@ module:
   nextbet_footer_config: 0
   nextbet_forms: 0
   nextbet_front_blocks: 0
+  nextbet_header_config: 0
   nextbet_urls: 0
   node: 0
   options: 0
@@ -89,6 +92,7 @@ module:
   webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
+  webcomposer_download_page: 0
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
@@ -98,7 +102,6 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0
-  webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
@@ -113,6 +116,7 @@ module:
   webcomposer_webform: 0
   nextbet_footer_config: 0
   nextbet_payments: 0
+  nextbet_promotions: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
