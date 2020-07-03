@@ -108,6 +108,24 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
+        $form['field_labels_generic_configuration']['my_profile_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('My Profile Tab Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('my_profile_tab'),
+            '#translatable' => true,
+            '#description' => 'Label for My Profile Tab.'
+        ];
+
+        $form['field_labels_generic_configuration']['change_password_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Change Password Tab label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('change_password_tab'),
+            '#translatable' => true,
+            '#description' => 'Label for Change Password Tab.'
+        ];
+
         $form['contact_preference'] = [
             '#type' => 'details',
             '#title' => 'Contact Prefrence',
