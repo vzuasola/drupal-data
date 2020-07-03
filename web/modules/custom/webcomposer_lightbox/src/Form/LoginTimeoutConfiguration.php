@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\webcomposer_games\Form;
+namespace Drupal\webcomposer_lightbox\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -11,12 +11,12 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "login_timeout_form",
  *   route = {
  *     "title" = "Login Timeout Configuration",
- *     "path" = "/admin/config/webcomposer/games/login-timeout",
+ *     "path" = "/admin/config/webcomposer/lightbox/login-timeout",
  *   },
  *   menu = {
  *     "title" = "Login Timeout Configuration",
  *     "description" = "Provides configuration for login timeout",
- *     "parent" = "webcomposer_games.list",
+ *     "parent" = "webcomposer_lightbox.list",
  *     "weight" = 10
  *   },
  * )
@@ -69,7 +69,7 @@ class LoginTimeoutConfiguration extends FormBase {
     $form['gen_config']['login_timeout_button'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Login Timeout Lightbox Button Text'),
-      '#description' => $this->t('Text inside the UCL button'),
+      '#description' => $this->t('Text inside the button'),
       '#default_value' => $this->get('login_timeout_button'),
       '#required' => false,
       '#translatable' => TRUE,
