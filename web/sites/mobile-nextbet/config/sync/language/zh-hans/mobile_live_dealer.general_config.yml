@@ -4,5 +4,5 @@ title_provider_drawer: 游戏平台
 all_quicklaunch_title: 所有
 all_quicklaunch_alt: ''
 games_transfer_title: 极速转账
-games_transfer_link: '{cashier}/transaction/transfer[query:(ticket={ticket.token}&{tracking})]'
+games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
 games_maintenance_text: 日常维护中

@@ -1,0 +1,45 @@
+<?php 
+
+/**
+ * Implements hook_uninstall
+ */
+function deposit_and_withdrawal_uninstall() {
+  $keys = [
+    'core.base_field_override.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.metatag.yml',
+    'core.base_field_override.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.user_id.yml',
+    'core.entity_form_display.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.default.yml',
+    'core.entity_view_display.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.default.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_banner.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_banner_link.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_body.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_label.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_url.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_configurable_url.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_enable.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_summary.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_thumbnail.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_title.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_type.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_where_to_open_images.yml',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_where_to_open_link.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_banner.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_banner_link.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_body.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_button_label.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_button_url.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_configurable_url.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_enable.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_summary.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_thumbnail.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_title.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_type.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_where_to_open_images.yml',
+    'field.storage.deposit_and_withdrawal_entity.field_where_to_open_link.yml',
+    'language.content_settings.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.yml',
+    'views.view.deposit_and_withdrawal_method.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

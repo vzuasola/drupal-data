@@ -1,8 +1,8 @@
-header_settings_tab__active_tab: edit-announcement-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: เดิมพันบนมือถือกับเน็กซ์เบท
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 registration_link_mobile: ''
 capslock_notification: 'ปิดปุ่ม Caps Lock'
 mobile_remember: บันทึกยูสเซอร์เนม
@@ -29,7 +29,7 @@ lobby_page_title: วางเดิมพันได้ทุกที่ท�
 promotion_page_title: รับสิทธิ์พิเศษมากมายกับโปรโมชั่นเดิมพันบนมือถือกับเน็กซ์เบท!
 links_title: คลิกที่นี่
 join_now_text: สมัครสมาชิก
-join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+join_now_link: '{domain:registration_link}[query:(regvia=9&{tracking})]'
 login_issue_text: 'ลืมรหัสผ่าน?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: Balance

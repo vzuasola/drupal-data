@@ -1,0 +1,15 @@
+live_dealer_games_config.admin_settings:
+  path: 'admin/live_dealer_games'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Live Dealer Games Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+live_dealer_games_config.games_configuration:
+  path: 'admin/live_dealer_games/config'
+  defaults:
+    _form: 'Drupal\live_dealer_games_config\Form\GamesConfigurationForm'
+    _title: 'Live Dealer Games Custom Configuration'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,5 @@
+webcomposer_playtech_integration.list:
+    title: 'Webcomposer Playtech Integration'
+    parent: system.admin_config
+    description: 'Configuration for playtech integrations'
+    route_name: webcomposer_playtech_integration.admin_settings

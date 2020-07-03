@@ -69,7 +69,7 @@ third_party_settings:
         - group_pre_login_body
         - group_post_login_body
       parent_name: ''
-      weight: 10
+      weight: 9
       format_type: tab
       format_settings:
         label: 'Body Content'
@@ -110,7 +110,7 @@ third_party_settings:
         - group_pre_login_banner_fields
         - group_post_login_banner_fields
       parent_name: ''
-      weight: 11
+      weight: 10
       format_type: details
       format_settings:
         id: ''
@@ -154,11 +154,11 @@ third_party_settings:
       children:
         - field_promotion_summary_link
         - field_promotion_link_target
-        - field_thumbnail_image
+        - field_summary_image
         - field_promotion_summary
         - field_hide_countdown
       parent_name: ''
-      weight: 14
+      weight: 13
       format_type: details
       format_settings:
         id: ''
@@ -169,7 +169,7 @@ third_party_settings:
     group_inner_page_right_side_bloc:
       children: {  }
       parent_name: ''
-      weight: 25
+      weight: 24
       format_type: details
       format_settings:
         id: ''
@@ -181,10 +181,10 @@ third_party_settings:
       children:
         - field_right_side_block_link
         - field_link_target
-        - field_summary_image
+        - field_thumbnail_image
         - field_thumbnail_summary
       parent_name: ''
-      weight: 12
+      weight: 11
       format_type: details
       format_settings:
         id: ''
@@ -198,7 +198,7 @@ third_party_settings:
         - field_right_side_block_title
         - field_right_side_block_content
       parent_name: ''
-      weight: 13
+      weight: 12
       format_type: details
       format_settings:
         id: ''
@@ -212,7 +212,7 @@ third_party_settings:
         - field_text_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 15
+      weight: 14
       format_type: details
       format_settings:
         id: ''
@@ -298,7 +298,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_hide_countdown:
-    weight: 21
+    weight: 20
     settings:
       display_label: true
     third_party_settings: {  }
@@ -348,7 +348,7 @@ content:
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 23
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -372,7 +372,7 @@ content:
     type: options_select
     region: content
   field_promotion_summary:
-    weight: 20
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -434,16 +434,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_segment_name:
-    weight: 9
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_summary_image:
-    weight: 31
+    weight: 18
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -457,7 +449,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_thumbnail_image:
-    weight: 19
+    weight: 32
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -465,7 +457,7 @@ content:
     type: image_image
     region: content
   field_thumbnail_summary:
-    weight: 32
+    weight: 33
     settings:
       rows: 5
       placeholder: ''
@@ -481,7 +473,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 17
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -489,17 +481,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 22
+    weight: 21
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 18
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -507,14 +499,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 24
+    weight: 23
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 21
+    weight: 20
     region: content
     third_party_settings: {  }
   title:
@@ -526,7 +518,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -541,9 +533,10 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 19
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_hide_right_side_block: true
+  field_segment_name: true
