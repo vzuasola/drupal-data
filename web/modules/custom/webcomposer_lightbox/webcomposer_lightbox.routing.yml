@@ -1,0 +1,7 @@
+webcomposer_lightbox.admin_settings:
+  path: 'admin/config/webcomposer/lightbox'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Lightbox Configuration'
+  requirements:
+    _permission: 'administer site configuration'

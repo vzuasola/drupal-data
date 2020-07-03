@@ -1,0 +1,5 @@
+webcomposer_lightbox.list:
+  title: 'Webcomposer Lightbox Configuration'
+  parent: system.admin_config
+  description: 'Configuration for lightbox'
+  route_name: webcomposer_lightbox.admin_settings
