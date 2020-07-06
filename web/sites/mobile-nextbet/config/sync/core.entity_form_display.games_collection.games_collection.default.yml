@@ -1,0 +1,56 @@
+uuid: 22fe4f69-f48d-40d5-9f1c-6d2e23924277
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.games_collection.games_collection.field_games
+    - field.field.games_collection.games_collection.field_product
+    - field.field.games_collection.games_collection.field_type
+  module:
+    - games_collection
+id: games_collection.games_collection.default
+targetEntityType: games_collection
+bundle: games_collection
+mode: default
+content:
+  field_games:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_product:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  user_id: true
