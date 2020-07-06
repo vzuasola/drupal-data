@@ -7,6 +7,12 @@ dependencies:
     - node.type.game
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.game.field_game_thumbnail
 field_name: field_game_thumbnail
 entity_type: node
