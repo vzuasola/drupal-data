@@ -14,7 +14,7 @@ bundle: registration_theme_entity
 label: 'Registration Button Background Color'
 description: 'Button color for registration page'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

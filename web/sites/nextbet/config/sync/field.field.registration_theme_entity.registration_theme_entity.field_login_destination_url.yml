@@ -14,7 +14,7 @@ bundle: registration_theme_entity
 label: 'Login Destination URL'
 description: 'URL if the player decides to login inside the registration'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
