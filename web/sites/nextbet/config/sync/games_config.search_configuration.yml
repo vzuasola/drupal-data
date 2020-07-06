@@ -1,4 +1,4 @@
-search_configuration_tab__active_tab: edit-filter
+search_configuration_tab__active_tab: edit-recommendations
 recommendation_message:
   value: "<p><span class=\"text-18\">No search results for <strong>\"{keyword}\"</strong></span></p>\r\n\r\n<p>You might want to try our recommended games.</p>\r\n"
   format: basic_html
@@ -12,8 +12,8 @@ search_result_message:
   value: "<p><span class=\"text-18\">Showing <strong><em><u>{total}</u></em>&nbsp;</strong>result/s for <strong>\"{keyword}\"</strong></span></p>\r\n"
   format: basic_html
 filter_message:
-  value: "<p><span class=\"text-18\">No Filter Results</span>\r\n</p>\r\n<p>You might want to try our recommended games.\r\n</p>\r\n"
+  value: "<p><span class=\"text-18\">No Filter Results</span></p>\r\n\r\n<p>You might want to try our recommended games.</p>\r\n"
   format: basic_html
 filter_message_negative:
-  value: "<p><span class=\"text-18\">No Filter Results</span>\r\n</p>\r\n"
+  value: "<p><span class=\"text-18\">No Filter Results</span></p>\r\n"
   format: basic_html
