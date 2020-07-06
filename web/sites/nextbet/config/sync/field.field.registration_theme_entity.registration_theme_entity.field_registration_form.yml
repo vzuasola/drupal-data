@@ -14,7 +14,7 @@ bundle: registration_theme_entity
 label: Form
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: registration_form
