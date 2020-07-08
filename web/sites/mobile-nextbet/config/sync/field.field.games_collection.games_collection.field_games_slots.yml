@@ -1,17 +1,17 @@
-uuid: 68611490-48bd-4adc-96d1-e16682601f92
+uuid: 6a11620e-c707-48b8-b807-1d57f3d9e62b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.games_collection.field_games
-    - node.type.games_arcade
+    - field.storage.games_collection.field_games_slots
+    - node.type.games_slots
   module:
     - games_collection
-id: games_collection.games_collection.field_games
-field_name: field_games
+id: games_collection.games_collection.field_games_slots
+field_name: field_games_slots
 entity_type: games_collection
 bundle: games_collection
-label: Games
+label: 'Games Slots'
 description: ''
 required: false
 translatable: true
@@ -21,10 +21,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      games_arcade: games_arcade
+      games_slots: games_slots
     sort:
       field: changed
       direction: DESC
     auto_create: false
-    auto_create_bundle: games_arcade
+    auto_create_bundle: ''
 field_type: entity_reference
