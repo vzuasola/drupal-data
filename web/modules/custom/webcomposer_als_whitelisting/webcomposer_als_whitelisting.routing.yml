@@ -1,0 +1,7 @@
+webcomposer_cdn.admin_settings:
+  path: 'admin/config/webcomposer/als-whitelisting'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'ALS Whitelisting Configuration'
+  requirements:
+    _permission: 'administer site configuration'
