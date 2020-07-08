@@ -45,7 +45,7 @@ class DomainWhitelistingForm extends FormBase {
     $form['whitelisted_domain'] = [
       '#type' => 'textarea',
       '#rows' => 10,
-      '#title' => $this->t('CDN Domain Configuration'),
+      '#title' => $this->t('Whitelisted Domains'),
       '#default_value' => $this->get('whitelisted_domain'),
       '#description' => $this->t("Kindly add the domain per line
         <br>
