@@ -125,8 +125,8 @@ class CantLoginConfigForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $content = $this->get('desktop_forgot_password_success_message');
-    $form['cant_login_tab_menu_config']['forgot_password']['desktop_forgot_password_success_message'] = [
+    $content = $this->get('mobile_forgot_password_success_message');
+    $form['cant_login_tab_menu_config']['forgot_password']['mobile_forgot_password_success_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Success Message'),
       '#default_value' => $content['value'],
@@ -156,8 +156,8 @@ class CantLoginConfigForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $content = $this->get('desktop_forgot_username_success_message');
-    $form['cant_login_tab_menu_config']['forgot_username']['desktop_forgot_username_success_message'] = [
+    $content = $this->get('mobile_forgot_username_success_message');
+    $form['cant_login_tab_menu_config']['forgot_username']['mobile_forgot_username_success_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Success Message'),
       '#default_value' => $content['value'],
@@ -177,8 +177,8 @@ class CantLoginConfigForm extends FormBase {
       '#group' => 'my_account_group',
     ];
 
-    $content = $this->get('desktop_reset_password_success_message');
-    $form['cant_login_reset_password_config']['desktop_reset_password_success_message'] = [
+    $content = $this->get('mobile_reset_password_success_message');
+    $form['cant_login_reset_password_config']['mobile_reset_password_success_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Success Message'),
       '#default_value' => $content['value'],
@@ -187,8 +187,8 @@ class CantLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $content = $this->get('desktop_reset_expired_message');
-    $form['cant_login_reset_password_config']['desktop_reset_expired_message'] = [
+    $content = $this->get('mobile_reset_expired_message');
+    $form['cant_login_reset_password_config']['mobile_reset_expired_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Expired Message'),
       '#default_value' => $content['value'],
