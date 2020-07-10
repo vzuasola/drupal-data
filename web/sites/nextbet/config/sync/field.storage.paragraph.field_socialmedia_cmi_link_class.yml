@@ -28,6 +28,18 @@ settings:
     -
       value: linkedin
       label: LinkedIn
+    -
+      value: instagram
+      label: Instagram
+    -
+      value: weibo
+      label: Weibo
+    -
+      value: line
+      label: Line
+    -
+      value: wechat
+      label: WeChat
   allowed_values_function: ''
 module: options
 locked: false
