@@ -434,6 +434,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        title: false
       row:
         type: data_field
         options:
@@ -682,6 +683,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      title: 'Games Collection'
     cache_metadata:
       max-age: -1
       contexts:
