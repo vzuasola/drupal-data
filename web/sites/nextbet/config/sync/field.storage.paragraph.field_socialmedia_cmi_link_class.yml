@@ -20,6 +20,9 @@ settings:
       value: twitter
       label: Twitter
     -
+      value: messenger
+      label: Messenger
+    -
       value: google
       label: 'Google Plus'
     -
