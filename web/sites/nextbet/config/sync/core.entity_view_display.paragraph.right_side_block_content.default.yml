@@ -19,15 +19,15 @@ bundle: right_side_block_content
 mode: default
 content:
   field_enable:
+    type: boolean
     weight: 4
+    region: content
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
-    region: content
   field_image:
     weight: 1
     label: above
@@ -50,12 +50,12 @@ content:
     type: link
     region: content
   field_link_target:
+    type: list_default
     weight: 2
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
   field_title:
     weight: 0
     label: above
