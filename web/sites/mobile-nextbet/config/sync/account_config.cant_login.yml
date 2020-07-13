@@ -2,11 +2,11 @@ my_account_group__active_tab: edit-cant-login-tab-menu-config
 cant_login_title: 'Cannot Access your Nextbet Account?'
 reset_title: 'Password Reset Request'
 cant_login_response_mapping: "INTERNAL_ERROR|Internal server error\r\nFORGOT_PASSWORD_SUCCESS|Forgot Password success\r\nFORGOT_PASSWORD_FAILED|Invalid Username/Email Address\r\nFORGOT_USERNAME_SUCCESS|Forgot Username Success\r\nFORGOT_USERNAME_FAILED|Invalid Email Address\r\nCHANGE_FORGOTTEN_PASSWORD_SUCCESS|Reset password success\r\nCHANGE_FORGOTTEN_PASSWORD_FAILED|Reset password failed"
-forgot_password_tab_menu: 'Forgot Password EN'
+forgot_password_tab_menu: 'Forgot Password'
 forgot_password_link: '#forgot-password-content'
 value: null
 format: null
-forgot_username_tab_menu: 'Forgot Username EN'
+forgot_username_tab_menu: 'Forgot Username'
 forgot_username_link: '#forgot-username-content'
 forgot_password_success_message:
   value: "<div>\r\n  <svg class=\"icon-check-rounded mb-10\" viewbox=\"0 0 100 100\"> \r\n    <use xlink:href=\"#check-rounded\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> \r\n    </use> \r\n  </svg>\r\n  <p class=\"blurb-heading\"><span class=\"icon-success\">&nbsp;</span> <span class=\"text-semibold\">Reset Password Request Sent EN</span>\r\n  </p>\r\n  <p class=\"text-regular\">A confirmation message has been sent to your registered email address. Please reset your password within the next 24 hours.\r\n  </p>\r\n  <p><a class=\"btn btn-nextbet-yellow btn-small btn-mobile input-block-level\" href=\"{domain:mobile}/{lang}[query:({tracking})]\" target=\"_self\">Go to Nextbet Mobile</a>\r\n  </p>\r\n</div>\r\n<div class=\"contact-info-blurb\">\r\n  <svg class=\"icon-exclamation mb-5\" viewbox=\"0 0 100 100\">\r\n    <use xlink:href=\"#exclamation-rounded\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\r\n    </use>\r\n  </svg>\r\n  <p class=\"text-align-left&gt;For any question or concerns please contact &lt;a  data-cke-saved-href=\" linkto:avaya=\"\">Customer Support.\r\n  </p>\r\n</div>\r\n"
