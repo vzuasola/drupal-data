@@ -231,10 +231,10 @@ class GeneralConfiguration extends FormBase {
     ];
 
     $form['jpay_integration']['jpay_api'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('JPAY API Endpoint'),
       '#description' => $this->t('Endpoint for JPAY API'),
-      '#default_value' => $this->get('jpay_api') ?? "http://cms-jpayws.games.prd/api/cashier/",
+      '#default_value' => $this->get('jpay_api') ?? "PRD|http://cms-jpayws.games.prd/api/cashier/",
       '#translatable' => TRUE,
     ];
 
