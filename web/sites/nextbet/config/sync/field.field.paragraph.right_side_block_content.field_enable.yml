@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_enable
     - paragraphs.paragraphs_type.right_side_block_content
+_core:
+  default_config_hash: giVb1WB_Cf0T3iiAg_irCnzKr2PwwqvLxHV48JevsMs
 id: paragraph.right_side_block_content.field_enable
 field_name: field_enable
 entity_type: paragraph
