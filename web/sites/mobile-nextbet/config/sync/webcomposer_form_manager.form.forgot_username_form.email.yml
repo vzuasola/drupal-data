@@ -1,6 +1,6 @@
 field_settings:
   label: Email
-  placeholder: 'Dafabet Email Address'
+  placeholder: 'Email Address'
   annotation: ''
 field_validations:
   required:
