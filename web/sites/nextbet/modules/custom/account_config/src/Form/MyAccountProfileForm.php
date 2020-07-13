@@ -216,6 +216,130 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['field_labels_sms_verification'] = [
+            '#type' => 'details',
+            '#title' => 'SMS Verification',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['field_labels_sms_verification']['enable_sms_verification'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable SMS Verification'),
+            '#required' => FALSE,
+            '#description' => $this->t('SMS Verification Feature Toggling'),
+            '#default_value' => $this->get('enable_sms_verification'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verify_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Verify Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for Verify Link'),
+            '#default_value' => $this->get('verify_text'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['modal_verify_header_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Verify Header Text'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text modal verify text header'),
+            '#default_value' => $this->get('modal_verify_header_text'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['modal_verify_body_text'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Modal Verify Body Text'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text modal verify body text'),
+            '#default_value' => $this->get('modal_verify_body_text'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['modal_verification_code_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Verification Code Placeholder'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Placeholder text for verification field textfield'),
+            '#default_value' => $this->get('modal_verification_code_placeholder'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['field_labels_sms_verification']['modal_verification_resend_code_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Resend Verification Code Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for resend verification code'),
+            '#default_value' => $this->get('modal_verification_resend_code_text'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['modal_verification_submit_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Submit Verification Code Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for submit verification code'),
+            '#default_value' => $this->get('modal_verification_submit_text'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verification_code_response'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Response from ICore'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Response from ICore'),
+            '#default_value' => $this->get('verification_code_response'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verification_code_required_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Field Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Required Field Error Message'),
+            '#default_value' => $this->get('verification_code_required_message'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verification_code_numeric_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Numeric Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Numeric Field Error Message'),
+            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verification_code_min_length_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Min Length Field Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Min Length Field Error Message'),
+            '#default_value' => $this->get('verification_code_min_length_message'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verification_code_max_length_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Max Length Field Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Max Length Field Error Message'),
+            '#default_value' => $this->get('verification_code_max_length_message'),
+            '#translatable' => TRUE,
+        ];
+
         return $form;
     }
 }
