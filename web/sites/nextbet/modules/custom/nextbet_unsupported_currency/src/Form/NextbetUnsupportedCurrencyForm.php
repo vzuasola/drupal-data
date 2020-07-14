@@ -21,7 +21,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  * )
  */
-class UnsupportedCurrencyForm extends FormBase {
+class NextbetUnsupportedCurrencyForm extends FormBase {
   /**
    * {@inheritdoc}
    */
