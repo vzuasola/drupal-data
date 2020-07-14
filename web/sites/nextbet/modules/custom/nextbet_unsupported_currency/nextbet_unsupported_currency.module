@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains nextbet_unsupported_currency.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nextbet_unsupported_currency_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nextbet_unsupported_currency module.
+    case 'help.page.nextbet_unsupported_currency':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Nextbet Urls specific configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}
