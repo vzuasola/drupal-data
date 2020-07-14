@@ -6,13 +6,13 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Header configuration plugin
+ * Unsupported currency configuration plugin
  *
  * @WebcomposerConfigPlugin(
  *   id = "nextbet_unsupported_currency",
  *   route = {
  *     "title" = "Unsupported Currency Configuration",
- *     "path" = "/admin/config/nextbet/unsupported-currency/configuration",
+ *     "path" = "/admin/config/nextbet/config/unsupported_currency",
  *   },
  *   menu = {
  *     "title" = "Unsupported Currency Configuration",
