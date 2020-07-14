@@ -6,7 +6,7 @@
  */
 function nextbet_unsupported_currency_uninstall() {
   $keys = [
-    'webcomposer_form_manager.form.urls',
+    'webcomposer_form_manager.form.unsupported_currency',
   ];
 
   foreach ($keys as $key) {

@@ -16,7 +16,7 @@ function nextbet_unsupported_currency_help($route_name, RouteMatchInterface $rou
     case 'help.page.nextbet_unsupported_currency':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Nextbet Urls specific configurations') . '</p>';
+      $output .= '<p>' . t('Nextbet Unsupported Currency specific configurations') . '</p>';
       return $output;
 
     default:
