@@ -26,7 +26,7 @@ class UnsupportedCurrencyForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['nextbet_unsupported_currency.unsupported_currency'];
+    return ['nextbet_unsupported_currency.unsupported_currency_configuration'];
   }
 
   /**
