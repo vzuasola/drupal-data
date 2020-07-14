@@ -267,6 +267,13 @@ display:
         options:
           search_fields:
             title: title
+      row:
+        type: entity_reference
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: '-'
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
