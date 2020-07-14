@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "nextbet_unsupported_currency",
  *   route = {
  *     "title" = "Unsupported Currency Configuration",
- *     "path" = "/admin/config/nextbet/config/unsupported-currency",
+ *     "path" = "/admin/config/nextbet/config/nextbet_unsupported_currency",
  *   },
  *   menu = {
  *     "title" = "Unsupported Currency Configuration",
