@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.games_collection.games_collection.field_category_arcade
     - field.field.games_collection.games_collection.field_game_category
     - field.field.games_collection.games_collection.field_games_arcade
     - field.field.games_collection.games_collection.field_games_slots
@@ -16,14 +17,56 @@ targetEntityType: games_collection
 bundle: games_collection
 mode: default
 content:
+  field_category_arcade:
+    weight: 5
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        dc00d1fb-aa33-4b74-a318-31e25690cba7:
+          dependee: field_product
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '82'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: games_collection
+          bundle: games_collection
+    type: options_select
+    region: content
   field_game_category:
     weight: 4
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        c64b3bb9-3bbf-433b-898a-62137a936891:
+          dependee: field_product
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '7'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: games_collection
+          bundle: games_collection
     type: options_select
     region: content
   field_games_arcade:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -41,7 +84,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '13'
+                target_id: '82'
             effect: show
             effect_options: {  }
             selector: ''
@@ -50,7 +93,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_games_slots:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -105,7 +148,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
