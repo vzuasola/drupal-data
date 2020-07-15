@@ -1,5 +1,5 @@
 field_settings:
-  markup: '<h3 class="form-legend pt-20">基本资料</h3>'
+  markup: '<h3 class="form-legend mt-20">基本资料</h3>'
 field_validations:
   required:
     error_message: 'Field should be required'
