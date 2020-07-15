@@ -434,6 +434,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        title: false
       row:
         type: data_field
         options:
@@ -509,11 +510,11 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_code:
-          id: field_game_code
+        field_game_code_1:
+          id: field_game_code_1
           table: node__field_game_code
           field: field_game_code
-          relationship: field_games
+          relationship: field_games_slots
           group_type: group
           admin_label: ''
           label: ''
@@ -572,62 +573,79 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-      relationships:
-        field_games:
-          id: field_games
-          table: games_collection__field_games
-          field: field_games
-          relationship: none
-          group_type: group
-          admin_label: 'field_games: Content'
-          required: true
-          plugin_id: standard
-      filters:
-        langcode:
-          id: langcode
-          table: games_collection_field_data
-          field: langcode
+        delta:
+          id: delta
+          table: games_collection__field_games_slots
+          field: delta
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: games_collection
-          entity_field: langcode
-          plugin_id: language
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
+      relationships:
+        field_games_slots:
+          id: field_games_slots
+          table: games_collection__field_games_slots
+          field: field_games_slots
+          relationship: none
+          group_type: group
+          admin_label: 'field_games_slots: Content'
+          required: true
+          plugin_id: standard
+      filters:
         langcode_1:
           id: langcode_1
           table: node_field_data
           field: langcode
-          relationship: field_games
+          relationship: field_games_slots
           group_type: group
           admin_label: ''
           operator: in
@@ -671,9 +689,10 @@ display:
           group_type: group
           admin_label: ''
           operator: and
-          value: {  }
+          value:
+            mobile-nextbet-slots: mobile-nextbet-slots
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: field_product_value_op
             label: 'Product (field_product)'
@@ -704,6 +723,46 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        langcode:
+          id: langcode
+          table: games_collection_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: games_collection
+          entity_field: langcode
+          plugin_id: language
       filter_groups:
         operator: AND
         groups:
@@ -721,13 +780,13 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      title: 'Games Collection'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url
       tags:
         - 'config:field.storage.games_collection.field_type'
         - 'config:field.storage.node.field_game_code'

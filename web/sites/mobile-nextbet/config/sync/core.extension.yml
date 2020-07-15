@@ -80,6 +80,7 @@ module:
   user: 0
   views_ui: 0
   webcomposer_affilates: 0
+  webcomposer_als_whitelisting: 0
   webcomposer_announcements: 0
   webcomposer_audit: 0
   webcomposer_audit_export: 0
@@ -95,6 +96,7 @@ module:
   webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
+  webcomposer_lightbox: 0
   webcomposer_marketing_script: 0
   webcomposer_playtech_integration: 0
   webcomposer_registration_landing_page: 0
