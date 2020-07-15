@@ -62,11 +62,11 @@ class NextbetUnsupportedCurrencyForm extends FormBase {
       '#translatable' => true,
     ];
 
-    $form['supported_currency_list'] = [
+    $form['unsupported_currency_list'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Supported Currency List'),
-      '#description' => $this->t('Provide the list of currencies that the site support to not show the unsupported currency page.'),
-      '#default_value' => $this->get('supported_currency_list'),
+      '#title' => $this->t('Unsupported Currency Mapping'),
+      '#description' => $this->t('Provide the list of currency that the site does not support to show the unsupported currency page.'),
+      '#default_value' => $this->get('unsupported_currency_list'),
       '#required' => true,
       '#translatable' => false,
     ];
