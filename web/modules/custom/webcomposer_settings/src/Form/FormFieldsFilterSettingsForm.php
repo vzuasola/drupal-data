@@ -40,6 +40,16 @@ class FormFieldsFilterSettingsForm extends FormBase {
     foreach ($this->configFactory()->listAll() as $name) {
       if (strpos($name, 'webcomposer_config.') !== false) {
         $configList[$name] = $this->configFactory()->get($name)->get();
+        foreach ($configList[$name] as $field_name => $config) {
+          $excluded_fields = ['_core', 'value', 'format'];
+          if (in_array($field_name, $excluded_fields) || stripos($field_name, '__active_tab') > 1) {
+            continue;
+          }
+
+          $id = str_replace('webcomposer_config.', '', $name);
+          unset($configList[$name][$field_name]);
+          $configList[$name][$id.'__'.$field_name] = $config;
+        }
       }
     }
 
@@ -88,7 +98,7 @@ class FormFieldsFilterSettingsForm extends FormBase {
 
         $form[$id][$field_name] = [
           '#type' => 'checkbox',
-          '#title' => $field_name,
+          '#title' => str_replace($id.'__', ' ', $field_name),
           '#default_value' => $this->get($field_name),
           '#attributes' => [
             'class' => [$id . '-form-fields-filter']
