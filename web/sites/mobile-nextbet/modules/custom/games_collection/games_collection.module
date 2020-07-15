@@ -56,4 +56,8 @@ function validate_collection_type($form, &$form_state) {
           }
       }
   }
+
+  function games_collection_page_attachments(array &$page) {
+    $page['#attached']['library'][] = 'games_collection/games_collection';
+  }
 }

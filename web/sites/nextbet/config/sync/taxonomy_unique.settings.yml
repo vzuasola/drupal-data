@@ -18,3 +18,5 @@ games_collection_type: 1
 games_collection_type_message: 'Term @term already exists in vocabulary @vocabulary.'
 slider_routes: 1
 slider_routes_message: 'Term @term already exists in vocabulary @vocabulary.'
+arcade_game_categories: 1
+arcade_game_categories_message: 'Term @term already exists in vocabulary @vocabulary.'

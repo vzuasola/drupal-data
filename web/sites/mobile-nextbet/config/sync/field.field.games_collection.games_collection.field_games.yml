@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.games_collection.field_games
     - node.type.games_arcade
-    - node.type.games_live_dealer
-    - node.type.games_slots
   module:
     - games_collection
 id: games_collection.games_collection.field_games
@@ -15,7 +13,7 @@ entity_type: games_collection
 bundle: games_collection
 label: Games
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -24,11 +22,9 @@ settings:
   handler_settings:
     target_bundles:
       games_arcade: games_arcade
-      games_live_dealer: games_live_dealer
-      games_slots: games_slots
     sort:
-      field: status
+      field: changed
       direction: DESC
     auto_create: false
-    auto_create_bundle: games_live_dealer
+    auto_create_bundle: games_arcade
 field_type: entity_reference
