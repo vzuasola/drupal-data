@@ -11,58 +11,53 @@ dependencies:
     - field.field.games_collection.games_collection.field_type
   module:
     - conditional_fields
+    - field_group
     - games_collection
+third_party_settings:
+  field_group:
+    group_slots:
+      children:
+        - field_game_category
+        - field_games_slots
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Slots
+    group_arcade:
+      children:
+        - field_category_arcade
+        - field_games_arcade
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Arcade
 id: games_collection.games_collection.default
 targetEntityType: games_collection
 bundle: games_collection
 mode: default
 content:
   field_category_arcade:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings:
-      conditional_fields:
-        dc00d1fb-aa33-4b74-a318-31e25690cba7:
-          dependee: field_product
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '82'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: games_collection
-          bundle: games_collection
+      conditional_fields: {  }
     type: options_select
     region: content
   field_game_category:
     weight: 4
     settings: {  }
     third_party_settings:
-      conditional_fields:
-        c64b3bb9-3bbf-433b-898a-62137a936891:
-          dependee: field_product
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '7'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: games_collection
-          bundle: games_collection
+      conditional_fields: {  }
     type: options_select
     region: content
   field_games_arcade:
@@ -72,52 +67,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields:
-        5b3488c1-d5b9-4486-9424-585974d9f639:
-          dependee: field_product
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '82'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: games_collection
-          bundle: games_collection
+      conditional_fields: {  }
     type: entity_reference_autocomplete
     region: content
   field_games_slots:
-    weight: 6
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields:
-        e17c8ddd-2e21-4a60-901b-dcbb1cef17a5:
-          dependee: field_product
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '7'
-            effect: show
-            effect_options: {  }
-            selector: ''
-            regex: slots
-          entity_type: games_collection
-          bundle: games_collection
+      conditional_fields: {  }
     type: entity_reference_autocomplete
     region: content
   field_product:
