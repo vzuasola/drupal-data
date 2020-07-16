@@ -43,6 +43,7 @@ class GeneralConfiguration extends FormBase {
     $this->jpayIntegration($form);
     $this->errorConfig($form);
     $this->restrictionConfig($form);
+    $this->textOverBannerConfig($form);
 
     return $form;
   }
@@ -243,6 +244,36 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('JPay Site ID'),
       '#description' => $this->t('JPay Site ID for nextbet'),
       '#default_value' => $this->get('jpay_siteid') ?? 106,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * Text Over Banner Configuration
+   */
+  private function textOverBannerConfig(array &$form) {
+    $form['text_over_banner'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Text Over Banner'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $mobile = $this->get('text_over_banner_mobile');
+    $form['text_over_banner']['text_over_banner_mobile'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Mobile'),
+      '#description' => $this->t('Above content will display in mobile view.'),
+      '#default_value' => $mobile['value'],
+      '#format' => $mobile['format'],
+      '#translatable' => TRUE,
+    ];
+    $tablet = $this->get('text_over_banner_tablet');
+    $form['text_over_banner']['text_over_banner_tablet'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Tablet'),
+      '#description' => $this->t('Above content will display in tablet view.'),
+      '#default_value' => $tablet['value'],
+      '#format' => $tablet['format'],
       '#translatable' => TRUE,
     ];
   }

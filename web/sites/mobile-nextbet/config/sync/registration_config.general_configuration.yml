@@ -60,10 +60,9 @@ enable_rs_logging: 0
 s2s_config: ''
 tripwire_popup_show_limit: '2'
 tripwire_popup_show_delay: '3000'
-text_over_banner_desktop_left:
-  value: "<p><span class=\"text-20 text-white text-bold\">WELCOME TO\r\n  <br />\r\n  <span class=\"text-36 text-yellow text-extrabold\">ASIA'S\r\n    <br />\r\n    NUMBER 1</span>\r\n  <br />\r\n  ONLINE GAMING</span>\r\n</p>\r\n"
+text_over_banner_mobile:
+  value: "<p><span class="text-10 text-white text-bold">WELCOME TO<br /><span class="text-16 text-yellow text-extrabold">ASIA'S NUMBER 1</span><br />ONLINE GAMING</span><br /><span class="text-10 text-white text-bold">AND<br /><span class="text-16 text-yellow text-extrabold">MOST TRUSTED</span><br />BETTING WEBSITE!</span></p>"
   format: basic_html
-text_over_banner_desktop_right:
-  value: "<p><span class=\"text-20 text-white text-bold\">AND\r\n  <br />\r\n  <span class=\"text-36 text-yellow text-extrabold\">MOST\r\n    <br />\r\n    TRUSTED</span>\r\n  <br />\r\n  BETTING WEBSITE!</span>\r\n</p>\r\n"
+text_over_banner_tablet:
+  value: "<p><span class="text-12 text-white text-bold">WELCOME TO<br /><span class="text-20 text-yellow text-extrabold">ASIA'S NUMBER 1</span><br />ONLINE GAMING</span><br /><span class="text-12 text-white text-bold">AND<br /><span class="text-20 text-yellow text-extrabold">MOST TRUSTED</span><br />BETTING WEBSITE!</span></p>"
   format: basic_html
-  
