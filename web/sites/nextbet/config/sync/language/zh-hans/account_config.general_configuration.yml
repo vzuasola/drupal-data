@@ -1,26 +1,31 @@
-profile__active_tab: edit-header-configuration
+profile__active_tab: edit-field-labels-sms-verification
 welcome_text: Welcome
 product_menu_new_tag: 'New SC'
 help_tooltip: Help
 error_mid_down: 'An error occurred. Please try again later.'
-add_mobile_label: 'Add mobile number'
-no_changed_detected_message: 'No changes have been detected'
-contact_preference_yes_label: 'Yes'
-contact_preference_no_label: 'No'
-modal_preview_header: 'Save Account Changes'
-modal_preview_top_blurb: 'Please review list of changes. '
-modal_preview_current_label: Current
-modal_preview_new_label: New
-modal_preview_bottom_blurb: 'Enter your password to save changes to your account'
-server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Code: 700)"
-enable_sms_verification_field: '1'
-verify_text_field: Verify
-modal_verify_header_text_field: 'Verify Mobile Number'
-modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. Please make sure you have entered the correct mobile number format with country code (e.g. +60312345678). If the problem persists, please contact Customer Support.'
-modal_verification_code_placeholder_field: 'Verification Code'
-modal_verification_resend_code_text_field: 'Resend code'
-modal_verification_submit_text_field: Submit
-verification_code_response_field: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:ensupport@dafabet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
-verification_code_required_message_field: 'This is a required field.'
-verification_code_min_length_message_field: 'Please enter at least 6 characters.'
-verification_code_max_length_message_field: 'Please enter no more than 6 characters.'
+add_mobile_label: 添加手机号码
+no_changed_detected_message: 无任何改变。
+contact_preference_yes_label: 是
+contact_preference_no_label: 否
+modal_preview_header: 保存更改
+modal_preview_top_blurb: 请浏览更改的内容
+modal_preview_current_label: 当前
+modal_preview_new_label: '新 '
+modal_preview_bottom_blurb: 输入密码以保存账户的更改。
+server_side_validation: "INTERNAL_ERROR|内部错误 (代码: 801)\r\nUPDATE_PROFILE_SUCCESS|您的资料已经更新。\r\nUPDATE_PROFILE_FAILED|更新资料出现错误。请重试或通过<a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> 在线聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">邮箱</a>联系我们。(代码:700)"
+enable_sms_verification: 1
+verify_text: 验证
+modal_verify_header_text: 验证手机号码
+modal_verify_body_text: '验证码已通过短信发送给您。请在 10 分钟内输入6位的验证码，完成手机号码验证。请确保输入正确的手机号码格式及国家代码(例如 +8618625439854)。如果有任何问题,请联系客服。'
+modal_verification_code_placeholder: '验证码 '
+modal_verification_resend_code_text: 重新发送
+modal_verification_submit_text: 提交
+verification_code_response: "SMS_VERIFICATION_SUCCESS|验证码已发送至您的手机号码。\r\nSMS_VERIFICATION_FAILED|抱歉，验证手机号码出现错误。请重试或通过<a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> 在线聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">邮箱</a>联系我们。(代码:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手机号码已验证成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您输入的验证码无效。请重试。 (代码:111)\r\nINTERNAL_ERROR|内部错误 (代码: 801)"
+verification_code_required_message: 此项必填。
+verification_code_min_length_message: 请至少输入6个字符。
+verification_code_max_length_message: 请输入6位数验证码
+verification_code_numeric_message: 'Field should be numeric.'
+change_password__active_tab: edit-field-success-message-group
+integration_error: "INTERNAL_ERROR|内部错误 (代码: 801)\r\nCHANGE_PASSWORD_FAILED|更新密码出现错误。 请重试或通过<a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> 在线聊天 </a> 或邮箱联系我们。(代码: 800)\r\nCHANGE_PASSWORD_SUCCESS|您的密码已修改成功。"
+change_password_mobile_success_message: 您的密码已修改成功。
+change_password_mobile_failed_message: '更新密码出现错误。 请重试或通过<a href="/linkto:avaya" class="live-chat-popup-trigger"> 在线聊天 </a> 或邮箱联系我们。(代码: 800)'
