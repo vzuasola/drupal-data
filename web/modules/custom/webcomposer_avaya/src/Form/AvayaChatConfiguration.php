@@ -112,15 +112,6 @@ class AvayaChatConfiguration extends FormBase {
       '#maxlength' => 500,
     ];
 
-    $form['header_configuration']['title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Sample title only'),
-      '#description' => $this->t('Sample title'),
-      '#default_value' => $this->get('title'),
-      '#translatable' => TRUE,
-      '#maxlength' => 500,
-    ];
-
     return $form;
   }
 
