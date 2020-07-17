@@ -62,8 +62,12 @@ class FormFieldsFilterSettingsForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['#disabled_form_filter'] = TRUE;
 
+    // Exclude registration landing page and floating banner for these config didn't use the Formbase extension
+    $exclude_config = ['webcomposer_config.form_fields_filter_settings',
+                      'webcomposer_config.registration_landing_page_configuration',
+                      'webcomposer_config.floating_banner_configuration'];
     foreach ($this->getConfigFactoryList() as $key => $configs) {
-      if ($key == 'webcomposer_config.form_fields_filter_settings') {
+      if (in_array($key, $exclude_config)) {
         continue;
       }
 
