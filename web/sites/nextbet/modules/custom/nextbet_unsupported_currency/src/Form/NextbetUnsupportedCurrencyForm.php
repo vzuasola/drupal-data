@@ -38,7 +38,7 @@ class NextbetUnsupportedCurrencyForm extends FormBase {
       '#title' => $this->t('Unsupported Currency Title'),
       '#default_value' => $this->get('unsupported_currency_title'),
       '#required' => false,
-      '#translatable' => false,
+      '#translatable' => true,
     ];
 
     $form['file_image_unsupported_currency'] = [
