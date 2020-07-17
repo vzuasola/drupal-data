@@ -59,6 +59,7 @@ module:
   nextbet_header_config: 0
   nextbet_payments: 0
   nextbet_promotions: 0
+  nextbet_unsupported_currency: 0
   nextbet_urls: 0
   node: 0
   options: 0
@@ -98,6 +99,7 @@ module:
   webcomposer_domain_import: 0
   webcomposer_download_page: 0
   webcomposer_downloadables: 0
+  webcomposer_drawer: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
@@ -106,6 +108,7 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0
+  webcomposer_playtech_integration: 0
   webcomposer_registration_landing_page: 0
   webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
@@ -118,6 +121,7 @@ module:
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
   webcomposer_webform: 0
+  webcomposer_right_side_block: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0

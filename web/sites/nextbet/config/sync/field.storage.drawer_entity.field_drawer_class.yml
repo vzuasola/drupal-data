@@ -1,12 +1,14 @@
-uuid: 9ac77d7e-47ed-42b2-b0df-00aadb2da179
+uuid: 2dd1a57f-7e8f-4047-acb0-434d4e580fe1
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_arc_game_code
-field_name: field_arc_game_code
-entity_type: node
+    - webcomposer_drawer
+_core:
+  default_config_hash: OR-quU5NYp5zThWLTML0m12iYujarbP_3-nXcs_1kYg
+id: drawer_entity.field_drawer_class
+field_name: field_drawer_class
+entity_type: drawer_entity
 type: string
 settings:
   max_length: 255
