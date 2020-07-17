@@ -45,7 +45,7 @@ class ResetPassword extends WebcomposerFormBase implements WebcomposerFormInterf
       'settings' => [
         'markup' => [
           '#title' => 'Header Blurb',
-          '#type' => 'text_format',
+          '#type' => 'textarea',
           '#default_value' => '',
         ],
       ],
@@ -137,7 +137,7 @@ class ResetPassword extends WebcomposerFormBase implements WebcomposerFormInterf
       'settings' => [
         'markup' => [
           '#title' => 'Footer Blurb',
-          '#type' => 'text_format',
+          '#type' => 'textarea',
           '#default_value' => '',
         ],
       ],
