@@ -140,8 +140,10 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
         unset($form[$group_name]);
       }
 
-      if (isset($settings[$config_id.$group_name]) && $settings[$config_id.$group_name] == 0) {
-        unset($form[$group_name]);
+      if (isset($form[$group_name]) &&
+          isset($settings[$config_id.$group_name]) &&
+          $settings[$config_id.$group_name] == 0) {
+            unset($form[$group_name]);
       }
     }
   }
