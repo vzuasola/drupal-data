@@ -249,7 +249,7 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
             '#translatable' => true,
         ];
-        
+
         return $form;
     }
 }
