@@ -1,8 +1,8 @@
 my_account_group__active_tab: edit-cant-login-general-config
 cant_login_title: '无法访问您的大发账户?'
-reset_title: '重设密码请求'
+reset_title: 重设密码请求
 cant_login_response_mapping: "INTERNAL_ERROR|内部服务器错误\r\nFORGOT_PASSWORD_SUCCESS|忘记密码\r\nFORGOT_PASSWORD_FAILED|无效的用户名/邮箱\r\nFORGOT_USERNAME_SUCCESS|忘记用户名\r\nFORGOT_USERNAME_FAILED|无效的邮箱\r\nCHANGE_FORGOTTEN_PASSWORD_SUCCESS|密码重置成功\r\nCHANGE_FORGOTTEN_PASSWORD_FAILED|密码重置失败"
-forgot_password_tab_menu: 忘记密码？
+forgot_password_tab_menu: '忘记密码？ '
 forgot_password_success_message:
   value: "<div><svg class=\"icon-check-rounded mb-10\" viewbox=\"0 0 100 100\"> <use xlink:href=\"#check-rounded\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> </use> </svg>\r\n<p class=\"text-semibold blurb-heading\"><span class=\"icon-success\">&nbsp;</span>重设密码请求已发出</p>\r\n\r\n<p>确认信息已发送至您所注册的电子邮箱中。请在接下来的24小时内重设密码。</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-mobile input-block-level\" href=\"{domain:mobile}/{lang}[query:({tracking})]\" target=\"_self\">关闭窗口&lt;</a></p>\r\n</div>\r\n\r\n<div class=\"contact-info-blurb\"><svg class=\"icon-exclamation mb-5\" viewbox=\"0 0 100 100\"> <use xlink:href=\"#exclamation-rounded\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> </use> </svg>\r\n\r\n<p class=\"text-align-left\">如果您有任何疑问或问题，请联络我们的 <a href=\"linkto:avaya\">客户支持</a></p>\r\n</div>\r\n"
   format: basic_html
