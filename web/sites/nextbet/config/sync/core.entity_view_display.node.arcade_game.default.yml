@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.arcade_game.field_game_code
     - field.field.node.arcade_game.field_game_integration
     - field.field.node.arcade_game.field_game_meta_tags
+    - field.field.node.arcade_game.field_game_preview_mode
     - field.field.node.arcade_game.field_game_provider
     - field.field.node.arcade_game.field_game_ribbon
     - field.field.node.arcade_game.field_game_subprovider
@@ -68,6 +69,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_game_preview_mode:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_game_provider:
     weight: 5
