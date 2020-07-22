@@ -33,14 +33,6 @@ class NextbetUnsupportedCurrencyForm extends FormBase {
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['unsupported_currency_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Unsupported Currency Title'),
-      '#default_value' => $this->get('unsupported_currency_title'),
-      '#required' => false,
-      '#translatable' => true,
-    ];
-
     $form['file_image_unsupported_currency'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Unsupported Currency Icon'),
@@ -67,7 +59,7 @@ class NextbetUnsupportedCurrencyForm extends FormBase {
       '#title' => $this->t('Unsupported Currency Mapping'),
       '#description' => $this->t('Provide the list of currency that the site does not support to show the unsupported currency page.'),
       '#default_value' => $this->get('unsupported_currency_list'),
-      '#required' => true,
+      '#required' => false,
       '#translatable' => false,
     ];
 
