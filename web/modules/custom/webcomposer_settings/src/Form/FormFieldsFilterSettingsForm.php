@@ -103,7 +103,9 @@ class FormFieldsFilterSettingsForm extends FormBase {
         $form[$id][$field_name] = [
           '#type' => 'checkbox',
           '#title' => str_replace($id.'__', ' ', $field_name),
-          '#default_value' => $this->get($field_name),
+          '#default_value' => $this->get($field_name) !== null ?
+                              $this->get($field_name) :
+                              $this->get(str_replace($id.'__', '', $field_name)),
           '#attributes' => [
             'class' => [$id . '-form-fields-filter']
           ],

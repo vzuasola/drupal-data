@@ -133,6 +133,12 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
         if (isset($settings[$config_id.$field_name]) && $settings[$config_id.$field_name] == 0) {
           unset($form[$group_name][$field_name]);
           unset($fields[$key]);
+        } else if (isset($settings[$field_name]) && $settings[$field_name] == 0) { // Getting old config
+          unset($form[$group_name][$field_name]);
+          unset($fields[$key]);
+        } else if (!isset($settings[$field_name])) { // Unset not existing fields on yml
+            unset($form[$group_name][$field_name]);
+            unset($fields[$key]);
         }
       }
 
@@ -144,6 +150,12 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
           isset($settings[$config_id.$group_name]) &&
           $settings[$config_id.$group_name] == 0) {
             unset($form[$group_name]);
+      } else if (isset($form[$group_name]) &&
+          isset($settings[$group_name]) &&
+          $settings[$group_name] == 0) { // Getting the old config
+            unset($form[$group_name]);
+      } else if (!isset($form[$group_name])) { // Unset not existing fields on yml
+          unset($form[$group_name]);
       }
     }
   }
