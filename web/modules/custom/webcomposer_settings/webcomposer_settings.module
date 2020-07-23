@@ -120,7 +120,10 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
       foreach ($fields as $key => $field_name) {
         if ($props = Element::children($form[$group_name][$field_name])) {
           foreach ($props as $index => $prop_name) {
-            if (isset($settings[$prop_name]) && $settings[$prop_name] == 0) {
+            if (isset($settings[$config_id.$prop_name]) && $settings[$config_id.$prop_name] == 0) {
+              unset($form[$group_name][$field_name][$prop_name]);
+              unset($props[$index]);
+            } else if (isset($settings[$prop_name]) && $settings[$prop_name] == 0) { // Getting the old config
               unset($form[$group_name][$field_name][$prop_name]);
               unset($props[$index]);
             }
@@ -133,7 +136,7 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
         if (isset($settings[$config_id.$field_name]) && $settings[$config_id.$field_name] == 0) {
           unset($form[$group_name][$field_name]);
           unset($fields[$key]);
-        } else if (isset($settings[$field_name]) && $settings[$field_name] == 0) { // Getting old config
+        } else if (isset($settings[$field_name]) && $settings[$field_name] == 0) { // Getting the old config
           unset($form[$group_name][$field_name]);
           unset($fields[$key]);
         }
