@@ -351,7 +351,7 @@ class PushNotificationV2Form extends FormBase {
       if (!empty($button_key)) {
         $form['cta_settings'][$button_key] = [
           '#type' => 'details',
-          '#title' => $this->t($button),
+          '#title' => $button,
         ];
 
         $form['cta_settings'][$button_key]['cta_label_' . $button_key] = [
@@ -393,7 +393,7 @@ class PushNotificationV2Form extends FormBase {
 
     $form['dismiss_notifications_settings']['dismiss_yes'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Yes'),
+      '#title' => 'Yes',
       '#default_value' => $this->get('dismiss_yes'),
       '#description' => $this->t('Yes button label.'),
       '#translatable' => TRUE,
@@ -401,7 +401,7 @@ class PushNotificationV2Form extends FormBase {
 
     $form['dismiss_notifications_settings']['dismiss_no'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('No'),
+      '#title' => 'No',
       '#default_value' => $this->get('dismiss_no'),
       '#description' => $this->t('No button label.'),
       '#translatable' => TRUE,
