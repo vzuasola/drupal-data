@@ -122,7 +122,7 @@ class ConfigurationResource extends ResourceBase {
 
       $this->eventDispatcher->dispatch(
         ConfigurationResourceEvent::EVENT_NAME,
-        new ConfigurationResourceEvent($data)
+        new ConfigurationResourceEvent($data, $id)
       );
 
       $this->resolveFieldImages($id, $data);

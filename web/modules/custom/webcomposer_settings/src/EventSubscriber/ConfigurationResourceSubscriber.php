@@ -38,8 +38,10 @@ class ConfigurationResourceSubscriber implements EventSubscriberInterface {
       ->get('webcomposer_settings.form_fields_filter_settings')
       ->get();
 
+    $config = $event->config_id;
+
     foreach (array_keys($event->data) as $key) {
-      if (isset($settings[$key]) && $settings[$key] == 0) {
+      if (isset($settings[$config.'__'.$key]) && $settings[$config.'__'.$key] == 0) {
         unset($event->data[$key]);
       }
     }
