@@ -40,6 +40,16 @@ class FormFieldsFilterSettingsForm extends FormBase {
     foreach ($this->configFactory()->listAll() as $name) {
       if (strpos($name, 'webcomposer_config.') !== false) {
         $configList[$name] = $this->configFactory()->get($name)->get();
+        foreach ($configList[$name] as $field_name => $config) {
+          $excluded_fields = ['_core', 'value', 'format'];
+          if (in_array($field_name, $excluded_fields) || stripos($field_name, '__active_tab') > 1) {
+            continue;
+          }
+
+          $id = str_replace('webcomposer_config.', '', $name);
+          unset($configList[$name][$field_name]);
+          $configList[$name][$id.'__'.$field_name] = $config;
+        }
       }
     }
 
@@ -52,8 +62,12 @@ class FormFieldsFilterSettingsForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['#disabled_form_filter'] = TRUE;
 
+    // Exclude registration landing page and floating banner for these config didn't use the Formbase extension
+    $exclude_config = ['webcomposer_config.form_fields_filter_settings',
+                      'webcomposer_config.registration_landing_page_configuration',
+                      'webcomposer_config.floating_banner_configuration'];
     foreach ($this->getConfigFactoryList() as $key => $configs) {
-      if ($key == 'webcomposer_config.form_fields_filter_settings') {
+      if (in_array($key, $exclude_config)) {
         continue;
       }
 
@@ -88,8 +102,10 @@ class FormFieldsFilterSettingsForm extends FormBase {
 
         $form[$id][$field_name] = [
           '#type' => 'checkbox',
-          '#title' => $field_name,
-          '#default_value' => $this->get($field_name),
+          '#title' => str_replace($id.'__', ' ', $field_name),
+          '#default_value' => $this->get($field_name) !== null ?
+                              $this->get($field_name) :
+                              $this->get(str_replace($id.'__', '', $field_name)),
           '#attributes' => [
             'class' => [$id . '-form-fields-filter']
           ],
