@@ -234,6 +234,22 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['mobile_number_config'] = [
+            '#type' => 'details',
+            '#title' => 'Mobile Number Annotation',
+            '#open' => false,
+            '#group' => 'profile',
+        ];
+
+        $form['mobile_number_config']['enable_mobile_number_annotation'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Mobile Number Annotation'),
+            '#required' => false,
+            '#description' => $this->t('Enable annotation in mobile number field'),
+            '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
+            '#translatable' => true,
+        ];
+
         return $form;
     }
 }
