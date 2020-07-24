@@ -43,6 +43,9 @@ settings:
     -
       value: wechat
       label: WeChat
+    -
+      value: kakaotalk
+      label: KakaoTalk
   allowed_values_function: ''
 module: options
 locked: false
