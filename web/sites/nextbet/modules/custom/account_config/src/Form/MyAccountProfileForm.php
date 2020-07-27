@@ -340,6 +340,44 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
 
+        //help config
+        $form['help_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Help Configuration',
+            '#open' => false,
+            '#group' => 'profile',
+        ];
+
+        $howTo = $this->get('help_how_to');
+        $form['help_configuration']['help_how_to'] = [
+            '#type' => 'text_format',
+            '#title' => t('How To'),
+            '#required' => true,
+            '#default_value' => $howTo['value'],
+            '#format' => $howTo['format'],
+            '#translatable' => true,
+        ];
+
+        $faq = $this->get('help_faq');
+        $form['help_configuration']['help_faq'] = [
+            '#type' => 'text_format',
+            '#title' => t('FAQ'),
+            '#required' => true,
+            '#default_value' => $faq['value'],
+            '#format' => $faq['format'],
+            '#translatable' => true,
+        ];
+
+        $errorCode = $this->get('help_error_code');
+        $form['help_configuration']['help_error_code'] = [
+            '#type' => 'text_format',
+            '#title' => t('Error Code'),
+            '#required' => true,
+            '#default_value' => $errorCode['value'],
+            '#format' => $errorCode['format'],
+            '#translatable' => true,
+        ];
+
         return $form;
     }
 }
