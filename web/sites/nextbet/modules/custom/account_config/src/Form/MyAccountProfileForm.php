@@ -389,19 +389,19 @@ class MyAccountProfileForm extends FormBase {
           $form['access_denied']['top_blurb'] = [
             '#type' => 'textarea',
             '#title' => t('Top Blurb'),
-            '#required' => TRUE,
+            '#required' => true,
             '#description' => $this->t('Top Blurb'),
             '#default_value' => $this->get('top_blurb'),
-            '#translatable' => TRUE,
+            '#translatable' => true,
           ];
       
           $form['access_denied']['bottom_blurb'] = [
             '#type' => 'textarea',
             '#title' => t('Bottom Blurb'),
-            '#required' => TRUE,
+            '#required' => true,
             '#description' => $this->t('Bottom Blurb'),
             '#default_value' => $this->get('bottom_blurb'),
-            '#translatable' => TRUE,
+            '#translatable' => true,
           ];
       
 
