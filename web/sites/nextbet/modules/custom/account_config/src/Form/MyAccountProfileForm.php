@@ -378,6 +378,33 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['access_denied'] = [
+            '#title' => 'Access Denied',
+            '#group' => 'access_denied',
+            '#type' => 'details',
+            '#open' => false,
+            '#group' => 'profile',
+          ];
+      
+          $form['access_denied']['top_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => t('Top Blurb'),
+            '#required' => TRUE,
+            '#description' => $this->t('Top Blurb'),
+            '#default_value' => $this->get('top_blurb'),
+            '#translatable' => TRUE,
+          ];
+      
+          $form['access_denied']['bottom_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => t('Bottom Blurb'),
+            '#required' => TRUE,
+            '#description' => $this->t('Bottom Blurb'),
+            '#default_value' => $this->get('bottom_blurb'),
+            '#translatable' => TRUE,
+          ];
+      
+
         return $form;
     }
 }
