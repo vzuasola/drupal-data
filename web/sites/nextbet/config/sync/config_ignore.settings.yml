@@ -5,7 +5,7 @@ ignored_config_entities:
   6: 'devel.*'
   8: 'nextbet_urls.*'
   10: 'nextbet_header_config.*'
-  12: config_ignore.settings
+  12: 'webcomposer_settings.*'
   14: 'games_config.*'
   16: views.view.gameroom
   18: webcomposer_cache.settings
