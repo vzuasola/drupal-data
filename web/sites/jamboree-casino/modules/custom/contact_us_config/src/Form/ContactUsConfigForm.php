@@ -143,5 +143,14 @@ class ContactUsConfigForm extends FormBase {
       </ul>',
       '#translatable' => TRUE,
     ];
+
+    $form['settings']['form_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button Label'),
+      '#description' => $this->t('Button label to the contact us message.'),
+      '#default_value' => $this->get('form_button'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }

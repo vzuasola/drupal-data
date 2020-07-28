@@ -36,8 +36,8 @@ settings:
       value: opus
       label: Opus
     -
-      value: pas
-      label: PAS
+      value: playtech
+      label: Playtech
     -
       value: sa_gaming
       label: 'SA Gaming'
