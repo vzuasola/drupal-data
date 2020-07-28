@@ -43,6 +43,7 @@ class GeneralConfiguration extends FormBase {
     $this->jpayIntegration($form);
     $this->errorConfig($form);
     $this->restrictionConfig($form);
+    $this->textOverBannerConfig($form);
 
     return $form;
   }
@@ -54,7 +55,7 @@ class GeneralConfiguration extends FormBase {
     $form['general_settings_tab']['general'] = [
       '#type' => 'details',
       '#title' => $this->t('General Settings'),
-      '#collapsible' => TRUE,
+      '#collapsible' => true,
     ];
 
     $form['general_settings_tab']['general']['step_one_text'] = [
@@ -62,24 +63,24 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Step one text'),
       '#description' => $this->t('Text that will be displayed at the top of the form'),
       '#default_value' => $this->get('step_one_text'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
 
     $form['general_settings_tab']['general']['home_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Home Title'),
       '#default_value' => $this->get('home_title'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
 
     $form['general_settings_tab']['general']['success_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Success Title'),
       '#default_value' => $this->get('success_title'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
 
     $form['general_settings_tab']['general']['geoip_to_default_currency_country'] = [
@@ -89,7 +90,7 @@ class GeneralConfiguration extends FormBase {
         'registration form e.g. "PH|117,48" where PH is the Geo IP value, 117 is the ' .
         'default currency RMB and the 48 is the default country china'),
       '#default_value' => $this->get('geoip_to_default_currency_country'),
-      '#required' => TRUE,
+      '#required' => true,
     ];
 
     $form['general_settings_tab']['general']['native_app_title'] = [
@@ -98,7 +99,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Header text above the form for native app'),
       '#default_value' => $this->get('native_app_title'),
       '#maxlength' => 255,
-      '#translatable' => TRUE,
+      '#translatable' => true,
     ];
     $form['general_settings_tab']['general']['enable_reg_relic_custom_headers'] = [
       '#type' => 'checkbox',
@@ -115,7 +116,7 @@ class GeneralConfiguration extends FormBase {
     $form['restriction'] = [
       '#type' => 'details',
       '#title' => $this->t('Restriction'),
-      '#collapsible' => TRUE,
+      '#collapsible' => true,
       '#group' => 'general_settings_tab',
     ];
 
@@ -128,7 +129,7 @@ class GeneralConfiguration extends FormBase {
         'selected by the player. This will redirect the player on entrypage post-registration ' .
         'with notification that he is restricted on his selected country.'),
       '#default_value' => $this->get('portal_id_country_restriction'),
-      '#required' => TRUE,
+      '#required' => true,
     ];
 
     $form['restriction']['portal_id_to_product_name_mapping'] = [
@@ -137,8 +138,8 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Mapping that will be used in getting the ' .
         'product name for each portal ID registered which is translatable.'),
       '#default_value' => $this->get('portal_id_to_product_name_mapping'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
 
     $form['restriction']['country_restriction_message'] = [
@@ -149,8 +150,8 @@ class GeneralConfiguration extends FormBase {
         'you can use the "[product]" as a placeholder to specify the product he is ' .
         'restricted to.'),
       '#default_value' => $this->get('country_restriction_message'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
 
     $form['restriction']['mbtc_product_portal_id'] = [
@@ -158,15 +159,15 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Product Portal ID'),
       '#description' => $this->t('Portal ID of Product that support mBTC currency.'),
       '#default_value' => $this->get('mbtc_product_portal_id'),
-      '#required' => TRUE,
+      '#required' => true,
     ];
 
     $form['restriction']['mbtc_restriction_message'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Currency Restriction Message'),
       '#default_value' => $this->get('mbtc_restriction_message'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
   }
 
@@ -177,7 +178,7 @@ class GeneralConfiguration extends FormBase {
     $form['error_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Error Settings'),
-      '#collapsible' => TRUE,
+      '#collapsible' => true,
       '#group' => 'general_settings_tab',
     ];
     $form['error_settings']['generic_error_message'] = [
@@ -187,8 +188,8 @@ class GeneralConfiguration extends FormBase {
         'the form with appended error code on it. This will be used if there are unhandled ' .
         'exceptions on the form e.g unsupported currency on specific portal ID.'),
       '#default_value' => $this->get('generic_error_message'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
     $form['error_settings']['error_code_mapping'] = [
       '#type' => 'textarea',
@@ -199,7 +200,7 @@ class GeneralConfiguration extends FormBase {
         'where ExternalPlayerAccountCreationFailed is the icore status code and -20 ' .
         'is the error code that will appear beside the generic error message'),
       '#default_value' => $this->get('error_code_mapping'),
-      '#required' => TRUE,
+      '#required' => true,
     ];
     $form['error_settings']['unauthenticated_error_message'] = [
       '#type' => 'textarea',
@@ -207,15 +208,15 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Unauthenticated error form message that will appear at the top of ' .
         'the form if the player is not successfully authenticated after successful registration.'),
       '#default_value' => $this->get('unauthenticated_error_message'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
     $form['error_settings']['forbidden_request_error_message'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Registration API forbidden request error message'),
       '#default_value' => $this->get('forbidden_request_error_message'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#required' => true,
+      '#translatable' => true,
     ];
   }
 
@@ -226,16 +227,16 @@ class GeneralConfiguration extends FormBase {
     $form['jpay_integration'] = [
       '#type' => 'details',
       '#title' => $this->t('JPay Integration'),
-      '#collapsible' => TRUE,
+      '#collapsible' => true,
       '#group' => 'general_settings_tab',
     ];
 
     $form['jpay_integration']['jpay_api'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('JPAY API Endpoint'),
       '#description' => $this->t('Endpoint for JPAY API'),
-      '#default_value' => $this->get('jpay_api') ?? "http://cms-jpayws.games.prd/api/cashier/",
-      '#translatable' => TRUE,
+      '#default_value' => $this->get('jpay_api') ?? "PRD|http://cms-jpayws.games.prd/api/cashier/",
+      '#translatable' => true,
     ];
 
     $form['jpay_integration']['jpay_siteid'] = [
@@ -243,7 +244,37 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('JPay Site ID'),
       '#description' => $this->t('JPay Site ID for nextbet'),
       '#default_value' => $this->get('jpay_siteid') ?? 106,
-      '#translatable' => TRUE,
+      '#translatable' => true,
+    ];
+  }
+
+  /**
+   * Text Over Banner Configuration
+   */
+  private function textOverBannerConfig(array &$form) {
+    $form['text_over_banner'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Text Over Banner'),
+      '#collapsible' => true,
+      '#group' => 'general_settings_tab',
+    ];
+    $mobile = $this->get('text_over_banner_mobile');
+    $form['text_over_banner']['text_over_banner_mobile'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Mobile'),
+      '#description' => $this->t('Above content will display in mobile view.'),
+      '#default_value' => $mobile['value'],
+      '#format' => $mobile['format'],
+      '#translatable' => true,
+    ];
+    $tablet = $this->get('text_over_banner_tablet');
+    $form['text_over_banner']['text_over_banner_tablet'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Tablet'),
+      '#description' => $this->t('Above content will display in tablet view.'),
+      '#default_value' => $tablet['value'],
+      '#format' => $tablet['format'],
+      '#translatable' => true,
     ];
   }
 }

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block.block.languagedropdownswitcher_2
     - field.storage.taxonomy_term.field_games_alias
     - field.storage.taxonomy_term.field_games_category_logo
     - field.storage.taxonomy_term.field_games_is_ordinary_category
@@ -517,20 +516,7 @@ display:
         weight: 2
         context: '0'
         menu_name: admin
-      header:
-        entity_block:
-          id: entity_block
-          table: views
-          field: entity_block
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          target: languagedropdownswitcher_2
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+      header: {  }
     cache_metadata:
       max-age: 0
       contexts:
