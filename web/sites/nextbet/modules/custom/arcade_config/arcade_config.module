@@ -33,7 +33,7 @@ function arcade_config_form_alter(&$form, $form_state, $form_id)
         $submitAction = '_arcade_config_game_category_form_submit';
         break;
       case 'node_arcade_game_delete_form':
-      case 'node_arcade_game_form':
+      // case 'node_arcade_game_form':
         $submitAction = '_arcade_config_game_thumbnail_form_submit';
         break;
     }
