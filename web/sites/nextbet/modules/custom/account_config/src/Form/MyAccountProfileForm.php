@@ -340,6 +340,71 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
 
+        //help config
+        $form['help_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Help Configuration',
+            '#open' => false,
+            '#group' => 'profile',
+        ];
+
+        $howTo = $this->get('help_how_to');
+        $form['help_configuration']['help_how_to'] = [
+            '#type' => 'text_format',
+            '#title' => t('How To'),
+            '#required' => true,
+            '#default_value' => $howTo['value'],
+            '#format' => $howTo['format'],
+            '#translatable' => true,
+        ];
+
+        $faq = $this->get('help_faq');
+        $form['help_configuration']['help_faq'] = [
+            '#type' => 'text_format',
+            '#title' => t('FAQ'),
+            '#required' => true,
+            '#default_value' => $faq['value'],
+            '#format' => $faq['format'],
+            '#translatable' => true,
+        ];
+
+        $errorCode = $this->get('help_error_code');
+        $form['help_configuration']['help_error_code'] = [
+            '#type' => 'text_format',
+            '#title' => t('Error Code'),
+            '#required' => true,
+            '#default_value' => $errorCode['value'],
+            '#format' => $errorCode['format'],
+            '#translatable' => true,
+        ];
+
+        $form['access_denied'] = [
+            '#title' => 'Access Denied',
+            '#group' => 'access_denied',
+            '#type' => 'details',
+            '#open' => false,
+            '#group' => 'profile',
+          ];
+      
+          $form['access_denied']['top_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => t('Top Blurb'),
+            '#required' => true,
+            '#description' => $this->t('Top Blurb'),
+            '#default_value' => $this->get('top_blurb'),
+            '#translatable' => true,
+          ];
+      
+          $form['access_denied']['bottom_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => t('Bottom Blurb'),
+            '#required' => true,
+            '#description' => $this->t('Bottom Blurb'),
+            '#default_value' => $this->get('bottom_blurb'),
+            '#translatable' => true,
+          ];
+      
+
         return $form;
     }
 }
