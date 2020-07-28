@@ -399,6 +399,38 @@ uat-row-stack:
   tags:
     - ipvg-stg-02
 
+uat-nextbet-stack:
+  stage: deploy-staging
+  environment:
+    name: uat
+  variables:
+    env: uat
+    STACK: nextbet-stack
+  script:
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
+  when: manual
+  dependencies:
+    - testing signoff
+  tags:
+    - ipvg-stg-02
+
+uat-mobile-nextbet-stack:
+  stage: deploy-staging
+  environment:
+    name: uat
+  variables:
+    env: uat
+    STACK: nextbet-stack
+  script:
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
+  when: manual
+  dependencies:
+    - testing signoff
+  tags:
+    - ipvg-stg-02
+
 .selenium tests uat:
   stage: integration-tests-staging
   script:
