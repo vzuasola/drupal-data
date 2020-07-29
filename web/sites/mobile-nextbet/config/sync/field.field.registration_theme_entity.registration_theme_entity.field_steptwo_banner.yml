@@ -19,7 +19,7 @@ field_name: field_steptwo_banner
 entity_type: registration_theme_entity
 bundle: registration_theme_entity
 label: Banner
-description: 'Recommended upload size (376x190)'
+description: 'Recommended upload size ( 376x190 )'
 required: true
 translatable: true
 default_value: {  }
