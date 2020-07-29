@@ -63,6 +63,3 @@ tripwire_popup_show_delay: '3000'
 text_over_banner_mobile:
   value: "<p><span class=\"text-10 text-white text-bold\">WELCOME TO<br /><span class=\"text-16 text-yellow text-extrabold\">ASIA'S NUMBER 1</span><br />ONLINE GAMING</span><br /><span class=\"text-10 text-white text-bold\">AND<br /><span class=\"text-16 text-yellow text-extrabold\">MOST TRUSTED</span><br />BETTING WEBSITE!</span></p>"
   format: basic_html
-text_over_banner_tablet:
-  value: "<p><span class=\"text-12 text-white text-bold\">WELCOME TO<br /><span class=\"text-20 text-yellow text-extrabold\">ASIA'S NUMBER 1</span><br />ONLINE GAMING</span><br /><span class=\"text-12 text-white text-bold\">AND<br /><span class=\"text-20 text-yellow text-extrabold\">MOST TRUSTED</span><br />BETTING WEBSITE!</span></p>"
-  format: basic_html
