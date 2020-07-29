@@ -267,14 +267,5 @@ class GeneralConfiguration extends FormBase {
       '#format' => $mobile['format'],
       '#translatable' => true,
     ];
-    $tablet = $this->get('text_over_banner_tablet');
-    $form['text_over_banner']['text_over_banner_tablet'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('<br><br> Tablet'),
-      '#description' => $this->t('Above content will display in tablet view.'),
-      '#default_value' => $tablet['value'],
-      '#format' => $tablet['format'],
-      '#translatable' => true,
-    ];
   }
 }
