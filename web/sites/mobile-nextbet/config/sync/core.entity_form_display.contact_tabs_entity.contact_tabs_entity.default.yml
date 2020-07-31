@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_device
     - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_class
     - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_content
     - field.field.contact_tabs_entity.contact_tabs_entity.field_title
@@ -13,8 +14,7 @@ dependencies:
 third_party_settings:
   field_group:
     group_manage_active_tab:
-      children:
-        - field_tab_default
+      children: {  }
       parent_name: ''
       weight: 3
       format_type: tab
@@ -55,6 +55,7 @@ third_party_settings:
     group_tab:
       children:
         - field_title
+        - field_device
         - field_tab_class
       parent_name: ''
       weight: 4
@@ -73,8 +74,14 @@ targetEntityType: contact_tabs_entity
 bundle: contact_tabs_entity
 mode: default
 content:
-  field_tab_class:
+  field_device:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_tab_class:
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
