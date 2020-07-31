@@ -1,9 +1,9 @@
-uuid: 50ea600c-750d-4313-ba6b-e4a787a5d163
+uuid: bdb0e941-5bcf-4cb5-af83-46c7ce0e8056
 langcode: ja
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.press_month
+    - taxonomy.vocabulary.release_year
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.press_month
+id: taxonomy_term.release_year
 target_entity_type_id: taxonomy_term
-target_bundle: press_month
+target_bundle: release_year
 default_langcode: site_default
 language_alterable: false
