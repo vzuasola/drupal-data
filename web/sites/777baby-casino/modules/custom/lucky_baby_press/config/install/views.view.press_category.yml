@@ -1,4 +1,4 @@
-uuid: 53a6bc2f-86d4-4a75-85ef-f84370c1794e
+uuid: 2e5c92ca-4f0c-4674-a9b7-9b74491fa2c7
 langcode: ja
 status: true
 dependencies:
@@ -10,8 +10,8 @@ dependencies:
     - taxonomy
     - user
     - webcomposer_rest_extra
-id: press_catergory
-label: 'Press Catergory'
+id: press_category
+label: 'Press Category'
 module: views
 description: ''
 tag: ''
@@ -204,7 +204,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: /api/press_month
+      path: api/press_month
       pager:
         type: none
         options:
@@ -235,13 +235,13 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      path: api/press_year
       style:
         type: taxonomy_list_serializer
         options:
           uses_fields: false
           formats:
             json: json
+      path: api/press_year
       pager:
         type: none
         options:
