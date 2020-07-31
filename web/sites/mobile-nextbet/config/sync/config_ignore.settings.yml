@@ -17,7 +17,5 @@ ignored_config_entities:
   30: 'mobile_arcade.*'
   32: 'webcomposer_form_manager.*'
   34: 'webcomposer_playtech_integration.*'
-  36: 'contact_us_config.*'
-  38: 'webcomposer_form_manager.form.contact_us_form.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
