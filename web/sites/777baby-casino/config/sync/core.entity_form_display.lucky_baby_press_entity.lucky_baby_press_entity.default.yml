@@ -11,6 +11,7 @@ dependencies:
     - field.field.lucky_baby_press_entity.lucky_baby_press_entity.field_title
     - image.style.thumbnail
   module:
+    - entity_reference_views_select
     - image
     - lucky_baby_press
     - paragraphs
@@ -50,21 +51,15 @@ content:
     region: content
   field_press_month:
     weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: erviews_options_select
     region: content
   field_press_year:
     weight: 4
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: erviews_options_select
     region: content
   field_title:
     weight: 0
