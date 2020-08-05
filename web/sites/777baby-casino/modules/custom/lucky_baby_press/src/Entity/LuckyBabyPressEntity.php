@@ -47,11 +47,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/lucky_baby_press_entity/{lucky_baby_press_entity}",
- *     "add-form" = "/admin/structure/lucky_baby_press_entity/add",
- *     "edit-form" = "/admin/structure/lucky_baby_press_entity/{lucky_baby_press_entity}/edit",
- *     "delete-form" = "/admin/structure/lucky_baby_press_entity/{lucky_baby_press_entity}/delete",
- *     "collection" = "/admin/structure/lucky_baby_press_entity",
+  *     "canonical" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}",
+ *     "add-form" = "/admin/config/lucky_baby_press_entity/add",
+ *     "edit-form" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}/edit",
+ *     "delete-form" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}/delete",
+ *     "collection" = "/admin/config/lucky_baby_press_entity",
  *   },
  *   field_ui_base_route = "lucky_baby_press_entity.settings"
  * )
