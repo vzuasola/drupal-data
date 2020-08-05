@@ -41,6 +41,7 @@ class LuckyBabyLoginConfigForm extends FormBase {
     $this->sectionLoginSessionConfig($form);
     $this->sectionChangePassConfig($form);
     $this->sectionChangePassErrorMessages($form);
+    $this->sectionChangePassResetToken($form);
 
     return $form;
   }
