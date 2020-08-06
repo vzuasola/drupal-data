@@ -20,7 +20,7 @@ settings:
       value: email-us
       label: 'Email Us'
     -
-      value: call-us
+      value: phone
       label: 'Call Us'
     -
       value: social
