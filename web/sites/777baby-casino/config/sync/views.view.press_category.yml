@@ -3,7 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.press_year
+    - taxonomy.vocabulary.press_month
   module:
     - rest
     - serialization
@@ -136,7 +136,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            press_year: press_year
+            press_month: press_month
           group: 1
           exposed: false
           expose:

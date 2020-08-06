@@ -221,7 +221,7 @@ display:
           exposed: true
           expose:
             operator_id: field_press_year_target_id_op
-            label: 'Press Year (field_press_year)'
+            label: 'Press Year'
             description: ''
             use_operator: false
             operator: field_press_year_target_id_op
@@ -267,7 +267,7 @@ display:
           exposed: true
           expose:
             operator_id: field_press_month_target_id_op
-            label: 'Press Month (field_press_month)'
+            label: 'Press Month'
             description: ''
             use_operator: false
             operator: field_press_month_target_id_op
