@@ -23,8 +23,7 @@ settings:
     target_bundles:
       games_arcade: games_arcade
     sort:
-      field: changed
-      direction: DESC
+      field: _none
     auto_create: false
     auto_create_bundle: games_arcade
 field_type: entity_reference
