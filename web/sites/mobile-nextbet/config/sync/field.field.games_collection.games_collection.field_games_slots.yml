@@ -23,8 +23,7 @@ settings:
     target_bundles:
       games_slots: games_slots
     sort:
-      field: changed
-      direction: DESC
+      field: _none
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
