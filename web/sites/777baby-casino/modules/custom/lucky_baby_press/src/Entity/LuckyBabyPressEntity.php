@@ -47,7 +47,7 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
-  *     "canonical" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}",
+  *    "canonical" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}",
  *     "add-form" = "/admin/config/lucky_baby_press_entity/add",
  *     "edit-form" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}/edit",
  *     "delete-form" = "/admin/config/lucky_baby_press_entity/{lucky_baby_press_entity}/delete",
