@@ -42,8 +42,22 @@ class ALSForm extends FormBase {
 
     $form['integration']['als_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('ALS URL'),
+      '#title' => $this->t('ALS Home URL'),
       '#default_value' => $this->get('als_url'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['als_fantasy_sport_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('ALS Fantasy Sport URL'),
+      '#default_value' => $this->get('als_fantasy_sport_url'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['als_esport_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('ALS ESport URL'),
+      '#default_value' => $this->get('als_esport_url'),
       '#translatable' => TRUE,
     ];
 
