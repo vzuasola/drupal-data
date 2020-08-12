@@ -26,6 +26,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_label_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_product_label
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_l
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
@@ -119,6 +120,7 @@ third_party_settings:
         - field_game_platform
         - field_slider_game_provider
         - field_games_subprovider
+        - field_slider_enable_game_l
         - field_slider_use_game_loader
         - field_game_lobby
       parent_name: ''
@@ -305,7 +307,7 @@ content:
     type: options_select
     region: content
   field_game_lobby:
-    weight: 15
+    weight: 16
     settings:
       display_label: true
     third_party_settings: {  }
@@ -532,6 +534,13 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
+  field_slider_enable_game_l:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_slider_game_code:
     weight: 10
     settings:
@@ -547,7 +556,7 @@ content:
     type: options_select
     region: content
   field_slider_use_game_loader:
-    weight: 14
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
