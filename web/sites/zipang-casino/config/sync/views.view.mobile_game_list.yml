@@ -600,7 +600,48 @@ display:
         filter_groups: false
         sorts: false
         relationships: false
+        pager: false
       filters:
+        field_game_title_value:
+          id: field_game_title_value
+          table: zipang_mobile_games_entity__field_game_title
+          field: field_game_title_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_title_value_op
+            label: 'Game Title (field_game_title)'
+            description: ''
+            use_operator: false
+            operator: field_game_title_value_op
+            identifier: field_game_title_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
         langcode:
           id: langcode
           table: zipang_mobile_games_entity_field_data
@@ -896,11 +937,33 @@ display:
           required: true
           plugin_id: standard
       rendering_language: '***LANGUAGE_language_interface***'
+      pager:
+        type: full
+        options:
+          items_per_page: 50
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
+        - url.query_args
         - user
       tags:
         - 'config:field.storage.zipang_mobile_games_entity.field_enable_free_play'
@@ -933,10 +996,26 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: full
         options:
-          items_per_page: 0
+          items_per_page: 100
           offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       filters:
         langcode:
           id: langcode
@@ -1091,4 +1170,5 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
+        - url.query_args
       tags: {  }
