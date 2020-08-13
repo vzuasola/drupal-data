@@ -677,6 +677,7 @@ production:
     name: production
   variables:
     env: prd
+    stack: dafa-stack
   script:
     - DEPLOY_TOKEN=$DEPLOY_PRD_TOKEN
     - DEPLOY_URL=$DEPLOY_PRD_URL
@@ -701,6 +702,7 @@ production-mobile-stack:
     name: production
   variables:
     env: prd
+    stack: mobile-dafa-stack
   script:
     - DEPLOY_TOKEN=$DEPLOY_PRD_TOKEN
     - DEPLOY_URL=$DEPLOY_PRD_URL
@@ -752,3 +754,28 @@ production-row-stack:
   only:
     - /^release-.*$/
     - tags
+
+production-nextbet-stack:
+  stage: deploy-production
+  environment:
+    name: production
+  variables:
+    env: prd
+    stack: nextbet-stack
+  script:
+    - DEPLOY_TOKEN=$DEPLOY_PRD_TOKEN
+    - DEPLOY_URL=$DEPLOY_PRD_URL
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - export DEPLOY_STATUS_URL="$DEPLOY_URL/lastBuild/api/json"
+    - export DEPLOY_RESULT_URL="$DEPLOY_URL/lastBuild/logText/progressiveText?start=0"
+    - bash automation/jenkins_deploy.sh
+  when: manual
+  dependencies:
+    - create package
+    - staging
+  only:
+    - /^release-.*$/
+    - tags
+    - /^jenkins/
+  tags:
+    - taiwan-prd-01
