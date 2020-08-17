@@ -121,15 +121,15 @@ class WebComposerSiteMaintenanceConfigurationForm extends FormBase {
     $texts = array_map('trim', explode(PHP_EOL, $this->get('product_list')));
 
     foreach ($texts as $text) {
-      $text_key = strtolower($text);
-      $text_key = str_replace(' ', '', $text_key);
+      $text_key = trim(strtolower($text));
 
-      $publishDate = $form_state->getValue('maintenance_publish_date_' . $text_key)
-      ? $form_state->getValue('maintenance_publish_date_' . $text_key)->getTimestamp()
-      : '';
-    $unpublishDate = $form_state->getValue('maintenance_unpublish_date_' . $text_key)
-      ? $form_state->getValue('maintenance_unpublish_date_' . $text_key)->getTimestamp()
-      : '';
+      $publishDate = !is_array($form_state->getValue('maintenance_publish_date_' . $text_key))
+        ? $form_state->getValue('maintenance_publish_date_' . $text_key)->getTimestamp()
+        : "";
+
+      $unpublishDate = !is_array($form_state->getValue('maintenance_unpublish_date_' . $text_key))
+        ? $form_state->getValue('maintenance_unpublish_date_' . $text_key)->getTimestamp()
+        : "";
 
       if ($unpublishDate && $unpublishDate < $publishDate) {
         $form_state->setErrorByName('maintenance_unpublish_date_' . $text_key,
