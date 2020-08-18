@@ -12,47 +12,14 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: asia_gaming
-      label: 'Asia Gaming'
-    -
-      value: cq9
-      label: 'CQ9 Gaming'
-    -
-      value: fun_gaming
-      label: 'Fun Gaming'
-    -
-      value: gold_deluxe
-      label: 'Gold Deluxe'
-    -
-      value: gpi_arcade
-      label: 'GPI Arcade'
-    -
-      value: ky_gaming
-      label: 'Kaiyuan (KY) Gaming'
-    -
-      value: micro_gaming
-      label: 'MG Arcade'
-    -
-      value: sa_gaming
-      label: 'SA Gaming'
-    -
       value: skywind
       label: Skywind
-    -
-      value: solid_gaming
-      label: 'Solid Gaming'
     -
       value: voidbridge
       label: Voidbridge
     -
-      value: wac
-      label: 'WAC Video Bingo'
-    -
-      value: flow_gaming
-      label: 'Flow Gaming'
-    -
-      value: pgsoft
-      label: PGSoft
+      value: cq9
+      label: CQ9
   allowed_values_function: ''
 module: options
 locked: false
