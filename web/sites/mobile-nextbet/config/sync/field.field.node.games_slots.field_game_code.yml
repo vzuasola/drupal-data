@@ -10,7 +10,7 @@ field_name: field_game_code
 entity_type: node
 bundle: games_slots
 label: 'Game Code'
-description: "iCore game detail to use per provider:\r\n<ul>\r\n<li>Skywind: GameId</li>\r\n<li>Voidbridge: <b>GameId|ProviderProduct</b> (nextbet-arcade, nextbet-fishing, nextbet-games, nextbet-live-dealer)</li>\r\n<li>CQ9: <b>External Game ID|ProviderProduct</b> (nextbet-games, nextbet-fish, nextbet-arcade)</li>\r\n<li>Solid Gaming: <b>External Game ID|ProviderProduct</b> (arcade, slots, fish)  \r\n<br><i>Note: You should prepend SG_ to all game codes</i></li>\r\n <li>Flow Gaming: <b>GameId|GamePlatform</b> <br><i>Note: Game Platform Example: NETENT_CAS,  ELK_CAS</i></li>\r\n<li>Asia Gaming: <b>Game_ID|ProviderProduct</b> (nextbet-live-dealer)</li>\r\n<li>SA Gaming: <b>Game_ID|ProviderProduct</b> (slots, arcade)</li>\r\n<li>Micro Gaming: <b>Game_ID|ProviderProduct</b> (games, arcade)</li>\r\n</ul>"
+description: "<p>iCore game detail to use per provider:</p>\r\n<ul>\r\n<li><strong>Skywind:</strong> GameId</li>\r\n<li><strong>Voidbridge:</strong> ExternalGameId|ProviderProduct <small><span style=\"color: #333333;\">(nextbet-games)</span></small></li>\r\n<li><strong>Playtech:</strong> GameId</li>\r\n<li><strong>CQ9:</strong> ExternalGameId|ProviderProduct <small><span style=\"color: #333333;\">(nextbet-games)</span></small></li>\r\n</ul>"
 required: true
 translatable: false
 default_value: {  }
