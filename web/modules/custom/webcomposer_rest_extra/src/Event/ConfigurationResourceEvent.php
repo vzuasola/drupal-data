@@ -19,9 +19,17 @@ class ConfigurationResourceEvent extends Event {
   public $data;
 
   /**
+   * The config id.
+   *
+   * @var string
+   */
+  public $config_id;
+
+  /**
    * Constructs the object.
    */
-  public function __construct(&$data) {
+  public function __construct(&$data, &$config_id = null) {
     $this->data = &$data;
+    $this->config_id = &$config_id;
   }
 }

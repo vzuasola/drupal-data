@@ -714,7 +714,7 @@ display:
       sorts:
         delta:
           id: delta
-          table: games_collection__field_games
+          table: games_collection__field_games_slots
           field: delta
           relationship: none
           group_type: group

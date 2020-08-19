@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.mobile.field_android_main_content
     - field.field.node.mobile.field_android_main_image
     - field.field.node.mobile.field_android_tab_title
+    - field.field.node.mobile.field_menu_tab
     - field.field.node.mobile.field_mobile_banner_image
     - field.field.node.mobile.field_mobile_blurb_content
     - field.field.node.mobile.field_mobile_blurb_position
@@ -72,6 +73,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_menu_tab:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_mobile_banner_image:
     weight: 102

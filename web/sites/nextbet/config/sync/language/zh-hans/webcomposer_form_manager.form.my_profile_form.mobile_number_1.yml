@@ -3,7 +3,7 @@ field_settings:
   placeholder: ''
   annotation: ''
   tooltip-content: '请输入手机号及区号 (如：+8612345678)。 <br/>只允许输入数字值和加号。'
-  country_area_code_validation: "48|11|11|Please input an exact 11 characters China SC\r\n208|12|12|Please input an exact 9 characters\r\n231|12|14|Please input 9-11 characters\r\n96|10|12|Please input 10-12 characters Indonesia SC\r\n117|13|13|Please input an exact 10 characters\r\n100|13|13|Please input an exact 10 characters\r\n153|12|13|Please input 9-10 characters"
+  country_area_code_validation: "48|13|14|Please input an exact 11 characters China SC\r\n208|12|12|Please input an exact 9 characters\r\n231|12|14|Please input 9-11 characters\r\n96|10|12|Please input 10-12 characters Indonesia SC\r\n117|13|13|Please input an exact 10 characters\r\n100|13|13|Please input an exact 10 characters\r\n153|12|13|Please input 9-10 characters"
 field_validations:
   required:
     error_message: "此项必填。\r\n"
