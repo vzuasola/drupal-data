@@ -90,7 +90,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '52'
+                target_id: '111'
             effect: show
             effect_options: {  }
             selector: ''
@@ -130,7 +130,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '52'
+                target_id: '111'
             effect: show
             effect_options: {  }
             selector: ''
@@ -154,7 +154,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '52'
+                target_id: '111'
             effect: show
             effect_options: {  }
             selector: ''
