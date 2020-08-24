@@ -1,11 +1,11 @@
-uuid: 12a94b97-6d6b-47b5-92ba-42a454c70c7a
+uuid: d7549693-be77-451b-8118-c65f4e334e7e
 langcode: en
 status: true
 dependencies:
   module:
     - webcomposer_slider_v2
-id: webcomposer_slider_v2_entity.field_slider_enable_game_l
-field_name: field_slider_enable_game_l
+id: webcomposer_slider_v2_entity.field_slider_enable_game_launch
+field_name: field_slider_enable_game_launch
 entity_type: webcomposer_slider_v2_entity
 type: boolean
 settings: {  }
