@@ -1,56 +1,56 @@
 form_settings: null
 weights:
-  firstname:
-    weight: '-10'
-  lastname:
-    weight: '-9'
-  password:
-    weight: '-8'
-  confirm_password:
-    weight: '-7'
-  gender:
-    weight: '-6'
-  email:
-    weight: '-5'
-  confirm_email:
-    weight: '-4'
-  birthdate:
-    weight: '-3'
-  phone:
-    weight: '-2'
-  currency:
-    weight: '-1'
-  country:
-    weight: '0'
-  prefecture:
-    weight: '1'
-  state:
-    weight: '2'
-  city:
-    weight: '3'
-  zipcode:
-    weight: '4'
-  address:
-    weight: '5'
-  wrapper_start:
-    weight: '6'
-  term_conditions:
-    weight: '7'
-  promotions:
-    weight: '8'
-  wrapper_end:
-    weight: '9'
-  coupon_code:
-    weight: '10'
-  captcha:
-    weight: '10'
-  ip:
-    weight: '10'
   username:
-    weight: '10'
+    weight: '-50'
+  firstname:
+    weight: '-49'
+  lastname:
+    weight: '-48'
+  password:
+    weight: '-47'
+  confirm_password:
+    weight: '-46'
+  gender:
+    weight: '-45'
+  email:
+    weight: '-44'
+  confirm_email:
+    weight: '-43'
+  birthdate:
+    weight: '-42'
+  phone:
+    weight: '-41'
+  currency:
+    weight: '-40'
+  country:
+    weight: '-39'
+  prefecture:
+    weight: '-38'
+  state:
+    weight: '-37'
+  city:
+    weight: '-36'
+  zipcode:
+    weight: '-35'
+  address:
+    weight: '-34'
+  wrapper_start:
+    weight: '-33'
+  term_conditions:
+    weight: '-32'
+  promotions:
+    weight: '-31'
+  wrapper_end:
+    weight: '-30'
+  coupon_code:
+    weight: '-29'
+  captcha:
+    weight: '-28'
+  ip:
+    weight: '-27'
   creferer:
-    weight: '10'
+    weight: '-26'
   advertiser:
-    weight: '10'
+    weight: '-25'
   submit:
-    weight: '10'
+    weight: '-24'
