@@ -168,15 +168,22 @@ class LuckyBabyHeaderForm extends FormBase {
 
     $form['account']['user_id_label'] = [
       '#type' => 'textfield',
-      '#title' => t('User ID Label.'),
+      '#title' => t('User ID Label'),
       '#default_value' => $this->get('user_id_label'),
       '#translatable' => TRUE,
     ];
 
     $form['account']['balance_label'] = [
       '#type' => 'textfield',
-      '#title' => t('balance Label.'),
+      '#title' => t('Balance Label'),
       '#default_value' => $this->get('balance_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['account']['balance_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => t('Check Balance Error Retrieving Message'),
+      '#default_value' => $this->get('balance_error_message'),
       '#translatable' => TRUE,
     ];
   }
@@ -195,6 +202,7 @@ class LuckyBabyHeaderForm extends FormBase {
       'notif_strip_end_date',
       'user_id_label',
       'balance_label',
+      'balance_error_message',
     ];
 
     foreach ($keys as $key) {
