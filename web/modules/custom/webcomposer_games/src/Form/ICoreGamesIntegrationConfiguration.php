@@ -53,7 +53,8 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'ezugi_gaming' => 'Ezugi Gaming',
     'wac' => 'We Are Casino',
     'lottoland' => 'Lottoland',
-    'onegame' => 'OneGame'
+    'onegame' => 'OneGame',
+    'jsystem' => 'JSystem'
   ];
 
   protected function getEditableConfigNames() {
