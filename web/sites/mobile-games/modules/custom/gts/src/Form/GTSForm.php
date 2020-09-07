@@ -66,6 +66,21 @@ class GTSForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['graphyte'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Graphyte Configuration'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['graphyte']['enable_clickstream'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Graphyte Clickstream'),
+      '#default_value' => $this->get('enable_clickstream'),
+      '#description' => 'Enable sending of pageviews/game tracking to graphyte via clickstream',
+      '#translatable' => false,
+    ];
+
     return $form;
   }
 }
