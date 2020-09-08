@@ -116,3 +116,6 @@ lottoland_javascript_assets: ''
 onegame_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES\r\nKHR\r\nMMK\r\nLAK\r\nBTC"
 onegame_language_mapping: "sc|zh\r\nen|en\r\nid|id\r\nkr|kr\r\nth|th\r\nvn|vn"
 onegame_country: ''
+jsystem_currency: "CNY\r\nRMB\r\nEUR\r\nJPY\r\nVND\r\nMYR\r\nIDR\r\nGBP\r\nTHB\r\nTRY\r\nmBC\r\nMMK\r\nINR\r\nRUB\r\nPLN\r\nKHR\r\nBRL"
+jsystem_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt"
+jsystem_country: ''
