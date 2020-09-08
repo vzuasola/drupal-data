@@ -1,0 +1,15 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function nextbet_push_notification_uninstall() {
+  $keys = [
+    'webcomposer_form_manager.form.push_notification',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

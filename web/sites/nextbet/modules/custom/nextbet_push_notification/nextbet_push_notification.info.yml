@@ -1,0 +1,5 @@
+name: Nextbet Product Push Notification configurations
+type: module
+description: Nextbet product push notification configurations
+core: 8.x
+package: Web Composer
