@@ -180,9 +180,16 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['entrypage_configuration_download_popup']['download_app']['download_app_link_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link Title'),
+      '#default_value' => $this->get('download_app_link_title'),
+      '#translatable' => TRUE,
+    ];
+
     $form['entrypage_configuration_download_popup']['download_app']['download_app_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Download Link'),
+      '#title' => $this->t('Link'),
       '#default_value' => $this->get('download_app_link'),
       '#translatable' => TRUE,
     ];
@@ -211,9 +218,16 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link Title'),
+      '#default_value' => $this->get('launch_app_link_title'),
+      '#translatable' => TRUE,
+    ];
+
     $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Launch Link'),
+      '#title' => $this->t('Link'),
       '#default_value' => $this->get('launch_app_link'),
       '#translatable' => TRUE,
     ];
