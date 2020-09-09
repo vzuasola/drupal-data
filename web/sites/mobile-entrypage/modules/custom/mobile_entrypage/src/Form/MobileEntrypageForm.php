@@ -41,6 +41,7 @@ class MobileEntrypageForm extends FormBase {
 
     $this->sectionEntrypageConfigs($form);
     $this->sectionEntrypageFooter($form);
+    $this->sectionDownloadLightbox($form);
 
     return $form;
   }
@@ -132,6 +133,89 @@ class MobileEntrypageForm extends FormBase {
       '#default_value' => $defaultValue['value'],
       '#format' => $defaultValue['format'],
       '#translatable' => true,
+    ];
+  }
+
+  private function sectionDownloadLightbox(array &$form)
+  {
+    $form['entrypage_configuration_download_popup'] = [
+      '#type' => 'details',
+      '#title' => t('Download Lightbox Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['entrypage_configuration_download_popup']['file_image_page_image'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Image'),
+      '#description' => $this->t('Adds page image to the download lightbox.'),
+      '#default_value' => $this->get('file_image_page_image'),
+      '#translatable' => TRUE,
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
+    $form['entrypage_configuration_download_popup']['download_app'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Download App'),
+      '#description' => $this->t('Download App Section'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['entrypage_configuration_download_popup']['download_app']['download_app_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download App Title'),
+      '#default_value' => $this->get('download_app_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $defaultValue = $this->get('mobile_download_description_select');
+    $form['entrypage_configuration_download_popup']['download_app']['mobile_download_description_select'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Download App Description'),
+      '#default_value' => $defaultValue['value'],
+      '#format' => $defaultValue['format'],
+      '#translatable' => true,
+    ];
+
+    $form['entrypage_configuration_download_popup']['download_app']['download_app_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download Link'),
+      '#default_value' => $this->get('download_app_link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['entrypage_configuration_download_popup']['launch_app'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Launch App'),
+      '#description' => $this->t('Launch App Section'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['entrypage_configuration_download_popup']['launch_app']['launch_app_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Launch App Title'),
+      '#default_value' => $this->get('launch_app_title'),
+      '#translatable' => true,
+    ];
+
+    $defaultValue = $this->get('mobile_launch_description_select');
+    $form['entrypage_configuration_download_popup']['launch_app']['mobile_launch_description_select'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Launch App Description'),
+      '#default_value' => $defaultValue['value'],
+      '#format' => $defaultValue['format'],
+      '#translatable' => true,
+    ];
+
+    $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Launch Link'),
+      '#default_value' => $this->get('launch_app_link'),
+      '#translatable' => TRUE,
     ];
   }
 }
