@@ -225,6 +225,22 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $defaultValue = $this->get('mobile_launch_verify_description_select');
+    $form['entrypage_configuration_download_popup']['launch_app']['mobile_launch_verify_description_select'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Launch App Verification Description'),
+      '#default_value' => $defaultValue['value'],
+      '#format' => $defaultValue['format'],
+      '#translatable' => true,
+    ];
+
+    $form['entrypage_configuration_download_popup']['launch_app']['launch_app_launch_it'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link Title - Ok, Got it'),
+      '#default_value' => $this->get('launch_app_launch_it'),
+      '#translatable' => TRUE,
+    ];
+
     $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Link'),
