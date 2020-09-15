@@ -11,7 +11,7 @@ field_name: field_per_product_config
 entity_type: left_floating_banner_entity
 bundle: left_floating_banner_entity
 label: 'Per product configuration'
-description: 'Specify products by using their primary keyword. Enter one product per line.'
+description: 'Specify pages by using their paths, use only their names. Enter one path per line. <br /> <b>Example:</b><br />promotions<br />live-dealer<br />'
 required: false
 translatable: true
 default_value: {  }
