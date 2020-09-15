@@ -1,0 +1,19 @@
+uuid: 4cd97de0-529b-4cbf-8964-d24e7fde742b
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_label_cmi
+    - paragraphs.paragraphs_type.social_media_cmi
+id: paragraph.social_media_cmi.field_social_media_label_cmi
+field_name: field_social_media_label_cmi
+entity_type: paragraph
+bundle: social_media_cmi
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
