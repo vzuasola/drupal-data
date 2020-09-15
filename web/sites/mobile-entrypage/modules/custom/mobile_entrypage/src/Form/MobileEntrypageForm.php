@@ -184,13 +184,21 @@ class MobileEntrypageForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Link Title'),
       '#default_value' => $this->get('download_app_link_title'),
+      '#description' => $this->t('Download the App'),
       '#translatable' => TRUE,
     ];
 
     $form['entrypage_configuration_download_popup']['download_app']['download_app_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Link'),
+      '#title' => $this->t('Android Link'),
       '#default_value' => $this->get('download_app_link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['entrypage_configuration_download_popup']['download_app']['download_app_link_ios'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('iOS Link'),
+      '#default_value' => $this->get('download_app_link_ios'),
       '#translatable' => TRUE,
     ];
 
@@ -222,6 +230,7 @@ class MobileEntrypageForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Link Title'),
       '#default_value' => $this->get('launch_app_link_title'),
+      '#description' => $this->t('Launch the App'),
       '#translatable' => TRUE,
     ];
 
@@ -236,15 +245,23 @@ class MobileEntrypageForm extends FormBase {
 
     $form['entrypage_configuration_download_popup']['launch_app']['launch_app_launch_it'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Link Title - Ok, Got it'),
+      '#title' => $this->t('Link Title'),
       '#default_value' => $this->get('launch_app_launch_it'),
+      '#description' => $this->t('Ok, Got it'),
       '#translatable' => TRUE,
     ];
 
     $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Link'),
+      '#title' => $this->t('Android Link'),
       '#default_value' => $this->get('launch_app_link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link_ios'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('iOS Link'),
+      '#default_value' => $this->get('launch_app_link_ios'),
       '#translatable' => TRUE,
     ];
   }
