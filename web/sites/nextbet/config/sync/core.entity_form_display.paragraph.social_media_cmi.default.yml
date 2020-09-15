@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.social_media_cmi.field_social_media_label_cmi
     - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_enable
     - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_link_class
     - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_links
@@ -15,6 +16,14 @@ targetEntityType: paragraph
 bundle: social_media_cmi
 mode: default
 content:
+  field_social_media_label_cmi:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_socialmedia_cmi_enable:
     weight: 0
     settings:
@@ -29,7 +38,7 @@ content:
     type: options_select
     region: content
   field_socialmedia_cmi_links:
-    weight: 2
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -37,7 +46,7 @@ content:
     type: string_textfield
     region: content
   field_socialmedia_cmi_linktarget:
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -45,6 +54,8 @@ content:
   translation:
     weight: 10
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
