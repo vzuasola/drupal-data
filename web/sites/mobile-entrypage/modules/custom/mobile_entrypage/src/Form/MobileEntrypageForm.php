@@ -253,15 +253,8 @@ class MobileEntrypageForm extends FormBase {
 
     $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Android Link'),
+      '#title' => $this->t('Launch Game'),
       '#default_value' => $this->get('launch_app_link'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['entrypage_configuration_download_popup']['launch_app']['launch_app_link_ios'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('iOS Link'),
-      '#default_value' => $this->get('launch_app_link_ios'),
       '#translatable' => TRUE,
     ];
   }
