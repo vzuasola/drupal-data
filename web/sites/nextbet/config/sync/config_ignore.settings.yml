@@ -1,16 +1,23 @@
 ignored_config_entities:
-  0: 'webcomposer_config.*'
+  0: 'webform.webform.*'
   2: 'system.menu.*'
-  4: 'filter.*'
-  6: 'devel.*'
-  8: 'nextbet_urls.*'
-  10: 'nextbet_header_config.*'
-  12: 'webcomposer_settings.*'
-  14: 'games_config.*'
-  16: views.view.gameroom
-  18: webcomposer_cache.settings
-  20: webform.webform.cheer_norwich_city_fc
-  22: 'webcomposer_download_page.*'
-  24: registration_config.general_configuration
+  4: 'webcomposer_config.*'
+  6: 'editor.*'
+  8: 'filter.*'
+  10: 'block.*'
+  12: 'devel.*'
+  14: 'language.*'
+  16: 'nextbet_urls.*'
+  18: 'nextbet_header_config.*'
+  20: 'webcomposer_settings.*'
+  22: 'webcomposer_affilates.*'
+  24: 'contact_us_config.*'
+  26: 'games_config.*'
+  28: 'views.view.*'
+  30: 'webcomposer_form_manager.*'
+  32: 'field.field.*'
+  34: 'webcomposer_cache.*'
+  36: 'webcomposer_download_page.*'
+  38: registration_config.general_configuration
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
