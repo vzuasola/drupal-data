@@ -19,5 +19,7 @@ ignored_config_entities:
   34: 'webcomposer_cache.*'
   36: 'webcomposer_download_page.*'
   38: registration_config.general_configuration
+  39: 'field.storage.*'
+  40: '~field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_product_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
