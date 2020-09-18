@@ -59,6 +59,7 @@ module:
   nextbet_header_config: 0
   nextbet_payments: 0
   nextbet_promotions: 0
+  nextbet_push_notification: 0
   nextbet_unsupported_currency: 0
   nextbet_urls: 0
   node: 0

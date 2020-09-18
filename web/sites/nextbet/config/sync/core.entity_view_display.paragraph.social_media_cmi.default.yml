@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.social_media_cmi.field_social_media_label_cmi
     - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_enable
     - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_link_class
     - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_links
@@ -17,6 +18,14 @@ targetEntityType: paragraph
 bundle: social_media_cmi
 mode: default
 content:
+  field_social_media_label_cmi:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_socialmedia_cmi_enable:
     weight: 0
     label: above
@@ -35,7 +44,7 @@ content:
     type: list_default
     region: content
   field_socialmedia_cmi_links:
-    weight: 2
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -43,7 +52,7 @@ content:
     type: string
     region: content
   field_socialmedia_cmi_linktarget:
-    weight: 3
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }

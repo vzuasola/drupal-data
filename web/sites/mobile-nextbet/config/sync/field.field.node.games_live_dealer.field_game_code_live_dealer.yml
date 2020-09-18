@@ -10,7 +10,7 @@ field_name: field_game_code_live_dealer
 entity_type: node
 bundle: games_live_dealer
 label: 'Game Code / Game Category'
-description: "<br><b>Game Code for :</b><br>\r\n<ul>\r\n    <li><strong>Playtech</strong></li>\r\n    <li><strong>SA Gaming</strong></li>\r\n    <li><strong>We Are Casino</strong></li>\r\n    <li><strong>Ezugi Gaming</strong></li>\r\n    <li><strong>Voidbridge:</strong> gameCode|productProvider <br>\r\n        <small>\r\n            <code>productProvider:</code>\r\n            <ul>\r\n                <li>nextbet-live-dealer</li>\r\n                <li>nextbet-arcade</li>\r\n                <li>nextbet-games</li>\r\n                <li>nextbet-fishing</li>\r\n            </ul>\r\n        </small>\r\n</ul>\r\n\r\n<br><b>Game Category for:</b><br>\r\n<ul>\r\n    <li><strong>Evolution Gaming</strong></li>\r\n</ul>\r\n"
+description: "<p>iCore game detail to use per provider:</p>\r\n<ul>\r\n<li><strong>Skywind:</strong> <i>N/A</i></li>\r\n<li><strong>Voidbridge:</strong> ExternalGameId|ProviderProduct <small>(nextbet-live-dealer)</small></li>\r\n<li><strong>Playtech:</strong> GameId</li>\r\n<li><strong>Asia Gaming:</strong> <i>N/A</i></li>\r\n<li><strong>Evolution Gaming:</strong> <i>N/A</i></li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }

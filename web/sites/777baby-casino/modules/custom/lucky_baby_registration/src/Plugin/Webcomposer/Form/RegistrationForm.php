@@ -250,6 +250,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'coupon_code' => [
+        'name' => 'Coupon Code',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Coupon Code Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Coupon Code field',
+          ],
+        ],
+      ],
       'wrapper_start' => [
         'name' => 'Wrapper Start',
         'type' => 'markup',

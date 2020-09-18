@@ -12,38 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: voidbridge
-      label: Voidbridge
-    -
       value: skywind
       label: Skywind
     -
-      value: micro_gaming
-      label: 'Micro Gaming'
-    -
-      value: cq9
-      label: CQ9
-    -
-      value: solid_gaming
-      label: 'Solid Gaming'
-    -
-      value: flow_gaming
-      label: 'Flow Gaming'
-    -
-      value: sa_gaming
-      label: 'SA Gaming'
-    -
-      value: asia_gaming
-      label: 'Asia Gaming'
-    -
-      value: ruby_play
-      label: 'Ruby Play'
-    -
-      value: pgsoft
-      label: PGSoft
+      value: voidbridge
+      label: Voidbridge
     -
       value: playtech
       label: Playtech
+    -
+      value: cq9
+      label: CQ9
   allowed_values_function: ''
 module: options
 locked: false
