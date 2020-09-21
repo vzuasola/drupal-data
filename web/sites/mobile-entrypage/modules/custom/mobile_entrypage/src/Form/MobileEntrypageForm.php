@@ -188,6 +188,21 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['entrypage_configuration_download_popup']['download_app']['link_target'] = [
+      '#type' => 'select',
+      '#options' => [
+        '_self' => 'Same Tab',
+        '_blank' => 'New Tab',
+        'window' => 'New Window'
+      ],
+      '#title' => $this->t('Link Target'),
+      '#description' => $this->t('Select a link target'),
+      '#default_value' => $this->get('link_target'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
     $form['entrypage_configuration_download_popup']['download_app']['download_app_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Android Link'),
