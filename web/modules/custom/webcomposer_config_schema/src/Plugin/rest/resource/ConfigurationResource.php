@@ -144,6 +144,22 @@ class ConfigurationResource extends ResourceBase {
         $file_id = $data['page_not_found_image'][0];
         $data['page_not_found_image_url'] = $this->getFileRelativePath($file_id);
         break;
+
+      case 'webcomposer_graphyte.integration_config':
+        if (\Drupal::moduleHandler()->moduleExists('webcomposer_graphyte')) {
+          foreach (\Drupal\webcomposer_graphyte\Form\GraphyteConfiguration::PRODUCTS as $product) {
+            if ($data[$product .'_category_list']) {
+              $categories = array_map('trim', explode(PHP_EOL, $data[$product .'_category_list']));
+              foreach ($categories as $i => $category) {
+                if (!empty($category) && isset($data[$product . '_' . $category .'_icon_image'])) {
+                  $file_id = $data[$product . '_' . $category .'_icon_image'][0];
+                  $data[$product . '_' . $category .'_icon_image_url'] = $this->getFileRelativePath($file_id);
+                }
+              }
+            }
+          }
+        }
+        break;
     }
   }
 
