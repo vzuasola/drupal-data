@@ -81,6 +81,20 @@ class GraphyteConfiguration extends FormBase {
       '#description' => $this->t('Brand keys'),
       '#required' => true,
     ];
+
+    $form['click_stream_asset'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Click Stream Asset'),
+      '#default_value' => $this->get('click_stream_asset'),
+      '#description' => $this->t('Library to integrate with clickstream api.
+        <br/>
+        <br/>
+        <b>Test:</b> https://cdn.graphyte.ai/test-graphyte-apac.min.js</br>
+        <b>Production:</b> https://cdn.graphyte.ai/graphyte-apac.min.js</br>
+      '),
+      '#required' => true,
+      '#rows' => 2,
+    ];
   }
 
   private function getRecommentsConfig(&$form) {
@@ -88,7 +102,9 @@ class GraphyteConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Recommends API host'),
       '#default_value' => $this->get('recommend_api_domain'),
-      '#description' => $this->t('Recommends API host <br/>
+      '#description' => $this->t('Recommends API host
+          <br/>
+          <br/>
           <b>Test:</b> https://test-api-apac.graphyte.ai/recommend/v1/placements/{placementKey}/recommendations</br>
           <b>Production:</b> https://api-apac.graphyte.ai/recommend/v1/placements/{placementKey}/recommendations</br>
       '),
