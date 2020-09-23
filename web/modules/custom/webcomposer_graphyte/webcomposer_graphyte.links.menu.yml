@@ -1,0 +1,5 @@
+webcomposer_graphyte.list:
+  title: 'Webcomposer Graphyte Configuration'
+  parent: system.admin_config
+  description: 'Configuration for Graphyte integration'
+  route_name: webcomposer_graphyte.admin_settings

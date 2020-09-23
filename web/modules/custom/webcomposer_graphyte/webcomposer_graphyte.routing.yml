@@ -1,0 +1,7 @@
+webcomposer_graphyte.admin_settings:
+  path: 'admin/config/webcomposer/graphyte'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Graphyte Configuration'
+  requirements:
+    _permission: 'administer site configuration'
