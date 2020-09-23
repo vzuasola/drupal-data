@@ -4,9 +4,10 @@ namespace Drupal\webcomposer_graphyte\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
- * Description form plugin.
+ * Graphyte configuration form
  *
  * @WebcomposerConfigPlugin(
  *   id = "graphyte_configuration",
@@ -23,6 +24,11 @@ use Drupal\Core\Form\FormStateInterface;
  * )
  */
 class GraphyteConfiguration extends FormBase {
+
+  const PRODUCTS = [
+    'games',
+    'arcade',
+  ];
 
   /**
    * {@inheritdoc}
@@ -112,64 +118,88 @@ class GraphyteConfiguration extends FormBase {
       '#required' => true,
     ];
 
-    // Hardcoded for now
-    $product_list = [
-      'games',
-      'arcade',
-    ];
+    foreach (self::PRODUCTS as $product) {
+      $form[$product] = [
+        '#type' => 'details',
+        '#title' => $this->t($product),
+        '#collapsible' => true,
+        '#group' => 'recommends_product_form'
+      ];
 
-    foreach ($product_list as $product) {
-      if (!empty($product)) {
-        $form[$product] = [
-          '#type' => 'details',
-          '#title' => $this->t($product),
-          '#collapsible' => true,
-          '#group' => 'recommends_product_form'
-        ];
+      $form[$product][$product .'_category_list'] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Categories'),
+        '#default_value' => $this->get($product .'_category_list'),
+        '#description' => $this->t('Enter category line. This will be the category keys as well'),
+      ];
 
-        $form[$product][$product .'_category_list'] = [
-          '#type' => 'textarea',
-          '#title' => $this->t('Categories'),
-          '#default_value' => $this->get($product .'_category_list'),
-          '#description' => $this->t('Enter category line. This will be the category keys as well'),
-        ];
+      $categories = array_map('trim', explode(PHP_EOL, $this->get($product .'_category_list')));
+      foreach ($categories as $i => $category) {
+        if (!empty($category)) {
+          $form[$product][$category] = [
+            '#type' => 'details',
+            '#title' => $this->t($category),
+            '#collapsible' => true,
+            '#group' => 'recommends_product_categories_form'
+          ];
 
-        $categories = array_map('trim', explode(PHP_EOL, $this->get($product .'_category_list')));
-        foreach ($categories as $category) {
-          if (!empty($category)) {
-            $form[$product][$category] = [
-              '#type' => 'details',
-              '#title' => $this->t($category),
-              '#collapsible' => true,
-              '#group' => 'recommends_product_categories_form'
-            ];
+          $form[$product][$category][$product . '_' . $category .'_placement_key'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Placement key'),
+            '#default_value' => $this->get($product . '_' . $category .'_placement_key'),
+            '#description' => $this->t('Placement key for this recommends request'),
+            '#required' => true,
+          ];
 
-            $form[$product][$category][$product . '_' . $category .'_placement_key'] = [
-              '#type' => 'textfield',
-              '#title' => $this->t('Placement key'),
-              '#default_value' => $this->get($product . '_' . $category .'_placement_key'),
-              '#description' => $this->t('Placement key for this recommends request'),
-              '#required' => true,
-            ];
+          $form[$product][$category][$product . '_' . $category .'_category_alias'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Category Alias'),
+            '#default_value' => $this->get($product . '_' . $category .'_category_alias'),
+            '#description' => $this->t('Alias for this category.'),
+            '#required' => true,
+          ];
 
-            $form[$product][$category][$product . '_' . $category .'_category_alias'] = [
-              '#type' => 'textfield',
-              '#title' => $this->t('Category Alias'),
-              '#default_value' => $this->get($product . '_' . $category .'_category_alias'),
-              '#description' => $this->t('Alias for this category.'),
-              '#required' => true,
-            ];
+          $form[$product][$category][$product . '_' . $category .'_category_name'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Category Name'),
+            '#default_value' => $this->get($product . '_' . $category .'_category_name'),
+            '#description' => $this->t('Category name - Translatable'),
+            '#translatable' => true,
+          ];
 
-            $form[$product][$category][$product . '_' . $category .'_category_name'] = [
-              '#type' => 'textfield',
-              '#title' => $this->t('Category Name'),
-              '#default_value' => $this->get($product . '_' . $category .'_category_name'),
-              '#description' => $this->t('Category name - Translatable'),
-              '#translatable' => true,
-            ];
+          $form[$product][$category][$product . '_' . $category .'_icon_image'] = [
+            '#type' => 'managed_file',
+            '#title' => $this->t('Icon'),
+            '#default_value' => $this->get($product . '_' . $category .'_icon_image'),
+            '#upload_location' => 'public://',
+            '#upload_validators' => [
+              'file_validate_extensions' => ['gif png jpg jpeg'],
+            ],
+          ];
+        }
+      }
+    }
+  }
+
+  /**
+   *
+   */
+  public function submit(array &$form, FormStateInterface $form_state) {
+    foreach (self::PRODUCTS as $product) {
+      $categories = array_map('trim', explode(PHP_EOL, $this->get($product .'_category_list')));
+      foreach ($categories as $i => $category) {
+        if (!empty($category)) {
+          $file = $form_state->getValue($product . '_' . $category .'_icon_image');
+          if ($file && isset($file[0])) {
+            $entity = File::load($file[0]);
+
+            $entity->setPermanent();
+            $entity->save();
           }
         }
       }
     }
+
+    parent::submit($form, $form_state);
   }
 }
