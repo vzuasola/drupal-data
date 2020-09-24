@@ -151,55 +151,14 @@ class GraphyteConfiguration extends FormBase {
             '#required' => true,
           ];
 
-          $form[$product][$category][$product . '_' . $category .'_category_alias'] = [
+          $form[$product][$category][$product . '_' . $category .'_category_id'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Category Alias'),
-            '#default_value' => $this->get($product . '_' . $category .'_category_alias'),
-            '#description' => $this->t('Alias for this category.'),
-            '#required' => true,
-          ];
-
-          $form[$product][$category][$product . '_' . $category .'_category_name'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Category Name'),
-            '#default_value' => $this->get($product . '_' . $category .'_category_name'),
-            '#description' => $this->t('Category name - Translatable'),
-            '#translatable' => true,
-          ];
-
-          $form[$product][$category][$product . '_' . $category .'_icon_image'] = [
-            '#type' => 'managed_file',
-            '#title' => $this->t('Icon'),
-            '#default_value' => $this->get($product . '_' . $category .'_icon_image'),
-            '#upload_location' => 'public://',
-            '#upload_validators' => [
-              'file_validate_extensions' => ['gif png jpg jpeg'],
-            ],
+            '#title' => $this->t('Category ID override'),
+            '#default_value' => $this->get($product . '_' . $category .'_category_id'),
+            '#description' => $this->t('Category ID to be overriden'),
           ];
         }
       }
     }
-  }
-
-  /**
-   *
-   */
-  public function submit(array &$form, FormStateInterface $form_state) {
-    foreach (self::PRODUCTS as $product) {
-      $categories = array_map('trim', explode(PHP_EOL, $this->get($product .'_category_list')));
-      foreach ($categories as $i => $category) {
-        if (!empty($category)) {
-          $file = $form_state->getValue($product . '_' . $category .'_icon_image');
-          if ($file && isset($file[0])) {
-            $entity = File::load($file[0]);
-
-            $entity->setPermanent();
-            $entity->save();
-          }
-        }
-      }
-    }
-
-    parent::submit($form, $form_state);
   }
 }
