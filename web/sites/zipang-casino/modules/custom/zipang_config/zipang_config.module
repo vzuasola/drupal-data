@@ -53,3 +53,17 @@ function maintenance_alter_submit(array $form, FormStateInterface $form_state) {
       ->set('soft_maintenance_mode', $form_state->getValue('soft_maintenance_mode'))
       ->save();
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function zipang_config_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  // specifically for webcomposer form manager list alter expanding row delta range
+  if ($form['#form_id'] == 'webcomposer_form_manager.manage_form') {
+    foreach ($form['table'] as $key => $value) {
+      if (empty(strpos($key, '#')) && strpos($key, '#') !== 0) {
+        $form['table'][$key]['weight']['#delta'] = 50;
+      }
+    }
+  }
+}
