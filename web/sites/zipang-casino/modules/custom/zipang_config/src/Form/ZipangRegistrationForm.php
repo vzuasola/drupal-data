@@ -218,6 +218,18 @@ class ZipangRegistrationForm extends FormBase {
       '#title' => $this->t('Registration Error Message if Email is already exists'),
       '#default_value' => $this->get('icore_email_validation'),
     ];
+    $form['reg_form']['errors']['icore_username_validation'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Username is already exists'),
+      '#default_value' => $this->get('icore_username_validation'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['icore_email_validation'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Email is already exists'),
+      '#default_value' => $this->get('icore_email_validation'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
