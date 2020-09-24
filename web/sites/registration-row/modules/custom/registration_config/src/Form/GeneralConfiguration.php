@@ -49,6 +49,7 @@ class GeneralConfiguration extends FormBase {
     $this->trackingConfig($form);
     $this->tripwirePopupConfig($form);
     $this->textOverBannerConfig($form);
+    $this->otp($form);
 
     return $form;
   }
@@ -545,4 +546,54 @@ class GeneralConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
   }
+
+  /**
+   * OTP Configuration
+   */
+  private function otp(array &$form) {
+    $form['reg_otp'] = [
+      '#type' => 'details',
+      '#title' => $this->t('OTP Configurations'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['reg_otp']['otp_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Registration OTP'),
+      '#description' => $this->t('Check to enable registration otp'),
+      '#default_value' => $this->get('otp_enable'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_otp']['otp_popup_header'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OTP Form Popup Header'),
+      '#description' => $this->t('This will appear on OTP form lightbox header'),
+      '#default_value' => $this->get('otp_popup_header') ?? 'Mobile Number Verification',
+    ];
+    $form['reg_otp']['otp_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OTP Text'),
+      '#description' => $this->t('This will be the OTP text above the OTP field input'),
+      '#default_value' => $this->get('otp_text') ?? 'Enter your OTP code.',
+    ];
+    $form['reg_otp']['otp_field_placeholder'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OTP input field placeholder'),
+      '#description' => $this->t('This will be the OTP input field placeholder'),
+      '#default_value' => $this->get('otp_field_placeholder') ?? '',
+    ];
+    $form['reg_otp']['otp_submit_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OTP Submit button text'),
+      '#description' => $this->t('This will be the OTP submit button text'),
+      '#default_value' => $this->get('otp_submit_button') ?? 'Submit',
+    ];
+    $form['reg_otp']['otp_resend_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OTP Resend button text'),
+      '#description' => $this->t('This will be the OTP resend button text'),
+      '#default_value' => $this->get('otp_resend_button') ?? 'Resend OTP',
+    ];
+  }
 }
+
