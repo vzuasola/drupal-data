@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_category_2_0.field_hide_name
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_alias
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
@@ -22,7 +23,7 @@ third_party_settings:
         - field_v2_show_tooltip
         - field_v2_game_category_tooltip
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -36,7 +37,7 @@ third_party_settings:
         - field_v2_game_category_icon
         - field_v2_game_category_hicon
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tab
       format_settings:
         id: ''
@@ -50,8 +51,15 @@ targetEntityType: taxonomy_term
 bundle: game_category_2_0
 mode: default
 content:
-  field_v2_game_category_alias:
+  field_hide_name:
     weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_v2_game_category_alias:
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -59,7 +67,7 @@ content:
     type: string_textfield
     region: content
   field_v2_game_category_disable:
-    weight: 6
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
@@ -82,7 +90,7 @@ content:
     type: image_image
     region: content
   field_v2_game_category_new:
-    weight: 5
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
@@ -105,7 +113,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
