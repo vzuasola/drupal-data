@@ -1,0 +1,16 @@
+uuid: 41c3a02f-72fb-45be-9f81-81e11b100f02
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_filter_casino
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.game_filter_casino
+target_entity_type_id: taxonomy_term
+target_bundle: game_filter_casino
+default_langcode: site_default
+language_alterable: true

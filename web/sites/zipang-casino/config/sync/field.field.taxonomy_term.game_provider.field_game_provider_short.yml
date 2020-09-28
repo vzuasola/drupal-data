@@ -1,0 +1,19 @@
+uuid: edf9c883-7ee0-4f74-8e24-15e8e6220208
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_short
+    - taxonomy.vocabulary.game_provider
+id: taxonomy_term.game_provider.field_game_provider_short
+field_name: field_game_provider_short
+entity_type: taxonomy_term
+bundle: game_provider
+label: 'Short Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

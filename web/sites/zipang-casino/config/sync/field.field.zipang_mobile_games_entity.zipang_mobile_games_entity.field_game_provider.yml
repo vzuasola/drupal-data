@@ -1,21 +1,19 @@
-uuid: 4982fbba-d293-4f6a-98aa-0a506c36aa5b
+uuid: 82c23ec0-3b71-4302-afb6-14e5fdbc28ba
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.zipang_mobile_games_entity.field_game_category
-    - taxonomy.vocabulary.mobile_game_category
+    - field.storage.zipang_mobile_games_entity.field_game_provider
+    - taxonomy.vocabulary.game_provider
   module:
     - zipang_mobile_games
-_core:
-  default_config_hash: iqkh5u6QaXpj4QLSI3m8mBaxumoEHkNoAE9kOKUDLJY
-id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_category
-field_name: field_game_category
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_provider
+field_name: field_game_provider
 entity_type: zipang_mobile_games_entity
 bundle: zipang_mobile_games_entity
-label: 'Game Category'
+label: 'Game Provider'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -23,7 +21,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      mobile_game_category: mobile_game_category
+      game_provider: game_provider
     sort:
       field: name
       direction: asc

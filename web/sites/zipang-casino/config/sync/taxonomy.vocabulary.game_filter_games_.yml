@@ -1,0 +1,9 @@
+uuid: fdfb82ce-ed59-4c77-baad-1f402cb2e3d5
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Game Filter (games)'
+vid: game_filter_games_
+description: 'Game Page Filters for Games Page'
+hierarchy: 0
+weight: 0
