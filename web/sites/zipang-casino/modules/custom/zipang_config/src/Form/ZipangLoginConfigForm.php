@@ -34,13 +34,14 @@ class ZipangLoginConfigForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['zipang_settings_tab'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Zipang Configurations'),
+      '#title' => t('Zipang Casino Configurations'),
     ];
 
     $this->sectionLoginConfig($form);
     $this->sectionLoginSessionConfig($form);
     $this->sectionChangePassConfig($form);
     $this->sectionChangePassErrorMessages($form);
+    $this->sectionChangePassResetToken($form);
 
     return $form;
   }
@@ -50,6 +51,7 @@ class ZipangLoginConfigForm extends FormBase {
     $form['login_form'] = [
       '#type' => 'details',
       '#title' => $this->t('Zipang Login Form Configuration'),
+      '#group' => 'zipang_settings_tab',
     ];
 
     $default_login_button_main = $this->get('login_button_label_main');
@@ -150,68 +152,26 @@ class ZipangLoginConfigForm extends FormBase {
       '#description' => $this->t('Registration link.'),
       '#translatable' => TRUE,
     ];
-
+    
     $form['login_pt_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Playtech Settings'),
-    ];
-
-    $default_pt_casino_name = $this->get('login_pt_casino_name');
-    $form['login_pt_settings']['login_pt_casino_name'] = [
-      '#type' => 'textfield',
-      '#title' => t('Casino Name'),
-      '#default_value' => $default_pt_casino_name,
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_secret_key = $this->get('login_pt_secret_key');
-    $form['login_pt_settings']['login_pt_secret_key'] = [
-      '#type' => 'textfield',
-      '#title' => t('Secret Key'),
-      '#default_value' => $default_pt_secret_key,
-      '#description' => $this->t('Secret key to be used for integrating with playtech web apis.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_getbalance_url = $this->get('login_pt_getbalance_url');
-    $form['login_pt_settings']['login_pt_getbalance_url'] = [
-      '#type' => 'textfield',
-      '#title' => t('Playtech Getbalance API URL'),
-      '#default_value' => $default_pt_getbalance_url,
-      '#description' => $this->t('URL to be used to get player balance.'),
-      '#translatable' => FALSE,
+      '#title' => $this->t('Cashier Settings'),
+      '#group' => 'zipang_settings_tab',
     ];
 
     $default_pt_cashier_url = $this->get('login_pt_cashier_url');
     $form['login_pt_settings']['login_pt_cashier_url'] = [
       '#type' => 'textfield',
-      '#title' => t('Playtech Cashier URL'),
+      '#title' => t('Cashier URL'),
       '#default_value' => $default_pt_cashier_url,
-      '#description' => $this->t('Playtech Cashier URL.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_error_messages = $this->get('login_pt_error_messages');
-    $form['login_pt_settings']['login_pt_error_messages'] = [
-      '#type' => 'textarea',
-      '#title' => t('Login Playtech error messages'),
-      '#default_value' => $default_pt_error_messages,
-      '#description' => $this->t('Mapping for login error messages from playtech. Format errorCode|errorMessage'),
-      '#translatable' => TRUE,
-    ];
-
-    $default_general_error_messages = $this->get('general_pt_error_messages');
-    $form['login_pt_settings']['general_pt_error_messages'] = [
-      '#type' => 'textarea',
-      '#title' => t('Playtech General error messages'),
-      '#default_value' => $default_general_error_messages,
-      '#description' => $this->t('Mapping for general error messages from playtech. Format errorCode|errorMessage'),
+      '#description' => $this->t('Cashier URL.'),
       '#translatable' => TRUE,
     ];
 
     $form['login_error_messages'] = [
       '#type' => 'details',
       '#title' => $this->t('Login Error Messages'),
+      '#group' => 'zipang_settings_tab',
     ];
 
     $default_username_required = $this->get('login_username_required');
@@ -231,12 +191,22 @@ class ZipangLoginConfigForm extends FormBase {
       '#description' => $this->t('Password required error message.'),
       '#translatable' => TRUE,
     ];
+
+    $default_login_error_messages_config = $this->get('login_error_messages_config');
+    $form['login_error_messages']['login_error_messages_config'] = [
+      '#type' => 'textarea',
+      '#title' => t('Login Error Messages Config'),
+      '#default_value' => $default_login_error_messages_config,
+      '#description' => $this->t('Mapping for error messages. Format errorCode|errorMessage'),
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionLoginSessionConfig(array &$form) {
     $form['login_session'] = [
       '#type' => 'details',
       '#title' => $this->t('Login Session Configuration'),
+      '#group' => 'zipang_settings_tab',
     ];
 
     $default_login_session_time = $this->get('login_session_time');
@@ -247,12 +217,22 @@ class ZipangLoginConfigForm extends FormBase {
       '#description' => $this->t('Login Session Time in Minutes'),
       '#translatable' => FALSE,
     ];
+
+    $default_session_timeout = $this->get('session_timeout');
+    $form['login_session']['session_timeout'] = [
+      '#type' => 'textfield',
+      '#title' => t('Session Timeout Error Message'),
+      '#default_value' => $default_session_timeout,
+      '#description' => $this->t('Session Timeout Error Message'),
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionChangePassConfig(array &$form) {
     $form['change_pass'] = [
       '#type' => 'details',
       '#title' => $this->t('Change Password Configuration'),
+      '#group' => 'zipang_settings_tab',
     ];
 
     $default_form_title = $this->get('change_pass_form_title');
@@ -305,6 +285,7 @@ class ZipangLoginConfigForm extends FormBase {
     $form['change_pass_error_messages'] = [
       '#type' => 'details',
       '#title' => $this->t('Change Password Error Messages'),
+      '#group' => 'zipang_settings_tab',
     ];
 
     $default_cp_old_password_required = $this->get('change_pass_old_password_error');
@@ -333,9 +314,40 @@ class ZipangLoginConfigForm extends FormBase {
       '#description' => $this->t('Change Password Confirm New Password error message.'),
       '#translatable' => TRUE,
     ];
+
+    $default_cp_forgot_failed = $this->get('change_pass_failed');
+    $form['change_pass_error_messages']['change_pass_failed'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Failed Error Message.'),
+      '#default_value' => $default_cp_forgot_failed,
+      '#description' => $this->t('Change Password Failed process.'),
+      '#translatable' => TRUE,
+    ];
   }
 
-  /**
-   * {@inheritdoc}
-   */
+  private function sectionChangePassResetToken(array &$form) {
+    $form['reset_token'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Change Password Reset Token Config'),
+      '#group' => 'zipang_settings_tab',
+    ];
+
+    $default_reset_token_title = $this->get('reset_token_title');
+    $form['reset_token']['reset_token_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reset Token Title.'),
+      '#default_value' => $default_reset_token_title,
+      '#description' => $this->t('Reset Token Page title configuration.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_reset_token_description = $this->get('reset_token_description');
+    $form['reset_token']['reset_token_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Description of page content'),
+      '#default_value' => $default_reset_token_description['value'],
+      '#format' => $default_reset_token_description['format'],
+      '#translatable' => TRUE,
+    ];
+  }
 }
