@@ -12,7 +12,7 @@ bundle: arcade_game
 label: 'Preview Mode'
 description: 'Mark this game as preview mode'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0
