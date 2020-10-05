@@ -594,6 +594,24 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('This will be the OTP resend button text'),
       '#default_value' => $this->get('otp_resend_button') ?? 'Resend OTP',
     ];
+    $form['reg_otp']['otp_success_request_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OTP Success Request Message'),
+      '#description' => $this->t('Message to display after a successful OTP request'),
+      '#default_value' => $this->get('otp_success_request_message') ?? 'OTP sent to your mobile number :mobile',
+    ];
+    $form['reg_otp']['otp_countdown_timer'] = [
+      '#type' => 'number',
+      '#title' => $this->t('OTP Resend Button - Countdown Timer'),
+      '#description' => $this->t('Waiting time in-between OTP requests (in seconds)'),
+      '#default_value' => $this->get('otp_countdown_timer'),
+    ];
+    $form['reg_otp']['otp_retries_limit'] = [
+      '#type' => 'number',
+      '#title' => $this->t('OTP Resend Button - Retries Limit'),
+      '#description' => $this->t('Number of OTP requests allowed per day, per player'),
+      '#default_value' => $this->get('otp_retries_limit') ?? 4,
+    ];
   }
 }
 
