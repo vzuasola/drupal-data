@@ -28,3 +28,11 @@ press_year: 0
 press_year_message: 'Term @term already exists in vocabulary @vocabulary.'
 release_year: 0
 release_year_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_provider: 0
+game_provider_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_filter_casino: 0
+game_filter_casino_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_filter_games_: 0
+game_filter_games__message: 'Term @term already exists in vocabulary @vocabulary.'
+game_filter_games: 0
+game_filter_games_message: 'Term @term already exists in vocabulary @vocabulary.'

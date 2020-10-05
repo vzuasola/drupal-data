@@ -209,9 +209,8 @@ display:
       display_extenders: {  }
       path: api/desktop_game_categories
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: taxonomy_list_serializer
@@ -526,6 +525,10 @@ display:
           uses_fields: false
           formats:
             json: json
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
