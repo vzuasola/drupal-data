@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_category_2_0.field_hide_name
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_alias
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
@@ -26,6 +27,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_hide_name:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_v2_game_category_alias:
     weight: 7
     label: above

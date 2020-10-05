@@ -160,7 +160,6 @@ class PushNotificationV2Form extends FormBase {
     ];
 
     $texts = array_map('trim', explode(PHP_EOL, $this->get('product_list')));
-
     foreach ($texts as $text) {
       $text_key = strtolower($text);
       $text_key = str_replace(' ', '', $text_key);
