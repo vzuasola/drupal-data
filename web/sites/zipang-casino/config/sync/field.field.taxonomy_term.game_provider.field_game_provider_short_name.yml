@@ -1,12 +1,12 @@
-uuid: edf9c883-7ee0-4f74-8e24-15e8e6220208
+uuid: 015611b5-151b-42ae-b784-a8fd07299ec8
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_game_provider_short
+    - field.storage.taxonomy_term.field_game_provider_short_name
     - taxonomy.vocabulary.game_provider
-id: taxonomy_term.game_provider.field_game_provider_short
-field_name: field_game_provider_short
+id: taxonomy_term.game_provider.field_game_provider_short_name
+field_name: field_game_provider_short_name
 entity_type: taxonomy_term
 bundle: game_provider
 label: 'Short Name'

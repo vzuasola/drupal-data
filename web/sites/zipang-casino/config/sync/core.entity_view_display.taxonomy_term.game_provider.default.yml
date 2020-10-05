@@ -7,7 +7,7 @@ dependencies:
     - field.field.taxonomy_term.game_provider.field_game_provider_image
     - field.field.taxonomy_term.game_provider.field_game_provider_image_banner
     - field.field.taxonomy_term.game_provider.field_game_provider_key
-    - field.field.taxonomy_term.game_provider.field_game_provider_short
+    - field.field.taxonomy_term.game_provider.field_game_provider_short_name
     - field.field.taxonomy_term.game_provider.field_hide_name
     - field.field.taxonomy_term.game_provider.field_product_type
     - taxonomy.vocabulary.game_provider
@@ -60,7 +60,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_game_provider_short:
+  field_game_provider_short_name:
     weight: 7
     label: above
     settings:
