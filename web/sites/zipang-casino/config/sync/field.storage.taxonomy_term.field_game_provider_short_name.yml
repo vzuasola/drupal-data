@@ -1,11 +1,11 @@
-uuid: 9a82c4bc-e5cc-48a6-9eb5-e215764c30b6
+uuid: d8601f21-eea0-4937-ad74-1fb7e7724c19
 langcode: ja
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_game_provider_short
-field_name: field_game_provider_short
+id: taxonomy_term.field_game_provider_short_name
+field_name: field_game_provider_short_name
 entity_type: taxonomy_term
 type: string
 settings:
