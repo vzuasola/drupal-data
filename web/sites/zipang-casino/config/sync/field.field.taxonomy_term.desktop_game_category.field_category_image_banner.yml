@@ -16,7 +16,7 @@ bundle: desktop_game_category
 label: 'Category Image Banner'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
