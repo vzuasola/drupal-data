@@ -36,6 +36,7 @@ static code analysis:
     paths:
       - .composer-cache/
       - .sonar-cache/
+  allow_failure: true
 
 php code sniffer:
   stage: tests

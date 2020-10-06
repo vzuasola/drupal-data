@@ -25,6 +25,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
      */
   public function getFields() {
     return [
+      'username' => [
+        'name' => 'User Name',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'User Name Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for the User Name field',
+          ],
+        ],
+      ],
       'firstname' => [
         'name' => 'First Name',
         'type' => 'textfield',
@@ -101,7 +112,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'settings' => [
           'label' => [
             '#title' => 'Email Address Label',
-            '#type' => 'textfield',
+            '#type' => 'email',
             '#description' => 'The Label for Email Address field',
           ],
         ],
@@ -112,7 +123,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'settings' => [
           'label' => [
             '#title' => 'Confirm Email Address Label',
-            '#type' => 'textfield',
+            '#type' => 'email',
             '#description' => 'The Label for Confirm Email Address field',
           ],
         ],
@@ -248,12 +259,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Coupon Code field',
           ],
-          'show' => [
-            '#title' => 'Coupon Code Visible',
-            '#type' => 'checkbox',
-            '#description' => 'Show Coupon Code field',
-            '#default_value' => '1',
-          ],
         ],
       ],
       'wrapper_start' => [
@@ -317,10 +322,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
       ],
       'ip' => [
         'name' => 'IP address',
-        'type' => 'hidden',
-      ],
-      'username' => [
-        'name' => 'Username',
         'type' => 'hidden',
       ],
       'creferer' => [
