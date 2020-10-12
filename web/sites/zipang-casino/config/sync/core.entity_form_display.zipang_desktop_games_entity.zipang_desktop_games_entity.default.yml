@@ -17,6 +17,7 @@ dependencies:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_title
     - image.style.thumbnail
   module:
+    - conditional_fields
     - field_group
     - image
     - zipang_desktop_games
@@ -77,7 +78,25 @@ content:
   field_game_category:
     weight: 3
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        108df436-6a00-4f94-ab33-a471b3c43e47:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_desktop_games_entity
+          bundle: zipang_desktop_games_entity
     type: options_buttons
     region: content
   field_game_code:
@@ -99,13 +118,49 @@ content:
   field_game_filter:
     weight: 4
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        561a6214-2d21-45ed-ab65-85ffde07ff67:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_desktop_games_entity
+          bundle: zipang_desktop_games_entity
     type: options_select
     region: content
   field_game_filter_games:
     weight: 8
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        cc8c55b3-1b7b-4b45-8f19-f543b3a81eeb:
+          dependee: field_game_provider
+          settings:
+            state: '!visible'
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_desktop_games_entity
+          bundle: zipang_desktop_games_entity
     type: options_select
     region: content
   field_game_provider:
