@@ -17,6 +17,7 @@ dependencies:
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title
     - image.style.thumbnail
   module:
+    - conditional_fields
     - field_group
     - image
     - zipang_mobile_games
@@ -77,7 +78,25 @@ content:
   field_game_category:
     weight: 3
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        82e6869f-cab1-47c6-9080-59ad1b88be84:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_mobile_games_entity
+          bundle: zipang_mobile_games_entity
     type: options_buttons
     region: content
   field_game_code:
@@ -99,13 +118,49 @@ content:
   field_game_filter:
     weight: 4
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        87cdc2a0-ea95-4d8d-b8dd-c4b9c477cdb8:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_mobile_games_entity
+          bundle: zipang_mobile_games_entity
     type: options_select
     region: content
   field_game_filter_games:
     weight: 10
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        d2c45b71-93dd-461e-9a96-bdc5aba3b74c:
+          dependee: field_game_provider
+          settings:
+            state: '!visible'
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_mobile_games_entity
+          bundle: zipang_mobile_games_entity
     type: options_select
     region: content
   field_game_provider:
