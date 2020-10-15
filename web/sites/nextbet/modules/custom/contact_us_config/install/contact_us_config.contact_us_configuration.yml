@@ -1,0 +1,15 @@
+advanced__active_tab: edit-content
+page_title: 'How may we help you?'
+body_content:
+  value: "<p>Feel free to chat or call us, send an email or simply complete the form below.</p>\r\n"
+  format: basic_html
+value: null
+format: null
+success_title: 'Contact Us Success Page'
+success_message:
+  value: ''
+  format: basic_html
+form_title: 'Contact Us Form'
+email_template: ''
+from_email: admin@bayviewtechnology.com
+file_image_page_image: ''
