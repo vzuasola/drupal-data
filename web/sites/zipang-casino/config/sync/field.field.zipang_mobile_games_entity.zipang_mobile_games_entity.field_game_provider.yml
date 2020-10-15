@@ -1,0 +1,30 @@
+uuid: 82c23ec0-3b71-4302-afb6-14e5fdbc28ba
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_game_provider
+    - taxonomy.vocabulary.game_provider
+  module:
+    - zipang_mobile_games
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_provider
+field_name: field_game_provider
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Game Provider'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_provider: game_provider
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

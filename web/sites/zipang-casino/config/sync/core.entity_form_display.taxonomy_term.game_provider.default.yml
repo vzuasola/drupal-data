@@ -1,0 +1,101 @@
+uuid: 1a49f358-9cad-4197-8824-f2c475b98474
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_provider.field_game_provider_code
+    - field.field.taxonomy_term.game_provider.field_game_provider_image
+    - field.field.taxonomy_term.game_provider.field_game_provider_image_banner
+    - field.field.taxonomy_term.game_provider.field_game_provider_key
+    - field.field.taxonomy_term.game_provider.field_game_provider_short_name
+    - field.field.taxonomy_term.game_provider.field_hide_name
+    - field.field.taxonomy_term.game_provider.field_product_type
+    - image.style.thumbnail
+    - taxonomy.vocabulary.game_provider
+  module:
+    - image
+    - text
+id: taxonomy_term.game_provider.default
+targetEntityType: taxonomy_term
+bundle: game_provider
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_game_provider_code:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_provider_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_provider_image_banner:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_provider_key:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_provider_short_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hide_name:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_product_type:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true
