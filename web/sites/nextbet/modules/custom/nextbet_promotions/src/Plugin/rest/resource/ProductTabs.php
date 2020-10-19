@@ -157,7 +157,8 @@ class ProductTabs extends ResourceBase {
           $filters = [];
 
           $productId = $getEntity->field_product_id->value;
-          $products = isset($getEntity->field_products->value) ? trim(preg_replace('/\s\s+/', ' ', $getEntity->field_products->value)) : NULL;
+          $products = isset($getEntity->field_products->value) ?
+                      trim(preg_replace('/\s\s+/', ' ', $getEntity->field_products->value)) : NULL;
           $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
           $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
           $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
