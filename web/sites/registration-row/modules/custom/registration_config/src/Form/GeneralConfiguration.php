@@ -597,8 +597,17 @@ class GeneralConfiguration extends FormBase {
     $form['reg_otp']['otp_success_request_message'] = [
       '#type' => 'textfield',
       '#title' => $this->t('OTP Success Request Message'),
-      '#description' => $this->t('Message to display after a successful OTP request'),
+      '#description' => $this->t('Message to display after a successful OTP request. ' .
+        'Use the :mobile token and the script will replace it with the player mobile.'),
       '#default_value' => $this->get('otp_success_request_message') ?? 'OTP sent to your mobile number :mobile',
+    ];
+    $form['reg_otp']['otp_error_code_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration and OTP error codes to status messages mapping'),
+      '#description' => $this->t('Mapping of Registration RoW and OTP error codes ' .
+        'to its status message e.g. "LimitReached|Daily OTP request limit reached."'),
+      '#default_value' => $this->get('otp_error_code_mapping'),
+      '#required' => TRUE,
     ];
     $form['reg_otp']['otp_countdown_timer'] = [
       '#type' => 'number',
