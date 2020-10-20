@@ -44,7 +44,7 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
@@ -604,7 +604,7 @@ display:
             description: ''
             use_operator: false
             operator: field_product_category_target_id_op
-            identifier: field_product_category_target_id
+            identifier: filter_product_category_id
             required: false
             remember: false
             multiple: false
@@ -867,6 +867,8 @@ display:
         filters: false
         filter_groups: false
         arguments: false
+        query: false
+        cache: false
       filter_groups:
         operator: AND
         groups:
@@ -915,6 +917,17 @@ display:
           break_phrase: false
           not: false
           plugin_id: numeric
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
