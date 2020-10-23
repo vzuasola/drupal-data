@@ -125,7 +125,7 @@ class GamesConfigurationForm extends FormBase {
     $form['category_group']['special_categories']['home_categories_text'] = array(
       '#type' => 'textfield',
       '#title' => t('Home Categories Text'),
-      '#description' => t('The text to display for the home category.'),
+      '#description' => t('The text to display for the home category. (deprecated)'),
       '#default_value' => $this->get('home_categories_text'),
       '#required' => TRUE,
       '#translatable' => true,
@@ -146,12 +146,12 @@ class GamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => true,
     );
-    $form['category_group']['special_categories']['allgames_categories_text'] = array(
+    $form['category_group']['special_categories']['allgames_category_override'] = array(
       '#type' => 'textfield',
-      '#title' => t('All Games Categories Text'),
-      '#description' => t('The text to display for the all games category. <i>Leave blank to not show.</i>'),
-      '#default_value' => $this->get('allgames_categories_text'),
-      '#translatable' => true,
+      '#title' => t('All Games Categories Override'),
+      '#description' => t('Category ID for the all games override.<br/>This will automatically add an alphabetical list of all the games'),
+      '#default_value' => $this->get('allgames_category_override'),
+      '#required' => true,
     );
   }
 

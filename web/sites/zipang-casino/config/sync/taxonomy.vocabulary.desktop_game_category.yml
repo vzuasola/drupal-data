@@ -7,5 +7,5 @@ _core:
 name: 'Desktop Game Category'
 vid: desktop_game_category
 description: 'Desktop Game Category'
-hierarchy: 0
+hierarchy: 1
 weight: 0

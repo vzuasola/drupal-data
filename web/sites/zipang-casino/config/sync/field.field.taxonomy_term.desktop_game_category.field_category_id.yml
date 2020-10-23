@@ -14,7 +14,7 @@ bundle: desktop_game_category
 label: 'Category ID'
 description: 'Example: category-id'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
