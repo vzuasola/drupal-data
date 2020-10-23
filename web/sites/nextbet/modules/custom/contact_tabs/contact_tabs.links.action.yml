@@ -1,0 +1,5 @@
+entity.contact_tabs_entity.add_form:
+  route_name: entity.contact_tabs_entity.add_form
+  title: 'Add Contact Tabs entity'
+  appears_on:
+    - entity.contact_tabs_entity.collection

@@ -1,0 +1,7 @@
+contact_tabs.admin_settings:
+  path: 'admin/config/webcomposer/contact_tabs'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Contact Tabs'
+  requirements:
+    _permission: 'administer site configuration'

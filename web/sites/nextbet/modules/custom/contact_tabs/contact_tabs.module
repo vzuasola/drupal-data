@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+ /**
+  * Form alter for contact_tabs section.
+ */
+function contact_tabs_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $forms = [
+  'contact_tabs_entity_add_form',
+  'contact_tabs_entity_edit_form'
+  ];
+  if (in_array($form_id, $forms)) {
+     $form['#validate'][] = 'contact_tabs_validate';
+ }
+}

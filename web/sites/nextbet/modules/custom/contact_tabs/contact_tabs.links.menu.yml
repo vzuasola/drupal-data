@@ -1,0 +1,18 @@
+contact_tabs.list:
+  title: 'Contact Tabs Configuration'
+  description: 'List Contact Tabs entities'
+  parent: system.admin_config
+  route_name: contact_tabs.admin_settings
+
+# Contact Tabs entity menu items definition
+entity.contact_tabs_entity.collection:
+  title: 'Contact Tabs List'
+  route_name: entity.contact_tabs_entity.collection
+  description: 'List Contact Tabs entity entities'
+  parent: contact_tabs.list
+
+contact_tabs_entity.admin.structure.settings:
+  title: 'Contact Tabs Settings'
+  description: 'Configure Contact Tabs entity entities'
+  route_name: contact_tabs_entity.settings
+  parent: contact_tabs.list

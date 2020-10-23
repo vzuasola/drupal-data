@@ -20,6 +20,8 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_tabs: 0
+  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
@@ -115,6 +117,7 @@ module:
   webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
+  webcomposer_settings: 0
   webcomposer_site_maintenance: 0
   webcomposer_sitemap: 0
   webcomposer_slider_v2: 0
