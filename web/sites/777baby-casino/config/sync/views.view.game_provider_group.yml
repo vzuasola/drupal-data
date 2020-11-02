@@ -167,10 +167,10 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
-        status:
-          id: status
-          table: taxonomy_index
-          field: status
+        content_translation_status:
+          id: content_translation_status
+          table: taxonomy_term_field_data
+          field: content_translation_status
           relationship: none
           group_type: group
           admin_label: ''
@@ -202,6 +202,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: content_translation_status
           plugin_id: boolean
       sorts:
         weight:
