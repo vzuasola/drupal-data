@@ -6,23 +6,6 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webcomposer_config_schema\Annotation\WebcomposerConfigPlugin;
 
-/**
- * My module form plugin
- *
- * @WebcomposerConfigPlugin(
- *   id = "webcomposer_domains_configuration_v2_export",
- *   route = {
- *     "title" = "Domains Export",
- *     "path" = "/admin/config/webcomposer/config/domains-export",
- *   },
- *   menu = {
- *     "title" = "Domains Export",
- *     "description" = "Provides domain export configuration",
- *     "parent" = "webcomposer_domains_configuration_v2.list",
- *     "weight" = 2
- *   },
- * )
- */
 class ExportForm extends FormBase {
   const FORM_ID = 'export_domains_form';
   protected static $instanceId;
