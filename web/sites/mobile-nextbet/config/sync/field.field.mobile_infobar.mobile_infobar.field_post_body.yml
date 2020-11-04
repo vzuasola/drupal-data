@@ -1,0 +1,22 @@
+uuid: a18703ed-62d8-48b3-b5d0-481656c7c8bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_infobar.field_post_body
+  module:
+    - mobile_infobar
+    - text
+id: mobile_infobar.mobile_infobar.field_post_body
+field_name: field_post_body
+entity_type: mobile_infobar
+bundle: mobile_infobar
+label: 'Body on Post Login'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

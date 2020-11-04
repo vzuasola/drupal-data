@@ -1,0 +1,21 @@
+uuid: dc300cb5-bfab-43fc-91ef-c091ecb49e34
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_infobar
+id: mobile_infobar.field_title
+field_name: field_title
+entity_type: mobile_infobar
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
