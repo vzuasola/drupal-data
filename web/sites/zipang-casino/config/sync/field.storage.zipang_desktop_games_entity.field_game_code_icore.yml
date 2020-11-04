@@ -1,0 +1,21 @@
+uuid: 036117fc-4eda-4ce6-aa36-8aa49ac9de8d
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_desktop_games
+id: zipang_desktop_games_entity.field_game_code_icore
+field_name: field_game_code_icore
+entity_type: zipang_desktop_games_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

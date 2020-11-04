@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.product_promotions.field_enable_disable
     - field.field.taxonomy_term.product_promotions.field_product_id
     - field.field.taxonomy_term.product_promotions.field_product_tag
+    - field.field.taxonomy_term.product_promotions.field_products
     - field.field.taxonomy_term.product_promotions.field_target
     - field.field.taxonomy_term.product_promotions.field_this_product_kebab
     - taxonomy.vocabulary.product_promotions
@@ -57,6 +58,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_products:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_target:
     weight: 6

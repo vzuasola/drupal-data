@@ -59,6 +59,32 @@ class ArcadeConfigurationForm extends FormBase {
       '#default_value' => $this->get('arcade_category_switch'),
       '#required' => FALSE,
     );
+
+    $form['category_group']['special_categories'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Special Categories'),
+    );
+    $form['category_group']['special_categories']['allgames_category_override'] = array(
+      '#type' => 'textfield',
+      '#title' => t('All Games Categories Override'),
+      '#description' => t('Category ID for the all games override.<br/>This will automatically add an alphabetical list of all the games'),
+      '#default_value' => $this->get('allgames_category_override'),
+      '#required' => true,
+    );
+    $form['category_group']['special_categories']['recent_games_category_override'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Recent Games Categories Override'),
+      '#description' => t('Category ID for the recent games override.<br/>This will automatically add the recent games data'),
+      '#default_value' => $this->get('recent_games_category_override'),
+      '#required' => true,
+    );
+    $form['category_group']['special_categories']['favorites_category_override'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Favorites Categories Override'),
+      '#description' => t('Category ID for the favorite games override.<br/>This will automatically add the favorites data'),
+      '#default_value' => $this->get('favorites_category_override'),
+      '#required' => true,
+    );
   }
 
   private function arcadeHeaderSettingsOverride(&$form) {
