@@ -1,0 +1,22 @@
+add mobile info bar entities:
+  title: 'Create new Mobile info bar entities'
+
+administer mobile info bar entities:
+  title: 'Administer Mobile info bar entities'
+  description: 'Allow to access the administration form to configure Mobile info bar entities.'
+  restrict access: true
+
+delete mobile info bar entities:
+  title: 'Delete Mobile info bar entities'
+
+edit mobile info bar entities:
+  title: 'Edit Mobile info bar entities'
+
+access mobile info bar overview:
+  title: 'Access the Mobile info bar overview page'
+
+view published mobile info bar entities:
+  title: 'View published Mobile info bar entities'
+
+view unpublished mobile info bar entities:
+  title: 'View unpublished Mobile info bar entities'

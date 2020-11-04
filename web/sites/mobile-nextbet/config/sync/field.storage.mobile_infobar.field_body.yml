@@ -1,0 +1,19 @@
+uuid: ad7c0d2e-ed47-40b1-ae60-8c2826db598a
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_infobar
+    - text
+id: mobile_infobar.field_body
+field_name: field_body
+entity_type: mobile_infobar
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

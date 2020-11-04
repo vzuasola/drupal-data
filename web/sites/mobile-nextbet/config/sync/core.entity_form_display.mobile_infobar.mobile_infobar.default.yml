@@ -1,0 +1,105 @@
+uuid: 3aa9d36d-ad85-445d-8d81-f56b58cee237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_infobar.mobile_infobar.field_body
+    - field.field.mobile_infobar.mobile_infobar.field_infobar_enable
+    - field.field.mobile_infobar.mobile_infobar.field_log_in_state
+    - field.field.mobile_infobar.mobile_infobar.field_post_body
+    - field.field.mobile_infobar.mobile_infobar.field_title
+  module:
+    - conditional_fields
+    - mobile_infobar
+    - text
+id: mobile_infobar.mobile_infobar.default
+targetEntityType: mobile_infobar
+bundle: mobile_infobar
+mode: default
+content:
+  field_body:
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        ab72cd79-5a5d-4068-a1f7-ce12d7c5e37a:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_infobar
+          bundle: mobile_infobar
+    type: text_textarea_with_summary
+    region: content
+  field_infobar_enable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_log_in_state:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_post_body:
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        bff526ab-4b9e-4f0a-b5b2-70434b20de78:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_infobar
+          bundle: mobile_infobar
+    type: text_textarea_with_summary
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  translation: true
+  user_id: true
