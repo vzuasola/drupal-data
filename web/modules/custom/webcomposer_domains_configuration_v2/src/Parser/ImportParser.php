@@ -125,13 +125,13 @@ class ImportParser {
   }
 
   private function sanitizeSheetData(&$sheet) {
-      array_walk_recursive(
-        $sheet,
-        function (&$value) {
-            if (is_string($value)) {
-                $value = trim($value);
-            }
+    array_walk_recursive(
+      $sheet,
+      function (&$value) {
+        if (is_string($value)) {
+          $value = trim($value);
         }
-      );
+      }
+    );
   }
 }

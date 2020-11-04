@@ -6,8 +6,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
 
-class ExcelParser
-{
+class ExcelParser {
 
   /**
    * Main PHP excel object.
@@ -31,16 +30,14 @@ class ExcelParser
   /**
    * Constructor function Passing the excel object to the class instance.
    */
-  public function __construct()
-  {
+  public function __construct() {
     // Initialize PHP excel object.
     $this->excel = new Spreadsheet();
     // Set filename.
     $this->sheetNumber = 0;
   }
 
-  public function createSheet(array $data, $sheet_name)
-  {
+  public function createSheet(array $data, $sheet_name) {
     // Create a new worksheet.
     $this->excel->createSheet();
     // Populate sheet with data and add sheet name.
@@ -55,8 +52,7 @@ class ExcelParser
     $this->sheetNumber = $this->sheetNumber + 1;
   }
 
-  public function save($filename, $excel_version = 'Xlsx', $headers = TRUE, $output = 'php://output')
-  {
+  public function save($filename, $excel_version = 'Xlsx', $headers = TRUE, $output = 'php://output') {
     // Removes the blank worksheet set by PHP excel.
     $this->excel->removeSheetByIndex($this->sheetNumber);
     // Create writer for excel object.
@@ -71,8 +67,7 @@ class ExcelParser
     $excelWriter->save($output);
   }
 
-  private function setHeaders($filename)
-  {
+  private function setHeaders($filename) {
     header("Content-Type: application/force-download");
     header("Content-Type: application/octet-stream");
     header("Content-Type: application/download");
@@ -80,8 +75,7 @@ class ExcelParser
     header("Content-Transfer-Encoding: binary ");
   }
 
-  private function styleExcel()
-  {
+  private function styleExcel() {
     // Column and row dimension.
     $column = $this->excel->getActiveSheet()->getHighestColumn();
 

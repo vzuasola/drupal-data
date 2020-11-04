@@ -8,8 +8,7 @@ use Drupal\webcomposer_domains_configuration_v2\Storage\StorageService;
 /**
  * Class DomainExportService.
  */
-class DomainExportService
-{
+class DomainExportService {
 
   const DEFAULT_LANG = 'en';
 
@@ -26,8 +25,7 @@ class DomainExportService
   /**
    * Constructs a new DomainImportService object.
    */
-  public function __construct(ExcelParser $excelParser, StorageService $storage)
-  {
+  public function __construct(ExcelParser $excelParser, StorageService $storage) {
     $this->excelParser = $excelParser;
     $this->storage = $storage;
   }
@@ -35,8 +33,7 @@ class DomainExportService
   /**
    * executes the export process
    */
-  public function execute()
-  {
+  public function execute() {
     $tokens = $this->getTokensSheet();
     $groups = $this->getGroupSheet();
 
@@ -59,8 +56,7 @@ class DomainExportService
    *
    * @return array
    */
-  private function getTokensSheet()
-  {
+  private function getTokensSheet() {
     $tokenSheet[] = ['tokens', "Default"];
     foreach ($this->storage->getTokens() as $token => $default) {
       $tokenSheet[] = [$token, $default];
@@ -74,8 +70,7 @@ class DomainExportService
    *
    * @return array
    */
-  private function getGroupSheet()
-  {
+  private function getGroupSheet() {
     $groups = $this->storage->getGroups();
     $groupSheet = [];
     $tokens = array_keys($this->storage->getTokens());
@@ -98,10 +93,8 @@ class DomainExportService
    * @param $lang
    * @return array
    */
-  private function getDomainDetails($domain, $lang = self::DEFAULT_LANG)
-  {
+  private function getDomainDetails($domain, $lang = self::DEFAULT_LANG) {
     $domainDetails = $this->storage->getDomain($domain, $lang);
     return $domainDetails;
   }
-
 }
