@@ -1,0 +1,5 @@
+entity.mobile_infobar.add_form:
+  route_name: entity.mobile_infobar.add_form
+  title: 'Add Mobile info bar'
+  appears_on:
+    - entity.mobile_infobar.collection

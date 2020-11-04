@@ -1,0 +1,22 @@
+uuid: 333b8307-1dc4-4e43-8072-7e1d5ba2bcd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_infobar.field_body
+  module:
+    - mobile_infobar
+    - text
+id: mobile_infobar.mobile_infobar.field_body
+field_name: field_body
+entity_type: mobile_infobar
+bundle: mobile_infobar
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
