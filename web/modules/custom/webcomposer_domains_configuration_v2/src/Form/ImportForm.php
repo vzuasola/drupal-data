@@ -9,23 +9,6 @@ use Drupal\webcomposer_config_schema\Annotation\WebcomposerConfigPlugin;
 use Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService;
 use Throwable;
 
-/**
- * My module form plugin
- *
- * @WebcomposerConfigPlugin(
- *   id = "webcomposer_domains_configuration_v2_import",
- *   route = {
- *     "title" = "Domains Import",
- *     "path" = "/admin/config/webcomposer/config/domains-import",
- *   },
- *   menu = {
- *     "title" = "Domains Import",
- *     "description" = "Provides domain import configuration",
- *     "parent" = "webcomposer_domains_configuration_v2.list",
- *     "weight" = 1
- *   },
- * )
- */
 class ImportForm extends FormBase {
   const FORM_ID = 'import_domains_form';
   protected static $instanceId;

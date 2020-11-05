@@ -1,0 +1,9 @@
+administer wbc domain import v2:
+  title: 'Administer WBC Domain Import'
+  description: 'Administer WBC Domain Import Config'
+  restrict access: TRUE
+
+administer wbc domain export v2:
+  title: 'Administer WBC Domain Export'
+  description: 'Administer WBC Domain Export Config'
+  restrict access: TRUE
