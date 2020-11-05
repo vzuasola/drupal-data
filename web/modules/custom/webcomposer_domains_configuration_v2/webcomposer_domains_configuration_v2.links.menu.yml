@@ -3,3 +3,17 @@ webcomposer_domains_configuration_v2.list:
   description: 'Provides a form for domain import/export'
   parent: system.admin_config
   route_name: webcomposer_domains_configuration_v2.admin_settings
+
+webcomposer_domain_import.webcomposer_domain_import:
+  title: 'Domain Import'
+  weight: 1
+  parent: webcomposer_domains_configuration_v2.list
+  description: 'Import the domain here'
+  route_name: webcomposer_domains_configuration_v2.domains-import
+
+webcomposer_domain_import.webcomposer_domain_export:
+  title: 'Domain Export'
+  weight: 2
+  parent: webcomposer_domains_configuration_v2.list
+  description: 'Export domains here'
+  route_name: webcomposer_domains_configuration_v2.domains-export

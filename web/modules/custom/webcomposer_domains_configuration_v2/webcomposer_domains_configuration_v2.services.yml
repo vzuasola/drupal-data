@@ -1,6 +1,10 @@
 services:
-  webcomposer_domains_configuration_v2.import:
+  webcomposer_domains_configuration_v2.import_parser:
     class: Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser
+    arguments: []
+
+  webcomposer_domains_configuration_v2.excel_parser:
+    class: Drupal\webcomposer_domains_configuration_v2\Parser\ExcelParser
     arguments: []
 
   webcomposer_domains_configuration_v2.storage:
@@ -9,7 +13,11 @@ services:
 
   webcomposer_domains_configuration_v2.domain_import:
     class: Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService
-    arguments: ['@webcomposer_domains_configuration_v2.import', '@webcomposer_domains_configuration_v2.storage']
+    arguments: ['@webcomposer_domains_configuration_v2.import_parser', '@webcomposer_domains_configuration_v2.storage']
+
+  webcomposer_domains_configuration_v2.domain_export:
+    class: Drupal\webcomposer_domains_configuration_v2\Service\DomainExportService
+    arguments: ['@webcomposer_domains_configuration_v2.excel_parser', '@webcomposer_domains_configuration_v2.storage']
 
   webcomposer_domains_configuration_v2.redis:
     class: Drupal\webcomposer_domains_configuration_v2\Storage\RedisService
