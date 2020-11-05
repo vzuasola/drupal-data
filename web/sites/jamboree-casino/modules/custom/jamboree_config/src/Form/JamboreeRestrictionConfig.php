@@ -71,7 +71,7 @@ class JamboreeRestrictionConfig extends FormBase {
     $form['access_restriction']['official_domain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Official Domain'),
-      '#default_value' => $this->get('official_domain') ?? "www.jamboreecasino.com",
+      '#default_value' => $this->get('official_domain') ?? "www.casinojamboree.com",
       '#description' => $this->t('Official domain used, restricted domains will be redirected here.'),
       '#translatable' => FALSE,
       '#required' => TRUE,
