@@ -20,8 +20,6 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
-  contact_tabs: 0
-  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
@@ -82,6 +80,7 @@ module:
   scheduler: 0
   serialization: 0
   shortcut: 0
+  slider_overlay: 0
   system: 0
   taxonomy: 0
   taxonomy_unique: 0
@@ -116,6 +115,7 @@ module:
   webcomposer_registration_landing_page: 0
   webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
+  webcomposer_right_side_block: 0
   webcomposer_seo: 0
   webcomposer_settings: 0
   webcomposer_site_maintenance: 0
@@ -126,8 +126,6 @@ module:
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
   webcomposer_webform: 0
-  webcomposer_right_side_block: 0
-  webcomposer_settings: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
