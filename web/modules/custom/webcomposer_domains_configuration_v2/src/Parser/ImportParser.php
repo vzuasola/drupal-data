@@ -77,8 +77,14 @@ class ImportParser {
         $row = array_combine($headings, $row);
       }
     );
+    $this->tokens = array_column($sheetData, 'Default', self::TOKEN_COLUMN);
+    array_walk($this->tokens, function (&$token) {
+      if (is_bool($token) && $token) {
+        $token = "";
+      }
+    });
 
-    return $this->tokens = array_column($sheetData, 'Default', self::TOKEN_COLUMN);
+    return $this->tokens;
   }
 
   private function parseDomains($sheetData) {

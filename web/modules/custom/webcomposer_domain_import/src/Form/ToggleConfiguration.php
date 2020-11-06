@@ -42,6 +42,12 @@ class ToggleConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('optimize_import'),
     ];
 
+    $form['use_v2_domain'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use domain version 2'),
+      '#default_value' => $config->get('use_v2_domain'),
+    ];
+
     $domain_batch = $config->get('domains_batch');
     $default_batch = isset($domain_batch)?$domain_batch:4;
     $form['domains_batch'] = [
@@ -63,6 +69,7 @@ class ToggleConfiguration extends ConfigFormBase {
       'domain_toggle',
       'optimize_import',
       'domains_batch',
+      'use_v2_domain',
     ];
 
     foreach ($keys as $key) {
