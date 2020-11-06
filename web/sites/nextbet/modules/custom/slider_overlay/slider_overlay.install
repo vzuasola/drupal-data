@@ -1,0 +1,30 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function slider_overlay_uninstall() {
+	$keys = [
+		'core.entity_form_display.paragraph.slider_overlay_cmi.default',
+		'core.entity_form_display.slider_overlay_entity.slider_overlay_entity.default',
+		'core.entity_view_display.paragraph.slider_overlay_cmi.default',
+		'core.entity_view_display.slider_overlay_entity.slider_overlay_entity.default',
+		'field.field.paragraph.slider_overlay_cmi.field_slideroverlay_blurb',
+		'field.field.paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable',
+		'field.field.paragraph.slider_overlay_cmi.field_slideroverlay_image',
+		'field.field.slider_overlay_entity.slider_overlay_entity.field_slider_overlay_cmi',
+		'field.storage.paragraph.field_slideroverlay_blurb',
+		'field.storage.paragraph.field_slideroverlay_cmi_enable',
+		'field.storage.paragraph.field_slideroverlay_image',
+		'field.storage.slider_overlay_entity.field_slider_overlay_cmi',
+		'language.content_settings.paragraph.slider_overlay_cmi',
+		'language.content_settings.slider_overlay_entity.slider_overlay_entity',
+		'paragraphs.paragraphs_type.slider_overlay_cmi',
+		'views.view.slider_overlay_rest_cmi'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
