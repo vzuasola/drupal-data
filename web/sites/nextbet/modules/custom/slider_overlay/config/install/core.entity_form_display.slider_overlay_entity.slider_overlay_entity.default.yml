@@ -1,0 +1,35 @@
+uuid: 7028c0df-4953-47a8-89d9-684b57a17817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.slider_overlay_entity.slider_overlay_entity.field_slider_overlay_cmi
+  module:
+    - paragraphs
+    - slider_overlay
+id: slider_overlay_entity.slider_overlay_entity.default
+targetEntityType: slider_overlay_entity
+bundle: slider_overlay_entity
+mode: default
+content:
+  field_slider_overlay_cmi:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true
