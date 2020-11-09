@@ -72,15 +72,20 @@ class DomainExportService {
    */
   private function getGroupSheet() {
     $groups = $this->storage->getGroups();
+    ksort($groups);
     $groupSheet = [];
-    $tokens = array_keys($this->storage->getTokens());
 
     array_unshift($tokens, "domains");
     foreach ($groups as $group => $domains) {
       $groupName = str_replace('groups:', '', $group);
-      $groupSheet[$groupName][] = $tokens; // Set the header
       foreach ($domains as $domain) {
-        $domainRow = array_merge([$domain], array_values($this->getDomainDetails($domain)));
+        $domainDetails = $this->getDomainDetails($domain);
+        if (count($groupSheet[$groupName]) === 0) {
+          $tokens = array_keys($domainDetails);
+          array_unshift($tokens, "domains");
+          $groupSheet[$groupName][] = $tokens; // Set the header
+        }
+        $domainRow = array_merge([$domain], array_values($domainDetails));
         $groupSheet[$groupName][] = $domainRow;
       }
     }
