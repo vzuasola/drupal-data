@@ -10,6 +10,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_enable_for_agent_players
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
@@ -95,6 +96,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_enable_for_agent_players:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_game_launching:
     weight: 16
