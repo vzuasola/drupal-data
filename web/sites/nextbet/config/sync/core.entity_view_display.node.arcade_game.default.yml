@@ -14,11 +14,13 @@ dependencies:
     - field.field.node.arcade_game.field_game_ribbon
     - field.field.node.arcade_game.field_game_subprovider
     - field.field.node.arcade_game.field_game_thumbnail
+    - field.field.node.arcade_game.field_right_side_block_state
     - field.field.node.arcade_game.field_search_keywords
     - node.type.arcade_game
   module:
     - image
     - metatag
+    - options
     - text
     - user
 id: node.arcade_game.default
@@ -112,6 +114,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_right_side_block_state:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_search_keywords:
     weight: 11
