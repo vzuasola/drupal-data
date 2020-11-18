@@ -1,0 +1,18 @@
+uuid: 42925074-70cf-475a-b2c0-a16603971893
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_infobar
+id: mobile_infobar.field_infobar_enable
+field_name: field_infobar_enable
+entity_type: mobile_infobar
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

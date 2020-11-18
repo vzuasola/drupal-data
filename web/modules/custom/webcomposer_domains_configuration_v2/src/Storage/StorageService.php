@@ -64,4 +64,8 @@ class StorageService {
     return $this->storage->getTokens();
   }
 
+  public function getGroups() {
+    return $this->storage->getGroups();
+  }
+
 }

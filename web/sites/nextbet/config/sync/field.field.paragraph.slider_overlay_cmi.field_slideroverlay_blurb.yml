@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
     - text
+_core:
+  default_config_hash: lKsSn6IinP38Je3Chwhi8q50_dcAq3dL2Pfbx_RQpvI
 id: paragraph.slider_overlay_cmi.field_slideroverlay_blurb
 field_name: field_slideroverlay_blurb
 entity_type: paragraph

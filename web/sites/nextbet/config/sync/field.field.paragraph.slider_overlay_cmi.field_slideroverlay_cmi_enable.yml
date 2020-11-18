@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_slideroverlay_cmi_enable
     - paragraphs.paragraphs_type.slider_overlay_cmi
+_core:
+  default_config_hash: mkH22skJ5pEDufIueMAy48z3BVunxtZAVPUlqlHkBJw
 id: paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable
 field_name: field_slideroverlay_cmi_enable
 entity_type: paragraph

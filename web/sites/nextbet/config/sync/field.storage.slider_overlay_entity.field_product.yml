@@ -1,0 +1,20 @@
+uuid: 3b49897b-2dd0-4810-96f5-a5c630adca51
+langcode: en
+status: true
+dependencies:
+  module:
+    - slider_overlay
+    - taxonomy
+id: slider_overlay_entity.field_product
+field_name: field_product
+entity_type: slider_overlay_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
