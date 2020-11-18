@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.games_live_dealer.field_maintenance_start
     - field.field.node.games_live_dealer.field_popup_window_name
     - field.field.node.games_live_dealer.field_popup_window_size
+    - field.field.node.games_live_dealer.field_right_side_block_state
     - image.style.thumbnail
     - node.type.games_live_dealer
   module:
@@ -123,6 +124,19 @@ third_party_settings:
         description: 'Customize popup behavior'
         required_fields: true
       label: 'Popup Settings'
+    group_right_side_block_state:
+      children:
+        - field_right_side_block_state
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Promotion Thumbnail (Right-side Block)'
 id: node.games_live_dealer.default
 targetEntityType: node
 bundle: games_live_dealer
@@ -237,7 +251,7 @@ content:
     type: options_select
     region: content
   field_game_ribbon:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -304,6 +318,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_right_side_block_state:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   langcode:
     type: language_select
