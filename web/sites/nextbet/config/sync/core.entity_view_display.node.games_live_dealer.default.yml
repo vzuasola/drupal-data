@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.games_live_dealer.field_maintenance_start
     - field.field.node.games_live_dealer.field_popup_window_name
     - field.field.node.games_live_dealer.field_popup_window_size
+    - field.field.node.games_live_dealer.field_right_side_block_state
     - node.type.games_live_dealer
   module:
     - datetime
@@ -193,6 +194,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_right_side_block_state:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 100

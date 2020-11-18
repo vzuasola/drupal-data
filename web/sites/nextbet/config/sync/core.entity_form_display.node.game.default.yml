@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.game.field_maintenance_end
     - field.field.node.game.field_maintenance_message
     - field.field.node.game.field_maintenance_start
+    - field.field.node.game.field_right_side_block_state
     - image.style.thumbnail
     - node.type.game
   module:
@@ -40,7 +41,7 @@ third_party_settings:
         - field_game_info_toggle
         - field_game_info
       parent_name: ''
-      weight: 5
+      weight: 7
       format_type: tab
       format_settings:
         id: ''
@@ -57,7 +58,7 @@ third_party_settings:
         - field_game_subprovider
         - field_game_integration
       parent_name: ''
-      weight: 6
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -71,7 +72,7 @@ third_party_settings:
         - field_game_filters
         - field_game_keywords
       parent_name: ''
-      weight: 7
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -85,7 +86,7 @@ third_party_settings:
         - field_all_category_ribbon_config
         - field_game_ribbon
       parent_name: ''
-      weight: 8
+      weight: 10
       format_type: tab
       format_settings:
         id: ''
@@ -100,7 +101,7 @@ third_party_settings:
         - field_maintenance_start
         - field_maintenance_end
       parent_name: ''
-      weight: 16
+      weight: 18
       format_type: tab
       format_settings:
         id: ''
@@ -109,6 +110,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Maintenance
+    group_right_side_block_state:
+      children:
+        - field_right_side_block_state
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: 'Promotion Thumbnail (Right-side Block)'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Promotion Thumbnail (Right-side Block)'
 id: node.game.default
 targetEntityType: node
 bundle: game
@@ -121,7 +136,7 @@ content:
     type: options_select
     region: content
   field_game_categories:
-    weight: 4
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -172,7 +187,7 @@ content:
     type: text_textfield
     region: content
   field_game_meta_tags:
-    weight: 9
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -185,7 +200,7 @@ content:
     type: boolean_checkbox
     region: content
   field_game_preview_mode:
-    weight: 15
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
@@ -245,6 +260,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_right_side_block_state:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   langcode:
     type: language_select
     weight: 1
@@ -254,18 +275,18 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -273,7 +294,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
@@ -286,7 +307,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

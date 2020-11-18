@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.arcade_game
+    - node.type.game
+    - node.type.games_live_dealer
     - node.type.promotion
   module:
     - node
@@ -148,6 +151,9 @@ display:
           admin_label: ''
           operator: in
           value:
+            arcade_game: arcade_game
+            game: game
+            games_live_dealer: games_live_dealer
             promotion: promotion
           group: 1
           exposed: false
