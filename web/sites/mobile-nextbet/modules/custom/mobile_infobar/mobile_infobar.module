@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_infobar.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\TranslatableInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_infobar_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+      // Main module help for the mobile_infobar module.
+    case 'help.page.mobile_infobar':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mobile Mobile Info Bar configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Form alter for webcomposer_ section.
+ */
+function mobile_infobar_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  $forms = [
+    'mobile_infobar_add_form',
+    'mobile_infobar_edit_form',
+  ];
+  if (in_array($form_id, $forms)) {
+    $form['#validate'][] = 'mobile_infobar_validate';
+  }
+}

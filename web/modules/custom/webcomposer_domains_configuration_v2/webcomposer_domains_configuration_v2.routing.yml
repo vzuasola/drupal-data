@@ -6,6 +6,26 @@ webcomposer_domains_configuration_v2.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
+webcomposer_domains_configuration_v2.domains-import:
+  path: 'admin/config/webcomposer/config/domains-import'
+  defaults:
+    _form: '\Drupal\webcomposer_domains_configuration_v2\Form\ImportForm'
+    _title: 'Domain Import'
+  requirements:
+    _permission: 'administer wbc domain import v2'
+  options:
+    _admin_route: TRUE
+
+webcomposer_domains_configuration_v2.domains-export:
+  path: 'admin/config/webcomposer/config/domains-export'
+  defaults:
+    _form: '\Drupal\webcomposer_domains_configuration_v2\Form\ExportForm'
+    _title: 'Domain Export'
+  requirements:
+    _permission: 'administer wbc domain export v2'
+  options:
+    _admin_route: TRUE
+
 webcomposer_domains_configuration_v2.api_controller_getDomain:
   path: '/api/domain-v2/{domain}'
   defaults:

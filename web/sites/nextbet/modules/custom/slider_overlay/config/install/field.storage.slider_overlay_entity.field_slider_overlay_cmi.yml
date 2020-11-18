@@ -1,0 +1,21 @@
+uuid: 78b2b418-e8f9-4333-a190-f1fa4ab5c50f
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - slider_overlay
+id: slider_overlay_entity.field_slider_overlay_cmi
+field_name: field_slider_overlay_cmi
+entity_type: slider_overlay_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

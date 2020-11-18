@@ -1,0 +1,23 @@
+uuid: 2593597d-0780-47c3-875d-5198bf5f65c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_infobar.field_log_in_state
+  module:
+    - mobile_infobar
+    - options
+id: mobile_infobar.mobile_infobar.field_log_in_state
+field_name: field_log_in_state
+entity_type: mobile_infobar
+bundle: mobile_infobar
+label: 'Log-in State'
+description: 'Control where this Info Bar will show up.'
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
