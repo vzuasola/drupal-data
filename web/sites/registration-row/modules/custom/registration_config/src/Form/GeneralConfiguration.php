@@ -562,13 +562,12 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Enable Registration OTP'),
       '#description' => $this->t('Check to enable registration otp'),
       '#default_value' => $this->get('otp_enable'),
-      '#translatable' => TRUE,
     ];
-    $form['reg_otp']['language_to_otp_mapping'] = [
+    $form['reg_otp']['language_otp_mapping'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('OTP-Enabled Forms'),
+      '#title' => $this->t('OTP Enabled Forms'),
       '#description' => $this->t('Registration and OTP language code mapping'),
-      '#default_value' => $this->get('language_to_otp_mapping'),
+      '#default_value' => $this->get('language_otp_mapping'),
     ];
     $form['reg_otp']['registration_v3_endpoint'] = [
       '#type' => 'textfield',
