@@ -1,0 +1,19 @@
+uuid: 85e38a2b-6f8c-401f-acd8-0e5ed0c7d7e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_post_login_banner_widget
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_post_login_banner_widget
+field_name: field_post_login_banner_widget
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Post-Login Banner Widget'
+description: "<br>\r\n<strong>placeholders:</strong> <br>\r\n<small>\r\n<i>{bannerLanguage} - </i> Placeholder for banner language<br>\r\n<i>{bannerCurrency} - </i> Placeholder for banner currency<br><br>\r\n\r\n<i>example: http://domain.com?lang={bannerLanguage}&currency={bannerCurrency}</i>\r\n</small>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

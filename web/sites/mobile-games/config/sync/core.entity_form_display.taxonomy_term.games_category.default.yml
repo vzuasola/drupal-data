@@ -7,6 +7,8 @@ dependencies:
     - field.field.taxonomy_term.games_category.field_games_category_logo
     - field.field.taxonomy_term.games_category.field_games_disable
     - field.field.taxonomy_term.games_category.field_isordinarycategory
+    - field.field.taxonomy_term.games_category.field_post_login_banner_widget
+    - field.field.taxonomy_term.games_category.field_pre_login_banner_widget
     - field.field.taxonomy_term.games_category.field_publish_date
     - field.field.taxonomy_term.games_category.field_unpublish_date
     - image.style.thumbnail
@@ -22,7 +24,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: details
       format_settings:
         id: ''
@@ -30,6 +32,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Scheduler Settings'
+    group_banner_widget:
+      children:
+        - field_pre_login_banner_widget
+        - field_post_login_banner_widget
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: banner-widget
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Banner Widget'
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
 bundle: games_category
@@ -44,7 +59,7 @@ content:
     type: string_textfield
     region: content
   field_games_category_logo:
-    weight: 9
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -64,6 +79,22 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_post_login_banner_widget:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pre_login_banner_widget:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_publish_date:
     weight: 7
