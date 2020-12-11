@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.game_category_2_0.field_hide_name
+    - field.field.taxonomy_term.game_category_2_0.field_post_login_banner_widget
+    - field.field.taxonomy_term.game_category_2_0.field_pre_login_banner_widget
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_alias
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
@@ -46,6 +48,19 @@ third_party_settings:
         description: ''
         required_fields: false
       label: Icon
+    group_banner_widget:
+      children:
+        - field_pre_login_banner_widget
+        - field_post_login_banner_widget
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Banner Widget'
 id: taxonomy_term.game_category_2_0.default
 targetEntityType: taxonomy_term
 bundle: game_category_2_0
@@ -57,6 +72,22 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_post_login_banner_widget:
+    weight: 11
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pre_login_banner_widget:
+    weight: 10
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_v2_game_category_alias:
     weight: 2
