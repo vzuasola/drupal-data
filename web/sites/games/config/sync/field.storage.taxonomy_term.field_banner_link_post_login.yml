@@ -1,0 +1,21 @@
+uuid: 782715a6-1ee9-4039-a9ce-b8a693c0c7ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_banner_link_post_login
+field_name: field_banner_link_post_login
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
