@@ -1,0 +1,6 @@
+#dafasports call us config
+enabled: false
+base_url: '/linkto:avaya'
+button_text: 'CALL US'
+init_icon: ''
+extended_icon: ''
