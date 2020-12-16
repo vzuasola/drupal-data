@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.arcade_game.field_game_ribbon
     - field.field.node.arcade_game.field_game_subprovider
     - field.field.node.arcade_game.field_game_thumbnail
+    - field.field.node.arcade_game.field_right_side_block_state
     - field.field.node.arcade_game.field_search_keywords
     - image.style.thumbnail
     - node.type.arcade_game
@@ -46,7 +47,7 @@ third_party_settings:
         - field_game_subprovider
         - field_game_integration
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: details
       format_settings:
         id: ''
@@ -54,6 +55,20 @@ third_party_settings:
         open: true
         required_fields: false
       label: 'Game Launching'
+    group_right_side_block_state:
+      children:
+        - field_right_side_block_state
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        label: 'Promotion Thumbnail (Right-side Block)'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Promotion Thumbnail (Right-side Block)'
 id: node.arcade_game.default
 targetEntityType: node
 bundle: arcade_game
@@ -90,13 +105,13 @@ content:
     type: string_textarea
     region: content
   field_game_meta_tags:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_game_preview_mode:
-    weight: 11
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
@@ -128,8 +143,14 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_right_side_block_state:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_search_keywords:
-    weight: 12
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -164,7 +185,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:

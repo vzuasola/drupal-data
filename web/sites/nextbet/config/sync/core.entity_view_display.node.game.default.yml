@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.game.field_maintenance_end
     - field.field.node.game.field_maintenance_message
     - field.field.node.game.field_maintenance_start
+    - field.field.node.game.field_right_side_block_state
     - node.type.game
   module:
     - datetime
@@ -197,6 +198,13 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_right_side_block_state:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 100
