@@ -1,0 +1,30 @@
+uuid: f19fb492-99cc-4373-9f99-792ac12fa8f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_link_target_pre_login
+field_name: field_link_target_pre_login
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
