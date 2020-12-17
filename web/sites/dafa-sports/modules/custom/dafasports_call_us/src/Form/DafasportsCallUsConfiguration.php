@@ -74,7 +74,9 @@ class DafasportsCallUsConfiguration extends FormBase {
       '#type' => 'managed_file',
       '#description' => $this->t("Icon for minimized call us button"),
       '#default_value' => $this->get('init_icon'),
-      '#upload_location' => 'public://images/call-us/',
+      '#upload_location' => 'public://images/call-us/','#upload_validators' => array(
+        'file_validate_extensions' => array('gif png jpg jpeg'),
+      ),
     ];
 
     $form['call_us_configation']['extended_icon'] = [
@@ -82,7 +84,9 @@ class DafasportsCallUsConfiguration extends FormBase {
       '#type' => 'managed_file',
       '#description' => $this->t("Icon for extended call us button"),
       '#default_value' => $this->get('extended_icon'),
-      '#upload_location' => 'public://images/call-us/',
+      '#upload_location' => 'public://images/call-us/','#upload_validators' => array(
+        'file_validate_extensions' => array('gif png jpg jpeg'),
+      ),
     ];
 
     return $form;
