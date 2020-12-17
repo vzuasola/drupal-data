@@ -2,5 +2,5 @@
 enabled: false
 base_url: '/linkto:avaya'
 button_text: 'CALL US'
-init_icon: ''
-extended_icon: ''
+init_icon: null
+expanded_icon: null

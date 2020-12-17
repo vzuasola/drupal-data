@@ -60,6 +60,7 @@ class DafasportsCallUsConfiguration extends FormBase {
       '#default_value' => $this->get('base_url'),
       '#description' => $this->t('Link for Dafa Sports Call Us.'),
       '#translatable' => TRUE,
+      '#required' => true,
     ];
 
     $form['call_us_configation']['button_text'] = [
@@ -68,26 +69,31 @@ class DafasportsCallUsConfiguration extends FormBase {
       '#default_value' => $this->get('button_text'),
       '#description' => $this->t('Text for Dafa Sports Call Us Button.'),
       '#translatable' => TRUE,
+      '#required' => true,
     ];
 
-    $form['call_us_configation']['init_icon'] = [
-      '#title' => $this->t('Initial call us icon'),
+    $form['call_us_configation']['file_image_init_icon'] = [
       '#type' => 'managed_file',
-      '#description' => $this->t("Icon for minimized call us button"),
-      '#default_value' => $this->get('init_icon'),
-      '#upload_location' => 'public://images/call-us/','#upload_validators' => array(
-        'file_validate_extensions' => array('gif png jpg jpeg'),
-      ),
+      '#title' => $this->t('Initial Call Us icon'),
+      '#default_value' => $this->get('file_image_init_icon'),
+      '#upload_location' => 'public://',
+      '#required' => true,
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
     ];
 
-    $form['call_us_configation']['expanded_icon'] = [
-      '#title' => $this->t('Expanded call us icon'),
+    $form['call_us_configation']['file_image_expanded_icon'] = [
       '#type' => 'managed_file',
-      '#description' => $this->t("Icon for expanded call us button"),
-      '#default_value' => $this->get('expanded_icon'),
-      '#upload_location' => 'public://images/call-us/','#upload_validators' => array(
-        'file_validate_extensions' => array('gif png jpg jpeg'),
-      ),
+      '#title' => $this->t('Expanded Call Us icon'),
+      '#default_value' => $this->get('file_image_expanded_icon'),
+      '#upload_location' => 'public://',
+      '#required' => true,
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
     ];
 
     return $form;
