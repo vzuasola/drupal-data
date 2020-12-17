@@ -47,8 +47,9 @@ class DafasportsCallUsConfiguration extends FormBase {
 
     $form['call_us_configation']['enabled'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Show/hide Dafa Sports Call Us button'),
+      '#title' => $this->t('Eanble Dafa Sports Call Us button'),
       '#default_value' => $this->get('enabled'),
+      '#description' => $this->t('Show/hide Dafa Sports Call Us button'),
       '#translatable' => TRUE,
     ];
 

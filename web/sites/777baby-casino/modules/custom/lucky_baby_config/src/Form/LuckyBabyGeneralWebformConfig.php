@@ -56,8 +56,7 @@ class LuckyBabyGeneralWebformConfig extends FormBase {
     $form['confirmation_message']['confirmation_enable'] = [
         '#type' => 'checkbox',
         '#title' => 'Enable Confirmation Message',
-        '#description' => $this->t('Show/hide confirmation message lightbox before submission of webform. 
-                                    <br/><strong>Note: This will apply to all webforms </strong>'),
+        '#description' => $this->t('Show/hide confirmation message lightbox before submission of webform. <br/><strong>Note: This will apply to all webforms </strong>'),
         '#default_value' => $this->get('confirmation_enable'),
         '#translatable' => TRUE,
       ];
