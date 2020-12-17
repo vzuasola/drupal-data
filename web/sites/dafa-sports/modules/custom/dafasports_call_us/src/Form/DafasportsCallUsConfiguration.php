@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Description form plugin.
  *
  * @WebcomposerConfigPlugin(
- *   id = "dafasports_call_us_configuration",
+ *   id = "dafasports_call_us",
  *   route = {
  *     "title" = "Dafa Sports Call Us Configuration",
  *     "path" = "/admin/config/webcomposer/config/callus",
@@ -47,7 +47,7 @@ class DafasportsCallUsConfiguration extends FormBase {
 
     $form['call_us_configation']['enabled'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Eanble Dafa Sports Call Us button'),
+      '#title' => $this->t('Enable Dafa Sports Call Us button'),
       '#default_value' => $this->get('enabled'),
       '#description' => $this->t('Show/hide Dafa Sports Call Us button'),
       '#translatable' => TRUE,
@@ -80,11 +80,11 @@ class DafasportsCallUsConfiguration extends FormBase {
       ),
     ];
 
-    $form['call_us_configation']['extended_icon'] = [
-      '#title' => $this->t('Extended call us icon'),
+    $form['call_us_configation']['expanded_icon'] = [
+      '#title' => $this->t('Expanded call us icon'),
       '#type' => 'managed_file',
-      '#description' => $this->t("Icon for extended call us button"),
-      '#default_value' => $this->get('extended_icon'),
+      '#description' => $this->t("Icon for expanded call us button"),
+      '#default_value' => $this->get('expanded_icon'),
       '#upload_location' => 'public://images/call-us/','#upload_validators' => array(
         'file_validate_extensions' => array('gif png jpg jpeg'),
       ),
