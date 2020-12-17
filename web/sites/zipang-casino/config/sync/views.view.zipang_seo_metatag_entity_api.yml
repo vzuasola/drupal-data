@@ -188,19 +188,7 @@ display:
           entity_type: zipang_seo_config_entity
           entity_field: langcode
           plugin_id: language
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
+      sorts: {  }
       header: {  }
       footer: {  }
       empty: {  }
@@ -342,6 +330,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        pager: false
       filters:
         langcode:
           id: langcode
@@ -386,6 +375,48 @@ display:
           entity_type: zipang_seo_config_entity
           entity_field: langcode
           plugin_id: language
+        name:
+          id: name
+          table: zipang_seo_config_entity_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: Name
+            description: ''
+            use_operator: false
+            operator: name_op
+            identifier: name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: zipang_seo_config_entity
+          entity_field: name
+          plugin_id: string
       filter_groups:
         operator: AND
         groups:
@@ -403,12 +434,34 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      pager:
+        type: full
+        options:
+          items_per_page: 50
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
       tags:
         - 'config:field.storage.zipang_seo_config_entity.field_name'
   rest_export_1:
@@ -420,9 +473,26 @@ display:
       display_extenders: {  }
       path: api/japan_metatag_entity
       pager:
-        type: none
+        type: full
         options:
+          items_per_page: 10
           offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       style:
         type: node_list_serializer
         options:
@@ -439,4 +509,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url.query_args
       tags: {  }
