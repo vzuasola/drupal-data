@@ -46,12 +46,12 @@ class MyAccountProfileForm extends FormBase {
             '#group' => 'profile',
         ];
 
-        $form['header_configuration']['mp_page_title'] = [
+        $form['header_configuration']['page_title'] = [
             '#type' => 'textfield',
             '#title' => t('Page title'),
             '#required' => TRUE,
-            '#description' => $this->t('Page title shown on the browser tab.'),
-            '#default_value' => $this->get('mp_page_title'),
+            '#description' => $this->t('Page title shown on the browser tab for my account page.'),
+            '#default_value' => $this->get('page_title'),
             '#translatable' => TRUE,
         ];
 
