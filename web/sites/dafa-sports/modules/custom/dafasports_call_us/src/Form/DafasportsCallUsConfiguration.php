@@ -47,27 +47,43 @@ class DafasportsCallUsConfiguration extends FormBase {
 
     $form['call_us_configation']['enabled'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Enable Dafa Sports Call Us button'),
+      '#title' => $this->t('Enable Call Us button'),
       '#default_value' => $this->get('enabled'),
-      '#description' => $this->t('Show/hide Dafa Sports Call Us button'),
+      '#description' => $this->t('Show/hide Call Us button. Default value is "Disabled".'),
       '#translatable' => TRUE,
     ];
 
-    $form['call_us_configation']['base_url'] = [
+    $form['call_us_configation']['link_url'] = [
       '#rows' => 3,
       '#type' => 'textarea',
-      '#title' => $this->t('Dafa Sports Call Us Base URL'),
-      '#default_value' => $this->get('base_url'),
-      '#description' => $this->t('Link for Dafa Sports Call Us.'),
+      '#title' => $this->t('Button URL'),
+      '#default_value' => $this->get('link_url'),
+      '#description' => $this->t('Please add the URL of the button. "/linkto:avaya" for avaya chat or the url of the call us page'),
       '#translatable' => TRUE,
       '#required' => true,
     ];
 
-    $form['call_us_configation']['button_text'] = [
+    $form['call_us_configation']['link_param'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Dafa Sports Call Us Button Text'),
-      '#default_value' => $this->get('button_text'),
-      '#description' => $this->t('Text for Dafa Sports Call Us Button.'),
+      '#title' => $this->t('Link Parameter'),
+      '#default_value' => $this->get('link_param'),
+      '#description' => $this->t('For additional parameter for the link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['call_us_configation']['link_class'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link Class'),
+      '#default_value' => $this->get('link_class'),
+      '#description' => $this->t('For additional class for the link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['call_us_configation']['link_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link Text'),
+      '#default_value' => $this->get('link_text'),
+      '#description' => $this->t('The text that will appear alongside the button.'),
       '#translatable' => TRUE,
       '#required' => true,
     ];
