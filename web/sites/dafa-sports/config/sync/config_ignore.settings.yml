@@ -9,5 +9,6 @@ ignored_config_entities:
   14: 'webcomposer_affilates.*'
   16: 'dafasports_config.*'
   18: 'webcomposer_settings.*'
+  20: 'dafasports_call_us.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
