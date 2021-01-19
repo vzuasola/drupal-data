@@ -173,9 +173,15 @@ class ZipangRegistrationForm extends FormBase {
       '#default_value' => $this->get('error_address'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['errors']['error_couponcode_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Lightbox Error Message Title for Coupon Code Field'),
+      '#default_value' => $this->get('error_couponcode_title'),
+      '#translatable' => TRUE,
+    ];
     $form['reg_form']['errors']['error_couponcode'] = [
       '#type' => 'textfield',
-      '#title' => t('Registration Error Message for Coupon Code Field'),
+      '#title' => t('Registration Lightbox Error Message Content for Coupon Code Field'),
       '#default_value' => $this->get('error_couponcode'),
       '#translatable' => TRUE,
     ];
