@@ -16,7 +16,8 @@ error_state: 都道府県を選択して下さい。
 error_city: 市区町村を半角英字にて入力して下さい。
 error_zipcode: 郵便番号を半角数字にて入力して下さい。
 error_address: 町名番地を半角英数字にて入力して下さい。
-error_couponcode: クーポンコードをお持ちの場合は半角英数字にて入力して下さい。
+error_couponcode_title: クーポンコードエラー
+error_couponcode: ご入力されたクーボンコードは無効です。 無視して登録を進めますか ?
 error_term_conditions: 利用規約を読んで、受け入れる場合のみチェックを入れて下さい。
 error_captcha: 画像認証を行って下さい。
 error_promotions: 'promotions ja'
