@@ -1,0 +1,17 @@
+uuid: 2055997f-e250-40a3-82eb-d9de7901ec1a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'restful get webcomposer_config_resource'
+  - 'search content'
+  - 'use text format restricted_html'
