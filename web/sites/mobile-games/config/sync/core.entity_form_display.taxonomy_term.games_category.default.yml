@@ -125,7 +125,7 @@ content:
     weight: 25
     settings:
       size: 20
-      placeholder: 22rem
+      placeholder: 32rem
     third_party_settings: {  }
     type: string_textfield
     region: content
@@ -163,7 +163,7 @@ content:
     weight: 24
     settings:
       size: 20
-      placeholder: 22rem
+      placeholder: 32rem
     third_party_settings: {  }
     type: string_textfield
     region: content
