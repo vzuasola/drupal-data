@@ -149,7 +149,17 @@ class ZipangGamesConfigForm extends FormBase {
 
     $form['mixed_game_lobby_all']['mixed_game_lobby_all_desc'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Description'),
+      '#title' => $this->t('Description (PRE-LOGIN)'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('mixed_game_lobby_all_desc_post');
+
+    $form['mixed_game_lobby_all']['mixed_game_lobby_all_desc_post'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Description (POST-LOGIN)'),
       '#default_value' => $d['value'],
       '#format' => $d['format'],
       '#translatable' => TRUE,
