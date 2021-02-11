@@ -7,14 +7,23 @@ dependencies:
     - field.field.taxonomy_term.games_category.field_games_category_logo
     - field.field.taxonomy_term.games_category.field_games_disable
     - field.field.taxonomy_term.games_category.field_isordinarycategory
+    - field.field.taxonomy_term.games_category.field_post_banner_height
+    - field.field.taxonomy_term.games_category.field_post_banner_width
     - field.field.taxonomy_term.games_category.field_post_login_banner_widget
+    - field.field.taxonomy_term.games_category.field_post_login_link
+    - field.field.taxonomy_term.games_category.field_post_login_link_target
+    - field.field.taxonomy_term.games_category.field_pre_banner_height
+    - field.field.taxonomy_term.games_category.field_pre_banner_width
     - field.field.taxonomy_term.games_category.field_pre_login_banner_widget
+    - field.field.taxonomy_term.games_category.field_pre_login_link
+    - field.field.taxonomy_term.games_category.field_pre_login_link_target
     - field.field.taxonomy_term.games_category.field_publish_date
     - field.field.taxonomy_term.games_category.field_unpublish_date
     - taxonomy.vocabulary.games_category
   module:
     - datetime
     - image
+    - options
     - text
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
@@ -65,8 +74,55 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_post_banner_height:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_post_banner_width:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_post_login_banner_widget:
     weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_post_login_link:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_post_login_link_target:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_pre_banner_height:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_banner_width:
+    weight: 14
     label: above
     settings:
       link_to_entity: false
@@ -80,6 +136,21 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_pre_login_link:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_login_link_target:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_publish_date:
     weight: 4
