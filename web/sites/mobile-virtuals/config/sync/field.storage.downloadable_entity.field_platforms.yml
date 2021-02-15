@@ -1,0 +1,38 @@
+uuid: 413d886e-aa17-45b5-976d-45ce3ec0be7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_downloadables
+_core:
+  default_config_hash: xfzzPNX0A4JnZq5yDbqO9EYiTy3nAPFMKL5_WveJZOQ
+id: downloadable_entity.field_platforms
+field_name: field_platforms
+entity_type: downloadable_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: windows
+      label: Windows
+    -
+      value: mac
+      label: MacOS
+    -
+      value: android
+      label: Android
+    -
+      value: ios
+      label: iOS
+    -
+      value: linux
+      label: Linux
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: 2fa9d472-8a9a-4297-a8a3-78295ac06409
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kMTdxmG4E1GcM09Z88qcIIYVVEQTXmo4A4sGtXtCfnU
+id: cashier-menu
+label: 'Cashier Menu'
+description: 'Cashier Menu Items'
+locked: false
