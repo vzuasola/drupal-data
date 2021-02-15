@@ -1,0 +1,15 @@
+sitemap_title: Sitemap
+sitemap_content:
+  value: '<p>Welcome to the sitemap</p>'
+  format: basic_html
+sitemap_home_label: Home
+sitemap_home_link: /
+sitemap_promotions_label: Promotions
+sitemap_promotions_link: /promotions
+sitemap_mobile_label: Mobile
+sitemap_mobile_link: /mobile
+sitemap_basic_pages_label: 'Basic Pages'
+enable_sitemap: 1
+sitemap_links: "Home|/\r\nPromotions|promotions\r\nMobile|mobile"
+_core:
+  default_config_hash: sCaLvXaLg-K7tur4AHg7V0DqukZwVnI0GJaH-OsTuz4

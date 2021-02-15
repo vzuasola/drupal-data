@@ -1,0 +1,9 @@
+uuid: 7ef9742f-11cd-41eb-91df-7eb754e71cc2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ef6Ntukmi3xahPUnNDhQBWKTqW_sZG9k26sb8tHW9Qk
+id: sponsor_cmi
+label: 'Sponsor CMI'
+behavior_plugins: {  }
