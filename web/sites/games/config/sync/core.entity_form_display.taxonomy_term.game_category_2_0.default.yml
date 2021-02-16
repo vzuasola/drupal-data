@@ -8,8 +8,12 @@ dependencies:
     - field.field.taxonomy_term.game_category_2_0.field_hide_name
     - field.field.taxonomy_term.game_category_2_0.field_link_target_post_login
     - field.field.taxonomy_term.game_category_2_0.field_link_target_pre_login
+    - field.field.taxonomy_term.game_category_2_0.field_post_login_banner_height
     - field.field.taxonomy_term.game_category_2_0.field_post_login_banner_widget
+    - field.field.taxonomy_term.game_category_2_0.field_post_login_banner_width
+    - field.field.taxonomy_term.game_category_2_0.field_pre_login_banner_height
     - field.field.taxonomy_term.game_category_2_0.field_pre_login_banner_widget
+    - field.field.taxonomy_term.game_category_2_0.field_pre_login_banner_width
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_alias
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
@@ -54,12 +58,8 @@ third_party_settings:
       label: Icon
     group_banner_widget:
       children:
-        - field_pre_login_banner_widget
-        - field_banner_link_pre_login
-        - field_link_target_pre_login
-        - field_post_login_banner_widget
-        - field_banner_link_post_login
-        - field_link_target_post_login
+        - group_pre_login
+        - group_post_login
       parent_name: ''
       weight: 8
       format_type: details
@@ -69,13 +69,45 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Banner Widget'
+    group_pre_login:
+      children:
+        - field_pre_login_banner_widget
+        - field_banner_link_pre_login
+        - field_link_target_pre_login
+        - field_pre_login_banner_width
+        - field_pre_login_banner_height
+      parent_name: group_banner_widget
+      weight: 16
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Pre Login'
+    group_post_login:
+      children:
+        - field_post_login_banner_widget
+        - field_banner_link_post_login
+        - field_link_target_post_login
+        - field_post_login_banner_width
+        - field_post_login_banner_height
+      parent_name: group_banner_widget
+      weight: 17
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Post Login'
 id: taxonomy_term.game_category_2_0.default
 targetEntityType: taxonomy_term
 bundle: game_category_2_0
 mode: default
 content:
   field_banner_link_post_login:
-    weight: 14
+    weight: 19
     settings:
       size: 60
       placeholder: ''
@@ -83,7 +115,7 @@ content:
     type: string_textfield
     region: content
   field_banner_link_pre_login:
-    weight: 11
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -98,30 +130,62 @@ content:
     type: boolean_checkbox
     region: content
   field_link_target_post_login:
-    weight: 15
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_link_target_pre_login:
-    weight: 12
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_post_login_banner_height:
+    weight: 22
+    settings:
+      size: 20
+      placeholder: '22rem'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_post_login_banner_widget:
-    weight: 13
+    weight: 18
     settings:
       size: 120
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_post_login_banner_width:
+    weight: 21
+    settings:
+      size: 20
+      placeholder: '100%'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pre_login_banner_height:
+    weight: 21
+    settings:
+      size: 20
+      placeholder: '22rem'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_pre_login_banner_widget:
-    weight: 10
+    weight: 17
     settings:
       size: 120
       placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pre_login_banner_width:
+    weight: 20
+    settings:
+      size: 20
+      placeholder: '100%'
     third_party_settings: {  }
     type: string_textfield
     region: content
