@@ -1,0 +1,21 @@
+uuid: 3d3a1c72-b98d-453c-8636-ba49d1126a4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pre_login_link_target
+    - taxonomy.vocabulary.games_category
+  module:
+    - options
+id: taxonomy_term.games_category.field_pre_login_link_target
+field_name: field_pre_login_link_target
+entity_type: taxonomy_term
+bundle: games_category
+label: Target
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

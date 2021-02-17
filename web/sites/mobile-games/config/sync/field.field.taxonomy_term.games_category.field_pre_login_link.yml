@@ -1,0 +1,19 @@
+uuid: d5c2aca1-3bfc-4320-9bb5-d5d255b2207f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pre_login_link
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_pre_login_link
+field_name: field_pre_login_link
+entity_type: taxonomy_term
+bundle: games_category
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
