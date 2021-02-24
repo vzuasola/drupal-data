@@ -39,6 +39,7 @@ class JamboreeHeaderForm extends FormBase {
     ];
 
     $this->sectionLogo($form);
+    $this->sectionCashier($form);
     $this->sectionNotificationStrip($form);
     $this->sectionAccount($form);
 
@@ -57,6 +58,20 @@ class JamboreeHeaderForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Logo Tooltip'),
       '#default_value' => $this->get('logo_tooltip'),
+      '#translatable' => TRUE,
+    ];
+  }
+  private function sectionCashier(array &$form) {
+    $form['cashier'] = [
+      '#type' => 'details',
+      '#title' => t('Cashier'),
+      '#group' => 'advanced',
+    ];
+
+    $form['cashier']['cashier_setting'] = [
+      '#type' => 'textfield',
+      '#title' => t('Cashier Setting'),
+      '#default_value' => $this->get('cashier_setting'),
       '#translatable' => TRUE,
     ];
   }
@@ -187,6 +202,7 @@ class JamboreeHeaderForm extends FormBase {
   public function submit(array &$form, FormStateInterface $form_state) {
     $keys = [
       'logo_tooltip',
+      'cashier_setting',
       'notification_strip',
       'notification_strip_content',
       'notification_platform',
