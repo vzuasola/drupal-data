@@ -199,6 +199,7 @@ class JamboreeHeaderForm extends FormBase {
   /**
   * {@inheritdoc}
   */
+  
   public function submit(array &$form, FormStateInterface $form_state) {
     $keys = [
       'logo_tooltip',
