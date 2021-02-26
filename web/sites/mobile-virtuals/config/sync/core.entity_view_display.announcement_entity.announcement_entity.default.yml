@@ -1,0 +1,62 @@
+uuid: df37eef6-d962-4764-9426-71906b1ae3f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.announcement_entity.announcement_entity.field_body
+    - field.field.announcement_entity.announcement_entity.field_publish_date
+    - field.field.announcement_entity.announcement_entity.field_unpublish_date
+  module:
+    - datetime
+    - text
+    - user
+    - webcomposer_announcements
+_core:
+  default_config_hash: atpYhQqkYqROGMBcHJ6420vwUW7PIIGka-g2sSAqNVI
+id: announcement_entity.announcement_entity.default
+targetEntityType: announcement_entity
+bundle: announcement_entity
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_publish_date:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

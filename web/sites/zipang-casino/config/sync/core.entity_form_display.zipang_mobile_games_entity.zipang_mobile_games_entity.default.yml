@@ -9,6 +9,7 @@ dependencies:
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_category
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_code
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_code_icore
+    - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_description
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_filter
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_filter_games
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_provider
@@ -20,6 +21,7 @@ dependencies:
     - conditional_fields
     - field_group
     - image
+    - text
     - zipang_mobile_games
 third_party_settings:
   field_group:
@@ -114,6 +116,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_description:
+    weight: 12
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
     region: content
   field_game_filter:
     weight: 4
