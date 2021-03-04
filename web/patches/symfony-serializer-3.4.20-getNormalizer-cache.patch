@@ -1,0 +1,25 @@
+diff --git a/Serializer.php b/Serializer.php
+index 72c5721..86efafe 100644
+--- a/Serializer.php
++++ b/Serializer.php
+@@ -238,11 +238,19 @@ class Serializer implements SerializerInterface, NormalizerInterface, Denormaliz
+      */
+     private function getNormalizer($data, $format, array $context)
+     {
++        $type = \is_object($data) ? \get_class($data) : 'native-' . \gettype($data);
++        $cacheId = "get-normalizer:$type:$format";
++        if (isset($this->normalizerCache[$cacheId]) || array_key_exists($cacheId, $this->normalizerCache)) {
++            return $this->normalizerCache[$cacheId];
++        }
++
+         foreach ($this->normalizers as $normalizer) {
+             if ($normalizer instanceof NormalizerInterface && $normalizer->supportsNormalization($data, $format, $context)) {
+-                return $normalizer;
++                return $this->normalizerCache[$cacheId] = $normalizer;
+             }
+         }
++
++        return $this->normalizerCache[$cacheId] = null;
+     }
+ 
+     /**
