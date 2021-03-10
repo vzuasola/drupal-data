@@ -1,0 +1,21 @@
+uuid: 7abff77a-19ba-44b0-9427-cc3434b621cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintenance_end_date
+    - node.type.games
+  module:
+    - datetime
+id: node.games.field_maintenance_end_date
+field_name: field_maintenance_end_date
+entity_type: node
+bundle: games
+label: 'Maintenance End Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

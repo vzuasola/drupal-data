@@ -1,4 +1,4 @@
-uuid: 2ce3824e-4150-4273-a849-325400d63dfd
+uuid: ff04111f-4199-46b3-a58b-86740e04a832
 langcode: en
 status: true
 dependencies:
@@ -491,7 +491,8 @@ display:
           group_type: group
           admin_label: ''
           operator: in
-          value: {  }
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
           exposed: true
           expose:

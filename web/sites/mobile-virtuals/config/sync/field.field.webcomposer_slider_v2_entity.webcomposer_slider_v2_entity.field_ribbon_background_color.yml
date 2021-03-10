@@ -1,0 +1,25 @@
+uuid: 8e058a63-5b3f-4e00-8454-93434f1061a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_ribbon_background_color
+  module:
+    - color_field
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
+field_name: field_ribbon_background_color
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Ribbon Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#000000'
+    opacity: '0'
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

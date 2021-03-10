@@ -1,0 +1,22 @@
+uuid: c5b8336d-0b94-4d2e-9208-4ba1f8eaf596
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.promote
+field_name: promote
+entity_type: node
+bundle: games
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
