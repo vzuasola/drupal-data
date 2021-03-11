@@ -1,4 +1,4 @@
-uuid: 4a9cee4e-8dad-42bd-9e59-cd9b42130977
+uuid: 62f1597b-af6d-4683-b9f0-5e09ec518680
 langcode: en
 status: true
 dependencies: {  }
@@ -9,8 +9,8 @@ label: 'Admin profile'
 description: 'Configuration for site administrators'
 conf:
   extensions: '*'
-  maxsize: 0
-  quota: 0
+  maxsize: !!float 0
+  quota: !!float 0
   maxwidth: 0
   maxheight: 0
   replace: 0

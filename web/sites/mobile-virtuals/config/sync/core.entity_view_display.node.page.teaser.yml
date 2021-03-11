@@ -1,4 +1,4 @@
-uuid: 17e2da46-52fa-4cf8-b665-9dc7364fd630
+uuid: 732ae4fa-65cf-4bdc-a79a-68b596925906
 langcode: en
 status: true
 dependencies:
@@ -28,4 +28,14 @@ content:
     weight: 101
     region: content
 hidden:
+  field_banner_content: true
+  field_banner_link: true
+  field_banner_link_target: true
+  field_image: true
+  field_log_in_state: true
+  field_post_banner_content: true
+  field_post_banner_image: true
+  field_post_banner_link: true
+  field_post_banner_link_target: true
+  field_post_body: true
   langcode: true
