@@ -212,16 +212,15 @@ class LuckyBabyHeaderForm extends FormBase {
     $form['balance_group']['lucky_baby_balance_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Product Balance Mapping'),
-      '#description' => $this->t('Provide a product mapping that will show up below the username'),
       '#description' => $this->t("Provide a product mapping that will show up below the username
         <br><br>
         <b>Format:</b>
         <br>
-        WALLET ID|LABEL|PORTAL_ID
+        WALLET ID|LABEL|SITE_KEYWORD
         <br><br>
         <b>Example:</b>
         <br>
-        7|Casino|RMB,USD,KRW
+        7|Casino|sports
         <br><br>
       "),
       '#default_value' => $this->get('lucky_baby_balance_mapping'),
@@ -254,59 +253,5 @@ class LuckyBabyHeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
-
-    // $form['balance_group']['lucky_baby_currency_balance_mapping'] = [
-    //   '#type' => 'textarea',
-    //   '#title' => $this->t('Currency Balance Mapping'),
-    //   '#description' => $this->t("Define a mapping of product to currency. A product that
-    //     appears on this configuration will be filtered according to the currencies
-    //     defined.
-    //     <br><br>
-    //     Example
-    //     <br>
-    //     7|RMB,USD,KRW
-
-    //   "),
-    //   '#default_value' => $this->get('lucky_baby_currency_balance_mapping'),
-    // ];
-
-    // $form['balance_group']['lucky_baby_excluded_balance_mapping'] = [
-    //   '#type' => 'textarea',
-    //   '#title' => $this->t('Excluded Balance Mapping'),
-    //   '#description' => $this->t('Define product IDs one per line'),
-    //   '#default_value' => $this->get('lucky_baby_excluded_balance_mapping'),
-    // ];
   }
-
-  /**
-  * {@inheritdoc}
-  */
-  // public function submit(array &$form, FormStateInterface $form_state) {
-  //   $keys = [
-  //     'logo_tooltip',
-  //     'notification_strip',
-  //     'notification_strip_content',
-  //     'notification_platform',
-  //     'notification_strip_scheduler',
-  //     'notif_strip_start_date',
-  //     'notif_strip_end_date',
-  //     'user_id_label',
-  //     'balance_label',
-  //     'balance_error_message',
-  //   ];
-
-  //   foreach ($keys as $key) {
-  //       switch ($key) {
-  //           case 'notif_strip_start_date':
-  //           case 'notif_strip_end_date':
-  //               $data[$key] = strtotime($form_state->getvalue($key));
-  //               break;
-  //           default:
-  //               $data[$key] = $form_state->getValue($key);
-  //               break;
-  //       }
-  //   }
-
-  //   $this->save($data);
-  // }
 }
