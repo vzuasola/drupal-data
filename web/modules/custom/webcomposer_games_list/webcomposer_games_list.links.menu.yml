@@ -1,0 +1,5 @@
+webcomposer_games_list.list:
+  title: 'Games List Configuration'
+  description: 'Provides configuration for Mobile Games List module'
+  parent: system.admin_config
+  route_name: webcomposer_games_list.admin_settings
