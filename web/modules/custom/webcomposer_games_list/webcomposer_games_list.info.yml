@@ -1,0 +1,5 @@
+name: Games List
+type: module
+description: Games List Configuration
+core: 8.x
+package: Web Composer
