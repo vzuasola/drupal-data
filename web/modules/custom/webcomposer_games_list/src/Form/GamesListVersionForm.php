@@ -39,7 +39,7 @@ class GamesListVersionForm extends FormBase {
       '#title' => $this->t('Use Games List V2'),
       '#description' => $this->t("Version control for games list"),
       '#default_value' => $this->get('version_configuration'),
-      '#translatable' => true,
+      '#translatable' => false,
       '#required' => false,
     ];
 
