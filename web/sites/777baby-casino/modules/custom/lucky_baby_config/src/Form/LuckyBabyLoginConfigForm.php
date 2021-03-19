@@ -81,6 +81,15 @@ class LuckyBabyLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $default_already_member = $this->get('login_already_member');
+    $form['login_form']['login_already_member'] = [
+      '#type' => 'textfield',
+      '#title' => t('Already a Member Label'),
+      '#default_value' => $default_already_member,
+      '#description' => $this->t('Already a Member label.'),
+      '#translatable' => TRUE,
+    ];
+
     $default_login_username = $this->get('login_username');
     $form['login_form']['login_username'] = [
       '#type' => 'textfield',
@@ -142,6 +151,15 @@ class LuckyBabyLoginConfigForm extends FormBase {
       '#default_value' => $default_registration,
       '#description' => $this->t('Registration link label.'),
       '#translatable' => TRUE,
+    ];
+
+    $default_new_customer = $this->get('login_new_customer');
+    $form['login_form']['login_new_customer'] = [
+    '#type' => 'textfield',
+    '#title' => t('For New Customer Label'),
+    '#default_value' => $default_new_customer,
+    '#description' => $this->t('For New Customer label.'),
+    '#translatable' => TRUE,
     ];
 
     $default_registration_link = $this->get('login_registration_link');
