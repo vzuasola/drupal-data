@@ -25,66 +25,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
      */
   public function getFields() {
     return [
-      /* 'wrapper_tab_start' => [
-        'name' => 'Wrapper Start Steps',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Opening Wrapper',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text breakline for registration form',
-            '#default_value' => '<div class ="fieldset-wrapper-steps">',
-          ],
-        ],
-      ],
-      'step_1_label' => [
-        'name' => 'Step 1',
-        'type' => 'button',
-        'settings' => [
-          'label' => [
-            '#title' => 'Next Label',
-            '#type' => 'textfield',
-            '#description' => 'Label for the next button',
-            '#default_value' => 'Step 1',
-          ],
-        ],
-      ],
-      'step_2_label' => [
-        'name' => 'Step 2',
-        'type' => 'button',
-        'settings' => [
-          'label' => [
-            '#title' => 'Next Label',
-            '#type' => 'textfield',
-            '#description' => 'Label for the next button',
-            '#default_value' => 'Step 2',
-          ],
-        ],
-      ],
-      'step_3_label' => [
-        'name' => 'Step 3',
-        'type' => 'button',
-        'settings' => [
-          'label' => [
-            '#title' => 'Next Label',
-            '#type' => 'textfield',
-            '#description' => 'Label for the next button',
-            '#default_value' => 'Step 3',
-          ],
-        ],
-      ],
-      'wrapper_tab_end' => [
-        'name' => 'Wrapper End Steps',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Wrapper End Steps',
-            '#type' => 'textarea',
-            '#description' => 'Closing wrapper',
-            '#default_value' => '</div>',
-          ],
-        ],
-      ], */
       // step 1
       'wrapper_step_1_start' => [
         'name' => 'Wrapper Start Step 1',
@@ -443,18 +383,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
-      'submit' => [
-        'name' => 'Create an Account',
-        'type' => 'submit',
-        'settings' => [
-          'label' => [
-            '#title' => 'Submit Label',
-            '#type' => 'textfield',
-            '#description' => 'Label for the submit button',
-            '#default_value' => 'Create an Account',
-          ],
-        ],
-      ],
       'wrapper_step_3_end' => [
         'name' => 'Wrapper End Step 3',
         'type' => 'markup',
@@ -467,6 +395,30 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'wrapper_start_button' => [
+        'name' => 'Wrapper Start Button',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-buttons">',
+          ],
+        ],
+      ],
+      'submit' => [
+        'name' => 'Create an Account',
+        'type' => 'submit',
+        'settings' => [
+          'label' => [
+            '#title' => 'Submit Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the submit button',
+            '#default_value' => 'Create an Account',
+          ],
+        ],
+      ],
       'back' => [
         'name' => 'Back',
         'type' => 'button',
@@ -476,6 +428,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'Label for the back button',
             '#default_value' => 'Back',
+          ],
+        ],
+      ],
+      'wrapper_end_button' => [
+        'name' => 'Wrapper End Button',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
           ],
         ],
       ],
