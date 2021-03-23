@@ -467,6 +467,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'back' => [
+        'name' => 'Back',
+        'type' => 'button',
+        'settings' => [
+          'label' => [
+            '#title' => 'Back Button Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the back button',
+            '#default_value' => 'Back',
+          ],
+        ],
+      ],
       'ip' => [
         'name' => 'IP address',
         'type' => 'hidden',
