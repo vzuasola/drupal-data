@@ -90,6 +90,12 @@ class LuckyBabyRegistrationForm extends FormBase {
       '#default_value' => $this->get('reg_form_step_3'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['form']['back_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Back Label'),
+      '#default_value' => $this->get('back_label'),
+      '#translatable' => TRUE,
+    ];
     $form['reg_form']['form']['next_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Next Label'),
