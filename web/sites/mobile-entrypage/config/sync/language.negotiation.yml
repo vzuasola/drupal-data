@@ -26,6 +26,8 @@ url:
     km: km
     lo: lo
     bu: bu
+    bn: bn
+    ur: pk
   domains:
     en: ''
     eu: ''
@@ -50,6 +52,8 @@ url:
     km: ''
     lo: ''
     bu: ''
+    bn: ''
+    ur: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
