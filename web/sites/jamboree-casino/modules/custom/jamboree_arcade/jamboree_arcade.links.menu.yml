@@ -1,0 +1,20 @@
+jamboree_arcade.admin_settings:
+  title: 'Jamboree Arcade Configuration'
+  description: 'List Jamboree Arcade Games entities'
+  parent: system.admin_config
+  route_name: jamboree_arcade.admin_settings
+
+
+# Jamboree arcade game entity menu items definition
+entity.jamboree_arcade_game_entity.collection:
+  title: 'Jamboree arcade game entity list'
+  route_name: entity.jamboree_arcade_game_entity.collection
+  description: 'List Jamboree arcade game entity entities'
+  parent: jamboree_arcade.admin_settings
+  weight: 100
+
+jamboree_arcade_game_entity.admin.structure.settings:
+  title: Jamboree arcade game entity settings
+  description: 'Configure Jamboree arcade game entity entities'
+  route_name: jamboree_arcade_game_entity.settings
+  parent: jamboree_arcade.admin_settings

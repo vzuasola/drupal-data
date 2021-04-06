@@ -1,0 +1,5 @@
+name: Jamboree Arcade
+type: module
+description: Jamboree Arcade Games
+core: 8.x
+package: Custom
