@@ -1,0 +1,16 @@
+uuid: 9070607e-69d3-4be0-ae1f-b9478c7dc8ef
+langcode: bn
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: Bengali
+    webcomposer_language_hidden: 0
+id: bn
+label: Bengali
+direction: ltr
+weight: 14
+locked: false
