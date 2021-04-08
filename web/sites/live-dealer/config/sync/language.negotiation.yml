@@ -15,6 +15,8 @@ url:
     bu: bu
     lo: lo
     km: km
+    bn: bn
+    ur: pk
   domains:
     en: ''
     zh-hans: ''
@@ -28,6 +30,8 @@ url:
     bu: ''
     lo: ''
     km: ''
+    bn: ''
+    ur: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
