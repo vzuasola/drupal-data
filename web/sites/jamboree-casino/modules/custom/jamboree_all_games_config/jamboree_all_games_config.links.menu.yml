@@ -1,0 +1,5 @@
+jamboree_all_games_config.admin_settings:
+  title: 'Jamboree All Games Configurations'
+  description: Jamboree All Games Configurations
+  parent: system.admin_config
+  route_name: jamboree_all_games_config.admin_settings

@@ -1,0 +1,11 @@
+uuid: 40468ddd-16c2-47b9-ac08-b6eb1eb52d5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.all_games_category
+id: taxonomy_term.all_games_category
+target_entity_type_id: taxonomy_term
+target_bundle: all_games_category
+default_langcode: site_default
+language_alterable: false
