@@ -1,0 +1,21 @@
+uuid: ed3f2769-dbb8-4d0a-8595-f4b9a6641fd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.field_desktop_game_code
+field_name: field_desktop_game_code
+entity_type: jamboree_arcade_game_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

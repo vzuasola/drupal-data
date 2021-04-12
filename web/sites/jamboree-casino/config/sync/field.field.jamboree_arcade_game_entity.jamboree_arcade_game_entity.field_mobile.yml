@@ -1,0 +1,24 @@
+uuid: 913c26d4-6b67-4ace-985b-eeee4ed0a295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_arcade_game_entity.field_mobile
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_mobile
+field_name: field_mobile
+entity_type: jamboree_arcade_game_entity
+bundle: jamboree_arcade_game_entity
+label: Mobile
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

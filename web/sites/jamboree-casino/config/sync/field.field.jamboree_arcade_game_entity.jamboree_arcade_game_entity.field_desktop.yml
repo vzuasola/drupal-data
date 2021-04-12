@@ -1,0 +1,24 @@
+uuid: 95255e09-b116-44c4-b81d-972f40a9616d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_arcade_game_entity.field_desktop
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_desktop
+field_name: field_desktop
+entity_type: jamboree_arcade_game_entity
+bundle: jamboree_arcade_game_entity
+label: Desktop
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,24 @@
+uuid: 17bbc3c2-eaaa-4a90-a81e-a8048211d7c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_arcade_game_entity.field_enable_game
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_enable_game
+field_name: field_enable_game
+entity_type: jamboree_arcade_game_entity
+bundle: jamboree_arcade_game_entity
+label: 'Enable Game'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

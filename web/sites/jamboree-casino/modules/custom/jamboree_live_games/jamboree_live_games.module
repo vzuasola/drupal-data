@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains jamboree_live_games.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jamboree_live_games_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jamboree_live_games module.
+    case 'help.page.jamboree_live_games':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Jamboree Live Games') . '</p>';
+      return $output;
+
+    default:
+  }
+}

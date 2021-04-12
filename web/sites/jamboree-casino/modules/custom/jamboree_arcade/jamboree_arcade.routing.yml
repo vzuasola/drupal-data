@@ -1,0 +1,7 @@
+jamboree_arcade.admin_settings:
+  path: 'admin/config/jamboree-arcade'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Arcade Games'
+  requirements:
+    _permission: 'administer site configuration'

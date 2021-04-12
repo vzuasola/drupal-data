@@ -1,0 +1,27 @@
+uuid: 37d264c3-1b68-4a2e-9d6f-0095fd6941da
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_arcade
+    - options
+id: jamboree_arcade_game_entity.field_client_type
+field_name: field_client_type
+entity_type: jamboree_arcade_game_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ngm2dt
+      label: NGM2DT
+    -
+      value: live_desktop
+      label: Live
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
