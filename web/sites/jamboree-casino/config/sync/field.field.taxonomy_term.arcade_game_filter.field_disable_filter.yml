@@ -1,0 +1,23 @@
+uuid: 159780dd-c1fb-4bd9-a124-71c2f2435774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_disable_filter
+    - taxonomy.vocabulary.arcade_game_filter
+id: taxonomy_term.arcade_game_filter.field_disable_filter
+field_name: field_disable_filter
+entity_type: taxonomy_term
+bundle: arcade_game_filter
+label: 'Disable filter'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: d96abcbc-55e9-41a4-8e7a-8bac58fc9673
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.field_enable_game
+field_name: field_enable_game
+entity_type: jamboree_arcade_game_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

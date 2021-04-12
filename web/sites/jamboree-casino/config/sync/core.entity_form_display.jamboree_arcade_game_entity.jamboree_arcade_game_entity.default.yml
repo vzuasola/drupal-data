@@ -1,0 +1,157 @@
+uuid: f158a4ce-3aef-43e3-abf6-45ab4b03ac4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_client_type
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_desktop
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_desktop_game_code
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_enable_free_play
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_enable_game
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_category
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_filter
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_provider
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_tag
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_thumbnail
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_title
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_mobile
+    - field.field.jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_mobile_game_code
+    - image.style.thumbnail
+  module:
+    - entity_reference_views_select
+    - field_group
+    - image
+    - jamboree_arcade
+third_party_settings:
+  field_group:
+    group_platform:
+      children:
+        - field_desktop
+        - field_mobile
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        label: Platform
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: Platform
+    group_game_category_filter:
+      children:
+        - field_game_category
+        - field_game_filter
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Game Category & Filter'
+id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.default
+targetEntityType: jamboree_arcade_game_entity
+bundle: jamboree_arcade_game_entity
+mode: default
+content:
+  field_client_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_desktop:
+    weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_desktop_game_code:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enable_free_play:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_game:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_category:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_game_filter:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_provider:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_tag:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mobile:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mobile_game_code:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true
