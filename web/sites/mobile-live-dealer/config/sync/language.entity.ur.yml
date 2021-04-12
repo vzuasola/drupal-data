@@ -1,0 +1,16 @@
+uuid: 4227b0ac-4dae-424d-9d08-1eaeff6341a6
+langcode: ur
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: Urdu
+    webcomposer_language_hidden: 0
+id: ur
+label: Urdu
+direction: rtl
+weight: 0
+locked: false
