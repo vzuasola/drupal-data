@@ -1,0 +1,33 @@
+uuid: b8427900-af13-4854-9a0f-b5b2e1127cb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.all_games_category.field_icon
+    - taxonomy.vocabulary.all_games_category
+  module:
+    - image
+    - text
+id: taxonomy_term.all_games_category.default
+targetEntityType: taxonomy_term
+bundle: all_games_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icon:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

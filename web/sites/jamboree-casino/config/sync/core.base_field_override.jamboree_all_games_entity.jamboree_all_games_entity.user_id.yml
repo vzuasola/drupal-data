@@ -1,0 +1,20 @@
+uuid: 67fe1aa5-53bb-488c-9043-8a1bde759eb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_all_games_config
+id: jamboree_all_games_entity.jamboree_all_games_entity.user_id
+field_name: user_id
+entity_type: jamboree_all_games_entity
+bundle: jamboree_all_games_entity
+label: 'Authored by'
+description: 'The user ID of author of the Jamboree all games entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

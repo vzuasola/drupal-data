@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_all_games_category
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_client_type
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_free_play
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_game
@@ -29,7 +30,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: fieldset
       format_settings:
         label: 'Casino (for casino page)'
@@ -42,7 +43,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       format_settings:
         label: 'Games (for games page)'
@@ -56,21 +57,27 @@ targetEntityType: jamboree_desktop_games_entity
 bundle: jamboree_desktop_games_entity
 mode: default
 content:
+  field_all_games_category:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_client_type:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_enable_free_play:
-    weight: 8
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_enable_game:
-    weight: 0
+    weight: 1
     settings:
       display_label: true
     third_party_settings: {  }
@@ -101,7 +108,7 @@ content:
     type: erviews_options_buttons
     region: content
   field_game_code:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -109,7 +116,7 @@ content:
     type: string_textfield
     region: content
   field_game_code_icore:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -165,19 +172,19 @@ content:
     type: options_select
     region: content
   field_game_provider:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_tag:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_thumbnail:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -185,7 +192,7 @@ content:
     type: image_image
     region: content
   field_game_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -194,12 +201,19 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
-  name: true
   translation: true
   user_id: true

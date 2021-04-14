@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_all_games_category
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_client_type
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_free_play
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
@@ -141,4 +142,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_all_games_category: true
   langcode: true
