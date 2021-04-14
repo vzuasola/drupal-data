@@ -1,0 +1,20 @@
+uuid: 0ff2e29b-2f02-4c23-a983-6f0caf1fdf61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_arcade_game_entity.field_desktop_game_code
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_desktop_game_code
+field_name: field_desktop_game_code
+entity_type: jamboree_arcade_game_entity
+bundle: jamboree_arcade_game_entity
+label: 'Desktop Game Code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

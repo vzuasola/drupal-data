@@ -1,0 +1,20 @@
+uuid: 4dd9f760-d67c-4a8b-a19f-babe21eb9662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_arcade_game_entity.field_game_title
+  module:
+    - jamboree_arcade
+id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_title
+field_name: field_game_title
+entity_type: jamboree_arcade_game_entity
+bundle: jamboree_arcade_game_entity
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
