@@ -8,7 +8,7 @@ third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
     webcomposer_language_custom_label: Bengali
-    webcomposer_language_hidden: 0
+    webcomposer_language_hidden: 1
 id: bn
 label: Bengali
 direction: ltr
