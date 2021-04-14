@@ -52,9 +52,16 @@ class JamboreeAllGamesConfigForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['general']['all_games_title'] = [
+    $form['general']['all_games_page_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Page Title'),
+      '#default_value' => $this->get('all_games_page_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['all_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Page Header'),
       '#default_value' => $this->get('all_games_title'),
       '#translatable' => TRUE,
     ];
