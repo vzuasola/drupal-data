@@ -1,0 +1,22 @@
+add jamboree all games entity entities:
+  title: 'Create new Jamboree all games entity entities'
+
+administer jamboree all games entity entities:
+  title: 'Administer Jamboree all games entity entities'
+  description: 'Allow to access the administration form to configure Jamboree all games entity entities.'
+  restrict access: true
+
+delete jamboree all games entity entities:
+  title: 'Delete Jamboree all games entity entities'
+
+edit jamboree all games entity entities:
+  title: 'Edit Jamboree all games entity entities'
+
+access jamboree all games entity overview:
+  title: 'Access the Jamboree all games entity overview page'
+
+view published jamboree all games entity entities:
+  title: 'View published Jamboree all games entity entities'
+
+view unpublished jamboree all games entity entities:
+  title: 'View unpublished Jamboree all games entity entities'

@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_all_games_category
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_client_type
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_free_play
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
@@ -54,6 +55,12 @@ targetEntityType: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 mode: default
 content:
+  field_all_games_category:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_client_type:
     weight: 6
     settings: {  }

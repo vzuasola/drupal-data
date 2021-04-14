@@ -23,6 +23,7 @@ module:
   ctools: 0
   datetime: 0
   deposit_and_withdrawal: 0
+  devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
@@ -70,6 +71,7 @@ module:
   rdf: 0
   rest: 0
   rest_menu_items: 0
+  rest_views: 0
   restui: 0
   scheduler: 0
   serialization: 0

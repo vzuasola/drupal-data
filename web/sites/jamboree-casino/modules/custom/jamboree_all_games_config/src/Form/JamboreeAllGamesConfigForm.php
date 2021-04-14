@@ -72,5 +72,12 @@ class JamboreeAllGamesConfigForm extends FormBase {
       '#default_value' => $this->get('all_games_blurb'),
       '#translatable' => TRUE,
     ];
+
+    $form['general']['all_games_show_more_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show More Label'),
+      '#default_value' => $this->get('all_games_show_more_label'),
+      '#translatable' => TRUE,
+    ];
   }
 }
