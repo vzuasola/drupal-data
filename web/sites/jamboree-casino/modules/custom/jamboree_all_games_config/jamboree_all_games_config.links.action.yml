@@ -1,0 +1,11 @@
+entity.jamboree_all_games_entity.add_form:
+  route_name: entity.jamboree_all_games_entity.add_form
+  title: 'Add Jamboree all games entity'
+  appears_on:
+    - entity.jamboree_all_games_entity.collection
+
+entity.jamboree_all_games_entity.settings:
+  route_name: jamboree_all_games_entity.settings
+  title: 'Jamboree all games entity settings'
+  appears_on:
+    - entity.jamboree_all_games_entity.collection
