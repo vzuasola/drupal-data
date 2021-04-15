@@ -55,6 +55,13 @@ class AltFormConfigForm extends FormBase {
       '#group' => 'bet_scanner_group',
     ];
 
+    $form['alternative_form_general_config']['enable_bet_scanner'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Bet Scanner - enable/disable'),
+      '#default_value' => $this->get('enable_bet_scanner'),
+      '#translatable' => TRUE,
+    ];
+
     $form['alternative_form_general_config']['bet_scanner_configuration'] = [
       '#type' => 'details',
       '#title' => $this->t('Bet Scanner Configuration'),
