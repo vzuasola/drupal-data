@@ -71,7 +71,7 @@ class AltFormConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t("Alternative Form Text"),
       '#default_value' => $this->get('alternative_form_text', 'Bet Scanner Alternative Text'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
