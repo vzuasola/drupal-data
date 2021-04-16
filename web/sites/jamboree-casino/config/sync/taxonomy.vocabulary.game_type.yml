@@ -1,0 +1,9 @@
+uuid: 86c3e099-b74b-4282-aef7-92516bb0a8c9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Type'
+vid: game_type
+description: ''
+hierarchy: 0
+weight: 0
