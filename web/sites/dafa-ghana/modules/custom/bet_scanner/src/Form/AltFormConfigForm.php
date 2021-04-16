@@ -40,6 +40,7 @@ class AltFormConfigForm extends FormBase {
 
     $this->generalConfig($form);
     $this->integrationConfig($form);
+    $this->betHistoryConfig($form);
 
     return $form;
   }
@@ -71,7 +72,7 @@ class AltFormConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t("Alternative Form Text"),
       '#default_value' => $this->get('alternative_form_text', 'Bet Scanner Alternative Text'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -151,6 +152,89 @@ class AltFormConfigForm extends FormBase {
       '#default_value' => $content['value'],
       '#format' => $content['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * Bet History Configuration.
+   */
+  private function betHistoryConfig(&$form) {
+    $form['bet_history_config'] = [
+      '#type' => 'details',
+      '#title' => t("History"),
+      '#group' => 'bet_scanner_group',
+    ];
+
+    $form['bet_history_config']['history_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('History Title'),
+      '#required' => TRUE,
+      '#description' => $this->t('Bet Scanner History Title'),
+      '#default_value' => $this->get('history_title', "Title"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['date_scanned_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Date Scanned Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Date Scanned column.'),
+      '#default_value' => $this->get('date_scanned_label', "Date Scanned"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['product_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Product Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Product column.'),
+      '#default_value' => $this->get('product_label', "Product"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['receipt_id_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Bet Receipt ID Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Bet Receipt ID column.'),
+      '#default_value' => $this->get('receipt_id_label', "Bet Receipt ID"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['shop_name_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Shop Name Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Shop Name Column.'),
+      '#default_value' => $this->get('shop_name_label', "Shop Name"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['scan_status_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Scan Status Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Scan Status column.'),
+      '#default_value' => $this->get('scan_status_label', "Scan Status"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['nav_next_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Navigation Next Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Next Navigation button.'),
+      '#default_value' => $this->get('nav_next_label', "Next"),
+      '#translatable' => TRUE,
+    ];
+
+    $form['bet_history_config']['nav_previous_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Navigation Previous Label'),
+      '#required' => TRUE,
+      '#description' => $this->t('Label to be used in Previous navigation button.'),
+      '#default_value' => $this->get('nav_previous_label', "Previous"),
       '#translatable' => TRUE,
     ];
   }
