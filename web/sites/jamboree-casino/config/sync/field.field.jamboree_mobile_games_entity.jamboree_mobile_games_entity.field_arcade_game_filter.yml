@@ -1,0 +1,30 @@
+uuid: 5789cfc2-b1fc-4362-80c7-4948a7cb71bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_games_entity.field_arcade_game_filter
+    - taxonomy.vocabulary.arcade_game_filter
+  module:
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_arcade_game_filter
+field_name: field_arcade_game_filter
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: 'Arcade Game Filter'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      arcade_game_filter: arcade_game_filter
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: arcade_game_category
+field_type: entity_reference
