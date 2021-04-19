@@ -1309,7 +1309,7 @@ display:
               alias: arcade_game_category
               raw_output: false
             field_arcade_game_filter_export:
-              alias: arcade_filter
+              alias: arcade_game_filter
               raw_output: false
             field_game_type_export:
               alias: game_type
