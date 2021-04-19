@@ -1,20 +1,18 @@
-uuid: d500c510-f2b0-49f0-a493-f92397a61e3b
+uuid: 10073205-1f2f-4975-b209-150a2a80a331
 langcode: en
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.all_games_category
-  module:
-    - path
-id: taxonomy_term.all_games_category.path
-field_name: path
+id: taxonomy_term.all_games_category.metatag
+field_name: metatag
 entity_type: taxonomy_term
 bundle: all_games_category
-label: 'URL alias'
-description: ''
+label: Metatags
+description: 'The metatags for the entity.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: path
+field_type: map
