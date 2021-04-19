@@ -1,0 +1,12 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  header_markup:
+    weight: '-10'
+  receipt_number:
+    weight: '-9'
+  clear:
+    weight: '-8'
+  submit:
+    weight: '-7'
