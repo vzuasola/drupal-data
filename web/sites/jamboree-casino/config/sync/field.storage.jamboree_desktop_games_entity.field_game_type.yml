@@ -1,13 +1,13 @@
-uuid: 9e93533b-35ba-4c3a-98ad-925d53c0887f
+uuid: d277451d-63bb-40cd-a904-8b90620d8e43
 langcode: en
 status: true
 dependencies:
   module:
-    - jamboree_arcade
+    - jamboree_desktop_games
     - taxonomy
-id: jamboree_arcade_game_entity.field_game_provider
-field_name: field_game_provider
-entity_type: jamboree_arcade_game_entity
+id: jamboree_desktop_games_entity.field_game_type
+field_name: field_game_type
+entity_type: jamboree_desktop_games_entity
 type: entity_reference
 settings:
   target_type: taxonomy_term

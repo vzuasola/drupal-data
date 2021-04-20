@@ -1,20 +1,20 @@
-uuid: 6d7fad32-b5a6-45f4-b2d4-3a4bbbee9a8f
+uuid: c84d89fc-e48a-470c-b2f6-3d56322e55ed
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.jamboree_arcade_game_entity.field_game_filter
+    - field.storage.jamboree_desktop_games_entity.field_arcade_game_filter
     - taxonomy.vocabulary.arcade_game_filter
   module:
-    - jamboree_arcade
-id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_filter
-field_name: field_game_filter
-entity_type: jamboree_arcade_game_entity
-bundle: jamboree_arcade_game_entity
-label: 'Game Filter'
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_arcade_game_filter
+field_name: field_arcade_game_filter
+entity_type: jamboree_desktop_games_entity
+bundle: jamboree_desktop_games_entity
+label: 'Arcade Game Filter'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,17 +1,17 @@
-uuid: 66f74cb4-adaa-4db7-9bf9-175d67aa5994
+uuid: 6cbbf250-4cd5-4de6-9bfd-98022bcc9cd8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.jamboree_arcade_game_entity.field_game_category
+    - field.storage.jamboree_desktop_games_entity.field_arcade_game_category
     - taxonomy.vocabulary.arcade_game_category
   module:
-    - jamboree_arcade
-id: jamboree_arcade_game_entity.jamboree_arcade_game_entity.field_game_category
-field_name: field_game_category
-entity_type: jamboree_arcade_game_entity
-bundle: jamboree_arcade_game_entity
-label: 'Game Category'
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_arcade_game_category
+field_name: field_arcade_game_category
+entity_type: jamboree_desktop_games_entity
+bundle: jamboree_desktop_games_entity
+label: 'Arcade Game Category'
 description: ''
 required: false
 translatable: true
