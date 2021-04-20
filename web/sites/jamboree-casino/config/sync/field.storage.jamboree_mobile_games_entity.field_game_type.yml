@@ -1,19 +1,19 @@
-uuid: 4dfaa567-4b5c-4081-bd35-12cb95d4dd60
+uuid: 40cdd4b9-f0c3-499d-a907-651c310986dd
 langcode: en
 status: true
 dependencies:
   module:
-    - jamboree_arcade
+    - jamboree_mobile_games
     - taxonomy
-id: jamboree_arcade_game_entity.field_game_category
-field_name: field_game_category
-entity_type: jamboree_arcade_game_entity
+id: jamboree_mobile_games_entity.field_game_type
+field_name: field_game_type
+entity_type: jamboree_mobile_games_entity
 type: entity_reference
 settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
