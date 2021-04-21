@@ -69,6 +69,7 @@ module:
   rdf: 0
   rest: 0
   rest_menu_items: 0
+  rest_views: 0
   restui: 0
   rightside_block: 0
   scheduler: 0
