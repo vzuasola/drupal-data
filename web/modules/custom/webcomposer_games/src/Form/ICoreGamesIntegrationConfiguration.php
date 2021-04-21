@@ -54,7 +54,8 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'wac' => 'We Are Casino',
     'lottoland' => 'Lottoland',
     'onegame' => 'OneGame',
-    'jsystem' => 'JSystem'
+    'jsystem' => 'JSystem',
+    'fghub_gaming' => 'FGHub Gaming'
   ];
 
   protected function getEditableConfigNames() {

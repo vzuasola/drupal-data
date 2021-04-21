@@ -297,6 +297,8 @@ asia_gaming_currency: 1
 asia_gaming_language_mapping: 1
 cq9_currency: 1
 cq9_language_mapping: 1
+fghub_gaming_currency: 1
+fghub_gaming_language_mapping: 1
 solid_gaming_currency: 1
 solid_gaming_language_mapping: 1
 gameworx_lottery_currency: 1
@@ -330,6 +332,7 @@ tgp_country: 1
 evo_gaming_country: 1
 ebet_country: 1
 cq9_country: 1
+fghub_gaming_country: 1
 solid_gaming_country: 1
 betconstruct_currency: 1
 betconstruct_language_mapping: 1
@@ -571,6 +574,8 @@ icore_games_integration__asia_gaming_currency: 1
 icore_games_integration__asia_gaming_language_mapping: 1
 icore_games_integration__cq9_currency: 1
 icore_games_integration__cq9_language_mapping: 1
+icore_games_integration__fghub_gaming_currency: 1
+icore_games_integration__fghub_gaming_language_mapping: 1
 icore_games_integration__solid_gaming_currency: 1
 icore_games_integration__solid_gaming_language_mapping: 1
 icore_games_integration__gameworx_lottery_currency: 1
@@ -604,6 +609,7 @@ icore_games_integration__tgp_country: 1
 icore_games_integration__evo_gaming_country: 1
 icore_games_integration__ebet_country: 1
 icore_games_integration__cq9_country: 1
+icore_games_integration__fghub_gaming_country: 1
 icore_games_integration__solid_gaming_country: 1
 icore_games_integration__betconstruct_currency: 1
 icore_games_integration__betconstruct_language_mapping: 1
