@@ -1,41 +1,37 @@
-uuid: ca34afaf-e58f-4c0a-b048-4988a78dd33f
-langcode: en
+uuid: 777855b5-eb13-4571-9eba-132364e8796e
+langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.jamboree_desktop_games_entity.field_all_games_category
-    - field.storage.jamboree_desktop_games_entity.field_arcade_game_category
-    - field.storage.jamboree_desktop_games_entity.field_arcade_game_filter
-    - field.storage.jamboree_desktop_games_entity.field_client_type
-    - field.storage.jamboree_desktop_games_entity.field_enable_free_play
-    - field.storage.jamboree_desktop_games_entity.field_enable_game
-    - field.storage.jamboree_desktop_games_entity.field_game_category
-    - field.storage.jamboree_desktop_games_entity.field_game_code
-    - field.storage.jamboree_desktop_games_entity.field_game_code_icore
-    - field.storage.jamboree_desktop_games_entity.field_game_filter
-    - field.storage.jamboree_desktop_games_entity.field_game_filter_games
-    - field.storage.jamboree_desktop_games_entity.field_game_provider
-    - field.storage.jamboree_desktop_games_entity.field_game_tag
-    - field.storage.jamboree_desktop_games_entity.field_game_thumbnail
-    - field.storage.jamboree_desktop_games_entity.field_game_title
-    - field.storage.jamboree_desktop_games_entity.field_game_type
-    - taxonomy.vocabulary.desktop_game_category
+    - field.storage.lucky_baby_mobile_games_entity.field_client_type
+    - field.storage.lucky_baby_mobile_games_entity.field_enable_free_play
+    - field.storage.lucky_baby_mobile_games_entity.field_enable_game
+    - field.storage.lucky_baby_mobile_games_entity.field_game_category
+    - field.storage.lucky_baby_mobile_games_entity.field_game_code
+    - field.storage.lucky_baby_mobile_games_entity.field_game_code_icore
+    - field.storage.lucky_baby_mobile_games_entity.field_game_filter
+    - field.storage.lucky_baby_mobile_games_entity.field_game_filter_games
+    - field.storage.lucky_baby_mobile_games_entity.field_game_provider
+    - field.storage.lucky_baby_mobile_games_entity.field_game_tag
+    - field.storage.lucky_baby_mobile_games_entity.field_game_thumbnail
+    - field.storage.lucky_baby_mobile_games_entity.field_game_title
     - taxonomy.vocabulary.game_provider
     - taxonomy.vocabulary.game_tag
+    - taxonomy.vocabulary.mobile_game_category
   module:
-    - jamboree_desktop_games
+    - lucky_baby_mobile_games
     - options
     - rest
     - rest_views
     - serialization
     - taxonomy
     - webcomposer_rest_extra
-id: game_list_desktop_
-label: 'Game List (Desktop) - V2'
+id: game_list_mobile_v2
+label: 'Game List (Mobile) - V2'
 module: views
 description: ''
 tag: ''
-base_table: jamboree_desktop_games_entity_field_data
+base_table: lucky_baby_mobile_games_entity_field_data
 base_field: id
 core: 8.x
 display:
@@ -70,17 +66,30 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: mini
         options:
-          items_per_page: 0
+          items_per_page: 10
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: table
       row:
         type: fields
       fields:
         name:
-          table: jamboree_desktop_games_entity_field_data
+          table: lucky_baby_mobile_games_entity_field_data
           field: name
           id: name
           entity_type: null
@@ -143,79 +152,25 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      filters:
-        langcode:
-          id: langcode
-          table: jamboree_desktop_games_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: langcode_op
-            label: 'Translation language'
-            description: ''
-            use_operator: false
-            operator: langcode_op
-            identifier: langcode
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: jamboree_desktop_games_entity
-          entity_field: langcode
-          plugin_id: language
+      filters: {  }
       sorts:
-        field_game_tag_target_id:
-          id: field_game_tag_target_id
-          table: jamboree_desktop_games_entity__field_game_tag
-          field: field_game_tag_target_id
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
-        field_game_title_value:
-          id: field_game_title_value
-          table: jamboree_desktop_games_entity__field_game_title
-          field: field_game_title_value
-          plugin_id: standard
-      title: 'Game List'
+          relationship: field_game_tag
+      title: 'Game List (Mobile)'
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
         field_game_tag:
           id: field_game_tag
-          table: jamboree_desktop_games_entity__field_game_tag
+          table: lucky_baby_mobile_games_entity__field_game_tag
           field: field_game_tag
-          relationship: none
-          group_type: group
-          admin_label: 'field_game_tag: Taxonomy term'
-          required: true
-          plugin_id: standard
-        field_game_category:
-          id: field_game_category
-          table: jamboree_desktop_games_entity__field_game_category
-          field: field_game_category
           plugin_id: standard
       arguments: {  }
       display_extenders: {  }
@@ -224,6 +179,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
       tags: {  }
   page_1:
     display_plugin: page
@@ -232,12 +188,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/jamboree_desktop_games_entity
-      display_description: ''
+      path: admin/config/lucky_baby_mobile_games_entity
       fields:
         field_enable_game:
           id: field_enable_game
-          table: jamboree_desktop_games_entity__field_enable_game
+          table: lucky_baby_mobile_games_entity__field_enable_game
           field: field_enable_game
           relationship: none
           group_type: group
@@ -302,7 +257,7 @@ display:
           plugin_id: field
         field_game_title:
           id: field_game_title
-          table: jamboree_desktop_games_entity__field_game_title
+          table: lucky_baby_mobile_games_entity__field_game_title
           field: field_game_title
           relationship: none
           group_type: group
@@ -363,72 +318,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_category:
-          id: field_game_category
-          table: jamboree_desktop_games_entity__field_game_category
-          field: field_game_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Category'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: ul
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_game_provider:
           id: field_game_provider
-          table: jamboree_desktop_games_entity__field_game_provider
+          table: lucky_baby_mobile_games_entity__field_game_provider
           field: field_game_provider
           relationship: none
           group_type: group
@@ -489,9 +381,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_code_1:
-          id: field_game_code_1
-          table: jamboree_desktop_games_entity__field_game_code
+        field_game_code:
+          id: field_game_code
+          table: lucky_baby_mobile_games_entity__field_game_code
           field: field_game_code
           relationship: none
           group_type: group
@@ -552,9 +444,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_tag_1:
-          id: field_game_tag_1
-          table: jamboree_desktop_games_entity__field_game_tag
+        field_game_tag:
+          id: field_game_tag
+          table: lucky_baby_mobile_games_entity__field_game_tag
           field: field_game_tag
           relationship: none
           group_type: group
@@ -615,9 +507,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_enable_free_play_1:
-          id: field_enable_free_play_1
-          table: jamboree_desktop_games_entity__field_enable_free_play
+        field_enable_free_play:
+          id: field_enable_free_play
+          table: lucky_baby_mobile_games_entity__field_enable_free_play
           field: field_enable_free_play
           relationship: none
           group_type: group
@@ -680,9 +572,72 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        operations_1:
-          id: operations_1
-          table: jamboree_desktop_games_entity
+        field_game_category:
+          id: field_game_category
+          table: lucky_baby_mobile_games_entity__field_game_category
+          field: field_game_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Category'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: ul
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        operations:
+          id: operations
+          table: lucky_baby_mobile_games_entity
           field: operations
           relationship: none
           group_type: group
@@ -729,21 +684,19 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: false
-          entity_type: jamboree_desktop_games_entity
+          entity_type: lucky_baby_mobile_games_entity
           plugin_id: entity_operations
       defaults:
         fields: false
         filters: false
         filter_groups: false
-        sorts: false
-        title: false
         relationships: false
-        arguments: false
+        sorts: false
         pager: false
       filters:
         field_game_title_value:
           id: field_game_title_value
-          table: jamboree_desktop_games_entity__field_game_title
+          table: lucky_baby_mobile_games_entity__field_game_title
           field: field_game_title_value
           relationship: none
           group_type: group
@@ -767,7 +720,6 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
-              access_management: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -784,7 +736,7 @@ display:
           plugin_id: string
         langcode:
           id: langcode
-          table: jamboree_desktop_games_entity_field_data
+          table: lucky_baby_mobile_games_entity_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -809,29 +761,25 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
-              access_management: '0'
             reduce: false
           is_grouped: false
           group_info:
-            label: 'Translation language'
-            description: null
-            identifier: langcode
+            label: ''
+            description: ''
+            identifier: ''
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          entity_type: jamboree_desktop_games_entity
+            group_items: {  }
+          entity_type: lucky_baby_mobile_games_entity
           entity_field: langcode
           plugin_id: language
         field_game_category_target_id:
           id: field_game_category_target_id
-          table: jamboree_desktop_games_entity__field_game_category
+          table: lucky_baby_mobile_games_entity__field_game_category
           field: field_game_category_target_id
           relationship: none
           group_type: group
@@ -871,13 +819,13 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: desktop_game_category
-          hierarchy: false
+          vid: mobile_game_category
+          hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
         field_game_provider_target_id:
           id: field_game_provider_target_id
-          table: jamboree_desktop_games_entity__field_game_provider
+          table: lucky_baby_mobile_games_entity__field_game_provider
           field: field_game_provider_target_id
           relationship: none
           group_type: group
@@ -901,7 +849,6 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
-              access_management: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -919,12 +866,12 @@ display:
           type: select
           limit: true
           vid: game_provider
-          hierarchy: false
+          hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
         field_game_tag_target_id:
           id: field_game_tag_target_id
-          table: jamboree_desktop_games_entity__field_game_tag
+          table: lucky_baby_mobile_games_entity__field_game_tag
           field: field_game_tag_target_id
           relationship: none
           group_type: group
@@ -965,51 +912,12 @@ display:
           type: select
           limit: true
           vid: game_tag
-          hierarchy: false
+          hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_enable_game_value:
-          id: field_enable_game_value
-          table: jamboree_desktop_games_entity__field_enable_game
-          field: field_enable_game_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: All
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Enabled
-            description: ''
-            use_operator: false
-            operator: field_enable_game_value_op
-            identifier: field_enable_game_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
         field_enable_free_play_value:
           id: field_enable_free_play_value
-          table: jamboree_desktop_games_entity__field_enable_free_play
+          table: lucky_baby_mobile_games_entity__field_enable_free_play
           field: field_enable_free_play_value
           relationship: none
           group_type: group
@@ -1050,6 +958,16 @@ display:
         operator: AND
         groups:
           1: AND
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: lucky_baby_mobile_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
       sorts:
         weight:
           id: weight
@@ -1067,7 +985,7 @@ display:
           plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
-          table: jamboree_desktop_games_entity__field_game_title
+          table: lucky_baby_mobile_games_entity__field_game_title
           field: field_game_title_value
           relationship: none
           group_type: group
@@ -1077,29 +995,16 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'Desktop Game List'
-      relationships:
-        field_game_tag:
-          id: field_game_tag
-          table: jamboree_desktop_games_entity__field_game_tag
-          field: field_game_tag
-          relationship: none
-          group_type: group
-          admin_label: 'field_game_tag: Taxonomy term'
-          required: true
-          plugin_id: standard
-      rendering_language: '***LANGUAGE_language_interface***'
-      arguments: {  }
       pager:
         type: full
         options:
-          items_per_page: 50
+          items_per_page: 100
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: ‹‹
+            next: ››
             first: '« First'
             last: 'Last »'
           expose:
@@ -1111,6 +1016,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      rendering_language: '***LANGUAGE_language_interface***'
       enabled: false
     cache_metadata:
       max-age: -1
@@ -1120,13 +1026,13 @@ display:
         - url.query_args
         - user
       tags:
-        - 'config:field.storage.jamboree_desktop_games_entity.field_enable_free_play'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_enable_game'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_category'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_code'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_provider'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_tag'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_title'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_enable_free_play'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_enable_game'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_category'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_code'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_provider'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_tag'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_title'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -1134,7 +1040,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: api/desktop_game_list
+      path: api/mobile_game_list
       style:
         type: node_list_serializer
         options:
@@ -1144,11 +1050,9 @@ display:
       defaults:
         style: false
         row: false
-        title: false
-        sorts: false
         filters: false
         filter_groups: false
-        relationships: false
+        sorts: false
       row:
         type: data_entity
         options: {  }
@@ -1173,39 +1077,10 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      display_description: ''
-      title: 'Desktop Game List'
-      sorts:
-        weight:
-          id: weight
-          table: taxonomy_term_field_data
-          field: weight
-          relationship: field_game_tag
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: weight
-          plugin_id: standard
-        field_game_title_value:
-          id: field_game_title_value
-          table: jamboree_desktop_games_entity__field_game_title
-          field: field_game_title_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
       filters:
         langcode:
           id: langcode
-          table: jamboree_desktop_games_entity_field_data
+          table: lucky_baby_mobile_games_entity_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -1216,20 +1091,17 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: langcode_op
-            label: 'Translation language'
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: langcode_op
-            identifier: langcode
+            operator: ''
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1243,12 +1115,12 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: jamboree_desktop_games_entity
+          entity_type: lucky_baby_mobile_games_entity
           entity_field: langcode
           plugin_id: language
         field_enable_game_value:
           id: field_enable_game_value
-          table: jamboree_desktop_games_entity__field_enable_game
+          table: lucky_baby_mobile_games_entity__field_enable_game
           field: field_enable_game_value
           relationship: none
           group_type: group
@@ -1286,21 +1158,38 @@ display:
         operator: AND
         groups:
           1: AND
-      relationships:
-        field_game_tag:
-          id: field_game_tag
-          table: jamboree_desktop_games_entity__field_game_tag
-          field: field_game_tag
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        field_game_title_value:
+          id: field_game_title_value
+          table: lucky_baby_mobile_games_entity__field_game_title
+          field: field_game_title_value
           relationship: none
           group_type: group
-          admin_label: 'field_game_tag: Taxonomy term'
-          required: true
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
           plugin_id: standard
-      rendering_language: '***LANGUAGE_language_interface***'
       enabled: false
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
         - url.query_args
@@ -1312,6 +1201,32 @@ display:
     position: 3
     display_options:
       display_extenders: {  }
+      path: api/mobile_game_list_v2
+      sorts:
+        field_game_title_value:
+          id: field_game_title_value
+          table: lucky_baby_mobile_games_entity__field_game_title
+          field: field_game_title_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      defaults:
+        sorts: false
+        fields: false
+        filters: false
+        filter_groups: false
+        relationships: false
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
       row:
         type: data_field
         options:
@@ -1341,7 +1256,7 @@ display:
               alias: game_code_icore
               raw_output: false
             field_game_provider_export:
-              alias: provider_id
+              alias: game_provider
               raw_output: false
             field_game_filter_export:
               alias: casino_filter_id
@@ -1352,19 +1267,9 @@ display:
             field_game_thumbnail_export:
               alias: image
               raw_output: false
-            field_all_games_category_export:
-              alias: all_games_categories
+            field_game_category_export:
+              alias: game_category
               raw_output: false
-            field_arcade_game_category_export:
-              alias: arcade_game_category
-              raw_output: false
-            field_arcade_game_filter_export:
-              alias: arcade_game_filter
-              raw_output: false
-            field_game_type_export:
-              alias: game_type
-              raw_output: false
-      path: api/desktop_game_list_v2
       pager:
         type: full
         options:
@@ -1386,101 +1291,10 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      filters:
-        langcode:
-          id: langcode
-          table: jamboree_desktop_games_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: langcode_op
-            label: 'Translation language'
-            description: ''
-            use_operator: false
-            operator: langcode_op
-            identifier: langcode
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: jamboree_desktop_games_entity
-          entity_field: langcode
-          plugin_id: language
-        field_enable_game_value:
-          id: field_enable_game_value
-          table: jamboree_desktop_games_entity__field_enable_game
-          field: field_enable_game_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-      defaults:
-        filters: false
-        filter_groups: false
-        fields: false
-        sorts: false
-        relationships: false
-        group_by: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       fields:
         id:
           id: id
-          table: jamboree_desktop_games_entity_field_data
+          table: lucky_baby_mobile_games_entity_field_data
           field: id
           relationship: none
           group_type: group
@@ -1527,8 +1341,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_unformatted
-          settings: {  }
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1539,12 +1355,12 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: jamboree_desktop_games_entity
+          entity_type: lucky_baby_mobile_games_entity
           entity_field: id
           plugin_id: field
         field_game_title:
           id: field_game_title
-          table: jamboree_desktop_games_entity__field_game_title
+          table: lucky_baby_mobile_games_entity__field_game_title
           field: field_game_title
           relationship: none
           group_type: group
@@ -1607,7 +1423,7 @@ display:
           plugin_id: field
         field_enable_game:
           id: field_enable_game
-          table: jamboree_desktop_games_entity__field_enable_game
+          table: lucky_baby_mobile_games_entity__field_enable_game
           field: field_enable_game
           relationship: none
           group_type: group
@@ -1672,7 +1488,7 @@ display:
           plugin_id: field
         field_game_code:
           id: field_game_code
-          table: jamboree_desktop_games_entity__field_game_code
+          table: lucky_baby_mobile_games_entity__field_game_code
           field: field_game_code
           relationship: none
           group_type: group
@@ -1735,7 +1551,7 @@ display:
           plugin_id: field
         field_game_tag_export:
           id: field_game_tag_export
-          table: jamboree_desktop_games_entity__field_game_tag
+          table: lucky_baby_mobile_games_entity__field_game_tag
           field: field_game_tag_export
           relationship: none
           group_type: group
@@ -1802,7 +1618,7 @@ display:
           plugin_id: field_export
         field_enable_free_play_export:
           id: field_enable_free_play_export
-          table: jamboree_desktop_games_entity__field_enable_free_play
+          table: lucky_baby_mobile_games_entity__field_enable_free_play
           field: field_enable_free_play_export
           relationship: none
           group_type: group
@@ -1865,7 +1681,7 @@ display:
           plugin_id: field_export
         field_client_type_export:
           id: field_client_type_export
-          table: jamboree_desktop_games_entity__field_client_type
+          table: lucky_baby_mobile_games_entity__field_client_type
           field: field_client_type_export
           relationship: none
           group_type: group
@@ -1925,7 +1741,7 @@ display:
           plugin_id: field_export
         field_game_code_icore_export:
           id: field_game_code_icore_export
-          table: jamboree_desktop_games_entity__field_game_code_icore
+          table: lucky_baby_mobile_games_entity__field_game_code_icore
           field: field_game_code_icore_export
           relationship: none
           group_type: group
@@ -1986,7 +1802,7 @@ display:
           plugin_id: field_export
         field_game_provider_export:
           id: field_game_provider_export
-          table: jamboree_desktop_games_entity__field_game_provider
+          table: lucky_baby_mobile_games_entity__field_game_provider
           field: field_game_provider_export
           relationship: none
           group_type: group
@@ -2033,8 +1849,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: id
+              title: 0
+              url: 0
+              type: 0
+              bundle: 0
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2044,9 +1867,76 @@ display:
           delta_first_last: false
           field_api_classes: 0
           plugin_id: field_export
+        field_game_category_export:
+          id: field_game_category_export
+          table: lucky_baby_mobile_games_entity__field_game_category
+          field: field_game_category_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: id
+              title: 0
+              url: 0
+              type: 0
+              bundle: 0
+          group_column: target_id
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          field_api_classes: 0
+          plugin_id: field_export
         field_game_filter_export:
           id: field_game_filter_export
-          table: jamboree_desktop_games_entity__field_game_filter
+          table: lucky_baby_mobile_games_entity__field_game_filter
           field: field_game_filter_export
           relationship: none
           group_type: group
@@ -2106,7 +1996,7 @@ display:
           plugin_id: field_export
         field_game_filter_games_export:
           id: field_game_filter_games_export
-          table: jamboree_desktop_games_entity__field_game_filter_games
+          table: lucky_baby_mobile_games_entity__field_game_filter_games
           field: field_game_filter_games_export
           relationship: none
           group_type: group
@@ -2166,7 +2056,7 @@ display:
           plugin_id: field_export
         field_game_thumbnail_export:
           id: field_game_thumbnail_export
-          table: jamboree_desktop_games_entity__field_game_thumbnail
+          table: lucky_baby_mobile_games_entity__field_game_thumbnail
           field: field_game_thumbnail_export
           relationship: none
           group_type: group
@@ -2227,260 +2117,88 @@ display:
           delta_first_last: false
           field_api_classes: 0
           plugin_id: field_export
-        field_all_games_category_export:
-          id: field_all_games_category_export
-          table: jamboree_desktop_games_entity__field_all_games_category
-          field: field_all_games_category_export
+      filters:
+        langcode:
+          id: langcode
+          table: lucky_baby_mobile_games_entity_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: 1
-          delta_limit: '0'
-          delta_offset: '0'
-          delta_reversed: 0
-          delta_first_last: 0
-          field_api_classes: 0
-          plugin_id: field_export
-        field_arcade_game_category_export:
-          id: field_arcade_game_category_export
-          table: jamboree_desktop_games_entity__field_arcade_game_category
-          field: field_arcade_game_category_export
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: lucky_baby_mobile_games_entity
+          entity_field: langcode
+          plugin_id: language
+        field_enable_game_value:
+          id: field_enable_game_value
+          table: lucky_baby_mobile_games_entity__field_enable_game
+          field: field_enable_game_value
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: 1
-          delta_limit: '0'
-          delta_offset: '0'
-          delta_reversed: 0
-          delta_first_last: 0
-          field_api_classes: 0
-          plugin_id: field_export
-        field_arcade_game_filter_export:
-          id: field_arcade_game_filter_export
-          table: jamboree_desktop_games_entity__field_arcade_game_filter
-          field: field_arcade_game_filter_export
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: 1
-          delta_limit: '0'
-          delta_offset: '0'
-          delta_reversed: 0
-          delta_first_last: 0
-          field_api_classes: 0
-          plugin_id: field_export
-        field_game_type_export:
-          id: field_game_type_export
-          table: jamboree_desktop_games_entity__field_game_type
-          field: field_game_type_export
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: 0
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          field_api_classes: 0
-          plugin_id: field_export
-      style:
-        type: node_list_serializer
-        options:
-          formats:
-            json: json
-      sorts:
-        field_game_title_value:
-          id: field_game_title_value
-          table: jamboree_desktop_games_entity__field_game_title
-          field: field_game_title_value
-          plugin_id: standard
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       relationships: {  }
-      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2489,18 +2207,15 @@ display:
         - request_format
         - url.query_args
       tags:
-        - 'config:field.storage.jamboree_desktop_games_entity.field_all_games_category'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_arcade_game_category'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_arcade_game_filter'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_client_type'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_enable_free_play'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_enable_game'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_code'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_code_icore'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_filter'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_filter_games'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_provider'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_tag'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_thumbnail'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_title'
-        - 'config:field.storage.jamboree_desktop_games_entity.field_game_type'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_client_type'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_enable_free_play'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_enable_game'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_category'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_code'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_code_icore'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_filter'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_filter_games'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_provider'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_tag'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_thumbnail'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_title'

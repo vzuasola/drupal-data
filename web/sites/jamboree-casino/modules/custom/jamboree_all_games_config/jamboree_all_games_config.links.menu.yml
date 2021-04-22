@@ -5,15 +5,15 @@ jamboree_all_games_config.admin_settings:
   route_name: jamboree_all_games_config.admin_settings
 
 # Jamboree all games entity menu items definition
-entity.jamboree_all_games_entity.collection:
-  title: 'Jamboree all games entity list'
-  route_name: entity.jamboree_all_games_entity.collection
-  description: 'List Jamboree all games entity entities'
-  parent: jamboree_all_games_config.admin_settings
-  weight: 100
+# entity.jamboree_all_games_entity.collection:
+#   title: 'Jamboree all games entity list'
+#   route_name: entity.jamboree_all_games_entity.collection
+#   description: 'List Jamboree all games entity entities'
+#   parent: jamboree_all_games_config.admin_settings
+#   weight: 100
 
-jamboree_all_games_entity.admin.structure.settings:
-  title: Jamboree all games entity settings
-  description: 'Configure Jamboree all games entity entities'
-  route_name: jamboree_all_games_entity.settings
-  parent: jamboree_all_games_config.admin_settings
+# jamboree_all_games_entity.admin.structure.settings:
+#   title: Jamboree all games entity settings
+#   description: 'Configure Jamboree all games entity entities'
+#   route_name: jamboree_all_games_entity.settings
+#   parent: jamboree_all_games_config.admin_settings
