@@ -117,7 +117,7 @@ class DafasportsCallUsConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Exclude Pages'),
       '#default_value' => $this->get('exclude_page'),
-      '#description' => $this->t("Specify exclude pages by using their paths. Enter one path per line. The '*' character is a wildcard. An example path is /promotion/* for every user page."),
+      '#description' => $this->t("Specify exclude pages by using their paths. Enter one path per line."),
       '#translatable' => TRUE,
       '#required' => true,
     ];
