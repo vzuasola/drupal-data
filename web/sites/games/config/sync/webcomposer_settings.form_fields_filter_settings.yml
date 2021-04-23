@@ -345,9 +345,6 @@ fun_gaming_country: 1
 micro_gaming_currency: 1
 micro_gaming_language_mapping: 1
 micro_gaming_country: 1
-flow_gaming_currency: 1
-flow_gaming_language_mapping: 1
-flow_gaming_country: 1
 ky_gaming_currency: 1
 ky_gaming_language_mapping: 1
 ky_gaming_country: 1
@@ -622,9 +619,6 @@ icore_games_integration__fun_gaming_country: 1
 icore_games_integration__micro_gaming_currency: 1
 icore_games_integration__micro_gaming_language_mapping: 1
 icore_games_integration__micro_gaming_country: 1
-icore_games_integration__flow_gaming_currency: 1
-icore_games_integration__flow_gaming_language_mapping: 1
-icore_games_integration__flow_gaming_country: 1
 icore_games_integration__ky_gaming_currency: 1
 icore_games_integration__ky_gaming_language_mapping: 1
 icore_games_integration__ky_gaming_country: 1
