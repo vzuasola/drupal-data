@@ -1614,7 +1614,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_game_tag: Taxonomy term'
-          required: false
+          required: true
           plugin_id: standard
       group_by: false
     cache_metadata:
