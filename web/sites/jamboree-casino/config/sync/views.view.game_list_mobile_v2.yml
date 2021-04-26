@@ -25,6 +25,7 @@ dependencies:
     - rest
     - rest_views
     - serialization
+    - taxonomy
     - webcomposer_rest_extra
 id: game_list_mobile_v2
 label: 'Game List (Mobile) - V2'
@@ -157,6 +158,20 @@ display:
           field_api_classes: false
       filters: {  }
       sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
           table: jamboree_mobile_games_entity__field_game_title
@@ -173,7 +188,16 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: jamboree_mobile_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -1358,7 +1382,7 @@ display:
           settings:
             view_mode: default
             extra:
-              id: 0
+              id: id
               title: 0
               url: 0
               type: 0
