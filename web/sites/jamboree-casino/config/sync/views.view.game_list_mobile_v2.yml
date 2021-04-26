@@ -1358,7 +1358,7 @@ display:
           settings:
             view_mode: default
             extra:
-              id: 0
+              id: id
               title: 0
               url: 0
               type: 0
