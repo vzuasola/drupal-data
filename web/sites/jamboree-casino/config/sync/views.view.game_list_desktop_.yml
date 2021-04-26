@@ -287,6 +287,9 @@ display:
             field_game_provider_export_1:
               alias: provider
               raw_output: false
+            field_game_tag_export_1:
+              alias: game_tag_object
+              raw_output: false
       path: api/desktop_game_list_v2
       pager:
         type: full
@@ -1497,7 +1500,74 @@ display:
           settings:
             view_mode: default
             extra:
-              id: 0
+              id: id
+              title: 0
+              url: 0
+              type: 0
+              bundle: 0
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_game_tag_export_1:
+          id: field_game_tag_export_1
+          table: jamboree_desktop_games_entity__field_game_tag
+          field: field_game_tag_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: id
               title: 0
               url: 0
               type: 0
@@ -1517,12 +1587,35 @@ display:
           formats:
             json: json
       sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag_export
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
           table: jamboree_desktop_games_entity__field_game_title
           field: field_game_title_value
           plugin_id: standard
-      relationships: {  }
+      relationships:
+        field_game_tag_export:
+          id: field_game_tag_export
+          table: jamboree_desktop_games_entity__field_game_tag
+          field: field_game_tag_export
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
       group_by: false
     cache_metadata:
       max-age: -1
