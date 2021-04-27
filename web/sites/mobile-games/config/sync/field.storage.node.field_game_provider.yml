@@ -27,6 +27,9 @@ settings:
       value: solid_gaming
       label: 'Solid Gaming'
     -
+      value: flow_gaming
+      label: 'Flow Gaming'
+    -
       value: sa_gaming
       label: 'SA Gaming'
     -
@@ -47,7 +50,7 @@ settings:
     -
       value: jsystem
       label: JSystem
-      -
+    -
       value: fghub_gaming
       label: 'FGHub Gaming'
   allowed_values_function: ''
