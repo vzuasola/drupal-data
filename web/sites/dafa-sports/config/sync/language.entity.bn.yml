@@ -1,0 +1,15 @@
+uuid: d301c6f2-edf5-4f46-a333-27ebb111d1a3
+langcode: bn
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 0
+id: bn
+label: Bangladesh
+direction: ltr
+weight: 0
+locked: false
