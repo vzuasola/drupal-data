@@ -1,4 +1,4 @@
-uuid: d301c6f2-edf5-4f46-a333-27ebb111d1a3
+uuid: 5d7b837c-8ea7-4830-963b-7677b20700d0
 langcode: bn
 status: true
 dependencies:
@@ -6,10 +6,11 @@ dependencies:
     - webcomposer_language_hierarchy
 third_party_settings:
   webcomposer_language_hierarchy:
-    webcomposer_fallback_langcode: ''
+    webcomposer_fallback_langcode: en
     webcomposer_language_hidden: 0
+    webcomposer_language_custom_label: 'English (Bangladesh)'
 id: bn
 label: Bangladesh
 direction: ltr
-weight: 0
+weight: 11
 locked: false
