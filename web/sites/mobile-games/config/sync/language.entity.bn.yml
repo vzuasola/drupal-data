@@ -7,10 +7,10 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: Bengali
+    webcomposer_language_custom_label: 'English (Bangladesh)'
     webcomposer_language_hidden: 0
 id: bn
-label: Bengali
+label: 'English (Bangladesh)'
 direction: ltr
 weight: 5
 locked: false
