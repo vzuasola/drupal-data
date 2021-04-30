@@ -68,6 +68,7 @@ class JamboreeGamesConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Arcade Page Search'),
       '#default_value' => $this->get('arcade_games_search'),
+      '#description' => $this->t('Adds placeholder to Arcade page searchbox.'),
       '#translatable' => TRUE,
     ];
 
