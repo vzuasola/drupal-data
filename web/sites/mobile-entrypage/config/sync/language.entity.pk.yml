@@ -1,4 +1,4 @@
-uuid: b1ba0d30-e5c4-4b3f-bd5a-07963693a712
+uuid: 9e84790b-2215-459f-8d89-3e9f44705d73
 langcode: pk
 status: true
 dependencies:
@@ -12,5 +12,5 @@ third_party_settings:
 id: pk
 label: 'English (Pakistan)'
 direction: ltr
-weight: 14
+weight: -1
 locked: false
