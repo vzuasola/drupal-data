@@ -1,5 +1,5 @@
-uuid: 5a07768c-3e31-4943-a518-0377a671441c
-langcode: ur
+uuid: 01a9b907-9896-4a2a-be4a-9f21d64b017f
+langcode: pk
 status: true
 dependencies:
   module:
@@ -7,10 +7,10 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: Urdu
+    webcomposer_language_custom_label: 'English (Pakistan)'
     webcomposer_language_hidden: 0
-id: ur
-label: Urdu
-direction: rtl
-weight: 6
+id: pk
+label: Pakistan
+direction: ltr
+weight: 15
 locked: false

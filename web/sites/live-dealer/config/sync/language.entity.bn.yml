@@ -1,4 +1,4 @@
-uuid: 7be36b95-af83-46ed-97f6-9ecccbe3e9f1
+uuid: 1ab762de-c34d-40ae-9626-1e897164382f
 langcode: bn
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: Bengali
     webcomposer_language_hidden: 0
+    webcomposer_language_custom_label: 'English (Bangladesh)'
 id: bn
-label: Bengali
+label: 'English (Bangladesh)'
 direction: ltr
-weight: 6
+weight: 9
 locked: false

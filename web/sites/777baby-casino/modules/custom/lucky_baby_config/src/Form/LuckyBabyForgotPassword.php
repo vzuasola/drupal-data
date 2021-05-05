@@ -103,6 +103,13 @@ class LuckyBabyForgotPassword extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['forgot_success']['form']['success_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success forgot password title'),
+      '#default_value' => $this->get('success_title'),
+      '#translatable' => TRUE,
+    ];
+
     $form['forgot_success']['form']['success'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Success forgot password message'),
