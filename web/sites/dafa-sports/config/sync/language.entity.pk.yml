@@ -1,4 +1,4 @@
-uuid: 9e84790b-2215-459f-8d89-3e9f44705d73
+uuid: f9001f95-f266-4d97-a198-478321acb0b7
 langcode: pk
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
     webcomposer_language_custom_label: 'English (Pakistan)'
     webcomposer_language_hidden: 0
 id: pk
-label: 'English (Pakistan)'
+label: Pakistan
 direction: ltr
-weight: -1
+weight: 12
 locked: false
