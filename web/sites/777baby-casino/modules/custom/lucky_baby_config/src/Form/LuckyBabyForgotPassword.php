@@ -39,6 +39,7 @@ class LuckyBabyForgotPassword extends FormBase {
 
     $this->sectionForgotPassword($form);
     $this->sectionError($form);
+    $this->sectionPopup($form);
     $this->sectionSuccess($form);
 
     return $form;
@@ -93,6 +94,79 @@ class LuckyBabyForgotPassword extends FormBase {
         '#format' => $d['format'],
         '#translatable' => TRUE,
       ];
+    $d = $this->get('footer');
+    $form['forgot_pass']['form']['footer'] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Footer'),
+        '#default_value' => $d['value'],
+        '#format' => $d['format'],
+        '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionPopup(array &$form) {
+    // form setting
+    $form['forgot_popup'] = [
+      '#type' => 'details',
+      '#title' => t('Forgot Password Popup'),
+      '#group' => 'advanced',
+    ];
+
+    $form['forgot_popup']['form']['popup_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $this->get('popup_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['forgot_popup']['form']['popup_forgot_tab'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Forgot Password Tab Label'),
+      '#default_value' => $this->get('popup_forgot_tab'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('popup_header');
+    $form['forgot_popup']['form']['popup_header'] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Header'),
+        '#default_value' => $d['value'],
+        '#format' => $d['format'],
+        '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('popup_footer');
+    $form['forgot_popup']['form']['popup_footer'] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Footer'),
+        '#default_value' => $d['value'],
+        '#format' => $d['format'],
+        '#translatable' => TRUE,
+    ];
+
+    $form['forgot_popup']['form']['popup_ok'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Ok Button label'),
+      '#default_value' => $this->get('popup_ok'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['forgot_popup']['form']['popup_success_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success Title'),
+      '#default_value' => $this->get('popup_success_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('popup_success_message');
+    $form['forgot_popup']['form']['popup_success_message'] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Success Message'),
+        '#default_value' => $d['value'],
+        '#format' => $d['format'],
+        '#translatable' => TRUE,
+    ];
+
   }
 
   private function sectionSuccess(array &$form) {
