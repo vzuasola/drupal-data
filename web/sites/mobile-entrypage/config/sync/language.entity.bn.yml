@@ -12,5 +12,5 @@ third_party_settings:
 id: bn
 label: 'English (Bangladesh)'
 direction: ltr
-weight: -2
+weight: 0
 locked: false
