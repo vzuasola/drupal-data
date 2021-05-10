@@ -1,0 +1,21 @@
+uuid: 6013de51-7a38-494b-91db-0f035c6e0305
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.field_game_icon_label
+field_name: field_game_icon_label
+entity_type: jamboree_desktop_games_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
