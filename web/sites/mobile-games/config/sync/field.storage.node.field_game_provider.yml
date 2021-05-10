@@ -50,6 +50,9 @@ settings:
     -
       value: jsystem
       label: JSystem
+    -
+      value: fghub_gaming
+      label: 'FGHub Gaming'
   allowed_values_function: ''
 module: options
 locked: false

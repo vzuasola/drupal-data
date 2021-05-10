@@ -11,6 +11,7 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access language bn'
   - 'access language bu'
   - 'access language el'
   - 'access language en'
@@ -28,6 +29,7 @@ permissions:
   - 'access language km'
   - 'access language ko'
   - 'access language lo'
+  - 'access language pk'
   - 'access language pl'
   - 'access language pt-br'
   - 'access language te'

@@ -1,18 +1,20 @@
-uuid: a345a42d-da3c-4a07-bdfe-d8e4df9c989a
+uuid: 8157b85d-2993-4483-a06b-9d37edbe31d2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_icon
-    - taxonomy.vocabulary.all_games_category
+    - field.storage.taxonomy_term.field_game_tag_color
+    - taxonomy.vocabulary.game_tag
   module:
+    - options
     - rest
     - rest_views
     - serialization
     - taxonomy
+    - user
     - webcomposer_rest_extra
-id: all_games_categories
-label: 'All Games Categories'
+id: game_tag_v2
+label: 'Game Tag - V2'
 module: views
 description: ''
 tag: ''
@@ -27,8 +29,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -78,10 +81,10 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        tid:
-          id: tid
+        tid_export:
+          id: tid_export
           table: taxonomy_term_field_data
-          field: tid
+          field: tid_export
           relationship: none
           group_type: group
           admin_label: ''
@@ -136,12 +139,10 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          field_api_classes: 0
           entity_type: taxonomy_term
           entity_field: tid
-          plugin_id: field
+          plugin_id: field_export
         name:
           id: name
           table: taxonomy_term_field_data
@@ -208,10 +209,10 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-        field_icon:
-          id: field_icon
-          table: taxonomy_term__field_icon
-          field: field_icon
+        field_game_tag_color_export:
+          id: field_game_tag_color_export
+          table: taxonomy_term__field_game_tag_color
+          field: field_game_tag_color_export
           relationship: none
           group_type: group
           admin_label: ''
@@ -256,73 +257,28 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_export
-          settings:
-            image_style: ''
-            export_alt: 0
-            export_title: false
-          group_column: ''
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          field_api_classes: 0
+          plugin_id: field_export
       filters:
         vid:
           id: vid
           table: taxonomy_term_field_data
           field: vid
           value:
-            all_games_category: all_games_category
+            game_tag: game_tag
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
-        langcode:
-          id: langcode
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
       sorts:
         weight:
           id: weight
@@ -351,8 +307,9 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
+        - user.permissions
       tags:
-        - 'config:field.storage.taxonomy_term.field_icon'
+        - 'config:field.storage.taxonomy_term.field_game_tag_color'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -360,15 +317,15 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/all_games_categories
+      path: api/game_tag_v2
       pager:
         type: none
         options:
           offset: 0
       style:
-        type: node_list_serializer
+        type: taxonomy_list_serializer
         options:
-          uses_fields: true
+          uses_fields: false
           formats:
             json: json
       row:
@@ -378,11 +335,11 @@ display:
             name:
               alias: ''
               raw_output: false
-            field_icon:
-              alias: icon
-              raw_output: false
-            tid:
+            tid_export:
               alias: id
+              raw_output: false
+            field_game_tag_color_export:
+              alias: color
               raw_output: false
     cache_metadata:
       max-age: -1
@@ -390,5 +347,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - user.permissions
       tags:
-        - 'config:field.storage.taxonomy_term.field_icon'
+        - 'config:field.storage.taxonomy_term.field_game_tag_color'
