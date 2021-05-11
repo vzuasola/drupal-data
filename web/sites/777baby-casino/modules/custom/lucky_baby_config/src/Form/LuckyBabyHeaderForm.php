@@ -41,6 +41,7 @@ class LuckyBabyHeaderForm extends FormBase {
     $this->sectionLogo($form);
     $this->sectionNotificationStrip($form);
     $this->sectionAccount($form);
+    $this->sectionBalance($form);
 
     return $form;
   }
@@ -189,34 +190,68 @@ class LuckyBabyHeaderForm extends FormBase {
   }
 
   /**
-  * {@inheritdoc}
-  */
-  public function submit(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'logo_tooltip',
-      'notification_strip',
-      'notification_strip_content',
-      'notification_platform',
-      'notification_strip_scheduler',
-      'notif_strip_start_date',
-      'notif_strip_end_date',
-      'user_id_label',
-      'balance_label',
-      'balance_error_message',
+   *
+   */
+  private function sectionBalance(array &$form) {
+
+    $form['balance_group'] = [
+      '#type' => 'details',
+      '#title' => 'Balance',
+      '#group' => 'advanced',
     ];
 
-    foreach ($keys as $key) {
-        switch ($key) {
-            case 'notif_strip_start_date':
-            case 'notif_strip_end_date':
-                $data[$key] = strtotime($form_state->getvalue($key));
-                break;
-            default:
-                $data[$key] = $form_state->getValue($key);
-                break;
-        }
-    }
+    $form['balance_group']['lucky_baby_total_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Total Balance Label.'),
+      '#description' => $this->t('The label for the total balance'),
+      '#default_value' => $this->get('lucky_baby_total_balance_label'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
 
-    $this->save($data);
+    $form['balance_group']['lucky_baby_balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Balance Mapping'),
+      '#description' => $this->t("Provide a product mapping that will show up below the username
+        <br><br>
+        <b>Format:</b>
+        <br>
+        WALLET ID|LABEL|SITE_KEYWORD
+        <br><br>
+        <b>Example:</b>
+        <br>
+        7|Casino|sports
+        <br><br>
+      "),
+      '#default_value' => $this->get('lucky_baby_balance_mapping'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['lucky_baby_balance_error_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Balance Error Message.'),
+      '#description' => $this->t('Balance Error Message.'),
+      '#default_value' => $this->get('lucky_baby_balance_error_text'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['lucky_baby_balance_error_text_product'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Balance Error Message'),
+      '#description' => $this->t('Error message for the per product balance'),
+      '#default_value' => $this->get('lucky_baby_balance_error_text_product'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['lucky_baby_balance_label_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Balances Label Mapping'),
+      '#description' => $this->t('Labels and ordering for the balance breakdown'),
+      '#default_value' => $this->get('lucky_baby_balance_label_mapping'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }

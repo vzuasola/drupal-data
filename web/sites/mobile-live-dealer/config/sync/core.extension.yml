@@ -54,6 +54,7 @@ module:
   rdf: 0
   rest: 0
   rest_menu_items: 0
+  rest_views: 0
   restui: 0
   scheduler: 0
   serialization: 0
@@ -80,6 +81,7 @@ module:
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
+  webcomposer_games_list: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_promotions: 0

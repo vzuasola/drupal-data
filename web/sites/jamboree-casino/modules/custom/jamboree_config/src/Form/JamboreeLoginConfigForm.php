@@ -162,7 +162,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $default_pt_cashier_url = $this->get('login_pt_cashier_url');
     $form['login_pt_settings']['login_pt_cashier_url'] = [
       '#type' => 'textfield',
-      '#title' => t('Cashier URL'),
+      '#title' => t('Cashier URL (This is deprecated )'),
       '#default_value' => $default_pt_cashier_url,
       '#description' => $this->t('Cashier URL.'),
       '#translatable' => TRUE,

@@ -1,0 +1,22 @@
+# Jamboree live game entity routing definition
+jamboree_live_game_entity.settings_tab:
+  route_name: jamboree_live_game_entity.settings
+  title: 'Settings'
+  base_route: jamboree_live_game_entity.settings
+
+entity.jamboree_live_game_entity.canonical:
+  route_name: entity.jamboree_live_game_entity.canonical
+  base_route: entity.jamboree_live_game_entity.canonical
+  title: 'View'
+
+entity.jamboree_live_game_entity.edit_form:
+  route_name: entity.jamboree_live_game_entity.edit_form
+  base_route: entity.jamboree_live_game_entity.canonical
+  title: 'Edit'
+
+entity.jamboree_live_game_entity.delete_form:
+  route_name:  entity.jamboree_live_game_entity.delete_form
+  base_route:  entity.jamboree_live_game_entity.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,23 @@
+uuid: 02139457-179e-4cf5-a545-3adf74626b7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_use_game_loader
+    - node.type.games
+id: node.games.field_use_game_loader
+field_name: field_use_game_loader
+entity_type: node
+bundle: games
+label: 'Use Game Loader'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

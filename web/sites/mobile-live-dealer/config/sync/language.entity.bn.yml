@@ -1,0 +1,16 @@
+uuid: 34586838-ce21-490f-a07c-df2ec119bd40
+langcode: bn
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'English (Bangladesh)'
+    webcomposer_language_hidden: 0
+id: bn
+label: 'English (Bangladesh)'
+direction: ltr
+weight: 2
+locked: false

@@ -1,13 +1,13 @@
-uuid: 49daaeef-48e2-4220-ab83-a8640744caec
+uuid: 107b29cf-2837-48fa-a5bf-570a350f9046
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: C7X8h9FWlwkQ9y5mnU2JzgaZICAdc6HFbPVbhvjlAYE
+  default_config_hash: gGQXiSspwGl0lyOS6w_HCPpvGAPDciqDNLFwWOydVtI
 id: node_unpublish_action
 label: 'Unpublish content'
 type: node
-plugin: 'entity:unpublish_action:node'
+plugin: node_unpublish_action
 configuration: {  }

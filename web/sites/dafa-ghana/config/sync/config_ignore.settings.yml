@@ -6,6 +6,8 @@ ignored_config_entities:
   - 'filter.*'
   - 'language.*'
   - 'devel.*'
+  - 'bet_scanner.*'
+  - 'webcomposer_form_manager.form.kenya_alternative_form.*'
   - 'ghana_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

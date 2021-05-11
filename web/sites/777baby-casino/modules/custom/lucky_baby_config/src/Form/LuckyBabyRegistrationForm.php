@@ -72,6 +72,42 @@ class LuckyBabyRegistrationForm extends FormBase {
       '#default_value' => $this->get('reg_form_link_title'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['form']['reg_form_step_1'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 1)'),
+      '#default_value' => $this->get('reg_form_step_1'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['reg_form_step_2'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 2)'),
+      '#default_value' => $this->get('reg_form_step_2'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['reg_form_step_3'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 3)'),
+      '#default_value' => $this->get('reg_form_step_3'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['back_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Back Label'),
+      '#default_value' => $this->get('back_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['next_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Next Label'),
+      '#default_value' => $this->get('next_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['submit_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Submit Label'),
+      '#default_value' => $this->get('submit_label'),
+      '#translatable' => TRUE,
+    ];
     // error message setting
     $form['reg_form']['errors'] = [
       '#type' => 'fieldset',

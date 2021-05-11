@@ -57,6 +57,13 @@ class JamboreeGamesConfigForm extends FormBase {
 
     $d = $this->get('no_result_msg');
 
+    $form['games']['arcade_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Title'),
+      '#default_value' => $this->get('arcade_games_title'),
+      '#translatable' => TRUE,
+    ];
+
     $form['games']['no_result_msg'] = [
       '#type' => 'text_format',
       '#title' => $this->t('No Result Message'),

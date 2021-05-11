@@ -128,6 +128,11 @@ $sites['mobile-lottery.drupal.dev'] = 'mobile-lottery';
 $sites['mobile-lottery.drupal.local'] = 'mobile-lottery';
 $sites['mobile-lottery.drupal.env'] = 'mobile-lottery';
 
+// Mobile Lottery Revamp instance
+$sites['mobile-virtuals.drupal.dev'] = 'mobile-virtuals';
+$sites['mobile-virtuals.drupal.local'] = 'mobile-virtuals';
+$sites['mobile-virtuals.drupal.env'] = 'mobile-virtuals';
+
 // Mobile Arcade Revamp instance
 $sites['mobile-arcade.drupal.dev'] = 'mobile-arcade';
 $sites['mobile-arcade.drupal.local'] = 'mobile-arcade';

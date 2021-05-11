@@ -3,6 +3,9 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_all_games_category
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_arcade_game_category
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_arcade_game_filter
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_client_type
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_free_play
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
@@ -15,6 +18,7 @@ dependencies:
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_thumbnail
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_title
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_type
     - image.style.thumbnail
   module:
     - conditional_fields
@@ -29,7 +33,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: fieldset
       format_settings:
         id: ''
@@ -41,7 +45,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       format_settings:
         id: ''
@@ -49,11 +53,42 @@ third_party_settings:
         description: 'fields for games page'
         required_fields: false
       label: 'Games (for games page)'
+    group_arcade_for_arcade_page_:
+      children:
+        - field_arcade_game_category
+        - field_arcade_game_filter
+      parent_name: ''
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Arcade (for arcade page)'
 id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.default
 targetEntityType: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 mode: default
 content:
+  field_all_games_category:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_arcade_game_category:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_arcade_game_filter:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_client_type:
     weight: 6
     settings: {  }
@@ -163,7 +198,7 @@ content:
     type: erviews_options_select
     region: content
   field_game_provider:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -189,6 +224,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_type:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select

@@ -1,0 +1,26 @@
+uuid: 32d1ceab-f24c-43d7-938f-34730f516c26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_all_games_entity.field_games
+  module:
+    - jamboree_all_games_config
+id: jamboree_all_games_entity.jamboree_all_games_entity.field_games
+field_name: field_games
+entity_type: jamboree_all_games_entity
+bundle: jamboree_all_games_entity
+label: Games
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: all_games_entity_reference_old_desktop
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

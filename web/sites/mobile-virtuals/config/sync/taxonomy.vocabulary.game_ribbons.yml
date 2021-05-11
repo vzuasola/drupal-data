@@ -1,0 +1,9 @@
+uuid: 79771bf5-090f-4efc-ac34-99eb648b6ce2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Ribbons'
+vid: game_ribbons
+description: 'List of Ribbons that will appear in games thumbnail'
+hierarchy: 0
+weight: 0

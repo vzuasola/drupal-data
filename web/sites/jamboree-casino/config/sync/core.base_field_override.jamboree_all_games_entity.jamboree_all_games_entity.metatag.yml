@@ -1,0 +1,18 @@
+uuid: c6796c08-31e2-44df-9bb5-c527d5058e45
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_all_games_config
+id: jamboree_all_games_entity.jamboree_all_games_entity.metatag
+field_name: metatag
+entity_type: jamboree_all_games_entity
+bundle: jamboree_all_games_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
