@@ -112,6 +112,16 @@ class DafasportsCallUsConfiguration extends FormBase {
       ],
     ];
 
+    $form['call_us_configation']['exclude_page'] = [
+      '#rows' => 3,
+      '#type' => 'textarea',
+      '#title' => $this->t('Exclude Pages'),
+      '#default_value' => $this->get('exclude_page'),
+      '#description' => $this->t("Specify exclude pages by using their paths. Enter one path per line."),
+      '#translatable' => TRUE,
+      '#required' => true,
+    ];
+
     return $form;
   }
 
