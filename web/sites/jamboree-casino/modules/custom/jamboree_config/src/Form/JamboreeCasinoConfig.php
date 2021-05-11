@@ -102,6 +102,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['live_games'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Title'),
+      '#default_value' => $this->get('live_games'),
+      '#translatable' => TRUE,
+    ];
+
     $form['page_setting']['registration'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration Page Title'),
@@ -311,10 +318,10 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['inner_breadcrumb']['arcade_breadcrumb'] = [
+    $form['inner_breadcrumb']['live_games_breadcrumb'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Arcade'),
-      '#default_value' => $this->get('arcade_breadcrumb'),
+      '#title' => $this->t('Live Games'),
+      '#default_value' => $this->get('live_games_breadcrumb'),
       '#translatable' => TRUE,
     ];
 

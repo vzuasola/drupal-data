@@ -1,0 +1,16 @@
+uuid: 6772c272-27a8-4b87-b9e4-650ca8ab870c
+langcode: pk
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'English (Pakistan)'
+    webcomposer_language_hidden: 0
+id: pk
+label: 'English (Pakistan)'
+direction: ltr
+weight: 8
+locked: false
