@@ -1,0 +1,30 @@
+uuid: df8e0e4a-e76c-4136-84dc-20e0d616d95d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.field_game_title_icon
+field_name: field_game_title_icon
+entity_type: jamboree_mobile_games_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
