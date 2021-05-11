@@ -1,0 +1,10 @@
+my_account_error_handler.403:
+  title: 'My Account Access Denied Translation'
+  base_route_name: my_account_error_handler.403_config
+  names:
+    - my_account_error_handler.403
+my_account_error_handler.404:
+  title: 'My Account Page Not Found Translation'
+  base_route_name: my_account_error_handler.404_config
+  names:
+    - my_account_error_handler.404
