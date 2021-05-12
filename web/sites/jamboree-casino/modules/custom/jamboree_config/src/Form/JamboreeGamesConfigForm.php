@@ -5,7 +5,6 @@ namespace Drupal\jamboree_config\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\file\Entity\File;
 
 /**
  * My module form plugin
