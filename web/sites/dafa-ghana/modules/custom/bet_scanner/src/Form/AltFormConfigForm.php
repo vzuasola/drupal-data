@@ -163,6 +163,16 @@ class AltFormConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $content = $this->get('kbs_message');
+    $form['alternative_form_integration_config']['kbs_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('KBS Statuses'),
+      '#description' => $this->t('Please fill each status and its value in single row.'),
+      '#default_value' => $content,
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
