@@ -8,3 +8,7 @@ _core:
 advanced__active_tab: edit-not-found
 value: null
 format: null
+currency_mapping: ''
+ucp_content:
+  value: ''
+  format: basic_html

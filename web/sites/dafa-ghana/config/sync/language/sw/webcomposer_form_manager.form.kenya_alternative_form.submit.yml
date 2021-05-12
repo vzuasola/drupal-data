@@ -1,22 +1,20 @@
 field_settings:
-  label: 'Receipt Number'
-  placeholder: 'Bet Receipt Number'
-  annotation: ''
+  label: Submit
 field_validations:
   required:
-    error_message: 'Field is required'
+    error_message: 'Field should be required'
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
   alpha_multi:
-    error_message: 'Field only accepts alphanumeric characters and dash (-)'
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    error_message: 'Field contains invalid special characters KE'
+    error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:

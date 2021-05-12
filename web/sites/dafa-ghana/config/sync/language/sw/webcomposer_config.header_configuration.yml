@@ -1,0 +1,38 @@
+header_settings_tab__active_tab: edit-mcashier-group
+logo_title: dafabet
+logo_url: /ke/sports
+mobile_logo_url: /ke/mobile
+registration_link: '/ke/join?regvia=71'
+registration_link_mobile: '/ke/join?regvia=72'
+capslock_notification: 'TEST: Caps Lock is on'
+login_join_now_text: 'JOIN NOW'
+default_cashier_link: 'http://ng-cashier-www.games.istg/c/dafa-ke/en/pm/ke-deposit[query:(ticket={auth.token}&pid=2&title=headerPopup&width=820&height=820)]'
+cashier_mapping: ''
+default_mcashier_link: 'http://ng-cashier-www.games.istg/c/dafa-ke/en/pm/ke-deposit[query:(ticket={auth.token}&pid=2&title=headerPopup&width=820&height=820)]'
+mcashier_link_target: _self
+mcashier_mapping: ''
+balance_label_override: ''
+currency_balance_mapping: '6|GHS,KES'
+currency_label_mapping: "GHS|GHc\r\nKSH|KSh\r\nKES|KSh"
+critical_announcement: 1
+critical_announcement_content:
+  value: "<p>tester crit</p>\r\n"
+  format: basic_html
+news_announcement: 1
+news_announcement_content:
+  value: "<p>tester news</p>\r\n"
+  format: basic_html
+lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+promotion_page_title: promotion
+links_title: quicklinks
+excluded_balance_mapping: '7'
+join_now_text: 'JOIN NOW KE'
+join_now_link: '/join?regvia=71'
+login_issue_text: 'Can''t login'
+login_issue_link: 'https://istg-dafa-kenyawww.elysium-dfbt.com/ke/sports-df/reset-password'
+welcome_text: 'Hello {username}!'
+profile_link: /my-account
+profile_logout_text: Logout
+balance_label_mapping: "71|Sports\r\n6|Dafa Sports\r\n12|Ghana Sportsbook"
+balance_mapping: "71|Sports\r\n6|Dafa Sports\r\n12|Ghana Sportsbook"
+cashier_link: N/A
