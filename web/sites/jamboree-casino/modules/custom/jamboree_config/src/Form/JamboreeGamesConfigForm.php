@@ -92,10 +92,10 @@ class JamboreeGamesConfigForm extends FormBase {
 
     $form['games']['live_games_banner_en'] = [
       '#type' => 'fieldset',
-      '#title' => t('Live Games Page Banner - EN')
+      '#title' => t('Live Games Page Banner - EN'),
     ];
 
-    $form['games']['live_games_banner_en']['live_games_banner_image_en'] = [
+    $form['games']['live_games_banner_en']['file_image_live_banner_en'] = [
       '#type' => 'managed_file',
       '#title' => t('Live Games Page Banner'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -103,7 +103,7 @@ class JamboreeGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('live_games_banner_image_en'),
+      '#default_value' => $config->get('file_image_live_banner_en'),
     ];
 
     $form['games']['live_games_banner_en']['banner_alt_text_en'] = [
@@ -115,21 +115,21 @@ class JamboreeGamesConfigForm extends FormBase {
 
     $form['games']['live_games_banner_ja'] = [
       '#type' => 'fieldset',
-      '#title' => t('Live Games Page Banner - JA')
+      '#title' => t('Live Games Page Banner - JA'),
     ];
 
-    $form['games']['live_games_banner_ja']['live_games_banner_image_ja'] = [
+    $form['games']['live_games_banner_ja']['file_image_live_banner_ja'] = [
       '#type' => 'managed_file',
       '#title' => t('Live Games Page Banner'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
-      '#upload_location' => 'public://',
+      '#upload_location' => 'public://upload',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('live_games_banner_image_ja'),
+      '#default_value' => $config->get('file_image_live_banner_ja'),
     ];
 
-   $form['games']['live_games_banner_ja']['banner_alt_text_ja'] = [
+    $form['games']['live_games_banner_ja']['banner_alt_text_ja'] = [
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('banner_alt_text_ja'),
@@ -240,36 +240,6 @@ class JamboreeGamesConfigForm extends FormBase {
       '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
-  }
-
- /**
-  * {@inheritdoc}
-  */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'live_games_banner_image_en',
-      'live_games_banner_image_ja',
-      ];
-
-    foreach ($keys as $key) {
-      if ($key == 'live_games_banner_image_en' || $key == 'live_games_banner_image_ja') {
-        $fid = $form_state->getValue($key);
-        if ($fid && isset($fid[0])) {
-          $file = File::load($fid[0]);
-          $file->setPermanent();
-          $file->save();
-          $file_usage = \Drupal::service('file.usage');
-          $file_usage->add($file, 'jamboree-casino', 'image', $fid[0]);
-
-          $this->config('jamboree_config.games_page_configuration')->set(
-            $key . '_url',
-            file_create_url($file->getFileUri())
-            )->save();
-        }
-      }
-      $this->config('jamboree_config.games_page_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-    parent::submitForm($form, $form_state);
   }
 
 }
