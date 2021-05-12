@@ -223,11 +223,49 @@ class JamboreeGamesConfigForm extends FormBase {
 
     $e = $this->get('mixed_game_lobby_all_banner');
 
-    $form['mixed_game_lobby_all']['mixed_game_lobby_all_banner'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Top Block Banner'),
-      '#default_value' => $e['value'],
-      '#format' => $e['format'],
+    $form['mixed_game_lobby_all']['games_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - EN')
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_en']['file_image_games_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner Image'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_games_banner_en'),
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_en']['games_banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('games_banner_alt_text_en'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - JA')
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_ja']['file_image_games_banner_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner Image'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_games_banner_ja'),
+    ];
+
+   $form['mixed_game_lobby_all']['games_banner_ja']['games_banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('games_banner_alt_text_ja'),
       '#translatable' => TRUE,
     ];
 
