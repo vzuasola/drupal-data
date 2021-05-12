@@ -1,6 +1,6 @@
 uuid: bf386d7b-4804-4213-9b7b-1a03543f411a
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - content_translation

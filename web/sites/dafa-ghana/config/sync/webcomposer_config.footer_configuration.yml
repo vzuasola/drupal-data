@@ -1,6 +1,6 @@
 about_dafabet_title: 'About Dafabet'
 about_dafabet_content:
-  value: "<p> Welcome to Dafabet - Asia's leading online gaming website comes to Africa, bringing our customers a unique and exciting gaming experience, whilst providing a safe and fair environment they can trust and enjoy.\r\n</p>\r\n"
+  value: "<p>WELCOME TO DAFABET - ASIA'S LEADING ONLINE GAMING WEBSITE COMES TO AFRICA, BRINGING OUR CUSTOMERS A UNIQUE AND EXCITING GAMING EXPERIENCE, WHILST PROVIDING A SAFE AND FAIR ENVIRONMENT THEY CAN TRUST AND ENJOY.</p>\r\n"
   format: basic_html
 partners_image_url: 'http://csngold.drupal.local/sites/casino-gold/files/upload/tiles/footer-partners_2.png'
 partners_logo:
@@ -8,7 +8,7 @@ partners_logo:
 quicklinks_title: 'Quick Links'
 _core:
   default_config_hash: e_KLM_h2W7kLIYPPfIZzKHCSSzugsz96pboXQxlbhys
-advanced__active_tab: edit-about-dafabet-details
+advanced__active_tab: edit-quicklinks-group
 value: null
 format: null
 social_media_title: ''
