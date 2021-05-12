@@ -135,6 +135,15 @@ class AltFormConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['alternative_form_integration_config']['history_limit'] = [
+      '#type' => 'textfield',
+      '#title' => t('History Limit'),
+      '#required' => TRUE,
+      '#description' => $this->t('History Limit'),
+      '#default_value' => $this->get('history_limit'),
+      '#translatable' => TRUE,
+    ];
+
     $content = $this->get('alt_form_success_message');
     $form['alternative_form_integration_config']['alt_form_success_message'] = [
       '#type' => 'text_format',
