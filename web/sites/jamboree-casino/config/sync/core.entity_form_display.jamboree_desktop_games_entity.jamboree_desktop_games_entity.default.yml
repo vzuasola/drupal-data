@@ -14,10 +14,12 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code_icore
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_filter
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_filter_games
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_icon_label
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_provider
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title_icon
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_type
     - image.style.thumbnail
   module:
@@ -69,6 +71,19 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: 'Arcade (for arcade page)'
+    group_live_games_for_live_games_:
+      children:
+        - field_game_title_icon
+        - field_game_icon_label
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Live Games (for live games page)'
 id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.default
 targetEntityType: jamboree_desktop_games_entity
 bundle: jamboree_desktop_games_entity
@@ -200,6 +215,14 @@ content:
           bundle: jamboree_desktop_games_entity
     type: options_select
     region: content
+  field_game_icon_label:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_provider:
     weight: 11
     settings: {  }
@@ -227,6 +250,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_title_icon:
+    weight: 17
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_game_type:
     weight: 10
