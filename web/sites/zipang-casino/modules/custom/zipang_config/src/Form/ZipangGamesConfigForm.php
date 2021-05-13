@@ -5,6 +5,8 @@ namespace Drupal\zipang_config\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\file\Entity\File;
+
 
 /**
  * My module form plugin
@@ -135,15 +137,54 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $e = $this->get('mixed_game_lobby_all_banner');
+    $config = $this->config('zipang_config.games_page_configuration');
 
-    $form['mixed_game_lobby_all']['mixed_game_lobby_all_banner'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Top Block Banner'),
-      '#default_value' => $e['value'],
-      '#format' => $e['format'],
+    $form['mixed_game_lobby_all']['mixed_game_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - EN')
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_en']['mixed_game_banner_image_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $config->get('mixed_game_banner_image_en'),
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_en']['mixed_game_banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('mixed_game_banner_alt_text_en'),
       '#translatable' => TRUE,
     ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - JA')
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_ja']['mixed_game_banner_image_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $config->get('mixed_game_banner_image_ja'),
+    ];
+
+   $form['mixed_game_lobby_all']['mixed_game_banner_ja']['mixed_game_banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('mixed_game_banner_alt_text_ja'),
+      '#translatable' => TRUE,
+    ];
+
 
     $d = $this->get('mixed_game_lobby_all_desc');
 
@@ -165,4 +206,36 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
   }
+
+   /**
+  * {@inheritdoc}
+  */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'mixed_game_banner_image_en',
+      'mixed_game_banner_image_ja',
+      ];
+
+    foreach ($keys as $key) {
+      if ($key == 'mixed_game_banner_image_en' || $key == 'mixed_game_banner_image_ja') {
+        $fid = $form_state->getValue($key);
+        if ($fid && isset($fid[0])) {
+          $file = File::load($fid[0]);
+          $file->setPermanent();
+          $file->save();
+          $file_usage = \Drupal::service('file.usage');
+          $file_usage->add($file, 'zipang-casino', 'image', $fid[0]);
+
+          $this->config('zipang_config.games_page_configuration')->set(
+            $key . '_url',
+            file_create_url($file->getFileUri())
+            )->save();
+        }
+      }
+      $this->config('zipang_config.games_page_configuration')->set($key, $form_state->getValue($key))->save();
+    }
+    parent::submitForm($form, $form_state);
+  }
+
+
 }
