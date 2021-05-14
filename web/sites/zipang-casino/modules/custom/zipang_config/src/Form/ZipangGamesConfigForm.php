@@ -144,7 +144,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#title' => t('Top Block Banner - EN')
     ];
 
-    $form['mixed_game_lobby_all']['mixed_game_banner_en']['mixed_game_banner_image_en'] = [
+    $form['mixed_game_lobby_all']['mixed_game_banner_en']['file_image_mixed_game_en'] = [
       '#type' => 'managed_file',
       '#title' => t('Top Block Banner'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -152,7 +152,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('mixed_game_banner_image_en'),
+      '#default_value' => $config->get('file_image_mixed_game_en'),
     ];
 
     $form['mixed_game_lobby_all']['mixed_game_banner_en']['mixed_game_banner_alt_text_en'] = [
@@ -167,7 +167,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#title' => t('Top Block Banner - JA')
     ];
 
-    $form['mixed_game_lobby_all']['mixed_game_banner_ja']['mixed_game_banner_image_ja'] = [
+    $form['mixed_game_lobby_all']['mixed_game_banner_ja']['file_image_mixed_game_ja'] = [
       '#type' => 'managed_file',
       '#title' => t('Top Block Banner'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -175,7 +175,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('mixed_game_banner_image_ja'),
+      '#default_value' => $config->get('file_image_mixed_game_ja'),
     ];
 
    $form['mixed_game_lobby_all']['mixed_game_banner_ja']['mixed_game_banner_alt_text_ja'] = [
@@ -212,12 +212,12 @@ class ZipangGamesConfigForm extends FormBase {
   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'mixed_game_banner_image_en',
-      'mixed_game_banner_image_ja',
+      'file_image_mixed_game_en',
+      'file_image_mixed_game_ja',
       ];
 
     foreach ($keys as $key) {
-      if ($key == 'mixed_game_banner_image_en' || $key == 'mixed_game_banner_image_ja') {
+      if ($key == 'file_image_mixed_game_en' || $key == 'file_image_mixed_game_ja') {
         $fid = $form_state->getValue($key);
         if ($fid && isset($fid[0])) {
           $file = File::load($fid[0]);
