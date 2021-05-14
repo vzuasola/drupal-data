@@ -143,27 +143,7 @@ class AltFormConfigForm extends FormBase {
       '#default_value' => $this->get('history_limit'),
       '#translatable' => TRUE,
     ];
-
-    $content = $this->get('alt_form_success_message');
-    $form['alternative_form_integration_config']['alt_form_success_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Alternative Form Success Message'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
-    $content = $this->get('alt_form_error_message');
-    $form['alternative_form_integration_config']['alt_form_error_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Alternative Form Error Message'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
+    
     $content = $this->get('kbs_message');
     $form['alternative_form_integration_config']['kbs_message'] = [
       '#type' => 'textarea',
