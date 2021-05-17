@@ -25,7 +25,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
      */
   public function getFields() {
     return [
-       'username' => [
+      'username' => [
         'name' => 'User Name',
         'type' => 'textfield',
         'settings' => [
