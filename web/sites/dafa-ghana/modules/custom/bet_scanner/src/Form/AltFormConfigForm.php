@@ -135,6 +135,24 @@ class AltFormConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['alternative_form_integration_config']['history_limit'] = [
+      '#type' => 'textfield',
+      '#title' => t('History Limit'),
+      '#required' => TRUE,
+      '#description' => $this->t('History Limit'),
+      '#default_value' => $this->get('history_limit'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['alternative_form_integration_config']['history_limit'] = [
+      '#type' => 'textfield',
+      '#title' => t('History Limit'),
+      '#required' => TRUE,
+      '#description' => $this->t('History Limit'),
+      '#default_value' => $this->get('history_limit'),
+      '#translatable' => TRUE,
+    ];
+
     $content = $this->get('alt_form_success_message');
     $form['alternative_form_integration_config']['alt_form_success_message'] = [
       '#type' => 'text_format',
@@ -151,6 +169,16 @@ class AltFormConfigForm extends FormBase {
       '#title' => $this->t('Alternative Form Error Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('kbs_message');
+    $form['alternative_form_integration_config']['kbs_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('KBS Statuses'),
+      '#description' => $this->t('Please fill each status and its value in single row.'),
+      '#default_value' => $content,
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];

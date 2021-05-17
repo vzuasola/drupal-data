@@ -1,7 +1,14 @@
 uuid: 826794e9-960f-44e1-a0e5-22e579f11193
-langcode: en
+langcode: sw
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: ke
+    webcomposer_language_hidden: 0
 id: sw
 label: Swahili
 direction: ltr

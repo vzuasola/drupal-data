@@ -1,0 +1,8 @@
+uuid: 78abcbd1-e3d1-46c3-a7a6-2cee31b64e09
+langcode: en
+status: true
+dependencies: {  }
+id: ghana-footer
+label: 'Ghana Footer'
+description: ''
+locked: false

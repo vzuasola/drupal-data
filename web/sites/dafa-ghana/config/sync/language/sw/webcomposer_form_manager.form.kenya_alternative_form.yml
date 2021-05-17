@@ -6,7 +6,7 @@ weights:
     weight: '-10'
   receipt_number:
     weight: '-9'
-  clear:
-    weight: '-8'
   submit:
+    weight: '-8'
+  clear:
     weight: '-7'
