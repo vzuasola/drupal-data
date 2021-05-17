@@ -206,36 +206,4 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
   }
-
-   /**
-  * {@inheritdoc}
-  */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'file_image_mixed_game_en',
-      'file_image_mixed_game_ja',
-      ];
-
-    foreach ($keys as $key) {
-      if ($key == 'file_image_mixed_game_en' || $key == 'file_image_mixed_game_ja') {
-        $fid = $form_state->getValue($key);
-        if ($fid && isset($fid[0])) {
-          $file = File::load($fid[0]);
-          $file->setPermanent();
-          $file->save();
-          $file_usage = \Drupal::service('file.usage');
-          $file_usage->add($file, 'zipang-casino', 'image', $fid[0]);
-
-          $this->config('zipang_config.games_page_configuration')->set(
-            $key . '_url',
-            file_create_url($file->getFileUri())
-            )->save();
-        }
-      }
-      $this->config('zipang_config.games_page_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-    parent::submitForm($form, $form_state);
-  }
-
-
 }
