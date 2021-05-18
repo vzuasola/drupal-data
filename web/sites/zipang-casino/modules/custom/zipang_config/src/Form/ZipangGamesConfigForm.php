@@ -137,8 +137,6 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $config = $this->config('zipang_config.games_page_configuration');
-
     $form['mixed_game_lobby_all']['mixed_game_banner_en'] = [
       '#type' => 'fieldset',
       '#title' => t('Top Block Banner - EN')
@@ -152,14 +150,13 @@ class ZipangGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('file_image_mixed_game_en'),
+      '#default_value' => $this->get('file_image_mixed_game_en'),
     ];
 
     $form['mixed_game_lobby_all']['mixed_game_banner_en']['mixed_game_banner_alt_text_en'] = [
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('mixed_game_banner_alt_text_en'),
-      '#translatable' => TRUE,
     ];
 
     $form['mixed_game_lobby_all']['mixed_game_banner_ja'] = [
@@ -175,14 +172,13 @@ class ZipangGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('file_image_mixed_game_ja'),
+      '#default_value' => $this->get('file_image_mixed_game_ja'),
     ];
 
    $form['mixed_game_lobby_all']['mixed_game_banner_ja']['mixed_game_banner_alt_text_ja'] = [
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('mixed_game_banner_alt_text_ja'),
-      '#translatable' => TRUE,
     ];
 
 
