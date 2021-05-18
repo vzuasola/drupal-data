@@ -253,5 +253,12 @@ class LuckyBabyHeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['balance_group']['lucky_baby_balance_tooltip_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => 'Enable Balance Tooltip',
+      '#default_value' => $this->get('lucky_baby_balance_tooltip_enabled'),
+      '#translatable' => FALSE,
+    ];
   }
 }

@@ -6,14 +6,14 @@ use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
 /**
- * RegistrationForm
+ * NewRegistrationForm
  *
  * @WebcomposerForm(
- *   id = "zipang_registration_form",
- *   name = "Zipang Registration Form",
+ *   id = "new_zipang_registration_form",
+ *   name = "New Zipang Registration Form",
  * )
  */
-class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface {
+class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface {
     /**
      * @{inheritdoc}
      */
@@ -25,6 +25,19 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
      */
   public function getFields() {
     return [
+      // step 1
+      'wrapper_step_1_start' => [
+        'name' => 'Wrapper Start Step 1',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-step-1">',
+          ],
+        ],
+      ],
       'username' => [
         'name' => 'User Name',
         'type' => 'textfield',
@@ -99,6 +112,31 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Confirm Email Address Label',
             '#type' => 'email',
             '#description' => 'The Label for Confirm Email Address field',
+          ],
+        ],
+      ],
+      'wrapper_step_1_end' => [
+        'name' => 'Wrapper End Step 1',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End Step1',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
+          ],
+        ],
+      ],
+      // step 2
+      'wrapper_step_2_start' => [
+        'name' => 'Wrapper Start Step 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-step-2 hidden">',
           ],
         ],
       ],
@@ -250,6 +288,31 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'wrapper_step_2_end' => [
+        'name' => 'Wrapper End Step 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End Step 2',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
+          ],
+        ],
+      ],
+      // step 3
+      'wrapper_step_3_start' => [
+        'name' => 'Wrapper Start Step 3',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-step-3 hidden">',
+          ],
+        ],
+      ],
       'wrapper_start' => [
         'name' => 'Wrapper Start',
         'type' => 'markup',
@@ -320,6 +383,30 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'wrapper_step_3_end' => [
+        'name' => 'Wrapper End Step 3',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End Step 3',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
+          ],
+        ],
+      ],
+      'wrapper_start_button' => [
+        'name' => 'Wrapper Start Button',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-buttons">',
+          ],
+        ],
+      ],
       'submit' => [
         'name' => 'Create an Account',
         'type' => 'submit',
@@ -329,6 +416,30 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'Label for the submit button',
             '#default_value' => 'Create an Account',
+          ],
+        ],
+      ],
+      'back' => [
+        'name' => 'Back',
+        'type' => 'button',
+        'settings' => [
+          'label' => [
+            '#title' => 'Back Button Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the back button',
+            '#default_value' => 'Back',
+          ],
+        ],
+      ],
+      'wrapper_end_button' => [
+        'name' => 'Wrapper End Button',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
           ],
         ],
       ],
