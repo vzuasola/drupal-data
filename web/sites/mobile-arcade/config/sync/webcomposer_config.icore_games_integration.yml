@@ -75,8 +75,8 @@ ky_gaming_country: ''
 pgsoft_currency: "RMB\r\nEUR\r\nUSD\r\nGBP\r\nMYR\r\nTHB\r\nINR\r\nKRW\r\nVND\r\nIDR\r\nMXN\r\nmBC\r\nBDT"
 pgsoft_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt\r\nbn|bn-EN"
 pgsoft_country: "MY\r\nSG\r\nTW\r\nUS\r\nLV"
-ruby_play_currency: ''
-ruby_play_language_mapping: ''
+ruby_play_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nPEN\r\nARS\r\nLAK\r\nMMK\r\nKHR"
+ruby_play_language_mapping: "en|en\r\nsc|zh-cn\r\nth|th\r\nkr|ko\r\nvn|vn\r\nid|id\r\nes|ES\r\npt|pt-BR"
 ruby_play_country: ''
 ezugi_gaming_currency: ''
 ezugi_gaming_language_mapping: ''
