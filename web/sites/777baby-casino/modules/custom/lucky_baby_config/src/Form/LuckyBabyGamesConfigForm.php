@@ -157,7 +157,6 @@ class LuckyBabyGamesConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('games_banner_alt_text_en'),
-      '#translatable' => TRUE,
     ];
 
     $form['mixed_game_lobby_all']['games_banner_ja'] = [
@@ -180,7 +179,6 @@ class LuckyBabyGamesConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('games_banner_alt_text_ja'),
-      '#translatable' => TRUE,
     ];
 
 
