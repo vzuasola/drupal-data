@@ -34,6 +34,8 @@ permissions:
   - 'access language lo'
   - 'access language bu'
   - 'access language km'
+  - 'access language bn'
+  - 'access language pk'
   - 'access site-wide contact form'
   - 'administer rest resources'
   - 'restful get affiliate_rest_resource'
