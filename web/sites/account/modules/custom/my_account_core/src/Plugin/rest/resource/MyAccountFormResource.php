@@ -34,7 +34,6 @@ class MyAccountFormResource extends ResourceBase
         );
 
         switch ($id) {
-
             case 'my_account_change_password':
                 $config = \Drupal::config('my_account_form_profile.change_password');
                 $values = $this->filter_array_exposed($config->get(), 'password');
@@ -164,6 +163,10 @@ class MyAccountFormResource extends ResourceBase
                     'error' => $this->t('Configuration not found')
                   );
                 }
+                break;
+            case 'rate_limit':
+                $config = \Drupal::config('my_account_error_handler.rate_limit');
+                $values = $config->get();
                 break;
             default:
         }
