@@ -7,6 +7,12 @@ dependencies:
     - taxonomy.vocabulary.game_provider
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: taxonomy_term.game_provider.field_game_provider_image
 field_name: field_game_provider_image
 entity_type: taxonomy_term
