@@ -1,0 +1,20 @@
+uuid: 639d40c8-300b-4583-86ca-90ec07f9f17b
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_mobile_games
+    - taxonomy
+id: jamboree_mobile_games_entity.field_provider_product
+field_name: field_provider_product
+entity_type: jamboree_mobile_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
