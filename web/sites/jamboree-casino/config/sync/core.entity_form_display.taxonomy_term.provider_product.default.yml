@@ -1,0 +1,32 @@
+uuid: 2297b035-fcc5-4c4b-bf7e-510939bccb3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.provider_product.field_key
+    - taxonomy.vocabulary.provider_product
+id: taxonomy_term.provider_product.default
+targetEntityType: taxonomy_term
+bundle: provider_product
+mode: default
+content:
+  field_key:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

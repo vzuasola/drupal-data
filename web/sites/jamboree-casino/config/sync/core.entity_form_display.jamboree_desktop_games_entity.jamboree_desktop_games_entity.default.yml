@@ -21,6 +21,7 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title_icon
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_type
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_provider_product
     - image.style.thumbnail
   module:
     - conditional_fields
@@ -35,7 +36,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: fieldset
       format_settings:
         label: 'Casino (for casino page)'
@@ -48,7 +49,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: fieldset
       format_settings:
         label: 'Games (for games page)'
@@ -62,7 +63,7 @@ third_party_settings:
         - field_arcade_game_category
         - field_arcade_game_filter
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: fieldset
       format_settings:
         label: 'Arcade (for arcade page)'
@@ -76,7 +77,7 @@ third_party_settings:
         - field_game_title_icon
         - field_game_icon_label
       parent_name: ''
-      weight: 16
+      weight: 17
       format_type: fieldset
       format_settings:
         id: ''
@@ -90,7 +91,7 @@ bundle: jamboree_desktop_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -261,6 +262,12 @@ content:
     region: content
   field_game_type:
     weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_provider_product:
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
