@@ -57,6 +57,21 @@ class ZipangGamesConfigForm extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['games']['arcade_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Title'),
+      '#default_value' => $this->get('arcade_games_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['arcade_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Search'),
+      '#default_value' => $this->get('arcade_games_search'),
+      '#description' => $this->t('Adds placeholder to Arcade page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
     $d = $this->get('no_result_msg');
 
     $form['games']['no_result_msg'] = [

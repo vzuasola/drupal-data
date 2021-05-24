@@ -1,0 +1,19 @@
+uuid: 77a5a36e-3b7b-42d5-8383-1d1b93c46290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_id
+    - taxonomy.vocabulary.arcade_game_category
+id: taxonomy_term.arcade_game_category.field_category_id
+field_name: field_category_id
+entity_type: taxonomy_term
+bundle: arcade_game_category
+label: 'Category ID'
+description: 'Example: category-id'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
