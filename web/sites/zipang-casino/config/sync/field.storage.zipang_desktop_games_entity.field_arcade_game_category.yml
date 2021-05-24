@@ -1,0 +1,20 @@
+uuid: c3167511-346d-4d53-bdec-2a98070a25b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_desktop_games
+id: zipang_desktop_games_entity.field_arcade_game_category
+field_name: field_arcade_game_category
+entity_type: zipang_desktop_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

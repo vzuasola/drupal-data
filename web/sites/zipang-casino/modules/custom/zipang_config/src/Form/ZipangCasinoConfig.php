@@ -88,6 +88,13 @@ class ZipangCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['arcade'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Title'),
+      '#default_value' => $this->get('arcade'),
+      '#translatable' => TRUE,
+    ];
+
     $form['page_setting']['registration'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration Page Title'),
@@ -294,6 +301,13 @@ class ZipangCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Games'),
       '#default_value' => $this->get('games_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['arcade_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade'),
+      '#default_value' => $this->get('arcade_breadcrumb'),
       '#translatable' => TRUE,
     ];
 
