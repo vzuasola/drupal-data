@@ -14,10 +14,12 @@ dependencies:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_description
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_filter
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_filter_games
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_icon_label
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_provider
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_tag
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_thumbnail
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_title
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_title_icon
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_type
     - image.style.thumbnail
   module:
@@ -67,6 +69,19 @@ third_party_settings:
         description: ''
         required_fields: false
       label: 'Arcade (for arcade page)'
+    group_live_games_for_live_games_:
+      children:
+        - field_game_title_icon
+        - field_game_icon_label
+      parent_name: ''
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Live Games (for live games page)'
 _core:
   default_config_hash: ppcWsjWMjCM-R4co2Kyb0QkF-5uQSF7-XGv_SCHeWjg
 id: zipang_desktop_games_entity.zipang_desktop_games_entity.default
@@ -147,7 +162,7 @@ content:
     type: string_textfield
     region: content
   field_game_description:
-    weight: 14
+    weight: 15
     settings:
       rows: 9
       summary_rows: 3
@@ -203,6 +218,14 @@ content:
           bundle: zipang_desktop_games_entity
     type: options_select
     region: content
+  field_game_icon_label:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_provider:
     weight: 10
     settings: {  }
@@ -230,6 +253,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_title_icon:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_game_type:
     weight: 9
