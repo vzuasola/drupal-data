@@ -42,18 +42,18 @@ class OptimizedFieldSerializer extends NodeListSerializer {
     $temp = [];
     foreach ($data as $entityKey => $entity) {
       foreach ($entity as $fieldKey => $field) {
-        // Get all fields from the game entity and look for field_games_list_category
-        // We need to make sure again that this is the name of the field
-        if ($fieldKey === 'field_games_list_category') {
-          $categories = $field;
-          if (isset($categories['exposed_filters'])) {
-              $exposedFilters = $categories['exposed_filters'];
-              foreach ($categories as $categoryKey => $category) {
+          // Check if field has exposed_filters data
+          if (isset($field['exposed_filters'])) {
+              $exposedFilters = $field['exposed_filters'];
+              foreach ($field as $categoryKey => $category) {
+                  // Get draggable weight and add to array
+                  // with 'draggable' key if it exists
                   $draggable = $this->getDraggableWeight($category['id'], $entity, $exposedFilters);
-                  $data[$entityKey]['field_games_list_category'][$categoryKey]['draggable'] = $draggable;
+                  if ($draggable) {
+                    $data[$entityKey][$fieldKey][$categoryKey]['draggable'] = $draggable;
+                  }
               }
           }
-        }
         // Remove the exposed filters data for each field
         // This doesn't remove deeper level of arrays
         // Not sure if exposed filters will show up
@@ -109,6 +109,6 @@ class OptimizedFieldSerializer extends NodeListSerializer {
       }
     }
 
-    return null;
+    return false;
   }
 }
