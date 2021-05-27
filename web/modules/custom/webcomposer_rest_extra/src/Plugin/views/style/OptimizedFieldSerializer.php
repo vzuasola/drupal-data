@@ -43,14 +43,18 @@ class OptimizedFieldSerializer extends NodeListSerializer {
     foreach ($data as $entityKey => $entity) {
       foreach ($entity as $fieldKey => $field) {
           // Check if field has exposed_filters data
-          if (isset($field['exposed_filters'])) {
+          if (isset($field['exposed_filters']) && ($fieldKey === 'field_games_list_category')) {
               $exposedFilters = $field['exposed_filters'];
               foreach ($field as $categoryKey => $category) {
                   // Get draggable weight and add to array
                   // with 'draggable' key if it exists
+
                   $draggable = $this->getDraggableWeight($category['id'], $entity, $exposedFilters);
-                  if ($draggable) {
+
+                  if ($draggable && is_array($data[$entityKey][$fieldKey][$categoryKey])) {
                     $data[$entityKey][$fieldKey][$categoryKey]['draggable'] = $draggable;
+                  } else {
+                    $data[$entityKey][$fieldKey][$categoryKey] = $draggable;
                   }
               }
           }
