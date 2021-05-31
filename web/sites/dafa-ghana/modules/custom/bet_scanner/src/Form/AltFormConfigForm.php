@@ -105,6 +105,15 @@ class AltFormConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $body_content = $this->get('success_message');
+    $form['alternative_form_general_config']['success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
