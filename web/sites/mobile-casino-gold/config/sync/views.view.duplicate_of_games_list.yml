@@ -260,7 +260,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/games_list_v2
+      path: api/games_list_v3
       pager:
         type: full
         options:
