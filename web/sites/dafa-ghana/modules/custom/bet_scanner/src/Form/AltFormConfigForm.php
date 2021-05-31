@@ -153,6 +153,15 @@ class AltFormConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['alternative_form_integration_config']['kbs_mock_status'] = [
+      '#type' => 'textfield',
+      '#title' => t('Mocked Status Code'),
+      '#required' => FALSE,
+      '#description' => $this->t('The Mocked Status Code should be one of the KBS Statuses value, e.g. Accepted, Duplicate, or InvalidParameter'),
+      '#default_value' => $this->get('kbs_mock_status'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
