@@ -2,24 +2,26 @@
 
 namespace Drupal\webcomposer_rest_extra\Normalizer;
 
-use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Language\LanguageInterface;
+use Drupal\file\Entity\File;
 use Drupal\Core\Site\Settings;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\Component\Utility\Html;
 
-use Drupal\file\Entity\File;
-use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\paragraphs\Entity\Paragraph;
-use Drupal\serialization\Normalizer\ContentEntityNormalizer;
-use Drupal\taxonomy\Entity\Term;
-
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
+
+use Drupal\webcomposer_rest_extra\ExposedFiltersTrait;
+use Drupal\serialization\Normalizer\ContentEntityNormalizer;
 
 /**
  * Converts typed data objects to arrays.
  */
 class NodeEntityNormalizer extends ContentEntityNormalizer {
   use FilterHtmlTrait;
+  use ExposedFiltersTrait;
 
   /**
    * {@inheritdoc}
@@ -245,32 +247,5 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     $result[] = $fileArray;
 
     return $result;
-  }
-
-  /**
-   *
-   */
-  private function getExposedFilters($originalView) {
-    $filterSet = [];
-    $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-
-    $view = clone $originalView;
-
-    foreach ($view->storage->get('display') as $filterId => $filterValue) {
-      $view->setDisplay($filterId);
-      $filters = $view->display_handler->getOption('filters');
-
-      foreach ($filters as $key => $value) {
-        if (isset($value['exposed']) && $value['exposed']) {
-          $value['view_id'] = $view->id();
-          $value['display_id'] = $filterId;
-          $value['identifier'] = $value['expose']['identifier'];
-
-          $filterSet[] = $value;
-        }
-      }
-    }
-
-    return $filterSet;
   }
 }
