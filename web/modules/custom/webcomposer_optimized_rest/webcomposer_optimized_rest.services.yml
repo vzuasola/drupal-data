@@ -1,0 +1,6 @@
+services:
+  webcomposer_optimized_rest.serialized_data:
+    class: Drupal\webcomposer_optimized_rest\Normalizer\SerializedDataNormalizer
+    arguments: ['@entity.manager']
+    tags:
+      - { name: normalizer, priority: 9 }

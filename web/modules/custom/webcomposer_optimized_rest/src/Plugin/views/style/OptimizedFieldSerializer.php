@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_rest_extra\Plugin\views\style;
+namespace Drupal\webcomposer_optimized_rest\Plugin\views\style;
 
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Language\LanguageInterface;

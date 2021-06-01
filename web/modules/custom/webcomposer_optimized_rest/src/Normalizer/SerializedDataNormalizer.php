@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_rest_extra\Normalizer;
+namespace Drupal\webcomposer_optimized_rest\Normalizer;
 use Drupal\rest_views\SerializedData;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\rest_views\Normalizer\DataNormalizer;
