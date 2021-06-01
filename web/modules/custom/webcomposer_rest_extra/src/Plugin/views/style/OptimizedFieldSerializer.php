@@ -43,19 +43,32 @@ class OptimizedFieldSerializer extends NodeListSerializer {
     foreach ($data as $entityKey => $entity) {
       foreach ($entity as $fieldKey => $field) {
           // Check if field has exposed_filters data
-          if (isset($field['exposed_filters']) && ($fieldKey === 'field_games_list_category')) {
+          if (isset($field['exposed_filters'])) {
               $exposedFilters = $field['exposed_filters'];
               foreach ($field as $categoryKey => $category) {
+                if (is_array($data[$entityKey][$fieldKey][$categoryKey])) {
                   // Get draggable weight and add to array
                   // with 'draggable' key if it exists
-
                   $draggable = $this->getDraggableWeight($category['id'], $entity, $exposedFilters);
-
-                  if ($draggable && is_array($data[$entityKey][$fieldKey][$categoryKey])) {
+                  if ($draggable) {
                     $data[$entityKey][$fieldKey][$categoryKey]['draggable'] = $draggable;
-                  } else {
-                    $data[$entityKey][$fieldKey][$categoryKey] = $draggable;
                   }
+                  continue;
+                }
+
+                if (!(int) $category['id']) {
+                  continue;
+                }
+
+                $draggable = $this->getDraggableWeight($category['id'], $entity, $exposedFilters);
+                $fieldData = $data[$entityKey][$fieldKey];
+                if (isset($fieldData['exposed_filters'])) {
+                  unset($fieldData['exposed_filters']);
+                }
+                $data[$entityKey][$fieldKey] = [];
+                if ($draggable) {
+                  array_push($data[$entityKey][$fieldKey], array_merge($fieldData, ['draggable' => $draggable]));
+                }
               }
           }
         // Remove the exposed filters data for each field
@@ -78,6 +91,9 @@ class OptimizedFieldSerializer extends NodeListSerializer {
    * @param array $exposedFilters The filters that are exposed on the view
    */
   private function getDraggableWeight($tid, $entityData = [], $exposedFilters = []) {
+    if (!(int) $tid) {
+      return false;
+    }
     $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $term = Term::load($tid);
 
@@ -94,7 +110,8 @@ class OptimizedFieldSerializer extends NodeListSerializer {
       $vid = $translatedArray['vid'][0]['target_id'];
 
       foreach ($exposedFilters as $key => $value) {
-        if ($value['vid'] === $vid) {
+        if ($value['vid'] === $vid ||
+            ($translatedArray['vid'][0]['target_id'] === $vid && $translatedArray['vid'][0]['target_id'] !== $value['vid'])) {
           $weight = \Drupal::service('webcomposer_rest_extra.draggable_views_weight')->getWeight(
             $value['view_id'],
             $value['display_id'],
