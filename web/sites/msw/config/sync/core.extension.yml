@@ -44,6 +44,9 @@ module:
   menu_ui: 0
   metatag: 0
   msw_config: 0
+  msw_front_blocks: 0
+  msw_terms_of_use: 0
+  msw_urls: 0
   node: 0
   options: 0
   paragraphs: 0
