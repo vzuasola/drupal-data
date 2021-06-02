@@ -1,0 +1,10 @@
+advanced__active_tab: edit-terms-of-use-setting
+header: header
+footer: footer
+content:
+  value: "<p>Terms of Use Content</p>\r\n"
+  format: basic_html
+value: null
+format: null
+accept: Accept
+decline: Decline
