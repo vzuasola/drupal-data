@@ -2,12 +2,6 @@ services:
   webcomposer_rest_extra.draggable_views_weight:
     class: Drupal\webcomposer_rest_extra\DraggableViews\WeightProvider
 
-  webcomposer_rest_extra.serialized_data:
-    class: Drupal\webcomposer_rest_extra\Normalizer\SerializedDataNormalizer
-    arguments: ['@entity.manager']
-    tags:
-      - { name: normalizer, priority: 9 }
-
   webcomposer_rest_extra.node_entity:
     class: Drupal\webcomposer_rest_extra\Normalizer\NodeEntityNormalizer
     arguments: ['@entity.manager']
