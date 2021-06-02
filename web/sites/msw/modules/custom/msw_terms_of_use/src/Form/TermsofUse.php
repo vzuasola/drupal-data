@@ -32,23 +32,52 @@ class TermsofUse extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state) {
-    $form['terms_of_use_form_general_config']['terms_of_use_header'] = [
+  public function form(array $form, FormStateInterface $form_state)
+  {
+    $form['advanced'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('General Configuration'),
+    ];
+
+    $this->termsofUseConfig($form);
+
+    return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function termsofUseConfig(array &$form)
+  {
+    $form['terms_of_use_setting'] = [
+      '#type' => 'details',
+      '#title' => t('Terms of Use Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['terms_of_use_setting']['terms_of_use'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Terms of Use'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['terms_of_use_setting']['terms_of_use']['header'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Header'),
-      '#default_value' => $this->get('terms_of_use_header'),
+      '#default_value' => $this->get('header'),
       '#translatable' => TRUE,
     ];
 
-    $form['terms_of_use_form_general_config']['terms_of_use_footer'] = [
+    $form['terms_of_use_setting']['terms_of_use']['footer'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Footer'),
-      '#default_value' => $this->get('terms_of_use_footer'),
+      '#default_value' => $this->get('footer'),
       '#translatable' => TRUE,
     ];
 
-    $body_content = $this->get('terms_of_use_content');
-    $form['terms_of_use_form_general_config']['terms_of_use_content'] = [
+    $body_content = $this->get('content');
+    $form['terms_of_use_setting']['terms_of_use']['content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Terms of Use Content'),
       '#default_value' => $body_content['value'],
@@ -56,20 +85,18 @@ class TermsofUse extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['terms_of_use_form_general_config']['terms_of_use_accept'] = [
+    $form['terms_of_use_setting']['terms_of_use']['accept'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Accept'),
-      '#default_value' => $this->get('terms_of_use_accept'),
+      '#default_value' => $this->get('accept'),
       '#translatable' => TRUE,
     ];
 
-    $form['terms_of_use_form_general_config']['terms_of_use_decline'] = [
+    $form['terms_of_use_setting']['terms_of_use']['decline'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Decline'),
-      '#default_value' => $this->get('terms_of_use_decline'),
+      '#default_value' => $this->get('decline'),
       '#translatable' => TRUE,
     ];
-
-    return $form;
   }
 }
