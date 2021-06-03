@@ -49,35 +49,34 @@ class TermsofUse extends FormBase {
    */
   private function termsofUseConfig(array &$form)
   {
-    $form['terms_of_use_setting'] = [
+    $form['header_setting'] = [
       '#type' => 'details',
-      '#title' => t('Terms of Use Configuration'),
+      '#title' => t('Header'),
       '#group' => 'advanced',
     ];
 
-    $form['terms_of_use_setting']['terms_of_use'] = [
+    $form['header_setting']['title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $this->get('title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['header_setting']['logo'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Logo URL'),
+      '#default_value' => $this->get('logo'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['content_setting'] = [
       '#type' => 'details',
-      '#title' => $this->t('Terms of Use'),
-      '#collapsible' => TRUE,
-      '#open' => TRUE,
-    ];
-
-    $form['terms_of_use_setting']['terms_of_use']['header'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Header'),
-      '#default_value' => $this->get('header'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['terms_of_use_setting']['terms_of_use']['footer'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Footer'),
-      '#default_value' => $this->get('footer'),
-      '#translatable' => TRUE,
+      '#title' => t('Content'),
+      '#group' => 'advanced',
     ];
 
     $body_content = $this->get('content');
-    $form['terms_of_use_setting']['terms_of_use']['content'] = [
+    $form['content_setting']['content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Terms of Use Content'),
       '#default_value' => $body_content['value'],
@@ -85,17 +84,32 @@ class TermsofUse extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['terms_of_use_setting']['terms_of_use']['accept'] = [
+    $form['content_setting']['accept'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Accept'),
       '#default_value' => $this->get('accept'),
       '#translatable' => TRUE,
     ];
 
-    $form['terms_of_use_setting']['terms_of_use']['decline'] = [
+    $form['content_setting']['decline'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Decline'),
       '#default_value' => $this->get('decline'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['footer_setting'] = [
+      '#type' => 'details',
+      '#title' => t('Footer'),
+      '#group' => 'advanced',
+    ];
+
+    $footer_content = $this->get('content');
+    $form['footer_setting']['footer'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Terms of Use Footer'),
+      '#default_value' => $footer_content['value'],
+      '#format' => $footer_content['format'],
       '#translatable' => TRUE,
     ];
   }
