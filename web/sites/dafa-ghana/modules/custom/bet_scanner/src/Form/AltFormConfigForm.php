@@ -135,44 +135,6 @@ class AltFormConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['alternative_form_integration_config']['history_limit'] = [
-      '#type' => 'textfield',
-      '#title' => t('History Limit'),
-      '#required' => TRUE,
-      '#description' => $this->t('History Limit'),
-      '#default_value' => $this->get('history_limit'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['alternative_form_integration_config']['history_limit'] = [
-      '#type' => 'textfield',
-      '#title' => t('History Limit'),
-      '#required' => TRUE,
-      '#description' => $this->t('History Limit'),
-      '#default_value' => $this->get('history_limit'),
-      '#translatable' => TRUE,
-    ];
-
-    $content = $this->get('alt_form_success_message');
-    $form['alternative_form_integration_config']['alt_form_success_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Alternative Form Success Message'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
-    $content = $this->get('alt_form_error_message');
-    $form['alternative_form_integration_config']['alt_form_error_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Alternative Form Error Message'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
     $content = $this->get('kbs_message');
     $form['alternative_form_integration_config']['kbs_message'] = [
       '#type' => 'textarea',
@@ -192,6 +154,15 @@ class AltFormConfigForm extends FormBase {
       '#type' => 'details',
       '#title' => t("History"),
       '#group' => 'bet_scanner_group',
+    ];
+
+    $form['bet_history_config']['history_limit'] = [
+      '#type' => 'textfield',
+      '#title' => t('History Limit'),
+      '#required' => TRUE,
+      '#description' => $this->t('History Limit'),
+      '#default_value' => $this->get('history_limit'),
+      '#translatable' => TRUE,
     ];
 
     $form['bet_history_config']['history_title'] = [
@@ -263,6 +234,16 @@ class AltFormConfigForm extends FormBase {
       '#required' => TRUE,
       '#description' => $this->t('Label to be used in Previous navigation button.'),
       '#default_value' => $this->get('nav_previous_label', "Previous"),
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('history_empty_message');
+    $form['bet_history_config']['history_empty_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('History Empty Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
   }

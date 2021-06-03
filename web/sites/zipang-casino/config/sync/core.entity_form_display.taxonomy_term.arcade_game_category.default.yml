@@ -1,0 +1,73 @@
+uuid: 03bc40a1-bc62-4ae2-86a0-06fd99e853ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.arcade_game_category.field_category_id
+    - field.field.taxonomy_term.arcade_game_category.field_category_image_banner
+    - field.field.taxonomy_term.arcade_game_category.field_enable
+    - field.field.taxonomy_term.arcade_game_category.field_hide_name
+    - image.style.thumbnail
+    - taxonomy.vocabulary.arcade_game_category
+  module:
+    - image
+    - text
+id: taxonomy_term.arcade_game_category.default
+targetEntityType: taxonomy_term
+bundle: arcade_game_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_category_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_category_image_banner:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_enable:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_name:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true

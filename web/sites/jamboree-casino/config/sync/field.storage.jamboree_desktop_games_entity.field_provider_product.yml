@@ -1,0 +1,20 @@
+uuid: be99ef68-ac34-4b2e-bee5-498fafa8b6a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_games
+    - taxonomy
+id: jamboree_desktop_games_entity.field_provider_product
+field_name: field_provider_product
+entity_type: jamboree_desktop_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
