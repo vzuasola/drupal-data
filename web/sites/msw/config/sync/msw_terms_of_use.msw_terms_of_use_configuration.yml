@@ -1,8 +1,4 @@
-advanced__active_tab: edit-footer-setting
-header: header
-footer:
-  value: "<p>Terms of Use Footer</p>\r\n"
-  format: basic_html
+advanced__active_tab: edit-header-setting
 content:
   value: "<p>Terms of Use Content</p>\r\n"
   format: basic_html
@@ -11,4 +7,4 @@ format: null
 accept: Accept
 decline: Decline
 title: 'Terms of Use'
-logo: 'https://itct-msw-www.elysium-dfbt.com/en'
+logo: /images/msw-logo.png

@@ -97,20 +97,5 @@ class TermsofUse extends FormBase {
       '#default_value' => $this->get('decline'),
       '#translatable' => TRUE,
     ];
-
-    $form['footer_setting'] = [
-      '#type' => 'details',
-      '#title' => t('Footer'),
-      '#group' => 'advanced',
-    ];
-
-    $footer_content = $this->get('content');
-    $form['footer_setting']['footer'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Terms of Use Footer'),
-      '#default_value' => $footer_content['value'],
-      '#format' => $footer_content['format'],
-      '#translatable' => TRUE,
-    ];
   }
 }
