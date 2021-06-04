@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_game_code
     - field.field.node.games.field_game_landscape_size
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
@@ -13,6 +14,8 @@ dependencies:
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_maintenance_end_date
     - field.field.node.games.field_maintenance_start_date
+    - field.field.node.games.field_redirection_inner_page
+    - field.field.node.games.field_select_game_tile_action
     - field.field.node.games.field_target
     - field.field.node.games.field_use_game_loader
     - node.type.games
@@ -50,6 +53,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_game_code:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_game_landscape_size:
     weight: 110
@@ -124,6 +135,21 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_redirection_inner_page:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_select_game_tile_action:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_target:
     weight: 104
