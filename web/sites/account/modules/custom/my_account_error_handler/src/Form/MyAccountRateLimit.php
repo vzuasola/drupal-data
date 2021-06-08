@@ -40,20 +40,19 @@ class MyAccountRateLimit extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
+    // Cant-Login - Username
     $form['rate_limit_username'] = [
       '#type' => 'details',
       '#title' => 'Forgot Username',
-      '#group' => 'forgot_username',
+      '#group' => 'rate_limit',
       '#open' => TRUE,
     ];
-
     $form['rate_limit_username']['rate_limit_username_interval'] = [
       '#type' => 'textfield',
       '#title' => t('Interval'),
       '#description' => $this->t('Rate limit interval in seconds'),
       '#default_value' => $this->get('rate_limit_username_interval') ?? 60,
     ];
-
     $form['rate_limit_username']['rate_limit_username_operation'] = [
       '#type' => 'textfield',
       '#title' => t('Rate Limit Operation'),
@@ -61,11 +60,24 @@ class MyAccountRateLimit extends FormBase {
       '#default_value' => $this->get('rate_limit_username_operation') ?? 1,
     ];
 
-    $form['rate_limit_username']['rate_limit_username_message'] = [
-      '#type' => 'textarea',
-      '#title' => t('Message'),
-      '#description' => $this->t('Message to display once player reached the limit operation.'),
-      '#default_value' => $this->get('rate_limit_username_message'),
+    // SMS Flooding
+    $form['rate_limit_sms'] = [
+      '#type' => 'details',
+      '#title' => 'SMS Flood',
+      '#group' => 'rate_limit',
+      '#open' => TRUE,
+    ];
+    $form['rate_limit_sms']['rate_limit_sms_interval'] = [
+      '#type' => 'textfield',
+      '#title' => t('Interval'),
+      '#description' => $this->t('Rate limit interval in seconds'),
+      '#default_value' => $this->get('rate_limit_sms_interval') ?? 60,
+    ];
+    $form['rate_limit_sms']['rate_limit_sms_operation'] = [
+      '#type' => 'textfield',
+      '#title' => t('Rate Limit Operation'),
+      '#description' => $this->t('Allowed Request'),
+      '#default_value' => $this->get('rate_limit_sms_operation') ?? 1,
     ];
 
     return $form;
