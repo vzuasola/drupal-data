@@ -1,0 +1,22 @@
+add zipang all games entity entities:
+  title: 'Create new Zipang all games entity entities'
+
+administer zipang all games entity entities:
+  title: 'Administer Zipang all games entity entities'
+  description: 'Allow to access the administration form to configure Zipang all games entity entities.'
+  restrict access: true
+
+delete zipang all games entity entities:
+  title: 'Delete Zipang all games entity entities'
+
+edit zipang all games entity entities:
+  title: 'Edit Zipang all games entity entities'
+
+access zipang all games entity overview:
+  title: 'Access the Zipang all games entity overview page'
+
+view published zipang all games entity entities:
+  title: 'View published Zipang all games entity entities'
+
+view unpublished zipang all games entity entities:
+  title: 'View unpublished Zipang all games entity entities'
