@@ -50,7 +50,7 @@ class ZipangLoginConfigForm extends FormBase {
 
     $form['login_form'] = [
       '#type' => 'details',
-      '#title' => $this->t('Zipang Login Form Configuration test Mher'),
+      '#title' => $this->t('Zipang Login Form Configuration'),
       '#group' => 'zipang_settings_tab',
     ];
 

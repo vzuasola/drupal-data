@@ -1,4 +1,4 @@
-name: All Games Configurations Test
+name: All Games Configurations
 type: module
 description: All Games Page Configurations
 core: 8.x
