@@ -55,6 +55,13 @@ class TermsofUse extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['header_setting']['enable_terms_of_use'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Terms of Use - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_terms_of_use'),
+      '#translatable' => TRUE,
+    ];
+
     $form['header_setting']['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
