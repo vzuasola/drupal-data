@@ -105,6 +105,15 @@ class AltFormConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $body_content = $this->get('success_message');
+    $form['alternative_form_general_config']['success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
@@ -142,6 +151,15 @@ class AltFormConfigForm extends FormBase {
       '#description' => $this->t('Please fill each status and its value in single row.'),
       '#default_value' => $content,
       '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['alternative_form_integration_config']['kbs_mock_status'] = [
+      '#type' => 'textfield',
+      '#title' => t('Mocked Status Code'),
+      '#required' => FALSE,
+      '#description' => $this->t('The Mocked Status Code should be one of the KBS Statuses value, e.g. Accepted, Duplicate, or InvalidParameter'),
+      '#default_value' => $this->get('kbs_mock_status'),
       '#translatable' => TRUE,
     ];
   }

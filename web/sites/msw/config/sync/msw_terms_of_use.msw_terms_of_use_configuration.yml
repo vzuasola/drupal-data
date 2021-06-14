@@ -1,0 +1,10 @@
+advanced__active_tab: edit-header-setting
+content:
+  value: "<p>Terms of Use Content</p>\r\n"
+  format: basic_html
+value: null
+format: null
+accept: Accept
+decline: Decline
+title: 'Terms of Use'
+logo: /images/msw-logo.png

@@ -4,5 +4,3 @@ description: Extra Rest resources to enable access entities configuration
 package: Web Composer
 
 core: '8.x'
-
-
