@@ -108,6 +108,13 @@ class ZipangAllGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['general']['all_games_show_less_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show Less Label'),
+      '#default_value' => $this->get('all_games_show_less_label'),
+      '#translatable' => TRUE,
+    ];
+
     $form['general']['all_games_searchbox_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search Box Label'),
