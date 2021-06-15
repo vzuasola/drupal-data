@@ -1,10 +1,28 @@
 ignored_config_entities:
-  - 'webform.webform.*'
-  - 'webcomposer_config.*'
-  - 'system.menu.*'
-  - 'block.*'
-  - 'filter.*'
-  - 'language.*'
-  - 'devel.*'
+  0: msw_config.cant_login_configuration
+  2: core.base_field_override.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.user_id
+  4: core.entity_form_display.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
+  6: core.entity_view_display.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
+  8: 'field.field.webcomposer_slider_v2_entity.*'
+  10: 'field.storage.webcomposer_slider_v2_entity.*'
+  12: views.view.webcomposer_slider_ver2
+  14: webcomposer_affilates.affiliate_entity.btag
+  16: rest.resource.affiliate_rest_resource
+  18: system.action.user_add_role_action.test
+  20: system.action.user_remove_role_action.test
+  22: user.role.test
+  24: 'webcomposer_form_manager.form.msw_registration_form.*'
+  26: 'webcomposer_form_manager.form.msw_reset_password_form.*'
+  28: "field.field.paragraph.right_side_block_content.field_image\t"
+  30: field.field.left_floating_banner_entity.left_floating_banner_entity.field_image
+  32: field.field.paragraph.right_side_block_content.field_image
+  34: 'webcomposer_form_manager.form.msw_forgot_password_form.*'
+  36: 'language.content_settings.*'
+  38: webcomposer_config.announcements_configuration
+  40: webcomposer_config.footer_configuration
+  42: webcomposer_config.header_configuration
+  44: webcomposer_config.login_configuration
+  46: msw_config.general_configuration
+  48: msw_terms_of_use.msw_terms_of_use_configuration
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
