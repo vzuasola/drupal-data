@@ -29,6 +29,8 @@ permissions:
   - 'access language th'
   - 'access language vi'
   - 'access language zh-hans'
+  - 'access language bn'
+  - 'access language pk'
   - 'access site-wide contact form'
   - 'administer rest resources'
   - 'restful get affiliate_rest_resource'
