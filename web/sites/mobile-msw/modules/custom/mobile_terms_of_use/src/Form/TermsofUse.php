@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\msw_terms_of_use\Form;
+namespace Drupal\mobile_terms_of_use\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,24 +9,25 @@ use Drupal\Core\Form\FormStateInterface;
  * MSW terms of use configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "msw_terms_of_use",
+ *   id = "mobile_terms_of_use",
  *   route = {
  *     "title" = "Terms of Use Configuration",
- *     "path" = "/admin/config/msw/terms_of_use/configuration",
+ *     "path" = "/admin/config/mobile/terms_of_use/configuration",
  *   },
  *   menu = {
  *     "title" = "Terms of Use Configuration",
  *     "description" = "Provides configuration for Terms of Use",
- *     "parent" = "msw_config.list",
+ *     "parent" = "mobile_config.list",
  *   },
  * )
  */
+
 class TermsofUse extends FormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['msw_terms_of_use.msw_terms_of_use_configuration'];
+    return ['mobile_terms_of_use.mobile_terms_of_use_configuration'];
   }
 
   /**

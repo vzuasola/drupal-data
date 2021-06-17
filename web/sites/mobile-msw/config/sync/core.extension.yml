@@ -58,6 +58,7 @@ module:
   mobile_promotions: 0
   mobile_sponsor_list: 0
   mobile_sponsor_list_v2: 0
+  mobile_terms_of_use: 0
   node: 0
   options: 0
   paragraphs: 0
