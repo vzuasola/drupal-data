@@ -54,7 +54,8 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'lottoland' => 'Lottoland',
     'onegame' => 'OneGame',
     'jsystem' => 'JSystem',
-    'fghub_gaming' => 'FGHub Gaming'
+    'fghub_gaming' => 'FGHub Gaming',
+    'ptplus' => 'PTPlus Playtech',
   ];
 
   protected function getEditableConfigNames() {
