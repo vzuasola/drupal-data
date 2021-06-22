@@ -1,6 +1,6 @@
 field_settings:
-  label: Town/City
-  placeholder: Town/City
+  label: Username
+  placeholder: Username
 field_validations:
   required:
     enable: 0
