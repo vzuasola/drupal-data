@@ -6,13 +6,14 @@ dependencies:
     - field.storage.taxonomy_term.field_game_provider_image_banner
     - taxonomy.vocabulary.game_provider
   module:
+    - content_translation
     - image
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: taxonomy_term.game_provider.field_game_provider_image_banner
 field_name: field_game_provider_image_banner
 entity_type: taxonomy_term
@@ -42,3 +43,4 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
 field_type: image
+
