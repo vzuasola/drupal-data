@@ -43,3 +43,4 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
 field_type: image
+
