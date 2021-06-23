@@ -1,6 +1,6 @@
 field_settings:
-  label: Town/City
-  placeholder: Town/City
+  label: Captcha
+  placeholder: Captcha
 field_validations:
   required:
     enable: 0
