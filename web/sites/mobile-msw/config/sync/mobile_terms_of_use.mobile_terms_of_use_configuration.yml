@@ -1,0 +1,11 @@
+advanced__active_tab: edit-content-setting
+enable_terms_of_use: 1
+title: 'Terms of Use'
+logo: /images/msw-logo.png
+content:
+  value: "<ol>\r\n\t<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>\r\n\t<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>\r\n</ol>\r\n"
+  format: basic_html
+value: null
+format: null
+accept: 'I Accept'
+decline: 'I Decline'

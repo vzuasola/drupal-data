@@ -1,0 +1,5 @@
+name: All Games Configurations
+type: module
+description: All Games Page Configurations
+core: 8.x
+package: Custom

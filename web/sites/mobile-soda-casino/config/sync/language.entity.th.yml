@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: ภาษาไทย
+    webcomposer_language_custom_label: Thai
 id: th
 label: 'Thai Language'
 direction: ltr
-weight: -7
+weight: -8
 locked: false
