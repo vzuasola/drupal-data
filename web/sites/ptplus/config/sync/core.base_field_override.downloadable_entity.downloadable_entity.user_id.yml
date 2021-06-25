@@ -1,0 +1,20 @@
+uuid: 4ebb4b2d-ea0c-4e88-a9c3-cff27ae20121
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_downloadables
+id: downloadable_entity.downloadable_entity.user_id
+field_name: user_id
+entity_type: downloadable_entity
+bundle: downloadable_entity
+label: 'Authored by'
+description: 'The user ID of author of the Downloadable entity entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
