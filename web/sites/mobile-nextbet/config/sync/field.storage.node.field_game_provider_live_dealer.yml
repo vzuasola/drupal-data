@@ -26,6 +26,9 @@ settings:
     -
       value: asia_gaming
       label: 'Asia Gaming'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
   allowed_values_function: ''
 module: options
 locked: false
