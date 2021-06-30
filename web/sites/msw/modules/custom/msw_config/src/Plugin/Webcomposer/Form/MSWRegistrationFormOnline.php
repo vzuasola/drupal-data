@@ -39,33 +39,6 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
      */
     public function getFields() {
       return [
-        'back_button' => [
-          'name' => 'Back Button',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Back Button Markup',
-              '#type' => 'textarea',
-              '#description' => 'HTML markup for Back Button.',
-              '#default_value' => '<span class="back-btn btn-small btn"' .
-                ' style="float:right; margin:0 22px 10px; display:none">Back</span>',
-            ],
-          ],
-        ],
-
-        'column_1_open' => [
-          'name' => 'First column markup open',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'First column markup open',
-              '#type' => 'textarea',
-              '#description' => 'Opening the first column of registration form',
-              '#default_value' => '<div>',
-            ],
-          ],
-        ],
-
         'last_name' => [
           'name' => 'Last Name',
           'type' => 'textfield',
@@ -450,32 +423,6 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
-        'column_1_close' => [
-          'name' => 'First column markup closing',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'First column markup closing',
-              '#type' => 'textarea',
-              '#description' => 'closing the first column of registration form',
-              '#default_value' => '</div>',
-            ],
-          ],
-        ],
-
-        'column_2_open' => [
-          'name' => 'Second column markup open',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Second column markup open',
-              '#type' => 'textarea',
-              '#description' => 'Opening the Second column of registration form',
-              '#default_value' => '<div>',
-            ],
-          ],
-        ],
-
         'username' => [
           'name' => 'Username',
           'type' => 'textfield',
@@ -729,59 +676,6 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             ],
           ],
         ],
-
-        // 'bonus_code' => [
-        //   'name' => 'Bonus Code',
-        //   'type' => 'textfield',
-        //   'settings' => [
-        //     'label' => [
-        //       '#title' => 'Bonus Code label',
-        //       '#type' => 'textfield',
-        //       '#description' => 'label for Bonus Code field',
-        //     ],
-        //     'placeholder' => [
-        //       '#title' => 'Bonus code placeholder label',
-        //       '#type' => 'textfield',
-        //       '#description' => 'label for Bonus code field placeholder',
-        //     ],
-        //     'annotation' => [
-        //       '#title' => 'Bonus code Annotation text',
-        //       '#type' => 'textarea',
-        //       '#description' => 'field annotation that will be displayed on focus',
-        //     ],
-        //     'is_hidden' => [
-        //       '#title' => 'Hide Bonus Code',
-        //       '#type' => 'checkbox',
-        //       '#description' => 'Enable or disable bonus code',
-        //     ],
-        //   ],
-        // ],
-
-        // 'accept_terms' => [
-        //   'name' => 'Accept Terms Markup',
-        //   'type' => 'checkbox',
-        //   'settings' => [
-        //     'markup' => [
-        //       '#title' => 'Accept Terms Text',
-        //       '#type' => 'textarea',
-        //       '#description' => 'A Markup text for accept terms and conditions beside the submit button',
-        //       '#default_value' => 'I have read and accept the Terms and Condition',
-        //     ],
-        //   ],
-        // ],
-
-        // 'legal_age' => [
-        //   'name' => 'Legal Age Markup',
-        //   'type' => 'checkbox',
-        //   'settings' => [
-        //     'markup' => [
-        //       '#title' => 'Legal Age Text',
-        //       '#type' => 'textarea',
-        //       '#description' => 'A Markup text for accept terms and conditions beside the submit button',
-        //       '#default_value' => 'I am at least 18 years old',
-        //     ],
-        //   ],
-        // ],
 
         'submit' => [
           'name' => 'Submit',
