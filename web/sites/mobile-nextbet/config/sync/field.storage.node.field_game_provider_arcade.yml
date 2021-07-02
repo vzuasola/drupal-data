@@ -20,6 +20,9 @@ settings:
     -
       value: cq9
       label: CQ9
+    -
+      value: micro_gaming
+      label: Microgaming
   allowed_values_function: ''
 module: options
 locked: false
