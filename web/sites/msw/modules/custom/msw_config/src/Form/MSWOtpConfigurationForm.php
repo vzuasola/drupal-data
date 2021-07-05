@@ -56,14 +56,6 @@ class MSWOtpConfigurationForm extends FormBase
             '#group' => 'advanced',
         ];
 
-        $form['otp_config']['otp_enable'] = [
-            '#type' => 'checkbox',
-            '#title' => $this->t('Enable OTP Feature'),
-            '#description' => $this->t('Check to enable otp feature'),
-            '#default_value' => $this->get('otp_enable'),
-            '#translatable' => TRUE,
-        ];
-
         $form['otp_config']['otp_popup_header'] = [
             '#type' => 'textfield',
             '#title' => $this->t('OTP Form Popup Header'),
