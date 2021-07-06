@@ -1,0 +1,8 @@
+uuid: 3851bd19-ea8a-4e55-93d3-4ebdc01eb198
+langcode: ja
+status: true
+dependencies: {  }
+id: quicklinks-jp
+label: 'Quicklinks JP'
+description: ''
+locked: false
