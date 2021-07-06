@@ -258,6 +258,13 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['promotion_coupon']['coupon_code_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Title'),
+      '#default_value' => $this->get('coupon_code_title') ?? "Coupon Code",
+      '#translatable' => TRUE,
+    ];
+
     $form['promotion_coupon']['coupon_code'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Coupon Code Label'),
