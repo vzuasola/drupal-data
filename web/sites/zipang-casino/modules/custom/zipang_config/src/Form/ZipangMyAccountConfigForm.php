@@ -251,5 +251,52 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#default_value' => $this->get('address') ?? "Address",
       '#translatable' => TRUE,
     ];
+
+    $form['promotion_coupon'] = [
+      '#type' => 'details',
+      '#title' => t('Promotion Coupon Labels'),
+      '#group' => 'advanced',
+    ];
+
+    $form['promotion_coupon']['coupon_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Label'),
+      '#default_value' => $this->get('coupon_code') ?? "Coupon Code",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_placeholder'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Placeholder Label'),
+      '#default_value' => $this->get('coupon_placeholder') ?? "Coupon Code",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Button Label'),
+      '#default_value' => $this->get('coupon_button_label') ?? "Redeem",
+      '#translatable' => TRUE,
+    ];
+
+    $suc = $this->get('success_message') ?? "Coupon code has been applied";
+    $form['promotion_coupon']['success_message'] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Success Message'),
+        '#default_value' => $suc,
+        '#format' => $suc['format'],
+        '#description' => 'Success Message to be display to the user.',
+        '#translatable' => TRUE,
+    ];
+
+    $err = $this->get('error_message') ?? "Coupon code has not been applied";
+    $form['promotion_coupon']['error_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Error Message'),
+      '#default_value' => $err,
+      '#format' => $err['format'],
+      '#description' => 'Error Message to be display to the user.',
+      '#translatable' => TRUE,
+    ];
   }
 }
