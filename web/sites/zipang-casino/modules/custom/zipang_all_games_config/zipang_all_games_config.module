@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_all_games_config.module. 
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/** 
+ * Implements hook_help().
+ */
+function zipang_all_games_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for thezipang_all_games_config module.
+    case 'help.page.zipang_all_games_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('All Games Page Configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}

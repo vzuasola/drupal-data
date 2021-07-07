@@ -1,5 +1,5 @@
-bet_scanner_group__active_tab: edit-bet-history-config
-page_header_title: 'Bet Receipt Alternative Form'
+bet_scanner_group__active_tab: edit-alternative-form-general-config
+page_header_title: 'Bet Receipt Scanner'
 bet_receipt_label: 'Bet Receipt Number'
 submit_button_label: Submit
 clear_button_label: Clear
@@ -8,11 +8,11 @@ information_blurb_content:
   format: basic_html
 value: null
 format: null
-enable_bet_scanner: 1
-alternative_form_text: 'Doesn''t work? Try this form'
+enable_bet_scanner: 0
+alternative_form_text: ''
 page_header_bet_scanner_title: 'Bet Receipt Scanner'
 page_content:
-  value: "<p class=\"text-align-center\">Please scan your Bet Receipt and click Start. If you want to repeat scanning, please click Reset. Select rear or front camera by updating the Change video source. For any question or concerns please contact <a href=\"mailto:customercare@dafabet.com.ke\">Customer Support</a>.\r\n</p>\r\n"
+  value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\r\n"
   format: basic_html
 kbs_end_point: 'https://stg-kbs-gateway-6rjsq4b3aq-an.a.run.app/kbs/v1/submit'
 kbs_api_key: AIzaSyCkO9YJ208qwi4BFqoNw0f4GlYK26IC7EE

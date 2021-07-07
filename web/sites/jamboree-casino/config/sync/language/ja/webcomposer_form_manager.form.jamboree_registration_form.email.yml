@@ -1,5 +1,5 @@
 field_settings:
-  label: 'メールアドレス ※iCloud.com、YahooBB、Yahoo のメールアドレスはお避け下さい。'
+  label: 'メールアドレス ※iCloud.com、me.com、mac.com のメールアドレスはお避け下さい。'
 field_validations:
   required:
     error_message: 'Field should be required'
@@ -25,7 +25,3 @@ field_validations:
     error_message: 'This field only accepts specific characters.'
   valid_date:
     error_message: 'Date is invalid'
-  invalid_words:
-    error_message: 'Invalid/not allowed characters'
-  valid_languages:
-    error_message: 'This field only accepts specific characters.'

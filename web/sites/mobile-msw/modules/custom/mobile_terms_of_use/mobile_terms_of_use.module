@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_terms_of_use.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_terms_of_use_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_terms_of_use module.
+    case 'help.page.mobile_terms_of_use':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Terms of Use') . '</p>';
+      return $output;
+
+    default:
+  }
+}

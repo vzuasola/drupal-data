@@ -5,6 +5,8 @@ namespace Drupal\zipang_config\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\file\Entity\File;
+
 
 /**
  * My module form plugin
@@ -53,6 +55,87 @@ class ZipangGamesConfigForm extends FormBase {
       '#type' => 'details',
       '#title' => t('General Config'),
       '#group' => 'advanced',
+    ];
+
+    $form['games']['arcade_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Title'),
+      '#default_value' => $this->get('arcade_games_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['arcade_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Search'),
+      '#default_value' => $this->get('arcade_games_search'),
+      '#description' => $this->t('Adds placeholder to Arcade page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Title'),
+      '#default_value' => $this->get('live_games_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Search'),
+      '#default_value' => $this->get('live_games_search'),
+      '#description' => $this->t('Adds placeholder to Live Games page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Live Games Page Banner - EN'),
+    ];
+
+    $form['games']['live_games_banner_en']['file_image_live_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Live Games Page Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_live_banner_en'),
+    ];
+
+    $form['games']['live_games_banner_en']['banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('banner_alt_text_en'),
+    ];
+
+    $form['games']['live_games_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Live Games Page Banner - JA'),
+    ];
+
+    $form['games']['live_games_banner_ja']['file_image_live_banner_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Live Games Page Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_live_banner_ja'),
+    ];
+
+    $form['games']['live_games_banner_ja']['banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('banner_alt_text_ja'),
+    ];
+
+    $form['games']['live_games_description'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Live Games Page Description'),
+      '#default_value' => $this->get('live_games_description'),
+      '#translatable' => TRUE,
     ];
 
     $d = $this->get('no_result_msg');
@@ -135,15 +218,50 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $e = $this->get('mixed_game_lobby_all_banner');
-
-    $form['mixed_game_lobby_all']['mixed_game_lobby_all_banner'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Top Block Banner'),
-      '#default_value' => $e['value'],
-      '#format' => $e['format'],
-      '#translatable' => TRUE,
+    $form['mixed_game_lobby_all']['mixed_game_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - EN')
     ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_en']['file_image_mixed_game_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_mixed_game_en'),
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_en']['mixed_game_banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('mixed_game_banner_alt_text_en'),
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - JA')
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_banner_ja']['file_image_mixed_game_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_mixed_game_ja'),
+    ];
+
+   $form['mixed_game_lobby_all']['mixed_game_banner_ja']['mixed_game_banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('mixed_game_banner_alt_text_ja'),
+    ];
+
 
     $d = $this->get('mixed_game_lobby_all_desc');
 

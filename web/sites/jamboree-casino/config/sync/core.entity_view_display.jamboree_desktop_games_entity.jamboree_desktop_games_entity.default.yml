@@ -14,11 +14,14 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code_icore
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_filter
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_filter_games
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_icon_label
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_provider
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title_icon
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_type
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_provider_product
   module:
     - image
     - jamboree_desktop_games
@@ -120,6 +123,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_game_icon_label:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_game_provider:
     weight: 10
     label: above
@@ -153,8 +164,25 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_game_title_icon:
+    weight: 17
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_game_type:
     weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_provider_product:
+    weight: 19
     label: above
     settings:
       link: true

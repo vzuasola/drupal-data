@@ -64,6 +64,84 @@ class JamboreeGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['games']['arcade_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Search'),
+      '#default_value' => $this->get('arcade_games_search'),
+      '#description' => $this->t('Adds placeholder to Arcade page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Title'),
+      '#default_value' => $this->get('live_games_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Search'),
+      '#default_value' => $this->get('live_games_search'),
+      '#description' => $this->t('Adds placeholder to Live Games page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
+    $config = $this->config('jamboree_config.games_page_configuration');
+
+    $form['games']['live_games_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Live Games Page Banner - EN'),
+    ];
+
+    $form['games']['live_games_banner_en']['file_image_live_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Live Games Page Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $config->get('file_image_live_banner_en'),
+    ];
+
+    $form['games']['live_games_banner_en']['banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('banner_alt_text_en'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Live Games Page Banner - JA'),
+    ];
+
+    $form['games']['live_games_banner_ja']['file_image_live_banner_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Live Games Page Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $config->get('file_image_live_banner_ja'),
+    ];
+
+    $form['games']['live_games_banner_ja']['banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('banner_alt_text_ja'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_description'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Live Games Page Description'),
+      '#default_value' => $this->get('live_games_description'),
+      '#translatable' => TRUE,
+    ];
+
     $form['games']['no_result_msg'] = [
       '#type' => 'text_format',
       '#title' => $this->t('No Result Message'),
@@ -144,12 +222,48 @@ class JamboreeGamesConfigForm extends FormBase {
 
     $e = $this->get('mixed_game_lobby_all_banner');
 
-    $form['mixed_game_lobby_all']['mixed_game_lobby_all_banner'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Top Block Banner'),
-      '#default_value' => $e['value'],
-      '#format' => $e['format'],
-      '#translatable' => TRUE,
+    $form['mixed_game_lobby_all']['games_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - EN')
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_en']['file_image_games_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner Image'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_games_banner_en'),
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_en']['games_banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('games_banner_alt_text_en'),
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Top Block Banner - JA')
+    ];
+
+    $form['mixed_game_lobby_all']['games_banner_ja']['file_image_games_banner_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Top Block Banner Image'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_games_banner_ja'),
+    ];
+
+   $form['mixed_game_lobby_all']['games_banner_ja']['games_banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('games_banner_alt_text_ja'),
     ];
 
     $d = $this->get('mixed_game_lobby_all_desc');
@@ -162,4 +276,5 @@ class JamboreeGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
   }
+
 }

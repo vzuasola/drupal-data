@@ -1,0 +1,9 @@
+uuid: dcbf8d0d-2b44-454a-be13-dd4dca0a70ae
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Do6UB4wDyBS7odBBpQbkkGtx9nL4MnOIKy7MH4CSiog
+id: floating_banner_item
+label: 'Floating Banner Item'
+behavior_plugins: {  }

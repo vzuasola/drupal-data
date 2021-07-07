@@ -1,0 +1,11 @@
+name: Webcomposer Optimized Rest
+type: module
+description: Rest module for optimized games listing
+package: Web Composer
+
+core: '8.x'
+
+# Dependencies
+dependencies:
+  - rest_views
+  - webcomposer_rest_extra

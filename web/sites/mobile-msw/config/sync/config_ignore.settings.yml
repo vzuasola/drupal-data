@@ -16,5 +16,6 @@ ignored_config_entities:
   28: 'webcomposer_form_manager.*'
   30: mobile_config.cant_login_configuration
   32: 'core.entity_view_display.*'
+  34: 'mobile_terms_of_use.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

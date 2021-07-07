@@ -80,10 +80,45 @@ class JamboreeAllGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['general']['all_games_available_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Available Label'),
+      '#default_value' => $this->get('all_games_available_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['all_games_view_all_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('View All Label'),
+      '#default_value' => $this->get('all_games_view_all_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['all_games_go_back_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Go Back Label'),
+      '#default_value' => $this->get('all_games_go_back_label'),
+      '#translatable' => TRUE,
+    ];
+
     $form['general']['all_games_show_more_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Show More Label'),
       '#default_value' => $this->get('all_games_show_more_label'),
+      '#translatable' => TRUE,
+    ];
+    
+    $form['general']['all_games_show_less_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show Less Label'),
+      '#default_value' => $this->get('all_games_show_less_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['all_games_searchbox_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Search Box Label'),
+      '#default_value' => $this->get('all_games_searchbox_label'),
       '#translatable' => TRUE,
     ];
   }

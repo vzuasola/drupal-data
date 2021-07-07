@@ -11,5 +11,6 @@ ignored_config_entities:
   18: 'contact_us_config.*'
   20: 'jamboree_canonical.*'
   22: config_ignore.settings
+  24: 'webcomposer_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

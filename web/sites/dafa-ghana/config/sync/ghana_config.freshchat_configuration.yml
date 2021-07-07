@@ -8,8 +8,8 @@ app_logo: {  }
 bg_color: '#000'
 fg_color: '#ffffff'
 bg_img: {  }
-app_logo_url: 'http://dafa-ghana.drupal.local/sites/dafa-ghana/files/upload/twitter_0.png'
-bg_img_url: 'http://dafa-ghana.drupal.local/sites/dafa-ghana/files/upload/white-ps-logo_2.png'
+app_logo_url: ''
+bg_img_url: ''
 csat_action_yes: 'Yes'
 csat_action_no: 'No'
 csat_question: 'Are we able to help?'
