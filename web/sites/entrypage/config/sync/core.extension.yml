@@ -52,7 +52,7 @@ module:
   metatag: 0
   metatag_open_graph: 0
   node: 0
-  node_revisions_autoclean: 0
+  node_revision_delete: 0
   options: 0
   paragraphs: 0
   paragraphs_type_permissions: 0
