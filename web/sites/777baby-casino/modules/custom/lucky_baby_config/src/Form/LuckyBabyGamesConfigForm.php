@@ -119,6 +119,17 @@ class LuckyBabyGamesConfigForm extends FormBase {
       '#default_value' => $this->get('more_label') ?? "More",
       '#translatable' => TRUE,
     ];
+    $form['sportsbook_config'] = [
+      '#type' => 'details',
+      '#title' => t('Sportsbook Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['sportsbook_config']['sportsbook_link'] = [
+      '#type' => 'textfield',
+      '#title' => t('Sportsbook link'),
+      '#default_value' => $this->get('sportsbook_link') ?? "",
+    ];
   }
 
   private function sectionMixedGameLobbyAllConfig(array &$form) {
