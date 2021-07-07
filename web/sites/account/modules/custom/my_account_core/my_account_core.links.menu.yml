@@ -1,0 +1,30 @@
+my_account_core.cashier_config:
+  title: 'My Account Cashier'
+  description: 'My Account Cashier'
+  route_name: my_account_core.cashier_config
+  parent: my_account_form_profile.config
+  weight: 3
+my_account_core.livechat_config:
+  title: 'My Account Livechat'
+  description: 'My Account Live Chat Configurations'
+  route_name: my_account_core.livechat_config
+  parent: my_account_form_profile.config
+  weight: 4
+my_account_core.header_config:
+  title: 'My Account Header'
+  description: 'My Account Header Configurations'
+  route_name: my_account_core.header_config
+  parent: my_account_form_profile.config
+  weight: 5
+my_account_core.help_config:
+  title: 'My Account Help'
+  description: 'My Account Help Configurations'
+  route_name: my_account_core.help_config
+  parent: my_account_form_profile.config
+  weight: 6
+my_account_core.bonus_history_menu:
+  title: 'Bonus History'
+  description: 'Bonus history configuration'
+  route_name: my_account_core.bonus_history_config
+  parent: my_account_form_profile.config
+  weight: 7
