@@ -260,5 +260,17 @@ class LuckyBabyHeaderForm extends FormBase {
       '#default_value' => $this->get('lucky_baby_balance_tooltip_enabled'),
       '#translatable' => FALSE,
     ];
+
+    $form['sportsbook_config'] = [
+      '#type' => 'details',
+      '#title' => t('Sportsbook Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['sportsbook_config']['sportsbook_logo_link'] = [
+      '#type' => 'textfield',
+      '#title' => t('Sportsbook logo link'),
+      '#default_value' => $this->get('sportsbook_logo_link') ?? "",
+    ];
   }
 }
