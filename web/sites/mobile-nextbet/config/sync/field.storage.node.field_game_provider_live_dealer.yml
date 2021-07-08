@@ -26,6 +26,12 @@ settings:
     -
       value: asia_gaming
       label: 'Asia Gaming'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: micro_gaming
+      label: Microgaming
   allowed_values_function: ''
 module: options
 locked: false
