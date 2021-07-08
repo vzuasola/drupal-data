@@ -575,6 +575,66 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'id_number1' => [
+          'name' => 'ID Number 1',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'ID Number 1 Label',
+              '#type' => 'textfield',
+              '#description' => 'The label for the ID Number 1 field',
+              '#default_value' => 'ID Number 1',
+            ],
+            'placeholder' => [
+              '#title' => 'ID Number 1 placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for ID Number 1 field placeholder',
+              '#default_value' => 'ID Number 1',
+            ],
+            'annotation' => [
+              '#title' => 'ID Number 1 Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'upload_id_1' => [
+          'name' => 'UPLOAD ID 1',
+          'type' => 'file',
+          'settings' => [
+            'label' => [
+              '#title' => 'Upload ID',
+              '#default_value' => 'Upload ID',
+            ],
+            'accept-format' => [
+              '#title' => 'Accepted Format',
+              '#type' => 'textfield',
+              '#description' => 'Format files to accept',
+              '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
+            ],
+            'accept-size' => [
+              '#title' => 'Accepted file size',
+              '#type' => 'textfield',
+              '#description' => 'File size to accept in kb, 1mb = 1024kb',
+              '#default_value' => '1024',
+            ],
+          ],
+        ],
+
+        'btn_upload_id_1' => [
+          'name' => 'Button UPLOAD ID 1',
+          'type' => 'button',
+          'settings' => [
+            'label' => [
+              '#title' => 'UPLOAD ID 1 label',
+              '#type' => 'textfield',
+              '#description' => 'Label for the UPLOAD ID 1 button',
+              '#default_value' => 'UPLOAD ID 1',
+            ],
+          ],
+        ],
+
         'id2' => [
           'name' => 'Select ID 2',
           'type' => 'select',
@@ -606,30 +666,6 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
-        'id_number1' => [
-          'name' => 'ID Number 1',
-          'type' => 'textfield',
-          'settings' => [
-            'label' => [
-              '#title' => 'ID Number 1 Label',
-              '#type' => 'textfield',
-              '#description' => 'The label for the ID Number 1 field',
-              '#default_value' => 'ID Number 1',
-            ],
-            'placeholder' => [
-              '#title' => 'ID Number 1 placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for ID Number 1 field placeholder',
-              '#default_value' => 'ID Number 1',
-            ],
-            'annotation' => [
-              '#title' => 'ID Number 1 Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
         'id_number2' => [
           'name' => 'ID Number 2',
           'type' => 'textfield',
@@ -654,15 +690,25 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
-        'btn_upload_id_1' => [
-          'name' => 'Button UPLOAD ID 1',
-          'type' => 'button',
+        'upload_id_2' => [
+          'name' => 'UPLOAD ID 2',
+          'type' => 'file',
           'settings' => [
             'label' => [
-              '#title' => 'UPLOAD ID 1 label',
+              '#title' => 'Upload ID',
+              '#default_value' => 'Upload ID',
+            ],
+            'accept-format' => [
+              '#title' => 'Accepted Format',
               '#type' => 'textfield',
-              '#description' => 'Label for the UPLOAD ID 1 button',
-              '#default_value' => 'UPLOAD ID 1',
+              '#description' => 'Format files to accept',
+              '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
+            ],
+            'accept-size' => [
+              '#title' => 'Accepted file size',
+              '#type' => 'textfield',
+              '#description' => 'File size to accept in kb, 1mb = 1024kb',
+              '#default_value' => '1024',
             ],
           ],
         ],
@@ -676,44 +722,6 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#type' => 'textfield',
               '#description' => 'Label for the UPLOAD ID 2 button',
               '#default_value' => 'UPLOAD ID 2',
-            ],
-          ],
-        ],
-
-        'upload_id_1' => [
-          'name' => 'UPLOAD ID 1',
-          'type' => 'file',
-          'settings' => [
-            'accept-format' => [
-              '#title' => 'Accepted Format',
-              '#type' => 'textfield',
-              '#description' => 'Format files to accept',
-              '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
-            ],
-            'accept-size' => [
-              '#title' => 'Accepted file size',
-              '#type' => 'textfield',
-              '#description' => 'File size to accept in kb, 1mb = 1024kb',
-              '#default_value' => '1024',
-            ],
-          ],
-        ],
-
-        'upload_id_2' => [
-          'name' => 'UPLOAD ID 2',
-          'type' => 'file',
-          'settings' => [
-            'accept-format' => [
-              '#title' => 'Accepted Format',
-              '#type' => 'textfield',
-              '#description' => 'Format files to accept',
-              '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
-            ],
-            'accept-size' => [
-              '#title' => 'Accepted file size',
-              '#type' => 'textfield',
-              '#description' => 'File size to accept in kb, 1mb = 1024kb',
-              '#default_value' => '1024',
             ],
           ],
         ],
