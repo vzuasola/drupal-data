@@ -945,5 +945,4 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
         ],
       ];
     }
-
-  }
+}
