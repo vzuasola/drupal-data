@@ -137,5 +137,12 @@ class MSWOtpConfigurationForm extends FormBase
             '#description' => $this->t('Number of seconds the Resend button to be freezed'),
             '#default_value' => $this->get('otp_resend_button_freeze_time') ?? 5,
         ];
+
+        $form['otp_config']['otp_retry_limit_error_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('OTP Retries Limit Error Message'),
+            '#description' => $this->t('Message to display after retries limit exceeded.'),
+            '#default_value' => $this->get('otp_retry_limit_error_message') ?? 'You have reached maximum attempts',
+        ];
     }
 }
