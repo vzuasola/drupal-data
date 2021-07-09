@@ -183,6 +183,60 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'contact_preference_select' => [
+          'name' => 'Contact Preference Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Contact Preference Select',
+              '#type' => 'textfield',
+              '#description' => 'Contact Preference field',
+              '#default_value' => 'Contact Preference',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Contact Preference',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Select your Contact Preference...',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Contact Preference',
+              '#default_value' => 'contact-preference',
+            ],
+            'choices' => [
+              '#title' => 'Contact Preference Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>facebook|Facebook</small>',
+            ],
+          ],
+        ],
+
+        'contact_preference' => [
+          'name' => 'Contact Preference',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Contact Preference label',
+              '#type' => 'textfield',
+              '#description' => 'label for Contact Preference field',
+              '#default_value' => 'Contact Preference',
+            ],
+            'placeholder' => [
+              '#title' => 'Contact Preference placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Contact Preference field placeholder',
+              '#default_value' => 'Contact Preference',
+            ],
+            'annotation' => [
+              '#title' => 'Contact Preference Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
         'basic_information' => [
           'name' => 'Basic Information',
           'type' => 'markup',
@@ -298,6 +352,90 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'nationality_select' => [
+          'name' => 'Nationality Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Nationality Select',
+              '#type' => 'textfield',
+              '#description' => 'Nationality field',
+              '#default_value' => 'Nationality',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Nationality',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Nationality',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Nationality',
+              '#default_value' => 'nationality',
+            ],
+            'choices' => [
+              '#title' => 'Nationality Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>nationality|Nationality</small>',
+            ],
+          ],
+        ],
+
+        'source_of_income_select' => [
+          'name' => 'Source of Income Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Source of Income Select',
+              '#type' => 'textfield',
+              '#description' => 'Source of Income field',
+              '#default_value' => 'Source of Income',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Source of Income',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Source of Income',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Source of Income',
+              '#default_value' => 'source-of-income',
+            ],
+            'choices' => [
+              '#title' => 'Source of Income Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>salary|Salary</small>',
+            ],
+          ],
+        ],
+
+        'source_of_income_others' => [
+          'name' => 'Source of Income Others',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Source of Income Label',
+              '#type' => 'textfield',
+              '#description' => 'The label for the Source of Income field',
+              '#default_value' => '(Others) Source of Income',
+            ],
+            'placeholder' => [
+              '#title' => 'Source of Income placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Source of Income field placeholder',
+              '#default_value' => '(Others) Source of Income',
+            ],
+            'annotation' => [
+              '#title' => 'Source of Income Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
         'address_and_home_outlet' => [
           'name' => 'Address and Home Outlet',
           'type' => 'markup',
@@ -391,6 +529,36 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#title' => 'Address Annotation text',
               '#type' => 'textarea',
               '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'home_outlet_select' => [
+          'name' => 'Home Outlet Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Home Outlet Select',
+              '#type' => 'textfield',
+              '#description' => 'Home Outlet field',
+              '#default_value' => 'Home Outlet',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Home Outlet',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Home Outlet',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Home Outlet',
+              '#default_value' => 'home-outlet',
+            ],
+            'choices' => [
+              '#title' => 'Home Outlet Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>key|My Value</small>',
             ],
           ],
         ],
@@ -525,6 +693,30 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             ],
             'annotation' => [
               '#title' => 'Security Answer 2 Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'rfidpin' => [
+          'name' => 'RFID Pin',
+          'type' => 'password',
+          'settings' => [
+            'label' => [
+              '#title' => 'RFID Pin label',
+              '#type' => 'textfield',
+              '#description' => 'label for RFID Pin field',
+              '#default_value' => 'RFID Pin',
+            ],
+            'placeholder' => [
+              '#title' => 'RFID Pin placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for RFID Pin field placeholder',
+              '#default_value' => 'RFID Pin',
+            ],
+            'annotation' => [
+              '#title' => 'RFID Pin Annotation text',
               '#type' => 'textarea',
               '#description' => 'field annotation that will be displayed on focus',
             ],
