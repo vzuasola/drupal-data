@@ -1,0 +1,84 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  account_and_contact_details:
+    weight: '-10'
+  username:
+    weight: '-9'
+  password:
+    weight: '-8'
+  confirm_password:
+    weight: '-7'
+  password_meter:
+    weight: '-6'
+  email:
+    weight: '-5'
+  mobile_phone:
+    weight: '-4'
+  contact_preference_select:
+    weight: '-3'
+  contact_preference:
+    weight: '-2'
+  basic_information:
+    weight: '-1'
+  last_name:
+    weight: '0'
+  middle_name:
+    weight: '1'
+  first_name:
+    weight: '2'
+  birthdate:
+    weight: '3'
+  nationality_select:
+    weight: '4'
+  source_of_income_select:
+    weight: '5'
+  source_of_income_others:
+    weight: '6'
+  address_and_home_outlet:
+    weight: '7'
+  province:
+    weight: '8'
+  city:
+    weight: '9'
+  address:
+    weight: '10'
+  home_outlet_select:
+    weight: '11'
+  security_questions:
+    weight: '12'
+  security_questions_title:
+    weight: '13'
+  security_question_1:
+    weight: '14'
+  security_answer_1:
+    weight: '15'
+  security_question_2:
+    weight: '16'
+  security_answer_2:
+    weight: '17'
+  rfidpin:
+    weight: '18'
+  photos_ID:
+    weight: '19'
+  id1:
+    weight: '20'
+  id_number1:
+    weight: '21'
+  upload_id_1:
+    weight: '22'
+  btn_upload_id_1:
+    weight: '23'
+  id2:
+    weight: '24'
+  id_number2:
+    weight: '25'
+  upload_id_2:
+    weight: '26'
+  btn_upload_id_2:
+    weight: '27'
+  terms_and_conditions:
+    weight: '28'
+  submit:
+    weight: '29'
