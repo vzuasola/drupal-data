@@ -178,6 +178,11 @@ $sites['msw.drupal.dev'] = 'msw';
 $sites['msw.drupal.local'] = 'msw';
 $sites['msw.drupal.env'] = 'msw';
 
+// PTPlus instance
+$sites['ptplus.drupal.dev'] = 'ptplus';
+$sites['ptplus.drupal.local'] = 'ptplus';
+$sites['ptplus.drupal.env'] = 'ptplus';
+
 // dynamic sites.php values via environment variables
 
 if (file_exists(__DIR__ . '/sites.override.php')) {

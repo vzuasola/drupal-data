@@ -18,7 +18,7 @@ use Drupal\Core\Form\FormStateInterface;
  *     "title" = "OTP Configuration",
  *     "description" = "Provides OTP configuration",
  *     "parent" = "msw_config.list",
- *     "weight" = 10
+ *     "weight" = 30
  *   },
  * )
  */
@@ -37,7 +37,7 @@ class MSWOtpConfigurationForm extends FormBase
     {
         $form['advanced'] = [
             '#type' => 'vertical_tabs',
-            '#title' => t('OTP Configuration'),
+            '#title' => t('OTP Configurations'),
         ];
 
         $this->sectionPageSetting($form);
@@ -52,7 +52,7 @@ class MSWOtpConfigurationForm extends FormBase
     {
         $form['otp_config'] = [
             '#type' => 'details',
-            '#title' => $this->t('OTP Configuration'),
+            '#title' => $this->t('OTP Configurations'),
             '#group' => 'advanced',
         ];
 
@@ -63,18 +63,13 @@ class MSWOtpConfigurationForm extends FormBase
             '#default_value' => $this->get('otp_popup_header') ?? 'Mobile Number Verification',
         ];
 
+        $otp_blurb = $this->get('otp_blurb');
         $form['otp_config']['otp_blurb'] = [
-            '#type' => 'text_format',
-            '#title' => $this->t('Blurb'),
-            '#description' => $this->t('OTP Page Blurb'),
-            '#default_value' => $this->get('otp_blurb') ?? 'Blurb text goes here',
-        ];
-
-        $form['otp_config']['otp_text'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('OTP Text'),
-            '#description' => $this->t('This will be the OTP text above the OTP field input'),
-            '#default_value' => $this->get('otp_text') ?? 'Enter your OTP code.',
+          '#type' => 'text_format',
+          '#title' => $this->t('Content Blurb'),
+          '#default_value' => $otp_blurb['value'] ?? '<p>Please enter the OTP sent to your phone number, or contact our Customer Support at <a href="/emailto: support@megasportsworld.com" style="color: #eb6123" target="_blank">support@megasportsworld.com</a> for any enquires</p>',
+          '#format' => $otp_blurb['format'],
+          '#translatable' => TRUE,
         ];
 
         $form['otp_config']['otp_field_placeholder'] = [
@@ -117,7 +112,7 @@ class MSWOtpConfigurationForm extends FormBase
             '#type' => 'textarea',
             '#title' => $this->t('Registration and OTP error codes to status messages mapping'),
             '#description' => $this->t('Mapping of Registration RoW and OTP error codes ' .
-              'to its status message e.g. "LimitReached|Daily OTP request limit reached."'),
+                'to its status message e.g. "LimitReached|Daily OTP request limit reached."'),
             '#default_value' => $this->get('otp_error_code_mapping'),
             '#required' => TRUE,
         ];
@@ -134,6 +129,20 @@ class MSWOtpConfigurationForm extends FormBase
             '#title' => $this->t('OTP Resend Button - Retries Limit'),
             '#description' => $this->t('Number of OTP requests allowed per day, per player'),
             '#default_value' => $this->get('otp_retries_limit') ?? 5,
+        ];
+
+        $form['otp_config']['otp_resend_button_freeze_time'] = [
+            '#type' => 'number',
+            '#title' => $this->t('OTP Resend Button - freeze time'),
+            '#description' => $this->t('Number of seconds the Resend button to be freezed'),
+            '#default_value' => $this->get('otp_resend_button_freeze_time') ?? 5,
+        ];
+
+        $form['otp_config']['otp_retry_limit_error_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('OTP Retries Limit Error Message'),
+            '#description' => $this->t('Message to display after retries limit exceeded.'),
+            '#default_value' => $this->get('otp_retry_limit_error_message') ?? 'You have reached maximum attempts',
         ];
     }
 }

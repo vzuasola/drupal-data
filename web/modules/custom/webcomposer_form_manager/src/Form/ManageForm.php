@@ -253,6 +253,7 @@ class ManageForm extends FormBase {
         '#title_display' => 'invisible',
         '#default_value' => $weight,
         '#attributes' => ['class' => ['mytable-order-weight']],
+        '#delta' => 20,
       ];
 
       $form['table'][$key]['#weight'] = $weight;

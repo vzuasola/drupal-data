@@ -1,0 +1,17 @@
+uuid: 99035a21-a6be-484a-a840-5308f31a4995
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webform
+id: entity.webform
+plugin_id: 'entity:webform'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

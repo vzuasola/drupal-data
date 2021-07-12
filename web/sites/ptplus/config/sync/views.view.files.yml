@@ -1,44 +1,21 @@
-uuid: db3daa7e-2f4d-4b11-b171-8c422de8818d
+uuid: eb99ccdf-de10-4abb-9386-e73a790d474a
 langcode: en
 status: true
 dependencies:
-  config:
-    - block.block.languagedropdownswitcher_2
-    - field.storage.taxonomy_term.field_games_alias
-    - field.storage.taxonomy_term.field_games_category_logo
-    - field.storage.taxonomy_term.field_isordinarycategory
-    - field.storage.taxonomy_term.field_post_banner_height
-    - field.storage.taxonomy_term.field_post_banner_width
-    - field.storage.taxonomy_term.field_post_login_banner_widget
-    - field.storage.taxonomy_term.field_post_login_link
-    - field.storage.taxonomy_term.field_post_login_link_target
-    - field.storage.taxonomy_term.field_pre_banner_height
-    - field.storage.taxonomy_term.field_pre_banner_width
-    - field.storage.taxonomy_term.field_pre_login_banner_widget
-    - field.storage.taxonomy_term.field_pre_login_link
-    - field.storage.taxonomy_term.field_pre_login_link_target
-    - field.storage.taxonomy_term.field_publish_date
-    - field.storage.taxonomy_term.field_unpublish_date
-    - system.menu.admin
-    - taxonomy.vocabulary.games_category
   module:
-    - datetime
-    - draggableviews
-    - image
-    - node
-    - options
+    - file
     - rest
     - serialization
-    - taxonomy
     - user
-    - webcomposer_rest_extra
-id: games_category
-label: 'Games - Category'
-module: views
-description: ''
-tag: ''
-base_table: taxonomy_term_field_data
-base_field: tid
+_core:
+  default_config_hash: rRWxAX-IQkJ5viACQRovRkC784EyCl9493GU_G23n2Q
+id: files
+label: Files
+module: file
+description: 'Find and manage files.'
+tag: default
+base_table: file_managed
+base_field: fid
 core: 8.x
 display:
   default:
@@ -48,8 +25,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access files overview'
       cache:
         type: tag
         options: {  }
@@ -64,7 +42,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Filter
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -74,10 +52,13 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 10
+          items_per_page: 50
           offset: 0
           id: 0
-          total_pages: null
+          total_pages: 0
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -86,337 +67,96 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
-      style:
-        type: serializer
-      row:
-        type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
-      fields:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
-        tid_1:
-          id: tid_1
-          table: taxonomy_term_field_data
-          field: tid
-          relationship: none
-          group_type: count_distinct
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
-          click_sort_column: value
-          type: number_integer
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
-          plugin_id: field
-      filters:
-        vid:
-          id: vid
-          table: taxonomy_term_field_data
-          field: vid
-          value:
-            games_category: games_category
-          entity_type: taxonomy_term
-          entity_field: vid
-          plugin_id: bundle
-          group: 1
-        field_games_disable_value:
-          id: field_games_disable_value
-          table: taxonomy_term__field_games_disable
-          field: field_games_disable_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-        langcode_1:
-          id: langcode_1
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-      sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships:
-        reverse__node__field_games_list_category:
-          id: reverse__node__field_games_list_category
-          table: taxonomy_term_field_data
-          field: reverse__node__field_games_list_category
-          relationship: none
-          group_type: group
-          admin_label: field_games_list_category
-          required: false
-          entity_type: taxonomy_term
-          plugin_id: entity_reverse
-      arguments: {  }
-      display_extenders: {  }
-      group_by: true
-      filter_groups:
-        operator: OR
-        groups:
-          1: AND
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-        - url.query_args
-      tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      title: 'Games Categories Sorting'
-      defaults:
-        title: false
-        style: false
-        row: false
-        fields: false
-        sorts: false
-        access: false
-        pager: false
-        header: false
       style:
         type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
-          columns: {  }
-          default: ''
-          info: {  }
           override: true
           sticky: false
-          order: asc
           caption: ''
           summary: ''
           description: ''
-          empty_table: false
+          columns:
+            fid: fid
+            filename: filename
+            filemime: filemime
+            filesize: filesize
+            status: status
+            created: created
+            changed: changed
+            count: count
+          info:
+            fid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            filename:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            filemime:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-medium
+            filesize:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            status:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            created:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            changed:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            count:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-medium
+          default: changed
+          empty_table: true
       row:
         type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
       fields:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
           relationship: none
           group_type: group
           admin_label: ''
-          label: Category
+          label: Fid
           exclude: false
           alter:
             alter_text: false
@@ -436,8 +176,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: true
-            ellipsis: true
+            word_boundary: false
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -450,425 +190,6 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
-        draggableviews:
-          id: draggableviews
-          table: taxonomy_term_field_data
-          field: draggableviews
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Taxonomy term'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: taxonomy_term
-          entity_field: tid
-          plugin_id: draggable_views_field
-        operations:
-          id: operations
-          table: taxonomy_term_data
-          field: operations
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Operations links'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          destination: false
-          entity_type: taxonomy_term
-          plugin_id: entity_operations
-      path: admin/config/games-mobile/categories
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
-      menu:
-        type: normal
-        title: 'Manage Games Category'
-        description: 'Manage Games Game Categories'
-        expanded: false
-        parent: gts.list
-        weight: 0
-        context: '0'
-        menu_name: admin
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      pager:
-        type: none
-        options:
-          offset: 0
-      header:
-        entity_block:
-          id: entity_block
-          table: views
-          field: entity_block
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          target: languagedropdownswitcher_2
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user.permissions
-      tags: {  }
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: api/games_category
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: taxonomy_list_serializer
-        options:
-          uses_fields: false
-          formats:
-            json: json
-      row:
-        type: data_field
-        options:
-          field_options:
-            field_games_alias:
-              alias: ''
-              raw_output: false
-            name:
-              alias: ''
-              raw_output: false
-            tid:
-              alias: ''
-              raw_output: false
-            tid_1:
-              alias: ''
-              raw_output: false
-            field_isordinarycategory:
-              alias: ''
-              raw_output: false
-            field_publish_date:
-              alias: ''
-              raw_output: false
-            field_unpublish_date:
-              alias: ''
-              raw_output: false
-            field_games_category_logo:
-              alias: ''
-              raw_output: false
-            field_post_login_banner_widget:
-              alias: ''
-              raw_output: true
-            field_pre_login_banner_widget:
-              alias: ''
-              raw_output: true
-      fields:
-        field_games_alias:
-          id: field_games_alias
-          table: taxonomy_term__field_games_alias
-          field: field_games_alias
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
-        tid:
-          id: tid
-          table: taxonomy_term_field_data
-          field: tid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -891,17 +212,80 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
           plugin_id: field
-        tid_1:
-          id: tid_1
-          table: taxonomy_term_field_data
-          field: tid
+          entity_type: file
+          entity_field: fid
+        filename:
+          id: filename
+          table: file_managed
+          field: filename
           relationship: none
-          group_type: count_distinct
+          group_type: group
           admin_label: ''
-          label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_link
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+          entity_type: file
+          entity_field: filename
+        filemime:
+          id: filemime
+          table: file_managed
+          field: filemime
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'MIME type'
           exclude: false
           alter:
             alter_text: false
@@ -934,7 +318,279 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: file_filemime
+          plugin_id: field
+          entity_type: file
+          entity_field: filemime
+        filesize:
+          id: filesize
+          table: file_managed
+          field: filesize
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Size
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: file_size
+          plugin_id: field
+          entity_type: file
+          entity_field: filesize
+        status:
+          id: status
+          table: file_managed
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: boolean
+          settings:
+            format: custom
+            format_custom_false: Temporary
+            format_custom_true: Permanent
+          plugin_id: field
+          entity_type: file
+          entity_field: status
+        created:
+          id: created
+          table: file_managed
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Upload date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: file
+          entity_field: created
+        changed:
+          id: changed
+          table: file_managed
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Changed date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: file
+          entity_field: changed
+        count:
+          id: count
+          table: file_usage
+          field: count
+          relationship: fid
+          group_type: sum
+          admin_label: ''
+          label: 'Used in'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: 'admin/content/files/usage/{{ fid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -945,14 +601,251 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
+          separator: ','
+          format_plural: true
+          format_plural_string: "1 place\x03@count places"
           prefix: ''
           suffix: ''
+          plugin_id: numeric
+      filters:
+        filename:
+          id: filename
+          table: file_managed
+          field: filename
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: filemime_op
+            label: Filename
+            description: ''
+            use_operator: false
+            operator: filename_op
+            identifier: filename
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+          entity_type: file
+          entity_field: filename
+        filemime:
+          id: filemime
+          table: file_managed
+          field: filemime
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: filemime_op
+            label: 'MIME type'
+            description: ''
+            use_operator: false
+            operator: filemime_op
+            identifier: filemime
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+          entity_type: file
+          entity_field: filemime
+        status:
+          id: status
+          table: file_managed
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: status_op
+            label: Status
+            description: ''
+            use_operator: false
+            operator: status_op
+            identifier: status
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: file_status
+          entity_type: file
+          entity_field: status
+      sorts: {  }
+      title: Files
+      header: {  }
+      footer: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          empty: true
+          content: 'No files available.'
+          plugin_id: text_custom
+      relationships:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: 'File usage'
+          required: true
+      arguments: {  }
+      group_by: true
+      show_admin_links: true
+      display_extenders: {  }
+    cache_metadata:
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      max-age: 0
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Files overview'
+    position: 1
+    display_options:
+      path: admin/content/files
+      menu:
+        type: tab
+        title: Files
+        description: ''
+        menu_name: admin
+        weight: 0
+        context: ''
+      display_description: ''
+      defaults:
+        pager: true
+        relationships: false
+        fields: false
+      relationships:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: 'File usage'
+          required: false
+      display_extenders: {  }
+      fields:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Fid
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
           click_sort_column: value
           type: number_integer
-          settings: {  }
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -961,18 +854,82 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
           plugin_id: field
-        field_isordinarycategory:
-          id: field_isordinarycategory
-          table: taxonomy_term__field_isordinarycategory
-          field: field_isordinarycategory
+          entity_type: file
+          entity_field: fid
+        filename:
+          id: filename
+          table: file_managed
+          field: filename
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_link
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+          entity_type: file
+          entity_field: filename
+        filemime:
+          id: filemime
+          table: file_managed
+          field: filemime
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'MIME type'
           exclude: false
           alter:
             alter_text: false
@@ -1005,7 +962,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1013,31 +970,126 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
+          type: file_filemime
+          plugin_id: field
+          entity_type: file
+          entity_field: filemime
+        filesize:
+          id: filesize
+          table: file_managed
+          field: filesize
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Size
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: file_size
+          plugin_id: field
+          entity_type: file
+          entity_field: filesize
+        status:
+          id: status
+          table: file_managed
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
           type: boolean
           settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+            format: custom
+            format_custom_false: Temporary
+            format_custom_true: Permanent
           plugin_id: field
-        field_publish_date:
-          id: field_publish_date
-          table: taxonomy_term__field_publish_date
-          field: field_publish_date
+          entity_type: file
+          entity_field: status
+        created:
+          id: created
+          table: file_managed
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Upload date'
           exclude: false
           alter:
             alter_text: false
@@ -1070,7 +1122,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1078,29 +1130,22 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_plain
+          type: timestamp
           settings:
-            timezone_override: UTC
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
           plugin_id: field
-        field_unpublish_date:
-          id: field_unpublish_date
-          table: taxonomy_term__field_unpublish_date
-          field: field_unpublish_date
+          entity_type: file
+          entity_field: created
+        changed:
+          id: changed
+          table: file_managed
+          field: changed
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Changed date'
           exclude: false
           alter:
             alter_text: false
@@ -1133,7 +1178,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1141,35 +1186,28 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_plain
+          type: timestamp
           settings:
-            timezone_override: UTC
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
           plugin_id: field
-        field_games_category_logo:
-          id: field_games_category_logo
-          table: taxonomy_term__field_games_category_logo
-          field: field_games_category_logo
-          relationship: none
-          group_type: group
+          entity_type: file
+          entity_field: changed
+        count:
+          id: count
+          table: file_usage
+          field: count
+          relationship: fid
+          group_type: sum
           admin_label: ''
-          label: ''
+          label: 'Used in'
           exclude: false
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: 'admin/content/files/usage/{{ fid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -1196,7 +1234,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1204,698 +1242,1010 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_url
-          settings:
-            image_style: ''
-          group_column: entity_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_post_login_banner_widget:
-          id: field_post_login_banner_widget
-          table: taxonomy_term__field_post_login_banner_widget
-          field: field_post_login_banner_widget
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_pre_login_banner_widget:
-          id: field_pre_login_banner_widget
-          table: taxonomy_term__field_pre_login_banner_widget
-          field: field_pre_login_banner_widget
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_pre_login_link:
-          id: field_pre_login_link
-          table: taxonomy_term__field_pre_login_link
-          field: field_pre_login_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_post_login_link:
-          id: field_post_login_link
-          table: taxonomy_term__field_post_login_link
-          field: field_post_login_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_post_login_link_target:
-          id: field_post_login_link_target
-          table: taxonomy_term__field_post_login_link_target
-          field: field_post_login_link_target
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_key
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_pre_login_link_target:
-          id: field_pre_login_link_target
-          table: taxonomy_term__field_pre_login_link_target
-          field: field_pre_login_link_target
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_key
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_post_banner_height:
-          id: field_post_banner_height
-          table: taxonomy_term__field_post_banner_height
-          field: field_post_banner_height
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_pre_banner_height:
-          id: field_pre_banner_height
-          table: taxonomy_term__field_pre_banner_height
-          field: field_pre_banner_height
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_pre_banner_width:
-          id: field_pre_banner_width
-          table: taxonomy_term__field_pre_banner_width
-          field: field_pre_banner_width
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_post_banner_width:
-          id: field_post_banner_width
-          table: taxonomy_term__field_post_banner_width
-          field: field_post_banner_width
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: true
+          format_plural_string: "1 place\x03@count places"
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
+    cache_metadata:
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      max-age: 0
+      tags: {  }
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'File usage'
+    position: 2
+    display_options:
+      display_description: ''
+      path: admin/content/files/usage/%
+      empty: {  }
       defaults:
+        empty: false
+        pager: false
+        filters: false
+        filter_groups: false
         fields: false
-        sorts: false
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        group_by: false
+        title: false
+        arguments: false
+        style: false
+        row: false
+        relationships: false
+      pager:
+        type: mini
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: 0
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      filters: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
+      fields:
+        entity_label:
+          id: entity_label
+          table: file_usage
+          field: entity_label
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
+          label: Entity
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_entity: true
+          plugin_id: entity_label
+        type:
+          id: type
+          table: file_usage
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
+          label: 'Entity type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
           plugin_id: standard
+        module:
+          id: module
+          table: file_usage
+          field: module
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Registering module'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: standard
+        count:
+          id: count
+          table: file_usage
+          field: count
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Use count'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: false
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
+      group_by: false
+      title: 'File usage'
+      arguments:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: 'not found'
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: 'File usage information for {{ arguments.fid }}'
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          plugin_id: file_fid
+          entity_type: file
+          entity_field: fid
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            entity_label: entity_label
+            type: type
+            module: module
+            count: count
+          info:
+            entity_label:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            type:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-medium
+            module:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            count:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: entity_label
+          empty_table: true
+      row:
+        type: fields
+        options: {  }
+      relationships:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: 'File usage'
+          required: true
+      display_extenders: {  }
+    cache_metadata:
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      max-age: 0
+      tags: {  }
+  rest_export_1:
+    display_plugin: rest_export
+    id: rest_export_1
+    display_title: 'REST export'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      path: api/file
+      row:
+        type: data_field
+        options:
+          field_options:
+            filename:
+              alias: ''
+              raw_output: false
+            filemime:
+              alias: ''
+              raw_output: false
+            filesize:
+              alias: ''
+              raw_output: false
+            status:
+              alias: ''
+              raw_output: false
+            created:
+              alias: ''
+              raw_output: false
+            changed:
+              alias: ''
+              raw_output: false
+            count:
+              alias: ''
+              raw_output: false
+      arguments:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: query_parameter
+          default_argument_options:
+            query_param: file_id
+            fallback: ''
+            multiple: or
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: file
+          entity_field: fid
+          plugin_id: file_fid
+      defaults:
+        arguments: false
+        access: false
+        filters: false
+        filter_groups: false
+        relationships: false
+        fields: false
+      access:
+        type: none
+        options: {  }
+      filters: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
+      relationships:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: 'File usage'
+          required: false
+      fields:
+        fid:
+          id: fid
+          table: file_managed
+          field: fid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Fid
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+          entity_type: file
+          entity_field: fid
+        filename:
+          id: filename
+          table: file_managed
+          field: filename
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_extension
+          settings:
+            link_to_file: true
+            extension_detect_tar: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+          entity_type: file
+          entity_field: filename
+        uri:
+          id: uri
+          table: file_managed
+          field: uri
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_uri
+          settings:
+            link_to_file: false
+            file_download_path: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: file
+          entity_field: uri
+          plugin_id: field
+        filemime:
+          id: filemime
+          table: file_managed
+          field: filemime
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'MIME type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: file_filemime
+          plugin_id: field
+          entity_type: file
+          entity_field: filemime
+        filesize:
+          id: filesize
+          table: file_managed
+          field: filesize
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Size
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: file_size
+          plugin_id: field
+          entity_type: file
+          entity_field: filesize
+        status:
+          id: status
+          table: file_managed
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: boolean
+          settings:
+            format: custom
+            format_custom_false: Temporary
+            format_custom_true: Permanent
+          plugin_id: field
+          entity_type: file
+          entity_field: status
+        created:
+          id: created
+          table: file_managed
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Upload date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: file
+          entity_field: created
+        changed:
+          id: changed
+          table: file_managed
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Changed date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: file
+          entity_field: changed
+        count:
+          id: count
+          table: file_usage
+          field: count
+          relationship: fid
+          group_type: sum
+          admin_label: ''
+          label: 'Used in'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: 'admin/content/files/usage/{{ fid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: true
+          format_plural_string: "1 place\x03@count places"
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-      tags:
-        - 'config:field.storage.taxonomy_term.field_games_alias'
-        - 'config:field.storage.taxonomy_term.field_games_category_logo'
-        - 'config:field.storage.taxonomy_term.field_isordinarycategory'
-        - 'config:field.storage.taxonomy_term.field_post_banner_height'
-        - 'config:field.storage.taxonomy_term.field_post_banner_width'
-        - 'config:field.storage.taxonomy_term.field_post_login_banner_widget'
-        - 'config:field.storage.taxonomy_term.field_post_login_link'
-        - 'config:field.storage.taxonomy_term.field_post_login_link_target'
-        - 'config:field.storage.taxonomy_term.field_pre_banner_height'
-        - 'config:field.storage.taxonomy_term.field_pre_banner_width'
-        - 'config:field.storage.taxonomy_term.field_pre_login_banner_widget'
-        - 'config:field.storage.taxonomy_term.field_pre_login_link'
-        - 'config:field.storage.taxonomy_term.field_pre_login_link_target'
-        - 'config:field.storage.taxonomy_term.field_publish_date'
-        - 'config:field.storage.taxonomy_term.field_unpublish_date'
+        - url
+      tags: {  }
