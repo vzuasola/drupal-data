@@ -797,6 +797,8 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'settings' => [
             'label' => [
               '#title' => 'Upload ID',
+              '#type' => 'textfield',
+              '#description' => 'Upload ID',
               '#default_value' => 'Upload ID',
             ],
             'accept-format' => [
@@ -888,6 +890,8 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'settings' => [
             'label' => [
               '#title' => 'Upload ID',
+              '#type' => 'textfield',
+              '#description' => 'Upload ID',
               '#default_value' => 'Upload ID',
             ],
             'accept-format' => [
