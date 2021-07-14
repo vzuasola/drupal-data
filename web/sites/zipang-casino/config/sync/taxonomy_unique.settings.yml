@@ -36,3 +36,5 @@ game_filter_games_: 0
 game_filter_games__message: 'Term @term already exists in vocabulary @vocabulary.'
 game_filter_games: 0
 game_filter_games_message: 'Term @term already exists in vocabulary @vocabulary.'
+all_games_category: 0
+all_games_category_message: 'Term @term already exists in vocabulary @vocabulary.'

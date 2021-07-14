@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_all_games_category
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_arcade_game_category
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_arcade_game_filter
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_client_type
@@ -61,7 +62,7 @@ third_party_settings:
         - field_arcade_game_category
         - field_arcade_game_filter
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: fieldset
       format_settings:
         id: ''
@@ -74,7 +75,7 @@ third_party_settings:
         - field_game_title_icon
         - field_game_icon_label
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: fieldset
       format_settings:
         id: ''
@@ -89,6 +90,12 @@ targetEntityType: zipang_mobile_games_entity
 bundle: zipang_mobile_games_entity
 mode: default
 content:
+  field_all_games_category:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_arcade_game_category:
     weight: 14
     settings: {  }
@@ -162,7 +169,7 @@ content:
     type: string_textfield
     region: content
   field_game_description:
-    weight: 15
+    weight: 16
     settings:
       rows: 9
       summary_rows: 3

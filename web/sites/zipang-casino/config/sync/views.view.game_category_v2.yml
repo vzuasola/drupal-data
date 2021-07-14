@@ -690,6 +690,24 @@ display:
             name:
               alias: ''
               raw_output: false
+            tid:
+              alias: id
+              raw_output: false
+            tid_export:
+              alias: parent_id
+              raw_output: false
+            field_hide_name_export:
+              alias: hide_name
+              raw_output: false
+            description__value_export:
+              alias: description
+              raw_output: false
+            field_category_image_banner_export:
+              alias: banner
+              raw_output: false
+            field_category_id_export:
+              alias: alias
+              raw_output: false
       display_description: ''
     cache_metadata:
       max-age: -1
