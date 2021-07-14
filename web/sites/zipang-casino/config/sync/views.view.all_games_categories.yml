@@ -1,4 +1,4 @@
-uuid: e2e56111-916f-4001-ba27-d66a276f569f
+uuid: 18d43294-918d-4620-89b0-ce4fe144efdf
 langcode: ja
 status: true
 dependencies:
@@ -396,13 +396,13 @@ display:
       display_extenders: {  }
       path: api/all_games_categories
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: node_list_serializer
         options:
+          uses_fields: false
           formats:
             json: json
       row:
