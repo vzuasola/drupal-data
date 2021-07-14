@@ -208,7 +208,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'choices' => [
               '#title' => 'Contact Preference Choices',
               '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>facebook|Facebook</small>',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>facebook|Facebook| [username or number]</small>',
             ],
           ],
         ],
