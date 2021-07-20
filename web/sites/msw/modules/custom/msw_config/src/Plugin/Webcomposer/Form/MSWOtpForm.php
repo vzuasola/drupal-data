@@ -39,23 +39,22 @@ class MSWOtpForm extends WebcomposerFormBase implements WebcomposerFormInterface
     public function getFields()
     {
         return [
+            'header_markup' => [
+                'name' => 'Header Markup',
+                'type' => 'markup',
+                'settings' => [
+                    'markup' => [
+                        '#title' => 'Header Blurb',
+                        '#type' => 'text_format',
+                        '#default_value' => '',
+                    ],
+                ],
+            ],
 
             'otp_code' => [
                 'name' => 'OTP Code',
                 'type' => 'textfield',
                 'settings' => [
-                    'label' => [
-                        '#title' => 'OTP Code Label',
-                        '#type' => 'textfield',
-                        '#description' => 'The label for the OTP Code field',
-                        '#default_value' => 'OTP Code',
-                    ],
-                    'placeholder' => [
-                        '#title' => 'OTP Code placeholder label',
-                        '#type' => 'textfield',
-                        '#description' => 'Label for OTP Code field placeholder',
-                        '#default_value' => 'OTP Code',
-                    ],
                     'annotation' => [
                         '#title' => 'OTP Code Annotation text',
                         '#type' => 'textarea',
@@ -63,6 +62,19 @@ class MSWOtpForm extends WebcomposerFormBase implements WebcomposerFormInterface
                     ],
                 ],
             ],
+
+            'error_markup' => [
+                'name' => 'Error Markup',
+                'type' => 'markup',
+                'settings' => [
+                    'markup' => [
+                        '#title' => 'Error Messages',
+                        '#type' => 'text_format',
+                        '#default_value' => '',
+                    ],
+                ],
+            ],
+
             "request_new_otp" => [
                 "name" => "Request New OTP",
                 "type" => "button",
@@ -85,18 +97,6 @@ class MSWOtpForm extends WebcomposerFormBase implements WebcomposerFormInterface
                         "#type" => "textfield",
                         "#description" => "Label for the Submit button",
                         "#default_value" => "Save Changes",
-                    ]
-                ]
-            ],
-            "cancel" => [
-                "name" => "Cancel",
-                "type" => "button",
-                "settings" => [
-                    "label" => [
-                        "#title" => "Cancel Label",
-                        "#type" => "textfield",
-                        "#description" => "Label for the Cancel button",
-                        "#default_value" => "Cancel",
                     ]
                 ]
             ]

@@ -251,5 +251,74 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#default_value' => $this->get('address') ?? "Address",
       '#translatable' => TRUE,
     ];
+
+    $form['promotion_coupon'] = [
+      '#type' => 'details',
+      '#title' => t('Promotion Coupon Labels'),
+      '#group' => 'advanced',
+    ];
+
+    $form['promotion_coupon']['coupon_code_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Coupon Code'),
+      '#default_value' => $this->get('coupon_code_enable'),
+      '#translatable' => FALSE,
+    ];
+
+    $form['promotion_coupon']['coupon_code_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Title'),
+      '#default_value' => $this->get('coupon_code_title') ?? "Coupon Code",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Label'),
+      '#default_value' => $this->get('coupon_code') ?? "Coupon Code",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_placeholder'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Placeholder Label'),
+      '#default_value' => $this->get('coupon_placeholder') ?? "Coupon Code",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Coupon Code Button Label'),
+      '#default_value' => $this->get('coupon_button_label') ?? "Redeem",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['modal_header_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal Header Title'),
+      '#default_value' => $this->get('modal_header_title') ?? "Message",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_success_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $this->get('coupon_success_message') ?? "Coupon code has been applied",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['coupon_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Error Message'),
+      '#default_value' => $this->get('coupon_error_message') ?? "Coupon code has not been applied",
+      '#translatable' => TRUE,
+    ];
+
+    $form['promotion_coupon']['modal_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal Button Label'),
+      '#default_value' => $this->get('modal_button_label') ?? "OK",
+      '#translatable' => TRUE,
+    ];
   }
 }
