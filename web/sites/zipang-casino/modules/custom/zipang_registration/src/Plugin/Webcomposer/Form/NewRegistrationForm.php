@@ -445,6 +445,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for Coupon Code field',
           ],
+          'placeholder' => [
+            '#title' => 'Coupon Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Coupon Code field',
+          ],
         ],
       ],
       'captcha' => [
@@ -455,6 +460,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Captcha Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Captcha field',
+          ],
+          'placeholder' => [
+            '#title' => 'Captcha placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Captcha field',
           ],
         ],
       ],
