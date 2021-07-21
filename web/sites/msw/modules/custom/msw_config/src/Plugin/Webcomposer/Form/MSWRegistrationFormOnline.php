@@ -208,7 +208,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'choices' => [
               '#title' => 'Contact Preference Choices',
               '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>facebook|Facebook</small>',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>facebook|Facebook| [username or number]</small>',
             ],
           ],
         ],
@@ -797,6 +797,8 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'settings' => [
             'label' => [
               '#title' => 'Upload ID',
+              '#type' => 'textfield',
+              '#description' => 'Upload ID',
               '#default_value' => 'Upload ID',
             ],
             'accept-format' => [
@@ -888,6 +890,8 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'settings' => [
             'label' => [
               '#title' => 'Upload ID',
+              '#type' => 'textfield',
+              '#description' => 'Upload ID',
               '#default_value' => 'Upload ID',
             ],
             'accept-format' => [

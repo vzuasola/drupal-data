@@ -5,7 +5,7 @@ url:
   prefixes:
     en: en
     zh-hans: sc
-    zh-hant: zh-hant
+    zh-hant: ch
     th: th
     ko: kr
     hi: hi
@@ -14,7 +14,7 @@ url:
     id: id
     es: es
     te: te
-    pt-br: pt-br
+    pt-br: pt
     km: km
     lo: lo
     my: bu
