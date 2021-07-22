@@ -1,0 +1,9 @@
+uuid: 0663524e-2533-4d19-912a-db604bac76fc
+langcode: en
+status: true
+dependencies: {  }
+id: ja
+label: Japanese
+direction: ltr
+weight: 1
+locked: false
