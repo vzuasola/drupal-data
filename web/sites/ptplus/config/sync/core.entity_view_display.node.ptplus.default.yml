@@ -1,0 +1,27 @@
+uuid: 4fbbe6d5-8a7d-4fe8-b8c0-2194706161ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ptplus.body
+    - node.type.ptplus
+  module:
+    - text
+    - user
+id: node.ptplus.default
+targetEntityType: node
+bundle: ptplus
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
