@@ -1,0 +1,9 @@
+uuid: 5b0f5158-fe0d-4bfa-96f9-9d2904ce4387
+langcode: en
+status: true
+dependencies: {  }
+id: bu
+label: Burmese
+direction: ltr
+weight: -1
+locked: false
