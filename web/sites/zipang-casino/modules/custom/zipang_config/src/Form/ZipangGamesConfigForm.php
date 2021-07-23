@@ -220,6 +220,7 @@ class ZipangGamesConfigForm extends FormBase {
 
     $form['mixed_game_lobby_all']['mixed_game_banner_en'] = [
       '#type' => 'fieldset',
+      '#translatable' => FALSE,
       '#title' => t('Top Block Banner - EN')
     ];
 
@@ -242,6 +243,7 @@ class ZipangGamesConfigForm extends FormBase {
 
     $form['mixed_game_lobby_all']['mixed_game_banner_ja'] = [
       '#type' => 'fieldset',
+      '#translatable' => FALSE,
       '#title' => t('Top Block Banner - JA')
     ];
 
