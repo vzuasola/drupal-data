@@ -181,6 +181,90 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'nationality_select' => [
+          'name' => 'Nationality Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Nationality Select',
+              '#type' => 'textfield',
+              '#description' => 'Nationality field',
+              '#default_value' => 'Nationality',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Nationality',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Nationality',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Nationality',
+              '#default_value' => 'nationality',
+            ],
+            'choices' => [
+              '#title' => 'Nationality Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>nationality|Nationality</small>',
+            ],
+          ],
+        ],
+
+        'source_of_income_select' => [
+          'name' => 'Source of Income Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Source of Income Select',
+              '#type' => 'textfield',
+              '#description' => 'Source of Income field',
+              '#default_value' => 'Source of Income',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Source of Income',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Source of Income',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Source of Income',
+              '#default_value' => 'source-of-income',
+            ],
+            'choices' => [
+              '#title' => 'Source of Income Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>salary|Salary</small>',
+            ],
+          ],
+        ],
+
+        'source_of_income_others' => [
+          'name' => 'Source of Income Others',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Source of Income Label',
+              '#type' => 'textfield',
+              '#description' => 'The label for the Source of Income field',
+              '#default_value' => '(Others) Source of Income',
+            ],
+            'placeholder' => [
+              '#title' => 'Source of Income placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Source of Income field placeholder',
+              '#default_value' => '(Others) Source of Income',
+            ],
+            'annotation' => [
+              '#title' => 'Source of Income Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
         'address_info' => [
           'name' => 'Address',
           'type' => 'markup',
