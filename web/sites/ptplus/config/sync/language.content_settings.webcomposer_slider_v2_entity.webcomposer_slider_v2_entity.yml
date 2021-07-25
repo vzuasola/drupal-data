@@ -1,0 +1,17 @@
+uuid: 8790ba5d-3703-4b4a-b1e7-6db02ec2ff35
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_slider_v2
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity
+target_entity_type_id: webcomposer_slider_v2_entity
+target_bundle: webcomposer_slider_v2_entity
+default_langcode: site_default
+language_alterable: true
