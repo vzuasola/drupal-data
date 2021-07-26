@@ -10,6 +10,9 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_enable_game_launch
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_code
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_provider
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
@@ -22,13 +25,10 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_label_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_product_label
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_use_game_loader
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
     - image.style.thumbnail
   module:
@@ -115,14 +115,13 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_product_label
       parent_name: ''
-      weight: 28
+      weight: 12
       format_type: fieldset
       format_settings:
-        label: 'Product Ribbon'
-        description: ''
-        required_fields: true
         id: product-ribbon
         classes: ''
+        description: ''
+        required_fields: true
       label: 'Product Ribbon'
 _core:
   default_config_hash: OZJ37uq9NXIxbipYTMrqYIn6yXsVaUWLRX1cLOk0Kl0
@@ -218,7 +217,7 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -272,8 +271,29 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_enable_game_launch:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_code:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_launching:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_provider:
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -445,53 +465,25 @@ content:
     type: datetime_default
     region: content
   field_ribbon_background_color:
-    weight: 29
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_label_color:
-    weight: 30
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_product_label:
-    weight: 31
+    weight: 15
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_slider_enable_game_launch:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  field_slider_game_code:
-    type: string_textfield
-    weight: 9
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_slider_game_provider:
-    type: options_select
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_slider_use_game_loader:
-    type: boolean_checkbox
-    weight: 8
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_status:
     weight: 20
     settings: {  }
@@ -512,6 +504,13 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_use_game_loader:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_user_availability:
     weight: 18
     settings: {  }
@@ -526,7 +525,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
