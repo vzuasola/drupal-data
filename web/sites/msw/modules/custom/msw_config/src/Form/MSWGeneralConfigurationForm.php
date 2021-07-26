@@ -55,6 +55,20 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['registration_setting']['register'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Registration Online'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['registration_setting']['register']['enable_register_online'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Registration Online - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_register_online'),
+      '#translatable' => TRUE,
+    ];
+
     $form['registration_setting']['registration'] = [
       '#type' => 'details',
       '#title' => $this->t('Slipstream'),
