@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_maintenance_end_date
     - field.field.node.games.field_maintenance_start_date
+    - field.field.node.games.field_native_app
     - field.field.node.games.field_redirection_inner_page
     - field.field.node.games.field_select_game_tile_action
     - field.field.node.games.field_target
@@ -49,6 +50,7 @@ third_party_settings:
         - field_game_provider
         - field_target
         - field_use_game_loader
+        - field_native_app
       parent_name: ''
       weight: 3
       format_type: fieldset
@@ -183,6 +185,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_native_app:
+    weight: 18
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_redirection_inner_page:
     weight: 18

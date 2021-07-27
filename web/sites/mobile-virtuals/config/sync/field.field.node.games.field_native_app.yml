@@ -1,0 +1,23 @@
+uuid: a936e1d8-9004-424f-b3c4-6d331ae08f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_native_app
+    - node.type.games
+id: node.games.field_native_app
+field_name: field_native_app
+entity_type: node
+bundle: games
+label: 'Hide Header/Footer in Native App'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
