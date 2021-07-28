@@ -139,7 +139,7 @@ $config_directories['sync'] = $app_root . '/' . $site_path . '/config/sync';
  * Monolog settings
  */
 $settings['monolog'] = [
-  'path' => '/var/log/cms/webcomposer.log',
+  'path' => ' /var/log/cms/drupal.log',
   'level' => \Monolog\Logger::INFO,
 ];
 
@@ -172,4 +172,3 @@ if ($env && $env == 'local') {
 
   $config['system.logging']['error_level'] = 'verbose';
 }
-
