@@ -1,0 +1,35 @@
+advanced__active_tab: edit-promotion-coupon
+page_title: 'My Account'
+profile_title: Profile
+footer_blurb:
+  value: "<p class=\"text-align-center\">*if you want to change your account details,<br />\r\nplease let us know details by Chat/Email.</p>\r\n"
+  format: full_html
+account_details_title: 'Account Details'
+communication_details_title: 'Communication Details'
+home_address_title: 'Home Address'
+vip_label: 'VIP Level'
+username: Username
+firstname: Firstname
+date_of_birth: 'Date of Birth'
+country: Country
+currency: Currency
+lastname: Lastname
+email: 'Email Address'
+gender: Gender
+male: Male
+female: Female
+mobile_number: 'Mobile Number'
+language: Language
+language_mapping: "ja|Japan\r\nen|English"
+zip_code: 'Zip Code/Postal Code'
+state: Prefecture/State
+city: Town/City
+address: Address
+coupon_code_title: 'Coupon Code'
+coupon_code: 'Coupon Code'
+coupon_placeholder: 'Please enter Coupon Code'
+coupon_button_label: Redeem
+modal_header_title: 'Coupon Code'
+coupon_success_message: 'Coupon code has been applied'
+coupon_error_message: 'Coupon code is invalid'
+modal_button_label: OK
