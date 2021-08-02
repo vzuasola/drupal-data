@@ -26,6 +26,9 @@ settings:
     -
       value: micro_gaming
       label: Microgaming
+    -
+      value: solid_gaming
+      label: 'Solid Gaming'
   allowed_values_function: ''
 module: options
 locked: false
