@@ -76,6 +76,34 @@ class ALSForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['integration']['product_instance_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Instance ID'),
+      '#default_value' => $this->get('product_instance_id'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['product_integration_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Integration ID'),
+      '#default_value' => $this->get('product_integration_id'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['product_login_via'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Login Via'),
+      '#default_value' => $this->get('product_login_via'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['registration_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration URL'),
+      '#default_value' => $this->get('registration_url'),
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 }
