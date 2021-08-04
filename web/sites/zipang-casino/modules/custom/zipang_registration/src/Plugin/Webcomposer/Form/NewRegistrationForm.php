@@ -47,6 +47,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The label for the User Name field',
           ],
+          'placeholder' => [
+            '#title' => 'User Name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for User Name field',
+          ],
         ],
       ],
       'firstname' => [
@@ -57,6 +62,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'First Name Label',
             '#type' => 'textfield',
             '#description' => 'The label for the First Name field',
+          ],
+          'placeholder' => [
+            '#title' => 'First Name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for First Name field',
           ],
         ],
       ],
@@ -69,6 +79,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The label for the Last Name field',
           ],
+          'placeholder' => [
+            '#title' => 'Last Name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Last Name field',
+          ],
         ],
       ],
       'password' => [
@@ -79,6 +94,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Password label',
             '#type' => 'textfield',
             '#description' => 'The Label for Password field',
+          ],
+          'placeholder' => [
+            '#title' => 'Password placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Password field',
           ],
         ],
       ],
@@ -91,27 +111,42 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for Confirm Password field',
           ],
+          'placeholder' => [
+            '#title' => 'Confirm Password placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Confirm Password field',
+          ],
         ],
       ],
       'email' => [
         'name' => 'Email Address',
-        'type' => 'email',
+        'type' => 'textfield',
         'settings' => [
           'label' => [
             '#title' => 'Email Address Label',
-            '#type' => 'email',
+            '#type' => 'textfield',
             '#description' => 'The Label for Email Address field',
+          ],
+          'placeholder' => [
+            '#title' => 'Email Address placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Email Address field',
           ],
         ],
       ],
       'confirm_email' => [
         'name' => 'Confirm Email Address',
-        'type' => 'email',
+        'type' => 'textfield',
         'settings' => [
           'label' => [
             '#title' => 'Confirm Email Address Label',
-            '#type' => 'email',
+            '#type' => 'textfield',
             '#description' => 'The Label for Confirm Email Address field',
+          ],
+          'placeholder' => [
+            '#title' => 'Confirm Email placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Confirm Email field',
           ],
         ],
       ],
@@ -175,6 +210,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for the Birthdate field',
           ],
+          'placeholder' => [
+            '#title' => 'Date of Birth placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Date of Birth field',
+          ],
         ],
       ],
       'phone' => [
@@ -186,6 +226,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for Contact Number field',
           ],
+          'placeholder' => [
+            '#title' => 'Contact Number placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Contact Number field',
+          ],
         ],
       ],
       'currency' => [
@@ -196,6 +241,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Currency Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Currency field',
+          ],
+          'placeholder' => [
+            '#title' => 'Currency placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Currency field',
           ],
           'data' => [
             '#title' => 'Currency Default Value',
@@ -242,6 +292,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
               'ho|Hokkaido',
             ]),
           ],
+          'placeholder' => [
+            '#title' => 'Prefecture placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Prefecture field',
+          ],
         ],
       ],
       'state' => [
@@ -252,6 +307,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'State Label',
             '#type' => 'textfield',
             '#description' => 'The Label for the State field',
+          ],
+          'placeholder' => [
+            '#title' => 'State placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for State field',
           ],
         ],
       ],
@@ -264,6 +324,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for Town/City field',
           ],
+          'placeholder' => [
+            '#title' => 'Town/City placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Password field',
+          ],
         ],
       ],
       'zipcode' => [
@@ -275,6 +340,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for Zip Code/Postal Code field',
           ],
+          'placeholder' => [
+            '#title' => 'Zip Code/Postal Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Zip Code/Postal Code field',
+          ],
         ],
       ],
       'address' => [
@@ -285,6 +355,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Address Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Address field',
+          ],
+          'placeholder' => [
+            '#title' => 'Address placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Address field',
           ],
         ],
       ],
@@ -370,6 +445,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#type' => 'textfield',
             '#description' => 'The Label for Coupon Code field',
           ],
+          'placeholder' => [
+            '#title' => 'Coupon Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Coupon Code field',
+          ],
         ],
       ],
       'captcha' => [
@@ -380,6 +460,11 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Captcha Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Captcha field',
+          ],
+          'placeholder' => [
+            '#title' => 'Captcha placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Captcha field',
           ],
         ],
       ],

@@ -39,10 +39,27 @@ class MobileEntrypageForm extends FormBase {
       '#title' => t('Entrypage Configuration'),
     ];
 
+    $this->sectionRegistrationOnline($form);
     $this->sectionEntrypageConfigs($form);
     $this->sectionEntrypageFooter($form);
 
     return $form;
+  }
+
+  private function sectionRegistrationOnline(array &$form)
+  {
+    $form['join_now_button'] = [
+      '#type' => 'details',
+      '#title' => t('Join Now Button'),
+      '#group' => 'advanced',
+    ];
+
+    $form['join_now_button']['enable_join_now_button'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Join Now Button - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_join_now_button'),
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionEntrypageConfigs(array &$form) {

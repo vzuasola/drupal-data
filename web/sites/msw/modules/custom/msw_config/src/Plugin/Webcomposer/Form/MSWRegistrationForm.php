@@ -66,6 +66,19 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'basic_information' => [
+          'name' => 'Basic Information',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Basic Information',
+              '#type' => 'textarea',
+              '#description' => 'Basic Information',
+              '#default_value' => '<p class="msw-slipstream-basic-information">Basic Information</p>',
+            ],
+          ],
+        ],
+
         'last_name' => [
           'name' => 'Last Name',
           'type' => 'textfield',
@@ -168,6 +181,103 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'nationality_select' => [
+          'name' => 'Nationality Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Nationality Select',
+              '#type' => 'textfield',
+              '#description' => 'Nationality field',
+              '#default_value' => 'Nationality',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Nationality',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Nationality',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Nationality',
+              '#default_value' => 'nationality',
+            ],
+            'choices' => [
+              '#title' => 'Nationality Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>nationality|Nationality</small>',
+            ],
+          ],
+        ],
+
+        'source_of_income_select' => [
+          'name' => 'Source of Income Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Source of Income Select',
+              '#type' => 'textfield',
+              '#description' => 'Source of Income field',
+              '#default_value' => 'Source of Income',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Source of Income',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Source of Income',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Source of Income',
+              '#default_value' => 'source-of-income',
+            ],
+            'choices' => [
+              '#title' => 'Source of Income Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>salary|Salary</small>',
+            ],
+          ],
+        ],
+
+        'source_of_income_others' => [
+          'name' => 'Source of Income Others',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Source of Income Label',
+              '#type' => 'textfield',
+              '#description' => 'The label for the Source of Income field',
+              '#default_value' => '(Others) Source of Income',
+            ],
+            'placeholder' => [
+              '#title' => 'Source of Income placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Source of Income field placeholder',
+              '#default_value' => '(Others) Source of Income',
+            ],
+            'annotation' => [
+              '#title' => 'Source of Income Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'address_info' => [
+          'name' => 'Address',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Address',
+              '#type' => 'textarea',
+              '#description' => 'Address',
+              '#default_value' => '<p class="msw-slipstream-address">Address</p>',
+            ],
+          ],
+        ],
+
         'province' => [
           'name' => 'Province',
           'type' => 'select',
@@ -252,6 +362,43 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'account_and_contact_details' => [
+          'name' => 'Account and Contact Details',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Account and Contact Details',
+              '#type' => 'textarea',
+              '#description' => 'Account and Contact Details',
+              '#default_value' => '<p class="msw-slipstream-contact-details">Account and Contact Details</p>',
+            ],
+          ],
+        ],
+
+        'username' => [
+          'name' => 'Username',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Username label',
+              '#type' => 'textfield',
+              '#description' => 'label for Username field',
+              '#default_value' => 'Username',
+            ],
+            'placeholder' => [
+              '#title' => 'Username placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Username field placeholder',
+              '#default_value' => 'Username',
+            ],
+            'annotation' => [
+              '#title' => 'Username Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
         'mobile_phone' => [
           'name' => 'Mobile phone',
           'type' => 'textfield',
@@ -272,6 +419,288 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#title' => 'Mobile phone Annotation text',
               '#type' => 'textarea',
               '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'password' => [
+          'name' => 'Password',
+          'type' => 'password',
+          'settings' => [
+            'label' => [
+              '#title' => 'Password label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for Password field',
+              '#default_value' => 'Password',
+            ],
+            'placeholder' => [
+              '#title' => 'Password placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Password field placeholder',
+              '#default_value' => 'Password',
+            ],
+            'annotation' => [
+              '#title' => 'Password Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'email' => [
+          'name' => 'Email',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Email Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for Email field',
+            ],
+            'placeholder' => [
+              '#title' => 'Email placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Email field placeholder',
+            ],
+            'annotation' => [
+              '#title' => 'Email Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'password_meter' => [
+          'name' => 'Password Meter',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Password meter markup',
+              '#type' => 'textarea',
+              '#description' => 'HTML markup for password meter.',
+              '#default_value' => '<div class="password_meter_wrapper password-meter-hidden grid mb-0"></div>',
+            ],
+          ],
+        ],
+
+        'confirm_password' => [
+          'name' => 'Confirm Password',
+          'type' => 'password',
+          'settings' => [
+            'label' => [
+              '#title' => 'Confirm Password label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for Password field',
+              '#default_value' => 'Confirm Password',
+            ],
+            'placeholder' => [
+              '#title' => 'Confirm Password placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Password field placeholder',
+              '#default_value' => 'Confirm Password',
+            ],
+            'annotation' => [
+              '#title' => 'Confirm Password Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'column_1_close' => [
+          'name' => 'First column markup closing',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'First column markup closing',
+              '#type' => 'textarea',
+              '#description' => 'closing the first column of registration form',
+              '#default_value' => '</div>',
+            ],
+          ],
+        ],
+
+        'column_2_open' => [
+          'name' => 'Second column markup open',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Second column markup open',
+              '#type' => 'textarea',
+              '#description' => 'Opening the Second column of registration form',
+              '#default_value' => '<div>',
+            ],
+          ],
+        ],
+
+        'security_questions' => [
+          'name' => 'Security Questions',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Security Questions',
+              '#type' => 'textarea',
+              '#description' => 'Security Questions',
+              '#default_value' => '<p class="msw-slipstream-security-questions">Security Questions</p>',
+            ],
+          ],
+        ],
+
+        'security_questions_title' => [
+          'name' => 'Security Questions Title Markup',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Security Questions Title Markup',
+              '#type' => 'textarea',
+              '#description' => 'A Markup text for the Security questions title.',
+              '#default_value' => 'Security Questions<hr>',
+            ],
+          ],
+        ],
+
+        'security_question_1' => [
+          'name' => 'Security Question 1',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Security Question 1 Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the Currency field',
+              '#default_value' => 'Security Question 1',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Security Question 1',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Select your question...',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Security Answer 1',
+              '#default_value' => 'security-question',
+            ],
+            'choices' => [
+              '#title' => 'Security Question 1 Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+              '#default_value' => $questions,
+            ],
+          ],
+        ],
+
+        'security_answer_1' => [
+          'name' => 'Security Answer 1',
+          'type' => 'password',
+          'settings' => [
+            'label' => [
+              '#title' => 'Security Answer 1 label',
+              '#type' => 'textfield',
+              '#description' => 'label for Security Answer 1 field',
+              '#default_value' => 'Security Answer 1',
+            ],
+            'placeholder' => [
+              '#title' => 'Security Answer 1 placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Security Answer 1 field placeholder',
+              '#default_value' => 'Security Answer 1',
+            ],
+            'annotation' => [
+              '#title' => 'Security Answer 1 Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'security_question_2' => [
+          'name' => 'Security Question 2',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Security Question 2 Label',
+              '#type' => 'textfield',
+              '#description' => 'The dLabel for the Currency field',
+              '#default_value' => 'Security Question 2',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Security Question 2',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Select your question...',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Security Answer 1',
+              '#default_value' => 'security-question',
+            ],
+            'choices' => [
+              '#title' => 'Security Question 2 Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+              '#default_value' => $questions,
+            ],
+          ],
+        ],
+
+        'security_answer_2' => [
+          'name' => 'Security Answer 2',
+          'type' => 'password',
+          'settings' => [
+            'label' => [
+              '#title' => 'Security Answer 2 label',
+              '#type' => 'textfield',
+              '#description' => 'label for Security Answer 2 field',
+              '#default_value' => 'Security Answer 2',
+            ],
+            'placeholder' => [
+              '#title' => 'Security Answer 2 placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Security Answer 2 field placeholder',
+              '#default_value' => 'Security Answer 2',
+            ],
+            'annotation' => [
+              '#title' => 'Security Answer 2 Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'rfidpin' => [
+          'name' => 'RFID Pin',
+          'type' => 'password',
+          'settings' => [
+            'label' => [
+              '#title' => 'RFID Pin label',
+              '#type' => 'textfield',
+              '#description' => 'label for RFID Pin field',
+              '#default_value' => 'RFID Pin',
+            ],
+            'placeholder' => [
+              '#title' => 'RFID Pin placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for RFID Pin field placeholder',
+              '#default_value' => 'RFID Pin',
+            ],
+            'annotation' => [
+              '#title' => 'RFID Pin Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+        ],
+
+        'photos_ID' => [
+          'name' => 'Photos and ID',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Photos and ID',
+              '#type' => 'textarea',
+              '#description' => 'Photos and ID',
+              '#default_value' => '<p class="msw-slipstream-photos_id">Photos and ID</p>',
             ],
           ],
         ],
@@ -416,6 +845,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'UPLOAD ID 1',
           'type' => 'file',
           'settings' => [
+            'label' => [
+              '#title' => 'Upload ID',
+              '#type' => 'textfield',
+              '#description' => 'Upload ID',
+              '#default_value' => 'Upload ID',
+            ],
             'accept-format' => [
               '#title' => 'Accepted Format',
               '#type' => 'textfield',
@@ -435,6 +870,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'UPLOAD ID 2',
           'type' => 'file',
           'settings' => [
+            'label' => [
+              '#title' => 'Upload ID',
+              '#type' => 'textfield',
+              '#description' => 'Upload ID',
+              '#default_value' => 'Upload ID',
+            ],
             'accept-format' => [
               '#title' => 'Accepted Format',
               '#type' => 'textfield',
@@ -450,338 +891,18 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
-        'column_1_close' => [
-          'name' => 'First column markup closing',
+        'terms_and_conditions' => [
+          'name' => 'Terms and Conditions',
           'type' => 'markup',
           'settings' => [
             'markup' => [
-              '#title' => 'First column markup closing',
+              '#title' => 'Terms and Conditions',
               '#type' => 'textarea',
-              '#description' => 'closing the first column of registration form',
-              '#default_value' => '</div>',
+              '#description' => 'Terms and Conditions',
+              '#default_value' => '<p class="msw-slipstream-terms-conditions">I am at least 18 years old and have read and accepted the Terms and Conditions.</p>',
             ],
           ],
         ],
-
-        'column_2_open' => [
-          'name' => 'Second column markup open',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Second column markup open',
-              '#type' => 'textarea',
-              '#description' => 'Opening the Second column of registration form',
-              '#default_value' => '<div>',
-            ],
-          ],
-        ],
-
-        'username' => [
-          'name' => 'Username',
-          'type' => 'textfield',
-          'settings' => [
-            'label' => [
-              '#title' => 'Username label',
-              '#type' => 'textfield',
-              '#description' => 'label for Username field',
-              '#default_value' => 'Username',
-            ],
-            'placeholder' => [
-              '#title' => 'Username placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Username field placeholder',
-              '#default_value' => 'Username',
-            ],
-            'annotation' => [
-              '#title' => 'Username Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        'email' => [
-          'name' => 'Email',
-          'type' => 'textfield',
-          'settings' => [
-            'label' => [
-              '#title' => 'Email Label',
-              '#type' => 'textfield',
-              '#description' => 'The Label for Email field',
-            ],
-            'placeholder' => [
-              '#title' => 'Email placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Email field placeholder',
-            ],
-            'annotation' => [
-              '#title' => 'Email Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        'password' => [
-          'name' => 'Password',
-          'type' => 'password',
-          'settings' => [
-            'label' => [
-              '#title' => 'Password label',
-              '#type' => 'textfield',
-              '#description' => 'The Label for Password field',
-              '#default_value' => 'Password',
-            ],
-            'placeholder' => [
-              '#title' => 'Password placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Password field placeholder',
-              '#default_value' => 'Password',
-            ],
-            'annotation' => [
-              '#title' => 'Password Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        'password_meter' => [
-          'name' => 'Password Meter',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Password meter markup',
-              '#type' => 'textarea',
-              '#description' => 'HTML markup for password meter.',
-              '#default_value' => '<div class="password_meter_wrapper password-meter-hidden grid mb-0"></div>',
-            ],
-          ],
-        ],
-
-        'confirm_password' => [
-          'name' => 'Confirm Password',
-          'type' => 'password',
-          'settings' => [
-            'label' => [
-              '#title' => 'Confirm Password label',
-              '#type' => 'textfield',
-              '#description' => 'The Label for Password field',
-              '#default_value' => 'Confirm Password',
-            ],
-            'placeholder' => [
-              '#title' => 'Confirm Password placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Password field placeholder',
-              '#default_value' => 'Confirm Password',
-            ],
-            'annotation' => [
-              '#title' => 'Confirm Password Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        'rfidpin' => [
-          'name' => 'RFID Pin',
-          'type' => 'password',
-          'settings' => [
-            'label' => [
-              '#title' => 'RFID Pin label',
-              '#type' => 'textfield',
-              '#description' => 'label for RFID Pin field',
-              '#default_value' => 'RFID Pin',
-            ],
-            'placeholder' => [
-              '#title' => 'RFID Pin placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for RFID Pin field placeholder',
-              '#default_value' => 'RFID Pin',
-            ],
-            'annotation' => [
-              '#title' => 'RFID Pin Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        'security_questions_title' => [
-          'name' => 'Security Questions Title Markup',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Security Questions Title Markup',
-              '#type' => 'textarea',
-              '#description' => 'A Markup text for the Security questions title.',
-              '#default_value' => 'Security Questions<hr>',
-            ],
-          ],
-        ],
-
-        'security_question_1' => [
-          'name' => 'Security Question 1',
-          'type' => 'select',
-          'settings' => [
-            'label' => [
-              '#title' => 'Security Question 1 Label',
-              '#type' => 'textfield',
-              '#description' => 'The Label for the Currency field',
-              '#default_value' => 'Security Question 1',
-            ],
-            'placeholder' => [
-              '#title' => 'Choose a Security Question 1',
-              '#type' => 'textfield',
-              '#description' => 'Placeholder value for this textfield',
-              '#default_value' => 'Select your question...',
-            ],
-            'groups' => [
-              '#title' => 'Group Name',
-              '#type' => 'textfield',
-              '#description' => 'Group name for Security Answer 1',
-              '#default_value' => 'security-question',
-            ],
-            'choices' => [
-              '#title' => 'Security Question 1 Choices',
-              '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
-              '#default_value' => $questions,
-            ],
-          ],
-        ],
-
-        'security_answer_1' => [
-          'name' => 'Security Answer 1',
-          'type' => 'password',
-          'settings' => [
-            'label' => [
-              '#title' => 'Security Answer 1 label',
-              '#type' => 'textfield',
-              '#description' => 'label for Security Answer 1 field',
-              '#default_value' => 'Security Answer 1',
-            ],
-            'placeholder' => [
-              '#title' => 'Security Answer 1 placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Security Answer 1 field placeholder',
-              '#default_value' => 'Security Answer 1',
-            ],
-            'annotation' => [
-              '#title' => 'Security Answer 1 Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        'security_question_2' => [
-          'name' => 'Security Question 2',
-          'type' => 'select',
-          'settings' => [
-            'label' => [
-              '#title' => 'Security Question 2 Label',
-              '#type' => 'textfield',
-              '#description' => 'The dLabel for the Currency field',
-              '#default_value' => 'Security Question 2',
-            ],
-            'placeholder' => [
-              '#title' => 'Choose a Security Question 2',
-              '#type' => 'textfield',
-              '#description' => 'Placeholder value for this textfield',
-              '#default_value' => 'Select your question...',
-            ],
-            'groups' => [
-              '#title' => 'Group Name',
-              '#type' => 'textfield',
-              '#description' => 'Group name for Security Answer 1',
-              '#default_value' => 'security-question',
-            ],
-            'choices' => [
-              '#title' => 'Security Question 2 Choices',
-              '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
-              '#default_value' => $questions,
-            ],
-          ],
-        ],
-
-        'security_answer_2' => [
-          'name' => 'Security Answer 2',
-          'type' => 'password',
-          'settings' => [
-            'label' => [
-              '#title' => 'Security Answer 2 label',
-              '#type' => 'textfield',
-              '#description' => 'label for Security Answer 2 field',
-              '#default_value' => 'Security Answer 2',
-            ],
-            'placeholder' => [
-              '#title' => 'Security Answer 2 placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Security Answer 2 field placeholder',
-              '#default_value' => 'Security Answer 2',
-            ],
-            'annotation' => [
-              '#title' => 'Security Answer 2 Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
-            ],
-          ],
-        ],
-
-        // 'bonus_code' => [
-        //   'name' => 'Bonus Code',
-        //   'type' => 'textfield',
-        //   'settings' => [
-        //     'label' => [
-        //       '#title' => 'Bonus Code label',
-        //       '#type' => 'textfield',
-        //       '#description' => 'label for Bonus Code field',
-        //     ],
-        //     'placeholder' => [
-        //       '#title' => 'Bonus code placeholder label',
-        //       '#type' => 'textfield',
-        //       '#description' => 'label for Bonus code field placeholder',
-        //     ],
-        //     'annotation' => [
-        //       '#title' => 'Bonus code Annotation text',
-        //       '#type' => 'textarea',
-        //       '#description' => 'field annotation that will be displayed on focus',
-        //     ],
-        //     'is_hidden' => [
-        //       '#title' => 'Hide Bonus Code',
-        //       '#type' => 'checkbox',
-        //       '#description' => 'Enable or disable bonus code',
-        //     ],
-        //   ],
-        // ],
-
-        // 'accept_terms' => [
-        //   'name' => 'Accept Terms Markup',
-        //   'type' => 'checkbox',
-        //   'settings' => [
-        //     'markup' => [
-        //       '#title' => 'Accept Terms Text',
-        //       '#type' => 'textarea',
-        //       '#description' => 'A Markup text for accept terms and conditions beside the submit button',
-        //       '#default_value' => 'I have read and accept the Terms and Condition',
-        //     ],
-        //   ],
-        // ],
-
-        // 'legal_age' => [
-        //   'name' => 'Legal Age Markup',
-        //   'type' => 'checkbox',
-        //   'settings' => [
-        //     'markup' => [
-        //       '#title' => 'Legal Age Text',
-        //       '#type' => 'textarea',
-        //       '#description' => 'A Markup text for accept terms and conditions beside the submit button',
-        //       '#default_value' => 'I am at least 18 years old',
-        //     ],
-        //   ],
-        // ],
 
         'submit' => [
           'name' => 'Submit',

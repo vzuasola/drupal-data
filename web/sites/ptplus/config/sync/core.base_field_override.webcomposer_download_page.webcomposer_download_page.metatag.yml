@@ -1,0 +1,20 @@
+uuid: 82fe1972-a0eb-412d-8629-1ede5fd2b33f
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_download_page
+_core:
+  default_config_hash: oxgbySouByGdx95GCXdGwYyObtOSX69IEAbP3qzkf5A
+id: webcomposer_download_page.webcomposer_download_page.metatag
+field_name: metatag
+entity_type: webcomposer_download_page
+bundle: webcomposer_download_page
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
