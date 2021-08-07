@@ -1,0 +1,89 @@
+uuid: 41f0f120-6c6b-45bc-9e0c-3c305e19d0b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.floating_footer_tabs.field_active_icon_tab
+    - field.field.taxonomy_term.floating_footer_tabs.field_icon_tab
+    - field.field.taxonomy_term.floating_footer_tabs.field_label_tab
+    - field.field.taxonomy_term.floating_footer_tabs.field_status_tab
+    - image.style.thumbnail
+    - taxonomy.vocabulary.floating_footer_tabs
+  module:
+    - field_group
+    - svg_image
+third_party_settings:
+  field_group:
+    group_icons_section:
+      children:
+        - field_icon_tab
+        - field_active_icon_tab
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Icons Section'
+id: taxonomy_term.floating_footer_tabs.default
+targetEntityType: taxonomy_term
+bundle: floating_footer_tabs
+mode: default
+content:
+  field_active_icon_tab:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_icon_tab:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_label_tab:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_status_tab:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
