@@ -1,0 +1,9 @@
+uuid: cc46c41b-e50e-43f8-b394-ca8c8f12368e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Floating Footer Tabs'
+vid: floating_footer_tabs
+description: 'List of floating-footer tabs'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,19 @@
+uuid: 75cf89d6-f514-4027-a927-40132e8ad61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_label_tab
+    - taxonomy.vocabulary.floating_footer_tabs
+id: taxonomy_term.floating_footer_tabs.field_label_tab
+field_name: field_label_tab
+entity_type: taxonomy_term
+bundle: floating_footer_tabs
+label: 'Label tab'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
