@@ -1,0 +1,25 @@
+uuid: 1adeb36c-9820-4266-b400-d437b30cad8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_user_availability
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
+field_name: field_user_availability
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'User Availability'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: partner_matrix
+  -
+    value: regular_user
+default_value_callback: ''
+settings: {  }
+field_type: list_string
