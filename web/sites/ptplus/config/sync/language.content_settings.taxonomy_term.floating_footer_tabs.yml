@@ -1,0 +1,16 @@
+uuid: 6e2bc6f2-ed9f-4c3e-857e-5abcda6a397d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.floating_footer_tabs
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.floating_footer_tabs
+target_entity_type_id: taxonomy_term
+target_bundle: floating_footer_tabs
+default_langcode: site_default
+language_alterable: true
