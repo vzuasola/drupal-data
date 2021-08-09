@@ -7,7 +7,7 @@
             "w"
         ],
         "instances": [
-            "http://nexus-manila-ipvg.ph.esl-asia.com:8081/repository/$CI_PROJECT_NAME"
+            "http://mdc-co-nex01.msgreen.dom:8081/repository/$CI_PROJECT_NAME"
         ]
     },
     "phpcs": {
