@@ -1,9 +1,10 @@
 parameters:
   monolog.channel_handlers:
-    default: ['file', 'syslog']
-    php: ['file', 'syslog']
+    default: ['file']
+    php: ['file']
+  monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'memory_usage', 'web']
 
 services:
   monolog.handler.file:
-    class:  Drupal\webcomposer_monolog\Monolog\Handler\StreamHandler
-    arguments: ['200', false]
+    class: Monolog\Handler\RotatingFileHandler
+    arguments: ['/var/log/cms/drupal.log', '30', '200', false]
