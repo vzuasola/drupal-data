@@ -6,5 +6,5 @@ parameters:
 
 services:
   monolog.handler.file:
-    class: Monolog\Handler\RotatingFileHandler
-    arguments: ['/var/log/cms/drupal.log', '30', '200', false]
+    class: Monolog\Handler\StreamHandler
+    arguments: ['/var/log/cms/drupal.log']
