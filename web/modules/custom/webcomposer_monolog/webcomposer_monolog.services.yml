@@ -1,7 +1,7 @@
 parameters:
   monolog.channel_handlers:
-    default: [stream']
-    php: [stream']
+    default: ['stream']
+    php: ['stream']
   monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'memory_usage', 'web']
 
 services:
