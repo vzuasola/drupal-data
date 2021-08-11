@@ -1,10 +1,10 @@
 parameters:
   monolog.channel_handlers:
-    default: ['file']
-    php: ['file']
+    default: [stream']
+    php: [stream']
   monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'memory_usage', 'web']
 
 services:
-  monolog.handler.file:
+  monolog.handler.stream:
     class: Monolog\Handler\StreamHandler
     arguments: ['/var/log/cms/drupal.log']
