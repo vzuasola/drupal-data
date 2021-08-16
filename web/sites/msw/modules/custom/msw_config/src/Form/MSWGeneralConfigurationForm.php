@@ -170,5 +170,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('Site ID of MSW.'),
       '#required' => TRUE,
     ];
+
+    $form['online_register_setting']['register']['registration_portal_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Portal ID'),
+      '#default_value' => $this->get('registration_portal_id'),
+      '#description' => $this->t('Portal ID of iCOre.'),
+      '#required' => TRUE,
+    ];
   }
 }
