@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block.block.languagedropdownswitcher_2
     - field.storage.mobile_sponsor_list_v2.field_sponsor_enable
     - field.storage.mobile_sponsor_list_v2.field_title
   module:
@@ -256,6 +257,7 @@ display:
         filters: false
         filter_groups: false
         empty: false
+        header: false
       pager:
         type: none
         options:
@@ -642,7 +644,7 @@ display:
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: langcode_op
             label: 'Translation language'
@@ -691,6 +693,20 @@ display:
           tokenize: false
           content: 'No content available.'
           plugin_id: text_custom
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
     cache_metadata:
       max-age: 0
       contexts:

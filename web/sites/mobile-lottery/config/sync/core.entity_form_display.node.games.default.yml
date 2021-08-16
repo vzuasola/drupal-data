@@ -6,13 +6,14 @@ dependencies:
     - field.field.node.games.body
     - field.field.node.games.field_game_landscape_size
     - field.field.node.games.field_game_provider
-    - field.field.node.games.field_maintenance_blurb
-    - field.field.node.games.field_maintenance_end_date
-    - field.field.node.games.field_maintenance_start_date
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_game_thumbnail_large
     - field.field.node.games.field_game_thumbnail_size
     - field.field.node.games.field_game_thumbnail_small
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_maintenance_end_date
+    - field.field.node.games.field_maintenance_start_date
+    - field.field.node.games.field_native_app
     - field.field.node.games.field_target
     - field.field.node.games.field_use_game_loader
     - image.style.thumbnail
@@ -47,6 +48,7 @@ third_party_settings:
         - field_game_provider
         - field_target
         - field_use_game_loader
+        - field_native_app
       parent_name: ''
       weight: 2
       format_type: fieldset
@@ -58,9 +60,9 @@ third_party_settings:
       label: 'Game Provider Settings'
     group_under_maintenance_settings:
       children:
-        - field_maintenance_blurb
         - field_maintenance_start_date
         - field_maintenance_end_date
+        - field_maintenance_blurb
       parent_name: ''
       weight: 9
       format_type: details
@@ -140,6 +142,31 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_native_app:
+    weight: 18
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        b1d3ca32-c3ba-4d53-ae90-cc35804b378a:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '11'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    type: boolean_checkbox
     region: content
   field_target:
     weight: 16

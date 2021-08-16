@@ -1,7 +1,7 @@
 parameters:
   monolog.channel_handlers:
-    default: ['file', 'drupal.dblog']
-    php: ['file', 'drupal.dblog']
+    default: ['file', 'syslog']
+    php: ['file', 'syslog']
 
 services:
   monolog.handler.file:
