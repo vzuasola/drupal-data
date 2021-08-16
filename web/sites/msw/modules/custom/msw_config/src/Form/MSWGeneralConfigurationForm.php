@@ -150,7 +150,7 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Reg API v3 Error Mapping'),
       '#default_value' => $this->get('reg_api_error_mapping'),
-      '#description' => $this->t('Icore Registration Response Code Mapping Message. Format example: {StatusCode}|{Message}'),
+      '#description' => $this->t('Registration API v3 Response Code Mapping Message. Format example: {StatusCode}|{Message}'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
