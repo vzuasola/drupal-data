@@ -1,0 +1,5 @@
+msw_config.list:
+  title: 'MSW Configuration'
+  description: MSW Configuration
+  parent: system.admin_config
+  route_name: msw_config.admin_settings
