@@ -1,14 +1,14 @@
-uuid: f447dfec-ab77-4d3d-8339-a92ab94d5ad0
+uuid: 5517676e-088b-462b-8207-d1ecfdba4806
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.desktop_slider.field_pre_banner_link_target
+    - field.storage.desktop_slider.field_banner_link_target
   module:
     - desktop_slider
     - options
-id: desktop_slider.desktop_slider.field_pre_banner_link_target
-field_name: field_pre_banner_link_target
+id: desktop_slider.desktop_slider.field_banner_link_target
+field_name: field_banner_link_target
 entity_type: desktop_slider
 bundle: desktop_slider
 label: 'Pre Banner Link Target'

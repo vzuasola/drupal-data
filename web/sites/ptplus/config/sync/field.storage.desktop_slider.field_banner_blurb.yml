@@ -1,16 +1,16 @@
-uuid: ee1c3885-def7-4871-bb5c-cd31440c0110
+uuid: 5c49121d-7b46-4bbc-ab28-8fbdf1e75b8f
 langcode: en
 status: true
 dependencies:
   module:
     - desktop_slider
-    - link
-id: desktop_slider.field_pre_banner_link
-field_name: field_pre_banner_link
+    - text
+id: desktop_slider.field_banner_blurb
+field_name: field_banner_blurb
 entity_type: desktop_slider
-type: link
+type: text_long
 settings: {  }
-module: link
+module: text
 locked: false
 cardinality: 1
 translatable: true
