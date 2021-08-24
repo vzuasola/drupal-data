@@ -1,0 +1,22 @@
+add slider overlay entities:
+  title: 'Create new Slider Overlay entities'
+
+administer slider overlay entities:
+  title: 'Administer Slider Overlay entities'
+  description: 'Allow to access the administration form to configure Slider Overlay entities.'
+  restrict access: true
+
+delete slider overlay entities:
+  title: 'Delete Slider Overlay entities'
+
+edit slider overlay entities:
+  title: 'Edit Slider Overlay entities'
+
+access slider overlay overview:
+  title: 'Access the Slider Overlay overview page'
+
+view published slider overlay entities:
+  title: 'View published Slider Overlay entities'
+
+view unpublished slider overlay entities:
+  title: 'View unpublished Slider Overlay entities'
