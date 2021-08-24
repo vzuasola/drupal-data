@@ -1,0 +1,24 @@
+uuid: b26f7b0a-6aa3-402e-b178-6cca883d1899
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_preview_display_only
+  module:
+    - desktop_slider
+id: desktop_slider.desktop_slider.field_preview_display_only
+field_name: field_preview_display_only
+entity_type: desktop_slider
+bundle: desktop_slider
+label: 'Preview Display Only'
+description: 'Enable this field if you want the slider entry to be viewable on Preview Mode only.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

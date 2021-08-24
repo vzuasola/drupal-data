@@ -1,0 +1,21 @@
+uuid: ba897b5f-2c59-4c53-91d0-016e52db0cac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_pre_banner_blurb
+  module:
+    - desktop_slider
+    - text
+id: desktop_slider.desktop_slider.field_pre_banner_blurb
+field_name: field_pre_banner_blurb
+entity_type: desktop_slider
+bundle: desktop_slider
+label: 'Per Banner Blurb'
+description: 'The body for this banner'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

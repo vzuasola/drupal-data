@@ -1,0 +1,23 @@
+uuid: 6d6c5418-c6c8-4ad9-aca2-9e91b448eaa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_pre_content_position
+  module:
+    - desktop_slider
+    - options
+id: desktop_slider.desktop_slider.field_pre_content_position
+field_name: field_pre_content_position
+entity_type: desktop_slider
+bundle: desktop_slider
+label: 'Pre Content Position'
+description: 'Position the Blurb content'
+required: false
+translatable: true
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

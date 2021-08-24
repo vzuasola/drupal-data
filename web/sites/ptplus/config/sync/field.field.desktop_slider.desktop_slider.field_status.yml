@@ -1,0 +1,23 @@
+uuid: 47bc3286-ef20-4164-b208-38ca4607ede6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_status
+  module:
+    - desktop_slider
+    - options
+id: desktop_slider.desktop_slider.field_status
+field_name: field_status
+entity_type: desktop_slider
+bundle: desktop_slider
+label: Status
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 4d826ca8-8449-476b-a814-50311b3aa392
+langcode: en
+status: true
+dependencies:
+  module:
+    - desktop_slider
+    - text
+id: desktop_slider.field_pre_banner_blurb
+field_name: field_pre_banner_blurb
+entity_type: desktop_slider
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
