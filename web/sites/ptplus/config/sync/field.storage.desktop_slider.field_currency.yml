@@ -1,0 +1,21 @@
+uuid: 6cedb182-a930-4592-aad8-e66cc258b9d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - desktop_slider
+id: desktop_slider.field_currency
+field_name: field_currency
+entity_type: desktop_slider
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

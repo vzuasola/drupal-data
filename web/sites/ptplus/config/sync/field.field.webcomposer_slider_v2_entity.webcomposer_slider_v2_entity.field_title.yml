@@ -15,7 +15,7 @@ bundle: webcomposer_slider_v2_entity
 label: Title
 description: 'The title of banner slider 2.0'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

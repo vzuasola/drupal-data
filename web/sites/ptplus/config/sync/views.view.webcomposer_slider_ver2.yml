@@ -13,10 +13,10 @@ dependencies:
   module:
     - datetime
     - draggableviews
-    - image
     - options
     - rest
     - serialization
+    - svg_image
     - user
     - webcomposer_rest_extra
     - webcomposer_slider_v2

@@ -1,0 +1,18 @@
+uuid: 74eb50b8-4ddd-4146-82f1-edefdc5ea99f
+langcode: en
+status: true
+dependencies:
+  module:
+    - desktop_slider
+id: desktop_slider.desktop_slider.metatag
+field_name: metatag
+entity_type: desktop_slider
+bundle: desktop_slider
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,30 @@
+uuid: dab18542-357a-4f03-a1b7-b238b41a985a
+langcode: en
+status: true
+dependencies:
+  module:
+    - desktop_slider
+    - options
+id: desktop_slider.field_pre_banner_link_target
+field_name: field_pre_banner_link_target
+entity_type: desktop_slider
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
