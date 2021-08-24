@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.desktop_slider.desktop_slider.field_banner_blurb
     - field.field.desktop_slider.desktop_slider.field_banner_image
+    - field.field.desktop_slider.desktop_slider.field_banner_link
+    - field.field.desktop_slider.desktop_slider.field_banner_link_target
+    - field.field.desktop_slider.desktop_slider.field_content_position
     - field.field.desktop_slider.desktop_slider.field_currency
     - field.field.desktop_slider.desktop_slider.field_disable_in_tablet
     - field.field.desktop_slider.desktop_slider.field_log_in_state
@@ -13,10 +17,6 @@ dependencies:
     - field.field.desktop_slider.desktop_slider.field_post_banner_link
     - field.field.desktop_slider.desktop_slider.field_post_banner_link_target
     - field.field.desktop_slider.desktop_slider.field_post_content_position
-    - field.field.desktop_slider.desktop_slider.field_pre_banner_blurb
-    - field.field.desktop_slider.desktop_slider.field_pre_banner_link
-    - field.field.desktop_slider.desktop_slider.field_pre_banner_link_target
-    - field.field.desktop_slider.desktop_slider.field_pre_content_position
     - field.field.desktop_slider.desktop_slider.field_preview_display_only
     - field.field.desktop_slider.desktop_slider.field_publish_date
     - field.field.desktop_slider.desktop_slider.field_status
@@ -35,10 +35,10 @@ third_party_settings:
     group_pre_banner_fields:
       children:
         - field_banner_image
-        - field_pre_banner_link
-        - field_pre_banner_link_target
-        - field_pre_banner_blurb
-        - field_pre_content_position
+        - field_banner_link
+        - field_banner_link_target
+        - field_banner_blurb
+        - field_content_position
       parent_name: ''
       weight: 3
       format_type: fieldset
@@ -100,6 +100,14 @@ targetEntityType: desktop_slider
 bundle: desktop_slider
 mode: default
 content:
+  field_banner_blurb:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_banner_image:
     weight: 6
     settings:
@@ -107,6 +115,26 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_banner_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_banner_link_target:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_position:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_currency:
     weight: 19
@@ -130,7 +158,7 @@ content:
     type: options_buttons
     region: content
   field_player_state:
-    weight: 17
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -166,35 +194,7 @@ content:
     type: options_select
     region: content
   field_post_content_position:
-    weight: 16
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_pre_banner_blurb:
-    weight: 9
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_pre_banner_link:
-    weight: 7
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_pre_banner_link_target:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_pre_content_position:
-    weight: 10
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
