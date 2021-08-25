@@ -1,0 +1,5 @@
+entity.desktop_slider.add_form:  
+  route_name: entity.desktop_slider.add_form  
+  title: 'Add Desktop slider'
+  appears_on:
+    - entity.desktop_slider.collection

@@ -1,0 +1,23 @@
+uuid: b7697bae-2e3b-46cc-88ff-90dc695a5f49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_post_banner_link_target
+  module:
+    - desktop_slider
+    - options
+id: desktop_slider.desktop_slider.field_post_banner_link_target
+field_name: field_post_banner_link_target
+entity_type: desktop_slider
+bundle: desktop_slider
+label: 'Post Banner Link Target'
+description: 'The link behavior when clicked'
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

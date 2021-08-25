@@ -14,7 +14,7 @@ bundle: floating_footer_tabs
 label: 'Active icon tab'
 description: 'icon for active tab'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

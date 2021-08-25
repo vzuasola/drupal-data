@@ -1,0 +1,18 @@
+uuid: dbe241e0-af06-4c13-9379-c4d44430ddbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.floating_footer_tabs
+id: taxonomy_term.floating_footer_tabs.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: floating_footer_tabs
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
