@@ -1,0 +1,16 @@
+uuid: 9908ae01-55b3-423a-adc9-0ffde63cc95c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lobby_tab
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.lobby_tab
+target_entity_type_id: taxonomy_term
+target_bundle: lobby_tab
+default_langcode: site_default
+language_alterable: true
