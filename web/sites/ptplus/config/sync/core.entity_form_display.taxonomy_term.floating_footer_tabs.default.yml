@@ -6,6 +6,7 @@ dependencies:
     - field.field.taxonomy_term.floating_footer_tabs.field_active_icon_tab
     - field.field.taxonomy_term.floating_footer_tabs.field_icon_tab
     - field.field.taxonomy_term.floating_footer_tabs.field_label_tab
+    - field.field.taxonomy_term.floating_footer_tabs.field_page_url
     - field.field.taxonomy_term.floating_footer_tabs.field_status_tab
     - image.style.thumbnail
     - taxonomy.vocabulary.floating_footer_tabs
@@ -19,7 +20,7 @@ third_party_settings:
         - field_icon_tab
         - field_active_icon_tab
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tab
       format_settings:
         id: ''
@@ -50,7 +51,15 @@ content:
     type: image_image
     region: content
   field_label_tab:
-    weight: 6
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_page_url:
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -58,7 +67,7 @@ content:
     type: string_textfield
     region: content
   field_status_tab:
-    weight: 7
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
@@ -66,7 +75,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
@@ -80,7 +89,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -4,10 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.ptplus.body
+    - field.field.node.ptplus.field_game_code
+    - field.field.node.ptplus.field_games_list_category
+    - field.field.node.ptplus.field_thumbnail_image
+    - image.style.thumbnail
     - node.type.ptplus
   module:
     - path
     - scheduler
+    - svg_image
     - text
 id: node.ptplus.default
 targetEntityType: node
@@ -29,6 +34,28 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_game_code:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_games_list_category:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_thumbnail_image:
+    weight: 125
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -76,6 +103,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
