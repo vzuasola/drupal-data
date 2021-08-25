@@ -7,30 +7,31 @@ url:
     zh-hans: sc
     zh-hant: ch
     th: th
-    ko: kr
-    hi: in
     vi: vn
     id: id
-    es: es
+    ko: kr
+    hi: in
+    '': null
     bu: bu
-    pt-br: pt
+    es: es
+    ja: ja
     lo: lo
-    ja: jp
+    pt-br: pt-br
     km: km
   domains:
     en: ''
     zh-hans: ''
     zh-hant: ''
     th: ''
-    ko: ''
-    hi: ''
     vi: ''
     id: ''
-    es: ''
+    ko: ''
+    hi: ''
     bu: ''
-    pt-br: ''
-    lo: ''
+    es: ''
     ja: ''
+    lo: ''
+    pt-br: ''
     km: ''
 selected_langcode: site_default
 _core:
