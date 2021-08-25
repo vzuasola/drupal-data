@@ -5,15 +5,8 @@ dependencies:
   config:
     - field.storage.webcomposer_slider_v2_entity.field_banner_image_landscape
   module:
-    - content_translation
     - image
     - webcomposer_slider_v2
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
 field_name: field_banner_image_landscape
 entity_type: webcomposer_slider_v2_entity
@@ -21,7 +14,7 @@ bundle: webcomposer_slider_v2_entity
 label: 'Banner Image Landscape'
 description: 'Recommended dimension of image is 1661px x 376px.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

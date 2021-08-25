@@ -1,0 +1,21 @@
+uuid: 3246ef1e-bafa-4c24-8e7b-bc682948823d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_publish_date
+  module:
+    - datetime
+    - desktop_slider
+id: desktop_slider.desktop_slider.field_publish_date
+field_name: field_publish_date
+entity_type: desktop_slider
+bundle: desktop_slider
+label: 'Publish Date (optional)'
+description: "<p>If this is set the slider will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the slider will be available upon saving.</p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -14,7 +14,7 @@ bundle: webcomposer_slider_v2_entity
 label: 'User Availability'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: partner_matrix

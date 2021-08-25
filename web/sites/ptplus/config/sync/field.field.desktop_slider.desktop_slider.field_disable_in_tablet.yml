@@ -1,0 +1,24 @@
+uuid: eab83947-2ae8-47f9-99de-d3e89c0732d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_slider.field_disable_in_tablet
+  module:
+    - desktop_slider
+id: desktop_slider.desktop_slider.field_disable_in_tablet
+field_name: field_disable_in_tablet
+entity_type: desktop_slider
+bundle: desktop_slider
+label: 'Disable in Tablet'
+description: 'Check if the slider entry is only available in Desktop.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
