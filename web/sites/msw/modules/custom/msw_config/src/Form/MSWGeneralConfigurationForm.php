@@ -113,6 +113,15 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('Site ID of MSW.'),
       '#required' => TRUE,
     ];
+
+    $form['registration_setting']['registration']['registration_portal_id_slipstream'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Portal ID'),
+      '#default_value' => $this->get('registration_portal_id_slipstream'),
+      '#description' => $this->t('Portal ID of iCOre.'),
+      '#required' => TRUE,
+    ];
+
   }
 
     /**
