@@ -178,5 +178,21 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('Portal ID of iCOre.'),
       '#required' => TRUE,
     ];
+
+    $form['online_register_setting']['register']['registration_marketing_channel'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Marketing Channel'),
+      '#default_value' => $this->get('registration_marketing_channel'),
+      '#description' => $this->t('Default Marketing Channel.'),
+      '#required' => FALSE,
+    ];
+
+    $form['online_register_setting']['register']['registration_btag'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Btag'),
+      '#default_value' => $this->get('registration_btag'),
+      '#description' => $this->t('Default Btag'),
+      '#required' => FALSE,
+    ];
   }
 }
