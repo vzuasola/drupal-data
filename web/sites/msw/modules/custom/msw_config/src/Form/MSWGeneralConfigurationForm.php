@@ -113,6 +113,15 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('Site ID of MSW.'),
       '#required' => TRUE,
     ];
+
+    $form['registration_setting']['registration']['registration_portal_id_slipstream'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Portal ID'),
+      '#default_value' => $this->get('registration_portal_id_slipstream', 179),
+      '#description' => $this->t('Portal ID of iCOre.'),
+      '#required' => TRUE,
+    ];
+
   }
 
     /**
@@ -174,7 +183,7 @@ class MSWGeneralConfigurationForm extends FormBase {
     $form['online_register_setting']['register']['registration_portal_id'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Portal ID'),
-      '#default_value' => $this->get('registration_portal_id'),
+      '#default_value' => $this->get('registration_portal_id', 177),
       '#description' => $this->t('Portal ID of iCOre.'),
       '#required' => TRUE,
     ];
