@@ -203,5 +203,14 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('Default Btag'),
       '#required' => FALSE,
     ];
+
+    $body_content = $this->get('success_message');
+    $form['online_register_setting']['register']['success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
+      '#translatable' => TRUE,
+    ];
   }
 }
