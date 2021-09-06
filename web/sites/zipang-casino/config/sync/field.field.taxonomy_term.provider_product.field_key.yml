@@ -1,0 +1,19 @@
+uuid: 526148e5-51ea-4829-ac31-9c571d38eb7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_key
+    - taxonomy.vocabulary.provider_product
+id: taxonomy_term.provider_product.field_key
+field_name: field_key
+entity_type: taxonomy_term
+bundle: provider_product
+label: Key
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
