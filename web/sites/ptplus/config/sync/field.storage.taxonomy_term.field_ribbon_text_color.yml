@@ -1,0 +1,20 @@
+uuid: 5121e4e3-867b-4003-9e4b-91d7875833a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - taxonomy
+id: taxonomy_term.field_ribbon_text_color
+field_name: field_ribbon_text_color
+entity_type: taxonomy_term
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

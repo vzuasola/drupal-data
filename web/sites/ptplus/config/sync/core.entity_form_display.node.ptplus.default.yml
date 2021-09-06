@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.node.ptplus.body
     - field.field.node.ptplus.field_game_code
+    - field.field.node.ptplus.field_game_ribbon
     - field.field.node.ptplus.field_games_list_category
+    - field.field.node.ptplus.field_keywords
     - field.field.node.ptplus.field_thumbnail_image
     - image.style.thumbnail
     - node.type.ptplus
@@ -42,11 +44,25 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_game_ribbon:
+    weight: 126
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_games_list_category:
     weight: 122
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_keywords:
+    weight: 127
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_thumbnail_image:
     weight: 125

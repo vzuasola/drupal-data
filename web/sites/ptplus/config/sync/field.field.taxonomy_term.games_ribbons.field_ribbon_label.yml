@@ -1,0 +1,19 @@
+uuid: 18c99725-8799-4b6a-a554-f70da932b0ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ribbon_label
+    - taxonomy.vocabulary.games_ribbons
+id: taxonomy_term.games_ribbons.field_ribbon_label
+field_name: field_ribbon_label
+entity_type: taxonomy_term
+bundle: games_ribbons
+label: Label
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
