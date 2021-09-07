@@ -1,4 +1,4 @@
-uuid: d5d29121-8eaf-438e-b663-f016c6edce02
+uuid: a985ee8c-72ff-4bae-80c5-f668c1912480
 langcode: en
 status: true
 dependencies:
@@ -13,4 +13,4 @@ id: taxonomy_term.games_category
 target_entity_type_id: taxonomy_term
 target_bundle: games_category
 default_langcode: site_default
-language_alterable: true
+language_alterable: false
