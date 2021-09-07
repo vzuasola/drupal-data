@@ -217,7 +217,8 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Outlets List'),
       '#default_value' => $this->get('outlets_list'),
-      '#description' => $this->t('Contents of this field should be the same as configured for the Registration Form Online - Outlets'),
+      '#description' => $this->t('List of Home Outlets. Provide a list separated by pipe, in the form of
+        {Index}|{Province}|{City}|{Outlet Name}|{Outlet Id}.'),
       '#required' => TRUE,
     ];
   }
