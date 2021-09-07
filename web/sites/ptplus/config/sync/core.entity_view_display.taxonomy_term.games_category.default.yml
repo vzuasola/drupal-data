@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.games_category.field_game_tile_image_size
     - field.field.taxonomy_term.games_category.field_games_alias
     - field.field.taxonomy_term.games_category.field_games_category_logo
     - field.field.taxonomy_term.games_category.field_publish_date
@@ -10,7 +11,8 @@ dependencies:
     - taxonomy.vocabulary.games_category
   module:
     - datetime
-    - image
+    - options
+    - svg_image
     - text
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
@@ -24,6 +26,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_game_tile_image_size:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_games_alias:
     weight: 1
     label: above
