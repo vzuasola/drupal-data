@@ -212,5 +212,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#format' => $body_content['format'],
       '#translatable' => TRUE,
     ];
+
+    $form['online_register_setting']['register']['outlets_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Outlets List'),
+      '#default_value' => $this->get('outlets_list'),
+      '#description' => $this->t('Contents of this field should be the same as configured for the Registration Form Online - Outlets'),
+      '#required' => TRUE,
+    ];
   }
 }
