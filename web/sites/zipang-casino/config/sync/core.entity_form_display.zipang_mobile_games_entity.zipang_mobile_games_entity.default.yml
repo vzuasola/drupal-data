@@ -22,6 +22,7 @@ dependencies:
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title_icon
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_type
+    - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_provider_product
     - image.style.thumbnail
   module:
     - conditional_fields
@@ -274,6 +275,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_provider_product:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
