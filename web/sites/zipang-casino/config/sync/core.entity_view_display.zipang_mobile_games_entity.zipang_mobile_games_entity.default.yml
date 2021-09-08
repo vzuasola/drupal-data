@@ -1,4 +1,4 @@
-uuid: 81ee7f5a-c801-42c5-ac7c-5cd283f323ac
+uuid: c8f5d82d-b099-49a1-923f-2d805b3f474e
 langcode: ja
 status: true
 dependencies:
@@ -22,189 +22,274 @@ dependencies:
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title_icon
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_type
+    - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_provider_product
+    - image.style.thumbnail
   module:
+    - conditional_fields
+    - entity_reference_views_select
+    - field_group
     - image
-    - options
     - text
-    - user
     - zipang_mobile_games
+third_party_settings:
+  field_group:
+    group_casino_for_casino_page_:
+      children:
+        - field_game_category
+        - field_game_filter
+      parent_name: ''
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'fields for casino page'
+        required_fields: true
+      label: 'Casino (for casino page)'
+    group_games_for_games_page_:
+      children:
+        - field_game_filter_games
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Games (for games page)'
+    group_arcade_for_arcade_page_:
+      children:
+        - field_arcade_game_category
+        - field_arcade_game_filter
+      parent_name: ''
+      weight: 15
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Arcade (for arcade page)'
+    group_live_games_for_live_games_:
+      children:
+        - field_game_title_icon
+        - field_game_icon_label
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Live Games (for live games page)'
 _core:
-  default_config_hash: ogXEISy6zkdcbVNLSSqy4tDa97gACTPauOD7ELSOA9M
+  default_config_hash: mz6SAokqodOXXIM2vE5rK82nh-6HB1qqKtUEhU2_8iM
 id: zipang_mobile_games_entity.zipang_mobile_games_entity.default
 targetEntityType: zipang_mobile_games_entity
 bundle: zipang_mobile_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 21
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_arcade_game_category:
-    weight: 16
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_arcade_game_filter:
-    weight: 17
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_client_type:
-    weight: 10
-    label: above
+    weight: 14
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: options_select
+    region: content
+  field_arcade_game_category:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_arcade_game_filter:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_client_type:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_enable_free_play:
-    weight: 1
-    label: above
+    weight: 8
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      display_label: true
     third_party_settings: {  }
-    type: boolean
+    type: boolean_checkbox
     region: content
   field_enable_game:
-    weight: 2
-    label: above
+    weight: 0
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      display_label: true
     third_party_settings: {  }
-    type: boolean
+    type: boolean_checkbox
     region: content
   field_game_category:
     weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        82e6869f-cab1-47c6-9080-59ad1b88be84:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_mobile_games_entity
+          bundle: zipang_mobile_games_entity
+    type: options_buttons
     region: content
   field_game_code:
-    weight: 8
-    label: above
+    weight: 4
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
   field_game_code_icore:
-    weight: 14
-    label: above
+    weight: 5
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
   field_game_description:
-    weight: 15
-    label: above
-    settings: {  }
+    weight: 17
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
     third_party_settings: {  }
-    type: text_default
+    type: text_textarea_with_summary
     region: content
   field_game_filter:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    weight: 4
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        87cdc2a0-ea95-4d8d-b8dd-c4b9c477cdb8:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_mobile_games_entity
+          bundle: zipang_mobile_games_entity
+    type: options_select
     region: content
   field_game_filter_games:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    weight: 10
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        d2c45b71-93dd-461e-9a96-bdc5aba3b74c:
+          dependee: field_game_provider
+          settings:
+            state: '!visible'
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '197'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: zipang_mobile_games_entity
+          bundle: zipang_mobile_games_entity
+    type: options_select
     region: content
   field_game_icon_label:
-    weight: 20
-    label: above
+    weight: 17
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
   field_game_provider:
-    weight: 13
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_game_tag:
-    weight: 5
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_game_thumbnail:
-    weight: 6
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_game_title:
-    weight: 9
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_game_title_icon:
-    weight: 19
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_game_type:
-    weight: 18
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  name:
-    label: above
-    type: string
-    weight: -4
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
-    weight: 0
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_tag:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_title_icon:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_type:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_provider_product:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
 hidden:
-  langcode: true
+  name: true
+  translation: true
+  user_id: true
