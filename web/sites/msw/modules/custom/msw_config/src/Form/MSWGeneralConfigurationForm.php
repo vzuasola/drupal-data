@@ -150,7 +150,7 @@ class MSWGeneralConfigurationForm extends FormBase {
 
     $form['online_register_setting']['register']['enable_register_online_join_btn'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Registration Online - (✓)enable | (✕)disable'),
+      '#title' => $this->t('Join Button - (✓)enable | (✕)disable'),
       '#default_value' => $this->get('enable_register_online_join_btn'),
       '#translatable' => TRUE,
     ];
