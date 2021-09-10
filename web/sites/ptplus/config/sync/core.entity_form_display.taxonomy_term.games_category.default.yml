@@ -1,0 +1,102 @@
+uuid: b9657994-3680-4539-8bbb-a29dcaadb1f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.games_category.field_game_tile_image_size
+    - field.field.taxonomy_term.games_category.field_games_alias
+    - field.field.taxonomy_term.games_category.field_games_category_logo
+    - field.field.taxonomy_term.games_category.field_publish_date
+    - field.field.taxonomy_term.games_category.field_unpublish_date
+    - image.style.thumbnail
+    - taxonomy.vocabulary.games_category
+  module:
+    - datetime
+    - field_group
+    - svg_image
+    - text
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - description
+        - field_unpublish_date
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Scheduler Settings'
+id: taxonomy_term.games_category.default
+targetEntityType: taxonomy_term
+bundle: games_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_game_tile_image_size:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_games_alias:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_games_category_logo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_publish_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  path: true

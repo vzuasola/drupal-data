@@ -1,0 +1,38 @@
+uuid: c6d0146c-e63e-489f-b269-d4fa01a1bb47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_thumbnail_big
+    - node.type.ptplus
+  module:
+    - image
+id: node.ptplus.field_game_thumbnail_big
+field_name: field_game_thumbnail_big
+entity_type: node
+bundle: ptplus
+label: 'Thumbnail Image Big'
+description: 'Recommended dimension of image is 139px x 86px. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

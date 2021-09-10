@@ -23,7 +23,6 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
-  syslog: 0
   devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
@@ -61,6 +60,7 @@ module:
   mobile_sponsor_list_v2: 0
   monolog: 0
   node: 0
+  node_revision_delete: 0
   options: 0
   paragraphs: 0
   paragraphs_type_permissions: 0
@@ -75,6 +75,7 @@ module:
   scheduler: 0
   serialization: 0
   shortcut: 0
+  syslog: 0
   system: 0
   taxonomy: 0
   taxonomy_unique: 0

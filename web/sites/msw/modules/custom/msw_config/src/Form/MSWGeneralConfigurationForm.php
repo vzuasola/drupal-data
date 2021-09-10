@@ -41,6 +41,7 @@ class MSWGeneralConfigurationForm extends FormBase {
     ];
 
     $this->registrationConfig($form);
+    $this->onlineRegisterConfig($form);
 
     return $form;
   }
@@ -53,20 +54,6 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#type' => 'details',
       '#title' => t('Registration Configuration'),
       '#group' => 'advanced',
-    ];
-
-    $form['registration_setting']['register'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Registration Online'),
-      '#collapsible' => TRUE,
-      '#open' => TRUE,
-    ];
-
-    $form['registration_setting']['register']['enable_register_online'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Registration Online - (✓)enable | (✕)disable'),
-      '#default_value' => $this->get('enable_register_online'),
-      '#translatable' => TRUE,
     ];
 
     $form['registration_setting']['registration'] = [
@@ -124,6 +111,121 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#title' => $this->t('Site ID'),
       '#default_value' => $this->get('registration_site_id'),
       '#description' => $this->t('Site ID of MSW.'),
+      '#required' => TRUE,
+    ];
+
+    $form['registration_setting']['registration']['registration_portal_id_slipstream'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Portal ID'),
+      '#default_value' => $this->get('registration_portal_id_slipstream', 179),
+      '#description' => $this->t('Portal ID of iCOre.'),
+      '#required' => TRUE,
+    ];
+
+  }
+
+    /**
+   * {@inheritdoc}
+   */
+  private function onlineRegisterConfig(array &$form) {
+    $form['online_register_setting'] = [
+      '#type' => 'details',
+      '#title' => t('Registration Online Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['online_register_setting']['register'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Registration Online'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['enable_register_online'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Registration Online - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_register_online'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['enable_register_online_join_btn'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Join Button - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_register_online_join_btn'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['reg_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reg API v3 URL'),
+      '#default_value' => $this->get('reg_api_url'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['reg_api_error_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Reg API v3 Error Mapping'),
+      '#default_value' => $this->get('reg_api_error_mapping'),
+      '#description' => $this->t('Registration API v3 Response Code Mapping Message. Format example: {StatusCode}|{Message}'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['registration_jpay_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPay Integration Url'),
+      '#default_value' => $this->get('registration_jpay_url'),
+      '#description' => $this->t('JPay API url for registration account creation.'),
+      '#required' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['registration_jpay_site_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Site ID'),
+      '#default_value' => $this->get('registration_jpay_site_id'),
+      '#description' => $this->t('Site ID of MSW.'),
+      '#required' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['registration_portal_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Portal ID'),
+      '#default_value' => $this->get('registration_portal_id', 177),
+      '#description' => $this->t('Portal ID of iCOre.'),
+      '#required' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['registration_marketing_channel'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Marketing Channel'),
+      '#default_value' => $this->get('registration_marketing_channel'),
+      '#description' => $this->t('Default Marketing Channel.'),
+      '#required' => FALSE,
+    ];
+
+    $form['online_register_setting']['register']['registration_btag'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Btag'),
+      '#default_value' => $this->get('registration_btag'),
+      '#description' => $this->t('Default Btag'),
+      '#required' => FALSE,
+    ];
+
+    $body_content = $this->get('success_message');
+    $form['online_register_setting']['register']['success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['outlets_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Outlets List'),
+      '#default_value' => $this->get('outlets_list'),
+      '#description' => $this->t('List of Home Outlets. Provide a list separated by pipe, in the form of
+        {Index}|{Province}|{City}|{Outlet Name}|{Outlet Id}.'),
       '#required' => TRUE,
     ];
   }
