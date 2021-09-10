@@ -1,7 +1,7 @@
 field_settings:
   label: Product
   placeholder: '- Select -'
-  choices: "sports|OW Sports\r\nsports-df|Dafa Sports\r\ncasino|Casino\r\nlive-dealer|Live Dealer\r\ngames|Games\r\narcade|Arcade\r\nlottery|Lottery\r\npoker|Poker\r\nvirtual-sports|Virtuals"
+  choices: "sports|OW Sports\r\nsports-df|Dafa Sports\r\ncasino|Casino\r\nlive-dealer|Live Dealer\r\ngames|Games\r\narcade|Arcade\r\nlottery|Lottery\r\npoker|Poker\r\nvirtual-sports|Virtuals\r\nptplus|PTPLus"
 field_validations:
   required:
     enable: 1
