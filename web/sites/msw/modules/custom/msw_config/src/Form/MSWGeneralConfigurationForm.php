@@ -150,7 +150,7 @@ class MSWGeneralConfigurationForm extends FormBase {
 
     $form['online_register_setting']['register']['enable_register_online_join_btn'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Registration Online - (✓)enable | (✕)disable'),
+      '#title' => $this->t('Join Button - (✓)enable | (✕)disable'),
       '#default_value' => $this->get('enable_register_online_join_btn'),
       '#translatable' => TRUE,
     ];
@@ -224,7 +224,8 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Outlets List'),
       '#default_value' => $this->get('outlets_list'),
-      '#description' => $this->t('Contents of this field should be the same as configured for the Registration Form Online - Outlets'),
+      '#description' => $this->t('List of Home Outlets. Provide a list separated by pipe, in the form of
+        {Index}|{Province}|{City}|{Outlet Name}|{Outlet Id}.'),
       '#required' => TRUE,
     ];
   }
