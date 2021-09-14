@@ -22,6 +22,7 @@ dependencies:
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title_icon
     - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_type
+    - field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_provider_product
     - image.style.thumbnail
   module:
     - conditional_fields
@@ -37,7 +38,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       format_settings:
         id: ''
@@ -49,7 +50,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: fieldset
       format_settings:
         id: ''
@@ -62,7 +63,7 @@ third_party_settings:
         - field_arcade_game_category
         - field_arcade_game_filter
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: fieldset
       format_settings:
         id: ''
@@ -75,7 +76,7 @@ third_party_settings:
         - field_game_title_icon
         - field_game_icon_label
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: fieldset
       format_settings:
         id: ''
@@ -91,7 +92,7 @@ bundle: zipang_mobile_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -169,7 +170,7 @@ content:
     type: string_textfield
     region: content
   field_game_description:
-    weight: 16
+    weight: 17
     settings:
       rows: 9
       summary_rows: 3
@@ -271,6 +272,12 @@ content:
     region: content
   field_game_type:
     weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_provider_product:
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select

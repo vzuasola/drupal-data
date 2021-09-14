@@ -1,16 +1,16 @@
-uuid: a985ee8c-72ff-4bae-80c5-f668c1912480
+uuid: 2f963a0f-888e-49ee-b119-fd9a75a8b2e0
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.games_category
+    - taxonomy.vocabulary.games_ribbons
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: taxonomy_term.games_category
+id: taxonomy_term.games_ribbons
 target_entity_type_id: taxonomy_term
-target_bundle: games_category
+target_bundle: games_ribbons
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

@@ -148,6 +148,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['online_register_setting']['register']['enable_register_online_join_btn'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Join Button - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_register_online_join_btn'),
+      '#translatable' => TRUE,
+    ];
+
     $form['online_register_setting']['register']['reg_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Reg API v3 URL'),
@@ -211,6 +218,15 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#default_value' => $body_content['value'],
       '#format' => $body_content['format'],
       '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['outlets_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Outlets List'),
+      '#default_value' => $this->get('outlets_list'),
+      '#description' => $this->t('List of Home Outlets. Provide a list separated by pipe, in the form of
+        {Index}|{Province}|{City}|{Outlet Name}|{Outlet Id}.'),
+      '#required' => TRUE,
     ];
   }
 }
