@@ -321,6 +321,24 @@ class ZipangRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $d = $this->get('step_2_deposit_bonus');
+    $form['step_2']['step_2_deposit_bonus'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Deposit Bonus'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('step_2_play_now');
+    $form['step_2']['step_2_play_now'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Play Now'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
     $form['step_2']['promotion_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotion Label'),
