@@ -1,4 +1,4 @@
-icore_games_integration_form__active_tab: edit-solid-gaming
+icore_games_integration_form__active_tab: edit-cq9
 asia_gaming_currency: "RMB\r\nUSD\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nEUR"
 asia_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nko|ko-KR\r\nvn|vn\r\nid|id\r\nin|hi"
 asia_gaming_country: ''
@@ -37,8 +37,8 @@ evo_gaming_country: ''
 ebet_currency: ''
 ebet_language_mapping: ''
 ebet_country: ''
-cq9_currency: ''
-cq9_language_mapping: ''
+cq9_currency: "RMB\r\nTHB\r\nVND\r\nIDR\r\nKRW"
+cq9_language_mapping: "en|en-US\r\nsc|zh-CN"
 cq9_country: ''
 solid_gaming_currency: "RMB\r\nMYR\r\nKRW\r\nTHB\r\nIDR\r\nVND"
 solid_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
