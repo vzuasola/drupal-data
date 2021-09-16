@@ -929,8 +929,24 @@ display:
         options:
           offset: 0
       row:
-        type: data_entity
-        options: {  }
+        type: data_field
+        options:
+          field_options:
+            name:
+              alias: ''
+              raw_output: false
+            field_games_alias:
+              alias: ''
+              raw_output: false
+            field_publish_date:
+              alias: ''
+              raw_output: false
+            field_unpublish_date:
+              alias: ''
+              raw_output: false
+            field_games_category_logo:
+              alias: ''
+              raw_output: false
     cache_metadata:
       max-age: -1
       contexts:
