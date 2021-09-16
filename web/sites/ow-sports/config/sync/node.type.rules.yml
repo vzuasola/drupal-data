@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - node_revision_delete
     - scheduler
 third_party_settings:
   menu_ui:
@@ -20,6 +21,10 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
+  node_revision_delete:
+    minimum_revisions_to_keep: 3
+    minimum_age_to_delete: 0
+    when_to_delete: 0
 name: 'Rules and Regulations'
 type: rules
 description: 'Rules and regulations page'
