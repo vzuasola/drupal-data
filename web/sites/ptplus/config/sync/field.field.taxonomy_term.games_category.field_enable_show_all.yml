@@ -1,0 +1,23 @@
+uuid: e4e48704-fca9-45ef-ba59-cfb99e736271
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable_show_all
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_enable_show_all
+field_name: field_enable_show_all
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Enable show all'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean
