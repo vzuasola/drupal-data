@@ -9,9 +9,11 @@ dependencies:
     - field.field.node.ptplus.field_game_thumbnail_big
     - field.field.node.ptplus.field_games_list_category
     - field.field.node.ptplus.field_keywords
+    - field.field.node.ptplus.field_platform
     - field.field.node.ptplus.field_thumbnail_image
     - node.type.ptplus
   module:
+    - options
     - svg_image
     - user
 id: node.ptplus.default
@@ -62,6 +64,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_platform:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_thumbnail_image:
     weight: 3
