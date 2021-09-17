@@ -747,14 +747,14 @@ production-row-stack:
     - DEPLOY_PROD=$DEPLOY_PROD_ROW python -u automation/run.py --stage deploy-production
   when: manual
   dependencies:
-   - staging signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
+    - create package
+    - staging
   only:
     - /^release-.*$/
     - tags
+    - /^jenkins/
+  tags:
+    - taiwan-prd-01
 
 production-nextbet-stack:
   stage: deploy-production
