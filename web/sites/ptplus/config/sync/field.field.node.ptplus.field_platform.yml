@@ -1,0 +1,23 @@
+uuid: 354c0b70-7323-46ec-9d81-73b109d641b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_platform
+    - node.type.ptplus
+  module:
+    - options
+id: node.ptplus.field_platform
+field_name: field_platform
+entity_type: node
+bundle: ptplus
+label: Platform
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: both
+default_value_callback: ''
+settings: {  }
+field_type: list_string
