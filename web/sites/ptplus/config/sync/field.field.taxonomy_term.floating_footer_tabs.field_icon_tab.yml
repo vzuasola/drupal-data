@@ -7,6 +7,12 @@ dependencies:
     - taxonomy.vocabulary.floating_footer_tabs
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: taxonomy_term.floating_footer_tabs.field_icon_tab
 field_name: field_icon_tab
 entity_type: taxonomy_term

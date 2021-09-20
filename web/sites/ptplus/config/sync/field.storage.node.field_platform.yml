@@ -1,0 +1,30 @@
+uuid: 77da5225-b9ca-4f3d-819c-0c2520efdf4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_platform
+field_name: field_platform
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: both
+      label: Both
+    -
+      value: desktop
+      label: Desktop
+    -
+      value: mobile
+      label: Mobile
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
