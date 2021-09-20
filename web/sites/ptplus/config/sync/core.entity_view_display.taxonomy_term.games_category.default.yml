@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.games_category.field_enable_pagination
+    - field.field.taxonomy_term.games_category.field_enable_show_all
     - field.field.taxonomy_term.games_category.field_game_tile_image_size
+    - field.field.taxonomy_term.games_category.field_game_tile_layout_row
     - field.field.taxonomy_term.games_category.field_games_alias
     - field.field.taxonomy_term.games_category.field_games_category_logo
+    - field.field.taxonomy_term.games_category.field_platform
     - field.field.taxonomy_term.games_category.field_publish_date
     - field.field.taxonomy_term.games_category.field_unpublish_date
     - taxonomy.vocabulary.games_category
@@ -26,8 +30,35 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_enable_pagination:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_enable_show_all:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_game_tile_image_size:
     weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_game_tile_layout_row:
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -47,8 +78,19 @@ content:
     settings:
       image_style: ''
       image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings: {  }
     type: image
+    region: content
+  field_platform:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_publish_date:
     weight: 3

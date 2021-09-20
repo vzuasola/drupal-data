@@ -1,0 +1,23 @@
+uuid: 84529767-9236-4e17-a5c9-cd3e832ce219
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_platform
+    - taxonomy.vocabulary.games_category
+  module:
+    - options
+id: taxonomy_term.games_category.field_platform
+field_name: field_platform
+entity_type: taxonomy_term
+bundle: games_category
+label: Platform
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: both
+default_value_callback: ''
+settings: {  }
+field_type: list_string

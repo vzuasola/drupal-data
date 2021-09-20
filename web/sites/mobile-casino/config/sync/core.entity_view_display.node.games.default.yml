@@ -108,6 +108,7 @@ content:
     type: boolean
     region: content
 hidden:
+  field_game_provider: true
   field_keywords: true
   langcode: true
   links: true
