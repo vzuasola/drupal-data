@@ -1,0 +1,9 @@
+uuid: 311bc2e4-5622-47af-8726-7060fc98dffa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Provider'
+vid: game_provider
+description: 'List of Casino''s Game Provider'
+hierarchy: 0
+weight: 0
