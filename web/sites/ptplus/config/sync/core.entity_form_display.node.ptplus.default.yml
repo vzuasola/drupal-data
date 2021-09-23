@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.ptplus.field_game_ribbon
     - field.field.node.ptplus.field_game_thumbnail_big
     - field.field.node.ptplus.field_games_list_category
+    - field.field.node.ptplus.field_games_list_lobby
     - field.field.node.ptplus.field_keywords
     - field.field.node.ptplus.field_platform
     - field.field.node.ptplus.field_thumbnail_image
@@ -15,6 +16,7 @@ dependencies:
     - node.type.ptplus
   module:
     - conditional_fields
+    - entity_reference_views_select
     - path
     - scheduler
     - svg_image
@@ -82,6 +84,12 @@ content:
           entity_type: node
           bundle: ptplus
     type: options_buttons
+    region: content
+  field_games_list_lobby:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
     region: content
   field_keywords:
     weight: 18
