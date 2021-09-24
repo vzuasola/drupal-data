@@ -1,0 +1,18 @@
+uuid: 79dfb25c-467b-4fa0-9792-12bb55a13504
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_provider
+id: taxonomy_term.game_provider.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: game_provider
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

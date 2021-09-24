@@ -1,0 +1,18 @@
+uuid: e7314c6c-6f1f-4aa5-9999-cb4e41971f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_provider
+id: taxonomy_term.game_provider.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: game_provider
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
