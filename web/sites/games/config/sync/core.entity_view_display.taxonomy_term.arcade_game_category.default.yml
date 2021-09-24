@@ -5,11 +5,9 @@ dependencies:
   config:
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_alias
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_disable
-    - field.field.taxonomy_term.arcade_game_category.field_arcade_category_icon
     - field.field.taxonomy_term.arcade_game_category.field_new
     - taxonomy.vocabulary.arcade_game_category
   module:
-    - image
     - text
 id: taxonomy_term.arcade_game_category.default
 targetEntityType: taxonomy_term
@@ -40,15 +38,6 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
-  field_arcade_category_icon:
-    weight: 4
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_new:
     weight: 3
