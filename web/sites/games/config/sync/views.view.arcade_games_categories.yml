@@ -1,6 +1,6 @@
 uuid: 55fb7784-fa99-4f0f-8e8d-c50934633291
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_arcade_cat_alias
@@ -30,7 +30,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -519,9 +519,9 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
-        weight_1:
-          id: weight_1
-          table: draggableviews_structure
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
           field: weight
           relationship: field_arcade_category
           group_type: group
@@ -530,6 +530,8 @@ display:
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
         name:
           id: name
@@ -608,6 +610,7 @@ display:
             field_arcade_cat_alias:
               alias: alias
               raw_output: false
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
