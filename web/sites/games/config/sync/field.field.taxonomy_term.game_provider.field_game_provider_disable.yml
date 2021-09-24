@@ -1,0 +1,23 @@
+uuid: 6cca40f5-61e0-4815-a906-0aafc057c2ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_disable
+    - taxonomy.vocabulary.game_provider
+id: taxonomy_term.game_provider.field_game_provider_disable
+field_name: field_game_provider_disable
+entity_type: taxonomy_term
+bundle: game_provider
+label: Disable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
