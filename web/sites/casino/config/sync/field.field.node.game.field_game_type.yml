@@ -13,7 +13,7 @@ entity_type: node
 bundle: game
 label: 'Game Type'
 description: 'Check the Game type HTML5 or FLASH.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
