@@ -3,14 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.taxonomy_term.field_enable_pagination
+    - field.storage.taxonomy_term.field_enable_show_all
+    - field.storage.taxonomy_term.field_game_tile_image_size
+    - field.storage.taxonomy_term.field_game_tile_layout_row
     - field.storage.taxonomy_term.field_games_alias
     - field.storage.taxonomy_term.field_games_category_logo
+    - field.storage.taxonomy_term.field_platform
     - field.storage.taxonomy_term.field_publish_date
     - field.storage.taxonomy_term.field_unpublish_date
     - taxonomy.vocabulary.games_category
   module:
     - datetime
     - image
+    - options
     - rest
     - serialization
     - taxonomy
@@ -464,6 +470,322 @@ display:
           prefix: ''
           suffix: ''
           plugin_id: numeric
+        field_enable_pagination:
+          id: field_enable_pagination
+          table: taxonomy_term__field_enable_pagination
+          field: field_enable_pagination
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: boolean
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_enable_show_all:
+          id: field_enable_show_all
+          table: taxonomy_term__field_enable_show_all
+          field: field_enable_show_all
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: boolean
+            format_custom_true: 'true'
+            format_custom_false: 'false'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_tile_image_size:
+          id: field_game_tile_image_size
+          table: taxonomy_term__field_game_tile_image_size
+          field: field_game_tile_image_size
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_tile_layout_row:
+          id: field_game_tile_layout_row
+          table: taxonomy_term__field_game_tile_layout_row
+          field: field_game_tile_layout_row
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_platform:
+          id: field_platform
+          table: taxonomy_term__field_platform
+          field: field_platform
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         vid:
           id: vid
@@ -517,6 +839,41 @@ display:
           entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
+        field_platform_value:
+          id: field_platform_value
+          table: taxonomy_term__field_platform
+          field: field_platform_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            use_operator: false
+            operator: field_platform_value_op
+            identifier: field_platform_value
+            label: 'Platform (field_platform)'
+            description: null
+            remember: false
+            multiple: false
+            required: false
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         weight:
           id: weight
@@ -544,8 +901,13 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.taxonomy_term.field_enable_pagination'
+        - 'config:field.storage.taxonomy_term.field_enable_show_all'
+        - 'config:field.storage.taxonomy_term.field_game_tile_image_size'
+        - 'config:field.storage.taxonomy_term.field_game_tile_layout_row'
         - 'config:field.storage.taxonomy_term.field_games_alias'
         - 'config:field.storage.taxonomy_term.field_games_category_logo'
+        - 'config:field.storage.taxonomy_term.field_platform'
         - 'config:field.storage.taxonomy_term.field_publish_date'
         - 'config:field.storage.taxonomy_term.field_unpublish_date'
   rest_export_1:
@@ -593,7 +955,157 @@ display:
         - request_format
         - url
       tags:
+        - 'config:field.storage.taxonomy_term.field_enable_pagination'
+        - 'config:field.storage.taxonomy_term.field_enable_show_all'
+        - 'config:field.storage.taxonomy_term.field_game_tile_image_size'
+        - 'config:field.storage.taxonomy_term.field_game_tile_layout_row'
         - 'config:field.storage.taxonomy_term.field_games_alias'
         - 'config:field.storage.taxonomy_term.field_games_category_logo'
+        - 'config:field.storage.taxonomy_term.field_platform'
+        - 'config:field.storage.taxonomy_term.field_publish_date'
+        - 'config:field.storage.taxonomy_term.field_unpublish_date'
+  rest_export_2:
+    display_plugin: rest_export
+    id: rest_export_2
+    display_title: 'REST export 2'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      style:
+        type: taxonomy_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      row:
+        type: data_field
+        options:
+          field_options: {  }
+      filters:
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          value:
+            games_category: games_category
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+        langcode:
+          id: langcode
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: 'Translation language'
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_platform_value:
+          id: field_platform_value
+          table: taxonomy_term__field_platform
+          field: field_platform_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            both: both
+            desktop: desktop
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_platform_value_op
+            label: 'Platform (field_platform)'
+            description: ''
+            use_operator: false
+            operator: field_platform_value_op
+            identifier: field_platform_value
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Platform (field_platform)'
+            description: null
+            identifier: field_platform_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: api/desktop_game_category
+      pager:
+        type: none
+        options:
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+      tags:
+        - 'config:field.storage.taxonomy_term.field_enable_pagination'
+        - 'config:field.storage.taxonomy_term.field_enable_show_all'
+        - 'config:field.storage.taxonomy_term.field_game_tile_image_size'
+        - 'config:field.storage.taxonomy_term.field_game_tile_layout_row'
+        - 'config:field.storage.taxonomy_term.field_games_alias'
+        - 'config:field.storage.taxonomy_term.field_games_category_logo'
+        - 'config:field.storage.taxonomy_term.field_platform'
         - 'config:field.storage.taxonomy_term.field_publish_date'
         - 'config:field.storage.taxonomy_term.field_unpublish_date'

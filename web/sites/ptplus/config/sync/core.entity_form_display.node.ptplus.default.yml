@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.ptplus.field_game_thumbnail_big
     - field.field.node.ptplus.field_games_list_category
     - field.field.node.ptplus.field_keywords
+    - field.field.node.ptplus.field_platform
     - field.field.node.ptplus.field_thumbnail_image
     - image.style.thumbnail
     - node.type.ptplus
@@ -89,6 +90,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_platform:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_thumbnail_image:
     weight: 15
