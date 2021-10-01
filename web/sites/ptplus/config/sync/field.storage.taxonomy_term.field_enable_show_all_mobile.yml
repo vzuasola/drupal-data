@@ -1,17 +1,14 @@
-uuid: d69f83f3-9909-4bb2-9fcd-7c8cac9afb95
-langcode: en
+uuid: 88cb1f98-b38c-4b1a-a3cb-54b3a9c2bde5
+langcode: zh-hans
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_label
-field_name: field_label
+id: taxonomy_term.field_enable_show_all_mobile
+field_name: field_enable_show_all_mobile
 entity_type: taxonomy_term
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1
