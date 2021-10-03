@@ -92,7 +92,6 @@ class ZipangGamesConfigForm extends FormBase {
     $form['games']['live_games_banner_en'] = [
       '#type' => 'fieldset',
       '#title' => t('Live Games Page Banner - EN'),
-      '#translatable' => TRUE,
     ];
 
     $form['games']['live_games_banner_en']['file_image_live_banner_en'] = [
@@ -221,6 +220,13 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['mixed_game_lobby_all']['mixed_game_lobby_test'] = [
+      '#type' => 'textfield',
+      '#title' => t('Header title test'),
+      '#default_value' => $this->get('mixed_game_lobby_test') ?? "ALL",
+      '#translatable' => TRUE,
+    ];
+
     $e = $this->get('mixed_game_lobby_all_banner');
 
     $form['mixed_game_lobby_all']['mixed_game_banner_en'] = [
@@ -247,7 +253,6 @@ class ZipangGamesConfigForm extends FormBase {
 
     $form['mixed_game_lobby_all']['mixed_game_banner_ja'] = [
       '#type' => 'fieldset',
-      '#translatable' => FALSE,
       '#title' => t('Top Block Banner - JA')
     ];
 
