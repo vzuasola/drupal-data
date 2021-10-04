@@ -1,16 +1,15 @@
-uuid: 06c5da39-5efa-4ebe-b0a0-41044762daf8
+uuid: 5cc9f2a4-51d2-47a6-a9f4-ca5fb126e5dd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.lobby_tab.field_alias
-    - field.field.taxonomy_term.lobby_tab.field_label
-    - taxonomy.vocabulary.lobby_tab
+    - field.field.taxonomy_term.game_provider.field_game_provider_key
+    - taxonomy.vocabulary.game_provider
   module:
     - text
-id: taxonomy_term.lobby_tab.default
+id: taxonomy_term.game_provider.default
 targetEntityType: taxonomy_term
-bundle: lobby_tab
+bundle: game_provider
 mode: default
 content:
   description:
@@ -20,16 +19,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_alias:
+  field_game_provider_key:
     weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_label:
-    weight: 2
     label: above
     settings:
       link_to_entity: false

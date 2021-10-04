@@ -1,0 +1,19 @@
+uuid: 0858622e-72b9-4eca-b93f-db3c264fdae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_arcade_game_provider_alias
+    - taxonomy.vocabulary.game_provider
+id: taxonomy_term.game_provider.field_arcade_game_provider_alias
+field_name: field_arcade_game_provider_alias
+entity_type: taxonomy_term
+bundle: game_provider
+label: Alias
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

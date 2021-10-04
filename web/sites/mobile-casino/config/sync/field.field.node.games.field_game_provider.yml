@@ -1,20 +1,20 @@
-uuid: 3486640a-8e6b-493c-bac3-70923dca824d
+uuid: eb787fb8-9855-4d2d-82d3-a6e6c20db721
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_game_platform
+    - field.storage.node.field_game_provider
     - node.type.games
   module:
     - options
-id: node.games.field_game_platform
-field_name: field_game_platform
+id: node.games.field_game_provider
+field_name: field_game_provider
 entity_type: node
 bundle: games
-label: 'Game Platform'
+label: 'Game Provider'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

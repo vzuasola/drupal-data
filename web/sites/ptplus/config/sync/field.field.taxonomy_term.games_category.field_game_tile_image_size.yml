@@ -13,7 +13,7 @@ entity_type: taxonomy_term
 bundle: games_category
 label: 'Game Tile Image Size'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

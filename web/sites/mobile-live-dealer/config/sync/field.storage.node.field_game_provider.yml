@@ -62,6 +62,9 @@ settings:
     -
       value: jsystem
       label: JSystem
+    -
+      value: ptplus
+      label: PTPlus
   allowed_values_function: ''
 module: options
 locked: false

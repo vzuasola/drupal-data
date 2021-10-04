@@ -87,6 +87,8 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $config = $this->config('zipang_config.games_page_configuration');
+
     $form['games']['live_games_banner_en'] = [
       '#type' => 'fieldset',
       '#title' => t('Live Games Page Banner - EN'),
@@ -100,7 +102,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $this->get('file_image_live_banner_en'),
+      '#default_value' => $config->get('file_image_live_banner_en'),
     ];
 
     $form['games']['live_games_banner_en']['banner_alt_text_en'] = [
@@ -122,7 +124,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $this->get('file_image_live_banner_ja'),
+      '#default_value' => $config->get('file_image_live_banner_ja'),
     ];
 
     $form['games']['live_games_banner_ja']['banner_alt_text_ja'] = [
@@ -218,9 +220,17 @@ class ZipangGamesConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['mixed_game_lobby_all']['mixed_game_lobby_test'] = [
+      '#type' => 'textfield',
+      '#title' => t('Header title test'),
+      '#default_value' => $this->get('mixed_game_lobby_test') ?? "ALL",
+      '#translatable' => TRUE,
+    ];
+
+    $e = $this->get('mixed_game_lobby_all_banner');
+
     $form['mixed_game_lobby_all']['mixed_game_banner_en'] = [
       '#type' => 'fieldset',
-      '#translatable' => FALSE,
       '#title' => t('Top Block Banner - EN')
     ];
 
@@ -243,7 +253,6 @@ class ZipangGamesConfigForm extends FormBase {
 
     $form['mixed_game_lobby_all']['mixed_game_banner_ja'] = [
       '#type' => 'fieldset',
-      '#translatable' => FALSE,
       '#title' => t('Top Block Banner - JA')
     ];
 
@@ -251,7 +260,7 @@ class ZipangGamesConfigForm extends FormBase {
       '#type' => 'managed_file',
       '#title' => t('Top Block Banner'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
-      '#upload_location' => 'public://upload',
+      '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
