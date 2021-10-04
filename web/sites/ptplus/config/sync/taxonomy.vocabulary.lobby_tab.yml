@@ -1,9 +1,0 @@
-uuid: 492434b2-7c77-410c-b8cf-606c1a709b45
-langcode: en
-status: true
-dependencies: {  }
-name: 'Lobby Tab'
-vid: lobby_tab
-description: 'List of lobby tabs'
-hierarchy: 0
-weight: 0
