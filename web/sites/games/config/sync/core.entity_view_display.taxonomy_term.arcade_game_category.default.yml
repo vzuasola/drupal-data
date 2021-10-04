@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.arcade_game_category.field_add_to_secondary_menu
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_alias
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_disable
     - field.field.taxonomy_term.arcade_game_category.field_arcade_category_icon
+    - field.field.taxonomy_term.arcade_game_category.field_is_ordinary_category
     - field.field.taxonomy_term.arcade_game_category.field_new
+    - field.field.taxonomy_term.arcade_game_category.field_publish_date
+    - field.field.taxonomy_term.arcade_game_category.field_unpublish_date
     - taxonomy.vocabulary.arcade_game_category
   module:
-    - image
+    - datetime
     - text
 id: taxonomy_term.arcade_game_category.default
 targetEntityType: taxonomy_term
@@ -23,6 +27,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_add_to_secondary_menu:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_arcade_cat_alias:
     weight: 1
     label: above
@@ -41,14 +55,15 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_arcade_category_icon:
-    weight: 4
+  field_is_ordinary_category:
+    weight: 5
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: image
+    type: boolean
     region: content
   field_new:
     weight: 3
@@ -60,5 +75,24 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_publish_date:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
 hidden:
+  field_arcade_category_icon: true
   langcode: true

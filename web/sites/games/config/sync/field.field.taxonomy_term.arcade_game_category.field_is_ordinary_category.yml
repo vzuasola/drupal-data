@@ -1,0 +1,23 @@
+uuid: 8e51b272-a4d0-443f-a8a0-c4306ced6822
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_is_ordinary_category
+    - taxonomy.vocabulary.arcade_game_category
+id: taxonomy_term.arcade_game_category.field_is_ordinary_category
+field_name: field_is_ordinary_category
+entity_type: taxonomy_term
+bundle: arcade_game_category
+label: 'Is Ordinary Category'
+description: 'Special Categories are: All Games, Recently Played, Favorites'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

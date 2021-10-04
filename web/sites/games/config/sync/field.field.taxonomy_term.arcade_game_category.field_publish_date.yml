@@ -1,0 +1,21 @@
+uuid: 4e9eae82-566d-4e22-8198-37ca907a3662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_publish_date
+    - taxonomy.vocabulary.arcade_game_category
+  module:
+    - datetime
+id: taxonomy_term.arcade_game_category.field_publish_date
+field_name: field_publish_date
+entity_type: taxonomy_term
+bundle: arcade_game_category
+label: 'Publish Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
