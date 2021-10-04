@@ -3,45 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.game_provider.field_arcade_game_provider_alias
-    - field.field.taxonomy_term.game_provider.field_game_provider_disable
-    - field.field.taxonomy_term.game_provider.field_game_provider_icon
     - field.field.taxonomy_term.game_provider.field_game_provider_key
     - field.field.taxonomy_term.game_provider.field_product_type
-    - field.field.taxonomy_term.game_provider.field_provider_link
-    - image.style.thumbnail
     - taxonomy.vocabulary.game_provider
-  module:
-    - image
-    - link
 id: taxonomy_term.game_provider.default
 targetEntityType: taxonomy_term
 bundle: game_provider
 mode: default
 content:
-  field_arcade_game_provider_alias:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_game_provider_disable:
-    weight: 14
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_game_provider_icon:
-    weight: 12
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_game_provider_key:
     weight: 1
     settings:
@@ -58,14 +27,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_provider_link:
-    weight: 13
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   name:
     type: string_textfield
     weight: 0
@@ -74,9 +35,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
 hidden:
   description: true
   langcode: true
