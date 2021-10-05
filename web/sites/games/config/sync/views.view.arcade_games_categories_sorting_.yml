@@ -12,7 +12,6 @@ dependencies:
   module:
     - draggableviews
     - rest
-    - rest_views
     - serialization
     - taxonomy
     - user
