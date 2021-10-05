@@ -36,10 +36,16 @@ cashier_label: test
 cashier_link: /registration
 next_button_label: next
 next_button_link: 'https://www.google.com'
-step_3_title: ''
-step_3_link_title: ''
-welcome_message: ''
+step_3_title: 'Step 3 JA'
+step_3_link_title: 'Step 3 JA link'
+success_message: 'step 2!'
 step_3_body:
+  value: "<p>test step 3</p>\r\n"
+  format: basic_html
+step_4_title: ''
+step_4_link_title: ''
+welcome_message: ''
+step_4_body:
   value: ''
   format: basic_html
 play_button_label: ''
