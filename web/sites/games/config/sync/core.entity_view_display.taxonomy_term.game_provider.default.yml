@@ -3,9 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.game_provider.field_arcade_game_provider_alias
-    - field.field.taxonomy_term.game_provider.field_game_provider_disable
-    - field.field.taxonomy_term.game_provider.field_game_provider_icon
     - field.field.taxonomy_term.game_provider.field_game_provider_key
     - field.field.taxonomy_term.game_provider.field_product_type
     - taxonomy.vocabulary.game_provider
@@ -23,33 +20,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_arcade_game_provider_alias:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_game_provider_disable:
-    weight: 6
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_game_provider_icon:
-    weight: 4
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_game_provider_key:
     weight: 1
     label: above
@@ -65,18 +35,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_provider_link:
-    weight: 5
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
     region: content
 hidden:
   langcode: true

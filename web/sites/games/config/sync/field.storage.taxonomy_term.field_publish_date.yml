@@ -1,16 +1,17 @@
-uuid: cf4e8278-e3af-4096-8839-d4a96c11dbf4
+uuid: 82cf454b-f18e-4457-8c79-bd8a07e866ff
 langcode: en
 status: true
 dependencies:
   module:
-    - link
+    - datetime
     - taxonomy
-id: taxonomy_term.field_provider_link
-field_name: field_provider_link
+id: taxonomy_term.field_publish_date
+field_name: field_publish_date
 entity_type: taxonomy_term
-type: link
-settings: {  }
-module: link
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
 locked: false
 cardinality: 1
 translatable: true
