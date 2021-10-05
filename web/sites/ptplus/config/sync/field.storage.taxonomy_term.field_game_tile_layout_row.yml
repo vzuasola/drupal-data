@@ -13,13 +13,13 @@ settings:
   allowed_values:
     -
       value: '1'
-      label: One
+      label: '1'
     -
       value: '2'
-      label: Two
+      label: '2'
     -
       value: '3'
-      label: Three
+      label: '3'
   allowed_values_function: ''
 module: options
 locked: false
