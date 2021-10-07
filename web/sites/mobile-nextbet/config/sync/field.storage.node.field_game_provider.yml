@@ -29,6 +29,9 @@ settings:
     -
       value: solid_gaming
       label: 'Solid Gaming'
+    -
+      value: pgsoft
+      label: PGSoft
   allowed_values_function: ''
 module: options
 locked: false

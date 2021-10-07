@@ -17,6 +17,7 @@ url:
     km: km
     bn: bn
     pk: pk
+    ja: jp
   domains:
     en: ''
     zh-hans: ''
@@ -32,6 +33,7 @@ url:
     km: ''
     bn: ''
     pk: ''
+    ja: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
