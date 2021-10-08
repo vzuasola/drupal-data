@@ -26,10 +26,10 @@
         "phpoffice/phpexcel": "^1.8",
         "squizlabs/php_codesniffer": "^2.7",
         "predis/predis": "^1.1",
-        "phpoffice/phpspreadsheet": "^1.10"
+        "phpoffice/phpspreadsheet": "^1.10",
+        "drupal/console": "~1.0"
     },
     "require-dev": {
-        "drupal/console": "~1.0.2",
         "behat/mink": "~1.7",
         "behat/mink-goutte-driver": "~1.2",
         "jcalderonzumba/gastonjs": "~1.0.2",

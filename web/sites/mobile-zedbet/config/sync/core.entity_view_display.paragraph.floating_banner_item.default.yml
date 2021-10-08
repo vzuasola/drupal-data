@@ -1,0 +1,84 @@
+uuid: 4c2dc230-da89-414d-8f63-17d68144e159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.floating_banner_item.field_button_text
+    - field.field.paragraph.floating_banner_item.field_enable
+    - field.field.paragraph.floating_banner_item.field_lightbox_content
+    - field.field.paragraph.floating_banner_item.field_lightbox_title
+    - field.field.paragraph.floating_banner_item.field_link
+    - field.field.paragraph.floating_banner_item.field_link_class
+    - field.field.paragraph.floating_banner_item.field_link_target
+    - paragraphs.paragraphs_type.floating_banner_item
+  module:
+    - link
+    - options
+    - text
+_core:
+  default_config_hash: CyROnntYjBFIdFrxZPJk4a_p68ZVi598ERuZmm79uZM
+id: paragraph.floating_banner_item.default
+targetEntityType: paragraph
+bundle: floating_banner_item
+mode: default
+content:
+  field_button_text:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_enable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_lightbox_content:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_lightbox_title:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_link_class:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_link_target:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }
