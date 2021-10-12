@@ -1,0 +1,25 @@
+uuid: def09a3b-f84c-4749-a292-beaf380924f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_link_target
+  module:
+    - options
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: l2xFSQp_Vu23OQQ95BBLHixMwzV7pXaxOX-8pePQums
+id: left_floating_banner_entity.left_floating_banner_entity.field_link_target
+field_name: field_link_target
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: 'Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
