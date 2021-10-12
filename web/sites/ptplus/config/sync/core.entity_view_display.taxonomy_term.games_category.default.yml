@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_enable_pagination
     - field.field.taxonomy_term.games_category.field_enable_show_all
+    - field.field.taxonomy_term.games_category.field_enable_show_all_mobile
     - field.field.taxonomy_term.games_category.field_game_tile_image_size
     - field.field.taxonomy_term.games_category.field_game_tile_layout_row
     - field.field.taxonomy_term.games_category.field_games_alias
@@ -42,6 +43,16 @@ content:
     region: content
   field_enable_show_all:
     weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_enable_show_all_mobile:
+    weight: 11
     label: above
     settings:
       format: default

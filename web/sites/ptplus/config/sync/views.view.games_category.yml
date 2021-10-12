@@ -961,32 +961,6 @@ display:
       row:
         type: data_entity
         options: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-      tags:
-        - 'config:field.storage.taxonomy_term.field_publish_date'
-        - 'config:field.storage.taxonomy_term.field_unpublish_date'
-  rest_export_2:
-    display_plugin: rest_export
-    id: rest_export_2
-    display_title: 'REST export 2'
-    position: 2
-    display_options:
-      display_extenders: {  }
-      style:
-        type: taxonomy_list_serializer
-        options:
-          uses_fields: false
-          formats:
-            json: json
-      row:
-        type: data_field
-        options:
-          field_options: {  }
       filters:
         vid:
           id: vid
@@ -1008,11 +982,11 @@ display:
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: langcode_op
             label: 'Translation language'
-            description: ''
+            description: null
             use_operator: false
             operator: langcode_op
             identifier: langcode
@@ -1021,9 +995,49 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Translation language'
+            description: null
+            identifier: langcode
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_platform_value:
+          id: field_platform_value
+          table: taxonomy_term__field_platform
+          field: field_platform_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: not
+          value:
+            desktop: desktop
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
             reduce: false
           is_grouped: false
           group_info:
@@ -1037,43 +1051,85 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+      tags:
+        - 'config:field.storage.taxonomy_term.field_publish_date'
+        - 'config:field.storage.taxonomy_term.field_unpublish_date'
+  rest_export_2:
+    display_plugin: rest_export
+    id: rest_export_2
+    display_title: 'REST - desktop category'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: api/desktop_game_category
+      style:
+        type: taxonomy_list_serializer
+        options:
+          uses_fields: true
+          formats:
+            json: json
+      pager:
+        type: none
+        options:
+          offset: 0
+      row:
+        type: data_entity
+        options: {  }
+      filters:
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          value:
+            games_category: games_category
           entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-        field_platform_value:
-          id: field_platform_value
-          table: taxonomy_term__field_platform
-          field: field_platform_value
+          entity_field: vid
+          plugin_id: bundle
+        langcode:
+          id: langcode
+          table: taxonomy_term_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: in
           value:
-            both: both
-            desktop: desktop
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_platform_value_op
-            label: 'Platform (field_platform)'
-            description: ''
+            operator_id: langcode_op
+            label: 'Translation language'
+            description: null
             use_operator: false
-            operator: field_platform_value_op
-            identifier: field_platform_value
+            operator: langcode_op
+            identifier: langcode
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
             reduce: false
           is_grouped: false
           group_info:
-            label: 'Platform (field_platform)'
+            label: 'Translation language'
             description: null
-            identifier: field_platform_value
+            identifier: langcode
             optional: true
             widget: select
             multiple: false
@@ -1084,6 +1140,46 @@ display:
               1: {  }
               2: {  }
               3: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_platform_value:
+          id: field_platform_value
+          table: taxonomy_term__field_platform
+          field: field_platform_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: not
+          value:
+            mobile: mobile
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
       defaults:
@@ -1093,18 +1189,13 @@ display:
         operator: AND
         groups:
           1: AND
-      path: api/desktop_game_category
-      pager:
-        type: none
-        options:
-          offset: 0
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url
       tags:
         - 'config:field.storage.taxonomy_term.field_publish_date'
         - 'config:field.storage.taxonomy_term.field_unpublish_date'

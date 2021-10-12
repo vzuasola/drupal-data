@@ -12,7 +12,7 @@ bundle: game_provider
 label: 'Product Type'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

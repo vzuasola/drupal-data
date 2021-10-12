@@ -3,15 +3,47 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.arcade_game_category.field_add_to_secondary_menu
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_alias
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_disable
+    - field.field.taxonomy_term.arcade_game_category.field_arcade_category_icon
+    - field.field.taxonomy_term.arcade_game_category.field_is_ordinary_category
     - field.field.taxonomy_term.arcade_game_category.field_new
+    - field.field.taxonomy_term.arcade_game_category.field_publish_date
+    - field.field.taxonomy_term.arcade_game_category.field_unpublish_date
+    - image.style.thumbnail
     - taxonomy.vocabulary.arcade_game_category
+  module:
+    - datetime
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Scheduler Settings'
 id: taxonomy_term.arcade_game_category.default
 targetEntityType: taxonomy_term
 bundle: arcade_game_category
 mode: default
 content:
+  field_add_to_secondary_menu:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_arcade_cat_alias:
     weight: 3
     settings:
@@ -21,18 +53,45 @@ content:
     type: string_textfield
     region: content
   field_arcade_cat_disable:
-    weight: 5
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_arcade_category_icon:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_is_ordinary_category:
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_new:
-    weight: 4
+    weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_publish_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   langcode:
     type: language_select

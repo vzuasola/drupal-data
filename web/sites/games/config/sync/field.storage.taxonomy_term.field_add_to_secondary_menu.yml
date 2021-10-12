@@ -1,0 +1,18 @@
+uuid: 1832d328-a3fe-4b9e-975a-f8f41e6d3475
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_add_to_secondary_menu
+field_name: field_add_to_secondary_menu
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
