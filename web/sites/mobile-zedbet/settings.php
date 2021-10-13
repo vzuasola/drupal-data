@@ -11,7 +11,7 @@ $settings['product'] = 'mobile-zedbet';
 /**
  * The main URL prefix for this site instance
  */
-$settings['primary_site_prefix'] = 'mobile-zedbet';
+$settings['primary_site_prefix'] = '';
 
 /**
  * The front end prefix that CKEditor will append for all products
