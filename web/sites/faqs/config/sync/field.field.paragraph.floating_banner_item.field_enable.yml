@@ -1,0 +1,25 @@
+uuid: 2d357040-124a-4584-9ec9-d29b222294e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable
+    - paragraphs.paragraphs_type.floating_banner_item
+_core:
+  default_config_hash: W6r5PpNqeX_gVpvbklVp6m18orusC8XAbZXrg9DZU_o
+id: paragraph.floating_banner_item.field_enable
+field_name: field_enable
+entity_type: paragraph
+bundle: floating_banner_item
+label: Enable
+description: 'If unchecked then this banner item will be disabled.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disable
+field_type: boolean
