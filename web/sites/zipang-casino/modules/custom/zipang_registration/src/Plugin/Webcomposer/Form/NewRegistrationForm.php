@@ -118,6 +118,31 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
           ],
         ],
       ],
+      'wrapper_step_1_end' => [
+        'name' => 'Wrapper End Step 1',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End Step1',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
+          ],
+        ],
+      ],
+      // step 2
+      'wrapper_step_2_start' => [
+        'name' => 'Wrapper Start Step 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-step-2 hidden">',
+          ],
+        ],
+      ],
       'email' => [
         'name' => 'Email Address',
         'type' => 'textfield',
@@ -147,31 +172,6 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Confirm Email placeholder label',
             '#type' => 'textfield',
             '#description' => 'Placeholder label for Confirm Email field',
-          ],
-        ],
-      ],
-      'wrapper_step_1_end' => [
-        'name' => 'Wrapper End Step 1',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Wrapper End Step1',
-            '#type' => 'textarea',
-            '#description' => 'Closing wrapper',
-            '#default_value' => '</div>',
-          ],
-        ],
-      ],
-      // step 2
-      'wrapper_step_2_start' => [
-        'name' => 'Wrapper Start Step 2',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Opening Wrapper',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text breakline for registration form',
-            '#default_value' => '<div class ="fieldset-wrapper-step-2 hidden">',
           ],
         ],
       ],
@@ -230,6 +230,31 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Contact Number placeholder label',
             '#type' => 'textfield',
             '#description' => 'Placeholder label for Contact Number field',
+          ],
+        ],
+      ],
+      'wrapper_step_2_end' => [
+        'name' => 'Wrapper End Step 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End Step 2',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
+          ],
+        ],
+      ],
+      // step 3
+      'wrapper_step_3_start' => [
+        'name' => 'Wrapper Start Step 3',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-step-3 hidden">',
           ],
         ],
       ],
@@ -363,28 +388,28 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
           ],
         ],
       ],
-      'wrapper_step_2_end' => [
-        'name' => 'Wrapper End Step 2',
+      'wrapper_step_3_end' => [
+        'name' => 'Wrapper End Step 3',
         'type' => 'markup',
         'settings' => [
           'markup' => [
-            '#title' => 'Wrapper End Step 2',
+            '#title' => 'Wrapper End Step 3',
             '#type' => 'textarea',
             '#description' => 'Closing wrapper',
             '#default_value' => '</div>',
           ],
         ],
       ],
-      // step 3
-      'wrapper_step_3_start' => [
-        'name' => 'Wrapper Start Step 3',
+      // step 4
+      'wrapper_step_4_start' => [
+        'name' => 'Wrapper Start Step 4',
         'type' => 'markup',
         'settings' => [
           'markup' => [
             '#title' => 'Opening Wrapper',
             '#type' => 'textarea',
             '#description' => 'A Markup text breakline for registration form',
-            '#default_value' => '<div class ="fieldset-wrapper-step-3 hidden">',
+            '#default_value' => '<div class ="fieldset-wrapper-step-4 hidden">',
           ],
         ],
       ],
@@ -468,12 +493,12 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
           ],
         ],
       ],
-      'wrapper_step_3_end' => [
-        'name' => 'Wrapper End Step 3',
+      'wrapper_step_4_end' => [
+        'name' => 'Wrapper End Step 4',
         'type' => 'markup',
         'settings' => [
           'markup' => [
-            '#title' => 'Wrapper End Step 3',
+            '#title' => 'Wrapper End Step 4',
             '#type' => 'textarea',
             '#description' => 'Closing wrapper',
             '#default_value' => '</div>',
