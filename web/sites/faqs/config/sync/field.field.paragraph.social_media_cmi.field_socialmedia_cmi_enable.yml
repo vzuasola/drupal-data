@@ -1,0 +1,25 @@
+uuid: 65b2b1ad-a426-478a-94ae-80eccb400374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_socialmedia_cmi_enable
+    - paragraphs.paragraphs_type.social_media_cmi
+_core:
+  default_config_hash: etcrDBIwioGDcFGw48tXr7h2oHgO1nBZrrHeG_mV844
+id: paragraph.social_media_cmi.field_socialmedia_cmi_enable
+field_name: field_socialmedia_cmi_enable
+entity_type: paragraph
+bundle: social_media_cmi
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enabled
+  off_label: Disabled
+field_type: boolean

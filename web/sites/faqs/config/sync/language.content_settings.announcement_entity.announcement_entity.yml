@@ -1,0 +1,17 @@
+uuid: a5c58eb8-a507-43e2-826d-ff8a017ec1e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_announcements
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: XeA5R09A65jwBacj5hLl3ocl1LJaS5nvRdRGzH_YjgI
+id: announcement_entity.announcement_entity
+target_entity_type_id: announcement_entity
+target_bundle: announcement_entity
+default_langcode: site_default
+language_alterable: true
