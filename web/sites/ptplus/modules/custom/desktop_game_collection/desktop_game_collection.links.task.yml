@@ -1,0 +1,22 @@
+#Desktop game collection routing definition
+desktop_game_collection.settings_tab:
+  route_name: desktop_game_collection.settings
+  title: 'Settings'
+  base_route: desktop_game_collection.settings
+
+entity.desktop_game_collection.canonical:
+  route_name: entity.desktop_game_collection.canonical
+  base_route: entity.desktop_game_collection.canonical
+  title: 'View'
+
+entity.desktop_game_collection.edit_form:
+  route_name: entity.desktop_game_collection.edit_form
+  base_route: entity.desktop_game_collection.canonical
+  title: 'Edit'
+  
+entity.desktop_game_collection.delete_form:
+  route_name:  entity.desktop_game_collection.delete_form
+  base_route:  entity.desktop_game_collection.canonical
+  title: Delete
+  weight: 10
+

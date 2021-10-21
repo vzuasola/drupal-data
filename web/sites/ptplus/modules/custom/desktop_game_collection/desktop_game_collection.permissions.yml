@@ -1,0 +1,22 @@
+add desktop game collection entities:
+  title: 'Create new Desktop game collection entities'
+
+administer desktop game collection entities:
+  title: 'Administer Desktop game collection entities'
+  description: 'Allow to access the administration form to configure Desktop game collection entities.'
+  restrict access: true
+
+delete desktop game collection entities:
+  title: 'Delete Desktop game collection entities'
+
+edit desktop game collection entities:
+  title: 'Edit Desktop game collection entities'
+
+access desktop game collection overview:
+  title: 'Access th eDesktop game collection overview page'
+
+view publisheddesktop game collection entities:
+  title: 'View published Desktop game collection entities'
+
+view unpublisheddesktop game collection entities:
+  title: 'View unpublished Desktop game collection entities'

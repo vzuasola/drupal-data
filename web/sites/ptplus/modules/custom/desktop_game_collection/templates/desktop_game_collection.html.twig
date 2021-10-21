@@ -1,0 +1,22 @@
+{#
+/**
+ * @filedesktop_game_collection.html.twig
+ * Default theme implementation to presentDesktop game collection data.
+ *
+ * This template is used when viewingDesktop game collection pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_desktop_game_collection()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{attributes.addClass('desktop_game_collection')}}>
+	{% if content %}
+		{{- content -}}
+	{% endif%}
+</div>
