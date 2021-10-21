@@ -1,0 +1,5 @@
+entity.desktop_game_collection.add_form:  
+  route_name: entity.desktop_game_collection.add_form  
+  title: 'Add Desktop game collection'
+  appears_on:
+    - entity.desktop_game_collection.collection

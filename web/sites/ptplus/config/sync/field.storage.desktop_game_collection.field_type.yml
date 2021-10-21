@@ -1,0 +1,20 @@
+uuid: 61d229a2-0cb7-4fb7-8bcc-a68284cd0979
+langcode: en
+status: true
+dependencies:
+  module:
+    - desktop_game_collection
+    - taxonomy
+id: desktop_game_collection.field_type
+field_name: field_type
+entity_type: desktop_game_collection
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
