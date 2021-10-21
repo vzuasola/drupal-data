@@ -1,0 +1,30 @@
+uuid: d3123fde-9649-488e-a785-6325618eb1a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_game_collection.field_game_category
+    - taxonomy.vocabulary.games_category
+  module:
+    - desktop_game_collection
+id: desktop_game_collection.desktop_game_collection.field_game_category
+field_name: field_game_category
+entity_type: desktop_game_collection
+bundle: desktop_game_collection
+label: 'Game Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      games_category: games_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

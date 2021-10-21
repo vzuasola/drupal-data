@@ -1,0 +1,26 @@
+uuid: 00357fbf-e244-4541-9a82-768fdcfd89c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.desktop_game_collection.field_games
+  module:
+    - desktop_game_collection
+id: desktop_game_collection.desktop_game_collection.field_games
+field_name: field_games
+entity_type: desktop_game_collection
+bundle: desktop_game_collection
+label: Games
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: desktop_games_collection
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
