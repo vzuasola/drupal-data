@@ -1,4 +1,4 @@
-uuid: 13b6f6a9-4010-40c9-87d8-046bd76a4e29
+uuid: d518d654-522b-454b-b571-3b1b8d6ba185
 langcode: en
 status: true
 dependencies:
@@ -172,6 +172,11 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
+      style:
+        type: entity_reference
+        options:
+          search_fields:
+            title: title
       filters:
         status:
           value: '1'
@@ -277,20 +282,17 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: field_platform_value_op
-            label: 'Platform (field_platform)'
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_platform_value_op
-            identifier: field_platform_value
+            operator: ''
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -334,11 +336,6 @@ display:
         options:
           items_per_page: 20
           offset: 0
-      style:
-        type: entity_reference
-        options:
-          search_fields:
-            title: title
     cache_metadata:
       max-age: -1
       contexts:
@@ -354,7 +351,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: desktop-games-collection
+      path: desktop-collection
     cache_metadata:
       max-age: -1
       contexts:

@@ -21,7 +21,7 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
-  desktop_game_collection: 0
+  desktop_collection: 0
   desktop_slider: 0
   devel: 0
   draggableviews: 0
