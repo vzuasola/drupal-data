@@ -1,0 +1,19 @@
+mobile_collection.admin_settings:
+  title: 'Mobile  Collection Configuration'
+  description: 'Provides an interface for managing Mobile  collection.'
+  parent: system.admin_config
+  route_name: mobile_collection.admin_settings
+
+# Mobile  collection menu items definition
+entity.mobile_collection.collection:
+  title: 'Mobile  collection list'
+  route_name: entity.mobile_collection.collection
+  description: 'List Mobile  collection entities'
+  parent: mobile_collection.admin_settings
+  weight: 100
+
+mobile_collection.admin.structure.settings:
+  title: Mobile  collection settings
+  description: 'Configure Mobile  collection entities'
+  route_name: mobile_collection.settings
+  parent: mobile_collection.admin_settings
