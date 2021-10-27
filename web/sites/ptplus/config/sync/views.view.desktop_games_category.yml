@@ -851,8 +851,8 @@ display:
       path: admin/games/desktop_categories
       menu:
         type: normal
-        title: 'Sort Categories'
-        description: ''
+        title: 'Sort Desktop Categories'
+        description: 'Provides Configuration for sorting desktop categories'
         expanded: false
         parent: webcomposer_games.list
         weight: 0
