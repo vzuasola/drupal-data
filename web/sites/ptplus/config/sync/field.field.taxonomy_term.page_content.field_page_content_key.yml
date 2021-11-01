@@ -1,0 +1,19 @@
+uuid: c68d0140-df6b-474e-a60e-3300dc08ee04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_page_content_key
+    - taxonomy.vocabulary.page_content
+id: taxonomy_term.page_content.field_page_content_key
+field_name: field_page_content_key
+entity_type: taxonomy_term
+bundle: page_content
+label: 'Page Content Key'
+description: 'static field (you can''t change this value)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
