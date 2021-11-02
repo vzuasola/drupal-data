@@ -183,6 +183,21 @@ $sites['ptplus.drupal.dev'] = 'ptplus';
 $sites['ptplus.drupal.local'] = 'ptplus';
 $sites['ptplus.drupal.env'] = 'ptplus';
 
+// FAQ instance
+$sites['faqs.drupal.dev'] = 'faqs';
+$sites['faqs.drupal.local'] = 'faqs';
+$sites['faqs.drupal.env'] = 'faqs';
+
+// Zedbet Instance
+$sites['zedbet.drupal.dev'] = 'zedbet';
+$sites['zedbet.drupal.local'] = 'zedbet';
+$sites['zedbet.drupal.env'] = 'zedbet';
+
+// Mobile Zedbet Instance
+$sites['mobile-zedbet.drupal.dev'] = 'mobile-zedbet';
+$sites['mobile-zedbet.drupal.local'] = 'mobile-zedbet';
+$sites['mobile-zedbet.drupal.env'] = 'mobile-zedbet';
+
 // dynamic sites.php values via environment variables
 
 if (file_exists(__DIR__ . '/sites.override.php')) {

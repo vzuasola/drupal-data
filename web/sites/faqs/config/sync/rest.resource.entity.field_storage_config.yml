@@ -1,0 +1,17 @@
+uuid: 68394a13-bae0-4cae-b04e-4322105a8644
+langcode: en
+status: true
+dependencies:
+  module:
+    - field
+    - serialization
+    - user
+id: entity.field_storage_config
+plugin_id: 'entity:field_storage_config'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
