@@ -1,0 +1,7 @@
+name: Zedbet Forms
+type: module
+description: Config Form for zedbet
+core: 8.x
+package: Zedbet
+dependencies:
+  - webcomposer_form_manager
