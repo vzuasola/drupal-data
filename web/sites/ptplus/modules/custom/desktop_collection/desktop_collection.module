@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Containsdesktop_collection.module. 
+ */
+ 
+ use Drupal\Core\Routing\RouteMatchInterface;
+ use Drupal\Core\Entity\EntityFormInterface;
+ 
+ /**
+ * Implements hook_help().
+ */
+function desktop_collection_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for thedesktop_collection module.
+    case 'help.page.desktop_collection':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Desktop Game Collection Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function games_collection_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    case 'node_game_delete_form':
+        checkCollectionReferences($form);
+        break;
+  }
+}
+
+function checkCollectionReferences(&$form) {
+  try {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      $nid = $node->id();
+      $query = \Drupal::entityQuery('games_collection')
+          ->condition('field_games', $nid, 'IN');
+      $nids = $query->execute();
+      $entities = \Drupal::entityManager()->getStorage('games_collection')->loadMultiple($nids);
+      if ($entities) {
+        $links = [];
+        foreach ($entities as $entity) {
+            $url = \Drupal\Core\Url::fromRoute('entity.games_collection.edit_form', ['games_collection' => $entity->id->value]);
+            $url->setOptions(['attributes' => ['target' => '_blank']]);
+            $link = \Drupal\Core\Link::fromTextAndUrl($entity->name->value, $url);
+            $links[] = $link->toString();
+        }
+
+        $renderable = [
+          '#theme' => 'games_collection_warning',
+          '#title' => 'Error Message',
+          '#message' => 'Please remove the game from the following Games collections and from its translations:',
+          '#items' => $links
+        ];
+
+        $rendered = \Drupal::service('renderer')->render($renderable);
+        $form['description']['#markup'] = $rendered;
+        $form['actions']['submit']['#attributes']['disabled']  = 'disabled';
+      }
+    }
+  } catch (\Exception $e) {
+    // do nothing
+  }
+}
+
+function games_collection_theme() {
+  return [
+    'games_collection_warning' => [
+      'variables' => [
+        'title' => null,
+        'message' => null,
+        'items' => []
+      ]
+    ]
+  ];
+}

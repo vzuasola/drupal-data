@@ -1,0 +1,5 @@
+name: Mobile Collection
+type: module
+description: Sort top games per category.
+core: 8.x
+package: Custom

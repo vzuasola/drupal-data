@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.ptplus.field_games_list_category
     - field.field.node.ptplus.field_keywords
     - field.field.node.ptplus.field_platform
+    - field.field.node.ptplus.field_preview_mode
     - field.field.node.ptplus.field_thumbnail_image
     - image.style.thumbnail
     - node.type.ptplus
@@ -96,6 +97,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_preview_mode:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_thumbnail_image:
     weight: 15

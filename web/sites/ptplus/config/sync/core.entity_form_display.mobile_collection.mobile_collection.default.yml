@@ -1,0 +1,56 @@
+uuid: d9a35d0d-3290-4332-9713-53a6ee682d42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_collection.mobile_collection.field_games
+    - field.field.mobile_collection.mobile_collection.field_games_category
+    - field.field.mobile_collection.mobile_collection.field_type
+  module:
+    - mobile_collection
+id: mobile_collection.mobile_collection.default
+targetEntityType: mobile_collection
+bundle: mobile_collection
+mode: default
+content:
+  field_games:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_games_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  user_id: true

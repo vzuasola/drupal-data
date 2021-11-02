@@ -12,7 +12,7 @@ selection_criteria:
   3355d6b6-d94a-4f2b-99d0-ed692600aa62:
     id: node_type
     bundles:
-      game: game
+      ptplus: ptplus
       page: page
       promotion: promotion
       vip_page: vip_page

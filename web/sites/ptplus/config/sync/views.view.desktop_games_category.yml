@@ -1,4 +1,4 @@
-uuid: 6f04440b-e282-4467-8bc1-97ea4ae622a7
+uuid: e658fe96-41aa-4007-a4e0-49461ba3e653
 langcode: en
 status: true
 dependencies:
@@ -16,8 +16,8 @@ dependencies:
     - serialization
     - taxonomy
     - webcomposer_rest_extra
-id: games_category
-label: 'Games - Category'
+id: desktop_games_category
+label: 'Desktop Games - Category'
 module: views
 description: ''
 tag: ''
@@ -848,11 +848,11 @@ display:
           destination: false
           entity_type: taxonomy_term
           plugin_id: entity_operations
-      path: admin/games/categories
+      path: admin/games/desktop_categories
       menu:
         type: normal
-        title: 'Sort Categories'
-        description: ''
+        title: 'Sort Desktop Categories'
+        description: 'Provides Configuration for sorting desktop categories'
         expanded: false
         parent: webcomposer_games.list
         weight: 0
@@ -940,14 +940,14 @@ display:
       tags:
         - 'config:field.storage.taxonomy_term.field_publish_date'
         - 'config:field.storage.taxonomy_term.field_unpublish_date'
-  rest_export_1:
+  rest_export_2:
     display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
+    id: rest_export_2
+    display_title: 'REST - desktop category'
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/games_category
+      path: api/desktop_game_category
       style:
         type: taxonomy_list_serializer
         options:
@@ -1023,7 +1023,7 @@ display:
           admin_label: ''
           operator: not
           value:
-            desktop: desktop
+            mobile: mobile
           group: 1
           exposed: false
           expose:
@@ -1060,6 +1060,7 @@ display:
         operator: AND
         groups:
           1: AND
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,20 @@
+uuid: 2a62974c-a75d-4f71-97ec-6fb338239ee3
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_collection
+    - taxonomy
+id: mobile_collection.field_type
+field_name: field_type
+entity_type: mobile_collection
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

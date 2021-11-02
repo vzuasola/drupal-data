@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_collection.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_collection_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_collection module.
+    case 'help.page.mobile_collection':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Sort top games per category.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function mobile_collection_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    case 'node_mobile_game_delete_form':
+        mobile_collection_check_collection_references($form);
+        break;
+  }
+}
+
+function mobile_collection_check_collection_references(&$form) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+      $nid = $node->id();
+      $query = \Drupal::entityQuery('mobile_collection')
+          ->condition('field_games', $nid, 'IN');
+      $nids = $query->execute();
+      $entities = \Drupal::entityManager()->getStorage('mobile_collection')->loadMultiple($nids);
+      if ($entities) {
+        $links = [];
+        foreach ($entities as $entity) {
+            $url = \Drupal\Core\Url::fromRoute('entity.mobile_collection.edit_form', ['mobile_collection' => $entity->id->value]);
+            $url->setOptions(['attributes' => ['target' => '_blank']]);
+            $link = \Drupal\Core\Link::fromTextAndUrl($entity->name->value, $url);
+            $links[] = $link->toString();
+        }
+
+        $renderable = [
+          '#theme' => 'mobile_collection_warning',
+          '#title' => 'Error Message',
+          '#message' => 'Please remove the game from the following mobile collections and from its translations:',
+          '#items' => $links
+        ];
+
+        $rendered = \Drupal::service('renderer')->render($renderable);
+        $form['description']['#markup'] = $rendered;
+        $form['actions']['submit']['#attributes']['disabled']  = 'disabled';
+      }
+  }
+}
+
+function mobile_collection_theme() {
+  return [
+    'mobile_collection_warning' => [
+      'variables' => [
+        'title' => null,
+        'message' => null,
+        'items' => []
+      ]
+    ]
+  ];
+}

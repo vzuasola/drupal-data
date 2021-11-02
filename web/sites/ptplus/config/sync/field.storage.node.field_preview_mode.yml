@@ -1,12 +1,12 @@
-uuid: 88cb1f98-b38c-4b1a-a3cb-54b3a9c2bde5
-langcode: zh-hans
+uuid: 65f37ff1-c032-4700-ab45-076d00f6aad5
+langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_enable_show_all_mobile
-field_name: field_enable_show_all_mobile
-entity_type: taxonomy_term
+    - node
+id: node.field_preview_mode
+field_name: field_preview_mode
+entity_type: node
 type: boolean
 settings: {  }
 module: core
