@@ -12,7 +12,7 @@ bundle: ptplus
 label: 'Preview Mode'
 description: 'Mark game for preview mode. Game will only be available when "pvw=1" query string parameter is appended on the URL.'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0
