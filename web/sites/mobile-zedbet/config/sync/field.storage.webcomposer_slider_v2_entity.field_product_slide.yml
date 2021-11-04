@@ -10,7 +10,10 @@ field_name: field_product_slide
 entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: live-dealer
+      label: 'Live Dealer'
   allowed_values_function: ''
 module: options
 locked: false
