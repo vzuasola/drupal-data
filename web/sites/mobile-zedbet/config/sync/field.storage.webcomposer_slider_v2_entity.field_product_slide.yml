@@ -1,0 +1,21 @@
+uuid: e7b5a2af-b18c-4096-9daf-a8af2c9cc45d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_product_slide
+field_name: field_product_slide
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
