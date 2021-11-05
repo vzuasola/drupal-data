@@ -1,0 +1,19 @@
+uuid: 0caea1ce-65fc-4448-8fd3-acb6987ad627
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breadcrumbs
+    - node.type.basic_page_type_3
+id: node.basic_page_type_3.field_breadcrumbs
+field_name: field_breadcrumbs
+entity_type: node
+bundle: basic_page_type_3
+label: Breadcrumbs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
