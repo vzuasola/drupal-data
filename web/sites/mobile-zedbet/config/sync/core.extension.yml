@@ -50,6 +50,8 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  registration_config: 0
+  registration_theme: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -77,6 +79,7 @@ module:
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
@@ -94,6 +97,7 @@ module:
   webform: 0
   webform_rest: 0
   webform_ui: 0
+  zedbet_forms: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
