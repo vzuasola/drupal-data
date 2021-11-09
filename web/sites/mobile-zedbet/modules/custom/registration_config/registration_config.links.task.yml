@@ -1,0 +1,4 @@
+registration_config.general_configuration_tab:
+  route_name: registration_config.general_configuration_form
+  title: 'General'
+  base_route: registration_config.general_configuration_form

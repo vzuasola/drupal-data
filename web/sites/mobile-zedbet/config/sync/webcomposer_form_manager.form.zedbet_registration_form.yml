@@ -1,0 +1,38 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  back_button:
+    weight: '-20'
+  ioblackbox:
+    weight: '-19'
+  breakline_3:
+    weight: '-18'
+  username:
+    weight: '-17'
+  password:
+    weight: '-16'
+  email:
+    weight: '-15'
+  mobile_number:
+    weight: '-14'
+  breakline_2:
+    weight: '-13'
+  password_meter:
+    weight: '-12'
+  first_name:
+    weight: '-11'
+  last_name:
+    weight: '-10'
+  birthdate:
+    weight: '-9'
+  currency:
+    weight: '-8'
+  country:
+    weight: '-7'
+  breakline_1:
+    weight: '-6'
+  accept_terms:
+    weight: '-5'
+  submit:
+    weight: '-4'
