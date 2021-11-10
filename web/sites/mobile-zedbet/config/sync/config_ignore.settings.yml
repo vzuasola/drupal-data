@@ -1,10 +1,21 @@
 ignored_config_entities:
-  - 'webform.webform.*'
-  - 'webcomposer_config.*'
-  - 'system.menu.*'
-  - 'block.*'
-  - 'filter.*'
-  - 'language.*'
-  - 'devel.*'
+  0: 'webform.webform.*'
+  2: 'webcomposer_config.*'
+  4: 'system.menu.*'
+  6: 'block.*'
+  8: ~block.block.languagedropdownswitcher
+  10: 'filter.*'
+  12: 'devel.*'
+  14: 'mobile_als.*'
+  16: 'webcomposer_cache.*'
+  18: 'mobile_promotions.*'
+  20: 'mobile_zedbet.*'
+  22: 'contact_us_config.*'
+  24: 'webcomposer_form_manager.form.contact_us_form.*'
+  26: 'mobile_slots.*'
+  28: 'mobile_live_dealer.*'
+  30: 'mobile_arcade.*'
+  32: 'webcomposer_form_manager.*'
+  34: 'webcomposer_playtech_integration.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
