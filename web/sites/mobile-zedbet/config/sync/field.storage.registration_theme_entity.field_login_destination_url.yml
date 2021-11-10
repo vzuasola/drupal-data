@@ -1,0 +1,19 @@
+uuid: 3103199d-6e26-424c-844c-b8497411a780
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - registration_theme
+id: registration_theme_entity.field_login_destination_url
+field_name: field_login_destination_url
+entity_type: registration_theme_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
