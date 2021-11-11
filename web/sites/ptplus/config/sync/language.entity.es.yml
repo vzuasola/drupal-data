@@ -1,9 +1,15 @@
 uuid: f4b4c419-f609-44b0-ae81-873d6c6b6c68
-langcode: en
+langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 1
 id: es
 label: Spanish
 direction: ltr
-weight: -2
+weight: 4
 locked: false
