@@ -1193,7 +1193,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: and
+          operator: or
           value:
             all: all
           group: 1

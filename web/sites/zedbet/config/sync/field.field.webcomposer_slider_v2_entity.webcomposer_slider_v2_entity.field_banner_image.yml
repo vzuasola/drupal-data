@@ -21,7 +21,7 @@ field_name: field_banner_image
 entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Banner Image'
-description: ''
+description: "<p>The Image upload size is <strong>1920x360</strong> px.\r\n</p>"
 required: true
 translatable: true
 default_value: {  }
