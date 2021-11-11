@@ -5,34 +5,18 @@ url:
   prefixes:
     en: en
     zh-hans: sc
-    zh-hant: ch
     th: th
     ko: kr
-    hi: in
     vi: vn
     id: id
-    es: es
-    bu: bu
-    pt-br: pt
-    lo: lo
-    ja: jp
-    km: km
     in: in
   domains:
     en: ''
     zh-hans: ''
-    zh-hant: ''
     th: ''
     ko: ''
-    hi: ''
     vi: ''
     id: ''
-    es: ''
-    bu: ''
-    pt-br: ''
-    lo: ''
-    ja: ''
-    km: ''
     in: ''
 selected_langcode: site_default
 _core:
