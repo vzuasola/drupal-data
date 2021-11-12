@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.ptplus.body
+    - field.field.node.ptplus.field_desktop_keywords
     - field.field.node.ptplus.field_game_code
     - field.field.node.ptplus.field_game_ribbon
     - field.field.node.ptplus.field_game_thumbnail_big
@@ -40,6 +41,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_desktop_keywords:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: 'e.g., slots, top, live'
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_game_code:
     weight: 14
     settings:
