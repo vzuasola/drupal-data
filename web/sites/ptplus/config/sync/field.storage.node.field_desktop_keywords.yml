@@ -1,0 +1,19 @@
+uuid: a502b935-6c93-4aea-bb4d-545ce7e147f9
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_desktop_keywords
+field_name: field_desktop_keywords
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

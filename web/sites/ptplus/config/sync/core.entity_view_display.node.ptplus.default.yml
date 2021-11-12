@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.ptplus.body
+    - field.field.node.ptplus.field_desktop_keywords
     - field.field.node.ptplus.field_game_code
     - field.field.node.ptplus.field_game_ribbon
     - field.field.node.ptplus.field_game_thumbnail_big
@@ -22,6 +23,13 @@ targetEntityType: node
 bundle: ptplus
 mode: default
 content:
+  field_desktop_keywords:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_game_code:
     weight: 1
     label: above
