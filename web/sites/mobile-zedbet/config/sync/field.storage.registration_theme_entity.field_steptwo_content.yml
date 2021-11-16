@@ -1,0 +1,19 @@
+uuid: 4f63e7e4-235e-4ad6-8d53-9738b30939e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+    - text
+id: registration_theme_entity.field_steptwo_content
+field_name: field_steptwo_content
+entity_type: registration_theme_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

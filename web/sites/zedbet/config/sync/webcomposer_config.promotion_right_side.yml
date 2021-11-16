@@ -1,0 +1,4 @@
+promotion_right_side_title: 'Promotion EN'
+promotion_right_side_visibility: "/promotions/*\r\n/promotion-test-2"
+_core:
+  default_config_hash: giIqzhO7NvdhYC9JsE0bfLStY2MkobDV5XZg4Bbo8XU

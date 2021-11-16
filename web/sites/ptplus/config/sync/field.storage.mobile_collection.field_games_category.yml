@@ -1,0 +1,20 @@
+uuid: 2b92cdf5-a186-4369-bc7d-77101912c3f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_collection
+    - taxonomy
+id: mobile_collection.field_games_category
+field_name: field_games_category
+entity_type: mobile_collection
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

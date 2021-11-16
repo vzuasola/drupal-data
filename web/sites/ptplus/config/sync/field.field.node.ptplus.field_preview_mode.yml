@@ -1,0 +1,23 @@
+uuid: e9f58942-54a3-4fd4-86c0-b5a2c815e19e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preview_mode
+    - node.type.ptplus
+id: node.ptplus.field_preview_mode
+field_name: field_preview_mode
+entity_type: node
+bundle: ptplus
+label: 'Preview Mode'
+description: 'Mark game for preview mode. Game will only be available when "pvw=1" query string parameter is appended on the URL.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

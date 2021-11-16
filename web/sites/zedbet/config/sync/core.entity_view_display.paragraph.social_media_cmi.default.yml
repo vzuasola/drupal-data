@@ -1,0 +1,52 @@
+uuid: f75756e9-e5fc-48c9-bffb-fa4540b2d756
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_enable
+    - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_link_class
+    - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_links
+    - field.field.paragraph.social_media_cmi.field_socialmedia_cmi_linktarget
+    - paragraphs.paragraphs_type.social_media_cmi
+  module:
+    - options
+_core:
+  default_config_hash: nymvnue8OOGaUfuRnt_fC5ejWWBLZqIkqJNDU89XGBo
+id: paragraph.social_media_cmi.default
+targetEntityType: paragraph
+bundle: social_media_cmi
+mode: default
+content:
+  field_socialmedia_cmi_enable:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_socialmedia_cmi_link_class:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_socialmedia_cmi_links:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_socialmedia_cmi_linktarget:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

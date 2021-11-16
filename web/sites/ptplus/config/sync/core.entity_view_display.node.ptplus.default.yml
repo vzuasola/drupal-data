@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.ptplus.body
+    - field.field.node.ptplus.field_desktop_keywords
     - field.field.node.ptplus.field_game_code
     - field.field.node.ptplus.field_game_ribbon
     - field.field.node.ptplus.field_game_thumbnail_big
     - field.field.node.ptplus.field_games_list_category
     - field.field.node.ptplus.field_keywords
     - field.field.node.ptplus.field_platform
+    - field.field.node.ptplus.field_preview_mode
     - field.field.node.ptplus.field_thumbnail_image
     - node.type.ptplus
   module:
@@ -21,6 +23,13 @@ targetEntityType: node
 bundle: ptplus
 mode: default
 content:
+  field_desktop_keywords:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_game_code:
     weight: 1
     label: above
@@ -71,6 +80,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_preview_mode:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_thumbnail_image:
     weight: 3

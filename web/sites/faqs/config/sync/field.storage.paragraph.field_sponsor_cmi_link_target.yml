@@ -1,0 +1,32 @@
+uuid: d97897f7-e37b-4fa1-8890-de4c9a6a8557
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: KeKavMmLku8sMceCXLodAl-PcKRUge3AewI3xBYBmLY
+id: paragraph.field_sponsor_cmi_link_target
+field_name: field_sponsor_cmi_link_target
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
