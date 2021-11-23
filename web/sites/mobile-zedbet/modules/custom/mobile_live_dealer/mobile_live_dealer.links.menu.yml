@@ -1,0 +1,5 @@
+mobile_live_dealer.list:
+  title: 'Live Dealer Mobile Configuration'
+  description: 'Provides configuration for Live Dealer Mobile Site'
+  parent: system.admin_config
+  route_name: mobile_live_dealer.admin_settings
