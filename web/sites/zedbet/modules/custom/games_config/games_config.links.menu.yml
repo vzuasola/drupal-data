@@ -1,0 +1,25 @@
+games_config.admin_settings:
+  title: 'Games Configuration'
+  description: 'Provides an interface for managing games.'
+  parent: system.admin_config
+  route_name: games_config.admin_settings
+
+games_config.list.games:
+  title: 'Manage Games'
+  parent: games_config.admin_settings
+  description: 'Manage Games'
+  route_name: games_config.list.games
+
+games_config.list.categories:
+  title: 'Manage Categories'
+  parent: games_config.admin_settings
+  description: 'Manage Game Categories'
+  route_name: games_config.sort.game_categories
+
+games_config.list.ribbons:
+  title: 'Manage Ribbons'
+  parent: games_config.admin_settings
+  description: 'Manage Games Ribbons'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters:
+    taxonomy_vocabulary: 'ribbon_labels'
