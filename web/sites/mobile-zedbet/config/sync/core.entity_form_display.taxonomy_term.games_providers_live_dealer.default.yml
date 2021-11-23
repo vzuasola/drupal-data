@@ -1,0 +1,72 @@
+uuid: 35e3f47a-8b0d-4fc7-b60d-4338d2d746be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.games_providers_live_dealer.field_game_provider_end_date_ld
+    - field.field.taxonomy_term.games_providers_live_dealer.field_game_provider_key_ld
+    - field.field.taxonomy_term.games_providers_live_dealer.field_provider_maintenance_ld
+    - field.field.taxonomy_term.games_providers_live_dealer.field_provider_start_date_ld
+    - taxonomy.vocabulary.games_providers_live_dealer
+  module:
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_maintenance_schedule:
+      children:
+        - field_provider_start_date_ld
+        - field_game_provider_end_date_ld
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        id: maintenance-schedule-ld
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Maintenance Schedule'
+id: taxonomy_term.games_providers_live_dealer.default
+targetEntityType: taxonomy_term
+bundle: games_providers_live_dealer
+mode: default
+content:
+  field_game_provider_end_date_ld:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_game_provider_key_ld:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_provider_maintenance_ld:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_provider_start_date_ld:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
