@@ -1,0 +1,108 @@
+uuid: 6119b6da-b295-4848-b065-b371d04fcd91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games_live_dealer.body
+    - field.field.node.games_live_dealer.field_game_icon
+    - field.field.node.games_live_dealer.field_game_image
+    - field.field.node.games_live_dealer.field_game_image_large
+    - field.field.node.games_live_dealer.field_game_ribbon
+    - field.field.node.games_live_dealer.field_game_title
+    - field.field.node.games_live_dealer.field_image_size
+    - field.field.node.games_live_dealer.field_maintenance_blurb
+    - field.field.node.games_live_dealer.field_maintenance_end
+    - field.field.node.games_live_dealer.field_maintenance_start
+    - node.type.games_live_dealer
+  module:
+    - datetime
+    - image
+    - options
+    - text
+    - user
+id: node.games_live_dealer.default
+targetEntityType: node
+bundle: games_live_dealer
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_game_icon:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_image:
+    weight: 9
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_image_large:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_title:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image_size:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maintenance_blurb:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_maintenance_end:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maintenance_start:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_game_ribbon: true
+  langcode: true
