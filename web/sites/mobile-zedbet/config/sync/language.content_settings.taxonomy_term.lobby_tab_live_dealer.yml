@@ -1,0 +1,16 @@
+uuid: d36f1685-8caa-41bd-bc82-5a9072824439
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lobby_tab_live_dealer
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.lobby_tab_live_dealer
+target_entity_type_id: taxonomy_term
+target_bundle: lobby_tab_live_dealer
+default_langcode: site_default
+language_alterable: true

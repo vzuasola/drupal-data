@@ -1,0 +1,48 @@
+uuid: dacdffe3-84bb-4634-880a-5b8cef6f6268
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_game_provider_live_dealer
+field_name: field_game_provider_live_dealer
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: skywind
+      label: Skywind
+    -
+      value: voidbridge
+      label: Voidbridge
+    -
+      value: playtech
+      label: Playtech
+    -
+      value: evo_gaming
+      label: 'Evolution Gaming'
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: micro_gaming
+      label: Microgaming
+    -
+      value: cq9
+      label: CQ9
+    -
+      value: ptplus
+      label: PTPlus
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
