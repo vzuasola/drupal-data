@@ -1,0 +1,9 @@
+uuid: d7976b0a-163d-4090-b6ae-4449acdac17c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Providers - Live Dealer'
+vid: games_providers_live_dealer
+description: "Game providers maintenance config\t"
+hierarchy: 0
+weight: 0
