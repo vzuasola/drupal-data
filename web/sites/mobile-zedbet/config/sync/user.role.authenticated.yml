@@ -28,6 +28,7 @@ permissions:
   - 'restful get rest_menu_item'
   - 'restful get webcomposer_config'
   - 'restful get webcomposer_config_resource'
+  - 'restful get webcomposer_form_rest_resource'
   - 'restful get webform_rest_elements'
   - 'restful get webform_rest_list'
   - 'restful post user_registration'

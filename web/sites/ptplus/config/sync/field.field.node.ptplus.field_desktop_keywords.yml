@@ -1,0 +1,19 @@
+uuid: bd65246a-49bf-4407-9655-4a0f1d0d81f0
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_desktop_keywords
+    - node.type.ptplus
+id: node.ptplus.field_desktop_keywords
+field_name: field_desktop_keywords
+entity_type: node
+bundle: ptplus
+label: 'Desktop Keywords'
+description: 'Please enter all the game keywords separated by comma (,) that can be used for the <b>desktop game search </b>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

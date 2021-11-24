@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zedbet_urls.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zedbet_urls_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zedbet_urls module.
+    case 'help.page.zedbet_urls':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zedbet Urls specific configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}

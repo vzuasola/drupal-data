@@ -1,0 +1,21 @@
+uuid: e9b34774-b901-47ea-9677-95b6341832f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_end_date_ld
+    - taxonomy.vocabulary.games_providers_live_dealer
+  module:
+    - datetime
+id: taxonomy_term.games_providers_live_dealer.field_game_provider_end_date_ld
+field_name: field_game_provider_end_date_ld
+entity_type: taxonomy_term
+bundle: games_providers_live_dealer
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

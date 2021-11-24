@@ -1,0 +1,9 @@
+uuid: 58105b15-a274-40ad-bc40-0c51a9976a35
+langcode: en
+status: true
+dependencies: {  }
+name: Product
+vid: product
+description: 'List of Products'
+hierarchy: 0
+weight: 0

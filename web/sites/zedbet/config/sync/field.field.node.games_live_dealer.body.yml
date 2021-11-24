@@ -1,0 +1,22 @@
+uuid: 38182a69-eb35-405c-9070-cc871a10ed77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.games_live_dealer
+  module:
+    - text
+id: node.games_live_dealer.body
+field_name: body
+entity_type: node
+bundle: games_live_dealer
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

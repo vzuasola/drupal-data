@@ -1,0 +1,22 @@
+uuid: e749a6c3-262e-4070-88e6-6b28d501f69a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_game_lobby
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_lobby
+field_name: field_game_lobby
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Use Game Lobby'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
