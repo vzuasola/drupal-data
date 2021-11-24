@@ -1,0 +1,19 @@
+uuid: 3c01fa65-f427-4677-8802-cbb52b695dc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_code_live_dealer
+    - node.type.games_live_dealer
+id: node.games_live_dealer.field_game_code_live_dealer
+field_name: field_game_code_live_dealer
+entity_type: node
+bundle: games_live_dealer
+label: 'Game Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

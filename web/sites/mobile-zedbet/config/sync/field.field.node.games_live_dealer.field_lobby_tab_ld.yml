@@ -1,0 +1,29 @@
+uuid: d3aca89a-acb9-42c5-b5b1-684bfaa01525
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lobby_tab_ld
+    - node.type.games_live_dealer
+    - taxonomy.vocabulary.lobby_tab_live_dealer
+id: node.games_live_dealer.field_lobby_tab_ld
+field_name: field_lobby_tab_ld
+entity_type: node
+bundle: games_live_dealer
+label: 'Lobby Tab'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lobby_tab_live_dealer: lobby_tab_live_dealer
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

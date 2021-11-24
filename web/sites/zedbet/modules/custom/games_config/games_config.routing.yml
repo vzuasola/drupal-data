@@ -1,0 +1,31 @@
+games_config.admin_settings:
+  path: 'admin/games'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Games Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+games_config.list.games:
+  path: 'admin/games/manage'
+  defaults:
+    _controller: '\Drupal\games_config\Controller\GamesController::getList'
+    _title: 'Manage Games'
+  requirements:
+    _permission: 'administer site configuration'
+
+games_config.sort.games:
+  path: 'admin/content/game/sorting'
+  defaults:
+    _controller: '\Drupal\games_config\Controller\GamesController::getList'
+    _title: 'Sort Games'
+  requirements:
+    _permission: 'administer site configuration'
+
+games_config.sort.game_categories:
+  path: 'admin/games/category/sorting'
+  defaults:
+    _controller: '\Drupal\games_config\Controller\GamesController::getList'
+    _title: 'Manage Game Categories'
+  requirements:
+    _permission: 'administer site configuration'

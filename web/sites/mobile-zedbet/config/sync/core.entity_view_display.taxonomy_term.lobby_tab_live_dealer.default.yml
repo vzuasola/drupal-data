@@ -1,0 +1,40 @@
+uuid: 3f287692-b600-4b4c-8be6-9e4ec9da7289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.lobby_tab_live_dealer.field_alias_ld
+    - field.field.taxonomy_term.lobby_tab_live_dealer.field_label_ld
+    - taxonomy.vocabulary.lobby_tab_live_dealer
+  module:
+    - text
+id: taxonomy_term.lobby_tab_live_dealer.default
+targetEntityType: taxonomy_term
+bundle: lobby_tab_live_dealer
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_alias_ld:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_label_ld:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
