@@ -7,18 +7,12 @@ dependencies:
     - node.type.ptplus
   module:
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 id: node.ptplus.field_thumbnail_image
 field_name: field_thumbnail_image
 entity_type: node
 bundle: ptplus
 label: 'Thumbnail Image'
-description: 'Recommended dimension of image is 110px x 86px.'
+description: 'Recommended dimension of image is 330px x 258px.'
 required: true
 translatable: false
 default_value: {  }
@@ -27,8 +21,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 110x86
-  min_resolution: 110x86
+  max_resolution: ''
+  min_resolution: ''
   alt_field: true
   alt_field_required: false
   title_field: false
