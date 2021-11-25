@@ -7,6 +7,12 @@ dependencies:
     - node.type.ptplus
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.ptplus.field_game_thumbnail_big
 field_name: field_game_thumbnail_big
 entity_type: node
