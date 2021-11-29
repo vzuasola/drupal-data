@@ -58,6 +58,14 @@ class GeneralConfiguration extends FormBase {
       '#collapsible' => true,
     ];
 
+    $form['general_settings_tab']['general']['reg_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reg API v3 URL'),
+      '#description' => $this->t('Registration version 3'),
+      '#default_value' => $this->get('reg_api_url'),
+      '#translatable' => true,
+    ];
+
     $form['general_settings_tab']['general']['step_one_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Step one text'),
