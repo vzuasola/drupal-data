@@ -1,0 +1,16 @@
+uuid: 1dac4f07-fa02-45c9-ae93-81d7f5fdcb08
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lobby_pages
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.lobby_pages
+target_entity_type_id: node
+target_bundle: lobby_pages
+default_langcode: site_default
+language_alterable: true

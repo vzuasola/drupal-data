@@ -1,0 +1,29 @@
+uuid: 6eb1e15c-edf1-4ed6-87f4-71ae7315f97d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lobby_pages.body
+    - node.type.lobby_pages
+  module:
+    - text
+    - user
+id: node.lobby_pages.teaser
+targetEntityType: node
+bundle: lobby_pages
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
