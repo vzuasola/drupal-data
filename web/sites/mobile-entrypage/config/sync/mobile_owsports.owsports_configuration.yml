@@ -1,4 +1,8 @@
-smart_wap: 'https://ismart.dafabet.com/Deposit_ProcessLogin.aspx'
-iwap: 'https://iwap.dafabet.com/Deposit_ProcessLogin.aspx'
-owsports_param: 'lang=en&st={auth.token}&homeURL=https://qa1-mobile-entrypagewww.elysium-dfbt.com/en&extendSessionURL=https://qa1-mobile-entrypagewww.elysium-dfbt.com/en&OType=01&oddstype=1'
+smart_wap: 'https://ismart.{domain:base_domain}/Deposit_ProcessLogin.aspx'
+iwap: 'https://ismart.{domain:base_domain}/Deposit_ProcessLogin.aspx'
+owsports_param: "lang|{domain:mobile_lang}\r\ntoken|{sunplus.token}\r\ndptoken|{auth.token}\r\nhomeURL|{domain:mobile}/{domain:mobile_lang}\r\nextendSessionURL|{domain:mobile}/{domain:mobile_lang}\r\nOType|4\r\noddstype|4"
 iwap_agents: "windows\r\nblackberry\r\nsymbian\r\nsymbianOS"
+owsports_param_encode: 1
+smart_wap_prelogin: "https://ismart.{domain:base_domain}/DepositLogin/bfindex\r\n"
+owsports_prelogin_param: "lang|{domain:mobile_lang}\r\nhomeURL|{domain:mobile}/{domain:mobile_lang}[query:({tracking})]\r\nsignupURL|{domain:registration_link}sports[query:(regvia=10&{tracking})]\r\nLoginURL|{domain:mobile}/{domain:mobile_lang}/login[query:(product=sports&{tracking})]\r\nOType|4\r\noddstype|4"
+owsports_prelogin_param_encode: 1
