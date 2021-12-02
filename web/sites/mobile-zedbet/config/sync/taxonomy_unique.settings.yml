@@ -20,3 +20,5 @@ games_providers_live_dealer: 0
 games_providers_live_dealer_message: 'Term @term already exists in vocabulary @vocabulary.'
 lobby_tab_live_dealer: 1
 lobby_tab_live_dealer_message: 'Term @term already exists in vocabulary @vocabulary.'
+product_integrations: 1
+product_integrations_message: 'Term @term already exists in vocabulary @vocabulary.'
