@@ -1,0 +1,23 @@
+uuid: 224e44b2-e360-4c35-b56c-edfeb80caddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_socialmedia_cmi_links
+    - paragraphs.paragraphs_type.social_media_cmi
+_core:
+  default_config_hash: 6NUaxCOteSUA0oQgfcZ568sXR_0vBjUDBv-fvp-Ko3M
+id: paragraph.social_media_cmi.field_socialmedia_cmi_links
+field_name: field_socialmedia_cmi_links
+entity_type: paragraph
+bundle: social_media_cmi
+label: Links
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '#'
+default_value_callback: ''
+settings: {  }
+field_type: string

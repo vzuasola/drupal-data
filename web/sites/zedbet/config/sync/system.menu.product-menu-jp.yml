@@ -1,0 +1,8 @@
+uuid: 461bf8c5-d11f-4858-b214-5a06ab5b2650
+langcode: ja
+status: true
+dependencies: {  }
+id: product-menu-jp
+label: 'Product Menu JP'
+description: ''
+locked: false

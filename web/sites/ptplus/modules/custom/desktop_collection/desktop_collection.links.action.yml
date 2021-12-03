@@ -1,0 +1,5 @@
+entity.desktop_collection.add_form:
+  route_name: entity.desktop_collection.add_form  
+  title: 'Add Desktop collection'
+  appears_on:
+    - entity.desktop_collection.collection

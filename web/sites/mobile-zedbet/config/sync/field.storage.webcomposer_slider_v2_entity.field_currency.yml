@@ -1,0 +1,19 @@
+uuid: 73a1e718-1250-474a-9c19-d83dac7b583b
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_currency
+field_name: field_currency
+entity_type: webcomposer_slider_v2_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

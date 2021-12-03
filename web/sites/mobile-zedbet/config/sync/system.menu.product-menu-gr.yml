@@ -1,0 +1,8 @@
+uuid: 7791c992-b457-424b-ad9e-1fc7442ec569
+langcode: el
+status: true
+dependencies: {  }
+id: product-menu-gr
+label: 'Product Menu GR'
+description: ''
+locked: false

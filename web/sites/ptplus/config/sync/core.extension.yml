@@ -21,6 +21,7 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
+  desktop_collection: 0
   desktop_slider: 0
   devel: 0
   draggableviews: 0
@@ -45,6 +46,7 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  mobile_collection: 0
   node: 0
   options: 0
   paragraphs: 0

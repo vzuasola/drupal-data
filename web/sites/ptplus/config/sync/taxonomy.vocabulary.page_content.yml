@@ -1,0 +1,9 @@
+uuid: fa1c0669-2580-4dc5-84c7-ffa51caaf617
+langcode: en
+status: true
+dependencies: {  }
+name: 'Page Content'
+vid: page_content
+description: 'Add Page Content'
+hierarchy: 0
+weight: 0

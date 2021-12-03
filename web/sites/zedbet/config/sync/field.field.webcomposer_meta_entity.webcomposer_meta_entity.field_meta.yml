@@ -1,0 +1,56 @@
+uuid: 121cf873-b86e-48d9-b13c-4309376c230b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_meta_entity.field_meta
+    - paragraphs.paragraphs_type.metatag
+  module:
+    - entity_reference_revisions
+    - webcomposer_seo
+_core:
+  default_config_hash: afudE-XmkVkIBjE0-_6yZ6s7v0vXOCDA-lEqaCdLHdA
+id: webcomposer_meta_entity.webcomposer_meta_entity.field_meta
+field_name: field_meta
+entity_type: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+label: Meta
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      metatag: metatag
+    target_bundles_drag_drop:
+      metatag:
+        enabled: true
+        weight: 10
+      domain_management_configuration:
+        weight: 11
+        enabled: false
+      floating_banner_item:
+        weight: 12
+        enabled: false
+      right_side_block_content:
+        weight: 13
+        enabled: false
+      slider_overlay_cmi:
+        weight: 14
+        enabled: false
+      social_media:
+        weight: 15
+        enabled: false
+      social_media_cmi:
+        weight: 16
+        enabled: false
+      sponsor_cmi:
+        weight: 17
+        enabled: false
+      sponsorship:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,16 @@
+uuid: 0e80c71d-ec12-405b-b0b0-3d35aca587f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.slider_overlay_cmi
+target_entity_type_id: paragraph
+target_bundle: slider_overlay_cmi
+default_langcode: site_default
+language_alterable: true
