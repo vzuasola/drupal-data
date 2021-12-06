@@ -1,0 +1,30 @@
+uuid: 2c3af2e6-c5d0-41c8-ae99-f9128c884812
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_subprovider.field_subprovider_currencies
+    - taxonomy.vocabulary.game_subprovider
+  module:
+    - text
+id: taxonomy_term.game_subprovider.default
+targetEntityType: taxonomy_term
+bundle: game_subprovider
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_subprovider_currencies:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true
