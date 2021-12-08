@@ -1,4 +1,4 @@
-icore_games_integration_form__active_tab: edit-sa-gaming
+icore_games_integration_form__active_tab: edit-evo-gaming
 asia_gaming_currency: ''
 asia_gaming_language_mapping: ''
 asia_gaming_country: ''
@@ -31,8 +31,8 @@ allbet_country: ''
 tgp_currency: ''
 tgp_language_mapping: ''
 tgp_country: ''
-evo_gaming_currency: ''
-evo_gaming_language_mapping: ''
+evo_gaming_currency: "USD\r\nTHB\r\nTUS"
+evo_gaming_language_mapping: "en|en-US\r\nth|th"
 evo_gaming_country: ''
 ebet_currency: ''
 ebet_language_mapping: ''
