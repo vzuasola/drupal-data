@@ -1,0 +1,5 @@
+mobile_config.list:
+  title: 'Mobile Configuration'
+  description: 'Provides configuration for Mobile Sites'
+  parent: system.admin_config
+  route_name: mobile_config.admin_settings
