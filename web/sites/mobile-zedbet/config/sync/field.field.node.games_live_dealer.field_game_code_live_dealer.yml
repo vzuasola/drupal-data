@@ -9,8 +9,8 @@ id: node.games_live_dealer.field_game_code_live_dealer
 field_name: field_game_code_live_dealer
 entity_type: node
 bundle: games_live_dealer
-label: 'Game Code'
-description: ''
+label: 'Game Code / Game Category'
+description: "<p>iCore game detail to use per provider:</p>\r\n<ul>\r\n<li><strong>Evolution Gaming:</strong> <i>N/A</i></li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }
