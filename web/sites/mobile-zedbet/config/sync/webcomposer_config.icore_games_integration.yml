@@ -22,8 +22,8 @@ gold_deluxe_country: ''
 video_racing_currency: ''
 video_racing_language_mapping: ''
 video_racing_country: ''
-sa_gaming_currency: ''
-sa_gaming_language_mapping: ''
+sa_gaming_currency: "USD\r\nTHB\r\nTUS"
+sa_gaming_language_mapping: "en|en-US\r\nth|th"
 sa_gaming_country: ''
 allbet_currency: ''
 allbet_language_mapping: ''
