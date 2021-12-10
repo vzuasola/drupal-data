@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.games_live_dealer.body
+    - field.field.node.games_live_dealer.field_game_code
     - field.field.node.games_live_dealer.field_game_icon
     - field.field.node.games_live_dealer.field_game_image
     - field.field.node.games_live_dealer.field_game_image_large
+    - field.field.node.games_live_dealer.field_game_provider
     - field.field.node.games_live_dealer.field_game_ribbon
+    - field.field.node.games_live_dealer.field_game_subprovider
     - field.field.node.games_live_dealer.field_game_title
     - field.field.node.games_live_dealer.field_image_size
     - field.field.node.games_live_dealer.field_maintenance_blurb
@@ -28,12 +31,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_game_code:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_game_icon:
-    weight: 6
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -42,7 +53,7 @@ content:
     type: image
     region: content
   field_game_image:
-    weight: 9
+    weight: 3
     label: above
     settings:
       image_style: ''
@@ -51,7 +62,7 @@ content:
     type: image
     region: content
   field_game_image_large:
-    weight: 8
+    weight: 4
     label: above
     settings:
       image_style: ''
@@ -59,29 +70,45 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_game_provider:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_game_subprovider:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_game_title:
-    weight: 7
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_image_size:
-    weight: 5
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_maintenance_blurb:
-    weight: 4
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_maintenance_end:
-    weight: 2
+    weight: 11
     label: above
     settings:
       format_type: medium
@@ -90,7 +117,7 @@ content:
     type: datetime_default
     region: content
   field_maintenance_start:
-    weight: 3
+    weight: 10
     label: above
     settings:
       format_type: medium
@@ -99,7 +126,7 @@ content:
     type: datetime_default
     region: content
   links:
-    weight: 0
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games_live_dealer.field__target_ld
     - field.field.node.games_live_dealer.field_game_code_live_dealer
+    - field.field.node.games_live_dealer.field_game_platform_live_dealer
     - field.field.node.games_live_dealer.field_game_provider_live_dealer
     - field.field.node.games_live_dealer.field_game_ribbon_live_dealer
     - field.field.node.games_live_dealer.field_lobby_tab_ld
     - field.field.node.games_live_dealer.field_preview_mode_ld
+    - field.field.node.games_live_dealer.field_provider_logo_ld
     - field.field.node.games_live_dealer.field_thumbnail_image_ld
     - field.field.node.games_live_dealer.field_use_game_loader_ld
     - image.style.thumbnail
@@ -22,9 +25,10 @@ third_party_settings:
     group_game_thumbnail_settings_id:
       children:
         - field_thumbnail_image_ld
+        - field__target_ld
         - field_game_ribbon_live_dealer
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -33,6 +37,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Game Thumbnail Settings'
+    group_provider_details:
+      children:
+        - field_provider_logo_ld
+        - field_game_code_live_dealer
+        - field_game_platform_live_dealer
+      parent_name: ''
+      weight: 10
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Provider Details'
 id: node.games_live_dealer.default
 targetEntityType: node
 bundle: games_live_dealer
@@ -44,13 +62,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field__target_ld:
+    weight: 127
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_code_live_dealer:
-    weight: 15
+    weight: 20
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_platform_live_dealer:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_game_provider_live_dealer:
     weight: 5
@@ -59,7 +89,7 @@ content:
     type: options_select
     region: content
   field_game_ribbon_live_dealer:
-    weight: 127
+    weight: 128
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -71,11 +101,19 @@ content:
     type: options_select
     region: content
   field_preview_mode_ld:
-    weight: 125
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_provider_logo_ld:
+    weight: 19
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_thumbnail_image_ld:
     weight: 126
@@ -86,7 +124,7 @@ content:
     type: image_image
     region: content
   field_use_game_loader_ld:
-    weight: 127
+    weight: 18
     settings:
       display_label: true
     third_party_settings: {  }
@@ -101,7 +139,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -114,7 +152,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -127,7 +165,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 16
     region: content
     third_party_settings: {  }
   sticky:
@@ -161,7 +199,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
