@@ -19,8 +19,6 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
-    - field.field.registration_theme_entity.registration_theme_entity.field_success_message
-    - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
     - image.style.thumbnail
   module:
     - color_field
@@ -235,20 +233,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_success_message:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_success_message_color:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
     region: content
   langcode:
     type: language_select
