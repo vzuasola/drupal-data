@@ -1,4 +1,4 @@
-icore_games_integration_form__active_tab: edit-evo-gaming
+icore_games_integration_form__active_tab: edit-voidbridge
 asia_gaming_currency: ''
 asia_gaming_language_mapping: ''
 asia_gaming_country: ''
@@ -13,8 +13,8 @@ gb_virtual_sports_country: ''
 skywind_currency: ''
 skywind_language_mapping: ''
 skywind_country: ''
-voidbridge_currency: ''
-voidbridge_language_mapping: ''
+voidbridge_currency: "USD\r\nTHB\r\nTUS"
+voidbridge_language_mapping: "en|en-US\r\nth|th"
 voidbridge_country: ''
 gold_deluxe_currency: ''
 gold_deluxe_language_mapping: ''
