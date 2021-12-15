@@ -1,6 +1,6 @@
-icore_games_integration_form__active_tab: edit-voidbridge
-asia_gaming_currency: ''
-asia_gaming_language_mapping: ''
+icore_games_integration_form__active_tab: edit-asia-gaming
+asia_gaming_currency: "USD\r\nTHB"
+asia_gaming_language_mapping: "en|en-US\r\nth|th"
 asia_gaming_country: ''
 asia_gaming_custom_lobbyDomain: ''
 asia_gaming_custom_lobbyDomain_enabled: 0
