@@ -1,9 +1,10 @@
 games_loading_configuration_tab__active_tab: edit-loading-message
 loading_message_content:
-  value: "<p class=\"mt-80 text-center\">&nbsp;</p>\r\n\r\n<p class=\"mt-80 text-center\"><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/sites/zedbet/files/zedbet-logo.png\" width=\"230\" /></p>\r\n"
+  value: "<p class=\"mt-80 text-center\">&nbsp;\r\n</p>\r\n<p class=\"mt-80 text-center\"><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/images/zedbet_logo.png\" width=\"230\" />\r\n</p>\r\n"
   format: basic_html
 value: null
 format: null
 loading_error_message:
-  value: "<p class=\"mt-80 text-center\">&nbsp;\r\n</p>\r\n<p><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/sites/zedbet/files/zedbet-logo.png\" width=\"230\" />\r\n</p>\r\n<p><span class=\"text-grey\">An unexpected error occurred.\r\n  <br />\r\n  This window will close in few seconds.</span>\r\n</p>\r\n<p><span class=\"text-grey\">Please try again soon.</span>\r\n</p>"
+  value: "<p class=\"mt-80 text-center\">&nbsp;\r\n</p>\r\n<p><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/images/zedbet_logo.png\" width=\"230\" />\r\n</p>\r\n<p><span class=\"text-grey\">An unexpected error occurred.\r\n  <br />\r\n  This window will close in few seconds.</span>\r\n</p>\r\n<p><span class=\"text-grey\">Please try again soon.</span>\r\n</p>\r\n"
   format: basic_html
+
