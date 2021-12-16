@@ -1,0 +1,23 @@
+uuid: cbef94bf-c699-4e5b-8558-647f5a1d274e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_enable_for_agent_players
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_enable_for_agent_players
+field_name: field_enable_for_agent_players
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Player State'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
