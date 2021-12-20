@@ -415,6 +415,13 @@ class ZipangCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['inner_breadcrumb']['articles'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Articles'),
+      '#default_value' => $this->get('articles') ?? "Articles",
+      '#translatable' => true,
+    ];
+
     $form['slider_settings']['slider_speed'] = [
       '#type' => 'number',
       '#title' => $this->t('Slider Speed (seconds)'),
