@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_product_menu_uninstall() {
+  $keys = [
+    'core.base_field_override.mobile_product_menu.mobile_product_menu.metatag',
+    'core.entity_form_display.mobile_product_menu.mobile_product_menu.default',
+    'core.entity_view_display.mobile_product_menu.mobile_product_menu.default',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_class',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_enable',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_tag',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_title',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_url_post_log',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_url_pre_log',
+    'field.storage.mobile_product_menu.field_product_menu_class',
+    'field.storage.mobile_product_menu.field_product_menu_enable',
+    'field.storage.mobile_product_menu.field_product_menu_tag',
+    'field.storage.mobile_product_menu.field_product_menu_title',
+    'field.storage.mobile_product_menu.field_product_menu_url_post_log',
+    'field.storage.mobile_product_menu.field_product_menu_url_pre_log',
+    'language.content_settings.mobile_product_menu.mobile_product_menu',
+    'views.view.product_menu_entity_api',
+    'field.field.mobile_product_menu.mobile_product_menu.field_mobile_product_menu_target',
+    'field.storage.mobile_product_menu.field_mobile_product_menu_target',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_id',
+    'field.storage.mobile_product_menu.field_product_menu_id',
+
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

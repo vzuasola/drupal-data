@@ -1,0 +1,24 @@
+uuid: bb1319f7-a11c-4165-b835-e3c8ef4290b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_menu_enable
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_product_menu_enable
+field_name: field_product_menu_enable
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Menu Enable'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

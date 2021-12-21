@@ -1,0 +1,20 @@
+uuid: 89c5b606-a4be-4a62-a758-eac3e0fa4471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_menu_class
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_product_menu_class
+field_name: field_product_menu_class
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Menu Class'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
