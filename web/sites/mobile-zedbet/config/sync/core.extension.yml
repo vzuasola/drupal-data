@@ -44,6 +44,7 @@ module:
   menu_ui: 0
   metatag: 0
   mobile_config: 0
+  mobile_live_dealer: 0
   mobile_product_menu: 0
   node: 0
   options: 0
