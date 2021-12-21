@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page_type_3.body
+    - field.field.node.basic_page_type_3.field_breadcrumbs
     - field.field.node.basic_page_type_3.field_meta_tag
     - node.type.basic_page_type_3
   module:
@@ -30,6 +31,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_breadcrumbs:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_meta_tag:
     weight: 9
     settings: {  }

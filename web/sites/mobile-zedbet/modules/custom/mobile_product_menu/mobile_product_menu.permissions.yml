@@ -1,0 +1,22 @@
+add mobile product menu entities:
+  title: 'Create new Mobile Product Menu entities'
+
+administer mobile product menu entities:
+  title: 'Administer Mobile Product Menu entities'
+  description: 'Allow to access the administration form to configure Mobile Product Menu entities.'
+  restrict access: true
+
+delete mobile product menu entities:
+  title: 'Delete Mobile Product Menu entities'
+
+edit mobile product menu entities:
+  title: 'Edit Mobile Product Menu entities'
+
+access mobile product menu overview:
+  title: 'Access the Mobile Product Menu overview page'
+
+view published mobile product menu entities:
+  title: 'View published Mobile Product Menu entities'
+
+view unpublished mobile product menu entities:
+  title: 'View unpublished Mobile Product Menu entities'

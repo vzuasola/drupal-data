@@ -1,5 +1,12 @@
 attributes:
+  dataRouter:
+    label: 'Disabled Data Router'
+    options:
+      disabled: 'Disabled Data Router'
   class:
+    label: ''
+    description: ''
+  svg:
     label: ''
     description: ''
   target:
@@ -13,3 +20,8 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
+  device:
+    label: Device
+    options:
+      ios: 'iOS Device'
+      android: 'Android Device'
