@@ -415,10 +415,12 @@ class ZipangCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $alias = \Drupal::service('path.alias_manager')->getAliasByPath('articles'.$nid);
+
     $form['inner_breadcrumb']['articles'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Articles'),
-      '#default_value' => $this->get('articles') ?? "Articles",
+      '#default_value' => $this->get('articles') ?? $alias,
       '#translatable' => true,
     ];
 
