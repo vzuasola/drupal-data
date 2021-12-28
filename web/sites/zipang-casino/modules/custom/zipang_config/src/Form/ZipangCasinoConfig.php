@@ -420,10 +420,11 @@ class ZipangCasinoConfig extends FormBase {
       $node = \Drupal\node\Entity\Node::load($matches[1]);
     }
 
-    $form['inner_breadcrumb']['articles_breadcrumb'] = [
+    $form['inner_breadcrumb']['article_breadcrumb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Articles'),
       '#default_value' => $node->field_breadcrumbs->value ?? 'Articles',
+      '#translatable' => true,
     ];
 
     $form['slider_settings']['slider_speed'] = [
