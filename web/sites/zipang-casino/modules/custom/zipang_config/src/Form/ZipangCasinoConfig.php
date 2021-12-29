@@ -415,6 +415,18 @@ class ZipangCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $path = \Drupal::service('path.alias_manager')->getPathByAlias('/articles');
+    if(preg_match('/node\/(\d+)/', $path, $matches)) {
+      $node = \Drupal\node\Entity\Node::load($matches[1]);
+    }
+
+    $form['inner_breadcrumb']['article_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Articles'),
+      '#default_value' => $node->field_breadcrumbs->value ?? 'Articles',
+      '#translatable' => true,
+    ];
+
     $form['slider_settings']['slider_speed'] = [
       '#type' => 'number',
       '#title' => $this->t('Slider Speed (seconds)'),
