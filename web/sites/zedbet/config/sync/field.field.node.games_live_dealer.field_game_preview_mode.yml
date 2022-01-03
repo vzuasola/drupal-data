@@ -12,7 +12,7 @@ bundle: games_live_dealer
 label: 'Preview Mode'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0
