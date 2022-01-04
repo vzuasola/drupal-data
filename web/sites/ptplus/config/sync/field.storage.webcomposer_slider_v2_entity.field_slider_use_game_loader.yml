@@ -1,17 +1,14 @@
-uuid: 0235fe87-1e3f-40c2-a8ae-7e1a40034e47
+uuid: 11d212c0-0d62-431d-b8c3-0443a691b0bc
 langcode: en
 status: true
 dependencies:
   module:
     - webcomposer_slider_v2
-id: webcomposer_slider_v2_entity.field_game_code
-field_name: field_game_code
+id: webcomposer_slider_v2_entity.field_slider_use_game_loader
+field_name: field_slider_use_game_loader
 entity_type: webcomposer_slider_v2_entity
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

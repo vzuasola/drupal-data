@@ -1,12 +1,12 @@
-uuid: 789b1dfd-923b-4855-af5c-a9ff02603e18
+uuid: 1bef2050-ddbf-444d-a7ac-2e61e1ae7048
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - webcomposer_slider_v2
-id: webcomposer_slider_v2_entity.field_game_provider
-field_name: field_game_provider
+id: webcomposer_slider_v2_entity.field_slider_game_provider
+field_name: field_slider_game_provider
 entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
@@ -29,9 +29,6 @@ settings:
     -
       value: video_racing
       label: VR
-    -
-      value: lottoland
-      label: Lottoland
   allowed_values_function: ''
 module: options
 locked: false
