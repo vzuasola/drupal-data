@@ -1,13 +1,13 @@
-uuid: 830be9b0-467a-410a-8334-8210dcbd8886
+uuid: e3eb9547-fc38-4506-b57b-4d909bcf87bd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.webcomposer_slider_v2_entity.field_enable_game_launch
+    - field.storage.webcomposer_slider_v2_entity.field_slider_enable_game_launch
   module:
     - webcomposer_slider_v2
-id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_enable_game_launch
-field_name: field_enable_game_launch
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
+field_name: field_slider_enable_game_launch
 entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Enable Game launch'
