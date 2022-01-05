@@ -12,23 +12,8 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: gameworx_virtuals
-      label: 'Gameworx Virtuals'
-    -
-      value: gameworx_quicklotto
-      label: 'Gameworx Quick Lotto'
-    -
-      value: gpi_keno
-      label: 'GPI Keno'
-    -
-      value: gpi_thai
-      label: 'Gpi Thai'
-    -
-      value: gpi_pk
-      label: Pk10
-    -
-      value: video_racing
-      label: VR
+      value: ptplus
+      label: PTPlus
   allowed_values_function: ''
 module: options
 locked: false
