@@ -1,0 +1,20 @@
+uuid: cdb5029d-5bcf-4263-83eb-22d768526f33
+langcode: en
+status: true
+dependencies:
+  module:
+    - lobby_product_tiles
+    - taxonomy
+id: lobby_product_tiles.field_product_integration_id
+field_name: field_product_integration_id
+entity_type: lobby_product_tiles
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
