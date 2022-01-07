@@ -1,0 +1,22 @@
+# Lobby Product Tiles routing definition
+lobby_product_tiles.settings_tab:
+  route_name: lobby_product_tiles.settings
+  title: 'Settings'
+  base_route: lobby_product_tiles.settings
+
+entity.lobby_product_tiles.canonical:
+  route_name: entity.lobby_product_tiles.canonical
+  base_route: entity.lobby_product_tiles.canonical
+  title: 'View'
+
+entity.lobby_product_tiles.edit_form:
+  route_name: entity.lobby_product_tiles.edit_form
+  base_route: entity.lobby_product_tiles.canonical
+  title: 'Edit'
+
+entity.lobby_product_tiles.delete_form:
+  route_name:  entity.lobby_product_tiles.delete_form
+  base_route:  entity.lobby_product_tiles.canonical
+  title: Delete
+  weight: 10
+
