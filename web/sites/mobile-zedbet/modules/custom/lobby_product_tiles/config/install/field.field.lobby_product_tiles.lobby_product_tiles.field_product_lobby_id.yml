@@ -1,0 +1,20 @@
+uuid: f47e747e-2058-463c-8f74-42fda5debaef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lobby_product_tiles.field_product_lobby_id
+  module:
+    - lobby_product_tiles
+id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_id
+field_name: field_product_lobby_id
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: 'Product Lobby ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
