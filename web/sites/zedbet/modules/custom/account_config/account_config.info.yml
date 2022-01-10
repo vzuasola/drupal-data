@@ -1,0 +1,7 @@
+name: My Account Configurations
+type: module
+description: Configuration for My Account
+core: 8.x
+package: My Account Configurations
+
+
