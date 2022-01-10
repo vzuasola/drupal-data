@@ -113,5 +113,28 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_language_select') ?? 'Select Language',
         '#translatable' => TRUE
       ];
+
+      $form['about_dafabet_details'] = [
+        '#type' => 'details',
+        '#title' => 'About Zedbet',
+        '#collapsible' => TRUE,
+        '#group' => 'advanced'
+      ];
+  
+      $form['about_dafabet_details']['about_dafabet_title'] = [
+      '#type' => 'textfield',
+      '#title' => 'Title',
+      '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'about_dafabet_title') ?? 'About Zedbet',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['about_dafabet_details']['about_dafabet_content'] = [
+      '#type' => 'text_format',
+      '#title' => 'Content',
+      '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'about_dafabet_content.value') ?? 'About Zedbet',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
     }
 }
