@@ -1,0 +1,8 @@
+uuid: c70629cd-a12b-4cf3-a0c5-084fcd1c0f54
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-footer
+label: 'Mobile Footer'
+description: ''
+locked: false
