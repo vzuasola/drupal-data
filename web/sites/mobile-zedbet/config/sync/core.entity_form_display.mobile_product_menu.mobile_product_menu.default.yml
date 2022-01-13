@@ -14,6 +14,21 @@ dependencies:
   module:
     - link
     - mobile_product_menu
+third_party_settings:
+  field_group:
+    group_url:
+      children:
+        - field_product_menu_url_pre_log
+        - field_product_menu_url_post_log
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: URL
 _core:
   default_config_hash: UUE_bcdMQC6_FxdnMIpb7rfUjaG73llHXiW_99-aurY
 id: mobile_product_menu.mobile_product_menu.default
