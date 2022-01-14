@@ -1,0 +1,8 @@
+uuid: cbefca45-7ef2-4804-a48d-4ee4922cb000
+langcode: th
+status: true
+dependencies: {  }
+id: mobile-pre-login-th
+label: 'Mobile Pre Login TH'
+description: ''
+locked: false
