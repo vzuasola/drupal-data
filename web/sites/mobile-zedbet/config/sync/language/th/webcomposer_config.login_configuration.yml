@@ -1,0 +1,27 @@
+advanced__active_tab: edit-login-form-error-messages-details
+rememberme_label: 'Remember Username TH'
+lightbox_blurb: 'Not yet a Zedbet member? TH'
+login_page_blurb: ''
+error_message_restricted_country: ''
+autologout_box_content:
+  format: basic_html
+  value: "<p>Your session will expire in {seconds} seconds. Do you want to continue your session ? TH</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>Your session has timed out due to inactivity. TH</p>\r\n"
+mobile_login_button_label: ''
+mobile_cant_login_url: ''
+username_placeholder: Username
+password_placeholder: 'Password TH'
+login_bottom_label: 'Login TH'
+error_message_blank_username: 'Username is required. TH'
+error_message_blank_password: 'Password is required. TH'
+error_message_blank_passname: 'Username and Password is required. TH'
+error_message_invalid_passname: 'Sorry, invalid username and/or password. Please try again. TH'
+error_message_service_not_available: 'Service not available. TH'
+error_message_account_suspended: 'Account locked. Please contact our customer support. TH'
+error_message_account_locked: 'Account locked. Please contact our customer support. TH'
+autologout_box_title: 'REMINDER TH'
+notification_title: 'Session Timeout TH'
+notification_window_title: 'Session Timeout TH'
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

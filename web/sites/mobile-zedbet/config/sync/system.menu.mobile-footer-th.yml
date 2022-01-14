@@ -1,0 +1,8 @@
+uuid: de62b837-2348-4b17-8318-dcc855996526
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-footer-th
+label: 'Mobile Footer TH'
+description: ''
+locked: false
