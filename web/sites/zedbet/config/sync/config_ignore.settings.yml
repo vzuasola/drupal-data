@@ -6,5 +6,11 @@ ignored_config_entities:
   - 'filter.*'
   - 'language.*'
   - 'devel.*'
+  - 'field.storage.*'
+  - 'field.field.*'
+  - 'views.view.*'
+  - 'core.base_field_override.zedbet_front_block.*'
+  - 'core.entity_form_display.zedbet_front_block.*'
+  - 'core.entity_view_display.zedbet_front_block'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
