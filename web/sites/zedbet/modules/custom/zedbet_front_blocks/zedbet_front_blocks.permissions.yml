@@ -1,0 +1,22 @@
+add zedbet front block entities:
+  title: 'Create new Zedbet front block entities'
+
+administer zedbet front block entities:
+  title: 'Administer Zedbet front block entities'
+  description: 'Allow to access the administration form to configure Zedbet front block entities.'
+  restrict access: true
+
+delete zedbet front block entities:
+  title: 'Delete Zedbet front block entities'
+
+edit zedbet front block entities:
+  title: 'Edit Zedbet front block entities'
+
+access zedbet front block overview:
+  title: 'Access the Zedbet front block overview page'
+
+view published zedbet front block entities:
+  title: 'View published Zedbet front block entities'
+
+view unpublished zedbet front block entities:
+  title: 'View unpublished Zedbet front block entities'
