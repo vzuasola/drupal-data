@@ -1,0 +1,5 @@
+name: Zedbet Front Blocks
+type: module
+description: Module for Zedbet home blocks.
+core: 8.x
+package: Custom
