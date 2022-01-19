@@ -38,6 +38,7 @@ class ZedbetUnsupportedCurrencyForm extends FormBase {
       '#title' => $this->t('Unsupported Currency Icon'),
       '#default_value' => $this->get('file_image_unsupported_currency'),
       '#upload_location' => 'public://',
+      '#required' => true,
       '#translatable' => false,
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
