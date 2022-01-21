@@ -1,0 +1,19 @@
+uuid: 6dcb4c4f-cb6b-4735-b05d-88b99c0b5703
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_label_ld
+    - taxonomy.vocabulary.lobby_tab_live_dealer
+id: taxonomy_term.lobby_tab_live_dealer.field_label_ld
+field_name: field_label_ld
+entity_type: taxonomy_term
+bundle: lobby_tab_live_dealer
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

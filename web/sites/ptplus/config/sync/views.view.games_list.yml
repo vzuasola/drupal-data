@@ -252,7 +252,7 @@ display:
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
-    display_title: 'REST export'
+    display_title: 'Mobile Games List'
     position: 1
     display_options:
       display_extenders: {  }
@@ -410,10 +410,15 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        cache: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      cache:
+        type: none
+        options: {  }
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

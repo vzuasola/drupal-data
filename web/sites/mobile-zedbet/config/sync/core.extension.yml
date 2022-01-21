@@ -39,10 +39,14 @@ module:
   language: 0
   libraries: 0
   link: 0
+  lobby_product_tiles: 0
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  mobile_config: 0
+  mobile_live_dealer: 0
+  mobile_product_menu: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -87,6 +91,7 @@ module:
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
+  webcomposer_site_page_not_found: 0
   webcomposer_sitemap: 0
   webcomposer_slider_v2: 0
   webcomposer_social_media: 0

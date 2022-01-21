@@ -1,0 +1,23 @@
+uuid: ae23992c-c627-436e-8847-d23422a72a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_use_game_loader_ld
+    - node.type.games_live_dealer
+id: node.games_live_dealer.field_use_game_loader_ld
+field_name: field_use_game_loader_ld
+entity_type: node
+bundle: games_live_dealer
+label: 'Use Game Loader'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

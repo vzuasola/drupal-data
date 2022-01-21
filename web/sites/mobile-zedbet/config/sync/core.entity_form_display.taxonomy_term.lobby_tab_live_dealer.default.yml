@@ -1,0 +1,52 @@
+uuid: d0cefa3f-f01c-475d-9ff2-faebd2e740b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.lobby_tab_live_dealer.field_alias_ld
+    - field.field.taxonomy_term.lobby_tab_live_dealer.field_label_ld
+    - taxonomy.vocabulary.lobby_tab_live_dealer
+id: taxonomy_term.lobby_tab_live_dealer.default
+targetEntityType: taxonomy_term
+bundle: lobby_tab_live_dealer
+mode: default
+content:
+  field_alias_ld:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_label_ld:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

@@ -14,3 +14,11 @@ master_placeholder: 0
 master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'
 product: 0
 product_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_ribbon: 0
+games_ribbon_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_providers_live_dealer: 0
+games_providers_live_dealer_message: 'Term @term already exists in vocabulary @vocabulary.'
+lobby_tab_live_dealer: 1
+lobby_tab_live_dealer_message: 'Term @term already exists in vocabulary @vocabulary.'
+product_integrations: 1
+product_integrations_message: 'Term @term already exists in vocabulary @vocabulary.'

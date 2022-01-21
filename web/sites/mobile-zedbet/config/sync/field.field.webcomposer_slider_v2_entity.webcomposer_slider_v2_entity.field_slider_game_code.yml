@@ -11,7 +11,7 @@ field_name: field_slider_game_code
 entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Game Code'
-description: ''
+description: "<p>iCore game detail to use per provider:</p>\r\n<ul>\r\n<li><strong>Evolution Gaming:&nbsp;</strong></li>\r\n</ul>"
 required: false
 translatable: true
 default_value: {  }

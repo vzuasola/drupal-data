@@ -1,0 +1,6 @@
+games_collection:
+    version: VERSION
+    css:
+        theme:
+            css/games_collections.css: {}
+  

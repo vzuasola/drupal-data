@@ -10,9 +10,6 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_enable_game_launch
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_code
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_provider
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
@@ -25,17 +22,20 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_label_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_product_label
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_use_game_loader
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
   module:
     - color_field
     - datetime
-    - image
     - link
     - options
+    - svg_image
     - text
     - user
     - webcomposer_slider_v2
@@ -107,14 +107,6 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_game_code:
-    weight: 24
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_game_launching:
     weight: 16
     label: above
@@ -122,13 +114,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_game_provider:
-    weight: 25
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_log_in_state:
     weight: 3
@@ -248,6 +233,41 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_slider_enable_game_launch:
+    weight: 27
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_slider_game_code:
+    weight: 28
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_slider_game_provider:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_slider_use_game_loader:
+    weight: 30
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_status:
     weight: 19
     label: above
@@ -295,6 +315,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_enable_game_launch: true
-  field_use_game_loader: true
   langcode: true

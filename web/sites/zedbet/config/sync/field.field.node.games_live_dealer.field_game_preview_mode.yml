@@ -1,0 +1,23 @@
+uuid: 83bf0ce8-ad21-4111-b0e3-e760e29d2217
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_preview_mode
+    - node.type.games_live_dealer
+id: node.games_live_dealer.field_game_preview_mode
+field_name: field_game_preview_mode
+entity_type: node
+bundle: games_live_dealer
+label: 'Preview Mode'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
