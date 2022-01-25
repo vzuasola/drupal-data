@@ -1,0 +1,5 @@
+registration_config.list:
+  title: 'Registration Configuration'
+  description: 'Configuration for registration'
+  parent: system.admin_config
+  route_name: registration_config.admin_settings
