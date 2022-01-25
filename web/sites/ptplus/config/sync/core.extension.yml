@@ -69,6 +69,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  tournament_api: 0
   user: 0
   views_ui: 0
   webcomposer_affilates: 0
