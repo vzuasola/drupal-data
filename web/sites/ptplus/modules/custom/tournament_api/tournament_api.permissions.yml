@@ -1,0 +1,22 @@
+add  tournament api entities:
+  title: 'Create new Tournament Api entities'
+
+administer  tournament api entities:
+  title: 'Administer Tournament Api entities'
+  description: 'Allow to access the administration form to configure Tournament Api entities.'
+  restrict access: true
+
+delete  tournament api entities:
+  title: 'Delete Tournament Api entities'
+
+edit  tournament api entities:
+  title: 'Edit Tournament Api entities'
+
+access  tournament api overview:
+  title: 'Access the Tournament Api overview page'
+
+view published  tournament api entities:
+  title: 'View published Tournament Api entities'
+
+view unpublished  tournament api entities:
+  title: 'View unpublished Tournament Api entities'
