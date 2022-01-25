@@ -1,0 +1,18 @@
+tournament_api.list:
+  title: 'Tournament Api Configuration'
+  description: 'List Tournament Api entities'
+  parent: system.admin_config
+  route_name: tournament_api.admin_settings
+
+#Tournament Api menu items definition
+entity.tournament_api.collection:
+  title: 'Tournament Api list'
+  route_name: entity.tournament_api.collection
+  description: 'ListTournament Api entities'
+  parent: tournament_api.list
+  
+tournament_api.admin.structure.settings:
+  title: Tournament Api settings
+  description: 'ConfigureTournament Api entities'
+  route_name: tournament_api.settings
+  parent: tournament_api.list

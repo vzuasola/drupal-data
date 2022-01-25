@@ -1,0 +1,7 @@
+tournament_api.admin_settings:
+  path: 'admin/config/webcomposer/tournament_api'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Tournament Api'
+  requirements:
+    _permission: 'administer site configuration'

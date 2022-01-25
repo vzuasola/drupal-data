@@ -18,6 +18,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_pt_tournament_page
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_label_color
@@ -432,6 +433,13 @@ content:
     region: content
   field_preview_display_only:
     weight: 22
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_pt_tournament_page:
+    weight: 23
     settings:
       display_label: true
     third_party_settings: {  }
