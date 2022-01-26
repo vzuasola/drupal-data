@@ -1,0 +1,17 @@
+uuid: 890a99d1-b3c2-4691-9bd0-a999f4473850
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - registration_theme
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: registration_theme_entity.registration_theme_entity
+target_entity_type_id: registration_theme_entity
+target_bundle: registration_theme_entity
+default_langcode: site_default
+language_alterable: true
