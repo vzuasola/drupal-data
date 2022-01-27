@@ -1,0 +1,23 @@
+uuid: a3ce853b-ce4f-4cb4-b74c-8f59b7ccdc1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_application
+  module:
+    - options
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_application
+field_name: field_application
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: Application
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: web
+default_value_callback: ''
+settings: {  }
+field_type: list_string

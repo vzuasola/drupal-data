@@ -9,7 +9,7 @@ profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
 welcome_text: '{username}'
-profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+profile_link: '/my-account[query:({tracking})]'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
@@ -24,8 +24,8 @@ news_announcement_content:
   format: basic_html
 balance_label_mapping: "5|Common Wallet\r\n6|Sports\r\n7|AG Fish Hunter"
 balance_error_text_product: N/A
-header_settings_tab__active_tab: edit-logo-group
-logo_title: 'Mobile Games at zedbet'
+header_settings_tab__active_tab: edit-welcome-text-group
+logo_title: 'Mobile Games at Zedbet'
 logo_url: ''
 mobile_logo_url: ''
 registration_link: '{domain:registration_link}[query:(regvia=191&{tracking})]'
@@ -51,5 +51,13 @@ excluded_balance_mapping: '7'
 currency_label_mapping: ''
 value: null
 format: null
-promotion_page_title: 'Nextbet mobile betting promotions offer huge rewards!'
+promotion_page_title: 'Zedbet mobile betting promotions offer huge rewards!'
 links_title: Quicklinks
+logo_title_slots: 'Mobile Slots'
+logo_title_live_dealer: 'Mobile Live Dealer'
+logo_title_arcade: 'Mobile Arcade'
+mobile_remember: 'Remember Username'
+mobile_login_reg: 'Join Now'
+mobile_slot_title: 'Play mobile casino slots at Zedbet Mobile!'
+mobile_live_dealer_title: 'Zedbet offers a world class Live Dealer Casino experience!'
+mobile_arcade_title: 'Zedbet offers a variety of mobile arcade games!'

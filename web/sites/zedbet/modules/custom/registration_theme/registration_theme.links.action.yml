@@ -1,0 +1,5 @@
+entity.registration_theme_entity.add_form:
+  route_name: entity.registration_theme_entity.add_form
+  title: 'Add Registration theme entity'
+  appears_on:
+    - entity.registration_theme_entity.collection

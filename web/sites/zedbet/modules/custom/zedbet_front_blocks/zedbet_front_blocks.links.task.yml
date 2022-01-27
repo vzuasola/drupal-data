@@ -1,0 +1,22 @@
+# Zedbet front block routing definition
+zedbet_front_block.settings_tab:
+  route_name: zedbet_front_block.settings
+  title: 'Settings'
+  base_route: zedbet_front_block.settings
+
+entity.zedbet_front_block.canonical:
+  route_name: entity.zedbet_front_block.canonical
+  base_route: entity.zedbet_front_block.canonical
+  title: 'View'
+
+entity.zedbet_front_block.edit_form:
+  route_name: entity.zedbet_front_block.edit_form
+  base_route: entity.zedbet_front_block.canonical
+  title: 'Edit'
+
+entity.zedbet_front_block.delete_form:
+  route_name:  entity.zedbet_front_block.delete_form
+  base_route:  entity.zedbet_front_block.canonical
+  title: Delete
+  weight: 10
+

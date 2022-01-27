@@ -1,0 +1,5 @@
+entity.tournament_api.add_form:  
+  route_name: entity.tournament_api.add_form  
+  title: 'Add Tournament Api'
+  appears_on:
+    - entity.tournament_api.collection
