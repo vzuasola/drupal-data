@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: mobile
+      label: Entrypage
+    -
       value: live-dealer
       label: 'Live Dealer'
   allowed_values_function: ''
