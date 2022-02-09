@@ -14,8 +14,10 @@ bundle: webcomposer_slider_v2_entity
 label: Product
 description: ''
 required: true
-translatable: true
-default_value: {  }
+translatable: false
+default_value:
+  -
+    value: mobile
 default_value_callback: ''
 settings: {  }
 field_type: list_string
