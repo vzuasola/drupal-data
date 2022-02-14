@@ -41,6 +41,22 @@ class MyAccountChangePasswordForm extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
+    $form['header_configuration'] = [
+      '#type' => 'details',
+      '#title' => 'Header Configuration',
+      '#open' => False,
+      '#group' => 'change_password',
+    ];
+
+    $form['header_configuration']['cp_page_title'] = [
+        '#type' => 'textfield',
+        '#title' => t('Page title'),
+        '#required' => TRUE,
+        '#description' => $this->t('Page title shown on the browser tab.'),
+        '#default_value' => $this->get('cp_page_title'),
+        '#translatable' => TRUE,
+    ];
+
     $form['field_icore_validation'] = [
       '#type' => 'details',
       '#title' => 'Integration Validation',
@@ -61,22 +77,18 @@ class MyAccountChangePasswordForm extends FormBase {
       '#group' => 'change_password',
     ];
 
-    $content = $this->get('change_password_success_message');
-    $form['field_success_message_group']['change_password_success_message'] = [
-      '#type' => 'text_format',
+    $form['field_success_message_group']['change_password_mobile_success_message'] = [
+      '#type' => 'textarea',
       '#title' => $this->t('Success Message'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
+      '#default_value' => $this->get('change_password_mobile_success_message'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
 
-    $content = $this->get('change_password_failed_message');
-    $form['field_success_message_group']['change_password_failed_message'] = [
-      '#type' => 'text_format',
+    $form['field_success_message_group']['change_password_mobile_failed_message'] = [
+      '#type' => 'textarea',
       '#title' => $this->t('Failed Message'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
+      '#default_value' => $this->get('change_password_mobile_failed_message'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];

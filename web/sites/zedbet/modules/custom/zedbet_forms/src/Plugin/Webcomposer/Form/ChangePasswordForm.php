@@ -112,7 +112,7 @@ class ChangePasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           '#title' => 'Password meter markup',
           '#type' => 'textarea',
           '#description' => 'HTML markup for password meter.',
-          '#default_value' => '',
+          '#default_value' => '<div class="password_meter_wrapper password-meter-hidden grid mb-0"></div>',
         ],
       ],
     ];
