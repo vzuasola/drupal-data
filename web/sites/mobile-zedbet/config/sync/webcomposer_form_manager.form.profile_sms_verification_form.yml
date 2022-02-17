@@ -1,0 +1,10 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  verification_code:
+    weight: '1'
+  resend_markup:
+    weight: '2'
+  submit:
+    weight: '3'
