@@ -39,6 +39,7 @@ module:
   language: 0
   libraries: 0
   link: 0
+  lobby_product_tiles: 0
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
@@ -89,6 +90,7 @@ module:
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
   webcomposer_webform: 0
+  webcomposer_cache: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
