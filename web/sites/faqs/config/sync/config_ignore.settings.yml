@@ -6,5 +6,14 @@ ignored_config_entities:
   - 'filter.*'
   - 'language.*'
   - 'devel.*'
+  - 'views.view.product_lobby_tiles_entity_api.*'
+  - 'field.field.lobby_product_tiles.*'
+  - 'field.storage.lobby_product_tiles.*'
+  - 'core.base_field_override.lobby_product_tiles.*'
+  - 'field.storage.taxonomy_term.*'
+  - 'field.field.taxonomy_term.domain.*'
+  - 'views.view.product_lobby_tiles_entity_api'
+  - 'core.entity_view_display.lobby_product_tiles.*'
+  - 'core.entity_form_display.lobby_product_tiles.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
