@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.basic_page_type_2.field_image_link
     - field.field.node.basic_page_type_2.field_images_open_link
     - field.field.node.basic_page_type_2.field_meta_tag
+    - field.field.node.basic_page_type_2.field_parent_breadcrumbs
     - field.field.node.basic_page_type_2.field_summary
     - image.style.thumbnail
     - node.type.basic_page_type_2
@@ -106,6 +107,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_parent_breadcrumbs:
+    weight: 126
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_summary:
     weight: 6

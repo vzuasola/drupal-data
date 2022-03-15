@@ -1,0 +1,19 @@
+uuid: ba60e818-bfdd-4ee4-bfe7-4d5770dca0b0
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent_breadcrumbs
+    - node.type.basic_page_type_2
+id: node.basic_page_type_2.field_parent_breadcrumbs
+field_name: field_parent_breadcrumbs
+entity_type: node
+bundle: basic_page_type_2
+label: 'Parent Breadcrumbs'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
