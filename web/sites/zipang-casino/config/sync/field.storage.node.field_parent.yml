@@ -1,17 +1,15 @@
-uuid: 67da008d-29bb-4a5e-9a8f-b06f2fd1ca1e
+uuid: 3b962864-581c-47c9-9be6-7f7b971c7fba
 langcode: ja
 status: true
 dependencies:
   module:
     - node
-id: node.field_parent_breadcrumbs
-field_name: field_parent_breadcrumbs
+id: node.field_parent
+field_name: field_parent
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: node
 module: core
 locked: false
 cardinality: 1
