@@ -79,6 +79,7 @@ module:
   webcomposer_floating_banners: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
+  webcomposer_faqs_configuration: 0
   webcomposer_marketing_script: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
