@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.basic_page_type_3.body
     - field.field.node.basic_page_type_3.field_breadcrumbs
     - field.field.node.basic_page_type_3.field_meta_tag
+    - field.field.node.basic_page_type_3.field_parent
     - node.type.basic_page_type_3
   module:
     - metatag
@@ -44,6 +45,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_parent:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: { }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
