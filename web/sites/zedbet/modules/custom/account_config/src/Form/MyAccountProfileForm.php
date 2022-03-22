@@ -335,6 +335,46 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('verification_code_response') ?? '',
         ];
 
+        $form['sms_configuration']['verification_code_required_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Field Error Message'),
+            '#size' => 25,
+            '#required' => true,
+            '#description' => $this->t('Required Field Error Message'),
+            '#default_value' => $this->get('verification_code_required_message'),
+            '#translatable' => true,
+        ];
+
+        $form['sms_configuration']['verification_code_numeric_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Numeric Error Message'),
+            '#size' => 25,
+            '#required' => true,
+            '#description' => $this->t('Numeric Field Error Message'),
+            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#translatable' => true,
+        ];
+
+        $form['sms_configuration']['verification_code_min_length_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Min Length Field Error Message'),
+            '#size' => 25,
+            '#required' => true,
+            '#description' => $this->t('Min Length Field Error Message'),
+            '#default_value' => $this->get('verification_code_min_length_message'),
+            '#translatable' => true,
+        ];
+
+        $form['sms_configuration']['verification_code_max_length_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Max Length Field Error Message'),
+            '#size' => 25,
+            '#required' => true,
+            '#description' => $this->t('Max Length Field Error Message'),
+            '#default_value' => $this->get('verification_code_max_length_message'),
+            '#translatable' => true,
+        ];
+
         return $form;
     }
 }

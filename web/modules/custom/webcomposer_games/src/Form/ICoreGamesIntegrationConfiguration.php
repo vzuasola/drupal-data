@@ -92,6 +92,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
             $this->getRubyPlayFields($form[$key], $key, $value);
             break;
 
+        case 'pgsoft':
+          $this->getPGSoftFields($form[$key], $key, $value);
+          break;
+
         case 'lottoland':
             $this->getLottolandFields($form[$key], $key, $value);
             break;
@@ -243,6 +247,24 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
    * @param $value
    */
   private function getRubyPlayFields(&$form, $key, $value) {
+    $form[$key . '_geoip_domain_override'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('GeoIP domain'),
+      '#description' => $this->t("Override the game URL domain base from Geo IP. <br />Use pipe (|) pattern (GeoIP|DomainOverride|server_urlParamOverride)"),
+      '#default_value' => $this->get($key . '_geoip_domain_override'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+  }
+
+  /**
+   * Adds additional form fields for PGSoft tabs
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getPGSoftFields(&$form, $key, $value) {
     $form[$key . '_geoip_domain_override'] = [
       '#type' => 'textarea',
       '#title' => $this->t('GeoIP domain'),

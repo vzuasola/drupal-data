@@ -1,4 +1,5 @@
 module:
+  account_config: 0
   action: 0
   automated_cron: 0
   block: 0
@@ -44,8 +45,8 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
-  mobile_config: 0
   mobile_als: 0
+  mobile_config: 0
   mobile_live_dealer: 0
   mobile_product_menu: 0
   node: 0
@@ -75,6 +76,7 @@ module:
   webcomposer_als_whitelisting: 0
   webcomposer_announcements: 0
   webcomposer_audit: 0
+  webcomposer_audit_export: 0
   webcomposer_avaya: 0
   webcomposer_cache: 0
   webcomposer_config: 0
