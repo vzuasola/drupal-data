@@ -1,0 +1,9 @@
+uuid: 5665b02d-c8e1-46bc-a009-0cbc3eb8accd
+langcode: en
+status: true
+dependencies: {  }
+id: ja
+label: Japanese
+direction: ltr
+weight: 4
+locked: false
