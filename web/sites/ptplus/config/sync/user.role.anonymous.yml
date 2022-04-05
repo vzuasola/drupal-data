@@ -16,6 +16,7 @@ permissions:
   - 'access language es'
   - 'access language hi'
   - 'access language id'
+  - 'access language in'
   - 'access language ja'
   - 'access language km'
   - 'access language ko'
