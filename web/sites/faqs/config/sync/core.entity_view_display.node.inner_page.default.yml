@@ -1,46 +1,44 @@
-uuid: bdce0305-666c-4e77-ba33-ed5ed03d3524
+uuid: 07add4ab-6848-4faa-9a5e-d56b539367a8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_log_in_state
-    - field.field.node.page.field_post_body
-    - node.type.page
+    - field.field.node.inner_page.body
+    - field.field.node.inner_page.field_log_in_state
+    - field.field.node.inner_page.field_post_body
+    - node.type.inner_page
   module:
     - options
     - text
     - user
-_core:
-  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
-id: node.page.default
+id: node.inner_page.default
 targetEntityType: node
-bundle: page
+bundle: inner_page
 mode: default
 content:
   body:
-    label: hidden
-    type: text_default
-    weight: 100
-    region: content
+    weight: 101
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
   field_log_in_state:
-    weight: 102
+    weight: 103
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_post_body:
-    weight: 107
+    weight: 102
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
-    weight: 101
+    weight: 100
     region: content
 hidden:
   langcode: true
