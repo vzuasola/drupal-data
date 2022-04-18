@@ -1,0 +1,19 @@
+uuid: 00a2aea7-f3ae-4893-bd0f-3f163d728fee
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zedbet_front_blocks
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: dZqPln9e6lj9_xwCokP2j9oGJkh-nRZ56O1cFt5BZ54
+id: zedbet_front_block.zedbet_front_block
+target_entity_type_id: zedbet_front_block
+target_bundle: zedbet_front_block
+default_langcode: site_default
+language_alterable: true
