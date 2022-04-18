@@ -1,0 +1,20 @@
+uuid: ceed3d2b-4e11-44b3-8c1d-89bb222d265b
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_right_side_block
+id: right_side_block_entity.right_side_block_entity.user_id
+field_name: user_id
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: 'Authored by'
+description: 'The user ID of author of the Inner Page Right Side Block entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

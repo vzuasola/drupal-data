@@ -1,0 +1,26 @@
+uuid: 20006447-f40d-4d1e-86ae-bb3b04bf558c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zedbet_front_block.field_image_with_top_border
+  module:
+    - zedbet_front_blocks
+_core:
+  default_config_hash: nbT0FHhk8R8c7SgMUFJ-Pk_Qy4HZDP0aPD_1E1iFmIE
+id: zedbet_front_block.zedbet_front_block.field_image_with_top_border
+field_name: field_image_with_top_border
+entity_type: zedbet_front_block
+bundle: zedbet_front_block
+label: 'Top Border'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

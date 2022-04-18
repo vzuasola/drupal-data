@@ -1,13 +1,15 @@
-uuid: 2e9da154-e6a4-43a3-9a8a-bcc0414b8328
+uuid: e62c6452-2703-4a28-ac79-68b23ae5a284
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - options
-id: node.field_post_banner_link_target
-field_name: field_post_banner_link_target
-entity_type: node
+    - zedbet_front_blocks
+_core:
+  default_config_hash: NOS1tmgpR-qmrXnbpaUiwVfsjhkgo1_mlN-BE3aVV_A
+id: zedbet_front_block.field_image_target
+field_name: field_image_target
+entity_type: zedbet_front_block
 type: list_string
 settings:
   allowed_values:
