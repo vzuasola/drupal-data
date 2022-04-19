@@ -1,0 +1,32 @@
+uuid: 92886ca8-1503-49a1-baca-0495da945ff9
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zedbet_front_blocks
+_core:
+  default_config_hash: VuMFh1k5UKVK4YIzo8BwwNzhN3ly5SkgbNtyA422vNg
+id: zedbet_front_block.field_image
+field_name: field_image
+entity_type: zedbet_front_block
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

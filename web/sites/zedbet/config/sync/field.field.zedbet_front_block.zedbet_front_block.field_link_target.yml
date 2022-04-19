@@ -1,0 +1,25 @@
+uuid: d9361055-a787-4375-bf71-7118fd323758
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zedbet_front_block.field_link_target
+  module:
+    - options
+    - zedbet_front_blocks
+_core:
+  default_config_hash: V26c_yaPo1ecz9knIobaL12WrCQYrnVZd5JWig7lVFM
+id: zedbet_front_block.zedbet_front_block.field_link_target
+field_name: field_link_target
+entity_type: zedbet_front_block
+bundle: zedbet_front_block
+label: 'Blurb Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

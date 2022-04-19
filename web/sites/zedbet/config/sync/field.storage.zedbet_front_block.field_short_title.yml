@@ -1,0 +1,22 @@
+uuid: d64a1ff0-954a-4356-a1bf-526c9cb9b7de
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - zedbet_front_blocks
+_core:
+  default_config_hash: FxgJI2GpePJABch7YDwamx1SqwZy0SnlY5uOHVZVZIw
+id: zedbet_front_block.field_short_title
+field_name: field_short_title
+entity_type: zedbet_front_block
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 1174f8fb-8db6-4ec6-84c5-5be6a88eb26a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zedbet_front_block.field_featured_tag
+  module:
+    - text
+    - zedbet_front_blocks
+_core:
+  default_config_hash: fcoSF-J2pv9RPLw0UCeUX0twTmw6iTwiXRVKuRy-Z3I
+id: zedbet_front_block.zedbet_front_block.field_featured_tag
+field_name: field_featured_tag
+entity_type: zedbet_front_block
+bundle: zedbet_front_block
+label: 'Featured Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
