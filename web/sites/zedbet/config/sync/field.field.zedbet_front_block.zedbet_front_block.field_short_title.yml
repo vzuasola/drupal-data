@@ -1,0 +1,23 @@
+uuid: 7522001a-e606-49b8-b3ef-e1ba8df53349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zedbet_front_block.field_short_title
+  module:
+    - text
+    - zedbet_front_blocks
+_core:
+  default_config_hash: Fpwz-sU5qvGfvuT56YdH669XlcPZSCjEdtvSBiAsC00
+id: zedbet_front_block.zedbet_front_block.field_short_title
+field_name: field_short_title
+entity_type: zedbet_front_block
+bundle: zedbet_front_block
+label: 'Short Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

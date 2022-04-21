@@ -1,26 +1,28 @@
-uuid: b298873c-5e67-4cb8-9490-ef3089c3c2ea
+uuid: b603c740-e513-40c4-968b-5a12eb7c32a4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_banner_image
-    - node.type.page
+    - field.storage.zedbet_front_block.field_image
   module:
     - content_translation
     - image
+    - zedbet_front_blocks
 third_party_settings:
   content_translation:
     translation_sync:
       file: file
       alt: '0'
       title: '0'
-id: node.page.field_post_banner_image
-field_name: field_post_banner_image
-entity_type: node
-bundle: page
-label: 'Banner Image'
+_core:
+  default_config_hash: fHRuzcotAY3PAo4dRyJ1g5gTkHUXfmIeI7o5M6X9Ods
+id: zedbet_front_block.zedbet_front_block.field_image
+field_name: field_image
+entity_type: zedbet_front_block
+bundle: zedbet_front_block
+label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -31,7 +33,7 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: false
-  alt_field_required: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:

@@ -67,7 +67,7 @@ class ExceptionForm extends FormBase {
       '#default_value' => $this->get('page_not_found_image'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
-        'file_validate_extensions' => ['gif png jpg jpeg'],
+        'file_validate_extensions' => ['gif png jpg jpeg svg'],
       ],
     ];
 
