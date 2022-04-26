@@ -39,6 +39,7 @@ module:
   language: 0
   libraries: 0
   link: 0
+  lobby_product_tiles: 0
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
@@ -68,6 +69,7 @@ module:
   webcomposer_announcements: 0
   webcomposer_audit: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
@@ -75,6 +77,7 @@ module:
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
   webcomposer_editor: 0
+  webcomposer_faqs_configuration: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
@@ -83,6 +86,7 @@ module:
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
+  webcomposer_site_page_not_found: 0
   webcomposer_sitemap: 0
   webcomposer_social_media: 0
   webcomposer_sponsor: 0

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_image_link
     - field.field.node.page.field_images_open_link
     - field.field.node.page.field_meta_tag
+    - field.field.node.page.field_parent
     - field.field.node.page.field_summary
     - field.field.node.page.field_thumbnail_image
     - image.style.thumbnail
@@ -109,6 +110,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_parent:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: { }
+    type: entity_reference_autocomplete
     region: content
   field_summary:
     weight: 7

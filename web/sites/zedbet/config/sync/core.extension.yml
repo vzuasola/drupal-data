@@ -1,6 +1,8 @@
 module:
+  account_config: 0
   action: 0
   automated_cron: 0
+  basic_auth: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -54,6 +56,8 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  registration_config: 0
+  registration_theme: 0
   rest: 0
   rest_menu_items: 0
   rest_views: 0
@@ -83,12 +87,14 @@ module:
   webcomposer_drawer: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0
+  webcomposer_right_side_block: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
   webcomposer_slider_v2: 0
@@ -101,7 +107,10 @@ module:
   webform_rest: 0
   webform_ui: 0
   zedbet_config: 0
+  zedbet_forms: 0
+  zedbet_front_blocks: 0
   zedbet_header_config: 0
+  zedbet_unsupported_currency: 0
   zedbet_urls: 0
   menu_link_content: 1
   pathauto: 1

@@ -1,0 +1,20 @@
+uuid: 87814465-c353-4267-bb6d-7d231c33ad29
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.field_form_title_color
+field_name: field_form_title_color
+entity_type: registration_theme_entity
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

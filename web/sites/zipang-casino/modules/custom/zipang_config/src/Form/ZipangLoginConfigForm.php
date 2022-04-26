@@ -72,6 +72,15 @@ class ZipangLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $default_login_button_mobile = $this->get('login_button_label_mobile');
+    $form['login_form']['login_button_label_mobile'] = [
+      '#type' => 'textfield',
+      '#title' => t('Login Button Label Mobile'),
+      '#default_value' => $default_login_button_mobile,
+      '#description' => $this->t('Login Button label for mobile that triggers login lightbox.'),
+      '#translatable' => TRUE,
+    ];
+
     $default_login_title = $this->get('login_lightbox_title');
     $form['login_form']['login_lightbox_title'] = [
       '#type' => 'textfield',

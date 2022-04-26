@@ -1,0 +1,5 @@
+webcomposer_faqs_configuration.list:
+  title: 'Webcomposer Faqs Configuration'
+  description: 'Provides a form for defining custom sample configuration'
+  parent: system.admin_config
+  route_name: webcomposer_faqs_configuration.admin_settings

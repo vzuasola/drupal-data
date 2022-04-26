@@ -1,0 +1,99 @@
+uuid: 69370c9e-1968-484c-ac33-bcabf981d3f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_class
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_description
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_id
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_post_log
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_pre_log
+  module:
+    - link
+    - lobby_product_tiles
+_core:
+  default_config_hash: AKRISdjp_u__jJnWfIf_aegnykjPpmxT6wHdRcClAOI
+id: lobby_product_tiles.lobby_product_tiles.default
+targetEntityType: lobby_product_tiles
+bundle: lobby_product_tiles
+mode: default
+content:
+  field_product_lobby_class:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_lobby_description:
+    weight: 7
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_product_lobby_enable:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_product_lobby_id:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_lobby_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_lobby_url_post_log:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_product_lobby_url_pre_log:
+    weight: 3
+    settings:
+      placeholder_url: /faqs/tile-name
+      placeholder_title: /faqs/general
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 8
+    region: content
+    settings:
+      include_locked: false
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

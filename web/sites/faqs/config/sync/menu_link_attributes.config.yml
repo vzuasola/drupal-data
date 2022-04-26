@@ -2,6 +2,9 @@ attributes:
   class:
     label: ''
     description: ''
+  svg:
+    label: ''
+    description: ''
   target:
     label: ''
     description: ''

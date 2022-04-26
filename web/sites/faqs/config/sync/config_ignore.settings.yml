@@ -1,10 +1,14 @@
 ignored_config_entities:
-  - 'webform.webform.*'
-  - 'webcomposer_config.*'
-  - 'system.menu.*'
-  - 'block.*'
-  - 'filter.*'
-  - 'language.*'
-  - 'devel.*'
+  0: 'webform.webform.*'
+  2: 'webcomposer_config.*'
+  4: 'system.menu.*'
+  6: 'block.*'
+  8: 'filter.*'
+  10: 'language.*'
+  12: 'devel.*'
+  14: 'views.view.product_lobby_tiles_entity_api.*'
+  16: 'field.storage.taxonomy_term.*'
+  18: 'field.field.taxonomy_term.domain.*'
+  20: webcomposer_faqs_configuration.lobby
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

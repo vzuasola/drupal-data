@@ -1,0 +1,24 @@
+uuid: 16f1ca37-56bc-49d9-91f0-00eef01916c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_pt_tournament_page
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_pt_tournament_page
+field_name: field_pt_tournament_page
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Redirect to PT+ Tournament page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean
