@@ -1,8 +1,10 @@
-uuid: 26ee714a-7f86-4c10-b4ab-6b74151b1c76
+uuid: 9a8a9d42-48c3-4ef4-89ca-762f1979b789
 langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_category
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_client_type
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_enable_free_play
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_enable_game
@@ -15,130 +17,235 @@ dependencies:
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_tag
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_thumbnail
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_title
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_type
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_provider_product
+    - image.style.thumbnail
   module:
+    - conditional_fields
+    - entity_reference_views_select
+    - field_group
     - image
     - lucky_baby_mobile_games
-    - options
-    - user
+third_party_settings:
+  field_group:
+    group_for_casino_page:
+      children:
+        - field_game_category
+        - field_game_filter
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'fields for casino page'
+        required_fields: true
+      label: 'Casino (for casino page)'
+    group_for_games_page:
+      children:
+        - field_game_filter_games
+      parent_name: ''
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'fields for games page'
+        required_fields: true
+      label: 'Games (for games page)'
+    group_arcade_for_arcade_page_:
+      children:
+        - field_arcade_game_category
+        - field_arcade_game_filter
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Arcade (for arcade page)'
 id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.default
 targetEntityType: lucky_baby_mobile_games_entity
 bundle: lucky_baby_mobile_games_entity
 mode: default
 content:
-  field_client_type:
-    weight: 9
-    label: above
+  field_arcade_game_category:
+    weight: 14
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: erviews_options_buttons
+    region: content
+  field_arcade_game_filter:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_client_type:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_enable_free_play:
-    weight: 2
-    label: above
+    weight: 8
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      display_label: true
     third_party_settings: {  }
-    type: boolean
+    type: boolean_checkbox
     region: content
   field_enable_game:
-    weight: 3
-    label: above
+    weight: 0
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      display_label: true
     third_party_settings: {  }
-    type: boolean
+    type: boolean_checkbox
     region: content
   field_game_category:
-    weight: 14
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    weight: 13
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        0c638649-f23e-4c63-af66-6167c026f2f0:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '111'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: lucky_baby_mobile_games_entity
+          bundle: lucky_baby_mobile_games_entity
+    type: erviews_options_buttons
     region: content
   field_game_code:
-    weight: 7
-    label: above
+    weight: 4
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
   field_game_code_icore:
-    weight: 10
-    label: above
+    weight: 5
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
   field_game_filter:
-    weight: 17
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    weight: 14
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        78348e51-095f-4b13-8121-2bbbcf187649:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '111'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: lucky_baby_mobile_games_entity
+          bundle: lucky_baby_mobile_games_entity
+    type: options_select
     region: content
   field_game_filter_games:
-    weight: 16
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    weight: 15
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        67669107-aeda-45d5-83bf-cfafbc3f79be:
+          dependee: field_game_provider
+          settings:
+            state: '!visible'
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '111'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: lucky_baby_mobile_games_entity
+          bundle: lucky_baby_mobile_games_entity
+    type: options_select
     region: content
   field_game_provider:
-    weight: 11
-    label: above
-    settings:
-      link: true
+    weight: 10
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: options_select
     region: content
   field_game_tag:
-    weight: 5
-    label: above
-    settings:
-      link: true
+    weight: 7
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: options_select
     region: content
   field_game_thumbnail:
-    weight: 6
-    label: above
+    weight: 3
     settings:
-      image_style: ''
-      image_link: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image
+    type: image_image
     region: content
   field_game_title:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  name:
-    label: above
-    type: string
-    weight: 0
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_type:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_provider_product:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  langcode: true
+  name: true
+  user_id: true
