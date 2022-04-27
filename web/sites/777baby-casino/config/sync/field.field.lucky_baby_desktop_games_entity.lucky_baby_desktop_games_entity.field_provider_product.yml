@@ -1,31 +1,30 @@
-uuid: 49c604e3-4987-4236-a8db-b49c5d171c37
+uuid: c0ee324d-a820-4c73-bd68-73864fa9f654
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.provider_product.field_key
+    - field.storage.lucky_baby_desktop_games_entity.field_provider_product
     - taxonomy.vocabulary.provider_product
   module:
-    - text
-id: taxonomy_term.provider_product.default
-targetEntityType: taxonomy_term
-bundle: provider_product
-mode: default
-content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_key:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-hidden:
-  langcode: true
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_provider_product
+field_name: field_provider_product
+entity_type: lucky_baby_desktop_games_entity
+bundle: lucky_baby_desktop_games_entity
+label: 'Provider Product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provider_product: provider_product
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

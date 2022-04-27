@@ -1,0 +1,58 @@
+uuid: 08ff98ea-4bcc-47b9-9273-e0405e5d713d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.all_games_category.field_icon
+    - image.style.thumbnail
+    - taxonomy.vocabulary.all_games_category
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.all_games_category.default
+targetEntityType: taxonomy_term
+bundle: all_games_category
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden: {  }

@@ -26,3 +26,7 @@ press_year: 0
 press_year_message: 'Term @term already exists in vocabulary @vocabulary.'
 provider_product: 1
 provider_product_message: 'Term @term already exists in vocabulary @vocabulary.'
+arcade_game_category: 0
+arcade_game_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+all_games_category: 0
+all_games_category_message: 'Term @term already exists in vocabulary @vocabulary.'
