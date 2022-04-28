@@ -374,6 +374,16 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('verification_code_max_length_message'),
             '#translatable' => true,
         ];
+        $form['sms_configuration']['verification_code_max_length_message_info'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Max Length Field Error Message Info'),
+            '#size' => 25,
+            '#required' => true,
+            '#description' => $this->t('Max Length Field Error Message Info'),
+            '#default_value' => $this->get('verification_code_max_length_message_info'),
+            '#translatable' => true,
+        ];
+
 
         return $form;
     }
