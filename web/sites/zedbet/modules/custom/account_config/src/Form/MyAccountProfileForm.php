@@ -276,7 +276,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['verify_text'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Verify Text'),
-            '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Text for Verify Link'),
             '#default_value' => $this->get('verify_text'),
@@ -302,7 +301,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['modal_verification_code_placeholder'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Modal Verification Code Placeholder'),
-            '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Placeholder text for verification field textfield'),
             '#default_value' => $this->get('modal_verification_code_placeholder') ?? '',
@@ -311,7 +309,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['modal_verification_resend_code_text'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Modal Resend Verification Code Text'),
-            '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Text for resend verification code'),
             '#default_value' => $this->get('modal_verification_resend_code_text') ?? '',
@@ -320,7 +317,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['modal_verification_submit_text'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Modal Submit Verification Code Text'),
-            '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Text for submit verification code'),
             '#default_value' => $this->get('modal_verification_submit_text') ?? '',
@@ -329,7 +325,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['verification_code_response'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Response from ICore'),
-            '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Response from ICore'),
             '#default_value' => $this->get('verification_code_response') ?? '',
@@ -338,7 +333,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['verification_code_required_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Required Field Error Message'),
-            '#size' => 25,
             '#required' => true,
             '#description' => $this->t('Required Field Error Message'),
             '#default_value' => $this->get('verification_code_required_message'),
@@ -348,7 +342,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['verification_code_numeric_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Numeric Error Message'),
-            '#size' => 25,
             '#required' => true,
             '#description' => $this->t('Numeric Field Error Message'),
             '#default_value' => $this->get('verification_code_numeric_message'),
@@ -358,7 +351,6 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['verification_code_min_length_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Min Length Field Error Message'),
-            '#size' => 25,
             '#required' => true,
             '#description' => $this->t('Min Length Field Error Message'),
             '#default_value' => $this->get('verification_code_min_length_message'),
@@ -368,22 +360,11 @@ class MyAccountProfileForm extends FormBase {
         $form['sms_configuration']['verification_code_max_length_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Max Length Field Error Message'),
-            '#size' => 25,
             '#required' => true,
             '#description' => $this->t('Max Length Field Error Message'),
             '#default_value' => $this->get('verification_code_max_length_message'),
             '#translatable' => true,
         ];
-        $form['sms_configuration']['verification_code_max_length_message_info'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Max Length Field Error Message Info'),
-            '#size' => 25,
-            '#required' => true,
-            '#description' => $this->t('Max Length Field Error Message Info'),
-            '#default_value' => $this->get('verification_code_max_length_message_info'),
-            '#translatable' => true,
-        ];
-
 
         return $form;
     }
