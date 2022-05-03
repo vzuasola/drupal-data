@@ -1,19 +1,19 @@
-lucky_baby_all_games_config.admin_settings:
+lucky_baby_games_config.admin_settings:
   title: 'Lucky Baby All Games Configurations'
   description: Lucky Baby All Games Configurations
   parent: system.admin_config
-  route_name: lucky_baby_all_games_config.admin_settings
+  route_name: lucky_baby_games_config.admin_settings
 
 # Lucky Baby all games entity menu items definition
 # entity.lucky_baby_all_games_entity.collection:
 #   title: 'Lucky Baby all games entity list'
 #   route_name: entity.lucky_baby_all_games_entity.collection
 #   description: 'List Lucky Baby all games entity entities'
-#   parent: lucky_baby_all_games_config.admin_settings
+#   parent: lucky_baby_ames_config.admin_settings
 #   weight: 100
 
 # lucky_baby_all_games_entity.admin.structure.settings:
 #   title: Lucky Baby all games entity settings
 #   description: 'Configure Lucky Baby all games entity entities'
 #   route_name: lucky_baby_all_games_entity.settings
-#   parent: lucky_baby_all_games_config.admin_settings
+#   parent: lucky_baby_games_config.admin_settings

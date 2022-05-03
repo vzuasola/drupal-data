@@ -1,4 +1,4 @@
-lucky_baby_all_games_config.admin_settings:
+lucky_baby_games_config.admin_settings:
   path: 'admin/config/all-games'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
