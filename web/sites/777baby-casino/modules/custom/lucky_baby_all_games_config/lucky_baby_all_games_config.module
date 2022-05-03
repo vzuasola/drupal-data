@@ -12,7 +12,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
  */
 function lucky_baby_all_games_config_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for thelucky_baby_all_games_config module.
+    // Main module help for the lucky_baby_all_games_config module.
     case 'help.page.lucky_baby_all_games_config':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
