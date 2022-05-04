@@ -18,7 +18,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   menu = {
  *     "title" = "Lucky Baby All Games Configurations",
  *     "description" = "Provides configuration for all games page.",
- *     "parent" = "lucky_baby_games_config.admin_settings",
+ *     "parent" = "lucky_baby_all_games_config.admin_settings",
  *     "weight" = 30
  *   },
  * )
