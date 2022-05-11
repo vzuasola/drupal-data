@@ -1,0 +1,30 @@
+uuid: 5151139a-5122-403a-8184-70cd0494f308
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lucky_baby_mobile_games_entity.field_arcade_game_filter
+    - taxonomy.vocabulary.arcade_game_filter
+  module:
+    - lucky_baby_mobile_games
+id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_filter
+field_name: field_arcade_game_filter
+entity_type: lucky_baby_mobile_games_entity
+bundle: lucky_baby_mobile_games_entity
+label: 'Arcade Game Filter'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      arcade_game_filter: arcade_game_filter
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

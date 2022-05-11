@@ -1,0 +1,9 @@
+uuid: 3ec45a28-ef82-431e-9942-3bb48946687f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Arcade Game Category'
+vid: arcade_game_category
+description: 'Arcade Game Category'
+hierarchy: 0
+weight: 0
