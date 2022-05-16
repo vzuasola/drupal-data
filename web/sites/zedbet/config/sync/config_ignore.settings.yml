@@ -6,8 +6,6 @@ ignored_config_entities:
   8: 'filter.*'
   10: 'language.*'
   12: 'devel.*'
-  14: 'field.storage.*'
-  16: 'field.field.*'
   18: 'views.view.*'
   20: 'core.base_field_override.zedbet_front_block.*'
   22: 'core.entity_form_display.zedbet_front_block.*'
