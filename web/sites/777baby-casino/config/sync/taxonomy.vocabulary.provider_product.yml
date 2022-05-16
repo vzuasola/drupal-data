@@ -1,0 +1,9 @@
+uuid: 271fa416-4aa3-4687-aa55-26c443c8900a
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Provider Product'
+vid: provider_product
+description: ''
+hierarchy: 0
+weight: 0
