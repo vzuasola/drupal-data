@@ -1,0 +1,7 @@
+uuid: 868fb74d-36ed-440e-a429-4b3f2c32fe7d
+langcode: en
+status: true
+dependencies: {  }
+id: promo_banner_game_launch
+label: 'Promo Banner Game Launch'
+behavior_plugins: {  }

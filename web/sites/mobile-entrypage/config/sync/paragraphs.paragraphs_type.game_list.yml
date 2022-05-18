@@ -1,0 +1,7 @@
+uuid: 27099ea1-0da8-4b0d-8932-e3b9c95bc018
+langcode: en
+status: true
+dependencies: {  }
+id: game_list
+label: 'Game List'
+behavior_plugins: {  }
