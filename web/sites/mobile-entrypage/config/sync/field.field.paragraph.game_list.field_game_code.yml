@@ -1,0 +1,19 @@
+uuid: 414ea83b-bd15-475e-a47d-d66a8952b0fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_code
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_game_code
+field_name: field_game_code
+entity_type: paragraph
+bundle: game_list
+label: 'Game Code'
+description: 'Please use the same game code configured on Product CMS.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

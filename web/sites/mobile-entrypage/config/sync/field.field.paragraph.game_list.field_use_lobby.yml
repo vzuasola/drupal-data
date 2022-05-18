@@ -1,0 +1,23 @@
+uuid: e3ae1aa4-bcc1-4b16-9fe2-f7588dc33aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_lobby
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_use_lobby
+field_name: field_use_lobby
+entity_type: paragraph
+bundle: game_list
+label: 'Use Lobby'
+description: 'Used on Live Dealer game launching to specify that user will be redirected to game lobby'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
