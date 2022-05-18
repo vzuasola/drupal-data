@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.promotion.body
+    - field.field.node.promotion.field_banner_game_launch
     - field.field.node.promotion.field_banner_image
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.promotion.field_field_enable_sticky_post2
     - field.field.node.promotion.field_field_enable_sticky_pre
     - field.field.node.promotion.field_field_enable_sticky_pre2
+    - field.field.node.promotion.field_games_list
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_is_archived
@@ -52,12 +54,26 @@ dependencies:
     - node.type.promotion
   module:
     - color_field
+    - entity_reference_revisions
+    - field_group
     - image
     - link
     - metatag
     - options
     - text
     - user
+third_party_settings:
+  field_group:
+    group_game_launch_on_promo_banne:
+      children: {  }
+      parent_name: ''
+      weight: 20
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+      label: 'Game Launch on Promo Banner'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -70,8 +86,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_banner_image:
+  field_banner_game_launch:
+    type: entity_reference_revisions_entity_view
     weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -99,7 +124,7 @@ content:
     type: list_default
     region: content
   field_casino_gold_only:
-    weight: 34
+    weight: 26
     label: above
     settings:
       format: default
@@ -109,7 +134,7 @@ content:
     type: boolean
     region: content
   field_enable_disable_ribbon_tag:
-    weight: 33
+    weight: 25
     label: above
     settings:
       format: default
@@ -119,7 +144,7 @@ content:
     type: boolean
     region: content
   field_field_enable_sticky_post:
-    weight: 59
+    weight: 36
     label: above
     settings:
       format: default
@@ -129,7 +154,7 @@ content:
     type: boolean
     region: content
   field_field_enable_sticky_post2:
-    weight: 61
+    weight: 38
     label: above
     settings:
       format: default
@@ -139,7 +164,7 @@ content:
     type: boolean
     region: content
   field_field_enable_sticky_pre:
-    weight: 58
+    weight: 35
     label: above
     settings:
       format: default
@@ -149,7 +174,7 @@ content:
     type: boolean
     region: content
   field_field_enable_sticky_pre2:
-    weight: 60
+    weight: 37
     label: above
     settings:
       format: default
@@ -158,8 +183,17 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_games_list:
+    type: entity_reference_revisions_entity_view
+    weight: 48
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_hide_countdown:
-    weight: 18
+    weight: 15
     label: above
     settings:
       format: default
@@ -169,7 +203,7 @@ content:
     type: boolean
     region: content
   field_hide_promotion:
-    weight: 9
+    weight: 8
     label: above
     settings:
       format: default
@@ -179,7 +213,7 @@ content:
     type: boolean
     region: content
   field_is_archived:
-    weight: 70
+    weight: 47
     label: above
     settings:
       format: default
@@ -199,14 +233,14 @@ content:
     type: boolean
     region: content
   field_meta_tags:
-    weight: 13
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_post_banner_image:
-    weight: 19
+    weight: 16
     label: above
     settings:
       image_style: ''
@@ -215,7 +249,7 @@ content:
     type: image
     region: content
   field_post_banner_link:
-    weight: 20
+    weight: 17
     label: above
     settings:
       trim_length: 80
@@ -227,28 +261,28 @@ content:
     type: link
     region: content
   field_post_banner_link_target:
-    weight: 21
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_post_body:
-    weight: 22
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_post_summary_blurb:
-    weight: 25
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_post_thumbnail_image:
-    weight: 26
+    weight: 22
     label: above
     settings:
       image_style: ''
@@ -257,7 +291,7 @@ content:
     type: image
     region: content
   field_product_category:
-    weight: 10
+    weight: 9
     label: above
     settings:
       link: true
@@ -272,7 +306,7 @@ content:
     type: list_default
     region: content
   field_ribbon_background_color:
-    weight: 12
+    weight: 11
     label: above
     settings:
       format: hex
@@ -281,7 +315,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_ribbon_label:
-    weight: 11
+    weight: 10
     label: above
     settings:
       link_to_entity: false
@@ -289,7 +323,7 @@ content:
     type: string
     region: content
   field_ribbon_text_color:
-    weight: 32
+    weight: 24
     label: above
     settings:
       format: hex
@@ -298,7 +332,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_background_post:
-    weight: 62
+    weight: 39
     label: above
     settings:
       format: hex
@@ -307,7 +341,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_background_post2:
-    weight: 63
+    weight: 40
     label: above
     settings:
       format: hex
@@ -316,7 +350,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_background_pre:
-    weight: 51
+    weight: 29
     label: above
     settings:
       format: hex
@@ -325,7 +359,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_background_pre2:
-    weight: 57
+    weight: 34
     label: above
     settings:
       format: hex
@@ -334,35 +368,35 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_link_target_post:
-    weight: 64
+    weight: 41
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sticky_link_target_post2:
-    weight: 65
+    weight: 42
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sticky_link_target_pre:
-    weight: 53
+    weight: 30
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sticky_link_target_pre2:
-    weight: 55
+    weight: 32
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sticky_text_color_post:
-    weight: 66
+    weight: 43
     label: above
     settings:
       format: hex
@@ -371,7 +405,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_text_color_post2:
-    weight: 67
+    weight: 44
     label: above
     settings:
       format: hex
@@ -380,7 +414,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_text_color_pre:
-    weight: 50
+    weight: 28
     label: above
     settings:
       format: hex
@@ -389,7 +423,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_text_color_pre2:
-    weight: 56
+    weight: 33
     label: above
     settings:
       format: hex
@@ -398,7 +432,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_sticky_url_post:
-    weight: 68
+    weight: 45
     label: above
     settings:
       trim_length: 80
@@ -410,7 +444,7 @@ content:
     type: link
     region: content
   field_sticky_url_post2:
-    weight: 69
+    weight: 46
     label: above
     settings:
       trim_length: 80
@@ -422,7 +456,7 @@ content:
     type: link
     region: content
   field_sticky_url_pre:
-    weight: 48
+    weight: 27
     label: above
     settings:
       trim_length: 80
@@ -434,7 +468,7 @@ content:
     type: link
     region: content
   field_sticky_url_pre2:
-    weight: 54
+    weight: 31
     label: above
     settings:
       trim_length: 80
@@ -446,14 +480,14 @@ content:
     type: link
     region: content
   field_summary_blurb:
-    weight: 24
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_summary_url:
-    weight: 17
+    weight: 14
     label: above
     settings:
       trim_length: 80
@@ -465,14 +499,14 @@ content:
     type: link
     region: content
   field_summary_url_target:
-    weight: 30
+    weight: 23
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_thumbnail_image:
-    weight: 14
+    weight: 13
     label: above
     settings:
       image_style: ''

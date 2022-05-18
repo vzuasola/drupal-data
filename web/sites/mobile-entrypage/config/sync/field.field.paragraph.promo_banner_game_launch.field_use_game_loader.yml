@@ -1,0 +1,23 @@
+uuid: ed84fb93-9c7b-4464-8d0f-2209d38c9ffb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_game_loader
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+id: paragraph.promo_banner_game_launch.field_use_game_loader
+field_name: field_use_game_loader
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: 'Use Game Loader'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

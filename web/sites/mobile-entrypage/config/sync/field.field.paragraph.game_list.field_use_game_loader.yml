@@ -1,0 +1,23 @@
+uuid: 939e4b19-6686-439c-a710-3ae6134423d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_game_loader
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_use_game_loader
+field_name: field_use_game_loader
+entity_type: paragraph
+bundle: game_list
+label: 'Use Game Loader'
+description: 'Tick to enable if you want to use the game loader page before redirecting to actual game'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -1,0 +1,30 @@
+uuid: a82b6779-f192-4988-92d5-0edf21e2faea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.games_providers.field_provider_code
+    - taxonomy.vocabulary.games_providers
+  module:
+    - text
+id: taxonomy_term.games_providers.default
+targetEntityType: taxonomy_term
+bundle: games_providers
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_provider_code:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true

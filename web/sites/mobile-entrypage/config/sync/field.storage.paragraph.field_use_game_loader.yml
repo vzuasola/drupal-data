@@ -1,0 +1,18 @@
+uuid: 7819b451-b724-4079-a3a9-efbffbe1f7d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_use_game_loader
+field_name: field_use_game_loader
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

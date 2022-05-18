@@ -1,0 +1,21 @@
+uuid: 5dc3b5f7-c64e-4857-82fe-acb84cf2c3dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_platform
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+  module:
+    - options
+id: paragraph.promo_banner_game_launch.field_game_platform
+field_name: field_game_platform
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: 'Game Platform'
+description: '- Used on Playtech Integration'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: c540ff27-c65f-48b0-864a-3e1048713fab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_product
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - options
+id: paragraph.game_list.field_product
+field_name: field_product
+entity_type: paragraph
+bundle: game_list
+label: Product
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

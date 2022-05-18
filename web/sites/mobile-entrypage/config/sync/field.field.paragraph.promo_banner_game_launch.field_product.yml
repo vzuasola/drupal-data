@@ -1,0 +1,21 @@
+uuid: c878f9aa-b195-4956-a8c8-818ae1f5f766
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_product
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+  module:
+    - options
+id: paragraph.promo_banner_game_launch.field_product
+field_name: field_product
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: Product
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

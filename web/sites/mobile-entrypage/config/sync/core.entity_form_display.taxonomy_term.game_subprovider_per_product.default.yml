@@ -1,0 +1,24 @@
+uuid: 016b557a-9740-4696-8233-138918d02393
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_subprovider_per_product
+id: taxonomy_term.game_subprovider_per_product.default
+targetEntityType: taxonomy_term
+bundle: game_subprovider_per_product
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  translation: true
