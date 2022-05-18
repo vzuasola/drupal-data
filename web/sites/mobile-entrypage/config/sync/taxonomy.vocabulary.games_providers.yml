@@ -1,0 +1,9 @@
+uuid: 6ae3265a-21be-4456-a876-7b754db1f90f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Providers'
+vid: games_providers
+description: ''
+hierarchy: 0
+weight: 0
