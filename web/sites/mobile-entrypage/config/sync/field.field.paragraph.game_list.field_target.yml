@@ -1,0 +1,21 @@
+uuid: 4abdf841-effd-496c-b5b3-4e60d129ca41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_target
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - options
+id: paragraph.game_list.field_target
+field_name: field_target
+entity_type: paragraph
+bundle: game_list
+label: Target
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

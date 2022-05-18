@@ -1,0 +1,27 @@
+uuid: ee68a108-3d6c-4bd2-b7ea-4d4057a9aeb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_game_platform
+field_name: field_game_platform
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: live
+      label: Live
+    -
+      value: ngm
+      label: NGM
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

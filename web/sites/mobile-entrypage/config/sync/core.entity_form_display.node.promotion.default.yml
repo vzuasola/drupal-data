@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.promotion.body
+    - field.field.node.promotion.field_banner_game_launch
     - field.field.node.promotion.field_banner_image
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.promotion.field_field_enable_sticky_post2
     - field.field.node.promotion.field_field_enable_sticky_pre
     - field.field.node.promotion.field_field_enable_sticky_pre2
+    - field.field.node.promotion.field_games_list
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_is_archived
@@ -58,6 +60,7 @@ dependencies:
     - image
     - link
     - metatag
+    - paragraphs
     - path
     - scheduler
     - text
@@ -70,7 +73,7 @@ third_party_settings:
         - field_ribbon_text_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: details
       format_settings:
         label: 'Ribbon Tags'
@@ -86,7 +89,7 @@ third_party_settings:
         - body
         - group_sticky_component_pre
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: details
       format_settings:
         label: 'Pre Login Promotion'
@@ -103,7 +106,7 @@ third_party_settings:
         - field_casino_gold_only
         - group_sticky_component
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: details
       format_settings:
         id: ''
@@ -257,6 +260,53 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Component Two'
+    group_configure_games_list:
+      children:
+        - field_games_list
+      parent_name: ''
+      weight: 22
+      format_type: details
+      format_settings:
+        label: 'Configure Multiple Games'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Configure Multiple Games'
+    group_add_game_launch_to_promo_b:
+      children:
+        - field_banner_game_launch
+      parent_name: ''
+      weight: 21
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Add Game Launch to Promo Banner'
+    group_promotion_list_details:
+      children:
+        - title
+        - langcode
+        - field_product_category
+        - field_summary_url
+        - field_summary_url_target
+        - field_promo_availability
+        - field_mark_as_featured
+        - field_hide_promotion
+        - field_hide_countdown
+        - field_is_archived
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        label: 'Promotion List Details'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Promotion List Details'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -273,10 +323,22 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_banner_game_launch:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_banner_image:
     weight: 21
     settings:
@@ -341,36 +403,48 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_games_list:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_hide_countdown:
-    weight: 6
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_hide_promotion:
-    weight: 5
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_is_archived:
-    weight: 7
+    weight: 10
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_mark_as_featured:
-    weight: 4
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -429,7 +503,7 @@ content:
     type: erviews_options_select
     region: content
   field_promo_availability:
-    weight: 2
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -567,7 +641,7 @@ content:
     type: text_textarea
     region: content
   field_summary_url:
-    weight: 8
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -575,7 +649,7 @@ content:
     type: link_default
     region: content
   field_summary_url_target:
-    weight: 9
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -590,32 +664,32 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 19
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 21
+    weight: 24
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -623,32 +697,32 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 23
+    weight: 26
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 22
+    weight: 25
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 20
+    weight: 23
     settings:
       match_operator: CONTAINS
       size: 60
@@ -657,7 +731,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }

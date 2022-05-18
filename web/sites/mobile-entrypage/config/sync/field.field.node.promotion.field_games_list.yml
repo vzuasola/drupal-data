@@ -1,0 +1,63 @@
+uuid: 37ccc2d7-9f2a-4272-815f-72ecf37a016b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_list
+    - node.type.promotion
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - entity_reference_revisions
+id: node.promotion.field_games_list
+field_name: field_games_list
+entity_type: node
+bundle: promotion
+label: 'Games List'
+description: "Please use the following placeholder code <> to add game list widget on any part of the promotion body.\r\nClick the 'Delete' button if promotion will not feature a game list widget on the content. \r\nClick 'Confirm Delete' to confirm deletion of game list input fields on this promotion content."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      game_list: game_list
+    target_bundles_drag_drop:
+      domain_management_configuration:
+        weight: 12
+        enabled: false
+      promo_banner_game_launch:
+        weight: 13
+        enabled: false
+      floating_banner_item:
+        weight: 13
+        enabled: false
+      game_list:
+        enabled: true
+        weight: 14
+      metatag:
+        weight: 15
+        enabled: false
+      mobile_sponsors:
+        weight: 16
+        enabled: false
+      right_side_block_content:
+        weight: 17
+        enabled: false
+      slider_overlay_cmi:
+        weight: 18
+        enabled: false
+      social_media:
+        weight: 19
+        enabled: false
+      social_media_cmi:
+        weight: 20
+        enabled: false
+      sponsor_cmi:
+        weight: 21
+        enabled: false
+      sponsorship:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions
