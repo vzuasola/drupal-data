@@ -1,0 +1,21 @@
+uuid: 32bbdc23-408f-4a15-9f71-26daa804d2b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_provider
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_game_provider
+field_name: field_game_provider
+entity_type: paragraph
+bundle: game_list
+label: 'Game Provider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

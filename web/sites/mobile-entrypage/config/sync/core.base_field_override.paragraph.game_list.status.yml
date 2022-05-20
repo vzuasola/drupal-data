@@ -1,0 +1,22 @@
+uuid: 5f727685-b48f-4bc7-af81-da0672d116f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.status
+field_name: status
+entity_type: paragraph
+bundle: game_list
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

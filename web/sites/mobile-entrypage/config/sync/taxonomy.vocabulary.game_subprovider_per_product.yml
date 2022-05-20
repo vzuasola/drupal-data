@@ -1,0 +1,9 @@
+uuid: ca2439d9-025e-408a-8278-f6febd9f8ad4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Subprovider Per Product'
+vid: game_subprovider_per_product
+description: 'List of game sub providers for each product'
+hierarchy: 0
+weight: 0

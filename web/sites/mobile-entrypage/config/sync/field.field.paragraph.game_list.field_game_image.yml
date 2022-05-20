@@ -1,0 +1,38 @@
+uuid: 83ec922d-a193-40b3-865a-65c3a15ed778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_image
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - image
+id: paragraph.game_list.field_game_image
+field_name: field_game_image
+entity_type: paragraph
+bundle: game_list
+label: 'Game Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

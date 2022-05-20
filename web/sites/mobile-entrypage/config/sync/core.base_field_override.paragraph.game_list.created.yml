@@ -1,0 +1,18 @@
+uuid: 74a925fb-4bd9-46ae-87ca-f6288602d0a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.created
+field_name: created
+entity_type: paragraph
+bundle: game_list
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

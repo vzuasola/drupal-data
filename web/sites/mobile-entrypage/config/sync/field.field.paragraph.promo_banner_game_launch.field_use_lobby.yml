@@ -1,0 +1,23 @@
+uuid: 852f63b1-9d94-47e4-b185-05c800d8c653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_lobby
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+id: paragraph.promo_banner_game_launch.field_use_lobby
+field_name: field_use_lobby
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: 'Use Lobby'
+description: 'Used in Live Dealer to direct player to game lobby'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 36e2908a-e923-4f52-94bb-b2284e7a0491
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_platform
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - options
+id: paragraph.game_list.field_game_platform
+field_name: field_game_platform
+entity_type: paragraph
+bundle: game_list
+label: 'Game Platform'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

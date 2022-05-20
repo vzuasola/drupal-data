@@ -1,0 +1,29 @@
+uuid: a4bbce76-f35b-4c90-ac1a-edf17e38cbae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_subprovider
+    - paragraphs.paragraphs_type.game_list
+    - taxonomy.vocabulary.game_subprovider_per_product
+id: paragraph.game_list.field_game_subprovider
+field_name: field_game_subprovider
+entity_type: paragraph
+bundle: game_list
+label: 'Game Subprovider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_subprovider_per_product: game_subprovider_per_product
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
