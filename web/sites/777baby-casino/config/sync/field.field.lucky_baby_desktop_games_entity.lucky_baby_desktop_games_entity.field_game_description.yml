@@ -3,14 +3,14 @@ langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.zipang_desktop_games_entity.field_game_description
+    - field.storage.lucky_baby_desktop_games_entity.field_game_description
   module:
     - text
-    - zipang_desktop_games
-id: zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_description
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_game_description
 field_name: field_game_description
-entity_type: zipang_desktop_games_entity
-bundle: zipang_desktop_games_entity
+entity_type: lucky_baby_desktop_games_entity
+bundle: lucky_baby_desktop_games_entity
 label: 'Game Description'
 description: ''
 required: false

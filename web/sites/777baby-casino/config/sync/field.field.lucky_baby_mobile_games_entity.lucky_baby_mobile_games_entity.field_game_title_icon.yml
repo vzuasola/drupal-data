@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.zipang_mobile_games_entity.field_game_title_icon
+    - field.storage.lucky_baby_mobile_games_entity.field_game_title_icon
   module:
     - image
     - zipang_mobile_games
-id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title_icon
+id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_title_icon
 field_name: field_game_title_icon
-entity_type: zipang_mobile_games_entity
-bundle: zipang_mobile_games_entity
+entity_type: lucky_baby_mobile_games_entity
+bundle: lucky_baby_mobile_games_entity
 label: 'Game Title Icon'
 description: ''
 required: false
