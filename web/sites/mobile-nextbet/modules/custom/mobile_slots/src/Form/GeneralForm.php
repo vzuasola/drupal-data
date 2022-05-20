@@ -40,6 +40,14 @@ class GeneralForm extends FormBase {
       '#open' => TRUE,
     ];
 
+    $form['general']['use_games_list_v2'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Games List V2'),
+      '#default_value' => $this->get('use_games_list_v2'),
+      '#description' => 'Tick to use version 2 of Games List View',
+      '#translatable' => FALSE,
+    ];
+
     $form['general']['lobby_infinite_scroll'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
