@@ -6,7 +6,7 @@ dependencies:
     - field.storage.lucky_baby_mobile_games_entity.field_game_description
   module:
     - text
-    - zipang_mobile_games
+    - lucky_baby_mobile_games
 id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_description
 field_name: field_game_description
 entity_type: lucky_baby_mobile_games_entity

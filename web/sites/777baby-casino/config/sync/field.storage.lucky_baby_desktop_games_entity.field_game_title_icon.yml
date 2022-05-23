@@ -1,14 +1,14 @@
-uuid: 2235ed13-9fcd-43b9-9000-d2c296fd3787
+uuid: 322b8b9f-7525-4b20-97d9-509ddac4f9b6
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - lucky_baby_mobile_games
-id: lucky_baby_mobile_games_entity.field_game_title_icon
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.field_game_title_icon
 field_name: field_game_title_icon
-entity_type: lucky_baby_mobile_games_entity
+entity_type: lucky_baby_desktop_games_entity
 type: image
 settings:
   uri_scheme: public
