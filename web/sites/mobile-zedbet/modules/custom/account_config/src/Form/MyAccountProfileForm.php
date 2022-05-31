@@ -16,7 +16,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  *   menu = {
  *     "title" = "Profile Form Configuration",
- *     "description" = "Profile Form COnfiguration",
+ *     "description" = "Profile Form Configuration",
  *     "parent" = "account_config.list",
  *   },
  * )
@@ -271,6 +271,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => FALSE,
             '#description' => $this->t('SMS Verification Feature Toggling'),
             '#default_value' => $this->get('enable_sms_verification') ?? '',
+            '#translatable' => true,
         ];
 
         $form['sms_configuration']['verify_text'] = [
@@ -289,6 +290,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#description' => $this->t('Text modal verify text header'),
             '#default_value' => $this->get('modal_verify_header_text') ?? '',
+            '#translatable' => true,
         ];
 
         $form['sms_configuration']['modal_verify_body_text'] = [
@@ -297,6 +299,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#description' => $this->t('Text modal verify body text'),
             '#default_value' => $this->get('modal_verify_body_text') ?? '',
+            '#translatable' => true,
         ];
 
         $form['sms_configuration']['modal_verification_code_placeholder'] = [
@@ -306,6 +309,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#description' => $this->t('Placeholder text for verification field textfield'),
             '#default_value' => $this->get('modal_verification_code_placeholder') ?? '',
+            '#translatable' => true,
         ];
 
         $form['sms_configuration']['modal_verification_resend_code_text'] = [
@@ -315,6 +319,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#description' => $this->t('Text for resend verification code'),
             '#default_value' => $this->get('modal_verification_resend_code_text') ?? '',
+            '#translatable' => true,
         ];
 
         $form['sms_configuration']['modal_verification_submit_text'] = [
@@ -324,6 +329,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#description' => $this->t('Text for submit verification code'),
             '#default_value' => $this->get('modal_verification_submit_text') ?? '',
+            '#translatable' => true,
         ];
 
         $form['sms_configuration']['verification_code_response'] = [
@@ -333,6 +339,7 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#description' => $this->t('Response from ICore'),
             '#default_value' => $this->get('verification_code_response') ?? '',
+            '#translatable' => true,
         ];
 
         return $form;
