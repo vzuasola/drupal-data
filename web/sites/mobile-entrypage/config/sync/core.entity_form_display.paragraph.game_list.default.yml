@@ -119,5 +119,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_provider2: true
   status: true
   uid: true

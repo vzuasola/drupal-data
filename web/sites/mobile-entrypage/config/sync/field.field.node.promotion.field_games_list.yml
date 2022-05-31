@@ -13,7 +13,7 @@ field_name: field_games_list
 entity_type: node
 bundle: promotion
 label: 'Games List'
-description: "Please use the following placeholder code <> to add game list widget on any part of the promotion body.\r\nClick the 'Delete' button if promotion will not feature a game list widget on the content. \r\nClick 'Confirm Delete' to confirm deletion of game list input fields on this promotion content."
+description: "Click the 'Remove' button if promotion will not feature a game list widget on the content. <br/>\r\nClick 'Confirm Removal' to confirm deletion of game list input fields on this promotion content. <br/>\r\nMaximum number of games that can be added is 20 games."
 required: false
 translatable: false
 default_value: {  }

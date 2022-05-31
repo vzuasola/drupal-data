@@ -91,5 +91,6 @@ content:
     region: content
 hidden:
   created: true
+  field_provider: true
   status: true
   uid: true
