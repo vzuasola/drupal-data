@@ -12,7 +12,7 @@ field_name: field_post_body
 entity_type: node
 bundle: promotion
 label: 'Body on Post Login'
-description: ''
+description: 'Please use the following placeholder code [[promotion_game_widget]] to add game list widget on any part of the promotion body.'
 required: false
 translatable: true
 default_value: {  }

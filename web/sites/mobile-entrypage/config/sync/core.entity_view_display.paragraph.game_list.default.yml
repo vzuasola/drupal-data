@@ -104,4 +104,5 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-hidden: {  }
+hidden:
+  field_provider2: true

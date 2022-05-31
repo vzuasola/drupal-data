@@ -13,7 +13,7 @@ field_name: field_banner_game_launch
 entity_type: node
 bundle: promotion
 label: 'Banner Game Launch'
-description: "Note that Game Launch will apply to both Pre Login and Post Login Promotion Content once this is enabled.\r\nPlease click the 'Remove' button if promotion will NOT have game launch capablity from banner image.\r\nClick 'Confirm Delete' to confirm deletion of game list input fields on this promotion content."
+description: "Note that Game Launch will apply to both Pre Login and Post Login Promotion Content once this is enabled. <br/>\r\nPlease click the 'Remove' button if promotion will NOT have game launch capablity from banner image. <br/>\r\nThen Click 'Confirm Removal' to confirm deletion of game list input fields on this promotion content. <br/>"
 required: false
 translatable: false
 default_value: {  }
