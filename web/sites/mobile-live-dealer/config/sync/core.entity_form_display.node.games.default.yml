@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games.field_lobby_tab
     - field.field.node.games.field_preview_mode
     - field.field.node.games.field_provider_logo
+    - field.field.node.games.field_table_id
     - field.field.node.games.field_target
     - field.field.node.games.field_thumbnail_image
     - field.field.node.games.field_use_game_loader
@@ -29,6 +30,7 @@ third_party_settings:
         - field_provider_logo
         - field_game_code
         - field_game_platform
+        - field_table_id
       parent_name: ''
       weight: 8
       format_type: details
@@ -64,7 +66,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_game_code:
-    weight: 9
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -79,7 +81,7 @@ content:
     type: boolean_checkbox
     region: content
   field_game_platform:
-    weight: 10
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -122,6 +124,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_table_id:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_target:
     weight: 9
