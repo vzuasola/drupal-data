@@ -1,0 +1,18 @@
+zedbet_payments.list:
+  title: 'Zedbet payment Blocks Configuration'
+  description: 'List Zedbet payment Blocks Configuration'
+  parent: system.admin_config
+  route_name: zedbet_payments.admin_settings
+
+# Zedbet payment menu items definition
+entity.zedbet_payment.collection:
+  title: 'Zedbet payment list'
+  route_name: entity.zedbet_payment.collection
+  description: 'List Zedbet payment entities'
+  parent: zedbet_payments.list
+
+zedbet_payment.admin.structure.settings:
+  title: Zedbet payment settings
+  description: 'Configure Zedbet payment entities'
+  route_name: zedbet_payment.settings
+  parent: zedbet_payments.list
