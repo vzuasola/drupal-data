@@ -1,0 +1,22 @@
+{#
+/**
+ * @file zedbet_payment.html.twig
+ * Default theme implementation to present Zedbet payment data.
+ *
+ * This template is used when viewing Zedbet payment pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_zedbet_payment()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('zedbet_payment') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

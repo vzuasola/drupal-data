@@ -1,0 +1,5 @@
+name: Zedbet Payments
+type: module
+description: This module shows Zedbet payments.
+core: 8.x
+package: Custom

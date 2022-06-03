@@ -1,0 +1,23 @@
+uuid: 32456c14-3c9c-46e3-9e0c-a6f9a27221b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zedbet_payment.field_payment_link
+  module:
+    - link
+    - zedbet_payments
+id: zedbet_payment.zedbet_payment.field_payment_link
+field_name: field_payment_link
+entity_type: zedbet_payment
+bundle: zedbet_payment
+label: 'Payment Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,22 @@
+add zedbet payment entities:
+  title: 'Create new Zedbet payment entities'
+
+administer zedbet payment entities:
+  title: 'Administer Zedbet payment entities'
+  description: 'Allow to access the administration form to configure Zedbet payment entities.'
+  restrict access: true
+
+delete zedbet payment entities:
+  title: 'Delete Zedbet payment entities'
+
+edit zedbet payment entities:
+  title: 'Edit Zedbet payment entities'
+
+access zedbet payment overview:
+  title: 'Access the Zedbet payment overview page'
+
+view published zedbet payment entities:
+  title: 'View published Zedbet payment entities'
+
+view unpublished zedbet payment entities:
+  title: 'View unpublished Zedbet payment entities'
