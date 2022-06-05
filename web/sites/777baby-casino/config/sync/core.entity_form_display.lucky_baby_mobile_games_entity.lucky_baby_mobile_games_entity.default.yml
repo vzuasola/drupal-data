@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_all_games_category	
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_client_type
@@ -28,6 +29,7 @@ dependencies:
     - entity_reference_views_select
     - field_group
     - image
+    - lucky_baby_mobile_games
     - text
     - lucky_baby_mobile_games
 third_party_settings:
@@ -88,6 +90,15 @@ targetEntityType: lucky_baby_mobile_games_entity
 bundle: lucky_baby_mobile_games_entity
 mode: default
 content:
+  field_all_games_category:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60		
+      placeholder: ''
+    third_party_settings: { }
+    type: entity_reference_autocomplete
+    region: content	
   field_arcade_game_category:
     weight: 14
     settings: {  }
