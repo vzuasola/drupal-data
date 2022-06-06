@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Arcade Game Filter'
 vid: arcade_game_filter
 description: 'Arcade Game Filter'
-hierarchy: 1
+hierarchy: 0
 weight: 0
