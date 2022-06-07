@@ -1,0 +1,5 @@
+entity.zedbet_payment.add_form:
+  route_name: entity.zedbet_payment.add_form
+  title: 'Add Zedbet payment'
+  appears_on:
+    - entity.zedbet_payment.collection

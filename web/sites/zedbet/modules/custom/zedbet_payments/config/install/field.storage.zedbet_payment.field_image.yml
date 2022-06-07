@@ -1,0 +1,30 @@
+uuid: 19b01c48-eff6-4248-91cc-0b4c4d537592
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zedbet_payments
+id: zedbet_payment.field_image
+field_name: field_image
+entity_type: zedbet_payment
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
