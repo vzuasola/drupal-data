@@ -1,0 +1,20 @@
+uuid: 3a79f0bd-0203-4b37-86b9-6746646037a2
+langcode: ja
+status: true
+dependencies:
+  module:
+    - lucky_baby_mobile_games
+    - taxonomy
+id: lucky_baby_mobile_games_entity.field_all_games_category
+field_name: field_all_games_category
+entity_type: lucky_baby_mobile_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

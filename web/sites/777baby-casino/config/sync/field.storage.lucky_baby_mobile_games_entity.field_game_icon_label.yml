@@ -1,0 +1,21 @@
+uuid: 239f9067-f4ed-46ed-b137-200daf64de55
+langcode: en
+status: true
+dependencies:
+  module:
+    - lucky_baby_mobile_games
+id: lucky_baby_mobile_games_entity.field_game_icon_label
+field_name: field_game_icon_label
+entity_type: lucky_baby_mobile_games_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
