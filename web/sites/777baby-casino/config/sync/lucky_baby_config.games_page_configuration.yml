@@ -1,0 +1,9 @@
+advanced__active_tab: edit-games
+no_result_msg:
+  value: "<p>No Result Found!</p>\r\n"
+  format: basic_html
+value: null
+format: null
+items_per_page: '16'
+previous_page_label: '&#8810;'
+next_page_label: '&#8811;'

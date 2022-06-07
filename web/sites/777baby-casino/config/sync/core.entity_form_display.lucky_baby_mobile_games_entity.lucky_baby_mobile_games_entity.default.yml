@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_all_games_category	
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_client_type
@@ -11,12 +12,15 @@ dependencies:
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code_icore
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_description
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter_games
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_icon_label
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_provider
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_tag
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_thumbnail
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_title
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_title_icon
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_type
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_provider_product
     - image.style.thumbnail
@@ -25,6 +29,8 @@ dependencies:
     - entity_reference_views_select
     - field_group
     - image
+    - lucky_baby_mobile_games
+    - text
     - lucky_baby_mobile_games
 third_party_settings:
   field_group:
@@ -66,11 +72,33 @@ third_party_settings:
         description: ''
         required_fields: false
       label: 'Arcade (for arcade page)'
+    group_live_games_for_live_games_:
+      children:
+        - field_game_title_icon
+        - field_game_icon_label
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Live Games (for live games page)'
 id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.default
 targetEntityType: lucky_baby_mobile_games_entity
 bundle: lucky_baby_mobile_games_entity
 mode: default
 content:
+  field_all_games_category:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60		
+      placeholder: ''
+    third_party_settings: { }
+    type: entity_reference_autocomplete
+    region: content	
   field_arcade_game_category:
     weight: 14
     settings: {  }
@@ -143,6 +171,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_game_description:
+    weight: 17
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   field_game_filter:
     weight: 14
     settings: {  }
@@ -191,6 +228,14 @@ content:
           bundle: lucky_baby_mobile_games_entity
     type: options_select
     region: content
+  field_game_icon_label:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_provider:
     weight: 10
     settings: {  }
@@ -218,6 +263,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_title_icon:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_game_type:
     weight: 9
