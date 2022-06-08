@@ -1,0 +1,108 @@
+uuid: 8f8e3463-8dde-45a7-adc2-126bd926e73f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.game_list.field_game_code
+    - field.field.paragraph.game_list.field_game_image
+    - field.field.paragraph.game_list.field_game_platform
+    - field.field.paragraph.game_list.field_game_provider
+    - field.field.paragraph.game_list.field_game_subprovider
+    - field.field.paragraph.game_list.field_game_title
+    - field.field.paragraph.game_list.field_product
+    - field.field.paragraph.game_list.field_target
+    - field.field.paragraph.game_list.field_use_game_loader
+    - field.field.paragraph.game_list.field_use_lobby
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - image
+    - options
+id: paragraph.game_list.default
+targetEntityType: paragraph
+bundle: game_list
+mode: default
+content:
+  field_game_code:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_game_image:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_platform:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_game_provider:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_subprovider:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_title:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_target:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_use_game_loader:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_use_lobby:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  field_provider2: true

@@ -1,0 +1,63 @@
+uuid: dfc44489-f2d4-4dfb-9396-901508b95e3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_game_launch
+    - node.type.promotion
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+  module:
+    - entity_reference_revisions
+id: node.promotion.field_banner_game_launch
+field_name: field_banner_game_launch
+entity_type: node
+bundle: promotion
+label: 'Banner Game Launch'
+description: "Note that Game Launch will apply to both Pre Login and Post Login Promotion Content once this is enabled. <br/>\r\nPlease click the 'Remove' button if promotion will NOT have game launch capablity from banner image. <br/>\r\nThen Click 'Confirm Removal' to confirm deletion of game list input fields on this promotion content. <br/>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      promo_banner_game_launch: promo_banner_game_launch
+    target_bundles_drag_drop:
+      promo_banner_game_launch:
+        enabled: true
+        weight: 13
+      domain_management_configuration:
+        weight: 14
+        enabled: false
+      floating_banner_item:
+        weight: 15
+        enabled: false
+      game_list:
+        weight: 16
+        enabled: false
+      metatag:
+        weight: 17
+        enabled: false
+      mobile_sponsors:
+        weight: 18
+        enabled: false
+      right_side_block_content:
+        weight: 19
+        enabled: false
+      slider_overlay_cmi:
+        weight: 20
+        enabled: false
+      social_media:
+        weight: 21
+        enabled: false
+      social_media_cmi:
+        weight: 22
+        enabled: false
+      sponsor_cmi:
+        weight: 23
+        enabled: false
+      sponsorship:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

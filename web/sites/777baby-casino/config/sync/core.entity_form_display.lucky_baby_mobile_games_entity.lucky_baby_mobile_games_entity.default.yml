@@ -3,24 +3,34 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_all_games_category	
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_category
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_client_type
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_enable_free_play
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_enable_game
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code_icore
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_description
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter_games
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_icon_label
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_provider
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_tag
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_thumbnail
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_title
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_title_icon
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_type
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_provider_product
     - image.style.thumbnail
   module:
     - conditional_fields
     - entity_reference_views_select
     - field_group
     - image
+    - lucky_baby_mobile_games
+    - text
     - lucky_baby_mobile_games
 third_party_settings:
   field_group:
@@ -29,7 +39,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: fieldset
       format_settings:
         id: ''
@@ -41,7 +51,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       format_settings:
         id: ''
@@ -49,11 +59,58 @@ third_party_settings:
         description: 'fields for games page'
         required_fields: true
       label: 'Games (for games page)'
+    group_arcade_for_arcade_page_:
+      children:
+        - field_arcade_game_category
+        - field_arcade_game_filter
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Arcade (for arcade page)'
+    group_live_games_for_live_games_:
+      children:
+        - field_game_title_icon
+        - field_game_icon_label
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Live Games (for live games page)'
 id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.default
 targetEntityType: lucky_baby_mobile_games_entity
 bundle: lucky_baby_mobile_games_entity
 mode: default
 content:
+  field_all_games_category:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60		
+      placeholder: ''
+    third_party_settings: { }
+    type: entity_reference_autocomplete
+    region: content	
+  field_arcade_game_category:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_arcade_game_filter:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_client_type:
     weight: 6
     settings: {  }
@@ -114,6 +171,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_game_description:
+    weight: 17
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   field_game_filter:
     weight: 14
     settings: {  }
@@ -162,8 +228,16 @@ content:
           bundle: lucky_baby_mobile_games_entity
     type: options_select
     region: content
+  field_game_icon_label:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_provider:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -189,6 +263,29 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_title_icon:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_type:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_provider_product:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

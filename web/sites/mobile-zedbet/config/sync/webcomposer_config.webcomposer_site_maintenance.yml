@@ -1,0 +1,10 @@
+maintenance_settings_tab__active_tab: edit-products-settings
+product_list: mobile-zedbet
+maintenance_title_mobile-zedbet: Maintenance
+maintenance_content_mobile-zedbet:
+  value: "<div class=\"container\">\r\n<h3 class=\"text-align-center\"><strong>Maintenance in progress</strong></h3>\r\n\r\n<p class=\"text-align-center\">Zedbet&nbsp;servers are currently unavailable and scheduled to be back at 11:00 AM (GMT +8).</p>\r\n\r\n<p class=\"text-align-center\">We apologize for the inconvenience and appreciate your patience. Please check back soon.</p>\r\n</div>\r\n"
+  format: basic_html
+value: null
+format: null
+maintenance_publish_date_mobile-zedbet: null
+maintenance_unpublish_date_mobile-zedbet: null

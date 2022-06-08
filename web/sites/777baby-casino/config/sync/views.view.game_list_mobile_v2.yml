@@ -3,18 +3,26 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.storage.lucky_baby_mobile_games_entity.field_all_games_category
+    - field.storage.lucky_baby_mobile_games_entity.field_arcade_game_category
+    - field.storage.lucky_baby_mobile_games_entity.field_arcade_game_filter
     - field.storage.lucky_baby_mobile_games_entity.field_client_type
     - field.storage.lucky_baby_mobile_games_entity.field_enable_free_play
     - field.storage.lucky_baby_mobile_games_entity.field_enable_game
     - field.storage.lucky_baby_mobile_games_entity.field_game_category
     - field.storage.lucky_baby_mobile_games_entity.field_game_code
     - field.storage.lucky_baby_mobile_games_entity.field_game_code_icore
+    - field.storage.lucky_baby_mobile_games_entity.field_game_description
     - field.storage.lucky_baby_mobile_games_entity.field_game_filter
     - field.storage.lucky_baby_mobile_games_entity.field_game_filter_games
+    - field.storage.lucky_baby_mobile_games_entity.field_game_icon_label
     - field.storage.lucky_baby_mobile_games_entity.field_game_provider
     - field.storage.lucky_baby_mobile_games_entity.field_game_tag
     - field.storage.lucky_baby_mobile_games_entity.field_game_thumbnail
     - field.storage.lucky_baby_mobile_games_entity.field_game_title
+    - field.storage.lucky_baby_mobile_games_entity.field_game_title_icon
+    - field.storage.lucky_baby_mobile_games_entity.field_game_type
+    - field.storage.lucky_baby_mobile_games_entity.field_provider_product
     - taxonomy.vocabulary.game_provider
     - taxonomy.vocabulary.game_tag
     - taxonomy.vocabulary.mobile_game_category
@@ -25,6 +33,7 @@ dependencies:
     - rest_views
     - serialization
     - taxonomy
+    - text
     - webcomposer_rest_extra
 id: game_list_mobile_v2
 label: 'Game List (Mobile) - V2'
@@ -1272,6 +1281,9 @@ display:
             field_game_provider_export:
               alias: game_provider
               raw_output: false
+            field_game_category_export:
+              alias: game_category
+              raw_output: false
             field_game_filter_export:
               alias: casino_filter_id
               raw_output: false
@@ -1281,8 +1293,32 @@ display:
             field_game_thumbnail_export:
               alias: image
               raw_output: false
-            field_game_category_export:
-              alias: game_category
+            field_game_description_export:
+              alias: game_description
+              raw_output: false
+            field_arcade_game_category_export:
+              alias: arcade_game_category
+              raw_output: false
+            field_arcade_game_filter_export:
+              alias: arcade_game_filter
+              raw_output: false
+            field_game_type_export:
+              alias: game_type
+              raw_output: false
+            field_game_tag_export_1:
+              alias: game_tag_object
+              raw_output: false
+            field_provider_product_export:
+              alias: provider
+              raw_output: false
+            field_game_title_icon_export:
+              alias: game_title_icon
+              raw_output: false
+            field_game_icon_label_export:
+              alias: game_icon_label
+              raw_output: false
+            field_all_games_category_export:
+              alias: all_games_categories
               raw_output: false
       pager:
         type: full
@@ -2131,6 +2167,565 @@ display:
           delta_first_last: false
           field_api_classes: 0
           plugin_id: field_export
+        field_game_description_export:
+          id: field_game_description_export
+          table: lucky_baby_mobile_games_entity__field_game_description
+          field: field_game_description_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_arcade_game_category_export:
+          id: field_arcade_game_category_export
+          table: lucky_baby_mobile_games_entity__field_arcade_game_category
+          field: field_arcade_game_category_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_id
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          field_api_classes: 0
+          plugin_id: field_export
+        field_arcade_game_filter_export:
+          id: field_arcade_game_filter_export
+          table: lucky_baby_mobile_games_entity__field_arcade_game_filter
+          field: field_arcade_game_filter_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_id
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          field_api_classes: 0
+          plugin_id: field_export
+        field_game_type_export:
+          id: field_game_type_export
+          table: lucky_baby_mobile_games_entity__field_game_type
+          field: field_game_type_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: 0
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_game_tag_export_1:
+          id: field_game_tag_export_1
+          table: lucky_baby_mobile_games_entity__field_game_tag
+          field: field_game_tag_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: id
+              title: 0
+              url: 0
+              type: 0
+              bundle: 0
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_game_title_icon_export:
+          id: field_game_title_icon_export
+          table: lucky_baby_mobile_games_entity__field_game_title_icon
+          field: field_game_title_icon_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_export
+          settings:
+            image_style: ''
+            export_alt: 0
+            export_title: false
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_game_icon_label_export:
+          id: field_game_icon_label_export
+          table: lucky_baby_mobile_games_entity__field_game_icon_label
+          field: field_game_icon_label_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_all_games_category_export:
+          id: field_all_games_category_export
+          table: lucky_baby_mobile_games_entity__field_all_games_category
+          field: field_all_games_category_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_id
+          settings: {  }
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_provider_product_export_1:
+          id: field_provider_product_export_1
+          table: lucky_baby_mobile_games_entity__field_provider_product
+          field: field_provider_product_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: 0
+              title: 0
+              url: 0
+              type: 0
+              bundle: 0
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
       filters:
         langcode:
           id: langcode
@@ -2230,15 +2825,23 @@ display:
         - request_format
         - url.query_args
       tags:
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_all_games_category'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_arcade_game_category'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_arcade_game_filter'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_client_type'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_enable_free_play'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_enable_game'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_category'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_code'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_code_icore'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_description'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_filter'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_filter_games'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_icon_label'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_provider'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_tag'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_thumbnail'
         - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_title'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_title_icon'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_game_type'
+        - 'config:field.storage.lucky_baby_mobile_games_entity.field_provider_product'

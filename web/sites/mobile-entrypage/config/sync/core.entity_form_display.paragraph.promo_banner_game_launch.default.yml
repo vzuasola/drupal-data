@@ -1,0 +1,96 @@
+uuid: 2bad8b85-1d75-42c4-b368-030ab028ceff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promo_banner_game_launch.field_game_code
+    - field.field.paragraph.promo_banner_game_launch.field_game_platform
+    - field.field.paragraph.promo_banner_game_launch.field_game_provider
+    - field.field.paragraph.promo_banner_game_launch.field_game_subprovider
+    - field.field.paragraph.promo_banner_game_launch.field_product
+    - field.field.paragraph.promo_banner_game_launch.field_target
+    - field.field.paragraph.promo_banner_game_launch.field_use_game_loader
+    - field.field.paragraph.promo_banner_game_launch.field_use_lobby
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_game_prope:
+      children:
+        - field_game_code
+        - field_game_platform
+        - field_game_provider
+        - field_game_subprovider
+        - field_use_lobby
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Game Properties'
+id: paragraph.promo_banner_game_launch.default
+targetEntityType: paragraph
+bundle: promo_banner_game_launch
+mode: default
+content:
+  field_game_code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_platform:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_provider:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_subprovider:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_product:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_target:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_use_game_loader:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_use_lobby:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  field_provider: true
+  status: true
+  uid: true

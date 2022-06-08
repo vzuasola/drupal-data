@@ -1,0 +1,30 @@
+uuid: 1c0340f0-a84e-40d6-a5d6-2987abde26dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lucky_baby_desktop_games_entity.field_arcade_game_category
+    - taxonomy.vocabulary.arcade_game_category
+  module:
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_category
+field_name: field_arcade_game_category
+entity_type: lucky_baby_desktop_games_entity
+bundle: lucky_baby_desktop_games_entity
+label: 'Arcade Game Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      arcade_game_category: arcade_game_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 4314d503-a19b-4eca-b7a8-3674083c4b38
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.lucky_baby_mobile_games_entity.field_all_games_category
+    - taxonomy.vocabulary.all_games_category
+  module:
+    - lucky_baby_mobile_games
+id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_all_games_category
+field_name: field_all_games_category
+entity_type: lucky_baby_mobile_games_entity
+bundle: lucky_baby_mobile_games_entity
+label: 'All Games Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      all_games_category: all_games_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

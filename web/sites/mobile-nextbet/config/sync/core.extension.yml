@@ -70,6 +70,7 @@ module:
   registration_theme: 0
   rest: 0
   rest_menu_items: 0
+  rest_views: 0
   restui: 0
   scheduler: 0
   serialization: 0
@@ -102,6 +103,7 @@ module:
   webcomposer_lightbox: 0
   webcomposer_mailer: 0
   webcomposer_marketing_script: 0
+  webcomposer_optimized_rest: 0
   webcomposer_playtech_integration: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0

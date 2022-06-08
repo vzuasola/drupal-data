@@ -1,0 +1,124 @@
+uuid: 9ba4ff5f-8ecd-4953-addf-7970509985f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.game_list.field_game_code
+    - field.field.paragraph.game_list.field_game_image
+    - field.field.paragraph.game_list.field_game_platform
+    - field.field.paragraph.game_list.field_game_provider
+    - field.field.paragraph.game_list.field_game_subprovider
+    - field.field.paragraph.game_list.field_game_title
+    - field.field.paragraph.game_list.field_product
+    - field.field.paragraph.game_list.field_target
+    - field.field.paragraph.game_list.field_use_game_loader
+    - field.field.paragraph.game_list.field_use_lobby
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.game_list
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_game_properties:
+      children:
+        - field_game_title
+        - field_game_code
+        - field_game_platform
+        - field_game_image
+        - field_game_provider
+        - field_game_subprovider
+        - field_use_lobby
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        label: 'Game Properties'
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Game Properties'
+id: paragraph.game_list.default
+targetEntityType: paragraph
+bundle: game_list
+mode: default
+content:
+  field_game_code:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_platform:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_provider:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_subprovider:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_target:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_use_game_loader:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_use_lobby:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_provider2: true
+  status: true
+  uid: true

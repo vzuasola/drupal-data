@@ -1,0 +1,19 @@
+uuid: 66971e28-87b9-4c89-9ce6-66cbbf580986
+langcode: ja
+status: true
+dependencies:
+  module:
+    - text
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.field_game_description
+field_name: field_game_description
+entity_type: lucky_baby_desktop_games_entity
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

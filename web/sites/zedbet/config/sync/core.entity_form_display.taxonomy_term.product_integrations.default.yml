@@ -1,4 +1,4 @@
-uuid: 76ba8a9f-472d-4853-8cb3-8ad02dc2e9b1
+uuid: 1ae3d59a-12fd-4957-a106-3a9ff61f16c6
 langcode: en
 status: true
 dependencies:
@@ -8,13 +8,24 @@ dependencies:
     - field.field.taxonomy_term.product_integrations.field_product_login_via
     - field.field.taxonomy_term.product_integrations.field_registration_url
     - taxonomy.vocabulary.product_integrations
+  module:
+    - path
+    - text
 id: taxonomy_term.product_integrations.default
 targetEntityType: taxonomy_term
 bundle: product_integrations
 mode: default
 content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_product_instance_id:
-    weight: 2
+    weight: 31
     settings:
       size: 60
       placeholder: ''
@@ -22,7 +33,7 @@ content:
     type: string_textfield
     region: content
   field_product_integration_id:
-    weight: 3
+    weight: 32
     settings:
       size: 60
       placeholder: ''
@@ -30,7 +41,7 @@ content:
     type: string_textfield
     region: content
   field_product_login_via:
-    weight: 4
+    weight: 33
     settings:
       size: 60
       placeholder: ''
@@ -38,27 +49,35 @@ content:
     type: string_textfield
     region: content
   field_registration_url:
-    weight: 5
+    weight: 34
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 1
+  path:
+    type: path
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  description: true
-  langcode: true
-  path: true
+  translation:
+    weight: 10
+    region: content
+hidden: {  }

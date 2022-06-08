@@ -1,0 +1,21 @@
+uuid: 7ef8b339-27a7-4537-b8b7-eea0612d81ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_target
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+  module:
+    - options
+id: paragraph.promo_banner_game_launch.field_target
+field_name: field_target
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: Target
+description: 'Option to chose if game will launch on a different window (popup) or launch to current window.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

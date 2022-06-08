@@ -5,6 +5,8 @@ namespace Drupal\lucky_baby_config\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\file\Entity\File;
+
 
 /**
  * My module form plugin
@@ -53,6 +55,89 @@ class LuckyBabyGamesConfigForm extends FormBase {
       '#type' => 'details',
       '#title' => t('General Config'),
       '#group' => 'advanced',
+    ];
+
+    $form['games']['arcade_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Title'),
+      '#default_value' => $this->get('arcade_games_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['arcade_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade Page Search'),
+      '#default_value' => $this->get('arcade_games_search'),
+      '#description' => $this->t('Adds placeholder to Arcade page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Title'),
+      '#default_value' => $this->get('live_games_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['games']['live_games_search'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games Page Search'),
+      '#default_value' => $this->get('live_games_search'),
+      '#description' => $this->t('Adds placeholder to Live Games page searchbox.'),
+      '#translatable' => TRUE,
+    ];
+
+    $config = $this->config('lucky_baby_config.games_page_configuration');
+
+    $form['games']['live_games_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Live Games Page Banner - EN'),
+    ];
+
+    $form['games']['live_games_banner_en']['file_image_live_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Live Games Page Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $config->get('file_image_live_banner_en'),
+    ];
+
+    $form['games']['live_games_banner_en']['banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('banner_alt_text_en'),
+    ];
+
+    $form['games']['live_games_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Live Games Page Banner - JA'),
+    ];
+
+    $form['games']['live_games_banner_ja']['file_image_live_banner_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Live Games Page Banner'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://upload',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $config->get('file_image_live_banner_ja'),
+    ];
+
+    $form['games']['live_games_banner_ja']['banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('banner_alt_text_ja'),
+    ];
+
+    $form['games']['live_games_description'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Live Games Page Description'),
+      '#default_value' => $this->get('live_games_description'),
+      '#translatable' => TRUE,
     ];
 
     $d = $this->get('no_result_msg');

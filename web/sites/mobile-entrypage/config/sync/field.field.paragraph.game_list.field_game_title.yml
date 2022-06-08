@@ -1,0 +1,19 @@
+uuid: db0fb181-c31f-411a-8a03-9ab9a934cf85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_title
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_game_title
+field_name: field_game_title
+entity_type: paragraph
+bundle: game_list
+label: 'Game Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
