@@ -1331,17 +1331,20 @@ display:
             field_game_tag_export_1:
               alias: game_tag_object
               raw_output: false
+            field_game_provider:
+              alias: provider
+              raw_output: false
             field_game_title_icon_export:
               alias: game_title_icon
               raw_output: false
             field_game_icon_label_export:
               alias: game_icon_label
               raw_output: false
-            field_game_provider:
-              alias: provider
-              raw_output: false
             field_all_games_category_export:
               alias: all_games_categories
+              raw_output: false
+            field_provider_product_export:
+              alias: ''
               raw_output: false
       pager:
         type: full

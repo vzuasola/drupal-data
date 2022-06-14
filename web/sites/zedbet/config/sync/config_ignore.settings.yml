@@ -12,5 +12,7 @@ ignored_config_entities:
   24: core.entity_view_display.zedbet_front_block
   26: 'webcomposer_form_manager.*'
   28: 'registration_config.*'
+  29: '*.zedbet_payments.*'
+  30: 'zedbet_footer_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
