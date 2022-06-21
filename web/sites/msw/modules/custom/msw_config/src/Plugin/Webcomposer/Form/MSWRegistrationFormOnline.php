@@ -926,7 +926,14 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'Terms and Conditions',
           'title' => 'Terms and Conditions Title',
           'type' => 'checkbox',
-          'required' => TRUE,
+          'settings' => [
+            'label' => [
+              '#title' => 'Terms and Conditions Markup',
+              '#type' => 'textarea',
+              '#description' => 'Terms and Conditions',
+              '#default_value' => 'I am at least 21 years old and have read and accepted the Terms and Conditions.',
+            ],
+          ],
         ],
 
         'terms_and_conditions_markup' => [
@@ -946,7 +953,14 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'Citizenship',
           'title' => 'Citizenship Title',
           'type' => 'checkbox',
-          'required' => TRUE,
+          'settings' => [
+            'label' => [
+              '#title' => 'Citizenship Markup',
+              '#type' => 'textarea',
+              '#description' => 'Citizenship',
+              '#default_value' => 'I confirm I am NOT a Philippine Government Employee.',
+            ],
+          ],
         ],
 
         'citizenship_markup' => [
@@ -966,9 +980,16 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'Awareness',
           'title' => 'Awareness Title',
           'type' => 'checkbox',
-          'required' => TRUE,
+          'settings' => [
+            'label' => [
+              '#title' => 'Awareness Markup',
+              '#type' => 'textarea',
+              '#description' => 'Awareness',
+              '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',
+            ],
+          ],
         ],
-
+        
         'awareness_markup' => [
           'name' => 'Awareness Markup',
           'type' => 'markup',
