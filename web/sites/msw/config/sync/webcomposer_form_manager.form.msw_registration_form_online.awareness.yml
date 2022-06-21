@@ -1,5 +1,5 @@
 field_settings:
-  markup: "<input type=\"checkbox\" id=\"RegisterFormOnline_awareness\" name=\"RegisterFormOnline[awareness]\" value=\"1\">\r\n<p>I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.</p>"
+  label: ''
 field_validations:
   required:
     enable: 1
