@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.games.field_available_on_tablet
     - field.field.node.games.field_disable_in_tablet
     - field.field.node.games.field_end_date
+    - field.field.node.games.field_game_code
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
     - field.field.node.games.field_game_info_id
@@ -79,6 +80,8 @@ third_party_settings:
       children:
         - field_game_provider
         - field_playing_type
+        - field_game_code
+        - field_use_lobby
       parent_name: ''
       weight: 9
       format_type: tab
@@ -154,6 +157,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_game_code:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_game_image:
     weight: 12
