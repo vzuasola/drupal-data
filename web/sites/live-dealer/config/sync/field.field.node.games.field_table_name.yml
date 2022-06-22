@@ -10,7 +10,7 @@ field_name: field_table_name
 entity_type: node
 bundle: games
 label: 'Table Name/Launch Alias'
-description: "Use this field to for Direct Table Launch the following game integrations:\r\n<ul>\r\n<li>Ezugi - Please provide table ID</li>\r\n<li>Playtech - Please provide launch alias</li>\r\n</ul>"
+description: "Use this field to for Direct Table Launch the following game integrations:\r\n<ul>\r\n<li>Ezugi - Please provide table ID</li>\r\n<li>Playtech - Please provide launch alias</li>\r\n<li>Voidbridge - Please provide launch alias and table Id</li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }
