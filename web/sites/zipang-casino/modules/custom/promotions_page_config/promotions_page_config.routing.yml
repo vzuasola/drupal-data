@@ -1,0 +1,7 @@
+promotions_page_config.admin_settings:
+  path: 'admin/config/webcomposer/custom'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Promotions Page Configuration'
+  requirements:
+    _permission: 'administer site configuration'
