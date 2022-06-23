@@ -924,13 +924,39 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
         'terms_and_conditions' => [
           'name' => 'Terms and Conditions',
-          'type' => 'markup',
+          'type' => 'checkbox',
           'settings' => [
-            'markup' => [
+            'label' => [
               '#title' => 'Terms and Conditions',
               '#type' => 'textarea',
               '#description' => 'Terms and Conditions',
-              '#default_value' => '<p class="msw-registration-online-terms-conditions">I am at least 18 years old and have read and accepted the Terms and Conditions.</p>',
+              '#default_value' => 'I am at least 21 years old and have read and accepted the Terms and Conditions.',
+            ],
+          ],
+        ],
+
+        'citizenship' => [
+          'name' => 'Citizenship',
+          'type' => 'checkbox',
+          'settings' => [
+            'label' => [
+              '#title' => 'Citizenship',
+              '#type' => 'textarea',
+              '#description' => 'Citizenship',
+              '#default_value' => 'I confirm I am NOT a Philippine Government Employee.',
+            ],
+          ],
+        ],
+
+        'awareness' => [
+          'name' => 'Awareness',
+          'type' => 'checkbox',
+          'settings' => [
+            'label' => [
+              '#title' => 'Awareness',
+              '#type' => 'textarea',
+              '#description' => 'Awareness',
+              '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',
             ],
           ],
         ],
