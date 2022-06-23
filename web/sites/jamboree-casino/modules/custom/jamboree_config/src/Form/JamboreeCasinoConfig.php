@@ -137,6 +137,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['promotions_page'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Page Form Title'),
+      '#default_value' => $this->get('promotions_page'),
+      '#translatable' => TRUE,
+    ];
+
     $form['page_setting']['jackpot'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Jackpot Page Title'),
@@ -287,6 +294,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Contact'),
       '#default_value' => $this->get('contact_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['promotions_page_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Page Form'),
+      '#default_value' => $this->get('promotions_page_breadcrumb'),
       '#translatable' => TRUE,
     ];
 

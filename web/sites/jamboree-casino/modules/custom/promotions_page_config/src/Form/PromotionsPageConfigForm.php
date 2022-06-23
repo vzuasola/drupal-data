@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "promotions_page_config",
  *   route = {
- *     "title" = "Promotions Page Configuration",
+ *     "title" = "Promotions Page Configurationz",
  *     "path" = "/admin/config/webcomposer/config/promotions_page_config",
  *   },
  *   menu = {
