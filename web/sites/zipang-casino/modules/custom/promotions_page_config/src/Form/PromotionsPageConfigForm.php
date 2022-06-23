@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "promotions_page_config",
  *   route = {
  *     "title" = "Promotions Page Configuration",
- *     "path" = "/admin/config/webcomposer/config/cpromotions_page_config",
+ *     "path" = "/admin/config/webcomposer/config/promotions_page_config",
  *   },
  *   menu = {
  *     "title" = "Promotions Page configuration",
