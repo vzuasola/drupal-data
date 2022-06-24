@@ -172,3 +172,4 @@ if ($env && $env == 'local') {
 
   $config['system.logging']['error_level'] = 'verbose';
 }
+$config['system.logging']['error_level'] = 'verbose';
