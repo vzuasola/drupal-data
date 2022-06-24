@@ -922,6 +922,19 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'legal_agreements' => [
+          'name' => 'Legal Agreements',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Legal Agreements',
+              '#type' => 'textarea',
+              '#description' => 'Legal Agreements',
+              '#default_value' => 'Legal Agreements',
+            ],
+          ],
+        ],
+
         'terms_and_conditions' => [
           'name' => 'Terms and Conditions',
           'title' => 'Terms and Conditions Title',
