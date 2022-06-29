@@ -73,6 +73,15 @@ class ContactUsConfigForm extends FormBase {
       '#format' => $body_content['format'],
       '#translatable' => TRUE,
     ];
+
+    $footer_blurb = $this->get('footer_blurb');
+    $form['content']['footer_blurb'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Footer Blurb'),
+      '#default_value' => $footer_blurb['value'],
+      '#format' => $footer_blurb['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
