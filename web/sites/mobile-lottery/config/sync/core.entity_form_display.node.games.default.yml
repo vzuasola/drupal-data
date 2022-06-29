@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_game_code
     - field.field.node.games.field_game_landscape_size
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.games.field_native_app
     - field.field.node.games.field_target
     - field.field.node.games.field_use_game_loader
+    - field.field.node.games.field_use_lobby
     - image.style.thumbnail
     - node.type.games
   module:
@@ -24,7 +26,6 @@ dependencies:
     - image
     - path
     - scheduler
-    - text
 third_party_settings:
   field_group:
     group_game_thumbnail_settings:
@@ -46,8 +47,10 @@ third_party_settings:
     group_game_provider_settings:
       children:
         - field_game_provider
+        - field_game_code
         - field_target
         - field_use_game_loader
+        - field_use_lobby
         - field_native_app
       parent_name: ''
       weight: 2
@@ -83,6 +86,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_game_code:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_landscape_size:
     weight: 125
     settings: {  }
@@ -144,7 +155,7 @@ content:
     type: datetime_default
     region: content
   field_native_app:
-    weight: 18
+    weight: 20
     settings:
       display_label: true
     third_party_settings:
@@ -169,13 +180,20 @@ content:
     type: boolean_checkbox
     region: content
   field_target:
-    weight: 16
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_use_game_loader:
-    weight: 17
+    weight: 18
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_use_lobby:
+    weight: 19
     settings:
       display_label: true
     third_party_settings: {  }

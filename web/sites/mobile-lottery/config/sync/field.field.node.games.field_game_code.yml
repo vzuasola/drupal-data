@@ -1,0 +1,19 @@
+uuid: 8583545c-50c3-42ff-8bf9-8efbc90bed24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_code
+    - node.type.games
+id: node.games.field_game_code
+field_name: field_game_code
+entity_type: node
+bundle: games
+label: 'Game Code'
+description: "<ul>\r\n<li>JSystem game code format: gameCode|lottery</li>\r\n</ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 16d7c0a3-87a5-41ef-b10f-24cfe17c1a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_use_lobby
+    - node.type.games
+id: node.games.field_use_lobby
+field_name: field_use_lobby
+entity_type: node
+bundle: games
+label: 'Use Lobby'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
