@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\contact_us_config\Form;
+namespace Drupal\promotions_page_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,25 +9,25 @@ use Drupal\Core\Form\FormStateInterface;
  * Description form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "contact_us_config",
+ *   id = "promotions_page_config",
  *   route = {
- *     "title" = "Contact Us Configuration",
- *     "path" = "/admin/config/webcomposer/config/contact_us_config",
+ *     "title" = "Promotions Page Configuration",
+ *     "path" = "/admin/config/webcomposer/config/promotions_page_config",
  *   },
  *   menu = {
- *     "title" = "Contact us configuration",
- *     "description" = "Configure Contact us Blurb, Success Page and Email Template",
- *     "parent" = "contact_us_config.list",
+ *     "title" = "Promotions Page configuration",
+ *     "description" = "Configure Promotions Page Blurb, Success Page and Email Template",
+ *     "parent" = "promotions_page_config.list",
  *     "weight" = 30
  *   },
  * )
  */
-class ContactUsConfigForm extends FormBase {
+class PromotionsPageConfigForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['contact_us_config.contact_us_configuration'];
+    return ['promotions_page_config.promotions_page_configuration'];
   }
 
   /**
@@ -39,9 +39,9 @@ class ContactUsConfigForm extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
-    $this->contactBlurb($form);
-    $this->contactSuccess($form);
-    $this->contactSettings($form);
+    $this->promotionsBlurb($form);
+    $this->promotionsSuccess($form);
+    $this->promotionsSettings($form);
 
     return $form;
   }
@@ -49,17 +49,17 @@ class ContactUsConfigForm extends FormBase {
   /**
    *
    */
-  private function contactBlurb(array &$form) {
+  private function promotionsBlurb(array &$form) {
     $form['content'] = [
       '#type' => 'details',
-      '#title' => t('Contact Us Blurb'),
+      '#title' => t('Promotions Page Blurb'),
       '#group' => 'advanced',
     ];
 
     $form['content']['page_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => $this->t('Adds page title to the contact us page.'),
+      '#description' => $this->t('Adds page title to the promotions page.'),
       '#default_value' => $this->get('page_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -87,17 +87,17 @@ class ContactUsConfigForm extends FormBase {
   /**
    *
    */
-  private function contactSuccess(array &$form) {
+  private function promotionsSuccess(array &$form) {
     $form['success'] = [
       '#type' => 'details',
-      '#title' => t('Contact Us Success Page'),
+      '#title' => t('Promotions Success Page'),
       '#group' => 'advanced',
     ];
 
     $form['success']['success_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => $this->t('Adds page title to the contact us success message.'),
+      '#description' => $this->t('Adds page title to the promotions page success message.'),
       '#default_value' => $this->get('success_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -116,17 +116,17 @@ class ContactUsConfigForm extends FormBase {
   /**
    *
    */
-  private function contactSettings(array &$form) {
+  private function promotionsSettings(array &$form) {
     $form['settings'] = [
       '#type' => 'details',
-      '#title' => t('Contact Us Form Settings'),
+      '#title' => t('Promotions Page Form Settings'),
       '#group' => 'advanced',
     ];
 
     $form['settings']['form_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => $this->t('Adds page title to the contact us form.'),
+      '#description' => $this->t('Adds page title to the promotions page form.'),
       '#default_value' => $this->get('form_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -156,7 +156,7 @@ class ContactUsConfigForm extends FormBase {
     $form['settings']['form_button'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Button Label'),
-      '#description' => $this->t('Adds button label to the contact us form.'),
+      '#description' => $this->t('Adds button label to the promotions page form.'),
       '#default_value' => $this->get('form_button'),
       '#required' => TRUE,
       '#translatable' => TRUE,

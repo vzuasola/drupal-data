@@ -9,6 +9,7 @@ ignored_config_entities:
   14: 'jamboree_config.*'
   16: 'webcomposer_form_manager.form.*'
   18: 'contact_us_config.*'
+  19: 'promotions_page_config.*'
   20: 'jamboree_canonical.*'
   22: config_ignore.settings
   24: 'webcomposer_config.*'
