@@ -11,9 +11,9 @@ dependencies:
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
     - field.field.node.game.field_game_keywords
+    - field.field.node.game.field_game_platform
     - field.field.node.game.field_game_provider
     - field.field.node.game.field_game_title
-    - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
     - field.field.node.game.field_jackpot_code
     - field.field.node.game.field_jackpot_ticker
@@ -38,12 +38,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_fim:
-    weight: 111
+    weight: 11
     label: above
     settings:
       format: default
@@ -53,7 +53,7 @@ content:
     type: boolean
     region: content
   field_game_code:
-    weight: 109
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -61,7 +61,7 @@ content:
     type: string
     region: content
   field_game_filter:
-    weight: 113
+    weight: 13
     label: above
     settings:
       link: true
@@ -69,7 +69,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_image:
-    weight: 102
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -78,14 +78,14 @@ content:
     type: image
     region: content
   field_game_info:
-    weight: 103
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_game_info_toggle:
-    weight: 104
+    weight: 4
     label: above
     settings:
       format: default
@@ -94,8 +94,15 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_game_platform:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_game_provider:
-    weight: 116
+    weight: 16
     label: above
     settings:
       link: true
@@ -103,21 +110,14 @@ content:
     type: entity_reference_label
     region: content
   field_game_title:
-    weight: 105
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_game_type:
-    weight: 110
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_jackpot_ticker:
-    weight: 112
+    weight: 12
     label: above
     settings:
       thousand_separator: ''
@@ -126,14 +126,14 @@ content:
     type: number_integer
     region: content
   field_meta_tags:
-    weight: 114
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_play_for_fun_toggle:
-    weight: 107
+    weight: 6
     label: above
     settings:
       format: default
@@ -143,7 +143,7 @@ content:
     type: boolean
     region: content
   field_preview_display_only:
-    weight: 115
+    weight: 15
     label: above
     settings:
       format: default
@@ -153,7 +153,7 @@ content:
     type: boolean
     region: content
   field_ribbon_configuration:
-    weight: 108
+    weight: 7
     label: above
     settings:
       link: true
@@ -161,8 +161,10 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_game_keywords: true
   field_games_category: true

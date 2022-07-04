@@ -1,22 +1,22 @@
-uuid: 7cc6687f-fea3-4d6c-b4fb-b21a705280b2
+uuid: 4f4ce64a-952b-49b0-b4ae-2c5695e83205
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_game_type
-field_name: field_game_type
+id: node.field_game_platform
+field_name: field_game_platform
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: '0'
-      label: HTML5
+      value: ngm
+      label: NGM
     -
-      value: '1'
-      label: FLASH
+      value: live
+      label: LIVE
   allowed_values_function: ''
 module: options
 locked: false
