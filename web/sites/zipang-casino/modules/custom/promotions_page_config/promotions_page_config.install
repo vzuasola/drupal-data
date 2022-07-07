@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function promotions_page_config_uninstall() {
+  $keys = [
+    'promotions_page_config.promotions_page_configuration',
+    'rest.resource.promotions_page_config_resource'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

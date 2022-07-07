@@ -6,32 +6,32 @@ url:
     en: en
     zh-hans: sc
     th: th
-    ko: kr
+    zh-hant: ch
     vi: vn
     id: id
-    lo: lo
-    km: km
-    bu: bu
-    pt-br: pt
-    es: es
-    ja: ja
-    zh-hant: ch
     hi: hi
+    ja: jp
+    ko: kr
+    es: es
+    pt-br: pt
+    lo: lo
+    bu: bu
+    km: km
   domains:
     en: ''
     zh-hans: ''
     th: ''
-    ko: ''
+    zh-hant: ''
     vi: ''
     id: ''
-    lo: ''
-    km: ''
-    bu: ''
-    pt-br: ''
-    es: ''
-    ja: ''
-    zh-hant: ''
     hi: ''
+    ja: ''
+    ko: ''
+    es: ''
+    pt-br: ''
+    lo: ''
+    bu: ''
+    km: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

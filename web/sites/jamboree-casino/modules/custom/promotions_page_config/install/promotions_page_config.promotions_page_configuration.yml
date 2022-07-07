@@ -9,9 +9,6 @@ success_title: 'Success Title'
 success_message:
   value: "<p>Success Content</p>\r\n"
   format: basic_html
-footer_blurb:
-  value: "<p>Footer Blurb Content</p>\r\n"
-  format: basic_html
 email_template: ''
 email_from: ''
 generic_error: ''
