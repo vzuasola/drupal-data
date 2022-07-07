@@ -1,0 +1,5 @@
+name: Nextbet Logo Upload
+type: module
+description: Nextbet Logo Upload specific configurations
+core: 8.x
+package: Web Composer
