@@ -1,0 +1,20 @@
+uuid: a310e4aa-c7c2-4f0b-803c-d15ba4538f22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_table_id
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_table_id
+field_name: field_table_id
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Table ID/ Launch Alias'
+description: "Use this field to for Direct Table Launch the following game integrations:\r\n<ul>\r\n<li>Ezugi - Please provide table ID</li>\r\n<li>Playtech - Please provide launch alias</li>\r\n<li>Voidbridge - Please provide table ID and check \"Use Game Lobby\"</li>\r\n</ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
