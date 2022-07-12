@@ -48,7 +48,6 @@ class MobileNextbetLogoUploadForm extends FormBase
       '#upload_validators' => [
         'allowed_image_width_height' => ['142x43', '135x41', '128x39'],
         'file_validate_extensions' => ['gif png jpg jpeg svg'],
-        'file_validate_is_image' => [],
         'file_validate_unique' => [],
       ],
     ];
