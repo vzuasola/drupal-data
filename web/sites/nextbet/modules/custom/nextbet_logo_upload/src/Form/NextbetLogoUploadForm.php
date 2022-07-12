@@ -49,12 +49,10 @@ class NextbetLogoUploadForm extends FormBase
       '#translatable' => true,
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg svg'],
-        'file_validate_is_image' => [],
         'allowed_image_heights' => ['50', '55', '60'],
         'file_validate_unique' => [],
       ],
     ];
-    // dpm($form);
 
     $form['nextbet_logo_upload_alt'] = [
       '#name' => 'nextbet_logo_upload_alt',
