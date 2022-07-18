@@ -1,0 +1,23 @@
+uuid: a5a93d7a-75f2-4ff0-97d4-08dd9086c666
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enable_game_launch
+    - node.type.promotion
+id: node.promotion.field_enable_game_launch
+field_name: field_enable_game_launch
+entity_type: node
+bundle: promotion
+label: 'Enable Game Launch'
+description: "Tick to enable game launching via Promotion Banner. (Pre-Login and Post-Login) <br>\r\nAdd the game launch URL in Banner URL field."
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
