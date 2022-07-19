@@ -1,0 +1,7 @@
+uuid: 0931a691-d5e3-4d6b-bac6-f2892f4f4aac
+langcode: en
+status: true
+dependencies: {  }
+id: promotion_games_list
+label: 'Promotion Games List'
+behavior_plugins: {  }
