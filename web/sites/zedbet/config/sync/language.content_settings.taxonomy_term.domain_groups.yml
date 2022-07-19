@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: aod9DXcLsMPrhctj0fGMevbz1MworInCTHMvO3_L67k
 id: taxonomy_term.domain_groups

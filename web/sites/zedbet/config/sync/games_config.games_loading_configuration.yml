@@ -7,4 +7,3 @@ format: null
 loading_error_message:
   value: "<p class=\"mt-80 text-center\">&nbsp;\r\n</p>\r\n<p><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/images/zedbet_logo.png\" width=\"230\" />\r\n</p>\r\n<p><span class=\"text-grey\">An unexpected error occurred.\r\n  <br />\r\n  This window will close in few seconds.</span>\r\n</p>\r\n<p><span class=\"text-grey\">Please try again soon.</span>\r\n</p>\r\n"
   format: basic_html
-

@@ -1,0 +1,18 @@
+uuid: 7c920a86-cb6c-46d9-b5a5-025bb87243e1
+langcode: th
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_integrations
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.product_integrations
+target_entity_type_id: taxonomy_term
+target_bundle: product_integrations
+default_langcode: site_default
+language_alterable: false

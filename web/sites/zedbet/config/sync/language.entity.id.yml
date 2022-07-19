@@ -8,6 +8,7 @@ third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
     webcomposer_language_custom_label: 'Bahasa Indonesia'
+    webcomposer_language_hidden: 1
 id: id
 label: 'Bahasa Indonesia'
 direction: ltr

@@ -26,4 +26,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_lobby_meta_tags: true
+  field_lobby_title: true
   langcode: true
