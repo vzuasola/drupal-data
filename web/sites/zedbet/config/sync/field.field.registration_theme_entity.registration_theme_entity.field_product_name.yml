@@ -13,7 +13,7 @@ bundle: registration_theme_entity
 label: 'Product Name'
 description: 'iCore product name. Please do not update or delete.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

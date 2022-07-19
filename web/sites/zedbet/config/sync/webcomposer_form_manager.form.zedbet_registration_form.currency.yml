@@ -1,12 +1,12 @@
 field_settings:
   label: Currency
   placeholder: Currency
-  choices: "2|USD\r\n103|THB\r\n134|TUS"
-  portal_id_to_currency_mapping: "285|2,103,134\r\n289|2,103,134\r\n286|2,103,134\r\n282|2,103,134"
+  choices: "103|THB\r\n134|USDT"
+  portal_id_to_currency_mapping: "285|103,134\r\n284|103,134\r\n282|103,134"
 field_validations:
   required:
     enable: 1
-    error_message: 'Please select your preferred Currency.'
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'

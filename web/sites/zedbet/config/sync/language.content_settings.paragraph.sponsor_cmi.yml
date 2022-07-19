@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: LaJKo1Rcum7G5V-2HonQG91xpIraLUlECjEgxRaFZE4
 id: paragraph.sponsor_cmi

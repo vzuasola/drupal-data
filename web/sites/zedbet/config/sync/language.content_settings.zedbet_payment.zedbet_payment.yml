@@ -1,0 +1,19 @@
+uuid: ea809253-e4eb-4ca2-9aa3-6ba1c5c50cd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zedbet_payments
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: hx77rAZiLslEINyBF5BN-9QFnlY2UcV1FKP3YJ6fsUQ
+id: zedbet_payment.zedbet_payment
+target_entity_type_id: zedbet_payment
+target_bundle: zedbet_payment
+default_langcode: site_default
+language_alterable: true

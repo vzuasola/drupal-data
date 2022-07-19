@@ -1,0 +1,36 @@
+change_password__active_tab: edit-field-success-message-group
+cp_page_title: เปลี่ยนรหัสผ่าน
+integration_error: "INTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)\r\nCHANGE_PASSWORD_FAILED|เกิดข้อผิดพลาดในการเปลี่ยนรหัสผ่านของคุณ กรุณาลองอีกครั้งหรือคุณอาจติดต่อเรา: (รหัส: 800): <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> แชทสด </a> (Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|รหัสผ่านของคุณเปลี่ยนสำเร็จแล้ว."
+change_password_mobile_success_message: รหัสผ่านของคุณถูกเปลี่ยนเรียบร้อยแล้ว
+change_password_mobile_failed_message: 'เกิดข้อผิดพลาดในการเปลี่ยนรหัสผ่านของคุณ กรุณาลองอีกครั้งหรือคุณอาจติดต่อเรา: (รหัส: 800): <a href="/linkto:avaya" class="live-chat-popup-trigger"> แชทสด </a> (Code: 800)'
+profile__active_tab: edit-sms-configuration
+page_title: 'บัญชีของฉัน '
+welcome_text: ยินดีต้อนรับ
+product_menu_new_tag: ใหม่
+help_tooltip: ช่วยเหลือ
+error_mid_down: 'เกิดข้อผิดพลาด กรุณาลองอีกครั้งในภายหลัง'
+add_mobile_label: เพิ่มเบอร์มือถือ
+no_changed_detected_message: ไม่พบการเปลี่ยนแปลง
+my_profile_tab: ประวัติของฉัน
+change_password_tab: เปลี่ยนรหัสผ่าน
+contact_preference_yes_label: ใช่
+contact_preference_no_label: ไม่
+modal_preview_header: บันทึกการเปลี่ยนแปลงบัญชี
+modal_preview_top_blurb: กรุณาตรวจสอบรายการการเปลี่ยนแปลง
+modal_preview_current_label: ปัจจุบัน
+modal_preview_new_label: ใหม่
+modal_preview_bottom_blurb: กรอกรหัสผ่านของคุณเพื่อบันทึกการเปลี่ยนแปลงในบัญชีของคุณ
+server_side_validation: "INTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)\r\nUPDATE_PROFILE_SUCCESS|โปรไฟล์ของคุณได้รับการอัปเดตแล้ว.\r\nUPDATE_PROFILE_FAILED|เกิดข้อผิดพลาดในการอัปเดตโปรไฟล์ของคุณ กรุณาลองใหม่อีกครั้งหรือติดต่อได้ที่: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">แชทสด</a> หรือ <a href=\"mailto:ensupport@zedbet.com\">อีเมล.</a>  (รหัส:700)"
+enable_mobile_number_annotation: 1
+verify_text: ตรวจสอบ
+verification_code_required_message: จำเป็นต้องกรอก
+verification_code_numeric_message: 'กรุณาใส่ตัวอักษรตัวเลข เท่านั้น'
+verification_code_min_length_message: 'กรุณากรอกอย่างน้อย 6 ตัวอักษร'
+verification_code_max_length_message: 'กรุณากรอกไม่เกิน 6 ตัวอักษร'
+enable_sms_verification: 1
+modal_verify_header_text: ยืนยันหมายเลขโทรศัพท์มือถือ
+modal_verify_body_text: 'รหัสยืนยันได้ส่งถึงคุณทาง SMS แล้ว เพื่อให้การยืนยันหมายเลขโทรศัพท์ของคุณเสร็จสมบูรณ์ กรุณากรอกรหัส 6 หลักด้านล่างภายใน 10 นาที กรุณาตรวจสอบให้แน่ใจว่าคุณได้กรอกรูปแบบหมายเลขโทรศัพท์มือถือที่ถูกต้องพร้อมรหัสประเทศ (เช่น +60312345678) หากยังติดปัญหาอยู่ กรุณาติดต่อฝ่ายบริการลูกค้า'
+modal_verification_code_placeholder: รหัสยืนยัน
+modal_verification_resend_code_text: ส่งรหัสอีกครั้ง
+modal_verification_submit_text: ส่ง
+verification_code_response: "SMS_VERIFICATION_SUCCESS|รหัสยืนยันถูกส่งไปยังหมายเลขโทรศัพท์มือถือของคุณแล้ว\r\nSMS_VERIFICATION_FAILED|ขออภัย มีข้อผิดพลาดในการยืนยันหมายเลขโทรศัพท์มือถือของคุณ กรุณาลองใหม่อีกครั้งหรือติดต่อหาเราได้ที่: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">แชทสด</a> หรือ <a href=\"mailto:ensupport@nextbet.com\"> อีเมล </a> (รหัส:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|หมายเลขโทรศัพท์มือถือของคุณได้รับการยืนยันเรียบร้อยแล้ว\r\nSMS_VERIFICATION_SUBMIT_FAILED|คุณกรอกรหัสยืนยันที่ไม่ถูกต้อง กรุณาลองอีกครั้ง (รหัส:111)\r\nINTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)"

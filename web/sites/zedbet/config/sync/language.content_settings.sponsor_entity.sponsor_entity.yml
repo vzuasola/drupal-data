@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: 02YQL1LKnM9jqkM_UMaNg6UBqba0nSL1f7S50kb73Lk
 id: sponsor_entity.sponsor_entity

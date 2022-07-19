@@ -1,0 +1,29 @@
+advanced__active_tab: edit-mobile-login
+rememberme_label: จำยูสเซอร์เนม
+lightbox_blurb: 'ยังไม่ได้เป็นสมาชิก Zedbet?'
+login_page_blurb: ''
+error_message_restricted_country: 'คุณกำลังเข้าถึงเว็บไซต์ของเราจากพื้นที่ต้องห้าม กรุณาติดต่อฝ่ายบริการลูกค้าแชทสดของเรา'
+autologout_box_content:
+  format: basic_html
+  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+mobile_login_button_label: เข้าสู่ระบบ/สมัคร
+mobile_cant_login_url: ''
+username_placeholder: ยูสเซอร์เนม
+password_placeholder: รหัสผ่าน
+login_bottom_label: เข้าสู่ระบบ
+error_message_blank_username: กรุณากรอกยูสเซอร์เนม
+error_message_blank_password: กรุณากรอกรหัสผ่าน
+error_message_blank_passname: กรุณากรอกยูสเซอร์เนมและรหัสผ่าน
+error_message_invalid_passname: 'ขออภัย ยูสเซอร์เนม และ รหัสผ่าน ที่คุณกรอกไม่ตรงกัน กรุณาลองอีกครั้ง'
+error_message_service_not_available: ไม่มีให้บริการ
+error_message_account_suspended: 'บัญชีของคุณถูกปิด กรุณาติดต่อฝ่ายบริการลูกค้าแชทสด'
+error_message_account_locked: 'บัญชีของคุณถูกล็อคเนื่องจากใส่รหัสผิดหลายครั้ง กรุณาติดต่อฝ่ายบริการลูกค้าแชทสด'
+autologout_box_title: 'แจ้งเตือน '
+affirmative_button_text: ใช่
+negative_button_text: ไม่
+notification_title: 'แจ้งเตือน '
+notification_window_title: 'แจ้งเตือน '
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

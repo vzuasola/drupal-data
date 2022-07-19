@@ -1,4 +1,4 @@
-uuid: 1dac4f07-fa02-45c9-ae93-81d7f5fdcb08
+uuid: ec46853d-1266-4acd-8b84-c4fc3d7510ec
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: node.lobby_pages
 target_entity_type_id: node
 target_bundle: lobby_pages

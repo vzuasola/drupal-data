@@ -6,8 +6,9 @@ dependencies:
     - webcomposer_language_hierarchy
 third_party_settings:
   webcomposer_language_hierarchy:
-    webcomposer_fallback_langcode: ''
+    webcomposer_fallback_langcode: site_default_language
     webcomposer_language_custom_label: 'English (Asia)'
+    webcomposer_language_hidden: 0
 _core:
   default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
 id: en

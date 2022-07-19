@@ -4,11 +4,11 @@ form_settings:
 weights:
   back_button:
     weight: '-20'
-  breakline_3:
+  breakline_2:
     weight: '-19'
   ioblackbox:
     weight: '-18'
-  breakline_2:
+  breakline_1:
     weight: '-17'
   username:
     weight: '-16'
@@ -18,7 +18,7 @@ weights:
     weight: '-14'
   mobile_number:
     weight: '-13'
-  breakline_1:
+  breakline_3:
     weight: '-12'
   first_name:
     weight: '-11'

@@ -1,3 +1,12 @@
 read_more: 'More Info'
 countdown: '{days} Days, {hours} Hours remaining'
 all_text: All
+advanced__active_tab: edit-custom
+browser_title: title
+exception_title: ''
+file_image_exception: {  }
+exception_content:
+  value: ''
+  format: basic_html
+value: null
+format: null

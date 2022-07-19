@@ -3,11 +3,11 @@ cp_page_title: 'Change Password'
 integration_error: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nCHANGE_PASSWORD_FAILED|There was an error changing your password.  Please try again or you may contact us: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> Live Chat </a> (Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|Your password has been successfully changed."
 change_password_mobile_success_message: 'Your password has been successfully changed.'
 change_password_mobile_failed_message: 'There was an error changing your password.  Please try again or you may contact us: <a href="/linkto:avaya" class="live-chat-popup-trigger"> Live Chat </a> (Code: 800)'
-profile__active_tab: edit-sms-configuration
+profile__active_tab: edit-header-configuration
 page_title: 'My Profile'
-welcome_text: 'Welcome text lorem ipsum dolidr'
+welcome_text: 'Welcome to Zedbet, World''s leading online betting site to some of the best gaming products'
 product_menu_new_tag: New
-help_tooltip: 'Hlep tooltip lorem ipsum dolir si'
+help_tooltip: 'Help '
 error_mid_down: 'MID is down error message'
 add_mobile_label: 'Add Number'
 no_changed_detected_message: 'No changed detected'
@@ -22,7 +22,7 @@ modal_preview_top_blurb: 'Please review list of changes.'
 modal_preview_current_label: Current
 modal_preview_new_label: New
 modal_preview_bottom_blurb: 'Enter your password to save changes to your account'
-server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@nextbet.com\">Email.</a> (Code: 700)"
+server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@zedbet.com\">Email.</a> (Code: 700)"
 enable_mobile_number_annotation: 1
 enable_sms_verification: 1
 verify_text: Verify
@@ -31,7 +31,7 @@ modal_verify_body_text: 'A verification code has been sent to you via SMS. To co
 modal_verification_code_placeholder: 'Verification Code'
 modal_verification_resend_code_text: 'Resend code'
 modal_verification_submit_text: Submit
-verification_code_response: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@nextbet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
+verification_code_response: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@zedbet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
 verification_code_required_message: 'This is a required field.'
 verification_code_numeric_message: 'Field should be numeric.'
 verification_code_min_length_message: 'Please enter at least 6 characters.'
