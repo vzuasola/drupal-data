@@ -1,4 +1,4 @@
-uuid: 00a2aea7-f3ae-4893-bd0f-3f163d728fee
+uuid: 3ff0042e-101e-41f0-a460-3c55fc2cad3e
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,6 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-_core:
-  default_config_hash: dZqPln9e6lj9_xwCokP2j9oGJkh-nRZ56O1cFt5BZ54
 id: zedbet_front_block.zedbet_front_block
 target_entity_type_id: zedbet_front_block
 target_bundle: zedbet_front_block

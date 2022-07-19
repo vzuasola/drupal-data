@@ -1,4 +1,4 @@
-games_configuration_tab__active_tab: edit-thumbnail-group
+games_configuration_tab__active_tab: edit-category-group
 game_promotion_link: '{domain:entry}/{lang}/promotions[query:(product=slots&{tracking})]'
 game_promotion_link_target: _blank
 game_real_play_text: 'Play For Real'
@@ -9,7 +9,7 @@ favorites_text: Favorites
 recently_played_text: 'Recently Played'
 allgames_categories_text: All
 disable_jackpot_ticker: 0
-play_text: 'PLAY NOW OK'
+play_text: 'PLAY NOW'
 play_for_fun_text: 'Free Play'
 game_info_text: 'More info'
 freeplay_lightbox_title: NOTIFICATION

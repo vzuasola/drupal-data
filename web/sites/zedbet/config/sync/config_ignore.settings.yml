@@ -6,14 +6,10 @@ ignored_config_entities:
   8: 'filter.*'
   10: 'language.*'
   12: 'devel.*'
-  18: 'views.view.*'
-  20: 'core.base_field_override.zedbet_front_block.*'
-  22: 'core.entity_form_display.zedbet_front_block.*'
-  24: core.entity_view_display.zedbet_front_block
-  26: 'webcomposer_form_manager.*'
-  28: 'registration_config.*'
-  30: '*.zedbet_payments.*'
-  32: 'zedbet_footer_config.*'
-  34: 'account_config.*'
+  14: 'views.view.*'
+  16: 'core.base_field_override.zedbet_front_block.*'
+  18: 'core.entity_form_display.zedbet_front_block.*'
+  20: core.entity_view_display.zedbet_front_block
+  22: 'registration_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

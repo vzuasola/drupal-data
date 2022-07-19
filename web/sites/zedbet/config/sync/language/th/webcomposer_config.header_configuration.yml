@@ -1,0 +1,45 @@
+header_settings_tab__active_tab: edit-balance-group
+logo_title: 'Zedbet '
+logo_url: '{domain:zedbet}/{domain:lang_token}/entry[query:({tracking})]'
+mobile_logo_url: ''
+registration_link: '{domain:zedbet}/{domain:lang_token}/join/{product:regtheme:name}[query:(regvia={product:regvia:id}&{tracking})]'
+registration_link_mobile: ''
+capslock_notification: แคปล็อคเปิดอยู่
+login_join_now_text: 'mob join now text'
+default_cashier_link: '{domain:cashier_domain}/c/zedbet/{domain:cashier_lang}'
+cashier_mapping: ''
+default_mcashier_link: /
+mcashier_link_target: _self
+mcashier_mapping: ''
+balance_label_override: ''
+currency_balance_mapping: "5|THB,TUS\r\n16|THB,TUS"
+excluded_balance_mapping: ''
+currency_label_mapping: ''
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>This is a critical announcement test test test</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
+lobby_page_title: 'เดิมพันออนไลน์ - เดิมพันกีฬา เล่นคาสิโนออนไลน์ และดีลเลอร์สดที่ Zedbet'
+promotion_page_title: โปรโมชั่น
+links_title: ลิงก์ด่วน
+join_now_text: สมัครสมาชิก
+join_now_link: 'https://qa1-www.elysium-dfbt.com/en/casino/join{tracking.token}'
+login_issue_text: เข้าสู่ระบบไม่ได้
+login_issue_link: '/{domain:zedbet}/{domain:lang_token}/cant-login[query:(regvia={product:regvia:id}&{tracking})]'
+product_balance_label: 'product balance label'
+total_balance_label: ยอดคงเหลือทั้งหมด
+balance_error_text: เกิดข้อผิดพลาดในการเรียกข้อมูล
+profile_icon_hover_text: บัญชีของฉัน
+cashier_icon_hover_text: แคชเชียร์
+product_menu_new_tag: ใหม่
+welcome_text: 'ยินดีต้อนรับ {username}'
+profile_link: '/{domain:zedbet}/{lang}/account[query:({tracking}&width=820&height=820)]'
+profile_logout_text: ออกจากระบบ
+balance_label_mapping: "5|คาสิโน\r\n16|กีฬา"
+balance_mapping: ''
+cashier_link: '{cashier}[query:(ticket={auth.token}&pid={product:cashier:id}&width=820&height=820&{tracking})]'
+balance_error_text_product: N/A

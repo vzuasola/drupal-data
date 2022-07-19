@@ -8,6 +8,7 @@ third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: ''
     webcomposer_language_custom_label: 简体中文
+    webcomposer_language_hidden: 1
 id: zh-hans
 label: 'Simplified Chinese'
 direction: ltr

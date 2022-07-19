@@ -1,0 +1,18 @@
+uuid: 1c02595e-4d97-43a7-a928-a5d2f65c7ae2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_integrations
+id: taxonomy_term.product_integrations.name
+field_name: name
+entity_type: taxonomy_term
+bundle: product_integrations
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
