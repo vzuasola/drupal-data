@@ -1,0 +1,9 @@
+unsupported_currency_configuration_form__active_tab: ''
+unsupported_currencies_title: 'Unsupported Currency'
+unsupported_currencies_message:
+  value: "<p>Sorry, your account currency is not supported by <b>{game_provider} </b>lobby.<br />\r\nPlease try other gaming room.</p>\r\n"
+  format: basic_html
+value: null
+format: null
+unsupported_currencies_button: OK
+game_provider_mapping: "allbet|Black Pearl Club [AB]\r\nasia_gaming|Diamond Club [AG]\r\nebet|Turquoise Club [EBET]\r\nevo_gaming|Sapphire Club [EVO]\r\ngold_deluxe|Topaz Club [GD]\r\ngpi|Opal Club [GPI]\r\nopus|Amethyst Club [OPUS]\r\nplaytech|Ruby Club [PT]\r\nsa_gaming|SA Gaming [SA]\r\ntgp|Jade Club [TGP]\r\nmicro_gaming|Micro Gaming [MG]\r\nwac|We Are Casino [WAC]\r\nezugi_gaming|Ezugi Gaming\r\ndafabetgames|Playtech\r\nskywind|Skywind\r\nvoidbridge|Voidbridge\r\ncq9|CQ9\r\njsystem|JSystem"
