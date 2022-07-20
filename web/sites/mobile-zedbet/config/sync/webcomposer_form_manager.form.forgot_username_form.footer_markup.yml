@@ -1,5 +1,5 @@
 field_settings:
-  markup: "<div><svg class=\"icon-exclamation\" viewbox=\"0 0 100 100\"><use xlink:href=\"#exclamation-rounded\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"></use></svg></div>\r\n\r\n<p>For any question or concerns please contact <a href=\"linkto:avaya\">Customer Support</a>.</p>\r\n"
+  markup: "<div><svg class=\"icon-exclamation\" viewbox=\"0 0 100 100\"><use xlink:href=\"#exclamation-rounded\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"></use></svg></div>\r\n\r\n<p>For any question or concerns please contact <a href=\"avaya\">Customer Support</a></p>\r\n"
 field_validations:
   required:
     enable: 0

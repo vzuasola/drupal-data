@@ -255,4 +255,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_success_message: true
+  field_success_message_color: true
   user_id: true

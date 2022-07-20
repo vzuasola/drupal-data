@@ -1,0 +1,8 @@
+advanced__active_tab: edit-not-found
+page_not_found_title: '404'
+page_not_found_content:
+  value: "<div class=\"page-404-text-area text-center\">\r\n  <h2 class=\"text-semibold\">อุ๊บส์ นั่นเป็นสิ่งที่ไม่คาดคิด.\r\n  </h2>\r\n  <p class=\"mb-5\">ไม่มีหน้านี้.\r\n  </p>\r\n  <p class=\"mb-5\">คุณอาจใช้ลิงก์ที่ไม่ถูกต้องหรือพิมพ์ที่อยู่ (URL) ไม่ถูกต้อง.\r\n  </p>\r\n  <p class=\"mb-5\">เราจะช่วยให้คุณไปถึง.\r\n  </p>\r\n</div>\r\n<div class=\"page-404-icons mt-20 mb-20\">\r\n  <ul style=\"overflow:visible;\">\r\n    <li class=\"dafa-sports\"><a class=\"mb-25\" href=\"/en/sports-df{legacy.params}{tracking.token}\"></a><span>กีฬา Zedbet</span></li>\r\n    <li class=\"live-dealer\"><a class=\"mb-25\" href=\"/en/live-dealer{legacy.params}{tracking.token}\"></a><span>ดีลเลอร์สด</span></li>\r\n  </ul>\r\n</div>\r\n"
+  format: basic_html
+ucp_content:
+  value: ''
+  format: basic_html

@@ -1,0 +1,43 @@
+field_settings:
+  markup: "การตั้งค่าการติดต่อ<hr>\r\n<div class=\"contact-preference-top-blurb text-center\">คุณต้องการรับข่าวสารโปรโมชั่น และข้อเสนอล่าสุดหรือไม่ </div>\r\n<div class=\"contact-preference-label text-center mt-10\">\r\n    <input type=\"checkbox\" id=\"ProfileForm_contact_preference\" name=\"MyProfileForm[contact_preference_field]\" class=\"field_contact_preference_field\" no_validate=\"no_validate\" enable_tooltip=\"0\" tooltip_blurb=\"test\" data_field=\"contact_preference_field\" value=\"1\">\r\n    <label for=\"ProfileForm_contact_preference\">\r\n    <span class=\"label-inwrapper text-14 text-right\">ใช่ข่าวสารโปรโมชั่น และข้อเสนอล่าสุด</span>\r\n    </label>\r\n</div>\r\n<div class=\"contact-preference-bottom-blurb text-center text-14 mt-10\">* อัปเดตโปรโมชั่น และข้อเสนอทั้งหมด จะถูกส่งไปยังอีเมลที่คุณลงทะเบียนไว้</div>"
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  must_not_match:
+    error_message: 'This must not match deafult.'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'
+  verify_password:
+    error_message: 'Password not match.'
+  allowed_date:
+    error_message: 'Date is not allowed.'

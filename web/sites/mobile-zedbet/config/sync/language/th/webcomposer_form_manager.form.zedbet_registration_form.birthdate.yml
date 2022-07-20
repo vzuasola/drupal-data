@@ -1,11 +1,11 @@
 field_settings:
-  label: 'Date of Birth'
+  label: วันเกิด
   placeholder: YYYY/MM/DD
   date-format: YYYY/MM/DD
   annotation: ''
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: จำเป็นต้องกรอก
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -43,4 +43,4 @@ field_validations:
   verify_password:
     error_message: 'Password not match.'
   allowed_date:
-    error_message: 'Please enter a valid date'
+    error_message: 'กรุณาใส่วันที่ ให้ถูกต้อง'

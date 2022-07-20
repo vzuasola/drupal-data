@@ -1,27 +1,29 @@
-advanced__active_tab: edit-login-form-error-messages-details
-rememberme_label: 'Remember Username TH'
-lightbox_blurb: 'Not yet a Zedbet member? TH'
+advanced__active_tab: edit-mobile-login
+rememberme_label: จำยูสเซอร์เนม
+lightbox_blurb: 'ยังไม่ได้เป็นสมาชิก Zedbet'
 login_page_blurb: ''
 error_message_restricted_country: ''
 autologout_box_content:
+  value: "<p>การใช้งานของคุณจะหมดเวลาใน {seconds} วินาที คุณต้องการดำเนินการต่อหรือไม่</p>\r\n"
   format: basic_html
-  value: "<p>Your session will expire in {seconds} seconds. Do you want to continue your session ? TH</p>\r\n"
 notification_content:
+  value: "<p>หมดเวลาการใช้งานของคุณ เนื่องจากไม่มีการใช้งาน</p>\r\n"
   format: basic_html
-  value: "<p>Your session has timed out due to inactivity. TH</p>\r\n"
-mobile_login_button_label: ''
+mobile_login_button_label: เข้าสู่ระบบ/สมัคร
 mobile_cant_login_url: ''
-username_placeholder: Username
-password_placeholder: 'Password TH'
-login_bottom_label: 'Login TH'
-error_message_blank_username: 'Username is required. TH'
-error_message_blank_password: 'Password is required. TH'
-error_message_blank_passname: 'Username and Password is required. TH'
-error_message_invalid_passname: 'Sorry, invalid username and/or password. Please try again. TH'
-error_message_service_not_available: 'Service not available. TH'
-error_message_account_suspended: 'Account locked. Please contact our customer support. TH'
-error_message_account_locked: 'Account locked. Please contact our customer support. TH'
-autologout_box_title: 'REMINDER TH'
-notification_title: 'Session Timeout TH'
-notification_window_title: 'Session Timeout TH'
+username_placeholder: ยูสเซอร์เนม
+password_placeholder: รหัสผ่าน
+error_message_invalid_passname: 'ขออภัย ยูสเซอร์เนม และ รหัสผ่าน ที่คุณกรอกไม่ตรงกัน กรุณาลองอีกครั้ง'
+error_message_service_not_available: ไม่มีให้บริการ
+error_message_account_suspended: 'บัญชีของคุณถูกปิด กรุณาติดต่อฝ่ายบริการลูกค้าแชทสด'
+error_message_account_locked: 'บัญชีของคุณถูกล็อคเนื่องจากใส่รหัสผิดหลายครั้ง กรุณาติดต่อฝ่ายบริการลูกค้าแชทสด'
+autologout_box_title: การแจ้งเตือน
+notification_title: หมดเวลาการใช้งาน
+notification_window_title: หมดเวลาการใช้งาน
 mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
+login_bottom_label: เข้าสู่ระบบ
+error_message_blank_username: กรุณากรอกยูสเซอร์เนม
+error_message_blank_password: กรุณากรอกรหัสผ่าน
+error_message_blank_passname: กรุณากรอกยูสเซอร์เนมและรหัสผ่าน
+affirmative_button_text: ใช่
+negative_button_text: ไม่

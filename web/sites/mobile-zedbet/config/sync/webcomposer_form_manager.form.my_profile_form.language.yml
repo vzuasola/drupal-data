@@ -1,6 +1,6 @@
 field_settings:
   label: Language
-  choices: "en-US|English\r\nth|Thai (ภาษาไทย)"
+  choices: "en-GB|English (Europe)\r\nth|Thai (ภาษาไทย)"
 field_validations:
   required:
     enable: 1
