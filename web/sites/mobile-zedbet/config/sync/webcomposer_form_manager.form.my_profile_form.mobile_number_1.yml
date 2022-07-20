@@ -2,8 +2,8 @@ field_settings:
   label: 'Mobile Number'
   placeholder: ''
   annotation: ''
-  tooltip-content: 'Enter your mobile number with country code (e.g. +60123456789) EN'
-  country_area_code_validation: "48|13|14|Please input an exact 11 characters\r\n208|12|12|Please input an exact 9 characters\r\n231|12|14|Please input 9-11 characters\r\n96|13|15|Please input 10-12 characters\r\n117|13|13|Please input an exact 10 characters\r\n100|13|13|Please input an exact 10 characters\r\n153|12|13|Please input 9-10 characters"
+  tooltip-content: 'Enter your mobile number with country code (e.g. +60123456789)'
+  country_area_code_validation: "48|13|14|Please enter a valid 13-14 digit mobile number.\r\n208|11|12|Please enter a valid 11-12 digit mobile number.\r\n231|11|14|Please enter a valid 11-14 digit mobile number.\r\n96|12|15|Please enter a valid 12-15 digit mobile number.\r\n117|12|13|Please enter a valid 12-13 digit mobile number.\r\n100|12|13|Please enter a valid 12-13 digit mobile number.\r\n153|11|13|Please enter a valid 11-13 digit mobile number."
 field_validations:
   required:
     enable: 1

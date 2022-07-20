@@ -55,7 +55,7 @@ field_validations:
       regex_value: ''
   valid_date:
     enable: 1
-    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
+    error_message: 'Please enter your Date of Birth in this format: YYYY/MM/DD'
   must_not_match:
     enable: 0
     error_message: 'This must not match deafult.'

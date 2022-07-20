@@ -2,7 +2,7 @@ field_settings:
   markup: "ฉันอายุมากกว่า 18 ปี และได้ทำการอ่านและตกลงยอมรับใน <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-mobile\"> ข้อกำหนดในการให้บริการ </a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-tablet\"> ข้อกำหนดในการให้บริการ </a>\r\n</u></strong>.\r\n\r\n"
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: จำเป็นต้องกรอก
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:

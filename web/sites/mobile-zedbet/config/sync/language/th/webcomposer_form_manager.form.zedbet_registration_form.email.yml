@@ -1,10 +1,10 @@
 field_settings:
-  label: Email
-  placeholder: Email
-  annotation: 'Please enter a valid email address to receive latest promotions, updates and exclusive offers. TH'
+  label: อีเมล
+  placeholder: อีเมล
+  annotation: 'กรุณากรอกที่อยู่อีเมล ที่ติดต่อได้ เพื่อรับข้อมูลโปรโมชั่น ข้อเสนอพิเศษล่าสุด'
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: จำเป็นต้องกรอก
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,11 +18,11 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Please enter a valid email address. (e.g. name@domain.com)'
+    error_message: กรุณาาระบุอีเมลที่ใช้งานได้จริง
   min_length:
-    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+    error_message: "กรุณาาระบุอีเมลที่ใช้งานได้จริง\r\n"
   max_length:
-    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+    error_message: กรุณาาระบุอีเมลที่ใช้งานได้จริง
   regex:
     error_message: 'This field only accepts specific characters.'
   valid_date:
@@ -32,7 +32,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: 'Email is already in use. Click <a href="{domain:mobile}/{lang}/cant-login" target="_blank">here</a> to retrieve username/password.'
+    error_message: 'อีเมลถูกใช้ไปแล้ว คลิก <a href="{domain:mobile}/{lang}/cant-login" target="_blank">ที่นี่</a> เพื่อกู้ ยูสเซอร์เนม/รหัสผ่าน'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:

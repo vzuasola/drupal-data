@@ -1,7 +1,7 @@
-join_now_text: 'Join Nows'
+join_now_text: 'Join Now'
 join_now_link: '{domain:registration_link}[query:(regvia=191&{tracking})]'
 login_issue_text: 'Cant login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '{domain:entry}/cant-login'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: 'Error Retrieving.'
@@ -10,10 +10,10 @@ cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
 welcome_text: '{username}'
 profile_link: '/my-account[query:({tracking})]'
-profile_logout_text: Logout
+profile_logout_text: 'Logout '
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Zedbet'
 critical_announcement: '0'
 critical_announcement_content:
   value: "<p>This is a critical announcement test test test</p>\r\n"
@@ -22,13 +22,13 @@ news_announcement: '0'
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-balance_label_mapping: "5|Common Wallet\r\n6|Sports\r\n7|AG Fish Hunter"
+balance_label_mapping: "5|Casino\r\n16|Zedbet Sports"
 balance_error_text_product: N/A
-header_settings_tab__active_tab: edit-welcome-text-group
+header_settings_tab__active_tab: edit-balance-group
 logo_title: 'Mobile Games at Zedbet'
 logo_url: ''
 mobile_logo_url: ''
-registration_link: '{domain:registration_link}[query:(regvia=191&{tracking})]'
+registration_link: '{domain:registration_link}[query:(regvia=289&{tracking})]'
 registration_link_mobile: ''
 password_mask_toggle: 0
 caps_lock_toggle: 0
@@ -44,10 +44,10 @@ balance_toggle: 0
 product_balance_label: Balance
 product_balance_id: ''
 total_balance_label: 'Total Balance:'
-balance_mapping: "5|Common Wallet\r\n6|Sports"
+balance_mapping: "5|Casino\r\n16|Zedbet Sports"
 balance_label_override: ''
-currency_balance_mapping: "5|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,MMK,KHR\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,MMK,KHR\r\n7|RMB"
-excluded_balance_mapping: '7'
+currency_balance_mapping: "5|THB,TUS\r\n6|THB,TUS"
+excluded_balance_mapping: ''
 currency_label_mapping: ''
 value: null
 format: null
@@ -57,7 +57,7 @@ logo_title_slots: 'Mobile Slots'
 logo_title_live_dealer: 'Mobile Live Dealer'
 logo_title_arcade: 'Mobile Arcade'
 mobile_remember: 'Remember Username'
-mobile_login_reg: 'Join Now'
+mobile_login_reg: Login/Join
 mobile_slot_title: 'Play mobile casino slots at Zedbet Mobile!'
 mobile_live_dealer_title: 'Zedbet offers a world class Live Dealer Casino experience!'
 mobile_arcade_title: 'Zedbet offers a variety of mobile arcade games!'

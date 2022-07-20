@@ -1,9 +1,9 @@
 lobby_infinite_scroll: 1
 more_provider_drawer: More
-title_provider_drawer: Providers
+title_provider_drawer: 'Game Providers'
 all_quicklaunch_title: All
 all_quicklaunch_alt: ''
 games_transfer_title: 'Instant Transfer'
-games_transfer_link: ''
+games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking}&transfer=1)]'
 transfer_link_target: _blank
-games_maintenance_text: 'Under maintenance'
+games_maintenance_text: 'ONGOING MAINTENANCE'

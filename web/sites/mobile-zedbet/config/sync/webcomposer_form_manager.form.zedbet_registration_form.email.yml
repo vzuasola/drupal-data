@@ -39,7 +39,7 @@ field_validations:
     error_message: 'Please enter a valid email address. (e.g. name@domain.com)'
   min_length:
     enable: 1
-    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+    error_message: "Please enter a valid email address. (e.g. name@domain.com) \r\n"
     parameters:
       length: '5'
   max_length:

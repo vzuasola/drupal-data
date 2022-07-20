@@ -1,4 +1,4 @@
 enable_localhost: 1
-whitelisted_domain: "mobile-zb-in1.elysium-dfbt.com\r\nmobile-zedbet-in1.elysium-dfbt.com\r\ncms-zedbet-in1.elysium-dfbt.com\r\nwww-zb-in1.elysium-dfbt.com"
+whitelisted_domain: "www-zb-stg.elysium-dfbt.com\r\nwww-zedbet-stg.elysium-dfbt.com\r\nistg-mobile-zedbet-www.elysium-dfbt.com\r\nistg-zb-m.elysium-dfbt.com\r\nsports.zedbet.com"
 _core:
   default_config_hash: KFtho-Y3uCbd63mBjm5w7ghdr1ZqLvOZbQF92q0GfEk
