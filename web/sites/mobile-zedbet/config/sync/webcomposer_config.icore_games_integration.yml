@@ -1,4 +1,4 @@
-icore_games_integration_form__active_tab: edit-asia-gaming
+icore_games_integration_form__active_tab: edit-evo-gaming
 asia_gaming_currency: "USD\r\nTHB"
 asia_gaming_language_mapping: "en|en-US\r\nth|th"
 asia_gaming_country: ''
@@ -14,7 +14,7 @@ skywind_currency: ''
 skywind_language_mapping: ''
 skywind_country: ''
 voidbridge_currency: "USD\r\nTHB\r\nTUS"
-voidbridge_language_mapping: "en|en-US\r\nth|th"
+voidbridge_language_mapping: "en|en-us\r\nth|th"
 voidbridge_country: ''
 gold_deluxe_currency: ''
 gold_deluxe_language_mapping: ''
@@ -32,7 +32,7 @@ tgp_currency: ''
 tgp_language_mapping: ''
 tgp_country: ''
 evo_gaming_currency: "USD\r\nTHB\r\nTUS"
-evo_gaming_language_mapping: "en|en-US\r\nth|th"
+evo_gaming_language_mapping: "en|en-us\r\nth|th"
 evo_gaming_country: ''
 ebet_currency: ''
 ebet_language_mapping: ''

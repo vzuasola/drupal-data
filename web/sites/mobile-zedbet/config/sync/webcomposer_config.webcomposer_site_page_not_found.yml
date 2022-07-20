@@ -1,8 +1,8 @@
 page_not_found_settings_tab__active_tab: edit-products-settings
 page_not_found_product_list: mobile-zedbet
-page_not_found_title_mobile-zedbet: 'Ooops, that was unexpected.'
+page_not_found_title_mobile-zedbet: ''
 page_not_found_content_mobile-zedbet:
-  value: "<section>\r\n  <p>The page doesn't exist. You may have followed a bad link or typed the address (URL) incorrectly. We'll help you get around though.\r\n  </p>\r\n  <p>What are you looking for?\r\n  </p>\r\n  <ul>\r\n    <li><a href=\"/{domain:mobile_lang}\" target=\"_self\">Go to Lobby</a></li>\r\n    <li><a href=\"/{domain:mobile_lang}/arcade?token=\" target=\"_self\">Arcade</a></li>\r\n    <li><a href=\"/{domain:mobile_lang}/live-dealer?token=\" target=\"_self\">Live Dealer</a></li>\r\n    <li><a href=\"/{domain:mobile_lang}/games?token=\" target=\"_self\">Games</a></li>\r\n  </ul>\r\n</section>\r\n"
+  value: "<section><img alt=\"404.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"184\" src=\"https://istg-mobile-zedbet-www.elysium-dfbt.com/en/2021-12/404.png\" width=\"1921\" />\r\n  <h2 class=\"mt-10 mb-5\"><span class=\"text-14\"><strong>Ooops, that was unexpected. EN</strong></span>\r\n  </h2>\r\n  <p>The page doesn't exist. You may have followed a bad link or typed the address (URL) incorrectly. We'll help you get around though.\r\n  </p>\r\n  <p>&nbsp;\r\n  </p>\r\n</section>\r\n<p><a href=\"/{lang}[query:({tracking})]\" target=\"_self\">Go to Lobby</a>\r\n</p>\r\n"
   format: basic_html
 value: null
 format: null

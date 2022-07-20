@@ -1,17 +1,17 @@
-reg_api_url: 'https://itct-mobile-zedbet-www.elysium-dfbt.com/v3'
-step_one_text: 'Create account'
-home_title: 'Start betting today with Dafabet! Sign up now!'
-success_title: Success
-native_app_title: 'Create account'
-general_settings_tab__active_tab: edit-error-settings
+reg_api_url: 'https://m.zedbet.com/v3'
+step_one_text: สมัครสมาชิก
+home_title: 'เริ่มเดิมพันวันนี้กับ Zedbet! สมัครตอนนี้!'
+success_title: สำเร็จ
+native_app_title: สมัครสมาชิก
+general_settings_tab__active_tab: edit-general
 jpay_api: "ITCT|http://nb-tct.jpaysystem.com/api/cashier/\r\nISTG|http://nb-stg.jpaysystem.com/api/cashier/\r\nPRD|http://cms-jpayws.games.prd/api/cashier/"
 jpay_siteid: '106'
-generic_error_message: 'Account registration failed. Please contact our <a href="mailto:ensupport@dafabet.com">Customer Support</a> for assistance. TH'
-unauthenticated_error_message: 'We are unable to authenticate you on Dafabet as it seems your account has been logged out. Please login to your account. TH'
-forbidden_request_error_message: 'Forbidden request. Please try again.'
+generic_error_message: 'การลงทะเบียนบัญชีล้มเหลว กรุณาติดต่อ <a href="mailto:thsupport@zedbet.com">/ฝ่ายบริการลูกค้า</a>ของเรา เพื่อความช่วยเหลือ'
+unauthenticated_error_message: 'เราไม่สามารถรับรองความถูกต้องของคุณบน Zedbet ได้ เนื่องจากบัญชีของคุณออกจากระบบ กรุณาเข้าสู่ระบบอีกครั้ง'
+forbidden_request_error_message: 'คำขอต้องห้าม กรุณาลองอีกครั้ง.'
 portal_id_to_product_name_mapping: "3|OW Sports|sports\r\n28|OW Sports|sports\r\n130|OW Sports|sports\r\n106|OW Sports|sports\r\n10|OW Sports|sports\r\n47|OW Sports|sports\r\n140|OW Sports|sports\r\n112|OW Sports|sports\r\n22|Dafa Sports|sports-df\r\n26|Dafa Sports|sports-df\r\n29|Dafa Sports|sports-df\r\n48|Dafa Sports|sports-df\r\n131|Dafa Sports|sports-df\r\n123|Dafa Sports|sports-df\r\n4|Casino|casino\r\n11|Casino|casino\r\n16|Casino|casino\r\n18|Casino|casino\r\n30|Casino|casino\r\n49|Casino|casino\r\n23|Casino|casino\r\n132|Casino|casino\r\n107|Casino|casino\r\n159|Casino|casino\r\n119|Casino|casino\r\n19|Casino Gold|casino-gold\r\n20|Casino Gold|casino-gold\r\n21|Casino Gold|casino-gold\r\n35|Casino Gold|casino-gold\r\n54|Casino Gold|casino-gold\r\n137|Casino Gold|casino-gold\r\n120|Casino Gold|casino-gold\r\n6|Live Dealer|live-dealer\r\n33|Live Dealer|live-dealer\r\n135|Live Dealer|live-dealer\r\n109|Live Dealer|live-dealer\r\n15|Live Dealer|live-dealer\r\n52|Live Dealer|live-dealer\r\n145|Live Dealer|live-dealer\r\n116|Live Dealer|live-dealer\r\n5|Poker|poker\r\n12|Poker|poker\r\n17|Poker|poker\r\n31|Poker|poker\r\n50|Poker|poker\r\n133|Poker|poker\r\n108|Poker|poker\r\n24|Arcade|fish-hunter\r\n25|Arcade|fish-hunter\r\n34|Arcade|fish-hunter\r\n53|Arcade|fish-hunter\r\n136|Arcade|fish-hunter\r\n125|Arcade|fish-hunter\r\n8|Games|games\r\n14|Games|games\r\n32|Games|games\r\n51|Games|games\r\n134|Games|games\r\n110|Games|games\r\n56|Virtuals|virtuals\r\n57|Virtuals|virtuals\r\n58|Virtuals|virtuals\r\n59|Virtuals|virtuals\r\n151|Virtuals|virtuals\r\n149|Virtuals|virtuals\r\n55|Lottery|keno\r\n45|Lottery|keno\r\n60|Lottery|keno\r\n61|Lottery|keno\r\n138|Lottery|keno\r\n148|Lottery|keno\r\n66|Exchange|exchange\r\n67|Exchange|exchange\r\n68|Exchange|exchange\r\n69|Exchange|exchange\r\n157|Exchange|exchange\r\n155|Exchange|exchange\r\n167|Soda Casino|soda\r\n168|Soda Casino|soda\r\n169|Soda Casino|soda\r\n170|Soda Casino|soda\r\n171|Soda Casino|soda\r\n172|Soda Casino|soda"
-country_restriction_message: '[product] is not available in your region'
-mbtc_restriction_message: 'Bitcoin currency is only available in Dafasports.'
+country_restriction_message: '[product] ไม่มีให้บริการในภูมิภาคของคุณ'
+mbtc_restriction_message: 'สกุลเงิน Bitcoin ให้บริการที่ กีฬา Zedbet เท่านั้น'
 text_over_banner_mobile:
-  value: "<p><span class=\"text-10 text-white\">WELCOME TO<br />\r\n<span class=\"text-16 text-yellow\">ASIA'S NUMBER 1</span><br />\r\nONLINE GAMING</span><br />\r\n<span class=\"text-10 text-white\">AND<br />\r\n<span class=\"text-16 text-yellow\">MOST TRUSTED</span><br />\r\nBETTING WEBSITE!</span></p>\r\n"
+  value: ''
   format: basic_html

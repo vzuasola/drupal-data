@@ -10,7 +10,34 @@ field_name: field_slider_game_provider
 entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: skywind
+      label: Skywind
+    -
+      value: voidbridge
+      label: Voidbridge
+    -
+      value: playtech
+      label: Playtech
+    -
+      value: evo_gaming
+      label: 'Evolution Gaming'
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: micro_gaming
+      label: Microgaming
+    -
+      value: cq9
+      label: CQ9
+    -
+      value: ptplus
+      label: PTPlus
   allowed_values_function: ''
 module: options
 locked: false

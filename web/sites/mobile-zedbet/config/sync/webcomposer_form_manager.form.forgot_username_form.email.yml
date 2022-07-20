@@ -1,5 +1,5 @@
 field_settings:
-  label: 'Email Address'
+  label: Email
   placeholder: 'Email Address'
   annotation: ''
 field_validations:
@@ -36,7 +36,7 @@ field_validations:
     error_message: 'Field contains invalid special characters'
   email:
     enable: 1
-    error_message: 'Please enter your registered email address.'
+    error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 0
     error_message: 'Minimum requirement not met'

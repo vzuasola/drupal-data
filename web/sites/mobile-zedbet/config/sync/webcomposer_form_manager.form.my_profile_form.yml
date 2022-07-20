@@ -22,9 +22,9 @@ weights:
     weight: '-12'
   communication_markup:
     weight: '-11'
-  primary_number:
-    weight: '-10'
   mobile_number_1:
+    weight: '-10'
+  primary_number:
     weight: '-9'
   mobile_number_2:
     weight: '-8'

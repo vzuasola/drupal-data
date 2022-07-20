@@ -1,6 +1,6 @@
-als_url: 'https://mobile-zb-in1.elysium-dfbt.com/m/en/live[query:({tracking})]'
-als_fantasy_sport_url: 'https://mobile-zb-in1.elysium-dfbt.com/m/en/sports/fantasy-sports[query:({tracking})]'
-als_esport_url: 'https://mobile-zb-in1.elysium-dfbt.com/m/en/sports/esportsbull[query:({tracking})]'
-als_cookie_url_pre: "mobileUrl|{domain:mobile}/en[query:({tracking})]\r\nlogin|{domain:mobile}/en/login[query:(product=sports&{tracking})]\r\nlogout|{domain:mobile}/en/logout[query:({tracking})]\r\nregistration|{domain:registration_link}/sports[query:(regvia=37&{tracking})]\r\ndesktopUrl|{domain:entry}/en[query:({tracking})]\r\ncashier|{domain:mobile}/en/payment-options?sessionShare=1&re=payment-options&destination=payment-options"
+als_url: 'https://sports.zedbet.com/m/en/live[query:({tracking})]'
+als_fantasy_sport_url: 'https://sports.zedbet.com/m/en/sports/fantasy-sports[query:({tracking})]'
+als_esport_url: 'https://sports.zedbet.com/m/en/sports/esportsbull[query:({tracking})]'
+als_cookie_url_pre: "mobileUrl|{domain:mobile}/en[query:({tracking})]\r\nlogin|{domain:mobile}/en/login[query:(product=sports&{tracking})]\r\nlogout|{domain:mobile}/en/logout[query:({tracking})]\r\nregistration|{domain:registration_link}/sports[query:(regvia=288&{tracking})]\r\ndesktopUrl|{domain:entry}/en[query:({tracking})]\r\ncashier|{domain:mobile}/en/payment-options?sessionShare=1&re=payment-options&destination=payment-options"
 als_cookie_url_post: "cashierDeposit|{cashier}/alsports/transaction/deposit[query:(ticket={auth.token}&{tracking})]\r\ncashierDeposit|{cashier}/alsports/transaction/deposit[query:(ticket={auth.token}&{tracking})]\r\ncashierTransfer|{cashier}/alsports/transaction/transfer[query:(ticket={auth.token}&{tracking})]\r\ncashierCashPoints|{cashier}/alsports/transaction/cashpoints[query:(ticket={auth.token}&{tracking})]\r\ncashierWithdrawal|{cashier}/alsports/transaction/withdrawal[query:(ticket={auth.token}&{tracking})]\r\ncashier|{cashier}[query:(ticket={auth.token}&{tracking})]"
 als_enable_domain: 1

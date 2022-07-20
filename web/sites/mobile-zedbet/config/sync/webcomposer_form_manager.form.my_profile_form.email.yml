@@ -1,5 +1,5 @@
 field_settings:
-  label: Email
+  label: 'Email Address'
 field_validations:
   required:
     enable: 1
