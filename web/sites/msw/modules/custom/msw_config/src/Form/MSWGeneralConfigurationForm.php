@@ -157,7 +157,7 @@ class MSWGeneralConfigurationForm extends FormBase {
 
     $form['online_register_setting']['register']['register_online_form_fields'] = [
       '#type' => 'details',
-      '#title' => $this->t('Registration Online Fields - (✓)enable | (✕)disable'),
+      '#title' => $this->t('Registration Online Fields - (✓)hide | (✕)show'),
       '#collapsible' => TRUE,
       '#open' => TRUE,
     ];
