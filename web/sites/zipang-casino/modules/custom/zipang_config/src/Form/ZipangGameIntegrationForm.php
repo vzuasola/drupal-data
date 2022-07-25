@@ -97,6 +97,14 @@ class ZipangGameIntegrationForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['game_buttons_config']['play_now_button'] = [
+      '#type' => 'textarea',
+      '#title' => t('Play Now Button Text'),
+      '#default_value' => $this->get('play_now_button'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
     $form['game_buttons_config']['free_play_button'] = [
       '#type' => 'textarea',
       '#title' => t('Free Play Button Text'),
