@@ -12,7 +12,7 @@ bundle: promo_banner_game_launch
 label: 'Use Lobby'
 description: 'Used in Live Dealer to direct player to game lobby'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

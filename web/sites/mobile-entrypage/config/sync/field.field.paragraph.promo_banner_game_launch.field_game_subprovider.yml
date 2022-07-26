@@ -13,7 +13,7 @@ bundle: promo_banner_game_launch
 label: 'Game Subprovider'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
