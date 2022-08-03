@@ -1,0 +1,18 @@
+my_account_group__active_tab: edit-cant-login-reset-password-config
+cant_login_title: 'ไม่สามารถเข้าสู่ระบบ Zedbet ได้?'
+reset_title: รีเซ็ตรหัสผ่าน
+cant_login_response_mapping: "INTERNAL_ERROR|ข้อผิดพลาดภายในเซิร์ฟเวอร์\r\nFORGOT_PASSWORD_SUCCESS|ทำรายการลืมรหัสผ่านสำเร็จ\r\nFORGOT_PASSWORD_FAILED|ยูสเซอร์เนม/อีเมล ไม่ถูกต้อง\r\nFORGOT_USERNAME_SUCCESS|ทำรายการลืมยูสเซอร์เนมสำเร็จ\r\nFORGOT_USERNAME_FAILED|อีเมลไม่ถูกต้อง\r\nCHANGE_FORGOTTEN_PASSWORD_SUCCESS|รีเซ็ตรหัสผ่านสำเร็จ\r\nCHANGE_FORGOTTEN_PASSWORD_FAILED|รีเซ็ตรหัสผ่านไม่สำเร็จ"
+forgot_password_tab_menu: ลืมรหัสผ่าน
+forgot_password_success_message:
+  value: "<h3 class=\"text-blue text-semibold\"><span class=\"icon-success\">&nbsp;</span> <font size=\"5\">ส่งคำขอรีเซ็ตรหัสผ่านแล้ว</font></h3>\r\n\r\n<p>ข้อความยืนยันถูกส่งไปยังอีเมลที่ลงทะเบียนแล้ว กรุณารีเซ็ตรหัสผ่านของคุณภายใน 24 ชั่วโมง.</p>\r\n\r\n<p>หากมีข้อสงสัย และต้องการสอบถาม กรุณาติดต่อเราได้ที่ <a href=\"linkto:avaya\">ฝ่ายบริการลูกค้า</a>.</p>\r\n\r\n<p><strong><a class=\"btn btn-gray btn-small\" href=\"#\">ปิดหน้าต่าง</a></strong></p>\r\n"
+  format: basic_html
+forgot_username_tab_menu: ลืมยูสเซอร์เนม
+forgot_username_success_message:
+  value: "<h3 class=\"text-blue text-semibold\"><span class=\"icon-success\">&nbsp;</span>ส่งคำขอลืมยูสเซอร์เนมแล้ว</h3>\r\n\r\n<p>ข้อความยืนยันถูกส่งไปยังอีเมลที่ลงทะเบียนแล้ว.</p>\r\n\r\n<p>กรุณาตรวจสอบอีเมลของคุณด้วยชื่อยูสเซอร์เนม Zedbet ที่ลงทะเบียนไว้.</p>\r\n\r\n<p>หากมีข้อสงสัย และต้องการสอบถาม กรุณาติดต่อเราได้ที่ <a href=\"linkto:avaya\">ฝ่ายบริการลูกค้า</a>.</p>\r\n\r\n<p><strong><a class=\"btn btn-gray btn-small\" href=\"#\">ปิดหน้าต่าง</a></strong></p>\r\n"
+  format: basic_html
+reset_password_success_message:
+  value: "<h2 class=\"text-center text-semibold text-blue text-20\"><span class=\"icon-success\">&nbsp;</span>รีเซ็ตรหัสผ่านสำเร็จ</h2>\r\n\r\n<p>คุณเปลี่ยนรหัสผ่านสำเร็จแล้ว.</p>\r\n\r\n<div class=\"blurb blurb-bottom\">\r\n<p>หากมีข้อสงสัย และต้องการสอบถาม กรุณาติดต่อเราได้ที่ <a href=\"linkto:avaya\">ฝ่ายบริการลูกค้า</a>.</p>\r\n</div>\r\n\r\n<div>\r\n<p><a class=\"btn btn-gray btn-small\" href=\"{domain:zedbet}/{domain:lang_token}/entry[query:({tracking})]\" target=\"_blank\">กลับไปที่ Zedbet.com</a></p>\r\n</div>\r\n"
+  format: basic_html
+reset_expired_message:
+  value: "<p class=\"text-align-center\"><svg class=\"exclamation-icon mb-5\" viewbox=\"0 0 47.49 47.49\"> <use xlink:href=\"#exclamation-icon\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> </use> </svg></p>\r\n\r\n<h3 class=\"text-semibold text-align-center\">ลิงก์รีเซ็ตรหัสผ่านไม่ถูกต้อง</h3>\r\n\r\n<p class=\"text-align-center\">ขออภัย ลิงก์ที่คุณพยายามเข้าถึงไม่ถูกต้อง.</p>\r\n\r\n<p class=\"text-align-center\">คุณสามารถดำเนินการเปลี่ยนรหัสผ่านได้โดยทำการร้องขอใหม่ เพียงคลิกที่ปุ่มด้านล่าง.</p>\r\n\r\n<p class=\"text-align-center mt-20 mb-20\"><a class=\"btn btn-yellow btn-small\" data-popup=\"true\" data-popup-height=\"810\" data-popup-position=\"center\" data-popup-width=\"820\" href=\"/{lang}/cant-login?regvia=285[query:({tracking})]\" target=\"_blank\">เข้าสู่ระบบไม่ได้</a></p>\r\n\r\n<div class=\"contact-info-blurb\">\r\n<p class=\"text-align-center\">หากมีข้อสงสัย และต้องการสอบถาม กรุณาติดต่อเราได้ที่ <a href=\"linkto:avaya\">ฝ่ายบริการลูกค้า</a></p>\r\n</div>\r\n"
+  format: basic_html

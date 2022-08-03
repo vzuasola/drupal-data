@@ -1,0 +1,18 @@
+uuid: 9059f4f8-1bef-4df3-bbaa-9d6e6bb026d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_subprovider
+id: taxonomy_term.game_subprovider.name
+field_name: name
+entity_type: taxonomy_term
+bundle: game_subprovider
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

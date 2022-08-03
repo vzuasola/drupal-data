@@ -1,0 +1,36 @@
+profile__active_tab: edit-sms-configuration
+page_title: ประวัติของฉัน
+welcome_text: ยินดีต้อนรับ
+product_menu_new_tag: ใหม่
+help_tooltip: ช่วยเหลือ
+error_mid_down: 'เกิดข้อผิดพลาด กรุณาลองอีกครั้งในภายหลัง'
+add_mobile_label: เพิ่มเบอร์มือถือ
+no_changed_detected_message: ไม่พบการเปลี่ยนแปลง
+my_profile_tab: ประวัติของฉัน
+change_password_tab: เปลี่ยนรหัสผ่าน
+contact_preference_yes_label: ใช่
+contact_preference_no_label: ไม่
+modal_preview_header: บันทึกการเปลี่ยนแปลงบัญชี
+modal_preview_top_blurb: กรุณาตรวจสอบรายการการเปลี่ยนแปลง
+modal_preview_current_label: ปัจจุบัน
+modal_preview_new_label: ใหม่
+modal_preview_bottom_blurb: กรอกรหัสผ่านของคุณเพื่อบันทึกการเปลี่ยนแปลงในบัญชีของคุณ
+server_side_validation: "INTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)\r\nUPDATE_PROFILE_SUCCESS|โปรไฟล์ของคุณได้รับการอัปเดตแล้ว\r\nUPDATE_PROFILE_FAILED|เกิดข้อผิดพลาดในการอัปเดตโปรไฟล์ของคุณ กรุณาลองใหม่อีกครั้งหรือติดต่อได้ที่: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">แชทสด</a> หรือ <a href=\"mailto:thsupport@zedbet.com\">อีเมล.</a> (Code: 700)"
+enable_mobile_number_annotation: 1
+verify_text: ตรวจสอบ
+change_password__active_tab: edit-field-success-message-group
+cp_page_title: เปลี่ยนรหัสผ่าน
+integration_error: "INTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)\r\nCHANGE_PASSWORD_FAILED|เกิดข้อผิดพลาดในการเปลี่ยนรหัสผ่านของคุณ กรุณาลองอีกครั้งหรือคุณอาจติดต่อเรา: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> แชทสด </a> (รหัส: 800)\r\nCHANGE_PASSWORD_SUCCESS|รหัสผ่านของคุณถูกเปลี่ยนเรียบร้อยแล้ว"
+change_password_success_message:
+  value: "<div>\r\n  <svg class=\"icon-check-rounded mb-10\" viewbox=\"0 0 100 100\"> \r\n    <use href=\"#check-rounded\" xlink=\"http://www.w3.org/1999/xlink\"> \r\n    </use> \r\n  </svg>\r\n  <h3 class=\"blurb-heading\">เปลี่ยนรหัสผ่านสำเร็จ\r\n  </h3>\r\n  <p>รหัสผ่านของคุณถูกเปลี่ยนเรียบร้อยแล้ว\r\n  </p>\r\n  <p><a class=\"btn btn-zedbet-red btn-small\" href=\"{domain:mobile}/{lang}[query:({tracking})]\">ไปที่ หน้ามือถือ Zedbet</a>\r\n  </p>\r\n</div>\r\n<div class=\"contact-info-blurb\">\r\n  <svg class=\"icon-exclamation mb-5\" viewbox=\"0 0 82.8 83.53\"> \r\n    <path d=\"M41.4,0a41.77,41.77,0,0,0,0,83.53A41.77,41.77,0,0,0,41.4,0Zm-.15,78.5A36.74,36.74,0,1,1,77.67,41.76,36.58,36.58,0,0,1,41.25,78.5Z\" style=\"fill:#cb0813\"> \r\n    </path> \r\n    <path d=\"M36.2,60a5.05,5.05,0,0,1,5.17-5.38c3.17,0,5.17,2.21,5.24,5.38a5.07,5.07,0,0,1-5.24,5.38A5,5,0,0,1,36.2,60Zm1.93-9.72L36.88,18.14h9L44.61,50.28Z\" style=\"fill:#cb0813\"> \r\n    </path> \r\n  </svg>\r\n  <p class=\"text-align-left\">หากมีข้อสงสัย และต้องการสอบถาม กรุณาติดต่อเราได้ที่ <a href=\"avaya\">ฝ่ายบริการลูกค้า</a>\r\n  </p>\r\n</div>\r\n"
+  format: basic_html
+change_password_failed_message:
+  value: "<div><svg height=\"50\" viewbox=\"0 0 93.23 94.05\" width=\"50\"> <path d=\"M46.61 0C20.91 0 0 21.1 0 47s20.91 47 46.61 47 46.62-21 46.62-47S72.32 0 46.61 0zM73.8 65.18a7 7 0 0 1-5 11.83h-.14a7 7 0 0 1-4.9-2.14L46.62 57.1 29.51 74.87a7 7 0 0 1-10.08-9.69L36.91 47 19.43 28.87a7 7 0 0 1 .19-9.87 6.89 6.89 0 0 1 5-1.95 7 7 0 0 1 4.91 2.14L46.62 37l17.11-17.82a7 7 0 0 1 9.88-.18 7 7 0 0 1 .19 9.88L56.32 47z\" style=\"fill:#f20000\"> </path> </svg>\r\n<h3 class=\"blurb-heading text-semibold\">เปลี่ยนรหัสผ่านล้มเหลว</h3>\r\n\r\n<p>เกิดข้อผิดพลาดในการเปลี่ยนรหัสผ่าน</p>\r\n\r\n<p><a class=\"try-again-btn btn btn-zedbet-red btn-small input-block-level\" href=\"#\"><strong>กรุณาลองอีกครั้ง</strong></a></p>\r\n</div>\r\n\r\n<div class=\"contact-info-blurb\"><svg class=\"icon-exclamation mb-5\" viewbox=\"0 0 82.8 83.53\"> <path d=\"M41.4,0a41.77,41.77,0,0,0,0,83.53A41.77,41.77,0,0,0,41.4,0Zm-.15,78.5A36.74,36.74,0,1,1,77.67,41.76,36.58,36.58,0,0,1,41.25,78.5Z\" style=\"fill:#cb0813\"> </path> <path d=\"M36.2,60a5.05,5.05,0,0,1,5.17-5.38c3.17,0,5.17,2.21,5.24,5.38a5.07,5.07,0,0,1-5.24,5.38A5,5,0,0,1,36.2,60Zm1.93-9.72L36.88,18.14h9L44.61,50.28Z\" style=\"fill:#cb0813\"> </path> </svg>\r\n\r\n<p class=\"text-align-left\">หากมีข้อสงสัย และต้องการสอบถาม กรุณาติดต่อเราได้ที่ <a href=\"avaya\">ฝ่ายบริการลูกค้า</a></p>\r\n</div>\r\n"
+  format: basic_html
+enable_sms_verification: 1
+modal_verify_header_text: ยืนยันหมายเลขโทรศัพท์มือถือ
+modal_verify_body_text: 'รหัสยืนยันได้ส่งถึงคุณทาง SMS แล้ว เพื่อให้การยืนยันหมายเลขโทรศัพท์ของคุณเสร็จสมบูรณ์ กรุณากรอกรหัส 6 หลักด้านล่างภายใน 10 นาที กรุณาตรวจสอบให้แน่ใจว่าคุณได้กรอกรูปแบบหมายเลขโทรศัพท์มือถือที่ถูกต้องพร้อมรหัสประเทศ (เช่น +60312345678) หากยังติดปัญหาอยู่ กรุณาติดต่อฝ่ายบริการลูกค้า'
+modal_verification_code_placeholder: รหัสยืนยัน
+modal_verification_resend_code_text: ส่งรหัสอีกครั้ง
+modal_verification_submit_text: ส่ง
+verification_code_response: "SMS_VERIFICATION_SUCCESS|รหัสยืนยันถูกส่งไปยังหมายเลขโทรศัพท์มือถือของคุณแล้ว\r\nSMS_VERIFICATION_FAILED|ขออภัย มีข้อผิดพลาดในการยืนยันหมายเลขโทรศัพท์มือถือของคุณ กรุณาลองใหม่อีกครั้งหรือติดต่อหาเราได้ที่: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">แชทสด</a> หรือ <a href=\"mailto:ensupport@nextbet.com\"> อีเมล </a> (รหัส:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|หมายเลขโทรศัพท์มือถือของคุณได้รับการยืนยันเรียบร้อยแล้ว\r\nSMS_VERIFICATION_SUBMIT_FAILED|คุณกรอกรหัสยืนยันที่ไม่ถูกต้อง กรุณาลองอีกครั้ง (รหัส:111)\r\nINTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)"

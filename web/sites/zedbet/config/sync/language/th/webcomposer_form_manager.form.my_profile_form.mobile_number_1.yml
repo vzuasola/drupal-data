@@ -1,0 +1,47 @@
+field_settings:
+  label: เบอร์โทรศัพท์มือถือ
+  placeholder: ''
+  annotation: ''
+  tooltip-content: 'กรอกหมายเลขโทรศัพท์มือถือของคุณด้วยรหัสประเทศ (เช่น +60123456789)'
+  country_area_code_validation: "48|13|14|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 13-14 หลัก\r\n208|11|12|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 11-12 หลัก\r\n231|11|14|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 11-14 หลัก\r\n96|12|15|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 12-15 หลัก\r\n117|12|13|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 12-13 หลัก\r\n100|12|13|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 12-13 หลัก\r\n153|11|13|กรุณากรอกหมายเลขโทรศัพท์มือถือที่ถูกต้อง 11-13 หลัก"
+field_validations:
+  required:
+    error_message: ต้องระบุข้อมูล
+  alpha:
+    error_message: ช่องต้องเป็นตัวอักษรเท่านั้น
+  alphanumeric:
+    error_message: ฟิลด์ควรเป็นตัวอักษรและตัวเลข
+  alpha_multi:
+    error_message: ค่าไม่ใช่อักขระหลายภาษาที่ถูกต้อง
+  numeric:
+    error_message: ฟิลด์ควรเป็นตัวเลข
+  no_symbols:
+    error_message: ช่องมีอักขระพิเศษที่ไม่ถูกต้อง
+  numeric_symbols:
+    error_message: ช่องมีอักขระพิเศษที่ไม่ถูกต้อง
+  email:
+    error_message: ช่องไม่มีที่อยู่อีเมลที่ถูกต้อง
+  min_length:
+    error_message: 'กรุณากรอกอย่างน้อย 9 ตัวอักษร'
+  max_length:
+    error_message: 'กรุณากรอกไม่เกิน 17 ตัวอักษร'
+  regex:
+    error_message: 'ช่องนี้มีได้เฉพาะเครื่องหมายบวก (+) และค่าตัวเลขเท่านั้น'
+  valid_date:
+    error_message: วันที่ไม่ถูกต้อง
+  must_not_match:
+    error_message: ค่านี้ต้องไม่ตรงกับค่าเริ่มต้น
+  username_availability:
+    error_message: ชื่อผู้ใช้ไม่พร้อมใช้งาน
+  email_availability:
+    error_message: อีเมลไม่พร้อมใช้งาน
+  invalid_words:
+    error_message: อักขระไม่ถูกต้อง/ไม่อนุญาต
+  valid_languages:
+    error_message: ฟิลด์นี้ยอมรับเฉพาะอักขระที่ระบุเท่านั้น
+  not_match_username:
+    error_message: รหัสผ่านไม่ควรเท่ากับชื่อผู้ใช้
+  verify_password:
+    error_message: รหัสผ่านไม่ตรงกัน
+  allowed_date:
+    error_message: วันที่ไม่ได้รับอนุญาต

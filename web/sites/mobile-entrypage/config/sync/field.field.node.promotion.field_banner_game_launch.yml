@@ -15,7 +15,7 @@ bundle: promotion
 label: 'Banner Game Launch'
 description: "Note that Game Launch will apply to both Pre Login and Post Login Promotion Content once this is enabled. <br/>\r\nPlease click the 'Remove' button if promotion will NOT have game launch capablity from banner image. <br/>\r\nThen Click 'Confirm Removal' to confirm deletion of game list input fields on this promotion content. <br/>"
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

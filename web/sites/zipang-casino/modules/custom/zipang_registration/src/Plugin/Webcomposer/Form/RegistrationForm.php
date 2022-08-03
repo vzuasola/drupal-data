@@ -298,6 +298,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'coupon_code_help_text' => [
+        'name' => 'Coupon Help Text',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Coupon Help Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for Coupon Field',
+            '#default_value' => '<div class="fieldset-wrapper text-center display-text">You can use this [zipang] coupon if you don\'t have</div>',
+          ],
+        ],
+      ],
       'coupon_code' => [
         'name' => 'Coupon Code',
         'type' => 'textfield',
@@ -306,6 +318,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Coupon Code Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Coupon Code field',
+          ],
+        ],
+      ],
+      'captcha_help_text' => [
+        'name' => 'Captcha Help Text',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Captcha Help Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for Captcha Field',
+            '#default_value' => '<div class="fieldset-wrapper text-center display-text">Enter the authentication code shown in the image.</div>',
           ],
         ],
       ],

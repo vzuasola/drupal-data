@@ -155,6 +155,55 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['online_register_setting']['register']['register_online_form_fields'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Registration Online Fields - (✓)hide | (✕)show'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_source_of_income'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Source of Income'),
+      '#default_value' => $this->get('enable_register_online_source_of_income'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_nationality'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Nationality'),
+      '#default_value' => $this->get('enable_register_online_nationality'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_security_questions'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Security Questions'),
+      '#default_value' => $this->get('enable_register_online_security_questions'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_rfidpin'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('RFID Pin'),
+      '#default_value' => $this->get('enable_register_online_rfidpin'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_contact_preference'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Contact Preference'),
+      '#default_value' => $this->get('enable_register_online_contact_preference'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_upload_img'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Upload Image 1'),
+      '#default_value' => $this->get('enable_register_online_upload_img'),
+      '#translatable' => TRUE,
+    ];
+
     $form['online_register_setting']['register']['reg_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Reg API v3 URL'),
@@ -211,12 +260,12 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#required' => FALSE,
     ];
 
-    $body_content = $this->get('success_message');
     $form['online_register_setting']['register']['success_message'] = [
-      '#type' => 'text_format',
+      '#type' => 'textfield',
       '#title' => $this->t('Success Message'),
-      '#default_value' => $body_content['value'],
-      '#format' => $body_content['format'],
+      '#default_value' => $this->get('success_message'),
+      '#description' => $this->t('Success Message'),
+      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
 

@@ -1,13 +1,13 @@
 advanced__active_tab: edit-about-dafabet-details
+about_dafabet_title: 'เกี่ยวกับ Zedbet'
 about_dafabet_content:
-  value: "<p>Welcome to zedbet.com, one of Asia's leading online betting and gaming sites, home to some of the best sports betting and live odds on the web. Zedbet Sportsbook offers a world class sports betting system that boasts over 15,000 live sports events to bet on. Our online sports betting has numerous sport types and generous promotions. Find out the latest Sports Betting News, learn how to bet on sports, and get updated with your favourite sport teams statistics at zedbet.com\r\n</p>\r\n"
+  value: "<p>ยินดีต้อนรับเข้าสู่ Zedbet เว็บไซต์เดิมพันออนไลน์ชั้นนำของโลกและแหล่งรวมผลิตภัณฑ์เกมส์ออนไลน์ที่ดีที่สุดบนเว็บไซต์ ครบครันด้วยการเดิมพันกีฬา คาสิโน ดีลเลอร์สด และเกมเดิมพันออนไลน์ระดับโลกมากมาย</p>\r\n"
   format: basic_html
-social_media_title: 'Follow us and receive the latest updates'
+quicklinks_title: ลิงค์ด่วน
+social_media_title: 'ติดตามเรา และรับข่าวสารล่าสุด'
 back_to_top_title: ''
 sponsor_mobile_desc: 'Official Main Club Sponsors'
 cookie_notification:
-  value: ''
+  value: "<p>เราใช้คุกกี้เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุด ในการดำเนินการต่อไปยังเว็บไซต์นี้ แสดงว่าคุณยินยอมให้ใช้คุกกี้ตาม<a href=\"{domain:mobile}/{lang}/security[query:({tracking})]\" target=\"_blank\">นโยบายคุกกี้</a>ของเรา</p>\r\n"
   format: basic_html
-mobile_language_select: 'Select Language TH test'
-about_dafabet_title: 'About Zedbet TH'
-quicklinks_title: 'Quick Links'
+mobile_language_select: 'Select Language'

@@ -1,0 +1,4 @@
+domain_toggle: 1
+optimize_import: 1
+domains_batch: '4'
+use_v2_domain: 0

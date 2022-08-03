@@ -5,7 +5,7 @@ field_settings:
 field_validations:
   required:
     enable: 1
-    error_message: 'This field is required.'
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -39,12 +39,12 @@ field_validations:
     error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 1
-    error_message: 'Name must not exceed 50 characters.'
+    error_message: 'Name must be between 1-50 characters long'
     parameters:
       length: '1'
   max_length:
     enable: 1
-    error_message: 'Name must not exceed 50 characters.'
+    error_message: 'Name must be between 1-50 characters long'
     parameters:
       length: '50'
   regex:
@@ -75,7 +75,7 @@ field_validations:
     enable: 1
     error_message: 'Field accepts English, Chinese, Korean, Greek, apostrophe (''), and dash (-) characters only.'
     parameters:
-      regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
+      regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\u0370-\u03ff\s]+$'
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'

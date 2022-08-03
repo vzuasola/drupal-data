@@ -12,7 +12,7 @@ bundle: promo_banner_game_launch
 label: 'Game Code'
 description: "- Use the same game code format that was configured on the actual Product CMS.\r\n- On Live Dealer direct table launch, provide ICore game ID and uncheck \"Use Game Lobby\"\r\n- "
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

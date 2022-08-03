@@ -51,7 +51,7 @@ field_validations:
     enable: 1
     error_message: 'This field can only contain plus sign (+) and numeric values. '
     parameters:
-      regex_value: '^(?!\s)[0-9\*\+]+$'
+      regex_value: '^(?!\s)[0-9+\*\s]+$'
   valid_date:
     enable: 0
     error_message: 'Date is invalid'

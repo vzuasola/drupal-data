@@ -768,23 +768,23 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
         ],
 
         'id_number1' => [
-          'name' => 'ID Number 1',
+          'name' => 'ID Number',
           'type' => 'textfield',
           'settings' => [
             'label' => [
-              '#title' => 'ID Number 1 Label',
+              '#title' => 'ID Number Label',
               '#type' => 'textfield',
-              '#description' => 'The label for the ID Number 1 field',
-              '#default_value' => 'ID Number 1',
+              '#description' => 'The label for the ID Number field',
+              '#default_value' => 'ID Number',
             ],
             'placeholder' => [
-              '#title' => 'ID Number 1 placeholder label',
+              '#title' => 'ID Number placeholder label',
               '#type' => 'textfield',
-              '#description' => 'label for ID Number 1 field placeholder',
-              '#default_value' => 'ID Number 1',
+              '#description' => 'label for ID Number field placeholder',
+              '#default_value' => 'ID Number',
             ],
             'annotation' => [
-              '#title' => 'ID Number 1 Annotation text',
+              '#title' => 'ID Number Annotation text',
               '#type' => 'textarea',
               '#description' => 'field annotation that will be displayed on focus',
             ],
@@ -792,7 +792,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
         ],
 
         'upload_id_1' => [
-          'name' => 'UPLOAD ID 1',
+          'name' => 'UPLOAD ID',
           'type' => 'file',
           'settings' => [
             'label' => [
@@ -817,14 +817,14 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
         ],
 
         'btn_upload_id_1' => [
-          'name' => 'Button UPLOAD ID 1',
+          'name' => 'Button UPLOAD ID',
           'type' => 'button',
           'settings' => [
             'label' => [
-              '#title' => 'UPLOAD ID 1 label',
+              '#title' => 'UPLOAD ID label',
               '#type' => 'textfield',
-              '#description' => 'Label for the UPLOAD ID 1 button',
-              '#default_value' => 'UPLOAD ID 1',
+              '#description' => 'Label for the UPLOAD ID button',
+              '#default_value' => 'UPLOAD ID',
             ],
           ],
         ],

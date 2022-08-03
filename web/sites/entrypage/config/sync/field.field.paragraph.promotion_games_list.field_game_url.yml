@@ -1,0 +1,19 @@
+uuid: a04e3626-60e6-40d7-90de-de74bd2cadca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_game_url
+    - paragraphs.paragraphs_type.promotion_games_list
+id: paragraph.promotion_games_list.field_game_url
+field_name: field_game_url
+entity_type: paragraph
+bundle: promotion_games_list
+label: 'Game URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

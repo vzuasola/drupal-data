@@ -1,6 +1,6 @@
 field_settings:
   label: 'Verification Code'
-  placeholder: 'Verification Code 12'
+  placeholder: 'Verification Code'
 field_validations:
   required:
     enable: 1

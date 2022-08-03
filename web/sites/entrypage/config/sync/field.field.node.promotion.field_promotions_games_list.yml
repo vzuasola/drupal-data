@@ -1,0 +1,54 @@
+uuid: c9e68a62-8c48-43df-84df-9b6148661825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotions_games_list
+    - node.type.promotion
+    - paragraphs.paragraphs_type.promotion_games_list
+  module:
+    - entity_reference_revisions
+id: node.promotion.field_promotions_games_list
+field_name: field_promotions_games_list
+entity_type: node
+bundle: promotion
+label: 'Promotions Games List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      promotion_games_list: promotion_games_list
+    target_bundles_drag_drop:
+      promotion_games_list:
+        enabled: true
+        weight: 10
+      domain_management_configuration:
+        weight: 11
+        enabled: false
+      floating_banner_item:
+        weight: 12
+        enabled: false
+      metatag:
+        weight: 13
+        enabled: false
+      right_side_block_content:
+        weight: 14
+        enabled: false
+      social_media:
+        weight: 15
+        enabled: false
+      social_media_cmi:
+        weight: 16
+        enabled: false
+      sponsor_cmi:
+        weight: 17
+        enabled: false
+      sponsorship:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

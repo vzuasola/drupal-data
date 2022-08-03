@@ -1,9 +1,9 @@
 lobby_infinite_scroll: 1
-more_provider_drawer: 'More TH'
-title_provider_drawer: 'Providers TH'
-all_quicklaunch_title: 'All TH'
+more_provider_drawer: เพิ่มเติม
+title_provider_drawer: ผู้ให้บริการ
+all_quicklaunch_title: ทั้งหมด
 all_quicklaunch_alt: ''
-games_transfer_title: 'Instant Transfer'
-games_transfer_link: ''
+games_transfer_title: โอน
+games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking}&transfer=1)]'
 transfer_link_target: _blank
-games_maintenance_text: 'Under maintenance TH'
+games_maintenance_text: กำลังดำเนินการปรับปรุง

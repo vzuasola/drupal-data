@@ -1,6 +1,6 @@
 field_settings:
   label: Language
-  choices: "en-GB|English (Europe)\r\nzh-TW|Traditional Chinese (繁體)\r\nzh-CN|Simplified Chinese (简体)\r\nen-US|English\r\nel|Greek (Ελληνικά)\r\nhi|English (India)\r\nid|Bahasa Indonesia\r\nja|Japanese (日本語)\r\nko-KR|Korean (한국어)\r\npl|Polish (Polski)\r\nth|Thai (ภาษาไทย)\r\nvi|Vietnamese (Tiếng Việt)\r\nmy|Burmese (ဗမာ)\r\nlo|Lao (ລາວ)\r\nkm|Khmer (ខ្មែរ)"
+  choices: "en-GB|English (Europe)\r\nth|Thai (ภาษาไทย)"
 field_validations:
   required:
     enable: 1
