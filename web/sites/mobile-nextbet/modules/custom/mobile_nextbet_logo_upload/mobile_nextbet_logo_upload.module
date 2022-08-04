@@ -1,0 +1,57 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\FileInterface;
+
+/**
+ * @file
+ * Contains mobile_nextbet_logo_upload.module
+ */
+
+/**
+ * Custom validator that checks image width and height that is added in form validator
+ *
+ * @param FileInterface $file
+ * @param integer $large
+ * @param integer $medium
+ * @param integer $small
+ * @return array
+ */
+function allowed_image_width_height(
+  FileInterface $file,
+  $large = 0,
+  $medium = 0,
+  $small = 0
+) {
+  $errors = array();
+
+  // Check first that the file is an image.
+  $image_factory = \Drupal::service('image.factory');
+  $image = $image_factory->get($file->getFileUri());
+  // Get image witdh that will be uploaded
+  $image_width = $image->getWidth();
+
+  // Get image witdh that will be uploaded
+  $image_height = $image->getHeight();
+  if ($image->isValid()) {
+    // Check if image is width of 142px and height of 43px
+    if ($large || $medium || $small) {
+      list($width_142, $height_43) = explode('x', $large);
+      list($width_135, $height_41) = explode('x', $medium);
+      list($width_128, $height_39) = explode('x', $small);
+      if ($image_width == $width_142 && $image_height == $height_43) {
+        dpm("Sucessfully added image with with width of 142px and height of 43px. Click on save to confirm!");
+      } elseif ($image_width == $width_135 && $image_height == $height_41) {
+        dpm("Sucessfully added image with with width of 135px and height of 41px. Click on save to confirm!");
+      } elseif ($image_width == $width_128 && $image_height == $height_39) {
+        dpm("Sucessfully added image with with width of 128px and height of 39px. Click on save to confirm!");
+      } else {
+        $errors[] = t('Width <b>%width px</b> and height <b>%height px</b> doesnt fit into our requirements.', array(
+          '%width' => $image_width,
+          '%height' => $image_height
+        ));
+      }
+    }
+    return $errors;
+  }
+}
