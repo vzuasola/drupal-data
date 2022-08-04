@@ -922,12 +922,39 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'legal_agreements' => [
+          'name' => 'Legal Agreements',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Legal Agreements',
+              '#type' => 'textarea',
+              '#description' => 'Legal Agreements',
+              '#default_value' => 'Legal Agreements',
+            ],
+          ],
+        ],
+
         'terms_and_conditions' => [
           'name' => 'Terms and Conditions',
+          'title' => 'Terms and Conditions Title',
           'type' => 'checkbox',
           'settings' => [
             'label' => [
-              '#title' => 'Terms and Conditions',
+              '#title' => 'Terms and Conditions Markup',
+              '#type' => 'textarea',
+              '#description' => 'Terms and Conditions',
+              '#default_value' => 'I am at least 21 years old and have read and accepted the Terms and Conditions.',
+            ],
+          ],
+        ],
+
+        'terms_and_conditions_markup' => [
+          'name' => 'Terms and Conditions Markup',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Terms and Conditions Markup',
               '#type' => 'textarea',
               '#description' => 'Terms and Conditions',
               '#default_value' => 'I am at least 21 years old and have read and accepted the Terms and Conditions.',
@@ -937,10 +964,24 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
         'citizenship' => [
           'name' => 'Citizenship',
+          'title' => 'Citizenship Title',
           'type' => 'checkbox',
           'settings' => [
             'label' => [
-              '#title' => 'Citizenship',
+              '#title' => 'Citizenship Markup',
+              '#type' => 'textarea',
+              '#description' => 'Citizenship',
+              '#default_value' => 'I confirm I am NOT a Philippine Government Employee.',
+            ],
+          ],
+        ],
+
+        'citizenship_markup' => [
+          'name' => 'Citizenship Markup',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Citizenship Markup',
               '#type' => 'textarea',
               '#description' => 'Citizenship',
               '#default_value' => 'I confirm I am NOT a Philippine Government Employee.',
@@ -950,10 +991,24 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
         'awareness' => [
           'name' => 'Awareness',
+          'title' => 'Awareness Title',
           'type' => 'checkbox',
           'settings' => [
             'label' => [
-              '#title' => 'Awareness',
+              '#title' => 'Awareness Markup',
+              '#type' => 'textarea',
+              '#description' => 'Awareness',
+              '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',
+            ],
+          ],
+        ],
+        
+        'awareness_markup' => [
+          'name' => 'Awareness Markup',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Awareness Markup',
               '#type' => 'textarea',
               '#description' => 'Awareness',
               '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',

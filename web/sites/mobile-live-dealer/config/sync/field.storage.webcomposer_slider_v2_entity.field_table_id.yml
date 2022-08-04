@@ -1,0 +1,21 @@
+uuid: 4c6a6706-9b8e-47e5-b43b-b514fe42dcf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_table_id
+field_name: field_table_id
+entity_type: webcomposer_slider_v2_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
