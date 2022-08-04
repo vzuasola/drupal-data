@@ -111,20 +111,20 @@ class KenoConfigForm extends FormBase {
       '#group' => 'keno_config_form'
     ];
 
-    $form['games_button']['play_text'] = [
+    $form['games_button']['keno_play_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
       '#description' => $this->t('The text to display on play button.'),
-      '#default_value' => $this->get('play_text'),
+      '#default_value' => $this->get('keno_play_text'),
       '#required' => true,
       '#translatable' => true,
     ];
 
-    $form['games_button']['game_info_text'] = [
+    $form['games_button']['keno_game_info_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
       '#description' => $this->t('This text to display on game info link.'),
-      '#default_value' => $this->get('game_info_text'),
+      '#default_value' => $this->get('keno_game_info_text'),
       '#required' => true,
       '#translatable' => true,
     ];
