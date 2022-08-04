@@ -38,7 +38,7 @@ static code analysis:
       - .sonar-cache/
   allow_failure: true
 
-php code sniffer:
+.php code sniffer:
   stage: tests
   script:
     - python -u automation/run.py --stage phpcs
