@@ -1,0 +1,23 @@
+uuid: e99d8c9d-5493-473f-93d7-a49dbc7392b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_games_link_target
+    - paragraphs.paragraphs_type.promotion_games_list
+  module:
+    - options
+id: paragraph.promotion_games_list.field_games_link_target
+field_name: field_games_link_target
+entity_type: paragraph
+bundle: promotion_games_list
+label: 'Games Link Target'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
