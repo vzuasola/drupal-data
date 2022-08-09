@@ -192,6 +192,53 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'pan_id_accept_terms' => [
+        'name' => 'Accept Terms Pan ID',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Accept Terms Pan ID',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text for accept terms and conditions before the browse button',
+            '#default_value' => 'Upload a clear and whole front copy of your PAN ID:',
+          ],
+        ],
+      ],
+
+      'pan_id' => [
+        'name' => 'Pan ID',
+        'type' => 'file',
+        'settings' => [
+          'label' => [
+            '#title' => 'Pan ID label',
+            '#type' => 'textfield',
+            '#description' => 'label for Pan ID field',
+          ],
+          'placeholder' => [
+            '#title' => 'Pan ID placeholder label',
+            '#type' => 'file',
+            '#description' => 'label for Pan ID field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Pan ID Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+          'file' => [
+            '#title' => 'Upload File Label',
+            '#type' => 'submit',
+            '#description' => 'Label for the File Uplaod',
+            '#default_value' => 'Browse',
+          ],
+          
+          'is_hidden' => [
+            '#title' => 'Hide Pan ID',
+            '#type' => 'checkbox',
+            '#description' => 'Enable or disable Pan ID',
+          ],
+        ],
+      ],
+
       'first_name' => [
         'name' => 'First Name',
         'type' => 'textfield',
