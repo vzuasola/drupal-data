@@ -46,17 +46,32 @@ class TournamentApiSettingsForm extends ConfigFormBase
   {
     $config = $this->config('webcomposer_config.tournament_api_configuration');
 
-    $form['tournament_api_settings']['#markup'] = 'Settings form for Tournament Api entities. Manage field settings here.';
+    $form['tournament_api_settings']['#markup'] = 'Settings form for Tournament API entities. Manage field settings here.';
+    $form['tournament_api_settings']['api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('API URL for Session Sharing'),
+      '#default_value' => $config->get('api_url'),
+      '#translatable' => FALSE,
+      '#required' => TRUE,
+    ];
 
-    $form['tournament_api_settings']['enable_collapsible_api'] = [
+    $form['tournament_api_settings']['banner_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Banner Display Configuration'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+
+    $form['tournament_api_settings']['banner_settings']['enable_collapsible_api'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Collapsible Tournament Api.'),
       '#default_value' => $config->get('enable_collapsible_api'),
     ];
 
-    $form['tournament_api_settings']['api_pager_position'] = [
+    $form['tournament_api_settings']['banner_settings']['api_pager_position'] = [
       '#type' => 'select',
-      '#title' => $this->t('Tournament Api Pager Position'),
+      '#title' => $this->t('Pager Position'),
       '#options' => [
         'left' => 'Left',
         'center' => 'Center',
@@ -65,9 +80,9 @@ class TournamentApiSettingsForm extends ConfigFormBase
       '#default_value' => $config->get('api_pager_position') ? $config->get('api_pager_position') : 'center',
     ];
 
-    $form['tournament_api_settings']['enable_transition_api'] = [
+    $form['tournament_api_settings']['banner_settings']['enable_transition_api'] = [
       '#type' => 'select',
-      '#title' => $this->t('Tournament Api Blurb Animation'),
+      '#title' => $this->t('Blurb Animation'),
       '#options' => [
         't-none' => 'none',
         't-1s' => '.5s',
@@ -75,6 +90,37 @@ class TournamentApiSettingsForm extends ConfigFormBase
         't-3s' => '2s',
       ],
       '#default_value' => $config->get('enable_transition_api') ? $config->get('enable_transition_api') : 'none',
+    ];
+
+    $form['tournament_api_settings']['notification'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Notification Prompt Configuration'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['tournament_api_settings']['notification']['title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title of Prompt Lighbox'),
+      '#default_value' => $config->get('title'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_api_settings']['notification']['message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Message for Prompt Lightbox'),
+      '#default_value' => $config->get('message'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_api_settings']['notification']['button_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button Title'),
+      '#default_value' => $config->get('button_text'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     return parent::buildForm($form, $form_state);
@@ -94,6 +140,9 @@ class TournamentApiSettingsForm extends ConfigFormBase
       'enable_transition_api',
       'api_pager_position',
       'enable_collapsible_api',
+      'title',
+      'message',
+      'button_text'
     ];
 
     foreach ($keys as $key) {
