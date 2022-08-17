@@ -1,0 +1,48 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\FileInterface;
+
+/**
+ * @file
+ * Contains nextbet_logo_upload.module
+ */
+
+/**
+ * Custom validator that check if image fits allowed heights
+ *
+ * @param FileInterface $file
+ * @param integer $logo_height_50
+ * @param integer $logo_height_55
+ * @param integer $logo_height_60
+ * @return void
+ */
+function allowed_image_heights(
+  FileInterface $file,
+  $logo_height_50 = 0,
+  $logo_height_55 = 0,
+  $logo_height_60 = 0
+) {
+  $errors = array();
+
+  // Check first that the file is an image.
+  $image_factory = \Drupal::service('image.factory');
+  $image = $image_factory->get($file->getFileUri());
+
+  if ($image->isValid()) {
+    if ($logo_height_50 || $logo_height_55 || $logo_height_60) {
+
+      // Check if dimensions of image are what is needed for logo
+      if ($image->getHeight() == $logo_height_50) {
+        dpm("Sucessfully uploaded image with height of 50px");
+      } elseif ($image->getHeight() == $logo_height_55) {
+        dpm("Sucessfully uploaded image with height of 55px");
+      } elseif ($image->getHeight() == $logo_height_60) {
+        dpm("Sucessfully uploaded image with height of 60px");
+      } else {
+        $errors[] = t('The image is not valid, expected height of image is (50px, 55px, 60px). Use images with this heights instead.');
+      }
+    }
+  }
+  return $errors;
+}
