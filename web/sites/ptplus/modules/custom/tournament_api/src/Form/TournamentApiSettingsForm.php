@@ -54,6 +54,13 @@ class TournamentApiSettingsForm extends ConfigFormBase
       '#translatable' => FALSE,
       '#required' => TRUE,
     ];
+    $form['tournament_api_settings']['api_casino'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('API Casino for Session Sharing'),
+      '#default_value' => $config->get('api_casino'),
+      '#translatable' => FALSE,
+      '#required' => TRUE,
+    ];
 
     $form['tournament_api_settings']['banner_settings'] = [
       '#type' => 'details',
@@ -92,6 +99,22 @@ class TournamentApiSettingsForm extends ConfigFormBase
       '#default_value' => $config->get('enable_transition_api') ? $config->get('enable_transition_api') : 'none',
     ];
 
+    $form['tournament_api_settings']['banner_settings']['button_learn_more'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button Text for Learn More'),
+      '#default_value' => $config->get('button_learn_more'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_api_settings']['banner_settings']['button_join'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button Text for Join'),
+      '#default_value' => $config->get('button_join'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
     $form['tournament_api_settings']['notification'] = [
       '#type' => 'details',
       '#title' => $this->t('Notification Prompt Configuration'),
@@ -107,10 +130,12 @@ class TournamentApiSettingsForm extends ConfigFormBase
       '#required' => TRUE,
     ];
 
+    $d = $config->get('message');
     $form['tournament_api_settings']['notification']['message'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => $this->t('Message for Prompt Lightbox'),
-      '#default_value' => $config->get('message'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
@@ -142,7 +167,11 @@ class TournamentApiSettingsForm extends ConfigFormBase
       'enable_collapsible_api',
       'title',
       'message',
-      'button_text'
+      'button_text',
+      'api_url',
+      'api_casino',
+      'button_learn_more',
+      'button_join'
     ];
 
     foreach ($keys as $key) {

@@ -1,0 +1,21 @@
+uuid: 3edea4b0-1b86-4574-bb1a-310b17a82107
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tournament_api.field_tournament_end_date
+  module:
+    - datetime
+    - tournament_api
+id: tournament_api.tournament_api.field_tournament_end_date
+field_name: field_tournament_end_date
+entity_type: tournament_api
+bundle: tournament_api
+label: 'Tournament End Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
