@@ -1,0 +1,18 @@
+uuid: 76be8463-b2fa-4488-b366-d7b3fbadd32c
+langcode: en
+status: true
+dependencies:
+  module:
+    - tournament_api
+id: tournament_api.tournament_api.metatag
+field_name: metatag
+entity_type: tournament_api
+bundle: tournament_api
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

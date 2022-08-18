@@ -1,0 +1,92 @@
+uuid: a007ae0a-a216-4ea6-810e-a46db26396fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tournament_api.tournament_api.field_banner_image
+    - field.field.tournament_api.tournament_api.field_platform
+    - field.field.tournament_api.tournament_api.field_status
+    - field.field.tournament_api.tournament_api.field_title
+    - field.field.tournament_api.tournament_api.field_tournament_end_date
+    - field.field.tournament_api.tournament_api.field_tournament_start_date
+  module:
+    - datetime
+    - options
+    - svg_image
+    - tournament_api
+    - user
+id: tournament_api.tournament_api.default
+targetEntityType: tournament_api
+bundle: tournament_api
+mode: default
+content:
+  field_banner_image:
+    weight: 2
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_platform:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_status:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tournament_end_date:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_tournament_start_date:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
