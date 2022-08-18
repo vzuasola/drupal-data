@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block.block.languagedropdownswitcher_2
     - field.storage.tournament_api.field_banner_image
     - field.storage.tournament_api.field_platform
     - field.storage.tournament_api.field_status
@@ -582,6 +583,7 @@ display:
         row: false
         fields: false
         sorts: false
+        header: false
       row:
         type: fields
         options:
@@ -973,6 +975,20 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
     cache_metadata:
       max-age: 0
       contexts:
