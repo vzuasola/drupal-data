@@ -444,45 +444,6 @@ display:
             group_items: {  }
           reduce_duplicates: true
           plugin_id: list_field
-        field_status_value:
-          id: field_status_value
-          table: tournament_api__field_status
-          field: field_status_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            enabled: enabled
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
       sorts:
         field_tournament_end_date_value:
           id: field_tournament_end_date_value
@@ -961,6 +922,57 @@ display:
           entity_type: tournament_api
           entity_field: id
           plugin_id: draggable_views_field
+        operations:
+          id: operations
+          table: tournament_api
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Operations links'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: false
+          entity_type: tournament_api
+          plugin_id: entity_operations
       path: admin/structure/tournament_api
       sorts:
         weight:
@@ -1055,6 +1067,8 @@ display:
       defaults:
         sorts: false
         fields: false
+        filters: false
+        filter_groups: false
       fields:
         field_title_export:
           id: field_title_export
@@ -1368,6 +1382,93 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      filters:
+        field_platform_value:
+          id: field_platform_value
+          table: tournament_api__field_platform
+          field: field_platform_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            mobile: mobile
+            both: both
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_platform_value_op
+            label: 'Platform (field_platform)'
+            description: ''
+            use_operator: false
+            operator: field_platform_value_op
+            identifier: field_platform
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          plugin_id: list_field
+        field_status_value:
+          id: field_status_value
+          table: tournament_api__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            enabled: enabled
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
