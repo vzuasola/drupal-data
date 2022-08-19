@@ -250,9 +250,9 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
 
           'is_enabled' => [
-            '#title' => 'Hide Pan ID feature',
+            '#title' => 'Enable Pan ID feature',
             '#type' => 'checkbox',
-            '#description' => 'Disable PAN ID feature',
+            '#description' => 'Enable or disable PAN ID feature',
           ],
         ],
       ],
