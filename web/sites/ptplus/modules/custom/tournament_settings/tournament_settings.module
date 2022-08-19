@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains tournament_settings.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tournament_settings_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tournament_settings module.
+    case 'help.page.tournament_settings':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('PT+ Tournament configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
