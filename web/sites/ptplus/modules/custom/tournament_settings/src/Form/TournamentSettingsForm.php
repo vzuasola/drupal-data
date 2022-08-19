@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Tournament Configuration",
  *     "description" = "Provides configuration for PT+ Tournaments",
- *     "parent" = "tournament.list",
+ *     "parent" = "tournament_api.list",
  *   },
  * )
  */
