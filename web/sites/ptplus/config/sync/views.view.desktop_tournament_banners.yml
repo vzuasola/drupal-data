@@ -1,4 +1,4 @@
-uuid: 239ad0b9-3d4a-4de9-9f7d-d45b788cd267
+uuid: 3bf9bf61-fd79-498b-b9b0-b0ac55df2830
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,7 @@ dependencies:
     - field.storage.tournament_api.field_title
     - field.storage.tournament_api.field_tournament_end_date
     - field.storage.tournament_api.field_tournament_start_date
+    - system.menu.admin
   module:
     - datetime
     - draggableviews
@@ -19,8 +20,8 @@ dependencies:
     - serialization
     - tournament_api
     - webcomposer_rest_extra
-id: tournament_banners
-label: 'Tournament Banners'
+id: desktop_tournament_banners
+label: 'Desktop Tournament Banners'
 module: views
 description: ''
 tag: ''
@@ -976,7 +977,7 @@ display:
           destination: false
           entity_type: tournament_api
           plugin_id: entity_operations
-      path: admin/structure/tournament_api
+      path: admin/structure/tournament_api/desktop
       sorts:
         weight:
           id: weight
@@ -1014,7 +1015,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            mobile: mobile
+            desktop: desktop
             both: both
           group: 1
           exposed: false
@@ -1097,8 +1098,8 @@ display:
         options:
           offset: 0
       menu:
-        type: none
-        title: 'Tournament Banners (Mobile)'
+        type: normal
+        title: 'Tournament Banners List (Desktop)'
         description: 'List of Banners and Sort Page'
         expanded: false
         parent: tournament_api.list
@@ -1116,14 +1117,14 @@ display:
         - 'config:field.storage.tournament_api.field_title'
         - 'config:field.storage.tournament_api.field_tournament_end_date'
         - 'config:field.storage.tournament_api.field_tournament_start_date'
-  rest_export_1:
+  rest_export_2:
     display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
+    id: rest_export_2
+    display_title: 'Desktop Tournament Banners'
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/tournament_banners
+      path: api/desktop_tournament_banners
       pager:
         type: none
         options:
@@ -1494,7 +1495,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            mobile: mobile
+            desktop: desktop
             both: both
           group: 1
           exposed: false
@@ -1611,6 +1612,7 @@ display:
         operator: AND
         groups:
           1: AND
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
