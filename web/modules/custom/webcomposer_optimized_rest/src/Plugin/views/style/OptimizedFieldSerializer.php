@@ -22,7 +22,9 @@ use Drupal\webcomposer_rest_extra\Plugin\views\style\NodeListSerializer;
  */
 class OptimizedFieldSerializer extends NodeListSerializer {
   use PagerTrait;
-
+  const ALLOWED_ID_WITH_FIELD_OVERRIDES = [
+    'game_list_slots_v2'
+  ];
   /**
    * {@inheritdoc}
    */
@@ -42,6 +44,32 @@ class OptimizedFieldSerializer extends NodeListSerializer {
     $temp = [];
     foreach ($data as $entityKey => $entity) {
       foreach ($entity as $fieldKey => $field) {
+          // add parent for taxonomy terms
+          if (in_array($this->view->storage->get('id'), self::ALLOWED_ID_WITH_FIELD_OVERRIDES)
+            && $fieldKey === "field_game_filter_export") {
+            foreach ($field as $key => $filter) {
+              if (isset($filter['id'])) {
+                $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($filter['id']);
+              }
+
+              if (!empty($parent)) {
+                $parent_id = array_keys($parent);
+                if (isset($parent_id[0])) {
+                  $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+                  $term = Term::load($parent_id[0]);
+                  $termTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
+                  $translatedArray = $termTranslated->toArray();
+                  $data[$entityKey][$fieldKey][$key]['parent'] = [
+                    'field_games_filter_label' => $translatedArray['field_games_filter_label'][0]['value'],
+                    'field_games_filter_value' => $translatedArray['field_games_filter_value'][0]['value'],
+                    'field_games_filter_disable' => $translatedArray['field_games_filter_disable'][0]['value'],
+                    'name' => $translatedArray['name'][0]['value'],
+                  ];
+                }
+              }
+            }
+          }
+
           // Check if field has exposed_filters data
           if (isset($field['exposed_filters'])) {
               $exposedFilters = $field['exposed_filters'];
