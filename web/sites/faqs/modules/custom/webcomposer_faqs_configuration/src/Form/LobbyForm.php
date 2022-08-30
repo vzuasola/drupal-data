@@ -107,5 +107,14 @@ class LobbyForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['cricket_configuration']['read_more'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Read More Texts'),
+      '#description' => $this->t('Link texts for articles.'),
+      '#default_value' => $this->get('read_more'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
   }
 }
