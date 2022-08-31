@@ -1,0 +1,19 @@
+uuid: 7ef81da2-753c-4c17-8d52-4f55b7f9b9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_field_table_id
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+id: paragraph.promo_banner_game_launch.field_field_table_id
+field_name: field_field_table_id
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: 'Table ID/ Launch Alias'
+description: "Use this field to for Direct Table Launch the following game integrations:\r\n<ul>\r\n<li>Ezugi - Please provide table ID</li>\r\n<li>Playtech - Please provide launch alias</li>\r\n<li>Voidbridge - Please provide table ID and check \"Use Game Lobby\"</li>\r\n</ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
