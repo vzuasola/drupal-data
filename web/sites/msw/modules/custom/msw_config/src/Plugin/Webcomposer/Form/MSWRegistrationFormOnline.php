@@ -810,8 +810,8 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'accept-size' => [
               '#title' => 'Accepted file size',
               '#type' => 'textfield',
-              '#description' => 'File size to accept in kb, 1mb = 1024kb',
-              '#default_value' => '1024',
+              '#description' => 'File size to accept in kb, 10mb = 10,240kb',
+              '#default_value' => '10,240',
             ],
           ],
         ],
@@ -903,8 +903,8 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'accept-size' => [
               '#title' => 'Accepted file size',
               '#type' => 'textfield',
-              '#description' => 'File size to accept in kb, 1mb = 1024kb',
-              '#default_value' => '1024',
+              '#description' => 'File size to accept in kb, 10mb = 10,240kb',
+              '#default_value' => '10,240',
             ],
           ],
         ],
