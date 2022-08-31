@@ -192,6 +192,71 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'pan_id_accept_terms' => [
+        'name' => 'Accept Terms Pan ID',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Accept Terms Pan ID',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text for accept terms and conditions before the browse button',
+            '#default_value' => 'Upload a clear and whole front copy of your PAN ID:',
+          ],
+        ],
+      ],
+
+      'pan_id_upload' => [
+        'name' => 'Upload Pan ID',
+        'type' => 'file',
+        'translatable' => true,
+        'settings' => [
+          'label' => [
+            '#title' => 'Pan ID label',
+            '#type' => 'textfield',
+            '#description' => 'label for Pan ID field',
+          ],
+          'pan_id_url' => [
+            '#title' => 'Insert PAN ID url',
+            '#type' => 'textfield',
+            '#description' => 'Insert PAN ID title so First name, Last Name and Birth of Date will be fetched from this url'
+          ],
+          'pan_id_values_mapping' => [
+            '#title' => 'Insert Mapping for First Name, Last Name and Birth of Date',
+            '#type' => 'textarea',
+            '#description' => 'Here we should insert first name, last name and birth of date to be populated into form.',
+            '#required' => true,
+          ],
+          'pan_id_extensions' => [
+            '#title' => 'Available extensions for image',
+            '#type' => 'textarea',
+            '#description' => 'Here you should specify available extensions for image that user is uploading',
+            '#required' => true,
+          ],
+          'error_extension' => [	
+            '#title' => 'Add error message for file extension',	
+            '#type' => 'textfield',	
+            '#description' => 'Here we can specify error message that will appear in FE.',
+            '#required' => true,
+          ],
+          'annotation' => [
+            '#title' => 'Pan ID Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+          'upload_btn_text' => [
+            '#title' => 'Upload Button Text',
+            '#type' => 'textarea',
+            '#description' => 'field for uplaod button text',
+          ],
+
+          'is_enabled' => [
+            '#title' => 'Enable Pan ID feature',
+            '#type' => 'checkbox',
+            '#description' => 'Enable or disable PAN ID feature',
+          ],
+        ],
+      ],
+
       'first_name' => [
         'name' => 'First Name',
         'type' => 'textfield',

@@ -1,0 +1,76 @@
+uuid: 19f4c7f4-80b6-4495-853f-8840c6f6700e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tournament_api.tournament_api.field_banner_image
+    - field.field.tournament_api.tournament_api.field_platform
+    - field.field.tournament_api.tournament_api.field_status
+    - field.field.tournament_api.tournament_api.field_title
+    - field.field.tournament_api.tournament_api.field_tournament_end_date
+    - field.field.tournament_api.tournament_api.field_tournament_start_date
+    - image.style.thumbnail
+  module:
+    - datetime
+    - svg_image
+    - tournament_api
+id: tournament_api.tournament_api.default
+targetEntityType: tournament_api
+bundle: tournament_api
+mode: default
+content:
+  field_banner_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_platform:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_status:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tournament_end_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_tournament_start_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

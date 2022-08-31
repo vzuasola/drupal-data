@@ -49,6 +49,7 @@ class GeneralConfiguration extends FormBase {
     $this->trackingConfig($form);
     $this->tripwirePopupConfig($form);
     $this->textOverBannerConfig($form);
+    $this->panIdUrlConfiguration($form);
 
     return $form;
   }
@@ -159,7 +160,7 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('registraton_portal_id_to_dafaconnect_portal_id'),
       '#required' => TRUE,
     ];
-    
+
     $form['integration']['mobile_native_app_command'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Native App CMD'),
@@ -623,6 +624,31 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $desktop_right['value'],
       '#format' => $desktop_right['format'],
       '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * Pan ID Upload URL configurations
+   */
+  private function panIdUrlConfiguration(array &$form)
+  {
+    $form['pan_id_url_configuration'] = [
+      '#type' => 'details',
+      '#title' => $this->t('PAN ID Url config'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['pan_id_url_configuration']['upload_image_server'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Upload Image server'),
+      '#description' => $this->t('Add upload image server URL'),
+      '#default_value' => $this->get('upload_image_server') ?? "",
+    ];
+    $form['pan_id_url_configuration']['arion_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Arion endpoint URL'),
+      '#description' => $this->t('Here we should add Arion endpoint that will process our image'),
+      '#default_value' => $this->get('arion_endpoint') ?? "",
     ];
   }
 }
