@@ -46,17 +46,25 @@ class TournamentApiSettingsForm extends ConfigFormBase
   {
     $config = $this->config('webcomposer_config.tournament_api_configuration');
 
-    $form['tournament_api_settings']['#markup'] = 'Settings form for Tournament Api entities. Manage field settings here.';
+    $form['tournament_api_settings']['#markup'] = 'Settings form for Tournament API entities. Manage field settings here.';
 
-    $form['tournament_api_settings']['enable_collapsible_api'] = [
+    $form['tournament_api_settings']['banner_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Banner Display Configuration'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+
+    $form['tournament_api_settings']['banner_settings']['enable_collapsible_api'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Collapsible Tournament Api.'),
       '#default_value' => $config->get('enable_collapsible_api'),
     ];
 
-    $form['tournament_api_settings']['api_pager_position'] = [
+    $form['tournament_api_settings']['banner_settings']['api_pager_position'] = [
       '#type' => 'select',
-      '#title' => $this->t('Tournament Api Pager Position'),
+      '#title' => $this->t('Pager Position'),
       '#options' => [
         'left' => 'Left',
         'center' => 'Center',
@@ -65,9 +73,9 @@ class TournamentApiSettingsForm extends ConfigFormBase
       '#default_value' => $config->get('api_pager_position') ? $config->get('api_pager_position') : 'center',
     ];
 
-    $form['tournament_api_settings']['enable_transition_api'] = [
+    $form['tournament_api_settings']['banner_settings']['enable_transition_api'] = [
       '#type' => 'select',
-      '#title' => $this->t('Tournament Api Blurb Animation'),
+      '#title' => $this->t('Blurb Animation'),
       '#options' => [
         't-none' => 'none',
         't-1s' => '.5s',

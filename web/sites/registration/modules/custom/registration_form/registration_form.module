@@ -20,6 +20,11 @@ function registration_form_webcomposer_form_validation_alter(&$validations) {
     'description' => 'Validate user email if already exist',
     'error' => 'Email not available',
   ];
+  $validations['bonus_code_availability'] = [
+    'title' => 'Bonus Code Availability',
+    'description' => 'Validate bonus code if already exist',
+    'error' => 'Bonus Code not available',
+  ];
   $validations['invalid_words'] = [
     'title' => 'Invalid Words',
     'description' => 'Validation to disallow specific words in the field',
