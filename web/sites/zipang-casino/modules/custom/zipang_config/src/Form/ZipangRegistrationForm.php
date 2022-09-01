@@ -115,6 +115,24 @@ class ZipangRegistrationForm extends FormBase {
       '#default_value' => $this->get('submit_label'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['form']['year_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Year Label'),
+      '#default_value' => $this->get('year_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['month_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Month Label'),
+      '#default_value' => $this->get('month_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['day_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Day Label'),
+      '#default_value' => $this->get('day_label'),
+      '#translatable' => TRUE,
+    ];
     // error message setting
     $form['reg_form']['errors'] = [
       '#type' => 'fieldset',
