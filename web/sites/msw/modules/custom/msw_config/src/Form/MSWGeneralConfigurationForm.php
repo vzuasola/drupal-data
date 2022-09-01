@@ -63,6 +63,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#open' => TRUE,
     ];
 
+    $form['registration_setting']['registration']['enable_register_upload_img'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Registration Fields - (✓)hide | (✕)show ID 2 option'),
+      '#default_value' => $this->get('enable_register_upload_img'),
+      '#translatable' => TRUE,
+    ];
+
     $form['registration_setting']['registration']['registration_step_two_target'] = [
       '#type' => 'select',
       '#title' => $this->t('Step 2'),
