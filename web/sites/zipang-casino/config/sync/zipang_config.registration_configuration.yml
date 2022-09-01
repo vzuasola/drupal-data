@@ -50,3 +50,7 @@ step_4_body:
   format: basic_html
 play_button_label: ''
 play_button_link: ''
+year_label: '年'
+month_label: '月'
+day_label: '日'
+

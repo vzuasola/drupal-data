@@ -44,3 +44,6 @@ step_3_body:
   format: basic_html
 play_button_label: 今すぐプレイ！
 play_button_link: '/games?category=new-games'
+year_label: '年'
+month_label: '月'
+day_label: '日'
