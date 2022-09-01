@@ -223,17 +223,20 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           'pan_id_values_mapping' => [
             '#title' => 'Insert Mapping for First Name, Last Name and Birth of Date',
             '#type' => 'textarea',
-            '#description' => 'Here we should insert first name, last name and birth of date to be populated into form.'
+            '#description' => 'Here we should insert first name, last name and birth of date to be populated into form.',
+            '#required' => true,
           ],
           'pan_id_extensions' => [
             '#title' => 'Available extensions for image',
             '#type' => 'textarea',
-            '#description' => 'Here you should specify available extensions for image that user is uploading'
+            '#description' => 'Here you should specify available extensions for image that user is uploading',
+            '#required' => true,
           ],
           'error_extension' => [	
             '#title' => 'Add error message for file extension',	
             '#type' => 'textfield',	
-            '#description' => 'Here we can specify error message that will appear in FE.',	
+            '#description' => 'Here we can specify error message that will appear in FE.',
+            '#required' => true,
           ],
           'annotation' => [
             '#title' => 'Pan ID Annotation text',
@@ -246,8 +249,8 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'field for uplaod button text',
           ],
 
-          'is_hidden' => [
-            '#title' => 'Hide Pan ID feature',
+          'is_enabled' => [
+            '#title' => 'Enable Pan ID feature',
             '#type' => 'checkbox',
             '#description' => 'Enable or disable PAN ID feature',
           ],
