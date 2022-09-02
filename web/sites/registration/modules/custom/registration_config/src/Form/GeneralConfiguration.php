@@ -652,8 +652,8 @@ class GeneralConfiguration extends FormBase {
     ];
     $form['pan_id_url_configuration']['taurus_endpoint'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Enter Taurus endpoint URL'),
-      '#description' => $this->t('We should add Taurus endpoint here that will process PAN ID record creation'),
+      '#title' => $this->t('Enter Taurus wsdl endpoint URL'),
+      '#description' => $this->t('We should add Taurus wsdl endpoint that will call on PAN ID creation'),
       '#default_value' => $this->get('taurus_endpoint') ?? "",
     ];
   }
