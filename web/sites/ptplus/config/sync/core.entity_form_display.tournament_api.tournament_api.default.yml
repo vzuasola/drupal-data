@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.tournament_api.tournament_api.field_banner_image
+    - field.field.tournament_api.tournament_api.field_banner_image_landscape
     - field.field.tournament_api.tournament_api.field_platform
     - field.field.tournament_api.tournament_api.field_status
     - field.field.tournament_api.tournament_api.field_title
@@ -27,6 +28,14 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_banner_image_landscape:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_platform:
     weight: 3
     settings: {  }
@@ -34,7 +43,7 @@ content:
     type: options_select
     region: content
   field_status:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -48,13 +57,13 @@ content:
     type: string_textfield
     region: content
   field_tournament_end_date:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_tournament_start_date:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -67,7 +76,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
