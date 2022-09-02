@@ -650,5 +650,11 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Here we should add Arion endpoint that will process our image'),
       '#default_value' => $this->get('arion_endpoint') ?? "",
     ];
+    $form['pan_id_url_configuration']['taurus_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Taurus wsdl endpoint URL'),
+      '#description' => $this->t('We should add Taurus wsdl endpoint that will call on PAN ID creation'),
+      '#default_value' => $this->get('taurus_endpoint') ?? "",
+    ];
   }
 }
