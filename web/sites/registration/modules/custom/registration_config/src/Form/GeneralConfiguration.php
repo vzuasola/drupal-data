@@ -656,5 +656,23 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('We should add Taurus wsdl endpoint that will call on PAN ID creation'),
       '#default_value' => $this->get('taurus_endpoint') ?? "",
     ];
+    $form['pan_id_url_configuration']['secret_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Image server secret key'),
+      '#description' => $this->t('Here we should put image server secret key.'),
+      '#default_value' => $this->get('secret_key') ?? "",
+    ];
+    $form['pan_id_url_configuration']['image_server_name'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Image Server Name'),
+      '#description' => $this->t('Here we should put name of image server.'),
+      '#default_value' => $this->get('image_server_name') ?? "",
+    ];
+    $form['pan_id_url_configuration']['image_server_password'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Image Server Password'),
+      '#description' => $this->t('Enter password for image server for authentication during image upload.'),
+      '#default_value' => $this->get('image_server_password') ?? "",
+    ];
   }
 }
