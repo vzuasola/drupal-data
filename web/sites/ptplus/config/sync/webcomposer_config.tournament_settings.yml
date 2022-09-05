@@ -1,0 +1,12 @@
+api_url: 'https://ptplus-b.hotspin88.com/loginFromGame?data='
+api_casino: goldencircle
+enable_transition_api: t-none
+button_learn_more: 'LEARN MORE'
+button_join: JOIN
+title: 'PROMPT NOTIFICATION'
+message:
+  value: "<p>The PT+ account doesn't exist. Enter a different account or get a new one.</p>\r\n"
+  format: basic_html
+value: null
+format: null
+button_text: CLOSE

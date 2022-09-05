@@ -1,0 +1,45 @@
+uuid: 20d1d8aa-037e-40db-9902-44571d9304a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tournament_api.field_banner_image_landscape
+  module:
+    - content_translation
+    - image
+    - tournament_api
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: tournament_api.tournament_api.field_banner_image_landscape
+field_name: field_banner_image_landscape
+entity_type: tournament_api
+bundle: tournament_api
+label: 'Banner Image Landscape'
+description: 'Recommended dimension of image is 1151px x 250px. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 1151x250
+  min_resolution: 1151x250
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
