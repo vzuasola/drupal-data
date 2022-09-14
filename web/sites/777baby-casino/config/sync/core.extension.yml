@@ -86,6 +86,7 @@ module:
   toolbar: 0
   user: 0
   views_ui: 0
+  webcomposer_cache: 0
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_audit: 0
