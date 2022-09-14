@@ -681,6 +681,7 @@ class GeneralConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('OCR endpoint'),
       '#description' => $this->t('Enter OCR endpoint for reading image upload.'),
+      '#maxlength' => 500,
       '#default_value' => $this->get('ocr_endpoint') ?? "",
     ];
     $form['pan_id_url_configuration']['x_pan_id_code'] = [
