@@ -628,13 +628,13 @@ class GeneralConfiguration extends FormBase {
   }
 
   /**
-   * Pan ID Upload URL configurations
+   * Pan ID Configurations
    */
   private function panIdUrlConfiguration(array &$form)
   {
     $form['pan_id_url_configuration'] = [
       '#type' => 'details',
-      '#title' => $this->t('PAN ID Url config'),
+      '#title' => $this->t('PAN ID Configurations'),
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
@@ -644,19 +644,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Add upload image server URL'),
       '#default_value' => $this->get('upload_image_server') ?? "",
     ];
-    $form['pan_id_url_configuration']['arion_endpoint'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Enter Arion endpoint URL'),
-      '#description' => $this->t('Here we should add Arion endpoint that will process our image'),
-      '#default_value' => $this->get('arion_endpoint') ?? "",
-    ];
-    $form['pan_id_url_configuration']['taurus_endpoint'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Enter Taurus wsdl endpoint URL'),
-      '#description' => $this->t('We should add Taurus wsdl endpoint that will call on PAN ID creation'),
-      '#default_value' => $this->get('taurus_endpoint') ?? "",
-    ];
-    $form['pan_id_url_configuration']['secret_key'] = [
+       $form['pan_id_url_configuration']['secret_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Image server secret key'),
       '#description' => $this->t('Here we should put image server secret key.'),
@@ -673,6 +661,33 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Image Server Password'),
       '#description' => $this->t('Enter password for image server for authentication during image upload.'),
       '#default_value' => $this->get('image_server_password') ?? "",
+    ];
+
+    $form['pan_id_url_configuration']['arion_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Arion endpoint URL'),
+      '#description' => $this->t('Here we should add Arion endpoint that will process our image'),
+      '#default_value' => $this->get('arion_endpoint') ?? "",
+    ];
+
+    $form['pan_id_url_configuration']['taurus_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Taurus wsdl endpoint URL'),
+      '#description' => $this->t('We should add Taurus wsdl endpoint that will call on PAN ID creation'),
+      '#default_value' => $this->get('taurus_endpoint') ?? "",
+    ];
+
+    $form['pan_id_url_configuration']['ocr_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('OCR endpoint'),
+      '#description' => $this->t('Enter OCR endpoint for reading image upload.'),
+      '#default_value' => $this->get('ocr_endpoint') ?? "",
+    ];
+    $form['pan_id_url_configuration']['x_pan_id_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('X-PANID-Code of OCR endpoint'),
+      '#description' => $this->t('Enter X-PANID-Code of OCR endpoint.'),
+      '#default_value' => $this->get('x_pan_id_code') ?? "",
     ];
   }
 }
