@@ -85,6 +85,7 @@ module:
   toolbar: 0
   user: 0
   views_ui: 0
+  webcomposer_cache: 0
   webcomposer_affilates: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
