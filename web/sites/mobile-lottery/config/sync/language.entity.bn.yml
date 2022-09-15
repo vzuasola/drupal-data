@@ -1,4 +1,4 @@
-uuid: 9fecafb9-1b90-4da9-bf0b-53c95e775be1
+uuid: 16ebeeee-977d-40bc-a4f5-c424af2625b5
 langcode: bn
 status: true
 dependencies:
@@ -12,5 +12,5 @@ third_party_settings:
 id: bn
 label: 'English (Bangladesh)'
 direction: ltr
-weight: 0
+weight: 3
 locked: false
