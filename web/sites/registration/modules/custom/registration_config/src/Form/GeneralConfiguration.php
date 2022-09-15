@@ -695,7 +695,6 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Request Timeout'),
       '#description' => $this->t('Input value for the request timeout'),
       '#default_value' => $this->get('request_timeout'),
-      '#translatable' => TRUE,
     ];
   }
 }
