@@ -690,5 +690,11 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Enter X-PANID-Code of OCR endpoint.'),
       '#default_value' => $this->get('x_pan_id_code') ?? "",
     ];
+    $form['pan_id_url_configuration']['request_timeout'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Request Timeout'),
+      '#description' => $this->t('Input value for the request timeout'),
+      '#default_value' => $this->get('request_timeout'),
+    ];
   }
 }
