@@ -1,5 +1,5 @@
-uuid: 9fecafb9-1b90-4da9-bf0b-53c95e775be1
-langcode: bn
+uuid: 67be1209-57a0-4ad6-b4eb-660baa0d35e1
+langcode: pk
 status: true
 dependencies:
   module:
@@ -7,10 +7,10 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: 'English (Bangladesh)'
+    webcomposer_language_custom_label: 'English (Pakistan)'
     webcomposer_language_hidden: 0
-id: bn
-label: 'English (Bangladesh)'
+id: pk
+label: 'English (Pakistan)'
 direction: ltr
-weight: 0
+weight: 4
 locked: false

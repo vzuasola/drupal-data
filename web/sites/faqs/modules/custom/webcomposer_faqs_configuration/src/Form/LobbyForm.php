@@ -116,5 +116,13 @@ class LobbyForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['cricket_configuration']['cricket_related_subtitle'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sub Related Title'),
+      '#description' => $this->t('Define the related subtitle for the Cricket'),
+      '#default_value' => $this->get('cricket_related_subtitle'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }

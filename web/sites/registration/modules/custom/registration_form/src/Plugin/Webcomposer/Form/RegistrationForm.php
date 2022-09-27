@@ -205,6 +205,19 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'pan_id_description_text' => [
+        'name' => 'Upload Pan ID Description Text',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Pan ID Description Text',
+            '#type' => 'textarea',
+            '#description' => 'Here we can add description for file size file type etc for pan id upload.',
+            '#default_value' => ' Maximum of 10MB(JPG, JPEG, PNG, BMP, GIF, PDF) ',
+          ]
+        ],
+      ],
+
       'pan_id_upload' => [
         'name' => 'Upload Pan ID',
         'type' => 'file',
@@ -232,16 +245,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'Here you should specify available extensions for image that user is uploading',
             '#required' => true,
           ],
-          'error_extension' => [	
-            '#title' => 'Add error message for file extension',	
-            '#type' => 'textfield',	
+          'error_extension' => [
+            '#title' => 'Add error message for file extension',
+            '#type' => 'textfield',
             '#description' => 'Here we can specify error message that will appear in FE.',
             '#required' => true,
-          ],
-          'annotation' => [
-            '#title' => 'Pan ID Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
           ],
           'upload_btn_text' => [
             '#title' => 'Upload Button Text',

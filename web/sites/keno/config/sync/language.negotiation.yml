@@ -6,25 +6,34 @@ url:
     en: en
     zh-hans: sc
     th: th
+    ko: kr
     vi: vn
     id: id
-    ko: kr
+    bu: bu
     lo: lo
     km: km
-    bu: bu
-    '': null
     ja: jp
+    hi: in
+    in: hi
+    te: te
+    bn: bn
+    pk: pk
   domains:
     en: ''
     zh-hans: ''
     th: ''
+    ko: ''
     vi: ''
     id: ''
-    ko: ''
+    bu: ''
     lo: ''
     km: ''
-    bu: ''
     ja: ''
+    hi: ''
+    in: ''
+    te: ''
+    bn: ''
+    pk: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
