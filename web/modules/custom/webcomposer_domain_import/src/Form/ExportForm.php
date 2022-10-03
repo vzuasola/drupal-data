@@ -21,6 +21,8 @@ class ExportForm extends FormBase {
    * Constructor.
    */
   public function __construct() {
+    ini_set('memory_limit','256M');
+    ini_set('max_execution_time', '300');
     $this->domainExport = \Drupal::service('webcomposer_domain_import.domain_export');
   }
 
@@ -35,6 +37,7 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+
     $form['webcomposer_domain_export'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Export Domains'),
