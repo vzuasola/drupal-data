@@ -46,7 +46,6 @@ class ExportForm extends FormBase {
     $form['webcomposer_domain_export']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Export'),
-      '#submit' => [[$this->domainExport, 'domainExportExcel']],
     ];
 
     return $form;
@@ -63,6 +62,32 @@ class ExportForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
+    $config = $this->config('webcomposer_config.toggle_configuration');
+    $batchExport = $config->get('use_batch_export');
+    if ($batchExport) {
+      $operations = [
+        [[$this->domainExport, 'exportLanguages'], [$form_state]],
+        [[$this->domainExport, 'exportDomains'], [$form_state]],
+        [[$this->domainExport, 'exportPlaceholders'], [$form_state]],
+      ];
+
+       // Get all languages from which are enabled.
+      $languages = $this->domainExport->getAvailableLanguage();
+      foreach ($languages as $key => $value) {
+        array_push($operations,  [[$this->domainExport, 'exportVariablesPerLang'], [$form_state, $key]]);
+      }
+
+      $batch = [
+        'title' => t('Exporting Domains'),
+        'operations' => $operations,
+        'init_message' => t('Batch is starting.'),
+        'progress_message' => t('Processed @current out of @total.'),
+        'finished' => [$this->domainExport, 'domainExportFinishedCallback'],
+      ];
+      batch_set($batch);
+    } else {
+      $this->domainExport->domainExportExcel();
+    }
   }
 
 }
