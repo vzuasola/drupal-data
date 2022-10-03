@@ -72,3 +72,8 @@ enable_futurama_authentication_poker_native_app: 1
 mbtc_product_portal_id: '2,105,9,111,27,129,46,139,22,29,131,48,141,123,26,128'
 mbtc_restriction_message: 'Bitcoin currency is only available in Dafasports.'
 iovation_portal_ids: '22,123,26,128,29,131,48,141,2,105,9,111,27,129,46,139,3,106,10,112,28,130,47,140'
+
+rate_limit_upload_interval: '60'
+rate_limit_upload_operations: '1'
+upload_rate_limiting: 1
+rate_limiting_warning: ''
