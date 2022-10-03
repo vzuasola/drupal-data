@@ -46,7 +46,6 @@ class ExportForm extends FormBase {
     $form['webcomposer_domain_export']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Export'),
-      // '#submit' => [[$this->domainExport, 'domainExportExcel']],
     ];
 
     return $form;
