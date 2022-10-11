@@ -93,6 +93,71 @@ class DomainExport {
     return $result;
   }
 
+  public function getAvailableLanguage() {
+    $language = [];
+    $getLanguages = $this->languages->getLanguages($flags = 1);
+     // Get all languages from which are enabled.
+     foreach ($getLanguages as $key => $value) {
+      $language[$value->getId()] = $value->getName();
+    }
+    return $language;
+  }
+
+  /**
+   * Batch process for exporting Language
+  */
+  public function exportLanguages($form_state, &$context) {
+    $language = [];
+    $getLanguages = $this->languages->getLanguages($flags = 1);
+     // Get all languages from which are enabled.
+     foreach ($getLanguages as $key => $value) {
+      $language[$value->getId()] = $value->getName();
+    }
+
+    // Parse the languages in excel format.
+    $context['results']['languages'] = $this->service->excel_get_languages($language);
+    $context['sandbox']['progress']++;
+  }
+
+  /**
+   * Batch process for exporting Domain
+  */
+  public function exportDomains($form_state, &$context) {
+    $domains = $this->service->get_domain_groups_with_domains();
+    $context['results']['domains'] = $this->service->excel_get_domains($domains);
+    $context['sandbox']['progress']++;
+  }
+
+   /**
+   * Batch process for exporting Domain Placeholders
+   */
+  public function exportPlaceholders($form_state, &$context) {
+    $placeholders = $this->service->get_domain_tokens();
+    $context['results']['placeholders'] = $this->service->excel_get_placeholders_description($placeholders);
+    $context['sandbox']['progress']++;
+  }
+
+  /**
+   * Batch process for exporting Domain Variable Per Language
+   */
+  public function exportVariablesPerLang($form_state, $key, &$context) {
+    $placeholders = $this->getAllPlaceholdersPerLanguage($key);
+    // Get all the domain data per domain group per language.
+    $context['message'] = "Translating Placeholder - " . $key;
+    $variables = $this->getAllDomainsDataPerLanguage($placeholders, $key);
+    $context['results']['variables'][$key] = $variables;
+    $context['sandbox']['progress']++;
+  }
+
+  /**
+   * domainExportFinishedCallback for Batch Process.
+  */
+  public function domainExportFinishedCallback($success, $results, $operations) {
+    $this->domainExportCreateExcel($results);
+    return;
+  }
+
+
   /**
    * Creates the excel worksheet from given parsed data invokes excel download.
    *

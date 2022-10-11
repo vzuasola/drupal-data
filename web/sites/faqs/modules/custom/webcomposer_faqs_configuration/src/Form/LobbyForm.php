@@ -10,12 +10,12 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "webcomposer_faqs_configuration",
  *   route = {
- *     "title" = "Faqs Lobby Form Configuration",
+ *     "title" = "Faqs Lobby Form and SEO Cricket Configuration",
  *     "path" = "/admin/config/webcomposer/config/faqs_lobby_configuration",
  *   },
  *   menu = {
- *     "title" = "Faqs Lobby Configuration",
- *     "description" = "Provides Faqs Lobby configuration",
+ *     "title" = "Faqs Lobby Configuration and Cricket Configuration",
+ *     "description" = "Provides Faqs Lobby and SEO Cricket Configuration",
  *     "parent" = "webcomposer_faqs_configuration.list",
  *     "weight" = 30
  *   },
@@ -45,7 +45,7 @@ class LobbyForm extends FormBase {
   {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Faqs Lobby Configuration'),
+      '#title' => t('Faqs Lobby and SEO Cricket Configuration'),
     ];
 
     $this->sectionLobby($form);
@@ -87,6 +87,27 @@ class LobbyForm extends FormBase {
       '#type' => 'details',
       '#title' => t('Cricket Configuration'),
       '#group' => 'advanced',
+    ];
+
+    $form['cricket_configuration']['related_article'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Related Article - (✓)hide | (✕)show'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['cricket_configuration']['related_article']['enable_related_article_homepage'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Cricket Homepage'),
+      '#default_value' => $this->get('enable_related_article_homepage'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['cricket_configuration']['related_article']['enable_related_article_innerpage'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Cricket Innerpage'),
+      '#default_value' => $this->get('enable_related_article_innerpage'),
+      '#translatable' => TRUE,
     ];
 
     $form['cricket_configuration']['cricket_title'] = [

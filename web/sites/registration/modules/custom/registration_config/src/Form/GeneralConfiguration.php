@@ -696,5 +696,41 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Input value for the request timeout'),
       '#default_value' => $this->get('request_timeout'),
     ];
+    $form['pan_id_url_configuration']['upload_rate_limiting'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable PAN ID upload rate limiting'),
+      '#default_value' => $this->get('upload_rate_limiting'),
+    ];
+    $form['pan_id_url_configuration']['rate_limit_upload_interval'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Rate Limit Ipload Interval'),
+      '#description' => $this->t('PAN ID upload rate limiting interval'),
+      '#default_value' => $this->get('rate_limit_upload_interval') ?? 60,
+      '#states' => array(
+        "visible" => array(
+          "input[name='upload_rate_limiting']" => array("checked" => TRUE)),
+      ),
+    ];
+    $form['pan_id_url_configuration']['rate_limit_upload_operations'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Rate Limit Upload Operations'),
+      '#description' => $this->t('Max number of PAN IP uploads per interval'),
+      '#default_value' =>  $this->get('rate_limit_upload_operations') ?? 1,
+      '#states' => array(
+        "visible" => array(
+          "input[name='upload_rate_limiting']" => array("checked" => TRUE)),
+      ),
+    ];
+    $form['pan_id_url_configuration']['rate_limiting_warning'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Warning message'),
+      '#description' => $this->t('Message to display when upload rate limit has been reached'),
+      '#default_value' => $this->get('rate_limiting_warning'),
+      '#translatable' => TRUE,
+      '#states' => array(
+        "visible" => array(
+          "input[name='upload_rate_limiting']" => array("checked" => TRUE)),
+      ),
+    ];
   }
 }
