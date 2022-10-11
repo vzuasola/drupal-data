@@ -1,0 +1,16 @@
+uuid: e6697ad1-ecf8-43dd-8453-c6cfdb1d9981
+langcode: pt
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: Português
+    webcomposer_language_hidden: 0
+id: pt
+label: Portuguese
+direction: ltr
+weight: 12
+locked: false
