@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_nativeapp.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_nativeapp_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_nativeapp module.
+    case 'help.page.mobile_nativeapp':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mobile Native App Configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
