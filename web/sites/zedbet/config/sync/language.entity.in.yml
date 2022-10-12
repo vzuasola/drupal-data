@@ -1,0 +1,16 @@
+uuid: 68dd6621-872e-4434-8d99-0244b8ea7e10
+langcode: in
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 0
+    webcomposer_language_custom_label: 'English (India)'
+id: in
+label: 'English (India)'
+direction: ltr
+weight: -2
+locked: false
