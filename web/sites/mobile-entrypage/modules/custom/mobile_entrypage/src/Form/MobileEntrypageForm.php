@@ -43,6 +43,7 @@ class MobileEntrypageForm extends FormBase {
     $this->sectionEntrypageFooter($form);
     $this->sectionDownloadLightbox($form);
     $this->sectionPerformanceMetricsConfigs($form);
+    $this->sectionFaqsConfigs($form);
 
     return $form;
   }
@@ -287,6 +288,22 @@ class MobileEntrypageForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Performance Metrics Endpoint'),
       '#default_value' => $this->get('metricsEndpoint'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionFaqsConfigs(array &$form)
+  {
+    $form['faqs_configuration'] = [
+      '#type' => 'details',
+      '#title' => t('Faq page Configurationn'),
+      '#group' => 'advanced',
+    ];
+
+    $form['faqs_configuration']['faqUrl'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Faq page URL'),
+      '#default_value' => $this->get('faqUrl'),
       '#translatable' => TRUE,
     ];
   }
