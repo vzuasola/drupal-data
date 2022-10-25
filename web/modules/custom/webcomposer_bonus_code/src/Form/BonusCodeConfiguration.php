@@ -1,0 +1,207 @@
+<?php
+
+namespace Drupal\webcomposer_bonus_code\Form;
+
+use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Description form plugin.
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "bonus_code_configuration",
+ *   route = {
+ *     "title" = "Bonus Code Configuration",
+ *     "path" = "/admin/config/webcomposer/config/bonus_code",
+ *   },
+ *   menu = {
+ *     "title" = "Bonus Code Configuration",
+ *     "description" = "Provides Webcomposer Bonus Code Configuration",
+ *     "parent" = "webcomposer_bonus_code.list",
+ *     "weight" = 30
+ *   },
+ * )
+ */
+class BonusCodeConfiguration extends FormBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return ['webcomposer_config.bonus_code_configuration'];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['bonus_code'] = [
+      '#type' => 'vertical_tabs',
+    ];
+
+    $form['general_configuration'] = [
+      '#group' => 'bonus_code',
+      '#type' => 'details',
+      '#title' => 'General Configuration',
+    ];
+
+    $form['error_messages_configuration'] = [
+      '#group' => 'bonus_code',
+      '#type' => 'details',
+      '#title' => 'Error Messages Configuration',
+    ];
+
+    $form['success_messages_configuration'] = [
+      '#group' => 'bonus_code',
+      '#type' => 'details',
+      '#title' => 'Success Messages Configuration',
+    ];
+
+    $this->generalConfig($form);
+    $this->errorMessagesConfig($form);
+    $this->successMessagesConfig($form);
+
+    return $form;
+  }
+
+  /**
+   * @param mixed $form
+   * @return mixed
+   * @throws \Drupal\Core\DependencyInjection\ContainerNotInitializedException
+   * @throws \Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException
+   * @throws \Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException
+   */
+  public function generalConfig(&$form)
+  {
+    $form['general_configuration']['enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enabled'),
+      '#default_value' => $this->get('enabled'),
+      '#description' => $this->t('Check to enable Bonus Code Feature'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    return $form;
+  }
+
+  /**
+   * @param mixed $form
+   * @return mixed
+   * @throws \Drupal\Core\DependencyInjection\ContainerNotInitializedException
+   * @throws \Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException
+   * @throws \Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException
+   */
+  public function errorMessagesConfig(&$form)
+  {
+
+    $form['error_messages_configuration']['default_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Error Message'),
+      '#default_value' => $this->get('default_error_message') ?? 'Something went wrong, please try again later.',
+      '#description' => $this->t('Default Error Message to be displayed'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    $form['error_messages_configuration']['invalid_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Invalid Code Error Message'),
+      '#default_value' => $this->get('invalid_code') ?? 'Invalid Bonus Code',
+      '#description' => $this->t('Invalid Code Error Message to be displayed'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    $form['error_messages_configuration']['alphanumeric_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Alphanumeric Error Message'),
+      '#default_value' => $this->get('alphanumeric_error_message') ?? 'Only alphanumeric characters are allowed!',
+      '#description' => $this->t('Error Message to be displayed'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+    // Max Chars
+    $form['error_messages_configuration']['max_characters_section'] = [
+      '#open' => TRUE,
+      '#type' => 'details',
+      '#title' => $this->t('Max characters section'),
+    ];
+
+    $form['error_messages_configuration']['max_characters_section']['max_characters_counter'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Max characters'),
+      '#default_value' => $this->get('max_characters_counter') ?? 30,
+      '#description' => $this->t('Max Chars'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['error_messages_configuration']['max_characters_section']['max_characters'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Max characters Error Message'),
+      '#default_value' => $this->get('max_characters') ?? 'Maximum number of characters reached!',
+      '#description' => $this->t('Error Message to be displayed'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    // Min Chars
+    $form['error_messages_configuration']['min_characters_section'] = [
+      '#open' => TRUE,
+      '#type' => 'details',
+      '#title' => $this->t('Min characters section'),
+    ];
+
+    $form['error_messages_configuration']['min_characters_section']['min_characters_counter'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Min characters'),
+      '#default_value' => $this->get('min_characters_counter') ?? 2,
+      '#description' => $this->t('Min Chars'),
+      '#translatable' => TRUE,
+    ];
+
+    $minCharCounter = $this->get('min_characters_counter');
+
+    $form['error_messages_configuration']['min_characters_section']['min_characters'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Min characters Error Message'),
+      '#default_value' => $this->get('min_characters') ?? 'Minimum ' . $minCharCounter . ' characters required.',
+      '#description' => $this->t('Error Message to be displayed in format "Minimum {min} characters required!"'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    return $form;
+  }
+
+  /**
+   * @param mixed $form
+   * @return mixed
+   * @throws \Drupal\Core\DependencyInjection\ContainerNotInitializedException
+   * @throws \Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException
+   * @throws \Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException
+   */
+  public function successMessagesConfig(&$form)
+  {
+    $form['success_messages_configuration']['success_messsage'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $this->get('success_messsage'),
+      '#description' => $this->t('Message to be displayed upon successful submittion of Bonus Code'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    $form['success_messages_configuration']['valid_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Valid Code Error Message'),
+      '#default_value' => $this->get('valid_code') ?? 'Bonus Code is valid',
+      '#description' => $this->t('Valid Code Message to be displayed'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
+    return $form;
+  }
+
+}

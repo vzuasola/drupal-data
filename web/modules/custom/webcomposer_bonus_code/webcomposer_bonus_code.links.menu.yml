@@ -1,0 +1,5 @@
+webcomposer_bonus_code.list:
+  title: 'Bonus Code Configuration'
+  description: 'Bonus Code config settings'
+  parent: system.admin_config
+  route_name: webcomposer_bonus_code.admin_settings

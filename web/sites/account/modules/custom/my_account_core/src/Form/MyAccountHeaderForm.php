@@ -2,12 +2,13 @@
 
 namespace Drupal\my_account_core\Form;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Routing\RequestContext;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Path\AliasManagerInterface;
-use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Path\PathValidatorInterface;
-use Drupal\Core\Routing\RequestContext;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

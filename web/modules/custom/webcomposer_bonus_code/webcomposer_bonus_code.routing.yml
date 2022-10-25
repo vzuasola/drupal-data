@@ -1,0 +1,7 @@
+webcomposer_bonus_code.admin_settings:
+  path: 'admin/config/webcomposer/bonus_code'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Bonus Code'
+  requirements:
+    _permission: 'administer site configuration'
