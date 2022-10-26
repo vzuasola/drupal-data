@@ -1,0 +1,16 @@
+uuid: ea94a519-aa50-48db-9602-72a81d288362
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: Português
+    webcomposer_language_hidden: 0
+id: pt-br
+label: 'Portuguese, Brazil'
+direction: ltr
+weight: 6
+locked: false
