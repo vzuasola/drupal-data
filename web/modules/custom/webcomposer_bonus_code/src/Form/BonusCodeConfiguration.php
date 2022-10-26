@@ -113,64 +113,6 @@ class BonusCodeConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['error_messages_configuration']['alphanumeric_error_message'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Alphanumeric Error Message'),
-      '#default_value' => $this->get('alphanumeric_error_message') ?? 'Only alphanumeric characters are allowed!',
-      '#description' => $this->t('Error Message to be displayed'),
-      '#maxlength' => 500,
-      '#translatable' => TRUE,
-    ];
-    // Max Chars
-    $form['error_messages_configuration']['max_characters_section'] = [
-      '#open' => TRUE,
-      '#type' => 'details',
-      '#title' => $this->t('Max characters section'),
-    ];
-
-    $form['error_messages_configuration']['max_characters_section']['max_characters_counter'] = [
-      '#type' => 'number',
-      '#title' => $this->t('Max characters'),
-      '#default_value' => $this->get('max_characters_counter') ?? 30,
-      '#description' => $this->t('Max Chars'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['error_messages_configuration']['max_characters_section']['max_characters'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Max characters Error Message'),
-      '#default_value' => $this->get('max_characters') ?? 'Maximum number of characters reached!',
-      '#description' => $this->t('Error Message to be displayed'),
-      '#maxlength' => 500,
-      '#translatable' => TRUE,
-    ];
-
-    // Min Chars
-    $form['error_messages_configuration']['min_characters_section'] = [
-      '#open' => TRUE,
-      '#type' => 'details',
-      '#title' => $this->t('Min characters section'),
-    ];
-
-    $form['error_messages_configuration']['min_characters_section']['min_characters_counter'] = [
-      '#type' => 'number',
-      '#title' => $this->t('Min characters'),
-      '#default_value' => $this->get('min_characters_counter') ?? 2,
-      '#description' => $this->t('Min Chars'),
-      '#translatable' => TRUE,
-    ];
-
-    $minCharCounter = $this->get('min_characters_counter');
-
-    $form['error_messages_configuration']['min_characters_section']['min_characters'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Min characters Error Message'),
-      '#default_value' => $this->get('min_characters') ?? 'Minimum ' . $minCharCounter . ' characters required.',
-      '#description' => $this->t('Error Message to be displayed in format "Minimum {min} characters required!"'),
-      '#maxlength' => 500,
-      '#translatable' => TRUE,
-    ];
-
     return $form;
   }
 

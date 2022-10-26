@@ -52,16 +52,6 @@ class BonusCodeForm extends WebcomposerFormBase implements WebcomposerFormInterf
                     '#type' => 'textfield',
                     '#description' => 'The Label for Bonus Code field',
                 ],
-                'placeholder' => [
-                    '#title' => 'Bonus Code placeholder label',
-                    '#type' => 'textfield',
-                    '#description' => 'label for Bonus Code field placeholder',
-                ],
-                'error-message' => [
-                    '#title' => 'Error message',
-                    '#type' => 'textfield',
-                    '#description' => 'Error message for invalid bonus code',
-                ],
             ],
         ];
         $fields['submit'] = [
