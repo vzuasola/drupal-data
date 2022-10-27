@@ -10,7 +10,7 @@ url:
     vi: vn
     id: id
     ko: kr
-    hi: in
+    in: in
     '': null
   domains:
     en: ''
@@ -20,7 +20,7 @@ url:
     vi: ''
     id: ''
     ko: ''
-    hi: ''
+    in: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

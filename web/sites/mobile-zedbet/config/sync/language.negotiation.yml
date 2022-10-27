@@ -5,10 +5,11 @@ url:
   prefixes:
     en: en
     th: th
-    '': null
+    in: in
   domains:
     en: ''
     th: ''
+    in: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
