@@ -125,10 +125,12 @@ class BonusCodeConfiguration extends FormBase {
    */
   public function successMessagesConfig(&$form)
   {
+    $content = $this->get('success_messsage');
     $form['success_messages_configuration']['success_messsage'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
       '#title' => $this->t('Success Message'),
-      '#default_value' => $this->get('success_messsage'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
       '#description' => $this->t('Message to be displayed upon successful submittion of Bonus Code'),
       '#maxlength' => 500,
       '#translatable' => TRUE,
