@@ -113,6 +113,16 @@ class BonusCodeConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
+
+    $form['error_messages_configuration']['code_already_submited'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Code Already Submited Error Message'),
+      '#default_value' => $this->get('code_already_submited') ?? 'Code already submited!',
+      '#description' => $this->t('Code Already Submited Message to be displayed'),
+      '#maxlength' => 500,
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 
