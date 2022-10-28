@@ -6,9 +6,8 @@
  */
 namespace Drupal\my_account_core\Form;
 
-use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 
 /**
  * Implements the vertical tabs demo form controller.
@@ -19,7 +18,7 @@ use Drupal\Core\Form\ConfigFormBase;
  * @see \Drupal\Core\Form\FormBase
  * @see \Drupal\Core\Form\ConfigFormBase
  */
-class BonusHistoryForm extends ConfigFormBase
+class BonusHistoryForm extends FormBase
 {
   /**
    * Getter method for Form ID.
@@ -48,7 +47,7 @@ class BonusHistoryForm extends ConfigFormBase
    * @param FormStateInterface $form_state
    *   Object describing the current state of the form.
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
+  public function form(array $form, FormStateInterface $form_state)
   {
     $config = $this->config('my_account_core.bonus_history');
 
@@ -132,7 +131,7 @@ class BonusHistoryForm extends ConfigFormBase
       '#default_value' => $config->get('prev_label') ?? 'Prev',
       '#required' => true,
     ];
-    
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -144,7 +143,7 @@ class BonusHistoryForm extends ConfigFormBase
    * @param FormStateInterface $form_state
    *   Object describing the current state of the form.
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) 
+  public function validateForm(array &$form, FormStateInterface $form_state)
   {
     parent::validateForm($form, $form_state);
   }
