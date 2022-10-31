@@ -82,6 +82,15 @@ class BonusCodeConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['general_configuration']['mobile_tab_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Tab Label'),
+      '#default_value' => $this->get('mobile_tab_label') ?? 'Bonuses',
+      '#description' => $this->t('Mobile Bonuses Tab to be display'),
+      '#maxlength' => 50,
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 
