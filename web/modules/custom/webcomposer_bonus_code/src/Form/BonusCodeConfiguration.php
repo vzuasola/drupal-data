@@ -82,6 +82,15 @@ class BonusCodeConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['general_configuration']['mobile_tab_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Tab Label'),
+      '#default_value' => $this->get('mobile_tab_label') ?? 'Bonuses',
+      '#description' => $this->t('Mobile Bonuses Tab to be display'),
+      '#maxlength' => 50,
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 
@@ -109,16 +118,6 @@ class BonusCodeConfiguration extends FormBase {
       '#title' => $this->t('Invalid Code Error Message'),
       '#default_value' => $this->get('invalid_code') ?? 'Invalid Bonus Code',
       '#description' => $this->t('Invalid Code Error Message to be displayed'),
-      '#maxlength' => 500,
-      '#translatable' => TRUE,
-    ];
-
-
-    $form['error_messages_configuration']['code_already_submited'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Code Already Submited Error Message'),
-      '#default_value' => $this->get('code_already_submited') ?? 'Code already submited!',
-      '#description' => $this->t('Code Already Submited Message to be displayed'),
       '#maxlength' => 500,
       '#translatable' => TRUE,
     ];
