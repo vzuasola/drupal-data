@@ -296,7 +296,7 @@ class MobileEntrypageForm extends FormBase {
   {
     $form['faqs_configuration'] = [
       '#type' => 'details',
-      '#title' => t('Faq page Configurationn'),
+      '#title' => t('Faq page Configuration'),
       '#group' => 'advanced',
     ];
 
