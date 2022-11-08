@@ -1,0 +1,23 @@
+uuid: 62e16751-4cee-4fd8-b980-5a18dcf08cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_link_target
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_promotion_link_target
+field_name: field_promotion_link_target
+entity_type: node
+bundle: promotion
+label: 'Promotion Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

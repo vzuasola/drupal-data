@@ -1,0 +1,23 @@
+uuid: a0f86812-8ecb-4179-851c-5d691d93a57e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target
+    - taxonomy.vocabulary.product_promotions
+  module:
+    - options
+id: taxonomy_term.product_promotions.field_target
+field_name: field_target
+entity_type: taxonomy_term
+bundle: product_promotions
+label: Target
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string
