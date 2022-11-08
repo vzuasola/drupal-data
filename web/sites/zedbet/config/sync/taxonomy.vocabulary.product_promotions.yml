@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Product Promotions'
 vid: product_promotions
 description: 'Promotions product category filter'
-hierarchy: 0
+hierarchy: 1
 weight: 0
