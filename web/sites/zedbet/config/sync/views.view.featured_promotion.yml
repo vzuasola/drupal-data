@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_log_in_state
     - field.storage.node.field_product
     - node.type.promotion
-    - system.menu.tools
+    - system.menu.admin
   module:
     - draggableviews
     - node
@@ -211,6 +211,42 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        field_mark_as_featured_value:
+          id: field_mark_as_featured_value
+          table: node__field_mark_as_featured
+          field: field_mark_as_featured_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
       sorts:
         weight:
           id: weight
@@ -252,10 +288,10 @@ display:
         title: 'Featured Promotion Sorting'
         description: 'Sort the promotions for featured category'
         expanded: false
-        parent: webcomposer.admin
-        weight: 0
+        parent: zedbet_config.list
+        weight: 5
         context: '0'
-        menu_name: tools
+        menu_name: admin
       style:
         type: table
         options:
@@ -291,8 +327,9 @@ display:
         options:
           view_mode: teaser
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       fields:
         title:
           id: title
@@ -526,6 +563,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_log_in_state'
         - 'config:field.storage.node.field_product'

@@ -114,6 +114,7 @@ module:
   zedbet_front_blocks: 0
   zedbet_header_config: 0
   zedbet_payments: 0
+  zedbet_promotions: 0
   zedbet_unsupported_currency: 0
   zedbet_urls: 0
   menu_link_content: 1

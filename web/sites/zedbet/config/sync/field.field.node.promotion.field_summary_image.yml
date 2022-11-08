@@ -18,7 +18,7 @@ id: node.promotion.field_summary_image
 field_name: field_summary_image
 entity_type: node
 bundle: promotion
-label: 'Thumbnail Image'
+label: 'Summary Thumbnail Image'
 description: 'The Image upload size is 1190x330 px.'
 required: false
 translatable: true
