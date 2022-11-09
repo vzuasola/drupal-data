@@ -22,6 +22,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class MyAccountRegistrationForm extends ConfigFormBase
 {
 
+    protected function getEditableConfigNames() { }
+
+    public function getFormId() { }
+
     /**
      * Build the form.
      *
