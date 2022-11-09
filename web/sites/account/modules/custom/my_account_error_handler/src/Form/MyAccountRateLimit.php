@@ -40,6 +40,14 @@ class MyAccountRateLimit extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
+    $this->sectionForgotUsername($form);
+    $this->sectionSMSFlooding($form);
+    $this->sectionBonusCode($form);
+    return $form;
+  }
+
+  private function sectionForgotUsername(array &$form)
+  {
     // Cant-Login - Username
     $form['rate_limit_username'] = [
       '#type' => 'details',
@@ -59,7 +67,10 @@ class MyAccountRateLimit extends FormBase {
       '#description' => $this->t('Allowed Request'),
       '#default_value' => $this->get('rate_limit_username_operation') ?? 1,
     ];
+  }
 
+  private function sectionSMSFlooding(array &$form)
+  {
     // SMS Flooding
     $form['rate_limit_sms'] = [
       '#type' => 'details',
@@ -79,7 +90,44 @@ class MyAccountRateLimit extends FormBase {
       '#description' => $this->t('Allowed Request'),
       '#default_value' => $this->get('rate_limit_sms_operation') ?? 1,
     ];
+  }
 
-    return $form;
+  private function sectionBonusCode(array &$form)
+  {
+    // Bonus Code
+    $form['rate_limit_bonus_code'] = [
+      '#type' => 'details',
+      '#title' => 'Bonus Code',
+      '#group' => 'rate_limit',
+      '#open' => TRUE,
+    ];
+
+    $form['rate_limit_bonus_code']['rate_limit_bonus_code_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Enabled'),
+      '#description' => $this->t('Check this if you want to enable rate limit'),
+      '#default_value' => $this->get('rate_limit_bonus_code_enable'),
+    ];
+
+    $form['rate_limit_bonus_code']['rate_limit_bonus_code_interval'] = [
+      '#type' => 'textfield',
+      '#title' => t('Interval'),
+      '#description' => $this->t('Rate limit interval in seconds'),
+      '#default_value' => $this->get('rate_limit_bonus_code_interval') ?? 60,
+    ];
+
+    $form['rate_limit_bonus_code']['rate_limit_bonus_code_operation'] = [
+      '#type' => 'textfield',
+      '#title' => t('Rate Limit Operation'),
+      '#description' => $this->t('Allowed Request'),
+      '#default_value' => $this->get('rate_limit_bonus_code_operation') ?? 1,
+    ];
+
+    $form['rate_limit_bonus_code']['rate_limit_bonus_code_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => t('Error Message'),
+      '#description' => $this->t('Rate limit Error Message'),
+      '#default_value' => $this->get('rate_limit_bonus_code_error_message'),
+    ];
   }
 }
