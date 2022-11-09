@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Filesource Uninstall the configs.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function webcomposer_bonus_code_uninstall() {
+  $keys = [
+    'webcomposer_config.bonus_code_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

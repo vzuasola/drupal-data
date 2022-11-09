@@ -39,6 +39,12 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
       '#group' => 'advanced',
     );
 
+    $form['faqs_configuration'] = array(
+      '#type' => 'details',
+      '#title' => t('FAQ Configuration'),
+      '#group' => 'advanced',
+    );
+
     $config_tec= $config->get('trust_element_content');
     $form['trust_element']['trust_element_content'] = array(
         '#type' => 'text_format',
@@ -46,6 +52,14 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
         '#default_value' => $config_tec['value'],
         '#format' => $config_tec['format']
     );
+
+    $form['faqs_configuration']['faq_url'] = array(
+        '#type' => 'textfield',
+        '#title' => $this->t('Faq page URL'),
+        '#default_value' => $config->get('faq_url'),
+        '#translatable' => false,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -61,7 +75,8 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'trust_element_content'
+      'trust_element_content',
+      'faq_url'
     ];
 
     foreach ($keys as $key) {
