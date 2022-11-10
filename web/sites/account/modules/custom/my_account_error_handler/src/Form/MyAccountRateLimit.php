@@ -128,6 +128,7 @@ class MyAccountRateLimit extends FormBase {
       '#title' => t('Error Message'),
       '#description' => $this->t('Rate limit Error Message'),
       '#default_value' => $this->get('rate_limit_bonus_code_error_message'),
+      '#translatable' => TRUE,
     ];
   }
 }
