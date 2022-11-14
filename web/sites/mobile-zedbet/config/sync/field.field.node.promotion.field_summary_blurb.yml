@@ -1,0 +1,21 @@
+uuid: 2346ba47-cfee-4855-8b46-720d7b4af8b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_blurb
+    - node.type.promotion
+  module:
+    - text
+id: node.promotion.field_summary_blurb
+field_name: field_summary_blurb
+entity_type: node
+bundle: promotion
+label: 'Summary Blurb'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
