@@ -1,0 +1,4 @@
+webcomposer_bonus_code.bonus_code_configuration_tab:
+  route_name: webcomposer_bonus_code.bonus_code_configuration_form
+  title: 'Bonus Code Configuration'
+  base_route: webcomposer_bonus_code.bonus_code_configuration_form
