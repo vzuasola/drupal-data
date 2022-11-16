@@ -1,0 +1,23 @@
+uuid: f1db5a6a-d435-4f11-9ff5-8747831d551e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_summary_link
+    - node.type.promotion
+  module:
+    - link
+id: node.promotion.field_promotion_summary_link
+field_name: field_promotion_summary_link
+entity_type: node
+bundle: promotion
+label: 'Promotion Summary Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,23 @@
+uuid: 7fc65cea-5551-4c36-8eb0-01f7e607f270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link
+    - node.type.promotion
+  module:
+    - link
+id: node.promotion.field_banner_link
+field_name: field_banner_link
+entity_type: node
+bundle: promotion
+label: 'Pre Login Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

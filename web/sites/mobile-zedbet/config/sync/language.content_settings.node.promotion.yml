@@ -1,0 +1,16 @@
+uuid: 6942dd16-2829-48eb-96c0-a9053521723e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promotion
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.promotion
+target_entity_type_id: node
+target_bundle: promotion
+default_langcode: site_default
+language_alterable: true
