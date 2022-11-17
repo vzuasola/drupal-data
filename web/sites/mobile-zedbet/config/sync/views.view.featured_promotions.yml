@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block.block.languagedropdownswitcher_2
     - field.storage.node.field_product_category
     - field.storage.node.field_promo_availability
     - node.type.promotion
@@ -714,6 +715,7 @@ display:
           plugin_id: draggable_views_field
       defaults:
         fields: false
+        header: false
       path: admin/config/mobile_promotions/featured
       menu:
         type: normal
@@ -724,6 +726,20 @@ display:
         weight: 5
         context: '0'
         menu_name: admin
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
     cache_metadata:
       max-age: 0
       contexts:
