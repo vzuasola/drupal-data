@@ -143,6 +143,15 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#translatable' => false,
       '#required' => false,
     ];
+
+    $form[$key . 'use_playergame_api'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use PlayerGame API'),
+      '#description' => $this->t("Use PlayerGame API on game launching for " . $value),
+      '#default_value' => $this->get($key . '_use_playergame_api'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
   }
 
   private function getGameWorksFields(&$form, $key, $value) {
