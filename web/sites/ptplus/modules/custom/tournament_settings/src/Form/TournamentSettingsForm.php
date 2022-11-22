@@ -116,7 +116,42 @@ class TournamentSettingsForm extends FormBase {
         '#required' => TRUE,
         ];
 
-        return $form;
+    $form['tournament_settings']['general_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Board Configuration'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['tournament_settings']['general_settings']['dailymission'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Daily Missions API Url'),
+      '#default_value' => $this->get('dailymission') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/dailyMission',
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_settings']['general_settings']['leaderboard'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Leaderboards API Url'),
+      '#default_value' => $this->get('leaderboard') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/leaderboard/list',
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_settings']['general_settings']['key_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Entity Key Mapping'),
+      '#default_value' => $this->get('key_mapping'),
+      '#rows' => 7,
+      '#cols' => 2,
+      '#description' => $this->t('Format of data in field (entity_name | entity_key)'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+
+    return $form;
   }
 
 }
