@@ -637,11 +637,27 @@ class ZipangRegistrationForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['google_api_settings']['google_api_key'] = [
+    $form['google_api_settings']['zip_api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Google API KEY'),
-      '#default_value' => $this->get('google_api_key'),
+      '#default_value' => $this->get('zip_api_key'),
       '#description' => $this->t('Key used for Google API'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['google_api_settings']['address_suffix'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Address Field Suffix'),
+      '#default_value' => $this->get('address_suffix'),
+      '#description' => $this->t('Text used for Address Suffix'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['google_api_settings']['city_suffix'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('City Field Suffix'),
+      '#default_value' => $this->get('city_suffix'),
+      '#description' => $this->t('Text used for City Suffix'),
       '#translatable' => TRUE,
     ];
   }

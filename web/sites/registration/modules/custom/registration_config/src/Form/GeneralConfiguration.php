@@ -699,6 +699,7 @@ class GeneralConfiguration extends FormBase {
     $form['pan_id_url_configuration']['upload_rate_limiting'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable PAN ID upload rate limiting'),
+      '#translatable' => TRUE,
       '#default_value' => $this->get('upload_rate_limiting'),
     ];
     $form['pan_id_url_configuration']['rate_limit_upload_interval'] = [
