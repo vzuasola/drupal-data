@@ -16,12 +16,20 @@ next_button_label: Skip
 next_button_link: /en/registration/complete
 step_3_title: Registration
 step_3_link_title: 'Start Playing'
-welcome_message: 'Welcome to Casino Jamboree !!!'
 step_3_body:
   value: "<p class=\"text-align-center\">Your registration has been completed. Your ID is</p>\r\n"
   format: basic_html
+step_4_title: ''
+step_4_link_title: ''
+welcome_message: 'Welcome to Casino Jamboree !!!'
+step_4_body:
+  value: ''
+  format: basic_html
 play_button_label: 'Play Now'
 play_button_link: '/games?category=new-games'
+year_label: '年'
+month_label: '月'
+day_label: '日'
 casino_name: ptstaging2.78
 secret_key: ''
 reg_form_title: REGISTRATION

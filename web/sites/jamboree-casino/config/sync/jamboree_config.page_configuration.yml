@@ -4,9 +4,10 @@ sitemap: Sitemap
 404: '404'
 500: '500'
 games: Games
-registration: Registration
-registration_step2: Registration
-registration_step3: Registration
+registration: ''
+registration_step2: ''
+registration_step3: ''
+registration_step4: ''
 contact_us: 'Contact Us'
 jackpot: Jackpo
 faq: FAQ
