@@ -144,7 +144,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#required' => false,
     ];
 
-    $form[$key . 'use_playergame_api'] = [
+    $form[$key . '_use_playergame_api'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Use PlayerGame API'),
       '#description' => $this->t("Use PlayerGame API on game launching for " . $value),
