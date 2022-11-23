@@ -150,6 +150,17 @@ class TournamentSettingsForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['tournament_settings']['general_settings']['default_key_name_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Entity Name Mapping'),
+      '#default_value' => $this->get('default_key_name_mapping'),
+      '#rows' => 7,
+      '#cols' => 2,
+      '#description' => $this->t('Format of data in field (Language code | currency)'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
 
     return $form;
   }
