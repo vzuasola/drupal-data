@@ -123,18 +123,18 @@ class TournamentSettingsForm extends FormBase {
       '#open' => FALSE,
     ];
 
-    $form['tournament_settings']['general_settings']['dailymission'] = [
+    $form['tournament_settings']['general_settings']['daily_mission_api'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Daily Missions API Url'),
-      '#default_value' => $this->get('dailymission') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/dailyMission',
+      '#default_value' => $this->get('daily_mission_api') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/dailyMission',
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['tournament_settings']['general_settings']['leaderboard'] = [
+    $form['tournament_settings']['general_settings']['leaderboards_api'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Leaderboards API Url'),
-      '#default_value' => $this->get('leaderboard') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/leaderboard/list',
+      '#default_value' => $this->get('leaderboards_api') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/leaderboard/list',
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
