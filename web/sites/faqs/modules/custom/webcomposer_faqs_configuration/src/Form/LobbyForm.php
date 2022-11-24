@@ -167,9 +167,9 @@ class LobbyForm extends FormBase {
       $widget_key = str_replace(' ', '', strtolower($widget));
       // Skip if empty
       if (empty($widget_key)) {
-          continue;
+        continue;
       }
-    
+
       $form['social_media_widgets'][$widget_key] = [
         '#type' => 'details',
         '#title' => $this->t($widget),
@@ -181,20 +181,6 @@ class LobbyForm extends FormBase {
         '#default_value' => $this->get('code_' . $widget_key),
         '#description' => $this->t('Html / Javascript code to render social media post'),
         '#translatable' => TRUE,
-      ];
-
-      $form['social_media_widgets'][$widget_key]['target_' . $widget_key] = [
-        '#type' => 'radios',
-        '#title' => t('Open in'),
-        '#default_value' => 0,
-        '#options' => [t('Same Tab'), t('New Tab')],
-      ];
-
-      $form['social_media_widgets'][$widget_key]['permission_' . $widget_key] = [
-        '#type' => 'radios',
-        '#title' => t('Show in'),
-        '#default_value' => 0,
-        '#options' => [t('Both'), t('Pre Login'), t('Post Login')],
       ];
     }
   }
