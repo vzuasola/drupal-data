@@ -1,0 +1,3 @@
+playergame_error_handling_form__active_tab: ''
+playergame_error_message: "GPD003|Your current session failed or expired. Please try logging in again or you may contact our Customer Support for assistance.\r\nGPD004|This game does not exists. Please try other games or you may contact our Customer Support for assistance.\r\nGPD005|An unexpected error occurred. Your account cannot launch this game. Please try other games or you may contact our Customer Support for assistance.\r\nGPD006|This game has been disabled. Please try other games or you may contact our Customer Support for assistance.\r\n500|An internal error occurred. Please try again or you may contact our Customer Support for assistance."
+playergame_error_button: 'Error Button'
