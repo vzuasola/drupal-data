@@ -161,6 +161,17 @@ class TournamentSettingsForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['tournament_settings']['general_settings']['api_language_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Language API Mapping'),
+      '#default_value' => $this->get('api_language_mapping'),
+      '#rows' => 7,
+      '#cols' => 2,
+      '#description' => $this->t('Format of data in field (Language code | API lang Code)'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
 
     return $form;
   }
