@@ -116,7 +116,64 @@ class TournamentSettingsForm extends FormBase {
         '#required' => TRUE,
         ];
 
-        return $form;
+    $form['tournament_settings']['general_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Board Configuration'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['tournament_settings']['general_settings']['daily_mission_api'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Daily Missions API Url'),
+      '#default_value' => $this->get('daily_mission_api') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/dailyMission',
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_settings']['general_settings']['leaderboards_api'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Leaderboards API Url'),
+      '#default_value' => $this->get('leaderboards_api') ?? 'https://ptplus-b.hotspin88.com/api/external/activity/leaderboard/list',
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_settings']['general_settings']['key_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Entity Key Mapping'),
+      '#default_value' => $this->get('key_mapping'),
+      '#rows' => 7,
+      '#cols' => 2,
+      '#description' => $this->t('Format of data in field (entity_name | entity_key)'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_settings']['general_settings']['default_key_name_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Entity Name Mapping'),
+      '#default_value' => $this->get('default_key_name_mapping'),
+      '#rows' => 7,
+      '#cols' => 2,
+      '#description' => $this->t('Format of data in field (Language code | currency)'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['tournament_settings']['general_settings']['api_language_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Language API Mapping'),
+      '#default_value' => $this->get('api_language_mapping'),
+      '#rows' => 7,
+      '#cols' => 2,
+      '#description' => $this->t('Format of data in field (Language code | API lang Code)'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+
+    return $form;
   }
 
 }

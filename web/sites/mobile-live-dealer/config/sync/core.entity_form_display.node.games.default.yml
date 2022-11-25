@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games.field_external_game_id
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_lobby
     - field.field.node.games.field_game_platform
@@ -30,6 +31,7 @@ third_party_settings:
         - field_provider_logo
         - field_game_code
         - field_game_platform
+        - field_external_game_id
         - field_table_id
       parent_name: ''
       weight: 8
@@ -65,6 +67,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_external_game_id:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_code:
     weight: 8
     settings:
@@ -74,7 +84,7 @@ content:
     type: string_textfield
     region: content
   field_game_lobby:
-    weight: 17
+    weight: 18
     settings:
       display_label: true
     third_party_settings: {  }
@@ -93,7 +103,7 @@ content:
     type: options_select
     region: content
   field_game_ribbon:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -111,7 +121,7 @@ content:
     type: options_select
     region: content
   field_preview_mode:
-    weight: 18
+    weight: 19
     settings:
       display_label: true
     third_party_settings: {  }
@@ -126,7 +136,7 @@ content:
     type: image_image
     region: content
   field_table_id:
-    weight: 10
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -134,13 +144,13 @@ content:
     type: string_textfield
     region: content
   field_target:
-    weight: 9
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_thumbnail_image:
-    weight: 8
+    weight: 10
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -148,7 +158,7 @@ content:
     type: image_image
     region: content
   field_use_game_loader:
-    weight: 16
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
@@ -163,7 +173,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -171,17 +181,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 16
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -189,7 +199,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 20
     region: content
     third_party_settings: {  }
   sticky:
@@ -223,7 +233,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
