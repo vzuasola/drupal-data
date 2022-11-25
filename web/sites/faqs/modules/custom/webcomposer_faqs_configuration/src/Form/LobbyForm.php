@@ -175,13 +175,15 @@ class LobbyForm extends FormBase {
         '#title' => $this->t($widget),
       ];
 
-      $form['social_media_widgets'][$widget_key]['code_' . $widget_key] = [
-        '#type' => 'textarea',
-        '#title' => $this->t('Code'),
-        '#default_value' => $this->get('code_' . $widget_key),
-        '#description' => $this->t('Html / Javascript code to render social media post'),
-        '#translatable' => TRUE,
-      ];
+      $content = $this->get('code_' . $widget_key);
+        $form['social_media_widgets'][$widget_key]['code_' . $widget_key] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Code'),
+          '#default_value' => $content['value'],
+          '#format' => $content['format'],
+          '#description' => $this->t('Html / Javascript code to render social media post.'),
+          '#translatable' => TRUE,
+        ];
     }
   }
 
