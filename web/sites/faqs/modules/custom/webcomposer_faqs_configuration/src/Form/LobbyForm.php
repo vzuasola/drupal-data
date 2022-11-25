@@ -163,22 +163,22 @@ class LobbyForm extends FormBase {
 
     $widgets = array_map('trim', explode(PHP_EOL, $this->get('widgets_list')));
 
-    foreach ($widgets as $widget) {
+    foreach ($widgets as $key => $widget) {
       $widget_key = str_replace(' ', '', strtolower($widget));
       // Skip if empty
       if (empty($widget_key)) {
         continue;
       }
 
-      $form['social_media_widgets'][$widget_key] = [
+      $form['social_media_widgets'][$key] = [
         '#type' => 'details',
         '#title' => $this->t($widget),
       ];
 
-      $form['social_media_widgets'][$widget_key]['code_' . $widget_key] = [
+      $form['social_media_widgets'][$key]['widget_code_' . $key] = [
         '#type' => 'textarea',
         '#title' => $this->t('Code'),
-        '#default_value' => $this->get('code_' . $widget_key),
+        '#default_value' => $this->get('widget_code_' . $key),
         '#description' => $this->t('Html / Javascript code to render social media post'),
         '#translatable' => TRUE,
       ];
