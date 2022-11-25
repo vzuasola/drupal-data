@@ -1,0 +1,12 @@
+name: Zedbet Promotions
+type: module
+description: It Adds promotions feature for Zedbet promotions.
+core: 8.x
+package: Custom
+dependencies:
+  - scheduler
+  - entityqueue
+  - content_translation
+  # - relaxed
+  # - workspace
+  # - deploy

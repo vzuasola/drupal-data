@@ -1,0 +1,7 @@
+title: Promotions
+filter_label: Filter
+no_available_msg: 'No available promotions'
+more_info_link_text: 'More Info &raquo;'
+countdown_format: days
+no_archive_msg: 'No available archive'
+btn_archive_title: Archive

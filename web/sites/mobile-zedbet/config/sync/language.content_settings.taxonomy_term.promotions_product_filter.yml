@@ -1,0 +1,16 @@
+uuid: 372c75c6-af6b-4b44-b81d-93783c56dc3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.promotions_product_filter
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.promotions_product_filter
+target_entity_type_id: taxonomy_term
+target_bundle: promotions_product_filter
+default_langcode: site_default
+language_alterable: true
