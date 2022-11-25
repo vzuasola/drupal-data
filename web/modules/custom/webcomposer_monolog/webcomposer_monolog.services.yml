@@ -1,10 +1,13 @@
 parameters:
   monolog.channel_handlers:
-    default: ['stream']
-    php: ['stream']
+    default: ['lightstream']
+    php: ['lightstream']
   monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'memory_usage', 'web']
 
 services:
   monolog.handler.stream:
-    class: Monolog\Handler\StreamHandler
-    arguments: ['/var/log/cms/drupal.log', 'monolog.level.warning']
+    class: Drupal\webcomposer_monolog\Monolog\Handler\StreamHandler
+    arguments: [ '/var/log/cms/drupal.log', 100]
+  monolog.handler.lightstream:
+    class: Drupal\webcomposer_monolog\Monolog\Handler\LightStreamHandler
+    arguments: ['/var/log/cms/drupal.log', 400]
