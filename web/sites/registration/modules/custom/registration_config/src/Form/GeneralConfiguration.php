@@ -684,13 +684,6 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('x_pan_id_code') ?? "",
     ];
 
-    $form['pan_id_url_configuration']['x_pan_id_firstname_error'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('X-PANID-Code of OCR endpoint'),
-      '#description' => $this->t('Enter X-PANID-Code of OCR endpoint.'),
-      '#default_value' => $this->get('x_pan_id_code') ?? "",
-    ];
-
     $form['pan_id_url_configuration']['pan_id_firstname_error'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Firstname Pan ID upload error message'),
