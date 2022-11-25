@@ -302,12 +302,20 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
       ],
       'prefecture' => [
         'name' => 'Prefecture',
-        'type' => 'textfield',
+        'type' => 'select',
         'settings' => [
           'label' => [
             '#title' => 'Prefecture Label',
             '#type' => 'textfield',
             '#description' => 'The Label for the Prefecture field',
+          ],
+          'choices' => [
+            '#title' => 'Prefecture Choices',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, [
+              'ho|Hokkaido',
+            ]),
           ],
           'placeholder' => [
             '#title' => 'Prefecture placeholder label',
