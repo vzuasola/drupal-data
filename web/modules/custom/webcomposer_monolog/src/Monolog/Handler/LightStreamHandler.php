@@ -16,11 +16,13 @@ use Monolog\Handler\StreamHandler as BaseStreamHandler;
  */
 class LightStreamHandler extends BaseFilterHandler
 {
-  public function __construct($path, $minLevel = Logger::DEBUG, $maxLevel = Logger::EMERGENCY, $bubble = true, $filePermission = null, $useLocking = false) {
-    $config = Settings::get('monolog');
+  public function __construct($path, $minLevel = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false) {
+    $settings = Settings::get('monolog');
+    $logPath = (!is_null($path)) ? $path : $settings['path'];
 
-    $logPath = (!is_null($path)) ? $path : $config['path'];
-    $logLevel = $config['level'];
+    $maxLogLevel = Logger::EMERGENCY;
+    $minLogLevel = \Drupal::config('webcomposer_config.monolog_configuration')->get('min_log_level');
+    $logLevel = (!is_null($minLogLevel)) ? $minLogLevel : $minLevel;
 
     $format = new LightLineFormatter();
     $format->includeStacktraces(false); // We want to exclude stacktrace, though this doesn't seem to work.
@@ -29,6 +31,6 @@ class LightStreamHandler extends BaseFilterHandler
     $streamHandler = new BaseStreamHandler($logPath, $logLevel, $bubble, $filePermission, $useLocking);
     $streamHandler->setFormatter($format);
 
-    parent::__construct($streamHandler, $minLevel, $maxLevel, $bubble);
+    parent::__construct($streamHandler, $minLogLevel, $maxLogLevel, $bubble);
   }
 }
