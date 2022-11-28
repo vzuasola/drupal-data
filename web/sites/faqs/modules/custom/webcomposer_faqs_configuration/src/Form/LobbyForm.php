@@ -145,5 +145,54 @@ class LobbyForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['social_media_widgets'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Social Media Widgets'),
+      '#group' => 'advanced',
+    ];
+
+    // Product Settings
+    $form['social_media_widgets']['widgets_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Widgets'),
+      '#default_value' => $this->get('widgets_list'),
+      '#description' => $this->t('Enter one widget name per line. Max 5 widgets.'),
+      '#translatable' => TRUE,
+    ];
+
+    $widgets = array_map('trim', explode(PHP_EOL, $this->get('widgets_list')));
+
+    foreach ($widgets as $key => $widget) {
+      $widget_key = str_replace(' ', '', strtolower($widget));
+      // Skip if empty
+      if (empty($widget_key)) {
+        continue;
+      }
+
+      $form['social_media_widgets'][$key] = [
+        '#type' => 'details',
+        '#title' => $this->t($widget),
+      ];
+
+      $form['social_media_widgets'][$key]['widget_code_' . $key] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Code'),
+        '#default_value' => $this->get('widget_code_' . $key),
+        '#description' => $this->t('Html / Javascript code to render social media post'),
+        '#translatable' => TRUE,
+      ];
+    }
+  }
+
+    /**
+    * {@inheritdoc}
+    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    // Check for max widget count
+    $widgets = array_map('trim', explode(PHP_EOL, $form_state->getValue('widgets_list')));
+    if (count($widgets) > 5) {
+      $form_state->setErrorByName('widgets_list', $this->t('The maximum amount of widgets is 5'));
+    }
   }
 }

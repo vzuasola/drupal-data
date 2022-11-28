@@ -41,6 +41,7 @@ class JamboreeRegistrationForm extends FormBase {
     $this->sectionRegistrationForm($form);
     $this->sectionStep2($form);
     $this->sectionStep3($form);
+    $this->sectionStep4($form);
     $this->sectionIcoreIntegration($form);
     return $form;
   }
@@ -71,6 +72,68 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('reg_form_link_title'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['form']['reg_form_step_1'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 1)'),
+      '#default_value' => $this->get('reg_form_step_1'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['reg_form_step_2'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 2)'),
+      '#default_value' => $this->get('reg_form_step_2'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['reg_form_step_3'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 3)'),
+      '#default_value' => $this->get('reg_form_step_3'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['reg_form_step_4'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Form (Step 4)'),
+      '#default_value' => $this->get('reg_form_step_4'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['back_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Back Label'),
+      '#default_value' => $this->get('back_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['next_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Next Label'),
+      '#default_value' => $this->get('next_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['submit_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Submit Label'),
+      '#default_value' => $this->get('submit_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['reg_form']['form']['year_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Year Label'),
+      '#default_value' => $this->get('year_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['month_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Month Label'),
+      '#default_value' => $this->get('month_label'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['form']['day_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Day Label'),
+      '#default_value' => $this->get('day_label'),
+      '#translatable' => TRUE,
+    ];
+
     // error message setting
     $form['reg_form']['errors'] = [
       '#type' => 'fieldset',
@@ -262,6 +325,38 @@ class JamboreeRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['step_2']['step_2_deposit_bonus_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Bonus Title'),
+      '#default_value' => $this->get('step_2_deposit_bonus_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('step_2_deposit_bonus');
+    $form['step_2']['step_2_deposit_bonus'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Deposit Bonus'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_2']['step_2_play_now_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Play Now Title'),
+      '#default_value' => $this->get('step_2_play_now_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('step_2_play_now');
+    $form['step_2']['step_2_play_now'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Play Now'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
     $form['step_2']['promotion_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotion Label'),
@@ -329,10 +424,10 @@ class JamboreeRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['step_3']['welcome_message'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Welcome Message'),
-      '#default_value' => $this->get('welcome_message'),
+    $form['step_3']['success_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $this->get('success_message'),
       '#translatable' => TRUE,
     ];
 
@@ -345,14 +440,97 @@ class JamboreeRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['step_3']['play_button_label'] = [
+    $form['step_3']['promotion_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Label'),
+      '#default_value' => $this->get('promotion_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_3']['promotion_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Link'),
+      '#default_value' => $this->get('promotion_link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_3']['cashier_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Label'),
+      '#default_value' => $this->get('cashier_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_3']['cashier_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Link'),
+      '#default_value' => $this->get('cashier_link'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_3']['next_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Next Button Label'),
+      '#default_value' => $this->get('next_button_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_3']['next_button_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Next Button Link'),
+      '#default_value' => $this->get('next_button_link'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionStep4(array &$form) {
+    $form['step_4'] = [
+      '#type' => 'details',
+      '#title' => t('Registration Step 4'),
+      '#group' => 'advanced',
+    ];
+
+    $form['step_4']['step_4_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $this->get('step_4_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_4']['step_4_link_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link Title'),
+      '#default_value' => $this->get('step_4_link_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_4']['welcome_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Welcome Message'),
+      '#default_value' => $this->get('welcome_message'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('step_4_body');
+    $form['step_4']['step_4_body'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Body'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['step_4']['play_button_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Play Button Label'),
       '#default_value' => $this->get('play_button_label'),
       '#translatable' => TRUE,
     ];
 
-    $form['step_3']['play_button_link'] = [
+    $form['step_4']['play_button_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Play Button Link'),
       '#default_value' => $this->get('play_button_link'),

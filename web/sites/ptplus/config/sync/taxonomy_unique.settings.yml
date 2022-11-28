@@ -26,3 +26,5 @@ game_categories: 0
 game_categories_message: 'Term @term already exists in vocabulary @vocabulary.'
 page_content: 0
 page_content_message: 'Term @term already exists in vocabulary @vocabulary.'
+tournament_types: 0
+tournament_types_message: 'Term @term already exists in vocabulary @vocabulary.'
