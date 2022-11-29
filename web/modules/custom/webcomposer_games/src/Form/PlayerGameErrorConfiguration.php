@@ -53,26 +53,25 @@ class PlayerGameErrorConfiguration extends FormBase {
       '#default_value' => $this->get('playergame_error_message'),
       '#rows' => 7,
       '#cols' => 2,
-      /*'#description' => $this->t('Format of data in field (Error code | description)'),*/
       '#description' => $this->t('<b>Error code | description</b><br><ul>
-    <li><b>GPD001</b>: <i>ServiceError</i></li>
-    <li><b>GPD002</b>: <i>InvalidProvider</i></li>
-    <li><b>GPD003</b>: <i>PlayerCheckSessionFailed</i></li>
-    <li><b>GPD004</b>: <i>GameNotFound</i></li>
-    <li><b>GPD005</b>: <i>GameNotAllowed</i></li>
-    <li><b>GPD006</b>: <i>GameRestricted</i></li>
-    <li><b>500</b>: <i>InternalError</i></li>
-</ul>'),
-      '#translatable' => FALSE,
-      '#required' => FALSE,
+            <li><b>GPD001</b>: <i>ServiceError</i></li>
+            <li><b>GPD002</b>: <i>InvalidProvider</i></li>
+            <li><b>GPD003</b>: <i>PlayerCheckSessionFailed</i></li>
+            <li><b>GPD004</b>: <i>GameNotFound</i></li>
+            <li><b>GPD005</b>: <i>GameNotAllowed</i></li>
+            <li><b>GPD006</b>: <i>GameRestricted</i></li>
+            <li><b>500</b>: <i>InternalError</i></li>
+        </ul>'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['gen_config']['playergame_error_button'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Lightbox Button Text'),
       '#default_value' => $this->get('playergame_error_button'),
-      '#translatable' => FALSE,
-      '#required' => FALSE,
+      '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
   }
 }
