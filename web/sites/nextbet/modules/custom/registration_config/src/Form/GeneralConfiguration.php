@@ -100,6 +100,14 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['general']['country_area_codes'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Country Area Codes'),
+      '#description' => $this->t('List of area codes that will appear beside the mobile number (take note: must be a valid area code or the image will not appear beside the are code)'),
+      '#default_value' => $this->get('country_area_codes'),
+      '#required' => TRUE,
+    ];
+
     $form['general']['native_app_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Native App Page Title'),
