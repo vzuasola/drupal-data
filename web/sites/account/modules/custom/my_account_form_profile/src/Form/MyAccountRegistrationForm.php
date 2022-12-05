@@ -2,12 +2,13 @@
 
 namespace Drupal\my_account_form_profile\Form;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Routing\RequestContext;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Path\AliasManagerInterface;
-use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Path\PathValidatorInterface;
-use Drupal\Core\Routing\RequestContext;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -19,19 +20,23 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @see \Drupal\Core\Form\FormBase
  * @see \Drupal\Core\Form\ConfigFormBase
  */
-class MyAccountRegistrationForm extends ConfigFormBase
+class MyAccountRegistrationForm extends FormBase
 {
 
-    protected function getEditableConfigNames() { }
+    protected function getEditableConfigNames() {
+        return ['my_account_form_profile.profile'];
+    }
 
-    public function getFormId() { }
+    public function getFormId() {
+        return 'my_account_form_profile.profile';
+    }
 
     /**
      * Build the form.
      *
      * @inheritdoc
      */
-    public function buildForm(array $form, FormStateInterface $form_state)
+    public function form(array $form, FormStateInterface $form_state)
     {
         // Get Form configuration.
         $myAccountConfig = $this->config('my_account_form_profile.profile');
@@ -1059,7 +1064,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Text for Verify Link'),
-            '#default_value' => $this->get('verify_text'),
+            '#default_value' => $myAccountConfigValue['verify_text'],
             '#translatable' => true,
         ];
 
@@ -1130,7 +1135,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Numeric Field Error Message'),
-            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#default_value' => $myAccountConfigValue['verification_code_numeric_message'],
             '#translatable' => true,
         ];
 
@@ -1404,7 +1409,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'textfield',
             '#title' => $this->t('Required Error Message'),
             '#required' => true,
-            '#default_value' => $this->get('required_validation'),
+            '#default_value' => $myAccountConfigValue['required_validation'],
             '#translatable' => true,
         ];
 
@@ -1475,7 +1480,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'textfield',
             '#title' => $this->t('Message timeout'),
             '#required' => TRUE,
-            '#default_value' => $this->get('message_timeout'),
+            '#default_value' => $myAccountConfigValue['message_timeout'],
             '#translatable' => true,
             '#description' => '<strong>[Mobile] </strong> Maximum timeout in second to display the Success/Error message.'
         ];
@@ -1484,7 +1489,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'textfield',
             '#title' => $this->t('My Profile Tab Label'),
             '#required' => TRUE,
-            '#default_value' => $this->get('my_profile_tab'),
+            '#default_value' => $myAccountConfigValue['my_profile_tab'],
             '#translatable' => true,
             '#description' => '<strong>[Mobile] </strong> Label for My Profile Tab.'
         ];
@@ -1493,18 +1498,18 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'textfield',
             '#title' => $this->t('Change Password Tab label'),
             '#required' => TRUE,
-            '#default_value' => $this->get('change_password_tab'),
+            '#default_value' => $myAccountConfigValue['change_password_tab'],
             '#translatable' => true,
             '#description' => '<strong>[Mobile] </strong> Label for Change Password Tab.'
         ];
 
-        $this->fastRegConfig($form);
-        $this->mobileNumberAnnotation($form);
+        $this->fastRegConfig($form, $myAccountConfigValue);
+        $this->mobileNumberAnnotation($form, $myAccountConfigValue);
 
         return $form;
     }
 
-    private function mobileNumberAnnotation(&$form) {
+    private function mobileNumberAnnotation(&$form, $myAccountConfigValue) {
         $form['mobile_number_config'] = [
             '#type' => 'details',
             '#title' => 'Mobile Number Annotation',
@@ -1517,12 +1522,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Enable Mobile Number Annotation'),
             '#required' => FALSE,
             '#description' => $this->t('Enable annotation in mobile number field'),
-            '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
+            '#default_value' => $myAccountConfigValue['enable_mobile_number_annotation'] ?? true,
             '#translatable' => true,
         ];
     }
 
-    private function fastRegConfig(&$form) {
+    private function fastRegConfig(&$form, $myAccountConfigValue) {
         $form['profile_form_fastreg_config'] = [
             '#type' => 'details',
             '#title' => 'Fast Reg Configuration',
@@ -1534,7 +1539,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'textfield',
             '#title' => $this->t('Timeout Redirect'),
             '#required' => TRUE,
-            '#default_value' => $this->get('fastreg_timeout_redirect'),
+            '#default_value' => $myAccountConfigValue['fastreg_timeout_redirect'],
             '#translatable' => true,
             '#description' => '<strong>[Fast Reg] </strong> Timeout in second(s) before player redirected back to Cashier.'
         ];
@@ -1542,7 +1547,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['profile_form_fastreg_config']['fastreg_redirect'] = [
           '#type' => 'textfield',
           '#title' => $this->t('[Desktop] - Redirect To'),
-          '#default_value' => $this->get('fastreg_redirect'),
+          '#default_value' => $myAccountConfigValue['fastreg_redirect'],
           '#required' => TRUE,
           '#translatable' => TRUE,
           '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Desktop'
@@ -1551,13 +1556,13 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['profile_form_fastreg_config']['fastreg_mobile_redirect'] = [
           '#type' => 'textfield',
           '#title' => $this->t('[Mobile] - Redirect To'),
-          '#default_value' => $this->get('fastreg_mobile_redirect'),
+          '#default_value' => $myAccountConfigValue['fastreg_mobile_redirect'],
           '#required' => TRUE,
           '#translatable' => TRUE,
           '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Mobile'
         ];
 
-        $content = $this->get('fast_reg_flash_message');
+        $content = $myAccountConfigValue['fast_reg_flash_message'];
         $form['profile_form_fastreg_config']['fast_reg_flash_message'] = [
           '#type' => 'text_format',
           '#title' => $this->t('Notification message'),
