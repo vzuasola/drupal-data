@@ -54,9 +54,7 @@ class PlayerGameErrorConfiguration extends FormBase {
       '#rows' => 7,
       '#cols' => 2,
       '#description' => $this->t('<b>Error code | description</b><br><ul>
-            <li><b>GPD001</b>: <i>ServiceError</i></li>
-            <li><b>GPD002</b>: <i>InvalidProvider</i></li>
-            <li><b>GPD003</b>: <i>PlayerCheckSessionFailed</i></li>
+            <li><b>GPD003</b>: <i>PlayerSessionCheckFailed</i></li>
             <li><b>GPD004</b>: <i>GameNotFound</i></li>
             <li><b>GPD005</b>: <i>GameNotAllowed</i></li>
             <li><b>GPD006</b>: <i>GameRestricted</i></li>
