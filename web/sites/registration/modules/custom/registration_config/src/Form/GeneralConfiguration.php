@@ -663,13 +663,6 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('image_server_password') ?? "",
     ];
 
-    $form['pan_id_url_configuration']['arion_endpoint'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Enter Arion endpoint URL'),
-      '#description' => $this->t('Here we should add Arion endpoint that will process our image'),
-      '#default_value' => $this->get('arion_endpoint') ?? "",
-    ];
-
     $form['pan_id_url_configuration']['taurus_endpoint'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Enter Taurus wsdl endpoint URL'),
@@ -690,6 +683,31 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Enter X-PANID-Code of OCR endpoint.'),
       '#default_value' => $this->get('x_pan_id_code') ?? "",
     ];
+
+    $form['pan_id_url_configuration']['pan_id_firstname_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Firstname Pan ID upload error message'),
+      '#description' => $this->t('Error to show when Firstname on Pan ID upload has an error.'),
+      '#translatable' => TRUE,
+      '#default_value' => $this->get('pan_id_firstname_error') ?? "",
+    ];
+
+    $form['pan_id_url_configuration']['pan_id_lastname_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Lastname Pan ID upload error message'),
+      '#description' => $this->t('Error to show when Lastname on Pan ID upload has an error.'),
+      '#translatable' => TRUE,
+      '#default_value' => $this->get('pan_id_lastname_error') ?? "",
+    ];
+
+    $form['pan_id_url_configuration']['pan_id_bday_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Date of Birth Pan ID upload error message'),
+      '#description' => $this->t('Error to show when Date of Birth on Pan ID upload has an error.'),
+      '#translatable' => TRUE,
+      '#default_value' => $this->get('pan_id_bday_error') ?? "",
+    ];
+
     $form['pan_id_url_configuration']['request_timeout'] = [
       '#type' => 'number',
       '#title' => $this->t('Request Timeout'),
