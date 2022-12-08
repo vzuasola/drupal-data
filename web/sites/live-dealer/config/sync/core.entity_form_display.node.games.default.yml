@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.games.field_game_title
     - field.field.node.games.field_hide
     - field.field.node.games.field_image_size
+    - field.field.node.games.field_launch_direct_table
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_popup_window_name
     - field.field.node.games.field_popup_window_size
@@ -25,6 +26,7 @@ dependencies:
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
+    - field.field.node.games.field_table_name
     - image.style.thumbnail
     - node.type.games
   module:
@@ -83,10 +85,12 @@ third_party_settings:
       label: 'Game Room Title & Icon'
     group_game_launching:
       children:
+        - field_launch_direct_table
         - field_game_provider
         - field_game_subprovider
         - field_game_code
         - field_external_game_id
+        - field_table_name
         - field_product
         - field_game_lobby_category
       parent_name: ''
@@ -229,7 +233,7 @@ content:
     type: string_textfield
     region: content
   field_game_lobby_category:
-    weight: 44
+    weight: 45
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -307,7 +311,7 @@ content:
     type: boolean_checkbox
     region: content
   field_product:
-    weight: 43
+    weight: 44
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -335,6 +339,14 @@ content:
       conditional_fields: {  }
     type: datetime_default
     region: content
+  field_table_name:
+    type: string_textfield
+    weight: 43
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
