@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.games.body
     - field.field.node.games.field_end_date
+    - field.field.node.games.field_external_game_id
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
@@ -25,6 +26,7 @@ dependencies:
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
+    - field.field.node.games.field_table_name
     - image.style.thumbnail
     - node.type.games
   module:
@@ -87,6 +89,8 @@ third_party_settings:
         - field_game_provider
         - field_game_subprovider
         - field_game_code
+        - field_external_game_id
+        - field_table_name
         - field_product
         - field_game_lobby_category
       parent_name: ''
@@ -142,6 +146,14 @@ content:
       conditional_fields: {  }
     type: datetime_default
     region: content
+  field_external_game_id:
+    type: string_textfield
+    weight: 42
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_game_code:
     weight: 41
     settings:
@@ -221,7 +233,7 @@ content:
     type: string_textfield
     region: content
   field_game_lobby_category:
-    weight: 43
+    weight: 45
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -299,7 +311,7 @@ content:
     type: boolean_checkbox
     region: content
   field_product:
-    weight: 42
+    weight: 44
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -327,6 +339,14 @@ content:
       conditional_fields: {  }
     type: datetime_default
     region: content
+  field_table_name:
+    type: string_textfield
+    weight: 43
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
