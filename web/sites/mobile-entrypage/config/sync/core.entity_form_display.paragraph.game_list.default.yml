@@ -11,7 +11,7 @@ dependencies:
     - field.field.paragraph.game_list.field_game_subprovider
     - field.field.paragraph.game_list.field_game_title
     - field.field.paragraph.game_list.field_product
-    - field.field.paragraph.game_list.field_provider2
+    - field.field.paragraph.game_list.field_table_id
     - field.field.paragraph.game_list.field_target
     - field.field.paragraph.game_list.field_use_game_loader
     - field.field.paragraph.game_list.field_use_lobby
@@ -27,6 +27,7 @@ third_party_settings:
         - field_game_title
         - field_game_code
         - field_game_platform
+        - field_table_id
         - field_game_image
         - field_game_provider
         - field_game_subprovider
@@ -48,7 +49,7 @@ bundle: game_list
 mode: default
 content:
   field_external_game_id:
-    weight: 10
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -64,7 +65,7 @@ content:
     type: string_textfield
     region: content
   field_game_image:
-    weight: 7
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -78,13 +79,13 @@ content:
     type: options_select
     region: content
   field_game_provider:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_subprovider:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -103,6 +104,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_table_id:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_target:
     weight: 2
     settings: {  }
@@ -117,7 +126,7 @@ content:
     type: boolean_checkbox
     region: content
   field_use_lobby:
-    weight: 11
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
@@ -130,6 +139,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_provider2: true
   status: true
   uid: true
