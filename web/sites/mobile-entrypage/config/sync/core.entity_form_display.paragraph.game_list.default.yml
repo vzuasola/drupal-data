@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.game_list.field_external_game_id
     - field.field.paragraph.game_list.field_game_code
     - field.field.paragraph.game_list.field_game_image
     - field.field.paragraph.game_list.field_game_platform
@@ -10,7 +11,7 @@ dependencies:
     - field.field.paragraph.game_list.field_game_subprovider
     - field.field.paragraph.game_list.field_game_title
     - field.field.paragraph.game_list.field_product
-    - field.field.paragraph.game_list.field_table_id
+    - field.field.paragraph.game_list.field_provider2
     - field.field.paragraph.game_list.field_target
     - field.field.paragraph.game_list.field_use_game_loader
     - field.field.paragraph.game_list.field_use_lobby
@@ -26,10 +27,10 @@ third_party_settings:
         - field_game_title
         - field_game_code
         - field_game_platform
-        - field_table_id
         - field_game_image
         - field_game_provider
         - field_game_subprovider
+        - field_external_game_id
         - field_use_lobby
       parent_name: ''
       weight: 1
@@ -46,6 +47,14 @@ targetEntityType: paragraph
 bundle: game_list
 mode: default
 content:
+  field_external_game_id:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_code:
     weight: 5
     settings:
@@ -55,7 +64,7 @@ content:
     type: string_textfield
     region: content
   field_game_image:
-    weight: 8
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -69,13 +78,13 @@ content:
     type: options_select
     region: content
   field_game_provider:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_subprovider:
-    weight: 10
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -93,14 +102,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_table_id:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_target:
     weight: 2
