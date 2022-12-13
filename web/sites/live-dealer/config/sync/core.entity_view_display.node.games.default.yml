@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.games.body
     - field.field.node.games.field_end_date
+    - field.field.node.games.field_external_game_id
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
@@ -16,7 +17,6 @@ dependencies:
     - field.field.node.games.field_game_title
     - field.field.node.games.field_hide
     - field.field.node.games.field_image_size
-    - field.field.node.games.field_launch_direct_table
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_popup_window_name
     - field.field.node.games.field_popup_window_size
@@ -53,6 +53,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_external_game_id:
+    type: string
+    weight: 21
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_game_code:
     weight: 12
     label: above

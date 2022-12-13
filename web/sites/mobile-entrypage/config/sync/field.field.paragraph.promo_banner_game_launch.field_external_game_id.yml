@@ -1,0 +1,19 @@
+uuid: f308c008-0c65-4579-9d35-164895f2be07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_game_id
+    - paragraphs.paragraphs_type.promo_banner_game_launch
+id: paragraph.promo_banner_game_launch.field_external_game_id
+field_name: field_external_game_id
+entity_type: paragraph
+bundle: promo_banner_game_launch
+label: 'External Game ID'
+description: 'Add External Game ID for direct table launching via PlayerGame API for Live Dealer'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
