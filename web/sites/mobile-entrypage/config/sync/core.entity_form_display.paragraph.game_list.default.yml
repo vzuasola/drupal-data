@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.game_list.field_external_game_id
     - field.field.paragraph.game_list.field_game_code
     - field.field.paragraph.game_list.field_game_image
     - field.field.paragraph.game_list.field_game_platform
@@ -30,6 +31,7 @@ third_party_settings:
         - field_game_image
         - field_game_provider
         - field_game_subprovider
+        - field_external_game_id
         - field_use_lobby
       parent_name: ''
       weight: 1
@@ -46,6 +48,14 @@ targetEntityType: paragraph
 bundle: game_list
 mode: default
 content:
+  field_external_game_id:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_code:
     weight: 5
     settings:
@@ -116,7 +126,7 @@ content:
     type: boolean_checkbox
     region: content
   field_use_lobby:
-    weight: 11
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
@@ -129,6 +139,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_provider2: true
   status: true
   uid: true

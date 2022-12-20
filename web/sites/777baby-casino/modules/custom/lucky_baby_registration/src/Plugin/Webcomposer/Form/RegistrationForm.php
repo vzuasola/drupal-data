@@ -47,6 +47,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The label for the User Name field',
           ],
+          'placeholder' => [  
+            '#title' => 'User Name placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for User Name field',  
+          ],
         ],
       ],
       'firstname' => [
@@ -57,6 +62,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'First Name Label',
             '#type' => 'textfield',
             '#description' => 'The label for the First Name field',
+          ],
+          'placeholder' => [  
+            '#title' => 'First Name placeholder label', 
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for First Name field', 
           ],
         ],
       ],
@@ -69,6 +79,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The label for the Last Name field',
           ],
+          'placeholder' => [  
+            '#title' => 'Last Name placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Last Name field',  
+          ],
         ],
       ],
       'password' => [
@@ -79,6 +94,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Password label',
             '#type' => 'textfield',
             '#description' => 'The Label for Password field',
+          ],
+          'placeholder' => [  
+            '#title' => 'Password placeholder label', 
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Password field', 
           ],
         ],
       ],
@@ -91,27 +111,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Confirm Password field',
           ],
-        ],
-      ],
-      'email' => [
-        'name' => 'Email Address',
-        'type' => 'email',
-        'settings' => [
-          'label' => [
-            '#title' => 'Email Address Label',
-            '#type' => 'email',
-            '#description' => 'The Label for Email Address field',
-          ],
-        ],
-      ],
-      'confirm_email' => [
-        'name' => 'Confirm Email Address',
-        'type' => 'email',
-        'settings' => [
-          'label' => [
-            '#title' => 'Confirm Email Address Label',
-            '#type' => 'email',
-            '#description' => 'The Label for Confirm Email Address field',
+          'placeholder' => [  
+            '#title' => 'Confirm Password placeholder label', 
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Confirm Password field', 
           ],
         ],
       ],
@@ -137,6 +140,38 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'A Markup text breakline for registration form',
             '#default_value' => '<div class ="fieldset-wrapper-step-2 hidden">',
+          ],
+        ],
+      ],
+      'email' => [
+        'name' => 'Email Address',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Email Address Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Email Address field',
+          ],
+          'placeholder' => [  
+            '#title' => 'Email Address placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Email Address field',  
+          ],
+        ],
+      ],
+      'confirm_email' => [
+        'name' => 'Confirm Email Address',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Confirm Email Address Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Confirm Email Address field',
+          ],
+          'placeholder' => [  
+            '#title' => 'Confirm Email placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Confirm Email field',  
           ],
         ],
       ],
@@ -175,6 +210,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for the Birthdate field',
           ],
+          'placeholder' => [  
+            '#title' => 'Date of Birth placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Date of Birth field',  
+          ],
         ],
       ],
       'phone' => [
@@ -186,6 +226,36 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Contact Number field',
           ],
+          'placeholder' => [  
+            '#title' => 'Contact Number placeholder label', 
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Contact Number field', 
+          ],
+        ],
+      ],
+      'wrapper_step_2_end' => [
+        'name' => 'Wrapper End Step 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End Step 2',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
+          ],
+        ],
+      ],
+      // step 3
+      'wrapper_step_3_start' => [
+        'name' => 'Wrapper Start Step 3',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper-step-3 hidden">',
+          ],
         ],
       ],
       'currency' => [
@@ -196,6 +266,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Currency Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Currency field',
+          ],
+          'placeholder' => [  
+            '#title' => 'Currency placeholder label', 
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Currency field', 
           ],
           'data' => [
             '#title' => 'Currency Default Value',
@@ -253,6 +328,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for the State field',
           ],
+          'placeholder' => [  
+            '#title' => 'State placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for State field',  
+          ],
         ],
       ],
       'city' => [
@@ -263,6 +343,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Town/City Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Town/City field',
+          ],
+          'placeholder' => [  
+            '#title' => 'Town/City placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Password field', 
           ],
         ],
       ],
@@ -275,6 +360,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Zip Code/Postal Code field',
           ],
+          'placeholder' => [  
+            '#title' => 'Zip Code/Postal Code placeholder label', 
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Zip Code/Postal Code field', 
+          ],
         ],
       ],
       'address' => [
@@ -286,30 +376,35 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Address field',
           ],
+          'placeholder' => [  
+            '#title' => 'Address placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Address field',  
+          ],
         ],
       ],
-      'wrapper_step_2_end' => [
-        'name' => 'Wrapper End Step 2',
+      'wrapper_step_3_end' => [
+        'name' => 'Wrapper End Step 3',
         'type' => 'markup',
         'settings' => [
           'markup' => [
-            '#title' => 'Wrapper End Step 2',
+            '#title' => 'Wrapper End Step 3',
             '#type' => 'textarea',
             '#description' => 'Closing wrapper',
             '#default_value' => '</div>',
           ],
         ],
       ],
-      // step 3
-      'wrapper_step_3_start' => [
-        'name' => 'Wrapper Start Step 3',
+      // step 4
+      'wrapper_step_4_start' => [
+        'name' => 'Wrapper Start Step 4',
         'type' => 'markup',
         'settings' => [
           'markup' => [
             '#title' => 'Opening Wrapper',
             '#type' => 'textarea',
             '#description' => 'A Markup text breakline for registration form',
-            '#default_value' => '<div class ="fieldset-wrapper-step-3 hidden">',
+            '#default_value' => '<div class ="fieldset-wrapper-step-4 hidden">',
           ],
         ],
       ],
@@ -361,6 +456,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'coupon_code_help_text' => [
+        'name' => 'Coupon Help Text',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Coupon Help Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for Coupon Field',
+            '#default_value' => '<div class="fieldset-wrapper text-center display-text">You can use this [zipang] coupon if you don\'t have</div>',
+          ],
+        ],
+      ],
       'coupon_code' => [
         'name' => 'Coupon Code',
         'type' => 'textfield',
@@ -369,6 +476,23 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Coupon Code Label',
             '#type' => 'textfield',
             '#description' => 'The Label for Coupon Code field',
+          ],
+          'placeholder' => [  
+            '#title' => 'Coupon Code placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Coupon Code field',  
+          ],
+        ],
+      ],
+      'captcha_help_text' => [
+        'name' => 'Captcha Help Text',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Captcha Help Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for Captcha Field',
+            '#default_value' => '<div class="fieldset-wrapper text-center display-text">Enter the authentication code shown in the image.</div>',
           ],
         ],
       ],
@@ -381,14 +505,19 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Captcha field',
           ],
+          'placeholder' => [  
+            '#title' => 'Captcha placeholder label',  
+            '#type' => 'textfield', 
+            '#description' => 'Placeholder label for Captcha field',  
+          ],
         ],
       ],
-      'wrapper_step_3_end' => [
-        'name' => 'Wrapper End Step 3',
+      'wrapper_step_4_end' => [
+        'name' => 'Wrapper End Step 4',
         'type' => 'markup',
         'settings' => [
           'markup' => [
-            '#title' => 'Wrapper End Step 3',
+            '#title' => 'Wrapper End Step 4',
             '#type' => 'textarea',
             '#description' => 'Closing wrapper',
             '#default_value' => '</div>',

@@ -1,0 +1,19 @@
+uuid: a7d779fb-afa1-4a69-a168-e4b8ec862470
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_game_id
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_external_game_id
+field_name: field_external_game_id
+entity_type: paragraph
+bundle: game_list
+label: 'External Game ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
