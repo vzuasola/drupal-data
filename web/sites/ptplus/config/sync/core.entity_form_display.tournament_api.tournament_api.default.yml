@@ -5,6 +5,14 @@ dependencies:
   config:
     - field.field.tournament_api.tournament_api.field_banner_image
     - field.field.tournament_api.tournament_api.field_banner_image_landscape
+    - field.field.tournament_api.tournament_api.field_lightbox_games_title
+    - field.field.tournament_api.tournament_api.field_lightbox_intro
+    - field.field.tournament_api.tournament_api.field_lightbox_join_button
+    - field.field.tournament_api.tournament_api.field_lightbox_mechanics
+    - field.field.tournament_api.tournament_api.field_lightbox_mechanics_title
+    - field.field.tournament_api.tournament_api.field_lightbox_rewards
+    - field.field.tournament_api.tournament_api.field_lightbox_rewards_title
+    - field.field.tournament_api.tournament_api.field_lightbox_status
     - field.field.tournament_api.tournament_api.field_platform
     - field.field.tournament_api.tournament_api.field_status
     - field.field.tournament_api.tournament_api.field_status_board
@@ -15,8 +23,32 @@ dependencies:
     - image.style.thumbnail
   module:
     - datetime
+    - field_group
     - svg_image
+    - text
     - tournament_api
+third_party_settings:
+  field_group:
+    group_lightbox_learn_more:
+      children:
+        - field_lightbox_status
+        - field_lightbox_join_button
+        - field_lightbox_intro
+        - field_lightbox_mechanics_title
+        - field_lightbox_mechanics
+        - field_lightbox_rewards_title
+        - field_lightbox_rewards
+        - field_lightbox_games_title
+      parent_name: ''
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Lightbox Learn More'
 id: tournament_api.tournament_api.default
 targetEntityType: tournament_api
 bundle: tournament_api
@@ -38,6 +70,69 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_lightbox_games_title:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lightbox_intro:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_lightbox_join_button:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lightbox_mechanics:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_lightbox_mechanics_title:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lightbox_rewards:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_lightbox_rewards_title:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lightbox_status:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_platform:
     weight: 3
     settings: {  }
@@ -45,7 +140,7 @@ content:
     type: options_select
     region: content
   field_status:
-    weight: 9
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -90,7 +185,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
