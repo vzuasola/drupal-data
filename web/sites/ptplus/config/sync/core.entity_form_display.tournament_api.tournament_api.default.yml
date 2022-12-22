@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.tournament_api.tournament_api.field_banner_id
     - field.field.tournament_api.tournament_api.field_banner_image
     - field.field.tournament_api.tournament_api.field_banner_image_landscape
     - field.field.tournament_api.tournament_api.field_lightbox_games_title
@@ -40,7 +41,7 @@ third_party_settings:
         - field_lightbox_rewards
         - field_lightbox_games_title
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: tab
       format_settings:
         id: ''
@@ -54,6 +55,14 @@ targetEntityType: tournament_api
 bundle: tournament_api
 mode: default
 content:
+  field_banner_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_banner_image:
     weight: 2
     settings:
@@ -63,7 +72,7 @@ content:
     type: image_image
     region: content
   field_banner_image_landscape:
-    weight: 6
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -134,19 +143,19 @@ content:
     type: boolean_checkbox
     region: content
   field_platform:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_status:
-    weight: 18
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_status_board:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -160,19 +169,19 @@ content:
     type: string_textfield
     region: content
   field_tournament_end_date:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_tournament_start_date:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_type_board:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -185,7 +194,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 19
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
