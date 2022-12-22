@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.promo_banner_game_launch.field_external_game_id
+    - field.field.paragraph.promo_banner_game_launch.field_field_table_id
     - field.field.paragraph.promo_banner_game_launch.field_game_code
     - field.field.paragraph.promo_banner_game_launch.field_game_platform
     - field.field.paragraph.promo_banner_game_launch.field_game_provider
@@ -24,6 +25,7 @@ third_party_settings:
         - field_game_platform
         - field_game_provider
         - field_game_subprovider
+        - field_field_table_id
         - field_external_game_id
         - field_use_lobby
       parent_name: ''
@@ -41,13 +43,21 @@ bundle: promo_banner_game_launch
 mode: default
 content:
   field_external_game_id:
-    weight: 13
+    weight: 14
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_field_table_id:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_game_code:
     weight: 9
     settings:
@@ -102,7 +112,7 @@ content:
     type: boolean_checkbox
     region: content
   field_use_lobby:
-    weight: 14
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
@@ -110,5 +120,6 @@ content:
     region: content
 hidden:
   created: true
+  field_table_id: true
   status: true
   uid: true
