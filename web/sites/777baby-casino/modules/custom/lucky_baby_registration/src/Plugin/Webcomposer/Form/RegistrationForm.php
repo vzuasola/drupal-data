@@ -422,7 +422,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
       ],
       'term_conditions' => [
         'name' => 'Accept Terms',
-        'type' => 'checkbox',
+        'type' => 'markup',
         'settings' => [
           'label' => [
             '#title' => 'Accept Terms Text',
