@@ -1,0 +1,21 @@
+uuid: 9b85bbdc-9534-443a-88ee-382b2e51b8fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tournament_api.field_lightbox_mechanics
+  module:
+    - text
+    - tournament_api
+id: tournament_api.tournament_api.field_lightbox_mechanics
+field_name: field_lightbox_mechanics
+entity_type: tournament_api
+bundle: tournament_api
+label: 'Lightbox Mechanics'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
