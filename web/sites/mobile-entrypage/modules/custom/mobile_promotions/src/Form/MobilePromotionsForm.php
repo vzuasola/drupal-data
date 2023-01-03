@@ -95,6 +95,13 @@ class MobilePromotionsForm extends FormBase {
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
+
+    $form['promotions_configuration']['show_archive'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Uncheck to Hide Archived Promotions Section'),
+      '#default_value' => $this->get('show_archive'),
+      '#translatable' => TRUE,
+    ];
     return $form;
   }
 }
