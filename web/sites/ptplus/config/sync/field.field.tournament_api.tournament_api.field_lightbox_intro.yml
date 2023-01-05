@@ -1,0 +1,20 @@
+uuid: 92593268-5ce3-4e98-8bc4-91af88207abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tournament_api.field_lightbox_intro
+  module:
+    - tournament_api
+id: tournament_api.tournament_api.field_lightbox_intro
+field_name: field_lightbox_intro
+entity_type: tournament_api
+bundle: tournament_api
+label: 'Lightbox Intro'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

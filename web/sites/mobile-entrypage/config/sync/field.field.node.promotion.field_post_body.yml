@@ -12,7 +12,7 @@ field_name: field_post_body
 entity_type: node
 bundle: promotion
 label: 'Body on Post Login'
-description: 'Please use the following placeholder code [[promotion_game_widget]] to add game list widget on any part of the promotion body.'
+description: "<p>Please use the following placeholder code [[promotion_game_widget]] to add game list widget on any part of the promotion body.</p>\r\n<p>\r\nPlease use the following placeholder code {webformfaq:id} to add opt-in form on this promotion content where id is the webform ID for opt-in form you wish to display in this promotion.</p>"
 required: false
 translatable: true
 default_value: {  }
