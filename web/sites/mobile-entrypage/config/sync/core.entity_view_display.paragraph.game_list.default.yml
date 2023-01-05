@@ -11,7 +11,6 @@ dependencies:
     - field.field.paragraph.game_list.field_game_subprovider
     - field.field.paragraph.game_list.field_game_title
     - field.field.paragraph.game_list.field_product
-    - field.field.paragraph.game_list.field_provider2
     - field.field.paragraph.game_list.field_target
     - field.field.paragraph.game_list.field_use_game_loader
     - field.field.paragraph.game_list.field_use_lobby
@@ -115,4 +114,4 @@ content:
     type: boolean
     region: content
 hidden:
-  field_provider2: true
+  field_table_id: true

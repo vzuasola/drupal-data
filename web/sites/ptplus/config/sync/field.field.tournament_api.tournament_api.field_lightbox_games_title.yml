@@ -1,0 +1,20 @@
+uuid: a1dc5bb3-0159-4cb8-8e73-d91a5cb78dd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tournament_api.field_lightbox_games_title
+  module:
+    - tournament_api
+id: tournament_api.tournament_api.field_lightbox_games_title
+field_name: field_lightbox_games_title
+entity_type: tournament_api
+bundle: tournament_api
+label: 'Lightbox Games Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,30 @@
+uuid: 600baf49-3539-4d17-8eb2-92ca4650d930
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Cricket Promotion Page'
+type: cricket_promotion_page
+description: 'This will show feature promotions under cricket page on faqs'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

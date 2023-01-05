@@ -1,0 +1,19 @@
+uuid: d7d1ca43-bb71-4dac-ba00-ed38b2d3f38d
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - tournament_api
+id: tournament_api.field_lightbox_rewards
+field_name: field_lightbox_rewards
+entity_type: tournament_api
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

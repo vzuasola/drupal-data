@@ -428,7 +428,19 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Accept Terms Text',
             '#type' => 'textarea',
             '#description' => 'A Markup text for accept terms and conditions',
-            '#default_value' => 'I am at least 18 years old and have read and accept the Terms and Condition',
+            '#default_value' => '',
+          ],
+        ],
+      ],
+      'term_conditions_help_text' => [
+        'name' => 'Accept Terms Help Text',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Accept Terms Help Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for Accept Terms',
+            '#default_value' => '<div class="term_conditions_help_text">I am at least 18 years old and have read and accept the Terms and Condition</div>',
           ],
         ],
       ],
