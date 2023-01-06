@@ -115,6 +115,38 @@ class TournamentSettingsForm extends FormBase {
         '#required' => TRUE,
         ];
 
+        $form['tournament_settings']['banner_settings']['label_ends_in'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Label for Ends In'),
+        '#default_value' => $this->get('label_ends_in'),
+        '#translatable' => TRUE,
+        '#required' => TRUE,
+        ];
+
+        $form['tournament_settings']['banner_settings']['label_days'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Label for Days'),
+        '#default_value' => $this->get('label_days'),
+        '#translatable' => TRUE,
+        '#required' => TRUE,
+        ];
+
+        $form['tournament_settings']['banner_settings']['label_hours'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Label for Hours'),
+        '#default_value' => $this->get('label_hours'),
+        '#translatable' => TRUE,
+        '#required' => TRUE,
+        ];
+
+        $form['tournament_settings']['banner_settings']['label_minutes'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Label for Minutes'),
+        '#default_value' => $this->get('label_minutes'),
+        '#translatable' => TRUE,
+        '#required' => TRUE,
+        ];
+
         $form['tournament_settings']['notification'] = [
         '#type' => 'details',
         '#title' => $this->t('Notification Prompt Configuration'),

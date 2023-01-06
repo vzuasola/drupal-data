@@ -11,7 +11,7 @@ field_name: field_banner_id
 entity_type: tournament_api
 bundle: tournament_api
 label: 'Banner ID'
-description: ''
+description: 'The Tournament ID field to match the banner from the API'
 required: true
 translatable: false
 default_value: {  }
