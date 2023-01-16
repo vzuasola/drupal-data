@@ -473,34 +473,6 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
           ],
         ],
       ],
-      'coupon_code_help_text' => [
-        'name' => 'Coupon Help Text',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Coupon Help Text',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text breakline for Coupon Field',
-            '#default_value' => '<div class="fieldset-wrapper text-center display-text">You can use this [jamboree] coupon if you don\'t have</div>',
-          ],
-        ],
-      ],
-      'coupon_code' => [
-        'name' => 'Coupon Code',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Coupon Code Label',
-            '#type' => 'textfield',
-            '#description' => 'The Label for Coupon Code field',
-          ],
-          'placeholder' => [
-            '#title' => 'Coupon Code placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'Placeholder label for Coupon Code field',
-          ],
-        ],
-      ],
       'captcha_help_text' => [
         'name' => 'Captcha Help Text',
         'type' => 'markup',
