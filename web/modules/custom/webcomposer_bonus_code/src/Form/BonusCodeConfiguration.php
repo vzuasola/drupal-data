@@ -155,15 +155,6 @@ class BonusCodeConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['success_messages_configuration']['valid_code'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Valid Code Error Message'),
-      '#default_value' => $this->get('valid_code') ?? 'Bonus Code is valid',
-      '#description' => $this->t('Valid Code Message to be displayed'),
-      '#maxlength' => 500,
-      '#translatable' => TRUE,
-    ];
-
     return $form;
   }
 
