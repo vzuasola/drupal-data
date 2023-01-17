@@ -365,6 +365,15 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['error_settings']['invalid_bonus_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Invalid bonus code error message'),
+      '#description' => $this->t('Message that will show if the bonus/coupon code is invalid'),
+      '#default_value' => $this->get('invalid_bonus_code'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
