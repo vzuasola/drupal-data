@@ -90,6 +90,13 @@ class MyAccountRateLimit extends FormBase {
       '#description' => $this->t('Allowed Request'),
       '#default_value' => $this->get('rate_limit_sms_operation') ?? 1,
     ];
+    $form['rate_limit_sms']['rate_limit_sms_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => t('Rate Limit Error Message'),
+      '#description' => $this->t('The message to display when the rate limit is exceeded'),
+      '#default_value' => $this->get('rate_limit_sms_error_message') ?? 'You have exceeded the maximum number of SMS requests. Please try again later.',
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionBonusCode(array &$form)
