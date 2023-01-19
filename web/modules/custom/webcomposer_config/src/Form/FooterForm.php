@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Footer configuration plugin
@@ -200,11 +201,11 @@ class FooterForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['brand_ambassador_group']['title'] = [
+    $form['brand_ambassador_group']['ambassador_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#description' => $this->t('Enter Title of Brand Ambassador Section'),
-      '#default_value' => $this->get('title'),
+      '#default_value' => $this->get('ambassador_title'),
       '#required' => true,
       '#translatable' => true,
     ];
@@ -223,15 +224,15 @@ class FooterForm extends FormBase {
       ],
     ];
 
-    $form['brand_ambassador_group']['redirection_link'] = [
+    $form['brand_ambassador_group']['ambassador_redirection_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Redirection Link'),
       '#description' => $this->t('Enter Redirection Link for Brand Ambassador Section'),
-      '#default_value' => $this->get('title'),
+      '#default_value' => $this->get('ambassador_redirection_link'),
       '#translatable' => true,
     ];
 
-    $form['brand_ambassador_group']['redirection_link_target'] = [
+    $form['brand_ambassador_group']['ambassador_link_target'] = [
       '#type' => 'select',
       '#options' => [
         '_self' => 'Same Tab',
@@ -240,7 +241,7 @@ class FooterForm extends FormBase {
       ],
       '#title' => $this->t('Redirection Link Target'),
       '#description' => $this->t('Select a Redirection link target'),
-      '#default_value' => $this->get('redirection_link_target'),
+      '#default_value' => $this->get('ambassador_link_target'),
       '#rows' => 1,
     ];
   }
