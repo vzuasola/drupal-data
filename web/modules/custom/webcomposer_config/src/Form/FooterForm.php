@@ -44,6 +44,7 @@ class FooterForm extends FormBase {
     $this->sectionBackToTop($form);
     $this->sectionResponsive($form);
     $this->sectionCookieNotification($form);
+    $this->sectionAmbassador($form);
 
     return $form;
   }
@@ -185,6 +186,62 @@ class FooterForm extends FormBase {
       '#default_value' => $defaultValue['value'],
       '#format' => $defaultValue['format'],
       '#translatable' => true,
+    ];
+  }
+
+  /**
+   * Brand Ambassadors Config
+   */
+  private function sectionAmbassador(array &$form) {
+    $form['brand_ambassador_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Brand Ambassador'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+
+    $form['brand_ambassador_group']['title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('Enter Title of Brand Ambassador Section'),
+      '#default_value' => $this->get('title'),
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
+    $form['brand_ambassador_group']['ambassador_image'] = [
+      '#name' => 'ambassador_image',
+      '#type' => 'managed_file',
+      '#title' => $this->t('Ambassador Image'),
+      '#default_value' => $this->get('ambassador_image'),
+      '#upload_location' => 'public://',
+      '#required' => true,
+      '#translatable' => true,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg svg'],
+        'file_validate_unique' => [],
+      ],
+    ];
+
+    $form['brand_ambassador_group']['redirection_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Redirection Link'),
+      '#description' => $this->t('Enter Redirection Link for Brand Ambassador Section'),
+      '#default_value' => $this->get('title'),
+      '#translatable' => true,
+    ];
+
+    $form['brand_ambassador_group']['redirection_link_target'] = [
+      '#type' => 'select',
+      '#options' => [
+        '_self' => 'Same Tab',
+        '_blank' => 'New Tab',
+        'window' => 'New Window'
+      ],
+      '#title' => $this->t('Redirection Link Target'),
+      '#description' => $this->t('Select a Redirection link target'),
+      '#default_value' => $this->get('redirection_link_target'),
+      '#rows' => 1,
     ];
   }
 }
