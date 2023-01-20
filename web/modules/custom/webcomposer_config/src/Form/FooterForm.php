@@ -4,7 +4,6 @@ namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
 /**
  * Footer configuration plugin
