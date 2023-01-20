@@ -138,7 +138,10 @@ class StandardConfigResource extends ResourceBase {
           $file_id = $data['partners_logo'][0];
           $data['partners_image_url'] = $this->getFileRelativePath($file_id);
           $file_id = $data['ambassador_image'][0];
-          $data['ambassador_image_url'] = $this->getFileRelativePath($file_id);
+          $file = File::load($file_id);
+          if ($file) {
+            $data['ambassador_image_url'] = $this->generateUrlFromFile($file);
+          }
           break;
 
         case 'webcomposer_config.page_not_found':
