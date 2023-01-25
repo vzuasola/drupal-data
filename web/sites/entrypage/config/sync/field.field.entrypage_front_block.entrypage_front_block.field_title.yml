@@ -1,4 +1,4 @@
-uuid: b95894e9-d955-44bd-8de4-7500c284efa9
+uuid: b34a2c70-c527-455d-9c8c-e19d36144144
 langcode: en
 status: true
 dependencies:
@@ -6,14 +6,12 @@ dependencies:
     - field.storage.entrypage_front_block.field_title
   module:
     - entrypage_front_blocks
-_core:
-  default_config_hash: iYbYTbh6A9QFNdmOzIDfYJEx5qTmrNp5pzA5ZPjgcPk
 id: entrypage_front_block.entrypage_front_block.field_title
 field_name: field_title
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
 label: Title
-description: 'Header title on the left side.'
+description: 'You can add title maximum of characters is 30'
 required: false
 translatable: true
 default_value: {  }
