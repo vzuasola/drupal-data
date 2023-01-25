@@ -3,8 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.entrypage_front_block.entrypage_front_block.field_body
     - field.field.entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_1
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_2
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_label_color
@@ -15,8 +16,8 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_link_target
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2
+    - field.field.entrypage_front_block.entrypage_front_block.field_published
     - field.field.entrypage_front_block.entrypage_front_block.field_short_title
-    - field.field.entrypage_front_block.entrypage_front_block.field_sub_title
     - field.field.entrypage_front_block.entrypage_front_block.field_title
     - field.field.entrypage_front_block.entrypage_front_block.field_url
   module:
@@ -33,19 +34,28 @@ targetEntityType: entrypage_front_block
 bundle: entrypage_front_block
 mode: default
 content:
-  field_body:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_enable_for_agent_players:
     weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_featured_subtitle_line_1:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_featured_subtitle_line_2:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_featured_tag:
     weight: 9
@@ -91,6 +101,16 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_published:
+    weight: 14
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_short_title:
     weight: 3
     label: above
@@ -98,16 +118,8 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_sub_title:
-    weight: 7
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_title:
-    weight: 1
+    weight: 15
     label: above
     settings:
       link_to_entity: false
