@@ -1,0 +1,9 @@
+uuid: 0fc3c5f9-08ea-4048-9550-5ff98c535858
+langcode: en
+status: true
+dependencies: {  }
+id: bd
+label: 'Bengali (Bangladesh)'
+direction: ltr
+weight: 4
+locked: false
