@@ -9,6 +9,7 @@ dependencies:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_free_play
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_external_game_id
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_code
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_code_icore
@@ -86,6 +87,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_external_game_id:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_game_category:
     weight: 1
