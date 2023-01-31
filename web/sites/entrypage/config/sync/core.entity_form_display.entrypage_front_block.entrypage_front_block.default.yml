@@ -3,8 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.entrypage_front_block.entrypage_front_block.field_body
     - field.field.entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_1
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_2
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_label_color
@@ -15,8 +16,8 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_link_target
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2
+    - field.field.entrypage_front_block.entrypage_front_block.field_published
     - field.field.entrypage_front_block.entrypage_front_block.field_short_title
-    - field.field.entrypage_front_block.entrypage_front_block.field_sub_title
     - field.field.entrypage_front_block.entrypage_front_block.field_title
     - field.field.entrypage_front_block.entrypage_front_block.field_url
     - image.style.thumbnail
@@ -36,7 +37,7 @@ third_party_settings:
         - field_link
         - field_image_target
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -50,7 +51,7 @@ third_party_settings:
         - field_url
         - field_link_target
       parent_name: ''
-      weight: 6
+      weight: 8
       format_type: tab
       format_settings:
         label: 'CTA Button Hover Settings'
@@ -63,12 +64,11 @@ third_party_settings:
     group_header_settings:
       children:
         - field_title
-        - field_sub_title
         - field_featured_tag
         - field_featured_tag_label_color
         - field_featured_tag_bg_color
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: tab
       format_settings:
         id: ''
@@ -82,7 +82,7 @@ third_party_settings:
         - field_link_text_hover_1
         - field_link_text_hover_2
       parent_name: ''
-      weight: 7
+      weight: 9
       format_type: tab
       format_settings:
         label: 'Text Hover Settings'
@@ -92,6 +92,20 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Text Hover Settings'
+    group_featured_front_block_subti:
+      children:
+        - field_featured_subtitle_line_1
+        - field_featured_subtitle_line_2
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: 'Here we can add two lines for front block subtitle 36 chars per line'
+        required_fields: true
+      label: 'Featured Front Block Subtitle'
 _core:
   default_config_hash: VDEdKx72GffaSqufsK_uq5jOErHv0k-tgOrHlio1HqU
 id: entrypage_front_block.entrypage_front_block.default
@@ -99,22 +113,30 @@ targetEntityType: entrypage_front_block
 bundle: entrypage_front_block
 mode: default
 content:
-  field_body:
-    weight: 8
-    settings:
-      rows: 1
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_enable_for_agent_players:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_featured_subtitle_line_1:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_featured_subtitle_line_2:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_featured_tag:
-    weight: 10
+    weight: 16
     settings:
       size: 60
       placeholder: ''
@@ -122,13 +144,13 @@ content:
     type: text_textfield
     region: content
   field_featured_tag_bg_color:
-    weight: 13
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_featured_tag_label_color:
-    weight: 12
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -184,16 +206,15 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_sub_title:
-    weight: 9
+  field_published:
+    weight: 1
     settings:
-      size: 60
-      placeholder: ''
+      display_label: true
     third_party_settings: {  }
-    type: string_textfield
+    type: boolean_checkbox
     region: content
   field_title:
-    weight: 8
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -210,14 +231,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60

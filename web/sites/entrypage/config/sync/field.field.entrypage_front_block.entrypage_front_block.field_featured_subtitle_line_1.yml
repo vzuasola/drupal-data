@@ -1,0 +1,20 @@
+uuid: 5200eecf-e800-4580-adc7-1b49fa80df41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_featured_subtitle_line_1
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_1
+field_name: field_featured_subtitle_line_1
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Featured Subtitle Line 1'
+description: 'Here we should add first subtitle line with maximum amount of 36 chars.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

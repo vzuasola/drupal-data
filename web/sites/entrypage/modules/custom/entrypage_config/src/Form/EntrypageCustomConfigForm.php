@@ -60,6 +60,18 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
         '#translatable' => false,
     );
 
+    $form['feature_flags_configuration'] = array(
+      '#type' => 'details',
+      '#title' => t('Feature Flags Configuration'),
+      '#group' => 'advanced',
+    );
+    $form['feature_flags_configuration']['front_blocks'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Front Blocks V2'),
+      '#default_value' => $config->get('front_blocks'),
+      '#translatable' => true,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -76,7 +88,8 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'trust_element_content',
-      'faq_url'
+      'faq_url',
+      'front_blocks'
     ];
 
     foreach ($keys as $key) {

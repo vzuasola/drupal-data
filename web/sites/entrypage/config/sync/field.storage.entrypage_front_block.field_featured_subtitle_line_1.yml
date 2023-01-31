@@ -1,0 +1,21 @@
+uuid: e29ec7c7-3aa1-498a-bfeb-ad425ec0fc51
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.field_featured_subtitle_line_1
+field_name: field_featured_subtitle_line_1
+entity_type: entrypage_front_block
+type: string
+settings:
+  max_length: 36
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

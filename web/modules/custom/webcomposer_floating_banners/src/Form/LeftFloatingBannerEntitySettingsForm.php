@@ -42,6 +42,7 @@ class LeftFloatingBannerEntitySettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'enable_per_product',
+      'banner_v2_enable',
     ];
 
     foreach ($keys as $key) {
@@ -69,6 +70,13 @@ class LeftFloatingBannerEntitySettingsForm extends ConfigFormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Per Product Configuration'),
       '#default_value' => $config->get('enable_per_product'),
+    ];
+
+    $form['LeftFloatingBannerEntity_settings']['banner_v2_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable V2'),
+      '#default_value' => $config->get('banner_v2_enable'),
+      '#translatable' => TRUE,
     ];
 
     $form['LeftFloatingBannerEntity_settings']['#markup'] = 'Settings form for Floating Banner entities. Manage field settings here.';

@@ -1,0 +1,18 @@
+uuid: 6a91e448-73ee-4540-b4e9-9b83536587cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.field_published
+field_name: field_published
+entity_type: entrypage_front_block
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
