@@ -27,7 +27,8 @@
         "squizlabs/php_codesniffer": "^2.7",
         "predis/predis": "^1.1",
         "phpoffice/phpspreadsheet": "^1.10",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "league/csv": "^9.6"
     },
     "require-dev": {
         "behat/mink": "~1.7",
