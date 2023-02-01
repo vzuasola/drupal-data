@@ -19,6 +19,8 @@ url:
     te: te
     bn: bn
     pk: pk
+    bg: bg
+    bd: bd
   domains:
     en: ''
     zh-hans: ''
@@ -34,6 +36,8 @@ url:
     ja: ''
     in: ''
     te: ''
+    bn: ''
+    pk: ''
     bn: ''
     pk: ''
 selected_langcode: site_default
