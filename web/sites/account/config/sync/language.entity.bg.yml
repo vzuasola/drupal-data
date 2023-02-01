@@ -1,0 +1,9 @@
+uuid: aacfbfca-b3bc-49e4-b4d5-bec49130137f
+langcode: bg
+status: true
+dependencies: {  }
+id: bg
+label: 'Bengali (India)'
+direction: ltr
+weight: 11
+locked: false
