@@ -28,6 +28,8 @@ url:
     bu: bu
     bn: bn
     pk: pk
+    bg: bg
+    bd: bd
   domains:
     en: ''
     eu: ''
@@ -54,6 +56,8 @@ url:
     bu: ''
     bn: ''
     pk: ''
+    bg: ''
+    bd: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

@@ -1,0 +1,15 @@
+uuid: ff3667f9-6b2d-41aa-8f5b-d41f072d2a81
+langcode: bg
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_hidden: 0
+id: bg
+label: 'Benagli (India)'
+direction: ltr
+weight: 2
+locked: false
