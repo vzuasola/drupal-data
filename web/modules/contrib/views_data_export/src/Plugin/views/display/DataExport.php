@@ -739,9 +739,9 @@ class DataExport extends RestExport {
       }
 
       try {
-        $fileSystem->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY);
+        $fileSystem->mkdir($directory, 0777, true);
         $destination = $directory . $filename;
-        $file = file_save_data('', $destination, FileSystemInterface::EXISTS_REPLACE);
+        $file = file_save_data('', $destination, FILE_EXISTS_REPLACE);
         if (!$file) {
           // Failed to create the file, abort the batch.
           unset($context['sandbox']);
