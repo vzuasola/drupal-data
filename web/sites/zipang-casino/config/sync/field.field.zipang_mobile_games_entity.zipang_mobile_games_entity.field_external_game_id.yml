@@ -1,0 +1,20 @@
+uuid: 3dc21d98-6e73-45d0-abb3-dfe2bc96a46a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_external_game_id
+  module:
+    - zipang_mobile_games
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_external_game_id
+field_name: field_external_game_id
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'External Game ID'
+description: 'External Game ID for POST Method PlayerGame'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

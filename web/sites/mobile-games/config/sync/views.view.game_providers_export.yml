@@ -438,6 +438,14 @@ display:
       redirect_to_display: none
       custom_redirect_path: false
       include_query_params: false
+      export_method: batch
+      export_batch_size: 50
+      export_limit: 0
+      pager:
+        type: some
+        options:
+          items_per_page: 0
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
