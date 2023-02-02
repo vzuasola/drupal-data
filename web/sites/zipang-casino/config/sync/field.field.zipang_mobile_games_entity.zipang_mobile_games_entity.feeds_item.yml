@@ -1,0 +1,23 @@
+uuid: db097a7d-8a45-4156-8e19-a2b837f21fac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.feeds_item
+  module:
+    - feeds
+    - zipang_mobile_games
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.feeds_item
+field_name: feeds_item
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item
