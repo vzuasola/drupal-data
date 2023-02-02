@@ -893,6 +893,7 @@ class DataExport extends RestExport {
         // Permissions for accessing this URL will be inherited from the View
         // display's configuration.
         $url = file_create_url($results['vde_file']);
+        $url = file_url_transform_relative($url);
         $message = t('Export complete. Download the file <a download href=":download_url"  data-download-enabled="false" id="vde-automatic-download">here</a>.', [':download_url' => $url]);
         // If the user specified instant download than redirect to the file.
         if ($results['automatic_download']) {
