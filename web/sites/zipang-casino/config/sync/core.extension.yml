@@ -18,6 +18,7 @@ module:
   contact: 0
   contact_storage: 0
   contact_us_config: 0
+  promotions_page_config: 0
   content_translation: 0
   contextual: 0
   csv_serialization: 0
