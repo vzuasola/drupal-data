@@ -1,0 +1,30 @@
+uuid: e7c6f9b7-e38e-4911-8ca4-bb5de7df867c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sportsbook_widget_api
+id: sportsbook_widget_api.field_sportsbook_button_target
+field_name: field_sportsbook_button_target
+entity_type: sportsbook_widget_api
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

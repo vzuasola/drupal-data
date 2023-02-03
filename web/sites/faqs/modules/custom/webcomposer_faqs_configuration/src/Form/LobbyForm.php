@@ -182,6 +182,37 @@ class LobbyForm extends FormBase {
         '#description' => $this->t('Html / Javascript code to render social media post'),
         '#translatable' => TRUE,
       ];
+
+      $form['dsb_sports_board_widget'] = [
+        '#type' => 'details',
+        '#title' => $this->t('Sports Board Widgets API'),
+        '#group' => 'advanced'
+      ];
+
+      $form['dsb_sports_board_widget']['dsb_widget_api_link'] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Api Link'),
+        '#description' => $this->t('Here we should add link that will return data from DSB'),
+        '#default_value' => $this->get('dsb_widget_api_link'),
+        '#required' => TRUE,
+        '#translatable' => TRUE
+      ];
+
+      $form['dsb_sports_board_widget']['sportsbook_dsb_preloader_content'] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Preloader Content'),
+        '#description' => $this->t('Here we can add text that will be shown to user until page loads content from DSB.'),
+        '#default_value' => $this->get('sportsbook_dsb_preloader_content'),
+        '#required' => TRUE,
+        '#translatable' => TRUE
+      ];
+
+      $form['dsb_sports_board_widget']['enable_sports_widget'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Disable Sportsbook Wodgets'),
+        '#default_value' => $this->get('enable_sports_widget'),
+        '#translatable' => TRUE,
+      ];
     }
   }
 
