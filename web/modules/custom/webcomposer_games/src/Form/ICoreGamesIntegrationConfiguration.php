@@ -312,6 +312,32 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     ];
   }
 
+   /**
+   * Adds additional form fields for Playteck tabs
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getPasFields(&$form, $key, $value) {
+    $form = [
+      '#type' => 'details',
+      '#title' => $this->t($value),
+      '#collapsible' => TRUE,
+      '#group' => 'icore_games_integration_form'
+    ];
+    
+    $form[$key . '_use_playergame_api'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use PlayerGame API'),
+      '#description' => $this->t("Use PlayerGame API on game launching for " . $value),
+      '#default_value' => $this->get($key . '_use_playergame_api'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+  }
+
+
   private function safariNotifTab(&$form) {
 
     $form['message'] = [
