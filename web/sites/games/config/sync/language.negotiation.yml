@@ -24,6 +24,8 @@ url:
     bn: bn
     pk: pk
     ja: jp
+    bg: bg
+    bd: bd
   domains:
     en: ''
     zh-hans: ''
@@ -46,6 +48,8 @@ url:
     bn: ''
     pk: ''
     ja: ''
+    bg: ''
+    bd: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
