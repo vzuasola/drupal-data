@@ -1,0 +1,22 @@
+entity.sportsbook_widget_api.settings:
+  title: Settings
+  route_name: entity.sportsbook_widget_api.settings
+  base_route: entity.sportsbook_widget_api.settings
+entity.sportsbook_widget_api.view:
+  title: View
+  route_name: entity.sportsbook_widget_api.canonical
+  base_route: entity.sportsbook_widget_api.canonical
+entity.sportsbook_widget_api.edit_form:
+  title: Edit
+  route_name: entity.sportsbook_widget_api.edit_form
+  base_route: entity.sportsbook_widget_api.canonical
+entity.sportsbook_widget_api.delete_form:
+  title: Delete
+  route_name: entity.sportsbook_widget_api.delete_form
+  base_route: entity.sportsbook_widget_api.canonical
+  weight: 10
+entity.sportsbook_widget_api.collection:
+  title: Sportsbook Widget API
+  route_name: entity.sportsbook_widget_api.collection
+  base_route: entity.sportsbook_widget_api.settings
+  weight: 10

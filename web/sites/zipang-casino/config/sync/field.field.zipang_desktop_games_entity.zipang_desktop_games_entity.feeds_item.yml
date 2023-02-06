@@ -1,0 +1,23 @@
+uuid: 206eb035-c9f1-4d7d-a96c-46555ec9a4dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_games_entity.feeds_item
+  module:
+    - feeds
+    - zipang_desktop_games
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.feeds_item
+field_name: feeds_item
+entity_type: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

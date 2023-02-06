@@ -1,0 +1,6 @@
+name: Sportsbook Widget API
+type: module
+description: 'Provides sportsbook widget api entity.'
+package: Web Composer
+core: 8.x
+configure: entity.sportsbook_widget_api.settings

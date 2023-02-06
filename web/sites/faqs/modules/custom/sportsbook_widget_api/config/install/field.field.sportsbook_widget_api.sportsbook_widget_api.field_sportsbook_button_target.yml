@@ -1,0 +1,21 @@
+uuid: a5374c59-2a73-4ffe-b87b-6565f21eae62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sportsbook_widget_api.field_sportsbook_button_target
+  module:
+    - options
+    - sportsbook_widget_api
+id: sportsbook_widget_api.sportsbook_widget_api.field_sportsbook_button_target
+field_name: field_sportsbook_button_target
+entity_type: sportsbook_widget_api
+bundle: sportsbook_widget_api
+label: 'Sportsbook Button Target'
+description: 'Chose where will user go after click on button'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: c334881e-9859-4736-b440-15b17169ca47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sportsbook_widget_api.field_sportsbook_button_link
+  module:
+    - link
+    - sportsbook_widget_api
+id: sportsbook_widget_api.sportsbook_widget_api.field_sportsbook_button_link
+field_name: field_sportsbook_button_link
+entity_type: sportsbook_widget_api
+bundle: sportsbook_widget_api
+label: 'Sportsbook Button Link'
+description: 'Here we can enter a link that will lead the user to a specific destination'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

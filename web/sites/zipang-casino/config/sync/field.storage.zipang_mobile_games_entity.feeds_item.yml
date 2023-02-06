@@ -1,0 +1,20 @@
+uuid: c2c99b6d-84c9-4732-85c8-f0ed0e03f401
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+    - zipang_mobile_games
+id: zipang_mobile_games_entity.feeds_item
+field_name: feeds_item
+entity_type: zipang_mobile_games_entity
+type: feeds_item
+settings:
+  target_type: feeds_feed
+module: feeds
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
