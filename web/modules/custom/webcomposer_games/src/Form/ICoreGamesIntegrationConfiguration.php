@@ -56,6 +56,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'jsystem' => 'JSystem',
     'fghub_gaming' => 'FGHub Gaming',
     'ptplus' => 'PTPlus Playtech',
+    'pas' => 'Playtech',
   ];
 
   protected function getEditableConfigNames() {
