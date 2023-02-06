@@ -207,6 +207,15 @@ class LobbyForm extends FormBase {
         '#translatable' => TRUE
       ];
 
+      $form['dsb_sports_board_widget']['sportsbook_dsb_error_content'] = [
+        '#type' => 'textarea',
+        '#title' => $this->t('Preloader Content'),
+        '#description' => $this->t('Here we can add text that will be shown to user if page will not load content from DSB.'),
+        '#default_value' => $this->get('sportsbook_dsb_error_content'),
+        '#required' => TRUE,
+        '#translatable' => TRUE
+      ];
+
       $form['dsb_sports_board_widget']['enable_sports_widget'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Disable Sportsbook Wodgets'),
