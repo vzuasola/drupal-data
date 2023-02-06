@@ -73,7 +73,12 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     ];
 
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
-      $this->getBaseFieldsTab($form[$key], $key, $value);
+      if ('pas' === $key) {
+        $this->getPasFields($form[$key], $key, $value);
+      } else {
+        $this->getBaseFieldsTab($form[$key], $key, $value);
+      }
+
 
       switch ($key) {
         case 'gameworx_lottery':
@@ -100,6 +105,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
         case 'lottoland':
             $this->getLottolandFields($form[$key], $key, $value);
             break;
+
+        case 'pas':
+          $this->getPasFields($form[$key], $key, $value);
+          break;
 
         default:
           break;
