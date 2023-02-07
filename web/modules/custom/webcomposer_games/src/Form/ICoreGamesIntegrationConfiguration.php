@@ -56,6 +56,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'jsystem' => 'JSystem',
     'fghub_gaming' => 'FGHub Gaming',
     'ptplus' => 'PTPlus Playtech',
+    'pas' => 'Playtech',
   ];
 
   protected function getEditableConfigNames() {
@@ -72,7 +73,12 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     ];
 
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
-      $this->getBaseFieldsTab($form[$key], $key, $value);
+      if ('pas' === $key) {
+        $this->getPasFields($form[$key], $key, $value);
+      } else {
+        $this->getBaseFieldsTab($form[$key], $key, $value);
+      }
+
 
       switch ($key) {
         case 'gameworx_lottery':
@@ -99,6 +105,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
         case 'lottoland':
             $this->getLottolandFields($form[$key], $key, $value);
             break;
+
+        case 'pas':
+          $this->getPasFields($form[$key], $key, $value);
+          break;
 
         default:
           break;
@@ -301,6 +311,32 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#required' => false,
     ];
   }
+
+   /**
+   * Adds additional form fields for Playteck tabs
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getPasFields(&$form, $key, $value) {
+    $form = [
+      '#type' => 'details',
+      '#title' => $this->t($value),
+      '#collapsible' => TRUE,
+      '#group' => 'icore_games_integration_form'
+    ];
+    
+    $form[$key . '_use_playergame_api'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use PlayerGame API'),
+      '#description' => $this->t("Use PlayerGame API on game launching for " . $value),
+      '#default_value' => $this->get($key . '_use_playergame_api'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+  }
+
 
   private function safariNotifTab(&$form) {
 
