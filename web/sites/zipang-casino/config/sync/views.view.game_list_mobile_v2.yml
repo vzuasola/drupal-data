@@ -9,6 +9,7 @@ dependencies:
     - field.storage.zipang_mobile_games_entity.field_client_type
     - field.storage.zipang_mobile_games_entity.field_enable_free_play
     - field.storage.zipang_mobile_games_entity.field_enable_game
+    - field.storage.zipang_mobile_games_entity.field_external_game_id
     - field.storage.zipang_mobile_games_entity.field_game_category
     - field.storage.zipang_mobile_games_entity.field_game_code
     - field.storage.zipang_mobile_games_entity.field_game_code_icore
@@ -1319,6 +1320,9 @@ display:
             field_game_code_icore_export:
               alias: game_code_icore
               raw_output: false
+            field_external_game_id_export:
+              alias: external_game_id
+              raw_output: false
             field_game_provider_export:
               alias: game_provider
               raw_output: false
@@ -1812,6 +1816,67 @@ display:
           id: field_game_code_icore_export
           table: zipang_mobile_games_entity__field_game_code_icore
           field: field_game_code_icore_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_external_game_id_export:
+          id: field_external_game_id_export
+          table: zipang_mobile_games_entity__field_external_game_id
+          field: field_external_game_id_export
           relationship: none
           group_type: group
           admin_label: ''
@@ -2994,6 +3059,7 @@ display:
         - 'config:field.storage.zipang_mobile_games_entity.field_client_type'
         - 'config:field.storage.zipang_mobile_games_entity.field_enable_free_play'
         - 'config:field.storage.zipang_mobile_games_entity.field_enable_game'
+        - 'config:field.storage.zipang_mobile_games_entity.field_external_game_id'
         - 'config:field.storage.zipang_mobile_games_entity.field_game_category'
         - 'config:field.storage.zipang_mobile_games_entity.field_game_code'
         - 'config:field.storage.zipang_mobile_games_entity.field_game_code_icore'
