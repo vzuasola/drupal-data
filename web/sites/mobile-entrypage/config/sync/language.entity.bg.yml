@@ -1,0 +1,16 @@
+uuid: 9e07a383-ce98-48d2-b27d-c1d0a1d4a1e6
+langcode: bg
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'Bengali (India)'
+    webcomposer_language_hidden: 0
+id: bg
+label: 'Indian Bengali'
+direction: ltr
+weight: 13
+locked: false
