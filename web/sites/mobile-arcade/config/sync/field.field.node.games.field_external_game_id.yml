@@ -1,0 +1,19 @@
+uuid: 36d0ffc4-20a5-43fa-81bb-9e9131e4e3e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_game_id
+    - node.type.games
+id: node.games.field_external_game_id
+field_name: field_external_game_id
+entity_type: node
+bundle: games
+label: 'External Game ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
