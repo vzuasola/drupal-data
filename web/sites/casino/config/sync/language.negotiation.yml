@@ -23,6 +23,7 @@ url:
     lo: lo
     km: km
     ja: jp
+    bg: bg
   domains:
     en: ''
     zh-hans: ''
@@ -40,6 +41,7 @@ url:
     lo: ''
     km: ''
     ja: ''
+    bg: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
