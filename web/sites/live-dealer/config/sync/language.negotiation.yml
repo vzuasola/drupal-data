@@ -20,6 +20,8 @@ url:
     ja: jp
     es: es
     pt-br: pt
+    bg: bg
+    bd: bd
   domains:
     en: ''
     zh-hans: ''
@@ -38,6 +40,8 @@ url:
     ja: ''
     es: ''
     pt-br: ''
+    bg: ''
+    bd: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
