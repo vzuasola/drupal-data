@@ -22,6 +22,8 @@ url:
     km: km
     pk: pk
     bn: bn
+    bg: bg
+    bd: bd
   domains:
     en: ''
     zh-hans: ''
@@ -42,6 +44,8 @@ url:
     km: ''
     pk: ''
     bn: ''
+    bg: ''
+    bd: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
