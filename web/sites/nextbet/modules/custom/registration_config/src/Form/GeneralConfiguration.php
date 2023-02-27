@@ -122,6 +122,13 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('If this is checked, this will include custom headers to be passed on REG API'),
       '#default_value' => $this->get('enable_reg_relic_custom_headers'),
     ];
+
+    $form['general']['enable_xhtcmd_redirect'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Download Casino Client Redirection'),
+      '#description' => $this->t('If this is checked, user will redirected to xhtcmd login and skip success page'),
+      '#default_value' => $this->get('enable_xhtcmd_redirect'),
+    ];
   }
 
   /**
