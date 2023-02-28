@@ -22,6 +22,8 @@ permissions:
   - 'access language te'
   - 'access language th'
   - 'access language vi'
+  - 'access language bd'
+  - 'access language bg'
   - 'access language zh-hans'
   - 'access site-wide contact form'
   - 'administer rest resources'

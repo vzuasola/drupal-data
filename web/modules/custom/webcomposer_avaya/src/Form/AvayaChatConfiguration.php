@@ -103,6 +103,17 @@ class AvayaChatConfiguration extends FormBase {
       '#default_value' => $this->get('xdomain_proxy'),
     ];
 
+    $form['field_configuration']['web_rtc_url'] = [
+      '#rows' => 1,
+      '#type' => 'textarea',
+      '#title' => $this->t('Webrtc Url'),
+      '#description' => $this->t(
+        'The protocol and domain of the Webrtc Url ' .
+        ' (eg. www.cs-livechat.com/ccaas/v1/call)'
+      ),
+      '#default_value' => $this->get('web_rtc_url'),
+    ];
+
     $form['header_configuration']['livechat_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Live Chat Text'),
