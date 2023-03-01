@@ -1,8 +1,8 @@
 <?php
 namespace Drupal\webcomposer_faqs_configuration\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 
 /**
  * Faqs Lobby form plugin
@@ -209,17 +209,70 @@ class LobbyForm extends FormBase {
 
       $form['dsb_sports_board_widget']['sportsbook_dsb_error_content'] = [
         '#type' => 'textarea',
-        '#title' => $this->t('Preloader Content'),
+        '#title' => $this->t('Preloader Error Content'),
         '#description' => $this->t('Here we can add text that will be shown to user if page will not load content from DSB.'),
         '#default_value' => $this->get('sportsbook_dsb_error_content'),
         '#required' => TRUE,
         '#translatable' => TRUE
       ];
 
-      $form['dsb_sports_board_widget']['enable_sports_widget'] = [
+      $form['dsb_sports_board_widget']['dsb_sportsboard_button'] = [
+        '#type' => 'details',
+        '#title' => $this->t('Sportsbook Widget Button Settings'),
+        '#collapsible' => TRUE,
+        '#open' => TRUE,
+      ];
+
+      $form['dsb_sports_board_widget']['dsb_sportsboard_button']['select_dsb_button_title'] = [
+        '#title' => $this->t('Enter title for DSB Sportsbook Button'),
+        '#description' => $this->t('Enter value for button title that user will see when he visits page.'),
+        '#type' => 'textfield',
+        '#default_value' => $this->get('select_dsb_button_title'),
+        '#translatable' => TRUE,
+        '#required' => TRUE,
+      ];
+
+      $form['dsb_sports_board_widget']['dsb_sportsboard_button']['select_dsb_button_link'] = [
+        '#title' => $this->t('Enter link for DSB button'),
+        '#description' => $this->t('Enter link for button that will bring user to specific page when he click on button.'),
+        '#type' => 'textfield',
+        '#default_value' => $this->get('select_dsb_button_link'),
+        '#translatable' => TRUE,
+        '#required' => TRUE,
+      ];
+
+      $form['dsb_sports_board_widget']['dsb_sportsboard_button']['select_dsb_button_target'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Select target'),
+        '#options' => [
+          '_none' => $this->t('- None -'),
+          '_top' => $this->t('Same Window'),
+          '_blank' => $this->t('New Tab'),
+          'window' => $this->t('New Window'),
+        ],
+        '#default_value' => $this->get('select_dsb_button_target'),
+        '#description' => $this->t('Select target of button where user will go after click(New tab, New Window, Same window.).'),
+        '#translatable' => TRUE,
+      ];
+
+      $form['dsb_sports_board_widget']['sportsbook_widget'] = [
+        '#type' => 'details',
+        '#title' => $this->t('Sportsbook Widget - (✓)hide | (✕)show'),
+        '#collapsible' => TRUE,
+        '#open' => TRUE,
+      ];
+
+      $form['dsb_sports_board_widget']['sportsbook_widget']['disable_sports_widget_homepage'] = [
         '#type' => 'checkbox',
-        '#title' => $this->t('Disable Sportsbook Wodgets'),
-        '#default_value' => $this->get('enable_sports_widget'),
+        '#title' => $this->t('Disable Sportsbook Widgets Homepage'),
+        '#default_value' => $this->get('disable_sports_widget_homepage'),
+        '#translatable' => TRUE,
+      ];
+
+      $form['dsb_sports_board_widget']['sportsbook_widget']['disable_sports_widget_innerpage'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Disable Sportsbook Widgets Innerpage'),
+        '#default_value' => $this->get('disable_sports_widget_innerpage'),
         '#translatable' => TRUE,
       ];
     }
