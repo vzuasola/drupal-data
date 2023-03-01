@@ -1,0 +1,20 @@
+uuid: 58d1d2a1-e7ca-4e47-ac66-f5f537bc6fe6
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.lucky_baby_desktop_games_entity.field_external_game_id
+  module:
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_external_game_id
+field_name: field_external_game_id
+entity_type: lucky_baby_desktop_games_entity
+bundle: lucky_baby_desktop_games_entity
+label: 'External Game ID'
+description: 'External Game ID for POST Method PlayerGame'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
