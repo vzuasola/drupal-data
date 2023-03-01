@@ -1,0 +1,54 @@
+uuid: 3856b9a3-d46a-4285-977e-974fda08989b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_external_game_id
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code
+  module:
+    - lucky_baby_mobile_games
+label: 'Mobile Games Import'
+id: mobile_games_import
+description: 'Import List of Mobile Games'
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:lucky_baby_mobile_games_entity'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values: {  }
+custom_sources:
+  game_code:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code
+  external_game_id:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id
+mappings:
+  -
+    target: field_game_code
+    map:
+      value: game_code
+    unique:
+      value: '1'
+  -
+    target: field_external_game_id
+    map:
+      value: external_game_id
+    unique:
+      value: '1'
