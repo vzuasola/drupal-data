@@ -11,6 +11,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_external_game_id
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_platform
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_games_subprovider
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
@@ -49,7 +50,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: tab
       format_settings:
         label: 'Scheduler Settings'
@@ -68,7 +69,7 @@ third_party_settings:
         - field_banner_blurb
         - field_content_position
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: fieldset
       format_settings:
         label: 'Pre Banner Fields'
@@ -88,7 +89,7 @@ third_party_settings:
         - field_currency
         - field_user_availability
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: fieldset
       format_settings:
         label: 'Post Banner Fields'
@@ -103,7 +104,7 @@ third_party_settings:
         - field_disable_in_tablet
         - field_preview_display_only
       parent_name: ''
-      weight: 20
+      weight: 7
       format_type: fieldset
       format_settings:
         label: 'Additional Statuses'
@@ -118,7 +119,7 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_product_label
       parent_name: ''
-      weight: 20
+      weight: 8
       format_type: fieldset
       format_settings:
         label: 'Product Ribbon'
@@ -301,6 +302,14 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_external_game_id:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_launching:
     weight: 3
     settings: {  }
@@ -308,13 +317,13 @@ content:
     type: options_select
     region: content
   field_game_platform:
-    weight: 30
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_games_subprovider:
-    weight: 28
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -524,7 +533,7 @@ content:
     type: text_textfield
     region: content
   field_slider_game_code:
-    weight: 26
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -532,13 +541,13 @@ content:
     type: string_textfield
     region: content
   field_slider_game_provider:
-    weight: 27
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slider_use_game_loader:
-    weight: 29
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
@@ -578,7 +587,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
