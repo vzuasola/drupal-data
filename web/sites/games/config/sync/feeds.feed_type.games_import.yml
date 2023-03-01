@@ -1,0 +1,80 @@
+uuid: 9fd4accb-b820-49a1-9dd6-3a8ea161253e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games_2_0.field_external_game_id
+    - field.field.node.games_2_0.field_v2_game_code
+    - node.type.games_2_0
+  module:
+    - node
+label: 'Games Import'
+id: games_import
+description: 'Import Game External ID for Games'
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: games_2_0
+custom_sources:
+  csv_games_game_title:
+    label: 'Game Title'
+    value: 'Game Title'
+    machine_name: csv_games_game_title
+  csv_games_game_code:
+    label: 'Game Code (refer to iCore game detail)'
+    value: 'Game Code (refer to iCore game detail)'
+    machine_name: csv_games_game_code
+  csv_import_games_game_title:
+    label: 'Game Title'
+    value: 'Game Title'
+    machine_name: csv_import_games_game_title
+  csv_import_games_game_code:
+    label: 'Game Code (refer to iCore game detail)'
+    value: 'Game Code (refer to iCore game detail)'
+    machine_name: csv_import_games_game_code
+  csv_import_games_external_game_id:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: csv_import_games_external_game_id
+  game_title:
+    label: 'Game Title'
+    value: 'Game Title'
+    machine_name: game_title
+  csv_games_import_games_title:
+    label: 'Game Title'
+    value: 'Game Title'
+    machine_name: csv_games_import_games_title
+mappings:
+  -
+    target: field_v2_game_code
+    map:
+      value: csv_import_games_game_code
+    unique:
+      value: '1'
+  -
+    target: field_external_game_id
+    map:
+      value: csv_import_games_external_game_id
+    unique:
+      value: '1'
+  -
+    target: field_v2_game_title
+    map:
+      value: csv_games_import_games_title
