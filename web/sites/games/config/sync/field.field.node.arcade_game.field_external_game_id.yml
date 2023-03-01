@@ -1,0 +1,19 @@
+uuid: 1070708c-d9d9-41ad-855d-4c6ab0c6c507
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_game_id
+    - node.type.arcade_game
+id: node.arcade_game.field_external_game_id
+field_name: field_external_game_id
+entity_type: node
+bundle: arcade_game
+label: 'External Game ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
