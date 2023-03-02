@@ -1,0 +1,23 @@
+uuid: 8da7b70f-289a-480f-8c10-b077fe5c68a1
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.lucky_baby_desktop_games_entity.feeds_item
+  module:
+    - feeds
+    - lucky_baby_desktop_games
+id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.feeds_item
+field_name: feeds_item
+entity_type: lucky_baby_desktop_games_entity
+bundle: lucky_baby_desktop_games_entity
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item
