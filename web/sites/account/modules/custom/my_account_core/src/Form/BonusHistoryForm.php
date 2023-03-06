@@ -132,48 +132,6 @@ class BonusHistoryForm extends FormBase
       '#required' => true,
     ];
 
-    return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   *
-   * @param array              $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
-    parent::validateForm($form, $form_state);
-  }
-
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array              $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state)
-  {
-    $keys = [
-      'page_title',
-      'datetime_format',
-      'no_result',
-      'service_unavailable',
-      'zero_display',
-      'items_to_display',
-      'next_label',
-      'prev_label',
-      'sportsbook_expirydate_display',
-    ];
-    foreach ($keys as $key) {
-        $this->config('my_account_core.bonus_history')
-            ->set($key, $form_state->getValue($key))
-            ->save();
-    }
-    parent::submitForm($form, $form_state);
+    return $form;
   }
 }
