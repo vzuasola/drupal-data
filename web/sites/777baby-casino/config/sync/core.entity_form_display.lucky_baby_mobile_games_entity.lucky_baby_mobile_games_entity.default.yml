@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.feeds_item
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_all_games_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_arcade_game_filter
@@ -129,13 +130,13 @@ content:
     type: boolean_checkbox
     region: content
   field_external_game_id:
+    type: string_textfield
     weight: 6
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_game_category:
     weight: 13
     settings: {  }
@@ -302,5 +303,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  feeds_item: true
   name: true
   user_id: true
