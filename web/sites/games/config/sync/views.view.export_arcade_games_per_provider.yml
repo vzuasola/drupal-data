@@ -1,0 +1,605 @@
+uuid: 0c0fd5b7-e7e0-4299-891d-858a0a0cafcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_arc_game_code
+    - field.storage.node.field_arc_game_title
+    - field.storage.node.field_external_game_id
+    - node.type.arcade_game
+    - system.menu.admin
+    - taxonomy.vocabulary.game_provider
+  content:
+    - 'taxonomy_term:game_provider:1333b065-24db-4f97-ab7e-9220c796fb8c'
+    - 'taxonomy_term:game_provider:54244728-5a30-489b-a071-32e10ac84460'
+    - 'taxonomy_term:game_provider:662afb52-57b3-4b70-8e74-41ec85989a45'
+    - 'taxonomy_term:game_provider:7d33ed8d-a2c4-47a8-988a-44da701e4032'
+    - 'taxonomy_term:game_provider:80a39610-f031-4b60-a923-37cc03e566a1'
+    - 'taxonomy_term:game_provider:884d3b7f-5632-4c2d-b844-4d7c14af8eff'
+    - 'taxonomy_term:game_provider:8bdb330d-2820-4979-9e82-30069a5143d2'
+    - 'taxonomy_term:game_provider:9189a140-496b-43ba-8fcf-01896bbf8857'
+    - 'taxonomy_term:game_provider:949fe5f9-00ce-404e-874f-247ad250298d'
+    - 'taxonomy_term:game_provider:9e6e4ad3-f662-4bd1-81d8-dc5416703844'
+    - 'taxonomy_term:game_provider:a6ae3d05-4a17-40e5-a414-48dc55ce6ae6'
+    - 'taxonomy_term:game_provider:a810ed5a-7da3-4cd6-8abf-fe1975554842'
+    - 'taxonomy_term:game_provider:a93346c4-e026-4d0f-a2a9-76b438af3be8'
+    - 'taxonomy_term:game_provider:b8daa688-abe7-4a36-a14d-022ca759fb41'
+    - 'taxonomy_term:game_provider:bbb3a374-3165-4add-bf35-190641505f23'
+    - 'taxonomy_term:game_provider:cc311b8c-d8d3-4378-89e7-0ccd62f26931'
+    - 'taxonomy_term:game_provider:d0895044-3990-40d9-bebb-58e48f604584'
+    - 'taxonomy_term:game_provider:d6400979-ce94-4415-bd74-3bb8c02f323a'
+    - 'taxonomy_term:game_provider:e007d342-83a5-4cb2-a556-df77a733f6b9'
+    - 'taxonomy_term:game_provider:e53f0bf6-b7f3-4a35-a321-4955a145887d'
+    - 'taxonomy_term:game_provider:f31dca47-59a6-4025-88b9-ec02e6fe59ba'
+    - 'taxonomy_term:game_provider:f4ff8da7-b923-4893-8c8e-6d810e5f8165'
+    - 'taxonomy_term:game_provider:fabf72ff-3d2c-47a8-b724-7d9c208419c8'
+  module:
+    - csv_serialization
+    - node
+    - rest
+    - serialization
+    - taxonomy
+    - user
+    - views_data_export
+id: export_arcade_games_per_provider
+label: 'Export Arcade Games Per Provider'
+module: views
+description: 'Export list of Games per Provider for Games Product'
+tag: ''
+base_table: node_field_data
+base_field: nid
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: full
+        options:
+          items_per_page: 50
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            title: title
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      fields:
+        field_arc_game_title:
+          id: field_arc_game_title
+          table: node__field_arc_game_title
+          field: field_arc_game_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Title'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_arc_game_code:
+          id: field_arc_game_code
+          table: node__field_arc_game_code
+          field: field_arc_game_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Code (refer to iCore game detail)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_external_game_id:
+          id: field_external_game_id
+          table: node__field_external_game_id
+          field: field_external_game_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'External Game ID'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            arcade_game: arcade_game
+          group: 1
+          exposed: false
+          expose:
+            operator_id: type_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+              subadmin: '0'
+              site_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_arc_game_provider_target_id:
+          id: field_arc_game_provider_target_id
+          table: node__field_arc_game_provider
+          field: field_arc_game_provider_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            462: 462
+            2907: 2907
+            2744: 2744
+            2866: 2866
+            2895: 2895
+            2912: 2912
+            2741: 2741
+            2910: 2910
+            2727: 2727
+            2733: 2733
+            1255: 1255
+            2498: 2498
+            1485: 1485
+            2740: 2740
+            2739: 2739
+            463: 463
+            475: 475
+            464: 464
+            465: 465
+            885: 885
+            2513: 2513
+            886: 886
+            2512: 2512
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_arc_game_provider_target_id_op
+            label: 'Game Provider (field_arc_game_provider)'
+            description: ''
+            use_operator: false
+            operator: field_arc_game_provider_target_id_op
+            identifier: field_arc_game_provider_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+              subadmin: '0'
+              site_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: game_provider
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Export Arcade Games Per Provider'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_arc_game_code'
+        - 'config:field.storage.node.field_arc_game_title'
+        - 'config:field.storage.node.field_external_game_id'
+  data_export_1:
+    display_plugin: data_export
+    id: data_export_1
+    display_title: 'Data export'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      path: arcade-export
+      filename: 'mobile-arcade-[date:html_date].csv'
+      automatic_download: true
+      store_in_public_file_directory: null
+      redirect_to_display: none
+      custom_redirect_path: false
+      include_query_params: false
+      export_method: batch
+      export_batch_size: 50
+      displays:
+        page_1: page_1
+        default: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_arc_game_code'
+        - 'config:field.storage.node.field_arc_game_title'
+        - 'config:field.storage.node.field_external_game_id'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Games Arcade Provider Export'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: export-arcade-per-provider
+      display_description: 'Export List of arcade games per Provider'
+      menu:
+        type: normal
+        title: 'Export Arcade Games'
+        description: ''
+        expanded: false
+        parent: system.admin_config_content
+        weight: 0
+        context: '0'
+        menu_name: admin
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_arc_game_code'
+        - 'config:field.storage.node.field_arc_game_title'
+        - 'config:field.storage.node.field_external_game_id'
