@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.games_slots.field_all_games_category_ribbon
     - field.field.node.games_slots.field_disable_game_loader
+    - field.field.node.games_slots.field_external_game_id
     - field.field.node.games_slots.field_game_code
     - field.field.node.games_slots.field_game_filter
     - field.field.node.games_slots.field_game_platform
@@ -31,7 +32,7 @@ third_party_settings:
       children:
         - field_game_filter
       parent_name: ''
-      weight: 24
+      weight: 25
       format_type: tab
       format_settings:
         label: 'Game Filters'
@@ -48,23 +49,31 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_all_games_category_ribbon:
     type: options_select
-    weight: 21
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_disable_game_loader:
     type: boolean_checkbox
-    weight: 26
+    weight: 27
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  field_external_game_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_code:
     weight: 1
     settings:
@@ -81,31 +90,31 @@ content:
     third_party_settings: {  }
   field_game_platform:
     type: options_select
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_game_provider:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_ribbon:
     type: options_select
-    weight: 20
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
   field_games_list_category:
     type: options_buttons
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   field_games_list_thumb_img_big:
     type: image_image
-    weight: 19
+    weight: 20
     region: content
     settings:
       progress_indicator: throbber
@@ -113,7 +122,7 @@ content:
     third_party_settings: {  }
   field_games_list_thumb_img_small:
     type: image_image
-    weight: 18
+    weight: 19
     region: content
     settings:
       progress_indicator: throbber
@@ -121,25 +130,25 @@ content:
     third_party_settings: {  }
   field_games_list_thumbnail_size:
     type: options_select
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_games_subprovider:
     type: options_select
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_games_target:
     type: options_select
-    weight: 23
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   field_keywords:
     type: string_textarea
-    weight: 22
+    weight: 23
     region: content
     settings:
       rows: 5
@@ -147,52 +156,52 @@ content:
     third_party_settings: {  }
   field_preview_mode:
     type: boolean_checkbox
-    weight: 25
+    weight: 26
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 5
+    weight: 6
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -206,13 +215,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -221,7 +230,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
