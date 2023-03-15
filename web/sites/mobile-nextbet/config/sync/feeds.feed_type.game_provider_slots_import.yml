@@ -53,6 +53,10 @@ custom_sources:
     label: title
     value: title
     machine_name: title
+  title_slots:
+    label: title
+    value: title
+    machine_name: title_slots
 mappings:
   -
     target: field_game_code
@@ -69,6 +73,6 @@ mappings:
   -
     target: title
     map:
-      value: title
+      value: title_slots
     unique:
       value: '1'

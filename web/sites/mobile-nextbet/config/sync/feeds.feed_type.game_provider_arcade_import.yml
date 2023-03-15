@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games_arcade.field_external_game_id
     - field.field.node.games_arcade.field_game_code
     - node.type.games_arcade
   module:
@@ -44,6 +45,18 @@ custom_sources:
     label: title
     value: title
     machine_name: title
+  external_game_id:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id
+  external_game_id_slots:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id_slots
+  title_arcade:
+    label: title
+    value: title
+    machine_name: title_arcade
 mappings:
   -
     target: field_game_code
@@ -52,8 +65,14 @@ mappings:
     unique:
       value: '1'
   -
+    target: field_external_game_id
+    map:
+      value: external_game_id_slots
+    unique:
+      value: '1'
+  -
     target: title
     map:
-      value: title
+      value: title_arcade
     unique:
       value: '1'
