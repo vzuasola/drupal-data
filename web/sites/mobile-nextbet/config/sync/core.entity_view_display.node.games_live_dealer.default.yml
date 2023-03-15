@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games_live_dealer.field_external_game_id
     - field.field.node.games_live_dealer.field_game_code_live_dealer
     - field.field.node.games_live_dealer.field_game_platform_live_dealer
     - field.field.node.games_live_dealer.field_game_provider_live_dealer
@@ -24,6 +25,14 @@ targetEntityType: node
 bundle: games_live_dealer
 mode: default
 content:
+  field_external_game_id:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_game_code_live_dealer:
     weight: 102
     label: above
