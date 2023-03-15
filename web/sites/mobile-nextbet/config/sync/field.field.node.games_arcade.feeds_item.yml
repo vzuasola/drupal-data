@@ -1,0 +1,23 @@
+uuid: cd041487-9a1d-46b9-916b-2479b771b36e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.games_arcade
+  module:
+    - feeds
+id: node.games_arcade.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: games_arcade
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

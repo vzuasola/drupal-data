@@ -1,0 +1,23 @@
+uuid: 23d5ecaf-3b32-437a-b8b0-8d267a682d68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.games_slots
+  module:
+    - feeds
+id: node.games_slots.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: games_slots
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item
