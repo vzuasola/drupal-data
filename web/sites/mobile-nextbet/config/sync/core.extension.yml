@@ -56,6 +56,7 @@ module:
   mobile_infobar: 0
   mobile_live_dealer: 0
   mobile_nextbet: 0
+  mobile_nextbet_logo_upload: 0
   mobile_product_menu: 0
   mobile_promotions: 0
   mobile_slots: 0
