@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.game.field_all_category_ribbon_config
+    - field.field.node.game.field_external_game_id
     - field.field.node.game.field_game_categories
     - field.field.node.game.field_game_code
     - field.field.node.game.field_game_filters
@@ -135,6 +136,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_external_game_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_categories:
     weight: 6
     settings: {  }
@@ -225,7 +234,7 @@ content:
     type: options_select
     region: content
   field_game_thumbnail:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -233,7 +242,7 @@ content:
     type: image_image
     region: content
   field_game_title:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
