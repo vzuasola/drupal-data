@@ -1,0 +1,78 @@
+uuid: 3fbbe867-d623-40c2-88a6-c670ed5197f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games_arcade.field_external_game_id
+    - field.field.node.games_arcade.field_game_code
+    - node.type.games_arcade
+  module:
+    - node
+label: 'Game Provider Arcade Import'
+id: game_provider_arcade_import
+description: 'Import Game External ID Arcade'
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: games_arcade
+custom_sources:
+  game_code:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code
+  game_code_arcade:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code_arcade
+  title:
+    label: title
+    value: title
+    machine_name: title
+  external_game_id:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id
+  external_game_id_slots:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id_slots
+  title_arcade:
+    label: title
+    value: title
+    machine_name: title_arcade
+mappings:
+  -
+    target: field_game_code
+    map:
+      value: game_code_arcade
+    unique:
+      value: '1'
+  -
+    target: field_external_game_id
+    map:
+      value: external_game_id_slots
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title_arcade
+    unique:
+      value: '1'

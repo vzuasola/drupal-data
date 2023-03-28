@@ -1,0 +1,19 @@
+uuid: df451570-cf98-4649-adf5-409b69e22a5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_game_id
+    - node.type.games_live_dealer
+id: node.games_live_dealer.field_external_game_id
+field_name: field_external_game_id
+entity_type: node
+bundle: games_live_dealer
+label: 'External Game ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

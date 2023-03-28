@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.games_arcade.body
+    - field.field.node.games_arcade.feeds_item
     - field.field.node.games_arcade.field_all_games_category_ribbon
     - field.field.node.games_arcade.field_disable_game_loader
+    - field.field.node.games_arcade.field_external_game_id
     - field.field.node.games_arcade.field_game_code
     - field.field.node.games_arcade.field_game_filter
     - field.field.node.games_arcade.field_game_provider_arcade
@@ -100,6 +102,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_external_game_id:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_game_code:
     weight: 2
@@ -243,3 +253,4 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  feeds_item: true
