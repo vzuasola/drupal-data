@@ -1,0 +1,90 @@
+uuid: 8b9ed22e-9f32-4639-9be7-0f858425ce18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.game.field_external_game_id
+    - field.field.node.game.field_game_code
+    - node.type.game
+  module:
+    - node
+label: 'Game Provider Slots Import'
+id: game_provider_slots_import
+description: 'Import Game External ID Slots'
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: game
+custom_sources:
+  game_code_slots:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code_slots
+  external_game_id_slots:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id_slots
+  game_code_slots_mapping:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code_slots_mapping
+  external_game_id_slots_mapping:
+    label: 'External Game ID'
+    value: 'External Game ID'
+    machine_name: external_game_id_slots_mapping
+  title_slots:
+    label: Title
+    value: Title
+    machine_name: title_slots
+  game_code_refer_to_icore_game_detail_:
+    label: 'Game Code (refer to iCore game detail)'
+    value: 'Game Code (refer to iCore game detail)'
+    machine_name: game_code_refer_to_icore_game_detail_
+  game_provider:
+    label: 'Game Provider'
+    value: 'Game Provider'
+    machine_name: game_provider
+  game_provider_slots:
+    label: 'Game Provider'
+    value: 'Game Provider'
+    machine_name: game_provider_slots
+  game_code:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code
+mappings:
+  -
+    target: field_external_game_id
+    map:
+      value: external_game_id_slots_mapping
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title_slots
+    unique:
+      value: '1'
+  -
+    target: field_game_code
+    map:
+      value: game_code
+    unique:
+      value: '1'
