@@ -1,0 +1,23 @@
+uuid: 3b110907-8b42-4d00-a117-f4c790569ba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.game
+  module:
+    - feeds
+id: node.game.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: game
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item
