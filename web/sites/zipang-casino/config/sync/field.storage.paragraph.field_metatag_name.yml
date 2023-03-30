@@ -38,6 +38,12 @@ settings:
     -
       value: content-language
       label: 'Content Language'
+    -
+      value: canonical
+      label: Canonical
+    -
+      value: alternate
+      label: 'Alternate Canonical'
   allowed_values_function: ''
 module: options
 locked: false
