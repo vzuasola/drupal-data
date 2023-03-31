@@ -188,7 +188,19 @@ display:
           entity_type: zipang_seo_config_entity
           entity_field: langcode
           plugin_id: language
-      sorts: {  }
+      sorts:
+        field_tag_value:
+          id: field_tag_value
+          table: zipang_seo_config_entity__field_tag
+          field: field_tag_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: 'Tag (field_tag)'
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }
@@ -201,6 +213,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags: {  }
   page_1:
     display_plugin: page
@@ -434,6 +448,18 @@ display:
           expose:
             label: ''
           plugin_id: standard
+        field_tag_value:
+          id: field_tag_value
+          table: zipang_seo_config_entity__field_tag
+          field: field_tag_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: 'Tag (field_tag)'
+          plugin_id: standard
       pager:
         type: full
         options:
@@ -455,6 +481,15 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      menu:
+        type: none
+        title: Meta
+        description: ''
+        expanded: false
+        parent: system.admin_config_content
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: -1
       contexts:
@@ -462,6 +497,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags:
         - 'config:field.storage.zipang_seo_config_entity.field_name'
   rest_export_1:
@@ -510,4 +547,6 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags: {  }
