@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.game.field_all_category_ribbon_config
-    - field.field.node.game.field_external_game_id
     - field.field.node.game.field_game_categories
     - field.field.node.game.field_game_code
     - field.field.node.game.field_game_filters
@@ -39,23 +38,15 @@ bundle: game
 mode: default
 content:
   field_all_category_ribbon_config:
-    weight: 1
+    weight: 102
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_external_game_id:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_game_categories:
-    weight: 4
+    weight: 104
     label: above
     settings:
       link: true
@@ -63,7 +54,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_code:
-    weight: 5
+    weight: 105
     label: above
     settings:
       link_to_entity: false
@@ -71,7 +62,7 @@ content:
     type: string
     region: content
   field_game_filters:
-    weight: 2
+    weight: 103
     label: above
     settings:
       link: true
@@ -79,14 +70,14 @@ content:
     type: entity_reference_label
     region: content
   field_game_info:
-    weight: 6
+    weight: 106
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_game_info_toggle:
-    weight: 18
+    weight: 119
     label: above
     settings:
       format: default
@@ -96,28 +87,28 @@ content:
     type: boolean
     region: content
   field_game_integration:
-    weight: 12
+    weight: 112
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_game_keywords:
-    weight: 16
+    weight: 116
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_game_meta_tags:
-    weight: 13
+    weight: 113
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_game_play_for_fun_toggle:
-    weight: 17
+    weight: 118
     label: above
     settings:
       format: default
@@ -127,7 +118,7 @@ content:
     type: boolean
     region: content
   field_game_preview_mode:
-    weight: 14
+    weight: 114
     label: above
     settings:
       format: default
@@ -137,7 +128,7 @@ content:
     type: boolean
     region: content
   field_game_provider:
-    weight: 7
+    weight: 107
     label: above
     settings:
       link: true
@@ -145,7 +136,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_ribbon:
-    weight: 15
+    weight: 115
     label: above
     settings:
       link: true
@@ -153,7 +144,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_subprovider:
-    weight: 8
+    weight: 108
     label: above
     settings:
       link: true
@@ -161,7 +152,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_thumbnail:
-    weight: 9
+    weight: 109
     label: above
     settings:
       image_style: ''
@@ -170,21 +161,21 @@ content:
     type: image
     region: content
   field_game_title:
-    weight: 10
+    weight: 110
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_game_type:
-    weight: 11
+    weight: 111
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_maintenance_end:
-    weight: 19
+    weight: 120
     label: above
     settings:
       format_type: medium
@@ -193,14 +184,14 @@ content:
     type: datetime_default
     region: content
   field_maintenance_message:
-    weight: 20
+    weight: 121
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_maintenance_start:
-    weight: 21
+    weight: 122
     label: above
     settings:
       format_type: medium
@@ -209,16 +200,14 @@ content:
     type: datetime_default
     region: content
   field_right_side_block_state:
-    weight: 22
+    weight: 123
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   links:
-    weight: 0
+    weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
