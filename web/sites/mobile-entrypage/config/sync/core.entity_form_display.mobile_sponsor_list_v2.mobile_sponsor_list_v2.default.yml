@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_link_target
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_enable
+    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_image
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_link
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_svg_class
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_title
+    - image.style.thumbnail
   module:
+    - image
     - link
     - mobile_sponsor_list_v2
 id: mobile_sponsor_list_v2.mobile_sponsor_list_v2.default
@@ -28,6 +31,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_sponsor_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_sponsor_link:
     weight: 4
