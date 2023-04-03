@@ -1,0 +1,30 @@
+uuid: 9401dc93-6ef4-41bc-a752-c012c7e98a84
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - mobile_sponsor_list_v2
+id: mobile_sponsor_list_v2.field_sponsor_image
+field_name: field_sponsor_image
+entity_type: mobile_sponsor_list_v2
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: 'Sponsor Image'
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
