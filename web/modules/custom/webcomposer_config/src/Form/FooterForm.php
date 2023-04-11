@@ -45,6 +45,7 @@ class FooterForm extends FormBase {
     $this->sectionResponsive($form);
     $this->sectionCookieNotification($form);
     $this->sectionAmbassador($form);
+    $this->footerVersionCheck($form);
 
     return $form;
   }
@@ -242,6 +243,24 @@ class FooterForm extends FormBase {
       '#description' => $this->t('Select a Redirection link target'),
       '#default_value' => $this->get('ambassador_link_target'),
       '#rows' => 1,
+    ];
+  }
+
+  /**
+   * footer version config
+   */
+  private function footerVersionCheck(array &$form) {
+    $form['footer_version_check'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Footer Version Config'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+    $form['footer_version_check']['enable_new_style'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Footer Revamp'),
+      '#default_value' => $this->get('enable_new_style'),
+      '#translatable' => TRUE,
     ];
   }
 }
