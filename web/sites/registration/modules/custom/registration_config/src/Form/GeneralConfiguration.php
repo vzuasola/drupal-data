@@ -821,6 +821,14 @@ class GeneralConfiguration extends FormBase {
       '#group' => 'general_settings_tab',
     ];
 
+    // checkbox for using cms translations for calendar
+    $form['calendar']['use_cms_translations'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use CMS Translations'),
+      '#description' => $this->t('Use CMS Translations for calendar.'),
+      '#default_value' => $this->get('use_cms_translations'),
+    ];
+
     $form['calendar']['previous_month'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Previous Month'),
