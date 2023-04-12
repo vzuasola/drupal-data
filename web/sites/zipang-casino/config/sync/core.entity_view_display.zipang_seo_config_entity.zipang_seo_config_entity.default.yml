@@ -6,8 +6,10 @@ dependencies:
     - field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_meta
     - field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_name
     - field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_per_page_visibility
+    - field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_tag
   module:
     - entity_reference_revisions
+    - options
     - user
     - zipang_seo_configuration
 id: zipang_seo_config_entity.zipang_seo_config_entity.default
@@ -38,6 +40,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_tag:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   user_id:
     label: hidden

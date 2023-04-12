@@ -64,6 +64,7 @@ class DafasportsConfigForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
+      '#translatable' => TRUE,
     ];
 
     $form['background_config']['bg_image_style'] = [
