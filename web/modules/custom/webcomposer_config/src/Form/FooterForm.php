@@ -46,6 +46,8 @@ class FooterForm extends FormBase {
     $this->sectionCookieNotification($form);
     $this->sectionAmbassador($form);
     $this->sectionCopyright($form);
+    $this->footerVersionCheck($form);
+
 
     return $form;
   }
@@ -246,6 +248,7 @@ class FooterForm extends FormBase {
     ];
   }
 
+<<<<<<< HEAD
   private function sectionCopyright(array &$form) {
     $form['copyright_group'] = [
       '#type' => 'details',
@@ -277,5 +280,23 @@ class FooterForm extends FormBase {
     ];
 
 
+=======
+  /**
+   * footer version config
+   */
+  private function footerVersionCheck(array &$form) {
+    $form['footer_version_check'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Footer Version Config'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+    $form['footer_version_check']['enable_new_style'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Footer Revamp'),
+      '#default_value' => $this->get('enable_new_style'),
+      '#translatable' => TRUE,
+    ];
+>>>>>>> 34f7e667ec57cd6dd33936770ad1bfbce0cd286e
   }
 }
