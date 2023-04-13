@@ -45,6 +45,7 @@ class FooterForm extends FormBase {
     $this->sectionResponsive($form);
     $this->sectionCookieNotification($form);
     $this->sectionAmbassador($form);
+    $this->sectionCopyright($form);
     $this->footerVersionCheck($form);
 
     return $form;
@@ -245,6 +246,36 @@ class FooterForm extends FormBase {
       '#rows' => 1,
     ];
   }
+
+  private function sectionCopyright(array &$form) {
+    $form['copyright_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Copyright'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+
+    $form['copyright_group']['use_cms_copyright_label'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use CMS Copyright Label'),
+      '#default_value' => $this->get('use_cms_copyright_label'),
+    ];
+
+    $form['copyright_group']['copyright'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Copyright Label'),
+      '#default_value' => $this->get('copyright'),
+      '#translatable' => true,
+      '#required' => true,
+    ];
+
+    $form['copyright_group']['all_rights_reserved'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('All Rights Reserved Label'),
+      '#default_value' => $this->get('all_rights_reserved'),
+      '#translatable' => true,
+      '#required' => true,
+    ];
 
   /**
    * footer version config
