@@ -276,7 +276,7 @@ class FooterForm extends FormBase {
       '#translatable' => true,
       '#required' => true,
     ];
-
+  }
   /**
    * footer version config
    */
