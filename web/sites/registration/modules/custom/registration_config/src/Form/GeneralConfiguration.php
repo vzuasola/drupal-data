@@ -825,14 +825,14 @@ class GeneralConfiguration extends FormBase {
     $form['calendar']['use_cms_translations'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Use CMS Translations'),
-      '#description' => $this->t('Use CMS Translations for calendar.'),
+      '#description' => $this->t("Enables translations from this form"),
       '#default_value' => $this->get('use_cms_translations'),
     ];
 
     $form['calendar']['previous_month'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Previous Month'),
-      '#description' => $this->t('Previous Month text for calendar.'),
+      '#description' => $this->t('Must be in the following form: Previous'),
       '#default_value' => $this->get('previous_month'),
       '#maxlength' => 255,
       '#translatable' => TRUE,
@@ -841,7 +841,7 @@ class GeneralConfiguration extends FormBase {
     $form['calendar']['next_month'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Next Month'),
-      '#description' => $this->t('Next Month text for calendar.'),
+      '#description' => $this->t('Must be in the following form: Next'),
       '#default_value' => $this->get('next_month'),
       '#maxlength' => 255,
       '#translatable' => TRUE,
@@ -850,7 +850,7 @@ class GeneralConfiguration extends FormBase {
     $form['calendar']['months'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Months'),
-      '#description' => $this->t('Months text for calendar.'),
+      '#description' => $this->t('Must be in the following form: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]'),
       '#default_value' => $this->get('months'),
       '#maxlength' => 255,
       '#translatable' => TRUE,
@@ -859,7 +859,7 @@ class GeneralConfiguration extends FormBase {
     $form['calendar']['weekdays'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Weekdays'),
-      '#description' => $this->t('Weekdays text for calendar.'),
+      '#description' => $this->t('Must be in the following form: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]'),
       '#default_value' => $this->get('weekdays'),
       '#maxlength' => 255,
       '#translatable' => TRUE,
@@ -868,7 +868,7 @@ class GeneralConfiguration extends FormBase {
     $form['calendar']['weekdays_short'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Weekdays Short'),
-      '#description' => $this->t('Weekdays Short text for calendar.'),
+      '#description' => $this->t('Must be in the following form: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]'),
       '#default_value' => $this->get('weekdays_short'),
       '#maxlength' => 255,
       '#translatable' => TRUE,
