@@ -773,6 +773,15 @@ class GeneralConfiguration extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
+
+    //password strength feature flag checkbox
+    $form['translations']['use_cms_password_strength'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Password Strength'),
+      '#description' => $this->t('Enable password strength cms translation.'),
+      '#default_value' => $this->get('password_strength'),
+    ];
+
     //label
     $form['translations']['password_label'] = [
       '#type' => 'textfield',
