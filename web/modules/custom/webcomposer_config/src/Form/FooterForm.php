@@ -259,6 +259,7 @@ class FooterForm extends FormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Use CMS Copyright Label'),
       '#default_value' => $this->get('use_cms_copyright_label'),
+      '#translatable' => true,
     ];
 
     $form['copyright_group']['copyright'] = [
