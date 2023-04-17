@@ -837,6 +837,7 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Use CMS Translations'),
       '#description' => $this->t("Enables translations from this form"),
       '#default_value' => $this->get('use_cms_translations'),
+      '#translatable' => TRUE,
     ];
 
     $form['calendar']['previous_month'] = [
