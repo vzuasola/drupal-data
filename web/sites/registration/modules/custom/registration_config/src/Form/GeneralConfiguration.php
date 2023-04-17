@@ -780,6 +780,7 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Password Strength'),
       '#description' => $this->t('Enable password strength cms translation.'),
       '#default_value' => $this->get('use_cms_password_strength'),
+      '#translatable' => TRUE,
     ];
 
     //label
