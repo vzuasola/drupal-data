@@ -631,6 +631,15 @@ class HeaderForm extends FormBase {
       '#group' => 'header_settings_tab',
     ];
 
+    //more feature flag checkbox
+    $form['more_menu_translation']['use_more_translation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use more menu translation'),
+      '#description' => $this->t('Enable/Disable more menu translation.'),
+      '#default_value' => $this->get('use_more_translation'),
+      '#translatable' => TRUE,
+    ];
+
     $form['more_menu_translation']['more'] = [
       '#type' => 'textfield',
       '#title' => $this->t('More menu translation'),
