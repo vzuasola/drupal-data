@@ -80,7 +80,66 @@ class MyAccountChangePasswordForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $this->generalPasswordStrengthConfig($form);
+
     return $form;
+  }
+
+  private function generalPasswordStrengthConfig(array &$form)
+  {
+    $form['translations'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Translations Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'change_password',
+    ];
+
+    //password strength feature flag checkbox
+    $form['translations']['use_cms_password_strength'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Password Strength'),
+      '#description' => $this->t('Enable password strength cms translation.'),
+      '#default_value' => $this->get('use_cms_password_strength'),
+      '#translatable' => TRUE,
+    ];
+
+    //label
+    $form['translations']['password_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Label'),
+      '#description' => $this->t('Password Label text for password strength.'),
+      '#default_value' => $this->get('password_label'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+    //weak
+    $form['translations']['password_weak'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Weak'),
+      '#description' => $this->t('Password Weak text for password strength.'),
+      '#default_value' => $this->get('password_weak'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+    //average
+    $form['translations']['password_average'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Average'),
+      '#description' => $this->t('Password Average text for password strength.'),
+      '#default_value' => $this->get('password_average'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+
+    //strong
+    $form['translations']['password_strong'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Strong'),
+      '#description' => $this->t('Password Strong text for password strength.'),
+      '#default_value' => $this->get('password_strong'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
   }
 
 }
