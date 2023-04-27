@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_tag
   module:
     - entity_reference_revisions
+    - options
     - user
     - webcomposer_seo
 _core:
@@ -31,6 +33,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_tag:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   name:
     label: above
