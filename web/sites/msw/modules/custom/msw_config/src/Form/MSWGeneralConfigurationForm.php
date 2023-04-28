@@ -42,6 +42,7 @@ class MSWGeneralConfigurationForm extends FormBase {
 
     $this->registrationConfig($form);
     $this->onlineRegisterConfig($form);
+    $this->mswHiddenTitle($form);
 
     return $form;
   }
@@ -283,6 +284,22 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#description' => $this->t('List of Home Outlets. Provide a list separated by pipe, in the form of
         {Index}|{Province}|{City}|{Outlet Name}|{Outlet Id}.'),
       '#required' => TRUE,
+    ];
+  }
+
+  private function mswHiddenTitle(array &$form) {
+    $form['msw_hidden_title'] = [
+      '#type' => 'details',
+      '#title' => t('MSW SEO Hidden Title'),
+      '#group' => 'advanced',
+    ];
+
+    $form['msw_hidden_title']['msw_hidden_title_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('MSW SEO Hidden title value'),
+      '#default_value' => $this->get('msw_hidden_title_value'),
+      '#description' => $this->t('Here we can add title that will be hidden under logo on header part'),
+      '#translatable' => TRUE,
     ];
   }
 }
