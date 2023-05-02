@@ -47,12 +47,20 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
         'markup' => [
           '#title' => 'Document Upload Title',
           '#type' => 'textarea',
-          '#description' => 'A Markup text the title area',
+          '#description' => 'Tab Title',
           '#default_value' => 'Verification',
           '#translatable' => true,
         ],
       ],
     ];
+
+    $descriptionBlurbDefault = <<<END
+Please submit your document/s with the corresponding purpose and ensure the following:
+<ul>
+<li>Upload a clear and whole front copy of your document/s</li>
+<li>Registered information in the account such as Full Name and Date of Birth, must fully match the details on your document/s</li>
+</ul>
+END;
 
     $fields['description_blurb_markup'] = [
       'name' => 'Description Markup',
@@ -61,8 +69,8 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
         'markup' => [
           '#title' => 'Description',
           '#type' => 'textarea',
-          '#description' => 'A Markup text for the blurb area',
-          '#default_value' => 'Please submit your document/s with the correspodning purpose and ensure the following:',
+          '#description' => 'Instructions area',
+          '#default_value' => $descriptionBlurbDefault,
           '#translatable' => true,
         ],
       ],
@@ -75,8 +83,8 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
         'markup' => [
           '#title' => 'Description',
           '#type' => 'textarea',
-          '#description' => 'A Markup text the upload reminder area',
-          '#default_value' => 'Note: Maximum of 10MB per document (PNG, JPEG, PDF)',
+          '#description' => 'A small message above the file upload section',
+          '#default_value' => 'Note: Maximum of 6MB per document (PNG, JPEG, PDF)',
           '#translatable' => true,
         ],
       ],
@@ -87,30 +95,51 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
       'type' => 'file',
       'translatable' => true,
       'settings' => [
-        'allowed_file_extensions' => [
+        'data-allowed_file_extensions' => [
           '#title' => 'Available extensions for image',
           '#type' => 'textarea',
           '#description' => 'Here you should specify available extensions for image that user is uploading',
           '#default_value' => 'png,jpeg,pdf',
           '#required' => true,
         ],
-        'error_extension' => [
+        'data-error_extension' => [
           '#title' => 'Add error message for file extension',
           '#type' => 'textfield',
-          '#description' => 'Here we can specify error message that will appear in FE.',
-          '#default_value' => 'File type not allowed',
+          '#description' => 'Error message if the user selects a file type not explicitly allowed',
+          '#default_value' => 'Invalid File Type. Allowed files: ',
           '#required' => true,
+          '#translatable' => true,
         ],
-        'upload_btn_text' => [
-          '#title' => 'Upload Button Text',
-          '#type' => 'markup',
-          '#description' => 'field for upload button text',
-        ],
-        'placeholder' => [
+        'data-placeholder' => [
           '#title' => 'Placeholder text',
           '#type' => 'textfield',
-          '#description' => 'Placeholder for file upload',
+          '#description' => 'Placeholder for file upload label',
+          '#required' => true,
           '#default_value' => 'Upload File',
+          '#translatable' => true,
+        ],
+        'data-maximum-image-size' => [
+          '#title' => 'Maximum File Size',
+          '#type' => 'textfield',
+          '#description' => 'Maximum uploaded image size in Megabytes',
+          '#required' => true,
+          '#default_value' => '6',
+        ],
+        'data-error_size' => [
+          '#title' => 'Add error message for file size',
+          '#type' => 'textfield',
+          '#description' => 'Error shown if the file chosen is larger than the maximum.',
+          '#default_value' => 'Invalid File Size',
+          '#required' => true,
+          '#translatable' => true,
+        ],
+        'data-error_required' => [
+          '#title' => 'Add error message for file not selected',
+          '#type' => 'textfield',
+          '#description' => 'This error will be shown if the user does not upload a file here',
+          '#default_value' => 'Please select a file',
+          '#required' => true,
+          '#translatable' => true,
         ],
       ],
     ];
@@ -119,30 +148,43 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
       'type' => 'file',
       'translatable' => true,
       'settings' => [
-        'allowed_file_extensions' => [
+        'data-allowed_file_extensions' => [
           '#title' => 'Available extensions for image',
           '#type' => 'textarea',
           '#description' => 'Here you should specify available extensions for image that user is uploading',
           '#default_value' => 'png,jpeg,pdf',
           '#required' => true,
         ],
-        'error_extension' => [
+        'data-error_extension' => [
           '#title' => 'Add error message for file extension',
           '#type' => 'textfield',
-          '#description' => 'Here we can specify error message that will appear in FE.',
-          '#default_value' => 'File type not allowed',
+          '#description' => 'Error message if the user selects a file type not explicitly allowed',
+          '#default_value' => 'Invalid File Type. Allowed files: ',
           '#required' => true,
+          '#translatable' => true,
         ],
-        'upload_btn_text' => [
-          '#title' => 'Upload Button Text',
-          '#type' => 'markup',
-          '#description' => 'field for upload button text',
-        ],
-        'placeholder' => [
+        'data-placeholder' => [
           '#title' => 'Placeholder text',
           '#type' => 'textfield',
-          '#description' => 'Placeholder for file upload',
+          '#description' => 'Placeholder for file upload label',
+          '#required' => true,
           '#default_value' => 'Upload File',
+          '#translatable' => true,
+        ],
+        'data-maximum-image-size' => [
+          '#title' => 'Maximum File Size',
+          '#type' => 'textfield',
+          '#description' => 'Maximum uploaded image size in Megabytes',
+          '#required' => true,
+          '#default_value' => '6',
+        ],
+        'data-error_size' => [
+          '#title' => 'Add error message for file size',
+          '#type' => 'textfield',
+          '#description' => 'Error shown if the file chosen is larger than the maximum.',
+          '#default_value' => 'Invalid File Size',
+          '#required' => true,
+          '#translatable' => true,
         ],
       ],
     ];
@@ -151,78 +193,57 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
       'type' => 'file',
       'translatable' => true,
       'settings' => [
-        'allowed_file_extensions' => [
+        'data-allowed_file_extensions' => [
           '#title' => 'Available extensions for image',
           '#type' => 'textarea',
           '#description' => 'Here you should specify available extensions for image that user is uploading',
           '#default_value' => 'png,jpeg,pdf',
           '#required' => true,
         ],
-        'error_extension' => [
+        'data-error_extension' => [
           '#title' => 'Add error message for file extension',
           '#type' => 'textfield',
-          '#description' => 'Here we can specify error message that will appear in FE.',
-          '#default_value' => 'File type not allowed',
+          '#description' => 'Error message if the user selects a file type not explicitly allowed',
+          '#default_value' => 'Invalid File Type. Allowed files: ',
           '#required' => true,
+          '#translatable' => true,
         ],
-        'upload_btn_text' => [
-          '#title' => 'Upload Button Text',
-          '#type' => 'markup',
-          '#description' => 'field for upload button text',
-        ],
-        'placeholder' => [
+        'data-placeholder' => [
           '#title' => 'Placeholder text',
           '#type' => 'textfield',
-          '#description' => 'Placeholder for file upload',
+          '#description' => 'Placeholder for file upload label',
+          '#required' => true,
           '#default_value' => 'Upload File',
+          '#translatable' => true,
+        ],
+        'data-maximum-image-size' => [
+          '#title' => 'Maximum File Size',
+          '#type' => 'textfield',
+          '#description' => 'Maximum uploaded image size in Megabytes',
+          '#required' => true,
+          '#default_value' => '6',
+        ],
+        'data-error_size' => [
+          '#title' => 'Add error message for file size',
+          '#type' => 'textfield',
+          '#description' => 'Error shown if the file chosen is larger than the maximum.',
+          '#default_value' => 'Invalid File Size',
+          '#required' => true,
+          '#translatable' => true,
         ],
       ],
     ];
-
-    $fields['purpose'] = [
-      'name' => 'Purpose',
-      'type' => 'select',
-      'settings' => [
-        'label' => [
-          '#title' => 'Purpose Label',
-          '#type' => 'textfield',
-          '#description' => 'The label for the purpose field',
-          '#default_value' => 'Purpose',
-        ],
-        'placeholder' => [
-          '#title' => 'Choose a purpose',
-          '#type' => 'textfield',
-          '#description' => 'Placeholder value for this textfield',
-          '#default_value' => '-Select One-',
-        ],
-        'choices' => [
-          '#title' => 'Purpose Choices',
-          '#type' => 'textarea',
-          '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
-          '#default_value' => implode(PHP_EOL, [
-            '0|-Select One-',
-            '1|Account Verification',
-            '2|Bonus Requirement',
-            '3|Change Information',
-            '4|Deposit Requirement',
-            '5|Withdrawal Requirement',
-            '6|Others',
-          ]),
-        ],
-      ],
-    ];
-
-
     
     $fields['purpose_markup'] = [
       'name' => 'Purpose Markup',
       'type' => 'markup',
       'settings' => [
         'markup' => [
-          '#title' => 'Purpose Label Markup',
+          '#title' => 'Purpose Section Title',
           '#type' => 'textarea',
-          '#description' => 'A Markup text the purpose select field',
+          '#description' => 'Title of the purpose section',
           '#default_value' => 'Purpose',
+          '#translatable' => true,
         ],
       ],
     ];
@@ -231,17 +252,12 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
       'name' => 'Purpose',
       'type' => 'select',
       'settings' => [
-        'label' => [
-          '#title' => 'Purpose',
-          '#type' => 'textfield',
-          '#description' => 'The Label for the Purpose field',
-        ],
         'choices' => [
           '#title' => '- Select One -',
           '#type' => 'textarea',
           '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
           '#default_value' => implode(PHP_EOL, [
-            'select'|'-Select One-',
+            'select|-Select One-',
             'verify|Account Verification',
             'bonus|Bonus Requirement',
             'change|Change Information',
@@ -249,18 +265,27 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
             'withdraw|Withdrawal Requirement',
             'others|Others',
           ]),
+          '#translatable' => true,
+        ],
+        'data-required_error' => [
+          '#title' => 'Error if no selection',
+          '#type' => 'textfield',
+          '#description' => 'Error to be shown if the user didn\'t select a valid option',
+          '#default_value' => 'Please select an option',
+          '#translatable' => true,
         ],
       ],
     ];
     $fields['comment_markup'] = [
-      'name' => 'Comment Markup',
+      'name' => 'Comment Title',
       'type' => 'markup',
       'settings' => [
         'markup' => [
-          '#title' => 'Comment Label Markup',
+          '#title' => 'Comment Title',
           '#type' => 'textarea',
-          '#description' => 'A Markup text for the comment text field',
+          '#description' => 'Title for the comment section',
           '#default_value' => 'Comment',
+          '#translatable' => true,
         ],
       ],
     ];
@@ -269,16 +294,40 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
       'name' => 'Comment',
       'type' => 'textarea',
       'settings' => [
-        'label' => [
-          '#title' => 'Comment Label',
+        'data-blurb' => [
+          '#title' => 'Blurb',
           '#type' => 'textfield',
-          '#description' => 'The Label for Comment field',
+          '#description' => 'Blurb next to title',
+          '#default_value' => 'English Characters Only',
+          '#translatable' => true,
         ],
-        'placeholder' => [
+        'data-placeholder' => [
           '#title' => 'Comment placeholder label',
           '#type' => 'textfield',
           '#description' => 'label for Comment field placeholder',
           '#default_value' => 'Type the information to be changed here and the reason for the request',
+          '#translatable' => true,
+        ],
+        'data-required_error' => [
+          '#title' => 'Error if field required',
+          '#type' => 'textfield',
+          '#description' => 'Error to be shown if user selected "Change Information" and didn\'t enter a comment',
+          '#default_value' => 'Please enter a comment describing the change',
+          '#translatable' => true,
+        ],
+        'data-character_count_limit' => [
+          '#title' => 'Character count limit',
+          '#type' => 'textfield',
+          '#description' => 'Number of characters allowed',
+          '#default_value' => '250',
+          '#translatable' => true,
+        ],
+        'data-character_count_text' => [
+          '#title' => 'Character count text',
+          '#type' => 'textfield',
+          '#description' => 'Message shown under the comment field showing number of characters left',
+          '#default_value' => 'Characters left:',
+          '#translatable' => true,
         ],
       ],
     ];
@@ -292,9 +341,28 @@ class DocumentsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           '#type' => 'textfield',
           '#description' => 'Label for the Save button',
           '#default_value' => 'Submit',
+          '#translatable' => true,
         ],
       ],
     ];
+    $footerBlurbDefault = <<<END
+If you were not able to upload documents, please send it to <a href="mailto:test@dafabet.com">test@dafabet.com</a> by mentioning your username and purpose in the subject line.
+END;
+    
+    $fields['footer_instructions_markup'] = [
+      'name' => 'Footer Instructions Markup',
+      'type' => 'markup',
+      'settings' => [
+        'markup' => [
+          '#title' => 'Footer Instructions',
+          '#type' => 'textarea',
+          '#description' => 'Footer Area Instructions',
+          '#default_value' => $footerBlurbDefault,
+          '#translatable' => true,
+        ],
+      ],
+    ];
+        
 
     return $fields;
   }
