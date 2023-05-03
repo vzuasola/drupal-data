@@ -84,7 +84,7 @@ END;
           '#title' => 'Description',
           '#type' => 'textarea',
           '#description' => 'A small message above the file upload section',
-          '#default_value' => 'Note: Maximum of 6MB per document (PNG, JPEG, PDF)',
+          '#default_value' => 'Note: Maximum of 6MB per document (JPG, JPEG, PNG, BMP, TIFF, GIF, PDF)',
           '#translatable' => true,
         ],
       ],
@@ -99,7 +99,7 @@ END;
           '#title' => 'Available extensions for image',
           '#type' => 'textarea',
           '#description' => 'Here you should specify available extensions for image that user is uploading',
-          '#default_value' => 'png,jpeg,pdf',
+          '#default_value' => 'jpg,jpeg,png,bmp,tiff,gif,pdf',
           '#required' => true,
         ],
         'data-error_extension' => [
@@ -123,13 +123,13 @@ END;
           '#type' => 'textfield',
           '#description' => 'Maximum uploaded image size in Megabytes',
           '#required' => true,
-          '#default_value' => '6',
+          '#default_value' => '6MB',
         ],
         'data-error_size' => [
           '#title' => 'Add error message for file size',
           '#type' => 'textfield',
           '#description' => 'Error shown if the file chosen is larger than the maximum.',
-          '#default_value' => 'Invalid File Size',
+          '#default_value' => 'Invalid FIle Size. Max: ',
           '#required' => true,
           '#translatable' => true,
         ],
@@ -152,7 +152,7 @@ END;
           '#title' => 'Available extensions for image',
           '#type' => 'textarea',
           '#description' => 'Here you should specify available extensions for image that user is uploading',
-          '#default_value' => 'png,jpeg,pdf',
+          '#default_value' => 'jpg,jpeg,png,bmp,tiff,gif,pdf',
           '#required' => true,
         ],
         'data-error_extension' => [
@@ -176,13 +176,13 @@ END;
           '#type' => 'textfield',
           '#description' => 'Maximum uploaded image size in Megabytes',
           '#required' => true,
-          '#default_value' => '6',
+          '#default_value' => '6MB',
         ],
         'data-error_size' => [
           '#title' => 'Add error message for file size',
           '#type' => 'textfield',
           '#description' => 'Error shown if the file chosen is larger than the maximum.',
-          '#default_value' => 'Invalid File Size',
+          '#default_value' => 'Invalid FIle Size. Max: ',
           '#required' => true,
           '#translatable' => true,
         ],
@@ -197,7 +197,7 @@ END;
           '#title' => 'Available extensions for image',
           '#type' => 'textarea',
           '#description' => 'Here you should specify available extensions for image that user is uploading',
-          '#default_value' => 'png,jpeg,pdf',
+          '#default_value' => 'jpg,jpeg,png,bmp,tiff,gif,pdf',
           '#required' => true,
         ],
         'data-error_extension' => [
@@ -221,13 +221,13 @@ END;
           '#type' => 'textfield',
           '#description' => 'Maximum uploaded image size in Megabytes',
           '#required' => true,
-          '#default_value' => '6',
+          '#default_value' => '6MB',
         ],
         'data-error_size' => [
           '#title' => 'Add error message for file size',
           '#type' => 'textfield',
           '#description' => 'Error shown if the file chosen is larger than the maximum.',
-          '#default_value' => 'Invalid File Size',
+          '#default_value' => 'Invalid FIle Size. Max: ',
           '#required' => true,
           '#translatable' => true,
         ],
@@ -346,7 +346,7 @@ END;
       ],
     ];
     $footerBlurbDefault = <<<END
-If you were not able to upload documents, please send it to <a href="mailto:test@dafabet.com">test@dafabet.com</a> by mentioning your username and purpose in the subject line.
+If you were not able to upload documents, please send it to <a href="#">dafabet.com</a> by mentioning your username and purpose in the subject line.
 END;
     
     $fields['footer_instructions_markup'] = [
