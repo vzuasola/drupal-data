@@ -48,6 +48,7 @@ class HeaderForm extends FormBase {
     $this->sectionNewtag($form);
     $this->sectionWelcome($form);
     $this->sectionAnnouncement($form);
+    $this->moreMenuTranslation($form);
     $this->sectionOther($form);
 
     return $form;
@@ -613,6 +614,38 @@ class HeaderForm extends FormBase {
           'input[name="news_announcement"]' => ['checked' => FALSE],
         ],
       ],
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * More menu section translation confu
+   *
+   */
+  private function moreMenuTranslation(array &$form)
+  {
+    $form['more_menu_translation'] = [
+      '#type' => 'details',
+      '#title' => $this->t('More Menu'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    ];
+
+    //more feature flag checkbox
+    $form['more_menu_translation']['use_more_translation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use more menu translation'),
+      '#description' => $this->t('Enable/Disable more menu translation.'),
+      '#default_value' => $this->get('use_more_translation'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['more_menu_translation']['more'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('More menu translation'),
+      '#description' => $this->t('More menu translation'),
+      '#default_value' => $this->get('more'),
+      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
   }

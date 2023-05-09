@@ -31,6 +31,9 @@ settings:
     -
       value: instagram
       label: Instagram
+    -
+      value: telegram-full
+      label: Telegram
   allowed_values_function: ''
 module: options
 locked: false

@@ -45,6 +45,8 @@ class FooterForm extends FormBase {
     $this->sectionResponsive($form);
     $this->sectionCookieNotification($form);
     $this->sectionAmbassador($form);
+    $this->sectionCopyright($form);
+    $this->footerVersionCheck($form);
 
     return $form;
   }
@@ -242,6 +244,55 @@ class FooterForm extends FormBase {
       '#description' => $this->t('Select a Redirection link target'),
       '#default_value' => $this->get('ambassador_link_target'),
       '#rows' => 1,
+    ];
+  }
+
+  private function sectionCopyright(array &$form) {
+    $form['copyright_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Copyright'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+
+    $form['copyright_group']['use_cms_copyright_label'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use CMS Copyright Label'),
+      '#default_value' => $this->get('use_cms_copyright_label'),
+      '#translatable' => true,
+    ];
+
+    $form['copyright_group']['copyright'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Copyright Label'),
+      '#default_value' => $this->get('copyright'),
+      '#translatable' => true,
+      '#required' => true,
+    ];
+
+    $form['copyright_group']['all_rights_reserved'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('All Rights Reserved Label'),
+      '#default_value' => $this->get('all_rights_reserved'),
+      '#translatable' => true,
+      '#required' => true,
+    ];
+  }
+  /**
+   * footer version config
+   */
+  private function footerVersionCheck(array &$form) {
+    $form['footer_version_check'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Footer Version Config'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+    $form['footer_version_check']['enable_new_style'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Footer Revamp'),
+      '#default_value' => $this->get('enable_new_style'),
+      '#translatable' => TRUE,
     ];
   }
 }

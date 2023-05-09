@@ -50,6 +50,8 @@ class GeneralConfiguration extends FormBase {
     $this->tripwirePopupConfig($form);
     $this->textOverBannerConfig($form);
     $this->panIdUrlConfiguration($form);
+    $this->generalPasswordStrengthConfig($form);
+    $this->calendarConfig($form);
 
     return $form;
   }
@@ -114,6 +116,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('If this is checked, this will include custom headers to be passed on REG API'),
       '#default_value' => $this->get('enable_reg_relic_custom_headers'),
     ];
+
   }
 
   /**
@@ -759,6 +762,127 @@ class GeneralConfiguration extends FormBase {
         "visible" => array(
           "input[name='upload_rate_limiting']" => array("checked" => TRUE)),
       ),
+    ];
+  }
+
+  private function generalPasswordStrengthConfig(array &$form)
+  {
+    $form['translations'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Translations Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+
+    //password strength feature flag checkbox
+    $form['translations']['use_cms_password_strength'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Password Strength'),
+      '#description' => $this->t('Enable password strength cms translation.'),
+      '#default_value' => $this->get('use_cms_password_strength'),
+      '#translatable' => TRUE,
+    ];
+
+    //label
+    $form['translations']['password_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Label'),
+      '#description' => $this->t('Password Label text for password strength.'),
+      '#default_value' => $this->get('password_label'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+    //weak
+    $form['translations']['password_weak'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Weak'),
+      '#description' => $this->t('Password Weak text for password strength.'),
+      '#default_value' => $this->get('password_weak'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+    //average
+    $form['translations']['password_average'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Average'),
+      '#description' => $this->t('Password Average text for password strength.'),
+      '#default_value' => $this->get('password_average'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+
+    //strong
+    $form['translations']['password_strong'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password Strong'),
+      '#description' => $this->t('Password Strong text for password strength.'),
+      '#default_value' => $this->get('password_strong'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function calendarConfig(array &$form)
+  {
+    $form['calendar'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Calendar Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+
+    // checkbox for using cms translations for calendar
+    $form['calendar']['use_cms_translations'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use CMS Translations'),
+      '#description' => $this->t("Enables translations from this form"),
+      '#default_value' => $this->get('use_cms_translations'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['calendar']['previous_month'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Previous Month'),
+      '#description' => $this->t('Must be in the following form: Previous'),
+      '#default_value' => $this->get('previous_month'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+
+    $form['calendar']['next_month'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Next Month'),
+      '#description' => $this->t('Must be in the following form: Next'),
+      '#default_value' => $this->get('next_month'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+
+    $form['calendar']['months'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Months'),
+      '#description' => $this->t('Must be in the following form: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]'),
+      '#default_value' => $this->get('months'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+
+    $form['calendar']['weekdays'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Weekdays'),
+      '#description' => $this->t('Must be in the following form: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]'),
+      '#default_value' => $this->get('weekdays'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+
+    $form['calendar']['weekdays_short'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Weekdays Short'),
+      '#description' => $this->t('Must be in the following form: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]'),
+      '#default_value' => $this->get('weekdays_short'),
+      '#maxlength' => 255,
+      '#translatable' => TRUE,
     ];
   }
 }
