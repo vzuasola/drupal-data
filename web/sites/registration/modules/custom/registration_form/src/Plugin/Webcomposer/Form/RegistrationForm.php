@@ -213,7 +213,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Pan ID Description Text',
             '#type' => 'textarea',
             '#description' => 'Here we can add description for file size file type etc for pan id upload.',
-            '#default_value' => ' Maximum of 10MB(JPG, JPEG, PNG, TIFF, GIF) ',
+            '#default_value' => ' Maximum of 8MB(JPG, JPEG, PNG, TIFF, GIF) ',
           ]
         ],
       ],
