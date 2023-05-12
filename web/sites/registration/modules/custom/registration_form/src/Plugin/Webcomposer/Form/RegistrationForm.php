@@ -192,18 +192,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
-      'pan_id_accept_terms' => [
-        'name' => 'Accept Terms Pan ID',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Accept Terms Pan ID',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text for accept terms and conditions before the browse button',
-            '#default_value' => 'Upload a clear and whole front copy of your PAN ID:',
-          ],
-        ],
-      ],
 
       'pan_id_description_text' => [
         'name' => 'Upload Pan ID Description Text',
@@ -217,7 +205,26 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ]
         ],
       ],
-
+      'upload_id_choose_type' => [
+        'name' => 'ID Types',
+        'type' => 'select',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder for the document type selection dropdown',
+            '#default_value' => '<span style="color:#FF0000">Optional</span> Upload a clear front copy of your ID:',
+            '#translatable' => true,
+          ],
+          'placeholder' => [
+            '#title' => 'Placeholder',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder for the document type selection dropdown',
+            '#default_value' => '- Select One -',
+            '#translatable' => true,
+          ],
+        ],
+      ],
       'pan_id_upload' => [
         'name' => 'Upload Pan ID',
         'type' => 'file',
