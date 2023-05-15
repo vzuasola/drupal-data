@@ -1,5 +1,5 @@
 field_settings:
-  label: '<span style="color:#FF0000">Optional</span> Upload a clear front copy of your ID:'
+  label: '<span style="color:#ff0000; font-weight:bold">Optional:</span> <span style="font-style: italic;">Upload a clear front copy of your ID:</span>'
   placeholder: '- Select One -'
 field_validations:
   required:
