@@ -749,6 +749,13 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('document_type_pan_id_label') ?? $this->t('Pan ID'),
 
     ];
+    $form['pan_id_url_configuration']['pan_id_extensions'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Available extensions for image'),
+      '#description' => $this->t('Here you should specify available extensions for image that user is uploading'),
+      '#required' => true,
+      '#default_value' => $this->get('pan_id_extensions') ?? "",
+    ];
     $form['pan_id_url_configuration']['request_timeout'] = [
       '#type' => 'number',
       '#title' => $this->t('Request Timeout'),

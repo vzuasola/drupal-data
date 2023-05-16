@@ -247,12 +247,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'Here we should insert first name, last name and birth of date to be populated into form.',
             '#required' => true,
           ],
-          'pan_id_extensions' => [
-            '#title' => 'Available extensions for image',
-            '#type' => 'textarea',
-            '#description' => 'Here you should specify available extensions for image that user is uploading',
-            '#required' => true,
-          ],
           'error_extension' => [
             '#title' => 'Add error message for file extension',
             '#type' => 'textfield',

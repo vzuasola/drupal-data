@@ -94,3 +94,4 @@ pan_id_firstname_error: 'Error in retrieving information. Please upload a clear 
 pan_id_lastname_error: 'Error in retrieving information. Please upload a clear copy of your PAN ID.'
 pan_id_bday_error: 'Error in retrieving information. Please upload a clear copy of your PAN ID.'
 invalid_bonus_code: 'Code is invalid'
+pan_id_extensions: ''
