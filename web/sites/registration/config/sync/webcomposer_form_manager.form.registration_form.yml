@@ -10,37 +10,39 @@ weights:
     weight: '-18'
   password:
     weight: '-17'
-  email:
-    weight: '-16'
-  mobile_number:
-    weight: '-15'
-  breakline_2:
-    weight: '-14'
-  pan_id_accept_terms:
-    weight: '-13'
-  pan_id_upload:
-    weight: '-12'
-  first_name:
-    weight: '-11'
   password_meter:
+    weight: '-16'
+  email:
+    weight: '-15'
+  mobile_number:
+    weight: '-14'
+  breakline_2:
+    weight: '-13'
+  upload_id_choose_type:
+    weight: '-12'
+  pan_id_upload:
+    weight: '-11'
+  pan_id_description_text:
     weight: '-10'
-  last_name:
+  first_name:
     weight: '-9'
-  birthdate:
+  last_name:
     weight: '-8'
-  currency:
+  birthdate:
     weight: '-7'
-  ioblackbox:
+  currency:
     weight: '-6'
-  country:
+  ioblackbox:
     weight: '-5'
-  breakline_3:
+  country:
     weight: '-4'
-  bonus_code:
+  breakline_3:
     weight: '-3'
-  captcha:
+  bonus_code:
     weight: '-2'
-  accept_terms:
+  captcha:
     weight: '-1'
-  submit:
+  accept_terms:
     weight: '0'
+  submit:
+    weight: '1'
