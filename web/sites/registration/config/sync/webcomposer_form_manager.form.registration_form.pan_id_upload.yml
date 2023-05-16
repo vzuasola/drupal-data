@@ -2,8 +2,7 @@ field_settings:
   label: Optional
   pan_id_url: '{domain:registration_link}/read_pan_id'
   pan_id_values_mapping: "first_name|firstName\r\nlast_name|lastName\r\nbirthdate|birthDate"
-  pan_id_extensions: '.jpg, .png, .jpeg, .bmp, .tiff, .gif, .pdf'
-  error_extension: 'Maximum of 10MB (JPG, JPEG, PNG, TIFF, BMP, GIF, PDF)'
+  error_extension: 'Maximum of 8MB (JPG, JPEG, PNG, TIFF, BMP, GIF, PDF)'
   upload_btn_text: Browse
   is_enabled: 0
 field_validations:

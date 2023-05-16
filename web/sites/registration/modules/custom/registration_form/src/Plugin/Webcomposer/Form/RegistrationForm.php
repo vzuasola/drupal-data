@@ -201,7 +201,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Pan ID Description Text',
             '#type' => 'textarea',
             '#description' => 'Here we can add description for file size file type etc for pan id upload.',
-            '#default_value' => ' Maximum of 10MB(JPG, JPEG, PNG, BMP, GIF, PDF) ',
+            '#default_value' => ' Maximum of 8MB(JPG, JPEG, PNG, TIFF, GIF) ',
           ]
         ],
       ],
@@ -245,12 +245,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Insert Mapping for First Name, Last Name and Birth of Date',
             '#type' => 'textarea',
             '#description' => 'Here we should insert first name, last name and birth of date to be populated into form.',
-            '#required' => true,
-          ],
-          'pan_id_extensions' => [
-            '#title' => 'Available extensions for image',
-            '#type' => 'textarea',
-            '#description' => 'Here you should specify available extensions for image that user is uploading',
             '#required' => true,
           ],
           'error_extension' => [
