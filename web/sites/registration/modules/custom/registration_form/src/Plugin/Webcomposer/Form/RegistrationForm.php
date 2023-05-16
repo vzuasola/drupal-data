@@ -213,8 +213,9 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Label',
             '#type' => 'textfield',
             '#description' => 'Placeholder for the document type selection dropdown',
-            '#default_value' => '<span style="color:#FF0000">Optional</span> Upload a clear front copy of your ID:',
+            '#default_value' => '<span style="color:red; font-weight:bold">Optional:</span> <span style="font-style: italic;">Upload a clear front copy of your ID:</span>',
             '#translatable' => true,
+            '#maxlength' => 255,
           ],
           'placeholder' => [
             '#title' => 'Placeholder',
