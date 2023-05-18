@@ -207,7 +207,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
       ],
       'upload_id_choose_type' => [
         'name' => 'ID Types',
-        'type' => 'select',
+        'type' => 'custom_select',
         'settings' => [
           'label' => [
             '#title' => 'Label',
