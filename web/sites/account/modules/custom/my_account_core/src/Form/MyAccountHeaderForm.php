@@ -85,17 +85,4 @@ class MyAccountHeaderForm extends FormBase {
 
     return $form;
   }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function create(ContainerInterface $container)
-    {
-        return new static(
-            $container->get('config.factory'),
-            $container->get('path.alias_manager'),
-            $container->get('path.validator'),
-            $container->get('router.request_context')
-        );
-    }
 }
