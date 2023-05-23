@@ -135,6 +135,14 @@ class LoginForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['login_form_error_messages_details']['error_message_account_created'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Player account status is Created'),
+      '#default_value' => $this->get('error_message_account_created'),
+      '#translatable' => TRUE,
+      '#maxlength' => 255,
+    ];
+
     $form['login_form_error_messages_details']['error_message_restricted_country'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Error for restricted country'),
