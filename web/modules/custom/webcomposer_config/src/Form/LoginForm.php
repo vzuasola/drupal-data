@@ -125,7 +125,7 @@ class LoginForm extends FormBase {
       '#title' => $this->t('Player account is Suspended/Closed'),
       '#default_value' => $this->get('error_message_account_suspended'),
       '#translatable' => TRUE,
-      '#maxlength' => 500,
+      '#maxlength' => 255,
     ];
 
     $form['login_form_error_messages_details']['error_message_account_locked'] = [
