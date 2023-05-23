@@ -50,6 +50,7 @@ class GeneralConfiguration extends FormBase {
     $this->tripwirePopupConfig($form);
     $this->textOverBannerConfig($form);
     $this->panIdUrlConfiguration($form);
+    $this->aadharUploadConfiguration($form);
     $this->generalPasswordStrengthConfig($form);
     $this->calendarConfig($form);
 
@@ -640,6 +641,42 @@ class GeneralConfiguration extends FormBase {
   }
 
   /**
+   * Configuration regarding Aadhar ID upload
+   */
+  private function aadharUploadConfiguration(array &$form){
+    $form['aadhar_upload_configuration'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Aadhar ID Configurations'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['aadhar_upload_configuration']['aadhar_id_enabled'] = [
+      '#title' => $this->t('Allow Aadhar ID Upload'),
+      '#type' => 'checkbox',
+      '#description' => $this->t('Choose whether to include Aadhar ID in the ID Type dropdown'),
+      '#default_value' => $this->get('aadhar_id_enabled') ?? false,
+      '#translatable' => true,
+    ];
+
+    $form['aadhar_upload_configuration']['document_type_aadhar_id_error'] = [
+      '#title' => $this->t('Aadhar ID Upload Error'),
+      '#type' => 'textfield',
+      '#description' => $this->t('Error message shown if Aadhar ID is not uploaded correctly'),
+      '#translatable' => true,
+      '#default_value' => $this->get('document_type_aadhar_id_error') ?? $this->t('Error in retrieving information. Please upload a clear copy of your Aadhar ID.'),
+
+    ];
+
+    $form['aadhar_upload_configuration']['document_type_aadhar_id_label'] = [
+      '#title' => $this->t('Aadhar ID Dropdown value'),
+      '#type' => 'textfield',
+      '#description' => $this->t('Value for the for Aadhar ID drop down choice'),
+      '#translatable' => true,
+      '#default_value' => $this->get('document_type_aadhar_id_label') ?? $this->t('Aadhar ID'),
+    ];
+  }
+
+  /**
    * Pan ID Configurations
    */
   private function panIdUrlConfiguration(array &$form)
@@ -696,30 +733,29 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('x_pan_id_code') ?? "",
     ];
 
-    $form['pan_id_url_configuration']['pan_id_firstname_error'] = [
+    $form['pan_id_url_configuration']['document_type_pan_id_error'] = [
+      '#title' => $this->t('Pan ID Upload Error'),
       '#type' => 'textfield',
-      '#title' => $this->t('Firstname Pan ID upload error message'),
-      '#description' => $this->t('Error to show when Firstname on Pan ID upload has an error.'),
-      '#translatable' => TRUE,
-      '#default_value' => $this->get('pan_id_firstname_error') ?? "",
-    ];
+      '#description' => $this->t('Error message shown if PAN ID is not uploaded correctly'),
+      '#translatable' => true,
+      '#default_value' => $this->get('document_type_pan_id_error') ?? $this->t('Error in retrieving information. Please upload a clear copy of your PAN ID'),
 
-    $form['pan_id_url_configuration']['pan_id_lastname_error'] = [
+    ];
+    $form['pan_id_url_configuration']['document_type_pan_id_label'] = [
+      '#title' => $this->t('Pan ID Dropdown value'),
       '#type' => 'textfield',
-      '#title' => $this->t('Lastname Pan ID upload error message'),
-      '#description' => $this->t('Error to show when Lastname on Pan ID upload has an error.'),
-      '#translatable' => TRUE,
-      '#default_value' => $this->get('pan_id_lastname_error') ?? "",
-    ];
+      '#description' => $this->t('Value for the for Pan ID drop down choice'),
+      '#translatable' => true,
+      '#default_value' => $this->get('document_type_pan_id_label') ?? $this->t('Pan ID'),
 
-    $form['pan_id_url_configuration']['pan_id_bday_error'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Date of Birth Pan ID upload error message'),
-      '#description' => $this->t('Error to show when Date of Birth on Pan ID upload has an error.'),
-      '#translatable' => TRUE,
-      '#default_value' => $this->get('pan_id_bday_error') ?? "",
     ];
-
+    $form['pan_id_url_configuration']['pan_id_extensions'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Available extensions for image'),
+      '#description' => $this->t('Here you should specify available extensions for image that user is uploading'),
+      '#required' => true,
+      '#default_value' => $this->get('pan_id_extensions') ?? "",
+    ];
     $form['pan_id_url_configuration']['request_timeout'] = [
       '#type' => 'number',
       '#title' => $this->t('Request Timeout'),

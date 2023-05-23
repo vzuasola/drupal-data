@@ -192,18 +192,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
-      'pan_id_accept_terms' => [
-        'name' => 'Accept Terms Pan ID',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Accept Terms Pan ID',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text for accept terms and conditions before the browse button',
-            '#default_value' => 'Upload a clear and whole front copy of your PAN ID:',
-          ],
-        ],
-      ],
 
       'pan_id_description_text' => [
         'name' => 'Upload Pan ID Description Text',
@@ -213,11 +201,31 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Pan ID Description Text',
             '#type' => 'textarea',
             '#description' => 'Here we can add description for file size file type etc for pan id upload.',
-            '#default_value' => ' Maximum of 10MB(JPG, JPEG, PNG, BMP, GIF, PDF) ',
+            '#default_value' => ' Maximum of 8MB(JPG, JPEG, PNG, TIFF, GIF) ',
           ]
         ],
       ],
-
+      'upload_id_choose_type' => [
+        'name' => 'ID Types',
+        'type' => 'select',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder for the document type selection dropdown',
+            '#default_value' => '<span style="color:red; font-weight:bold">Optional:</span> <span style="font-style: italic;">Upload a clear front copy of your ID:</span>',
+            '#translatable' => true,
+            '#maxlength' => 255,
+          ],
+          'placeholder' => [
+            '#title' => 'Placeholder',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder for the document type selection dropdown',
+            '#default_value' => '- Select One -',
+            '#translatable' => true,
+          ],
+        ],
+      ],
       'pan_id_upload' => [
         'name' => 'Upload Pan ID',
         'type' => 'file',
@@ -237,12 +245,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Insert Mapping for First Name, Last Name and Birth of Date',
             '#type' => 'textarea',
             '#description' => 'Here we should insert first name, last name and birth of date to be populated into form.',
-            '#required' => true,
-          ],
-          'pan_id_extensions' => [
-            '#title' => 'Available extensions for image',
-            '#type' => 'textarea',
-            '#description' => 'Here you should specify available extensions for image that user is uploading',
             '#required' => true,
           ],
           'error_extension' => [

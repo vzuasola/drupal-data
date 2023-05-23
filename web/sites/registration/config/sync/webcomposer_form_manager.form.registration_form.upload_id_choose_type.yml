@@ -1,10 +1,6 @@
 field_settings:
-  label: Optional
-  pan_id_url: '{domain:registration_link}/read_pan_id'
-  pan_id_values_mapping: "first_name|firstName\r\nlast_name|lastName\r\nbirthdate|birthDate"
-  error_extension: 'Maximum of 8MB (JPG, JPEG, PNG, TIFF, BMP, GIF, PDF)'
-  upload_btn_text: Browse
-  is_enabled: 0
+  label: '<span style="color:#ff0000; font-weight:bold">Optional:</span> <span style="font-style: italic;">Upload a clear front copy of your ID:</span>'
+  placeholder: '- Select One -'
 field_validations:
   required:
     enable: 0
