@@ -43,6 +43,8 @@ class JamboreeRegistrationForm extends FormBase {
     $this->sectionStep3($form);
     $this->sectionStep4($form);
     $this->sectionIcoreIntegration($form);
+    $this->sectionGoogleAPI($form);
+
     return $form;
   }
 
@@ -603,8 +605,49 @@ class JamboreeRegistrationForm extends FormBase {
       '#description' => $this->t('Enable / disable username validation'),
       '#default_value' => $this->get('enable_email_validation')
     ];
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionGoogleAPI(array &$form) {
+    $form['google_api_settings'] = [
+      '#type' => 'details',
+      '#title' => t('Google API Settings'),
+      '#group' => 'advanced',
+    ];
 
+    $form['google_api_settings']['google_maps_geocode_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Google Maps Geocode API Endpoint'),
+      '#default_value' => $this->get('google_maps_geocode_api_url'),
+      '#description' => $this->t('Endpoint for Google Maps Geocode API'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
 
+    $form['google_api_settings']['zip_api_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Google API KEY'),
+      '#default_value' => $this->get('zip_api_key'),
+      '#description' => $this->t('Key used for Google API'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['google_api_settings']['address_suffix'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Address Field Suffix'),
+      '#default_value' => $this->get('address_suffix'),
+      '#description' => $this->t('Text used for Address Suffix'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['google_api_settings']['city_suffix'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('City Field Suffix'),
+      '#default_value' => $this->get('city_suffix'),
+      '#description' => $this->t('Text used for City Suffix'),
+      '#translatable' => TRUE,
+    ];
   }
 }

@@ -125,6 +125,7 @@ class LoginForm extends FormBase {
       '#title' => $this->t('Player account is Suspended/Closed'),
       '#default_value' => $this->get('error_message_account_suspended'),
       '#translatable' => TRUE,
+      '#maxlength' => 255,
     ];
 
     $form['login_form_error_messages_details']['error_message_account_locked'] = [
@@ -133,6 +134,14 @@ class LoginForm extends FormBase {
       '#description' => $this->t('Note: number of attempts (X) and number of minutes (Y) configuration is located at the middleware.'),
       '#default_value' => $this->get('error_message_account_locked'),
       '#translatable' => TRUE,
+    ];
+
+    $form['login_form_error_messages_details']['error_message_account_created'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Player account status is Created'),
+      '#default_value' => $this->get('error_message_account_created'),
+      '#translatable' => TRUE,
+      '#maxlength' => 255,
     ];
 
     $form['login_form_error_messages_details']['error_message_restricted_country'] = [
