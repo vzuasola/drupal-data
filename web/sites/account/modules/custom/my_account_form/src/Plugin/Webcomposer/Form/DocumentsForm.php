@@ -250,14 +250,13 @@ END;
 
     $fields['purpose'] = [
       'name' => 'Purpose',
-      'type' => 'select',
+      'type' => 'custom_select',
       'settings' => [
         'choices' => [
           '#title' => '- Select One -',
           '#type' => 'textarea',
           '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
           '#default_value' => implode(PHP_EOL, [
-            'select|-Select One-',
             'verify|Account Verification',
             'bonus|Bonus Requirement',
             'change|Change Information',
@@ -265,6 +264,13 @@ END;
             'withdraw|Withdrawal Requirement',
             'others|Others',
           ]),
+          '#translatable' => true,
+        ],
+        'placeholder' => [
+          '#title' => 'Placeholder',
+          '#type' => 'textfield',
+          '#description' => 'Placeholder for the document type selection dropdown',
+          '#default_value' => '- Select One -',
           '#translatable' => true,
         ],
         'data-required_error' => [
