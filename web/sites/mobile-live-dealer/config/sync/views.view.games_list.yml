@@ -896,6 +896,21 @@ display:
           plugin_id: date
       defaults:
         sorts: false
+        cache: false
+        relationships: false
+      cache:
+        type: tag
+        options: {  }
+      relationships:
+        field_games_subprovider_export:
+          id: field_games_subprovider_export
+          table: node__field_games_subprovider
+          field: field_games_subprovider_export
+          relationship: none
+          group_type: group
+          admin_label: 'field_games_subprovider: Taxonomy term'
+          required: false
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
@@ -2268,6 +2283,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        cache: false
       style:
         type: optimized_field_serializer
         options:
@@ -2294,7 +2310,16 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      relationships: {  }
+      relationships:
+        field_games_subprovider_export:
+          id: field_games_subprovider_export
+          table: node__field_games_subprovider
+          field: field_games_subprovider_export
+          relationship: none
+          group_type: group
+          admin_label: 'field_games_subprovider: Taxonomy term'
+          required: false
+          plugin_id: standard
       filters:
         type:
           id: type
@@ -2431,6 +2456,9 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      cache:
+        type: tag
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
