@@ -164,6 +164,14 @@ class MyAccountProfileForm extends FormBase
             '#translatable' => TRUE,
         ];
 
+        $form['field_labels_generic_configuration']['documents_tab'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Label for Documents Tab'),
+          '#required' => TRUE,
+          '#default_value' => $this->get('documents_tab'),
+          '#translatable' => TRUE,
+        ];
+
         $form['field_labels_generic_configuration']['primary_label'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Label for primary mobile number'),
