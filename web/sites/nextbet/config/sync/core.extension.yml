@@ -87,6 +87,7 @@ module:
   slider_overlay: 0
   system: 0
   taxonomy: 0
+  nextbet_logo_upload: 0
   taxonomy_unique: 0
   text: 0
   token: 0
@@ -132,7 +133,6 @@ module:
   webcomposer_token: 0
   webcomposer_webform: 0
   webcomposer_right_side_block: 0
-  webcomposer_settings: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
