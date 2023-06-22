@@ -11,7 +11,7 @@ field_name: field_slider_game_code
 entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Game Code'
-description: "<p>iCore game detail to use per provider:</p>\r\n<ul>\r\n<li><strong>Skywind:</strong> GameId</li>\r\n<li><strong>Voidbridge:</strong> ExternalGameId|ProviderProduct <small>(nextbet-arcade, nextbet-fishing, nextbet-games, nextbet-live-dealer)</small></li>\r\n<li><strong>Playtech:</strong> GameId</li>\r\n<li><strong>CQ9:&nbsp;</strong>ExternalGameId|ProviderProduct <small>(nextbet-arcade, nextbet-fish, nextbet-games)</small></li>\r\n<li><strong>Asia Gaming:</strong></li>\r\n<li><strong>Evolution Gaming:&nbsp;</strong></li>\r\n</ul>"
+description: "<p>iCore game detail to use per provider:</p>\r\n<ul>\r\n<li><strong>Skywind:</strong> GameId</li>\r\n<li><strong>Voidbridge:</strong> ExternalGameId|ProviderProduct <small>(nextbet-arcade, nextbet-fishing, nextbet-games, nextbet-live-dealer)</small></li>\r\n<li><strong>Playtech:</strong> GameId</li>\r\n<li><strong>CQ9:&nbsp;</strong>ExternalGameId|ProviderProduct <small>(nextbet-arcade, nextbet-fish, nextbet-games)</small></li>\r\n<li><strong>Asia Gaming:</strong></li>\r\n<li><strong>Evolution Gaming:&nbsp;</strong></li>\r\n<li><strong>JSystem:</strong> ExternalGameId|ProviderProduct <small>(nextbet-arcade, nextbet-games)</small></li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }

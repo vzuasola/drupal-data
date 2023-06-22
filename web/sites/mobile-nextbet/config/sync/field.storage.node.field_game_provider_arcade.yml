@@ -29,6 +29,9 @@ settings:
     -
       value: pgsoft
       label: PGSoft
+    -
+      value: jsystem
+      label: JSystem
   allowed_values_function: ''
 module: options
 locked: false
