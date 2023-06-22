@@ -300,6 +300,22 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
           ],
         ],
       ],
+      'zipcode' => [
+        'name' => 'Zip Code/Postal Code',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Zip Code/Postal Code Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Zip Code/Postal Code field',
+          ],
+          'placeholder' => [
+            '#title' => 'Zip Code/Postal Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder label for Zip Code/Postal Code field',
+          ],
+        ],
+      ],
       'prefecture' => [
         'name' => 'Prefecture',
         'type' => 'textfield',
@@ -345,22 +361,6 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Town/City placeholder label',
             '#type' => 'textfield',
             '#description' => 'Placeholder label for Password field',
-          ],
-        ],
-      ],
-      'zipcode' => [
-        'name' => 'Zip Code/Postal Code',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Zip Code/Postal Code Label',
-            '#type' => 'textfield',
-            '#description' => 'The Label for Zip Code/Postal Code field',
-          ],
-          'placeholder' => [
-            '#title' => 'Zip Code/Postal Code placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'Placeholder label for Zip Code/Postal Code field',
           ],
         ],
       ],
