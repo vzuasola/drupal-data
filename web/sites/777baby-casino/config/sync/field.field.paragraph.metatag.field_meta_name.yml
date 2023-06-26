@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: metatag
 label: Name
 description: 'The attribute name'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
