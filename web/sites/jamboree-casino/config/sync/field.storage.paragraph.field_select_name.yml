@@ -1,0 +1,54 @@
+uuid: 7918cb8d-353c-4973-82e9-3e4b69318aa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_select_name
+field_name: field_select_name
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: title
+      label: Title
+    -
+      value: description
+      label: Description
+    -
+      value: keywords
+      label: Keywords
+    -
+      value: google-site-verification
+      label: 'Google Site Verification'
+    -
+      value: MobileOptimized
+      label: 'Mobile Optimized'
+    -
+      value: HandheldFriendly
+      label: 'Handheld Friendly'
+    -
+      value: robots
+      label: Robots
+    -
+      value: viewport
+      label: Viewport
+    -
+      value: content-language
+      label: 'Content Language'
+    -
+      value: canonical
+      label: Canonical
+    -
+      value: alternate
+      label: 'Alternate Canonical'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
