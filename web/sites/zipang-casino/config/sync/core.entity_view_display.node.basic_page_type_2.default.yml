@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.basic_page_type_2.field_images_open_link
     - field.field.node.basic_page_type_2.field_meta_tag
     - field.field.node.basic_page_type_2.field_parent
+    - field.field.node.basic_page_type_2.field_show_title
     - field.field.node.basic_page_type_2.field_summary
     - node.type.basic_page_type_2
   module:
@@ -39,7 +40,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-      third_party_settings: { }
+      third_party_settings: {  }
   field_button_link:
     weight: 4
     label: hidden
@@ -85,8 +86,18 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: { }
+    third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_show_title:
+    weight: 10
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_summary:
     weight: 0

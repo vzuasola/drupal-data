@@ -1,0 +1,23 @@
+uuid: 7addc207-2390-4b4e-9dce-d5f0880f949b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_title
+    - node.type.basic_page_type_2
+id: node.basic_page_type_2.field_show_title
+field_name: field_show_title
+entity_type: node
+bundle: basic_page_type_2
+label: 'Show title'
+description: 'If this is checked the title of the page will show in front end'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
