@@ -32,3 +32,6 @@ pipeline.log
 .composer-cache
 
 .vscode/
+
+# Ignore Mac specific files and folders
+.DS_Store
