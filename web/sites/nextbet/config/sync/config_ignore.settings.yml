@@ -21,8 +21,10 @@ ignored_config_entities:
   38: 'field.field.*'
   40: 'webcomposer_cache.*'
   42: 'webcomposer_download_page.*'
-  44: registration_config.general_configuration
+  44: 'registration_config.general_configuration'
+  45: 'webcomposer_playtech_integration.wpi_configuration'
   46: 'field.storage.*'
+  47: 'nextbet_logo_upload.logo_upload_configuration'
   48: 'contact_us_config.*'
   50: 'webcomposer_form_manager.form.contact_us_form.*'
   52: '~field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_product_config.*'

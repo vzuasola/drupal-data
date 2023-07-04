@@ -29,6 +29,9 @@ settings:
     -
       value: cq9
       label: 'CQ9 Gaming'
+    -
+      value: jsystem
+      label: JSystem
   allowed_values_function: ''
 module: options
 locked: false
