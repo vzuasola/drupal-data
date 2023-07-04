@@ -106,6 +106,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('List of area codes that will appear beside the mobile number (take note: must be a valid area code or the image will not appear beside the are code)'),
       '#default_value' => $this->get('country_area_codes'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['general']['native_app_title'] = [
