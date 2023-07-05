@@ -829,57 +829,15 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
-        'id2' => [
-          'name' => 'Select ID 2',
-          'type' => 'select',
+        'selfieWithID' => [
+          'name' => 'Selfie with ID',
+          'type' => 'markup',
           'settings' => [
-            'label' => [
-              '#title' => 'Select ID 2 Label',
-              '#type' => 'textfield',
-              '#description' => 'The Label for the Currency field',
-              '#default_value' => 'Select ID 2',
-            ],
-            'placeholder' => [
-              '#title' => 'Select ID 2',
-              '#type' => 'textfield',
-              '#description' => 'Placeholder value for this textfield',
-              '#default_value' => 'Select ID 2',
-            ],
-            'groups' => [
-              '#title' => 'Group Name',
-              '#type' => 'textfield',
-              '#description' => 'Group name for Security Answer 1',
-              '#default_value' => 'Select ID 2',
-            ],
-            'choices' => [
-              '#title' => 'Select ID 2 Choices',
+            'markup' => [
+              '#title' => 'Selfie with ID',
               '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>key|value</small>',
-              '#default_value' => $id2,
-            ],
-          ],
-        ],
-
-        'id_number2' => [
-          'name' => 'ID Number 2',
-          'type' => 'textfield',
-          'settings' => [
-            'label' => [
-              '#title' => 'ID Number 2 Label',
-              '#type' => 'textfield',
-              '#description' => 'The label for the ID Number 2 field',
-              '#default_value' => 'ID Number 2',
-            ],
-            'placeholder' => [
-              '#title' => 'ID Number 2 placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for ID Number 2 field placeholder',
-              '#default_value' => 'ID Number 2',
-            ],
-            'annotation' => [
-              '#title' => 'ID Number 2 Annotation text',
-              '#type' => 'textarea',
-              '#description' => 'field annotation that will be displayed on focus',
+              '#description' => 'Selfie with ID',
+              '#default_value' => '<p class="msw-registration-online-selfie-with-id">Selfie with ID</p>',
             ],
           ],
         ],
