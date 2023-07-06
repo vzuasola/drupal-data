@@ -9,8 +9,8 @@ id: node.basic_page_type_2.field_show_title
 field_name: field_show_title
 entity_type: node
 bundle: basic_page_type_2
-label: 'Show title'
-description: 'If this is checked the title of the page will show in front end'
+label: 'Hide title'
+description: 'If this is checked the title of the page will be hidden in front end'
 required: false
 translatable: false
 default_value:
