@@ -73,6 +73,22 @@ class MyAccountDocumentsForm extends FormBase
             '#default_value' => $this->get('force_enable'),
             '#translatable' => TRUE,
         ];
+        $form['feature_configuration']['jira_project_id'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('JIRA Project ID'),
+            '#required' => FALSE,
+            '#description' => $this->t('Project to create related JIRA tickets. Find it here: https://asianlogic.atlassian.net/rest/api/latest/project/FRDOC'),
+            '#default_value' => $this->get('jira_project_id') ?? '12409',
+            '#translatable' => FALSE,
+        ];
+        $form['feature_configuration']['jira_issue_type_id'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('JIRA Issue Type ID'),
+            '#required' => FALSE,
+            '#description' => $this->t('What type of issue to create. Find it here: https://asianlogic.atlassian.net/rest/api/latest/project/FRDOC'),
+            '#default_value' => $this->get('jira_project_id') ?? '10900',
+            '#translatable' => FALSE,
+        ];
 
         $form['feature_configuration']['label'] = [
             '#type' => 'textfield',
