@@ -10,7 +10,7 @@ field_name: field_external_game_id
 entity_type: node
 bundle: games_live_dealer
 label: 'External Game ID'
-description: ''
+description: "<p>External Game Id format:</p>\r\n<ul>\r\n<li><strong>Skywind:</strong> ExternalGameId</li>\r\n<li><strong>JSystem:</strong> ExternalGameId</li>\r\n</ul>"
 required: false
 translatable: true
 default_value: {  }
