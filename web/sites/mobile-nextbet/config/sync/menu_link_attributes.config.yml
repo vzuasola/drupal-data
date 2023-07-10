@@ -13,6 +13,11 @@ attributes:
   svg:
     label: ''
     description: ''
+  icon:
+    label: ''
+    description: ''
+    type: managed_file
+    file_validate_extensions: 'svg'
   target:
     label: ''
     description: ''
