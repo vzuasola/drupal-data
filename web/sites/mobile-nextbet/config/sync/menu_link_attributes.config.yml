@@ -18,6 +18,8 @@ attributes:
     description: ''
     type: managed_file
     file_validate_extensions: 'svg'
+    multiple: false
+    upload_location: 'public://icons/'
   target:
     label: ''
     description: ''
