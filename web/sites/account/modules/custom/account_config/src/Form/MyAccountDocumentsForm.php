@@ -86,7 +86,7 @@ class MyAccountDocumentsForm extends FormBase
             '#title' => $this->t('JIRA Issue Type ID'),
             '#required' => FALSE,
             '#description' => $this->t('What type of issue to create. Find it here: https://asianlogic.atlassian.net/rest/api/latest/project/FRDOC'),
-            '#default_value' => $this->get('jira_project_id') ?? '10900',
+            '#default_value' => $this->get('jira_issue_type_id') ?? '10900',
             '#translatable' => FALSE,
         ];
 
