@@ -23,7 +23,7 @@ dependencies:
 _core:
   default_config_hash: e13FURpbRTlTgCaNvMklFBzWIRjje_0zN0TdXzpGVwE
 id: game_list
-label: 'Game List (Desktop)'
+label: 'Game List'
 module: views
 description: ''
 tag: ''
