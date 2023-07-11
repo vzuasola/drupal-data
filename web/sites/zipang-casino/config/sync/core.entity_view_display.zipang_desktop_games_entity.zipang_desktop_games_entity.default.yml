@@ -3,12 +3,14 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.feeds_item
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_all_games_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_arcade_game_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_arcade_game_filter
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_free_play
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game_mobile
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_external_game_id
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_code
@@ -38,7 +40,7 @@ bundle: zipang_desktop_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 19
+    weight: 21
     label: above
     settings:
       link: true
@@ -46,7 +48,7 @@ content:
     type: entity_reference_label
     region: content
   field_arcade_game_category:
-    weight: 14
+    weight: 16
     label: above
     settings:
       link: true
@@ -54,7 +56,7 @@ content:
     type: entity_reference_label
     region: content
   field_arcade_game_filter:
-    weight: 15
+    weight: 17
     label: above
     settings:
       link: true
@@ -62,14 +64,14 @@ content:
     type: entity_reference_label
     region: content
   field_client_type:
-    weight: 8
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_enable_free_play:
-    weight: 4
+    weight: 5
     label: above
     settings:
       format: default
@@ -79,7 +81,17 @@ content:
     type: boolean
     region: content
   field_enable_game:
-    weight: 7
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_enable_game_mobile:
+    weight: 9
     label: above
     settings:
       format: default
@@ -89,7 +101,7 @@ content:
     type: boolean
     region: content
   field_external_game_id:
-    weight: 21
+    weight: 23
     label: above
     settings:
       link_to_entity: false
@@ -97,7 +109,7 @@ content:
     type: string
     region: content
   field_game_category:
-    weight: 1
+    weight: 2
     label: above
     settings:
       link: true
@@ -105,7 +117,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_code:
-    weight: 5
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -113,7 +125,7 @@ content:
     type: string
     region: content
   field_game_code_icore:
-    weight: 12
+    weight: 14
     label: above
     settings:
       link_to_entity: false
@@ -121,37 +133,13 @@ content:
     type: string
     region: content
   field_game_description:
-    weight: 13
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_game_filter:
-    weight: 9
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_game_filter_games:
-    weight: 10
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_game_icon_label:
-    weight: 18
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_game_provider:
     weight: 11
     label: above
     settings:
@@ -159,8 +147,32 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_game_filter_games:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_icon_label:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_game_provider:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_game_tag:
-    weight: 6
+    weight: 7
     label: above
     settings:
       link: true
@@ -168,7 +180,7 @@ content:
     type: entity_reference_label
     region: content
   field_game_thumbnail:
-    weight: 3
+    weight: 4
     label: above
     settings:
       image_style: ''
@@ -177,7 +189,7 @@ content:
     type: image
     region: content
   field_game_title:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -185,7 +197,7 @@ content:
     type: string
     region: content
   field_game_title_icon:
-    weight: 17
+    weight: 19
     label: above
     settings:
       image_style: ''
@@ -194,7 +206,7 @@ content:
     type: image
     region: content
   field_game_type:
-    weight: 16
+    weight: 18
     label: above
     settings:
       link: true
@@ -202,7 +214,7 @@ content:
     type: entity_reference_label
     region: content
   field_provider_product:
-    weight: 20
+    weight: 22
     label: above
     settings:
       link: true
@@ -212,7 +224,7 @@ content:
   name:
     label: above
     type: string
-    weight: -4
+    weight: 0
     region: content
     settings:
       link_to_entity: false
@@ -220,9 +232,10 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  feeds_item: true
   langcode: true
