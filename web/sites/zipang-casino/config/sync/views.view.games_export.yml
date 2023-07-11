@@ -1634,8 +1634,8 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      path: desktop-games-export/desktop-games.csv
-      filename: desktop-games.csv
+      path: desktop-games-export/games.csv
+      filename: games.csv
       automatic_download: true
       store_in_public_file_directory: null
       redirect_to_display: none
@@ -1681,7 +1681,7 @@ display:
       path: games-export
       menu:
         type: normal
-        title: 'Desktop Games Export'
+        title: 'Games Export'
         description: ''
         expanded: false
         parent: system.admin_config_content
