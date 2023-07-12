@@ -93,6 +93,16 @@ function menu_link_attributes_form_menu_link_content_form_alter(array &$form, Fo
       '#default_value' => isset($menu_link_options[$attributes_key][$attribute_formatted]) ? $menu_link_options[$attributes_key][$attribute_formatted] : '',
     ];
 
+    // Fill options if type is "managed_file".
+    if ($type === 'managed_file') {
+      if (!empty($info['upload_location'])) {
+        $form['options']['attributes'][$attribute]['#upload_location'] = $info['upload_location'];
+      }
+      if (!empty($info['file_validate_extensions'])) {
+        $form['options']['attributes'][$attribute]['#upload_validators']['file_validate_extensions'] = [$info['file_validate_extensions']];
+      }
+    }
+
     // Fill options if select list.
     if ($type == 'select') {
       $form['options']['attributes'][$attribute]['#empty_option'] = t('- Select -');
