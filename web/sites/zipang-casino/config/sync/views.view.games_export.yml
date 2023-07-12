@@ -401,7 +401,7 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: default
+            format: boolean
             format_custom_true: ''
             format_custom_false: ''
           group_column: value
@@ -466,7 +466,7 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: default
+            format: boolean
             format_custom_true: ''
             format_custom_false: ''
           group_column: value
@@ -531,7 +531,7 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: default
+            format: boolean
             format_custom_true: ''
             format_custom_false: ''
           group_column: value
@@ -594,7 +594,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: list_default
+          type: list_key
           settings: {  }
           group_column: value
           group_columns: {  }
