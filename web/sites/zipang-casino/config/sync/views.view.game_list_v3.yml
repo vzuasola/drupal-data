@@ -1504,6 +1504,9 @@ display:
             field_provider_product_export:
               alias: provider_product
               raw_output: false
+            field_enable_game_mobile:
+              alias: enable_game_mobile
+              raw_output: false
       fields:
         id:
           id: id
@@ -3119,9 +3122,9 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
+            format: custom
+            format_custom_true: 'true'
+            format_custom_false: 'false'
           group_column: value
           group_columns: {  }
           group_rows: true
