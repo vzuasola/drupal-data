@@ -3,22 +3,17 @@ langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.zipang_desktop_games_entity.field_all_games_category
-    - field.storage.zipang_desktop_games_entity.field_arcade_game_category
-    - field.storage.zipang_desktop_games_entity.field_arcade_game_filter
     - field.storage.zipang_desktop_games_entity.field_client_type
     - field.storage.zipang_desktop_games_entity.field_enable_free_play
     - field.storage.zipang_desktop_games_entity.field_enable_game
     - field.storage.zipang_desktop_games_entity.field_enable_game_mobile
     - field.storage.zipang_desktop_games_entity.field_external_game_id
-    - field.storage.zipang_desktop_games_entity.field_game_category
     - field.storage.zipang_desktop_games_entity.field_game_code
     - field.storage.zipang_desktop_games_entity.field_game_code_icore
-    - field.storage.zipang_desktop_games_entity.field_game_filter
-    - field.storage.zipang_desktop_games_entity.field_game_filter_games
     - field.storage.zipang_desktop_games_entity.field_game_provider
-    - field.storage.zipang_desktop_games_entity.field_game_thumbnail
+    - field.storage.zipang_desktop_games_entity.field_game_tag
     - field.storage.zipang_desktop_games_entity.field_game_title
+    - field.storage.zipang_desktop_games_entity.field_game_type
     - field.storage.zipang_desktop_games_entity.field_provider_product
     - system.menu.admin
     - taxonomy.vocabulary.game_provider
@@ -26,7 +21,6 @@ dependencies:
     - 'taxonomy_term:game_provider:ee849833-c29f-4fdf-b64c-e1358c622f56'
   module:
     - csv_serialization
-    - image
     - options
     - rest
     - serialization
@@ -110,7 +104,7 @@ display:
           field: field_game_title
           relationship: none
           group_type: group
-          admin_label: 'Game Title'
+          admin_label: ''
           label: 'Game Title'
           exclude: false
           alter:
@@ -173,7 +167,7 @@ display:
           field: field_game_code
           relationship: none
           group_type: group
-          admin_label: 'Game Code'
+          admin_label: ''
           label: 'Game Code'
           exclude: false
           alter:
@@ -236,959 +230,8 @@ display:
           field: field_external_game_id
           relationship: none
           group_type: group
-          admin_label: 'External Game ID'
-          label: 'External Game ID'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_enable_game:
-          id: field_enable_game
-          table: zipang_desktop_games_entity__field_enable_game
-          field: field_enable_game
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Enable Game Desktop'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_enable_game_mobile:
-          id: field_enable_game_mobile
-          table: zipang_desktop_games_entity__field_enable_game_mobile
-          field: field_enable_game_mobile
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Enable Game Mobile'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_all_games_category:
-          id: field_all_games_category
-          table: zipang_desktop_games_entity__field_all_games_category
-          field: field_all_games_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'All Games Category'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_arcade_game_category:
-          id: field_arcade_game_category
-          table: zipang_desktop_games_entity__field_arcade_game_category
-          field: field_arcade_game_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Arcade Game Category'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_arcade_game_filter:
-          id: field_arcade_game_filter
-          table: zipang_desktop_games_entity__field_arcade_game_filter
-          field: field_arcade_game_filter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Arcade Game Filter'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_client_type:
-          id: field_client_type
-          table: zipang_desktop_games_entity__field_client_type
-          field: field_client_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Client Type'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_enable_free_play:
-          id: field_enable_free_play
-          table: zipang_desktop_games_entity__field_enable_free_play
-          field: field_enable_free_play
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Enable Free Play'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_external_game_id_1:
-          id: field_external_game_id_1
-          table: zipang_desktop_games_entity__field_external_game_id
-          field: field_external_game_id
-          relationship: none
-          group_type: group
           admin_label: ''
           label: 'External Game ID'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_category:
-          id: field_game_category
-          table: zipang_desktop_games_entity__field_game_category
-          field: field_game_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Category'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_code_1:
-          id: field_game_code_1
-          table: zipang_desktop_games_entity__field_game_code
-          field: field_game_code
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Code'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_filter:
-          id: field_game_filter
-          table: zipang_desktop_games_entity__field_game_filter
-          field: field_game_filter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Filter (casino)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_filter_games:
-          id: field_game_filter_games
-          table: zipang_desktop_games_entity__field_game_filter_games
-          field: field_game_filter_games
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Filter (games)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_provider:
-          id: field_game_provider
-          table: zipang_desktop_games_entity__field_game_provider
-          field: field_game_provider
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Provider'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_thumbnail:
-          id: field_game_thumbnail
-          table: zipang_desktop_games_entity__field_game_thumbnail
-          field: field_game_thumbnail
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Thumbnail'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: ''
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_title_1:
-          id: field_game_title_1
-          table: zipang_desktop_games_entity__field_game_title
-          field: field_game_title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Title'
           exclude: false
           alter:
             alter_text: false
@@ -1307,14 +350,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        name:
-          id: name
-          table: zipang_desktop_games_entity_field_data
-          field: name
+        field_enable_game:
+          id: field_enable_game
+          table: zipang_desktop_games_entity__field_enable_game
+          field: field_enable_game
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: 'Enable Game Desktop'
           exclude: false
           alter:
             alter_text: false
@@ -1356,9 +399,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: boolean
           settings:
-            link_to_entity: false
+            format: boolean
+            format_custom_true: ''
+            format_custom_false: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1369,8 +414,387 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: zipang_desktop_games_entity
-          entity_field: name
+          plugin_id: field
+        field_enable_game_mobile:
+          id: field_enable_game_mobile
+          table: zipang_desktop_games_entity__field_enable_game_mobile
+          field: field_enable_game_mobile
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Enable Game Mobile'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: boolean
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_enable_free_play:
+          id: field_enable_free_play
+          table: zipang_desktop_games_entity__field_enable_free_play
+          field: field_enable_free_play
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Enable Free Play'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: boolean
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_client_type:
+          id: field_client_type
+          table: zipang_desktop_games_entity__field_client_type
+          field: field_client_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Client Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_type:
+          id: field_game_type
+          table: zipang_desktop_games_entity__field_game_type
+          field: field_game_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_provider:
+          id: field_game_provider
+          table: zipang_desktop_games_entity__field_game_provider
+          field: field_game_provider
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Provider'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_tag:
+          id: field_game_tag
+          table: zipang_desktop_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Tag'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           plugin_id: field
         field_provider_product:
           id: field_provider_product
@@ -1593,22 +1017,17 @@ display:
         - user
         - user.permissions
       tags:
-        - 'config:field.storage.zipang_desktop_games_entity.field_all_games_category'
-        - 'config:field.storage.zipang_desktop_games_entity.field_arcade_game_category'
-        - 'config:field.storage.zipang_desktop_games_entity.field_arcade_game_filter'
         - 'config:field.storage.zipang_desktop_games_entity.field_client_type'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_free_play'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game_mobile'
         - 'config:field.storage.zipang_desktop_games_entity.field_external_game_id'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_category'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_code'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_code_icore'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_filter'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_filter_games'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_provider'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_thumbnail'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_tag'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_title'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_type'
         - 'config:field.storage.zipang_desktop_games_entity.field_provider_product'
   data_export_1:
     display_plugin: data_export
@@ -1634,8 +1053,8 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      path: desktop-games-export/desktop-games.csv
-      filename: desktop-games.csv
+      path: desktop-games-export/games.csv
+      filename: games.csv
       automatic_download: true
       store_in_public_file_directory: null
       redirect_to_display: none
@@ -1644,6 +1063,10 @@ display:
       export_method: batch
       export_batch_size: 50
       redirect_path: '/[view:url] '
+      row:
+        type: data_field
+        options:
+          field_options: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1654,22 +1077,17 @@ display:
         - user
         - user.permissions
       tags:
-        - 'config:field.storage.zipang_desktop_games_entity.field_all_games_category'
-        - 'config:field.storage.zipang_desktop_games_entity.field_arcade_game_category'
-        - 'config:field.storage.zipang_desktop_games_entity.field_arcade_game_filter'
         - 'config:field.storage.zipang_desktop_games_entity.field_client_type'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_free_play'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game_mobile'
         - 'config:field.storage.zipang_desktop_games_entity.field_external_game_id'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_category'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_code'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_code_icore'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_filter'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_filter_games'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_provider'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_thumbnail'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_tag'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_title'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_type'
         - 'config:field.storage.zipang_desktop_games_entity.field_provider_product'
   page_1:
     display_plugin: page
@@ -1681,7 +1099,7 @@ display:
       path: games-export
       menu:
         type: normal
-        title: 'Desktop Games Export'
+        title: 'Games Export'
         description: ''
         expanded: false
         parent: system.admin_config_content
@@ -1697,20 +1115,15 @@ display:
         - user
         - user.permissions
       tags:
-        - 'config:field.storage.zipang_desktop_games_entity.field_all_games_category'
-        - 'config:field.storage.zipang_desktop_games_entity.field_arcade_game_category'
-        - 'config:field.storage.zipang_desktop_games_entity.field_arcade_game_filter'
         - 'config:field.storage.zipang_desktop_games_entity.field_client_type'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_free_play'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game_mobile'
         - 'config:field.storage.zipang_desktop_games_entity.field_external_game_id'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_category'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_code'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_code_icore'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_filter'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_filter_games'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_provider'
-        - 'config:field.storage.zipang_desktop_games_entity.field_game_thumbnail'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_tag'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_title'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_type'
         - 'config:field.storage.zipang_desktop_games_entity.field_provider_product'
