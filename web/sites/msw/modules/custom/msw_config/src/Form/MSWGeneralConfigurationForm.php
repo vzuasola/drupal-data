@@ -205,13 +205,6 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_upload_img'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Upload Image 1'),
-      '#default_value' => $this->get('enable_register_online_upload_img'),
-      '#translatable' => TRUE,
-    ];
-
     $form['online_register_setting']['register']['reg_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Reg API v3 URL'),
@@ -268,12 +261,21 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#required' => FALSE,
     ];
 
-    $form['online_register_setting']['register']['success_message'] = [
+    $form['online_register_setting']['register']['video_call_URL'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Success Message'),
-      '#default_value' => $this->get('success_message'),
-      '#description' => $this->t('Success Message'),
+      '#title' => $this->t('Customer Support Video Call'),
+      '#default_value' => $this->get('video_call_URL'),
+      '#description' => $this->t('Customer Support Video Call'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $body_content = $this->get('success_message');
+    $form['online_register_setting']['register']['success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
       '#translatable' => TRUE,
     ];
 

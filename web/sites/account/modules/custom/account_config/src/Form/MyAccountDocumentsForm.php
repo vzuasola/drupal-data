@@ -43,6 +43,7 @@ class MyAccountDocumentsForm extends FormBase
         ];
 
         $this->featureConfig($form);
+        $this->documentStorageConfig($form);
 
         return $form;
     }
@@ -73,6 +74,22 @@ class MyAccountDocumentsForm extends FormBase
             '#default_value' => $this->get('force_enable'),
             '#translatable' => TRUE,
         ];
+        $form['feature_configuration']['jira_project_id'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('JIRA Project ID'),
+            '#required' => FALSE,
+            '#description' => $this->t('Project to create related JIRA tickets. Find it here: https://asianlogic.atlassian.net/rest/api/latest/project/FRDOC'),
+            '#default_value' => $this->get('jira_project_id') ?? '12409',
+            '#translatable' => FALSE,
+        ];
+        $form['feature_configuration']['jira_issue_type_id'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('JIRA Issue Type ID'),
+            '#required' => FALSE,
+            '#description' => $this->t('What type of issue to create. Find it here: https://asianlogic.atlassian.net/rest/api/latest/project/FRDOC'),
+            '#default_value' => $this->get('jira_issue_type_id') ?? '10900',
+            '#translatable' => FALSE,
+        ];
 
         $form['feature_configuration']['label'] = [
             '#type' => 'textfield',
@@ -81,6 +98,32 @@ class MyAccountDocumentsForm extends FormBase
             '#description' => $this->t('The label to display on the tab'),
             '#default_value' => $this->get('label') ?? 'Documents',
             '#translatable' => TRUE,
+        ];
+    }
+
+    private function documentStorageConfig(&$form)
+    {
+        $form['document_storage_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Document Storage Configuration',
+            '#open' => FALSE,
+            '#group' => 'documents',
+        ];
+
+        $form['document_storage_configuration']['folder_id'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Google Drive Folder ID'),
+            '#required' => TRUE,
+            '#description' => $this->t('Folder ID where documents will be stored'),
+            '#default_value' => $this->get('folder_id'),
+        ];
+
+        $form['document_storage_configuration']['brand'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Brand Name'),
+            '#required' => TRUE,
+            '#description' => $this->t('Brand Name that will be concatenated to the file name'),
+            '#default_value' => $this->get('brand'),
         ];
     }
 }
