@@ -1,12 +1,12 @@
-uuid: a960d744-9f96-41bb-8fff-0ea0e31b10de
+uuid: 6d33f1e1-e5ba-4196-8a83-6c63c185fd4d
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_ri
-field_name: field_ri
+id: node.field_ribbon_label
+field_name: field_ribbon_label
 entity_type: node
 type: entity_reference
 settings:

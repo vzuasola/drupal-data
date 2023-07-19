@@ -24,8 +24,8 @@ dependencies:
     - field.field.node.promotion.field_promotion_link_target
     - field.field.node.promotion.field_promotion_summary
     - field.field.node.promotion.field_promotion_summary_link
-    - field.field.node.promotion.field_ri
     - field.field.node.promotion.field_ribbon_background_color
+    - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
@@ -196,7 +196,7 @@ third_party_settings:
       label: 'Promotion Thumbnail ( summary page )'
     group_ribbon_configuration:
       children:
-        - field_ri
+        - field_ribbon_label
         - field_ribbon_background_color
         - field_text_color
       parent_name: ''
@@ -371,20 +371,20 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_ri:
-    weight: 28
+  field_ribbon_background_color:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_ribbon_label:
+    weight: 30
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_ribbon_background_color:
-    weight: 29
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
     region: content
   field_right_side_block_content:
     weight: 33
@@ -427,7 +427,7 @@ content:
     type: image_image
     region: content
   field_text_color:
-    weight: 30
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
