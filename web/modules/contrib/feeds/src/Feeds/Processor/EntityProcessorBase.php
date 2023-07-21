@@ -121,9 +121,33 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
       return;
     }
 
+    // Get the language code and check if it exists in the system.
+    $langcode = null;
+    foreach ($this->feedType->getMappings() as $delta => $mapping) {
+      if ($mapping['target'] == 'langcode') {
+        $languages = array_keys(\Drupal::languageManager()->getLanguages());
+        $value = $item->get($mapping['map']['value']);
+        $langcode = (is_array($value)) ? $value[0] : $value;
+        
+        if (!in_array($langcode, $languages)) {
+          $state->failed++;
+          $state->setMessage('Provided language is not installed.', 'warning');
+          return;
+        }
+        break;
+      }
+    }
     // Delay building a new entity until necessary.
     if ($existing_entity_id) {
       $entity = $this->storageController->load($existing_entity_id);
+
+      if ($langcode != null) {
+        if (!$entity->hasTranslation($langcode)) {
+          $entity = $entity->addTranslation($langcode, ['title' => $entity->title->value]);
+        } else {
+          $entity = $entity->getTranslation($langcode);
+        }
+      }
     }
 
     $hash = $this->hash($item);
@@ -137,7 +161,7 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
 
     // Build a new entity.
     if (!$existing_entity_id) {
-      $entity = $this->newEntity($feed);
+      $entity = $this->newEntity($feed, $langcode);
     }
 
     try {
@@ -385,8 +409,11 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
   /**
    * {@inheritdoc}
    */
-  protected function newEntity(FeedInterface $feed) {
+  protected function newEntity(FeedInterface $feed, $langcode = null) {
     $values = $this->configuration['values'];
+    if ($langcode != null) {
+      $values['langcode'] = $langcode;
+    }
     $entity = $this->storageController->create($values);
     $entity->enforceIsNew();
 
@@ -780,6 +807,10 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
         // Skip feeds item as this field gets default values before mapping.
         continue;
       }
+      if ($mapping['target'] == 'langcode') {
+        // Skip feeds item as this field gets default values before mapping.
+        continue;
+      }
       unset($entity->{$mapping['target']});
     }
 
@@ -790,6 +821,10 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
 
       foreach ($mapping['map'] as $column => $source) {
 
+        if ($target == 'langcode') {
+          // Skip feeds item as this field gets default values before mapping.
+          continue;
+        }
         if ($source === '') {
           // Skip empty sources.
           continue;
@@ -823,6 +858,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
 
     // Set target values.
     foreach ($mappings as $delta => $mapping) {
+      if ($mapping['target'] == 'langcode') {
+        continue;
+      }
       $plugin = $this->feedType->getTargetPlugin($delta);
       if (isset($field_values[$mapping['target']])) {
         $plugin->setTarget($feed, $entity, $mapping['target'], $field_values[$mapping['target']]);
