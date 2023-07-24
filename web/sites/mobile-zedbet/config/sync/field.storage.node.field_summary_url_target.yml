@@ -1,0 +1,24 @@
+uuid: ebb04cb3-497a-466b-b0a0-214fc6b9d5e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_summary_url_target
+field_name: field_summary_url_target
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
