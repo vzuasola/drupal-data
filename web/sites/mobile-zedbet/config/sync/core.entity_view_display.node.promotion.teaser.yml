@@ -26,4 +26,46 @@ content:
     weight: 100
     region: content
 hidden:
+  field_banner_image: true
+  field_banner_link: true
+  field_banner_link_target: true
+  field_enable_disable_ribbon_tag: true
+  field_field_enable_sticky_post: true
+  field_field_enable_sticky_post2: true
+  field_field_enable_sticky_pre: true
+  field_field_enable_sticky_pre2: true
+  field_hide_countdown: true
+  field_hide_promotion: true
+  field_mark_as_featured: true
+  field_post_banner_image: true
+  field_post_banner_link: true
+  field_post_banner_link_target: true
+  field_post_body: true
+  field_post_summary_blurb: true
+  field_post_thumbnail_image: true
+  field_product_category: true
+  field_promo_availability: true
+  field_ribbon_background_color: true
+  field_ribbon_label: true
+  field_ribbon_text_color: true
+  field_sticky_background_post: true
+  field_sticky_background_post2: true
+  field_sticky_background_pre: true
+  field_sticky_background_pre2: true
+  field_sticky_link_target_post: true
+  field_sticky_link_target_post2: true
+  field_sticky_link_target_pre: true
+  field_sticky_link_target_pre2: true
+  field_sticky_text_color_post: true
+  field_sticky_text_color_post2: true
+  field_sticky_text_color_pre: true
+  field_sticky_text_color_pre2: true
+  field_sticky_url_post: true
+  field_sticky_url_post2: true
+  field_sticky_url_pre: true
+  field_sticky_url_pre2: true
+  field_summary_blurb: true
+  field_summary_url: true
+  field_summary_url_target: true
+  field_thumbnail_image: true
   langcode: true
