@@ -1,0 +1,20 @@
+uuid: 36aa3bf5-d014-4499-8e43-628a2aa16576
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - node
+id: node.field_ribbon_text_color
+field_name: field_ribbon_text_color
+entity_type: node
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

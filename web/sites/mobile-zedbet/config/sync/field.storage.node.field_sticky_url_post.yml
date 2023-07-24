@@ -1,0 +1,19 @@
+uuid: 5d3bf3b0-8118-46d6-9bbc-181ad0485a5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_sticky_url_post
+field_name: field_sticky_url_post
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
