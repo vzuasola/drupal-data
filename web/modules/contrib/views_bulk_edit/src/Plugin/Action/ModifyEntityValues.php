@@ -473,6 +473,14 @@ class ModifyEntityValues extends ViewsBulkOperationsActionBase implements Contai
     $type_id = $entity->getEntityTypeId();
     $bundle = $entity->bundle();
 
+    if ($entity) {
+      // Get the language code of the current URL
+      $entityLangcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+      // Load the translation
+      $entity = $entity->getTranslation($entityLangcode);
+    }
+
     $result = $this->t('Skip (field is not present on this bundle)');
     if (isset($this->configuration[$type_id][$bundle])) {
       foreach ($this->configuration[$type_id][$bundle] as $field => $value) {
