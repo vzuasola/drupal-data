@@ -40,14 +40,6 @@ class LiveDealerForm extends FormBase {
       '#open' => TRUE,
     ];
 
-    $form['general']['lobby_infinite_scroll'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
-      '#default_value' => $this->get('lobby_infinite_scroll'),
-      '#description' => 'Enable lazy loading for games lobby.',
-      '#translatable' => TRUE,
-    ];
-
     $form['general']['more_provider_drawer'] = [
       '#type' => 'textfield',
       '#title' => $this->t('More'),
@@ -104,6 +96,21 @@ class LiveDealerForm extends FormBase {
       '#title' => $this->t('Games maintenance text'),
       '#default_value' => $this->get('games_maintenance_text'),
       '#translatable' => true,
+    ];
+
+    $form['general']['lobby_infinite_scroll'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
+      '#default_value' => $this->get('lobby_infinite_scroll'),
+      '#description' => 'Enable lazy loading for games lobby.',
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['launch_via_iframe'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable launching games via IFrame'),
+      '#default_value' => $this->get('launch_via_iframe'),
+      '#description' => 'Enable launching games via IFrame.',
     ];
     return $form;
   }

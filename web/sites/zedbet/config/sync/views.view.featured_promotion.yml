@@ -32,9 +32,8 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -273,7 +272,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }
   page_1:
     display_plugin: page
@@ -588,9 +586,8 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
     cache_metadata:
       max-age: -1
@@ -599,5 +596,4 @@ display:
         - 'languages:language_interface'
         - request_format
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }

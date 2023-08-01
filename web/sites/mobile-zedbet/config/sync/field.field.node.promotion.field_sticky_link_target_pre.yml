@@ -1,0 +1,21 @@
+uuid: 617a9b85-15fa-418a-afda-555a3fd04078
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_link_target_pre
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_sticky_link_target_pre
+field_name: field_sticky_link_target_pre
+entity_type: node
+bundle: promotion
+label: 'Sticky Link Target PRE'
+description: 'Please use " - None - " for Same Window behavior.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

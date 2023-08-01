@@ -218,3 +218,7 @@ mappings:
       value: external_game_id
     unique:
       value: '1'
+  -
+    target: langcode
+    map:
+      value: 'parent:field_language'
