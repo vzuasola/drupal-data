@@ -359,6 +359,12 @@ END;
       'name' => 'Footer Instructions Markup',
       'type' => 'markup',
       'settings' => [
+        'show_footer_markup' => [
+          '#title' => 'Show footer instructions markup',
+          '#type' => 'checkbox',
+          '#default_value' => true,
+          '#translatable' => true,
+        ],
         'markup' => [
           '#title' => 'Footer Instructions',
           '#type' => 'textarea',
