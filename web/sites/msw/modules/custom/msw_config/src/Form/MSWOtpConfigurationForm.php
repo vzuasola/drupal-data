@@ -169,14 +169,14 @@ class MSWOtpConfigurationForm extends FormBase
             '#type' => 'textfield',
             '#title' => $this->t('Submit button text'),
             '#description' => $this->t('Submit button text label'),
-            '#default_value' => $this->get('security_submit_button') ?? 'Submit',
+            '#default_value' => $this->get('security_question_submit_button') ?? 'Submit',
         ];
 
         $form['security_config']['security_question_cancel_button'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Cancel button text'),
             '#description' => $this->t('Cancel button text label'),
-            '#default_value' => $this->get('security_cancel_button') ?? 'Cancel',
+            '#default_value' => $this->get('security_question_cancel_button') ?? 'Cancel',
         ];
 
         $form['security_config']['security_question_error_message'] = [
