@@ -40,14 +40,6 @@ class ArcadeForm extends FormBase {
       '#open' => TRUE,
     ];
 
-    $form['general']['arcade_lobby_infinite_scroll'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
-      '#default_value' => $this->get('arcade_lobby_infinite_scroll'),
-      '#description' => 'Enable lazy loading for games lobby.',
-      '#translatable' => false,
-    ];
-
     $form['general']['more_provider_drawer'] = [
       '#type' => 'textfield',
       '#title' => $this->t('More'),
@@ -97,6 +89,21 @@ class ArcadeForm extends FormBase {
         '#title' => $this->t('Instant Transfer URL'),
         '#default_value' => $this->get('transfer_link'),
         '#translatable' => true,
+      ];
+
+      $form['general']['arcade_lobby_infinite_scroll'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
+        '#default_value' => $this->get('arcade_lobby_infinite_scroll'),
+        '#description' => 'Enable lazy loading for games lobby.',
+        '#translatable' => false,
+      ];
+
+      $form['general']['launch_via_iframe'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Enable launching games via IFrame'),
+        '#default_value' => $this->get('launch_via_iframe'),
+        '#description' => 'Enable launching games via IFrame.',
       ];
 
     return $form;
