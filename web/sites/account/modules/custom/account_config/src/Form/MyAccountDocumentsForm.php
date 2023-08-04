@@ -100,11 +100,12 @@ class MyAccountDocumentsForm extends FormBase
             '#translatable' => TRUE,
         ];
         $form['feature_configuration']['submit_error'] = [
-            '#type' => 'textfield',
+            '#type' => 'textarea',
             '#title' => $this->t('Submission Error'),
-            '#required' => FALSE,
-            '#description' => $this->t('Error shown if form validation fails during submission'),
-            '#default_value' => $this->get('submit_error') ?? 'Kindly upload all requested documents and fill out all mandatory (*) fields.',
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Error shown if form validation fails during submission, <small>e.g.</small> failure|<i>Generic Error Message.</i>'),
+            '#default_value' => $this->get('submit_error'),
             '#translatable' => TRUE,
         ];
         $form['feature_configuration']['submit_success'] = [
