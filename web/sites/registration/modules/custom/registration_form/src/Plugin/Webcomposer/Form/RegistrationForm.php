@@ -176,6 +176,16 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'List of area codes that will be validated upon submission in which it had' .
             ' different min and max character allowed per country code and custom message validation for it',
           ],
+          'additional_country_code_validation' => [
+            '#title' => 'Additional Custom Validation for +55 Country Code',
+            '#type' => 'textfield',
+            '#description' => 'e.g.(55|9|0|error message) Area code that will be validated then the third number must be a 9 and the fourth number cannot be 0 and error message',
+          ],
+          'list_states_codes_accept' => [
+            '#title' => 'List of states codes accept for +55 Country Code',
+            '#type' => 'textarea',
+            '#description' => 'e.g.(34,35,37,38) The first two numbers must be states code.',
+          ],
         ],
       ],
 
