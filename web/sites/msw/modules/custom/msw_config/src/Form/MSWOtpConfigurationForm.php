@@ -196,7 +196,7 @@ class MSWOtpConfigurationForm extends FormBase
         $form['security_config']['security_question_expiry_duration'] = [
             '#type' => 'number',
             '#title' => $this->t('Duration of player being locked'),
-            '#description' => $this->t('Duration of player being locked out when reached the maximum failed attempts. (per/minute)'),
+            '#description' => $this->t('Duration of player being locked out when reached the maximum failed attempts. (per/seconds)'),
             '#default_value' => $this->get('security_question_expiry_duration') ?? 60,
         ];
 
