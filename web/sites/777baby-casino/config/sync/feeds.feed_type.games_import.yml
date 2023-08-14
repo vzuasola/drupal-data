@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type
-    - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_free_play
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_external_game_id
@@ -74,8 +73,8 @@ custom_sources:
     value: 'Game Type'
     machine_name: game_type
   icore_game_code:
-    label: 'iCore Game Code'
-    value: 'iCore Game Code'
+    label: 'iCore Game Code (refer to iCore game detail)'
+    value: 'iCore Game Code (refer to iCore game detail)'
     machine_name: icore_game_code
   provider_product:
     label: 'Provider Product'
@@ -85,17 +84,15 @@ custom_sources:
     label: 'External Game ID'
     value: 'External Game ID'
     machine_name: external_game_id
+  game_code:
+    label: 'Game Code'
+    value: 'Game Code'
+    machine_name: game_code
 mappings:
   -
     target: field_game_title
     map:
       value: game_title
-    unique:
-      value: '1'
-  -
-    target: field_game_code
-    map:
-      value: ''
     unique:
       value: '1'
   -
@@ -110,10 +107,6 @@ mappings:
     target: field_client_type
     map:
       value: client_type
-  -
-    target: field_enable_free_play
-    map:
-      value: ''
   -
     target: field_game_provider
     map:
@@ -136,12 +129,6 @@ mappings:
       reference_by: name
       autocreate: false
   -
-    target: field_game_code_icore
-    map:
-      value: icore_game_code
-    unique:
-      value: '1'
-  -
     target: field_provider_product
     map:
       target_id: provider_product
@@ -158,3 +145,14 @@ mappings:
     target: langcode
     map:
       value: 'parent:field_language'
+  -
+    target: field_game_code
+    map:
+      value: game_code
+    unique:
+      value: '1'
+  -
+    target: field_game_code_icore
+    map:
+      value: icore_game_code
+    unique: {  }
