@@ -40,14 +40,6 @@ class GTSForm extends FormBase {
       '#open' => TRUE,
     ];
 
-    $form['general']['gts_lobby_infinite_scroll'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
-      '#default_value' => $this->get('gts_lobby_infinite_scroll'),
-      '#description' => 'Enable lazy loading for games lobby.',
-      '#translatable' => TRUE,
-    ];
-
     $form['general']['more_provider_drawer'] = [
       '#type' => 'textfield',
       '#title' => $this->t('More'),
@@ -71,6 +63,21 @@ class GTSForm extends FormBase {
       '#title' => $this->t('Graphyte Configuration'),
       '#collapsible' => TRUE,
       '#open' => TRUE,
+    ];
+
+    $form['general']['gts_lobby_infinite_scroll'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
+      '#default_value' => $this->get('gts_lobby_infinite_scroll'),
+      '#description' => 'Enable lazy loading for games lobby.',
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['launch_via_iframe'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable launching games via IFrame'),
+      '#default_value' => $this->get('launch_via_iframe'),
+      '#description' => 'Enable launching games via IFrame.',
     ];
 
     return $form;
