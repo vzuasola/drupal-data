@@ -553,7 +553,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: ''
+          value: All
           group: 1
           exposed: true
           expose:
@@ -563,7 +563,7 @@ display:
             use_operator: false
             operator: field_enable_game_mobile_value_op
             identifier: field_enable_game_mobile_value
-            required: true
+            required: false
             remember: false
             multiple: false
             remember_roles:
