@@ -142,6 +142,21 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
           ],
+          'suggestion_message_domains' => [
+            '#title' => 'Suggestion Message For PT and ES Languages',
+            '#type' => 'textfield',
+            '#description' => 'Suggestion Message',
+          ],
+          'list_accept_domains' => [
+            '#title' => 'List Accepted Domains For PT and ES Languages',
+            '#type' => 'textarea',
+            '#description' => 'e.g.(gmail.com outlook.com ...) List of Accepted Domains For PT and ES Languages',
+          ],
+          'suggestion_message_is_enabled' => [
+            '#title' => 'Toggle of Suggestion Message For PT and ES Languages',
+            '#type' => 'checkbox',
+            '#description' => 'Enable or Disable Suggestion Message Feature',
+          ],
         ],
       ],
 
