@@ -371,6 +371,81 @@ class HeaderForm extends FormBase {
       '#group' => 'header_settings_tab',
     ];
 
+    $form['balance_group']['dafacoin_balance_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable New Dafacoin Balance Menu'),
+      '#description' => $this->t('If checked, it will allow the use of the new balance menu that supports dafacoin.'),
+      '#default_value' => $this->get('dafacoin_balance_toggle'),
+    ];
+
+    $form['balance_group']['dafacoin_total_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dafacoin Total Balance Label.'),
+      '#description' => $this->t('The label for the total balance'),
+      '#default_value' => $this->get('dafacoin_total_balance_label'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['dafacoin_priority_switch_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dafacoin priority switch message.'),
+      '#description' => $this->t('The message explains that the player can switch currency priority between DCoin and Fiat currency.'),
+      '#default_value' => $this->get('dafacoin_priority_switch_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['dafacoin_unsaved_changes_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dafacoin unsaved changes popup message.'),
+      '#description' => $this->t('The message that appears in the popup when you try to close balance menu before saving changes.'),
+      '#default_value' => $this->get('dafacoin_unsaved_changes_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['dafacoin_saved_popup_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dafacoin saved popup message.'),
+      '#description' => $this->t('The message that appears in the popup after the changes has been successfully saved.'),
+      '#default_value' => $this->get('dafacoin_saved_popup_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['save_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('The label of SAVE button.'),
+      '#default_value' => $this->get('save_button_label'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['close_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('The label of CLOSE button.'),
+      '#default_value' => $this->get('close_button_label'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['yes_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('The label of YES button.'),
+      '#default_value' => $this->get('yes_button_label'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['no_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('The label of NO button.'),
+      '#default_value' => $this->get('no_button_label'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
     $form['balance_group']['balance_toggle'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Balance Toggle'),
