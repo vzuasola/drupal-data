@@ -281,18 +281,6 @@ class GeneralConfiguration extends FormBase {
       '#group' => 'general_settings_tab'
     ];
 
-    $form['new_password_configuration']['password_banned_words_list'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Password Banned Words List'),
-      '#description' => $this->t('Here we should add banned words that should '.
-                                'not be included in our registration proccess. <br>'.
-                                'Separate every new word with comma for example:'.
-                                '"password, password123..."'),
-      '#default_value' => $this->get('password_banned_words_list'),
-      '#required' => true,
-      '#translatable' => true,
-    ];
-
     $form['new_password_configuration']['min_max_length'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Minimum and Maximum Length'),
