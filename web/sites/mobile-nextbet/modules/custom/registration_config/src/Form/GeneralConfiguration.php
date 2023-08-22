@@ -44,6 +44,7 @@ class GeneralConfiguration extends FormBase {
     $this->errorConfig($form);
     $this->restrictionConfig($form);
     $this->textOverBannerConfig($form);
+    $this->passwordBannedWords($form);
 
     return $form;
   }
@@ -266,6 +267,70 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $mobile['value'],
       '#format' => $mobile['format'],
       '#translatable' => true,
+    ];
+  }
+
+  /**
+   * Password banned word settings
+   */
+  function passwordBannedWords(array &$form) {
+    $form['new_password_configuration'] = [
+      '#type' => 'details',
+      '#title' => $this->t('New Password Configuration'),
+      '#collapsible' => true,
+      '#group' => 'general_settings_tab'
+    ];
+
+    $form['new_password_configuration']['min_max_length'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Minimum and Maximum Length'),
+      '#description' => $this->t('Add text that will be shown in box for minimum and maximum lenght'),
+      '#default_value' => $this->get('min_max_length'),
+      '#required' => true,
+      '#translatable' => true
+    ];
+
+    $form['new_password_configuration']['one_uppercase_letter'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Uppercase Letter Field'),
+      '#description' => $this->t('Here we should display text to user for one uppercase letter.'),
+      '#default_value' => $this->get('one_uppercase_letter'),
+      '#required' => true,
+      '#translatable' => true
+    ];
+
+    $form['new_password_configuration']['one_lowercase_letter'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Lowercase Letter Field'),
+      '#description' => $this->t('Here we should display text to user for one lowercase letter.'),
+      '#default_value' => $this->get('one_lowercase_letter'),
+      '#required' => true,
+      '#translatable' => true
+    ];
+
+    $form['new_password_configuration']['number_symbol'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Number Symbol'),
+      '#description' => $this->t('Add text that will be shown in box for number symbol that us required by user.'),
+      '#default_value' => $this->get('number_symbol'),
+      '#required' => true,
+      '#translatable' => true
+    ];
+
+    $form['new_password_configuration']['username_password_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Username Field'),
+      '#description' => $this->t('Add text that will inform user that he can not add username as password value.'),
+      '#default_value' => $this->get('username_password_value'),
+      '#required' => true,
+      '#translatable' => true
+    ];
+
+    $form['new_password_configuration']['enable_new_password_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable New password validation'),
+      '#description' => $this->t('If we check this checkbox new password validation will be active.'),
+      '#default_value' => $this->get('enable_new_password_validation'),
     ];
   }
 }
