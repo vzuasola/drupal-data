@@ -13,7 +13,7 @@ id: zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
 field_name: field_client_type
 entity_type: zipang_desktop_games_entity
 bundle: zipang_desktop_games_entity
-label: 'Client Type'
+label: 'Client Type Desktop'
 description: ''
 required: false
 translatable: true
