@@ -1,24 +1,22 @@
-uuid: 4e0b1f76-b014-4a36-b19f-f3a47b61a0cc
+uuid: f8032389-6b4b-484d-a6f9-37addad013f1
 langcode: ja
 status: true
 dependencies:
   module:
     - options
     - zipang_desktop_games
-_core:
-  default_config_hash: yyJnZVMvk03nBMoRMyiorOIGu3UTyuYmYycw573G16w
-id: zipang_desktop_games_entity.field_client_type
-field_name: field_client_type
+id: zipang_desktop_games_entity.field_client_type_mobile
+field_name: field_client_type_mobile
 entity_type: zipang_desktop_games_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: ngm2dt
-      label: NGM2DT
+      value: ngm
+      label: NGM
     -
-      value: live_desktop
-      label: 'Live Desktop'
+      value: live_mobile
+      label: 'Live Mobile'
   allowed_values_function: ''
 module: options
 locked: false
