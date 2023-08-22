@@ -414,6 +414,13 @@ class HeaderForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['balance_group']['dafacoin_notification_popup_display_time'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Notification Popup Display Time (sec).'),
+      '#description' => $this->t('How much time (in seconds) the balance menu notification popup will remain open before it will automatically close.'),
+      '#default_value' => $this->get('dafacoin_notification_popup_display_time'),
+    ];
+
     $form['balance_group']['save_button_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('The label of SAVE button.'),
