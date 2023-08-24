@@ -320,7 +320,7 @@ class GeneralConfiguration extends FormBase {
     $form['new_password_configuration']['username_password_value'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Username Field'),
-      '#description' => $this->t('Add text that will inform user that he can not add username as password value.'),
+      '#description' => $this->t('Add text that will inform a user that the password cannot be the same with the selected username or contain any words from the blacklist.'),
       '#default_value' => $this->get('username_password_value'),
       '#required' => true,
       '#translatable' => true
