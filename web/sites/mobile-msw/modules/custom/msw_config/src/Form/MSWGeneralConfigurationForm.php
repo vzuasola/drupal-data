@@ -40,6 +40,7 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#title' => $this->t('General Configuration'),
     ];
     $this->mswHiddenTitle($form);
+    $this->helpCenterConfig($form);
 
     return $form;
   }
@@ -59,6 +60,38 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#title' => $this->t('MSW SEO Hidden title value'),
       '#default_value' => $this->get('msw_hidden_title_value'),
       '#description' => $this->t('Here we can add title that will be hidden under logo on header part'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  private function helpCenterConfig(array &$form) {
+    $form['help_center_setting'] = [
+      '#type' => 'details',
+      '#title' => t('Help Center Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['help_center_setting']['help_center'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Help Center'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['help_center_setting']['help_center']['enable_help_center'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Help Center'),
+      '#default_value' => $this->get('enable_help_center'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['help_center_setting']['help_center']['help_center_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Help Center Title'),
+      '#default_value' => $this->get('help_center_title'),
       '#translatable' => TRUE,
     ];
   }
