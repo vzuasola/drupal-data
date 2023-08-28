@@ -1,22 +1,22 @@
-uuid: 77b076f0-066b-4b3f-b6db-965560be0f97
-langcode: ja
+uuid: 5e195517-1998-4493-8015-9571a1fa640b
+langcode: en
 status: true
 dependencies:
   module:
     - lucky_baby_desktop_games
     - options
-id: lucky_baby_desktop_games_entity.field_client_type
-field_name: field_client_type
+id: lucky_baby_desktop_games_entity.field_client_type_mobile
+field_name: field_client_type_mobile
 entity_type: lucky_baby_desktop_games_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: ngm2dt
-      label: NGM2DT
+      value: ngm
+      label: NGM
     -
-      value: live_desktop
-      label: 'Live Desktop'
+      value: live_mobile
+      label: 'Live Mobile'
   allowed_values_function: ''
 module: options
 locked: false

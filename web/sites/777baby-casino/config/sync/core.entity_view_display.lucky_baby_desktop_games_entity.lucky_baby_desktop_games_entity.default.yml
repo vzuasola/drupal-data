@@ -8,6 +8,7 @@ dependencies:
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_category
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type
+    - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_free_play
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game_mobile
@@ -63,6 +64,13 @@ content:
     region: content
   field_client_type:
     weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_client_type_mobile:
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
