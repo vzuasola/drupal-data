@@ -1,16 +1,16 @@
-uuid: 1702a8ed-9bab-4f96-b2d4-1e40e7c02e75
-langcode: ja
+uuid: 3020d8e7-fdae-41f3-acfc-b07916935d71
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.lucky_baby_desktop_games_entity.field_enable_game
+    - field.storage.lucky_baby_desktop_games_entity.field_enable_game_mobile
   module:
     - lucky_baby_desktop_games
-id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game
-field_name: field_enable_game
+id: lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game_mobile
+field_name: field_enable_game_mobile
 entity_type: lucky_baby_desktop_games_entity
 bundle: lucky_baby_desktop_games_entity
-label: 'Enable Game Desktop'
+label: 'Enable Game Mobile'
 description: ''
 required: false
 translatable: true

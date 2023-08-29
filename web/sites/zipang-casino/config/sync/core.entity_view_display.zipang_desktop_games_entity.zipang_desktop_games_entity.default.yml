@@ -8,6 +8,7 @@ dependencies:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_arcade_game_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_arcade_game_filter
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type_mobile
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_free_play
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game_mobile
@@ -40,7 +41,7 @@ bundle: zipang_desktop_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 21
+    weight: 22
     label: above
     settings:
       link: true
@@ -48,7 +49,7 @@ content:
     type: entity_reference_label
     region: content
   field_arcade_game_category:
-    weight: 16
+    weight: 17
     label: above
     settings:
       link: true
@@ -56,7 +57,7 @@ content:
     type: entity_reference_label
     region: content
   field_arcade_game_filter:
-    weight: 17
+    weight: 18
     label: above
     settings:
       link: true
@@ -65,6 +66,13 @@ content:
     region: content
   field_client_type:
     weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_client_type_mobile:
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -85,8 +93,8 @@ content:
     label: above
     settings:
       format: default
-      format_custom_false: ''
       format_custom_true: ''
+      format_custom_false: ''
     third_party_settings: {  }
     type: boolean
     region: content
@@ -101,7 +109,7 @@ content:
     type: boolean
     region: content
   field_external_game_id:
-    weight: 23
+    weight: 24
     label: above
     settings:
       link_to_entity: false
@@ -125,7 +133,7 @@ content:
     type: string
     region: content
   field_game_code_icore:
-    weight: 14
+    weight: 15
     label: above
     settings:
       link_to_entity: false
@@ -133,21 +141,13 @@ content:
     type: string
     region: content
   field_game_description:
-    weight: 15
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_game_filter:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_game_filter_games:
     weight: 12
     label: above
     settings:
@@ -155,8 +155,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_game_filter_games:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_game_icon_label:
-    weight: 20
+    weight: 21
     label: above
     settings:
       link_to_entity: false
@@ -164,7 +172,7 @@ content:
     type: string
     region: content
   field_game_provider:
-    weight: 13
+    weight: 14
     label: above
     settings:
       link: true
@@ -197,7 +205,7 @@ content:
     type: string
     region: content
   field_game_title_icon:
-    weight: 19
+    weight: 20
     label: above
     settings:
       image_style: ''
@@ -206,7 +214,7 @@ content:
     type: image
     region: content
   field_game_type:
-    weight: 18
+    weight: 19
     label: above
     settings:
       link: true
@@ -214,7 +222,7 @@ content:
     type: entity_reference_label
     region: content
   field_provider_product:
-    weight: 22
+    weight: 23
     label: above
     settings:
       link: true
