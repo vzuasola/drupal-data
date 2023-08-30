@@ -1,22 +1,22 @@
-uuid: 4e0b1f76-b014-4a36-b19f-f3a47b61a0cc
-langcode: ja
+uuid: f0df4e44-6b2e-4191-8a57-621062d78245
+langcode: en
 status: true
 dependencies:
   module:
     - jamboree_desktop_games
     - options
-id: jamboree_desktop_games_entity.field_client_type
-field_name: field_client_type
+id: jamboree_desktop_games_entity.field_client_type_mobile
+field_name: field_client_type_mobile
 entity_type: jamboree_desktop_games_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: ngm2dt
-      label: NGM2DT
+      value: ngm
+      label: NGM
     -
-      value: live_desktop
-      label: 'Live Desktop'
+      value: live_mobile
+      label: 'Live Mobile'
   allowed_values_function: ''
 module: options
 locked: false
