@@ -7,10 +7,11 @@ dependencies:
     - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_link
     - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_link_target
     - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_title
+    - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_title_font_size
     - image.style.thumbnail
   module:
-    - image
     - msw_prioritization_menu
+    - svg_image
 id: msw_prioritization_menu.msw_prioritization_menu.default
 targetEntityType: msw_prioritization_menu
 bundle: msw_prioritization_menu
@@ -45,6 +46,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_menu_title_font_size:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   name:
     type: string_textfield

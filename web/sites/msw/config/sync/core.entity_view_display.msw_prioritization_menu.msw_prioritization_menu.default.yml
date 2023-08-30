@@ -1,4 +1,4 @@
-uuid: 4cea5447-61c8-496b-abbb-091ff0987c81
+uuid: 1a626a70-8f1b-473a-ad4b-3e6a0e02a716
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,11 @@ dependencies:
     - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_link
     - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_link_target
     - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_title
-    - image.style.thumbnail
+    - field.field.msw_prioritization_menu.msw_prioritization_menu.field_menu_title_font_size
   module:
-    - image
     - msw_prioritization_menu
+    - options
+    - svg_image
 id: msw_prioritization_menu.msw_prioritization_menu.default
 targetEntityType: msw_prioritization_menu
 bundle: msw_prioritization_menu
@@ -18,41 +19,52 @@ mode: default
 content:
   field_menu_icon:
     weight: 2
+    label: above
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: image_image
+    type: image
     region: content
   field_menu_link:
     weight: 3
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_menu_link_target:
     weight: 4
+    label: above
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: list_default
     region: content
   field_menu_title:
     weight: 1
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
+    region: content
+  field_menu_title_font_size:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   name:
-    type: string_textfield
+    type: string
     weight: 0
     region: content
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
   langcode: true
