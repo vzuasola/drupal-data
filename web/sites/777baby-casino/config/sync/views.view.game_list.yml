@@ -1281,6 +1281,7 @@ display:
           destination: false
           entity_type: lucky_baby_desktop_games_entity
           plugin_id: entity_operations
+      enabled: false
     cache_metadata:
       max-age: 0
       contexts:
@@ -1452,6 +1453,7 @@ display:
           plugin_id: standard
       rendering_language: '***LANGUAGE_language_interface***'
       title: 'Desktop Game List'
+      enabled: false
     cache_metadata:
       max-age: 0
       contexts:
