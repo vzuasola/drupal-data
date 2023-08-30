@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type_mobile
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_free_play
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game_mobile
@@ -149,6 +150,10 @@ custom_sources:
     label: 'Enable Game Mobile'
     value: 'Enable Game Mobile'
     machine_name: enable_game_mobile
+  client_type_mobile:
+    label: 'Client Type Mobile'
+    value: 'Client Type Mobile'
+    machine_name: client_type_mobile
 mappings:
   -
     target: field_game_title
@@ -222,3 +227,7 @@ mappings:
     target: langcode
     map:
       value: 'parent:field_language'
+  -
+    target: field_client_type_mobile
+    map:
+      value: client_type_mobile
