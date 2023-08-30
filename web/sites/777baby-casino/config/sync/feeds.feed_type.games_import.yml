@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type
+    - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_external_game_id
@@ -88,6 +89,10 @@ custom_sources:
     label: 'Game Code'
     value: 'Game Code'
     machine_name: game_code
+  client_type_mobile:
+    label: 'Client Type Mobile'
+    value: 'Client Type Mobile'
+    machine_name: client_type_mobile
 mappings:
   -
     target: field_game_title
@@ -156,3 +161,7 @@ mappings:
     map:
       value: icore_game_code
     unique: {  }
+  -
+    target: field_client_type_mobile
+    map:
+      value: client_type_mobile

@@ -8,6 +8,7 @@ dependencies:
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_category
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type
+    - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_free_play
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game_mobile
@@ -40,7 +41,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: fieldset
       format_settings:
         id: ''
@@ -52,7 +53,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 16
+      weight: 17
       format_type: fieldset
       format_settings:
         id: ''
@@ -65,7 +66,7 @@ third_party_settings:
         - field_arcade_game_category
         - field_arcade_game_filter
       parent_name: ''
-      weight: 18
+      weight: 19
       format_type: fieldset
       format_settings:
         id: ''
@@ -78,7 +79,7 @@ third_party_settings:
         - field_game_title_icon
         - field_game_icon_label
       parent_name: ''
-      weight: 19
+      weight: 20
       format_type: fieldset
       format_settings:
         id: ''
@@ -92,7 +93,7 @@ bundle: lucky_baby_desktop_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 17
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -115,8 +116,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_client_type_mobile:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_enable_free_play:
-    weight: 11
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
@@ -241,13 +248,13 @@ content:
     type: string_textfield
     region: content
   field_game_provider:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_tag:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -277,13 +284,13 @@ content:
     type: image_image
     region: content
   field_game_type:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_provider_product:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
