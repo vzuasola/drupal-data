@@ -8,8 +8,10 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_arcade_game_category
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_arcade_game_filter
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_client_type
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_client_type_mobile
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_free_play
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_game
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_game_mobile
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_external_game_id
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_category
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code
@@ -38,7 +40,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 14
+      weight: 16
       format_type: fieldset
       format_settings:
         label: 'Casino (for casino page)'
@@ -51,7 +53,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 15
+      weight: 17
       format_type: fieldset
       format_settings:
         label: 'Games (for games page)'
@@ -65,7 +67,7 @@ third_party_settings:
         - field_arcade_game_category
         - field_arcade_game_filter
       parent_name: ''
-      weight: 17
+      weight: 19
       format_type: fieldset
       format_settings:
         label: 'Arcade (for arcade page)'
@@ -79,7 +81,7 @@ third_party_settings:
         - field_game_title_icon
         - field_game_icon_label
       parent_name: ''
-      weight: 18
+      weight: 20
       format_type: fieldset
       format_settings:
         id: ''
@@ -93,7 +95,7 @@ bundle: jamboree_desktop_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 16
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -105,19 +107,25 @@ content:
     type: erviews_options_buttons
     region: content
   field_arcade_game_filter:
-    weight: 17
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_client_type:
-    weight: 8
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_client_type_mobile:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_enable_free_play:
-    weight: 10
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
@@ -130,8 +138,15 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_enable_game_mobile:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_external_game_id:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -163,7 +178,7 @@ content:
     type: erviews_options_buttons
     region: content
   field_game_code:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -171,7 +186,7 @@ content:
     type: string_textfield
     region: content
   field_game_code_icore:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -235,19 +250,19 @@ content:
     type: string_textfield
     region: content
   field_game_provider:
-    weight: 12
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_tag:
-    weight: 9
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_thumbnail:
-    weight: 4
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -255,7 +270,7 @@ content:
     type: image_image
     region: content
   field_game_title:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -271,20 +286,20 @@ content:
     type: image_image
     region: content
   field_game_type:
-    weight: 11
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_provider_product:
-    weight: 13
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true
