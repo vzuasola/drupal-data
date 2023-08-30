@@ -1,0 +1,7 @@
+msw_prioritization_menu.admin_settings:
+  path: 'admin/config/msw/msw_prioritization_menu'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Video Call Prioritization Menu List'
+  requirements:
+    _permission: 'administer msw video call prioritization menu configuration'
