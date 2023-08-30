@@ -1,0 +1,5 @@
+name: Video Call Prioritization Menu
+type: module
+description: This module provides Video Call Prioritization Menu.
+core: 8.x
+package: Custom
