@@ -139,6 +139,20 @@ display:
           field_api_classes: false
       filters: {  }
       sorts:
+        id:
+          id: id
+          table: msw_prioritization_menu_field_data
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: msw_prioritization_menu
+          entity_field: id
+          plugin_id: standard
         weight:
           id: weight
           table: draggableviews_structure
