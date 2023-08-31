@@ -1310,6 +1310,9 @@ display:
             field_client_type_export:
               alias: client_type
               raw_output: false
+            field_client_type_mobile:
+              alias: client_type_mobile
+              raw_output: false
             field_game_code_icore_export:
               alias: game_code_icore
               raw_output: false
@@ -1355,11 +1358,14 @@ display:
             field_all_games_category_export:
               alias: all_games_categories
               raw_output: false
+            field_game_category_export_1:
+              alias: ''
+              raw_output: false
+            field_game_provider_export_1:
+              alias: ''
+              raw_output: false
             field_provider_product_export:
               alias: provider_product
-              raw_output: false
-            field_external_game_id:
-              alias: ''
               raw_output: false
       pager:
         type: full
@@ -3148,42 +3154,6 @@ display:
           entity_type: lucky_baby_desktop_games_entity
           entity_field: langcode
           plugin_id: language
-        field_enable_game_value:
-          id: field_enable_game_value
-          table: lucky_baby_desktop_games_entity__field_enable_game
-          field: field_enable_game_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
