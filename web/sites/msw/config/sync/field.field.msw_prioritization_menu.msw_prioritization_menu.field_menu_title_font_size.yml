@@ -1,0 +1,24 @@
+uuid: c35d13c2-4ed0-4b64-b312-a06c28b272f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.msw_prioritization_menu.field_menu_title_font_size
+  module:
+    - msw_prioritization_menu
+id: msw_prioritization_menu.msw_prioritization_menu.field_menu_title_font_size
+field_name: field_menu_title_font_size
+entity_type: msw_prioritization_menu
+bundle: msw_prioritization_menu
+label: 'Menu Title Font Size'
+description: 'Title of menu font size ( Only support 12px up to 20px ). Default was 16px if value is empty/not supported'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

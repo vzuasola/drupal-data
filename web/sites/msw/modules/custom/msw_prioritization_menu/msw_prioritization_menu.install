@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function msw_prioritization_menu_uninstall() {
+  $keys = [
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
