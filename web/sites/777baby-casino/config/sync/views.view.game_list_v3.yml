@@ -1362,7 +1362,7 @@ display:
               alias: ''
               raw_output: false
             field_game_provider_export_1:
-              alias: ''
+              alias: provider
               raw_output: false
             field_provider_product_export:
               alias: provider_product
