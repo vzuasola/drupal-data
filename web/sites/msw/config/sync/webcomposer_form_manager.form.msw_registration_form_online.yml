@@ -1,84 +1,94 @@
 form_settings:
   show: 1
-  alias: ''
+  alias: upload
 weights:
   account_and_contact_details:
-    weight: '-10'
+    weight: '-20'
   username:
-    weight: '-9'
+    weight: '-19'
   password:
-    weight: '-8'
+    weight: '-18'
   confirm_password:
-    weight: '-7'
+    weight: '-17'
   password_meter:
-    weight: '-6'
+    weight: '-16'
   email:
-    weight: '-5'
+    weight: '-15'
   mobile_phone:
-    weight: '-4'
+    weight: '-14'
   contact_preference_select:
-    weight: '-3'
+    weight: '-13'
   contact_preference:
-    weight: '-2'
+    weight: '-12'
   basic_information:
-    weight: '-1'
+    weight: '-11'
   last_name:
-    weight: '0'
+    weight: '-10'
   middle_name:
-    weight: '1'
+    weight: '-9'
   first_name:
-    weight: '2'
-  birthdate:
-    weight: '3'
+    weight: '-8'
   nationality_select:
-    weight: '4'
+    weight: '-7'
+  birthdate:
+    weight: '-6'
   source_of_income_select:
-    weight: '5'
+    weight: '-5'
   source_of_income_others:
-    weight: '6'
+    weight: '-4'
   address_and_home_outlet:
-    weight: '7'
+    weight: '-3'
   province:
-    weight: '8'
+    weight: '-2'
   city:
-    weight: '9'
+    weight: '-1'
   address:
-    weight: '10'
+    weight: '0'
   home_outlet_select:
-    weight: '11'
+    weight: '1'
   security_questions:
-    weight: '12'
+    weight: '2'
   security_questions_title:
-    weight: '13'
+    weight: '3'
   security_question_1:
-    weight: '14'
+    weight: '4'
   security_answer_1:
-    weight: '15'
+    weight: '5'
   security_question_2:
-    weight: '16'
+    weight: '6'
   security_answer_2:
-    weight: '17'
+    weight: '7'
   rfidpin:
-    weight: '18'
+    weight: '8'
   photos_ID:
-    weight: '19'
+    weight: '9'
   id1:
-    weight: '20'
+    weight: '10'
   id_number1:
-    weight: '21'
+    weight: '11'
   upload_id_1:
-    weight: '22'
+    weight: '12'
   btn_upload_id_1:
-    weight: '23'
-  id2:
-    weight: '24'
-  id_number2:
-    weight: '25'
+    weight: '13'
+  selfieWithID:
+    weight: '14'
   upload_id_2:
-    weight: '26'
+    weight: '15'
   btn_upload_id_2:
-    weight: '27'
+    weight: '16'
+  legal_agreements:
+    weight: '17'
   terms_and_conditions:
-    weight: '28'
+    weight: '18'
+  terms_and_conditions_markup:
+    weight: '19'
+  citizenship:
+    weight: '20'
+  citizenship_markup:
+    weight: '20'
+  awareness:
+    weight: '20'
+  awareness_markup:
+    weight: '20'
   submit:
-    weight: '29'
+    weight: '20'
