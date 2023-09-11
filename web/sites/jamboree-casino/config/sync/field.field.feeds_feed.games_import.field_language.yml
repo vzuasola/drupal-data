@@ -1,0 +1,23 @@
+uuid: 9ba77569-195e-4613-b4df-d09c6b1d48b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.games_import
+    - field.storage.feeds_feed.field_language
+  module:
+    - options
+id: feeds_feed.games_import.field_language
+field_name: field_language
+entity_type: feeds_feed
+bundle: games_import
+label: Language
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: en
+default_value_callback: ''
+settings: {  }
+field_type: list_string

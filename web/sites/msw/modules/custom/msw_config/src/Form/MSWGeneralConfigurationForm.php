@@ -44,6 +44,7 @@ class MSWGeneralConfigurationForm extends FormBase {
     $this->onlineRegisterConfig($form);
     $this->mswHiddenTitle($form);
     $this->helpCenterConfig($form);
+    $this->prioritizationMenuConfig($form);
 
     return $form;
   }
@@ -333,5 +334,35 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#default_value' => $this->get('help_center_title'),
       '#translatable' => TRUE,
     ];
+  }
+
+  private function prioritizationMenuConfig(array &$form) {
+    $form['prioritization_menu_config'] = [
+      '#type' => 'details',
+      '#title' => t('Video Call Prioritization Menu Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['prioritization_menu_config']['prioritization_menu'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Video Call Prioritization Menu'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['prioritization_menu_config']['prioritization_menu']['prioritization_menu_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Video Call Prioritization Menu Title'),
+      '#default_value' => $this->get('prioritization_menu_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['prioritization_menu_config']['prioritization_menu']['prioritization_menu_blurb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Video Call Prioritization Menu Blurb'),
+      '#default_value' => $this->get('prioritization_menu_blurb'),
+      '#translatable' => TRUE,
+    ];
+
   }
 }

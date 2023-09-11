@@ -1,0 +1,27 @@
+uuid: cfa344b7-a3c8-4b17-a684-dca361e834de
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+    - options
+id: feeds_feed.field_language
+field_name: field_language
+entity_type: feeds_feed
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: en
+      label: English
+    -
+      value: ja
+      label: Japanese
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: f0df4e44-6b2e-4191-8a57-621062d78245
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_games
+    - options
+id: jamboree_desktop_games_entity.field_client_type_mobile
+field_name: field_client_type_mobile
+entity_type: jamboree_desktop_games_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ngm
+      label: NGM
+    -
+      value: live_mobile
+      label: 'Live Mobile'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

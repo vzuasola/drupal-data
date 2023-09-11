@@ -1,0 +1,20 @@
+uuid: eaae1a29-b25e-4898-8e26-3bdbd4394800
+langcode: en
+status: true
+dependencies:
+  module:
+    - msw_prioritization_menu
+id: msw_prioritization_menu.field_menu_title_font_size
+field_name: field_menu_title_font_size
+entity_type: msw_prioritization_menu
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

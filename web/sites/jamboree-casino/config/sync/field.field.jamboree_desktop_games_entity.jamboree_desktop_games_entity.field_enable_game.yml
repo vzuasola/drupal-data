@@ -10,7 +10,7 @@ id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_gam
 field_name: field_enable_game
 entity_type: jamboree_desktop_games_entity
 bundle: jamboree_desktop_games_entity
-label: 'Enable Game'
+label: 'Enable Game Desktop'
 description: ''
 required: false
 translatable: true

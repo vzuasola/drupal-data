@@ -1,0 +1,22 @@
+# Video Call Prioritization Menu routing definition
+msw_prioritization_menu.settings_tab:
+  route_name: msw_prioritization_menu.settings
+  title: 'Settings'
+  base_route: msw_prioritization_menu.settings
+
+entity.msw_prioritization_menu.canonical:
+  route_name: entity.msw_prioritization_menu.canonical
+  base_route: entity.msw_prioritization_menu.canonical
+  title: 'View'
+
+entity.msw_prioritization_menu.edit_form:
+  route_name: entity.msw_prioritization_menu.edit_form
+  base_route: entity.msw_prioritization_menu.canonical
+  title: 'Edit'
+
+entity.msw_prioritization_menu.delete_form:
+  route_name:  entity.msw_prioritization_menu.delete_form
+  base_route:  entity.msw_prioritization_menu.canonical
+  title: Delete
+  weight: 10
+
