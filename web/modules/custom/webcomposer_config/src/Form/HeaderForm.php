@@ -452,6 +452,35 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+    $form['balance_group']['wallet_header_dc_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('The label of DC in wallet header.'),
+      '#default_value' => $this->get('wallet_header_dc_label') ?? 'Dafa Coin (DC)',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['balance_group']['wallet_header_switch_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('The label of the switch column in wallet header.'),
+      '#default_value' => $this->get('wallet_header_switch_label') ?? 'Switch',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['balance_group']['wallet_switch_all_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Label for "Switch All" toggle.'),
+      '#default_value' => $this->get('wallet_switch_all_label') ?? 'Turn all wallets to Dafa Coin',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['dafacoin_enabled_currencies'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Enabled Currencies'),
+      '#description' => $this->t('List of currencies Dafacoin is enabled in. One per line'),
+      '#default_value' => $this->get('dafacoin_enabled_currencies') ?? 'INR',
+      '#translatable' => TRUE,
+    ];
 
     $form['balance_group']['balance_toggle'] = [
       '#type' => 'checkbox',
