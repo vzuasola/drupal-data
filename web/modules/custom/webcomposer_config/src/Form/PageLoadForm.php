@@ -63,7 +63,7 @@ class PageLoadForm extends FormBase {
     $form['preload']['preload_list'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Assets to preload'),
-      '#description' => $this->t('A list of assets to preload. One asset per line. The format should be the following: "{assetType}|{url}|{fetchpriority}|{fontType}" . Asset type can be "script", "style" or "font" . The URL can be absolute or relative. A relative URL should start with a / . IF you dont want to modify the fetchpriority property, use "default" as a value. Font type is optional and it is only used for font assets'),
+      '#description' => $this->t('A list of assets to preload. One asset per line. The format should be the following: "{assetType}|{url}|{fetchpriority}" . Asset type can be "script", "style" or "image" . The URL can be absolute or relative. A relative URL should start with a / . "fetchpriority" is optional. If you dont want to modify the fetchpriority property, just leave it out.'),
       '#default_value' => $this->get('preload_list'),
       '#translatable' => false,
     ];
