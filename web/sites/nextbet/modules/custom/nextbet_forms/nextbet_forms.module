@@ -87,4 +87,16 @@ function nextbet_forms_webcomposer_form_validation_alter(&$validations) {
     'description' => 'If this validation is enabled we need to pass one lower letter in input field.',
     'error' => 'Field requires at least one lower letter to be passed.',
   ];
+
+  $validations['not_match_current_password'] = [
+    'title' => 'Must Not Match Current Password',
+    'description' => 'This validation is checking if passwords are not same with current password.',
+    'error' => 'Should not be same as current password.',
+  ];
+
+  $validations['new_confirm_password_match'] = [
+    'title' => 'New And Confirm Password Match',
+    'description' => 'This validation is checking if new and current passwords are same.',
+    'error' => 'Passwords should be same.',
+  ];
 }
