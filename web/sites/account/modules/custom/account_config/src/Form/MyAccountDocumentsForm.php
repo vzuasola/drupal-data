@@ -99,6 +99,23 @@ class MyAccountDocumentsForm extends FormBase
             '#default_value' => $this->get('label') ?? 'Documents',
             '#translatable' => TRUE,
         ];
+        $form['feature_configuration']['submit_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Submission Error'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Error shown if form validation fails during submission, <small>e.g.</small> failure|<i>Generic Error Message.</i>'),
+            '#default_value' => $this->get('submit_error'),
+            '#translatable' => TRUE,
+        ];
+        $form['feature_configuration']['submit_success'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Submission Success'),
+            '#required' => FALSE,
+            '#description' => $this->t('Message shown after successful form submission'),
+            '#default_value' => $this->get('submit_success') ?? 'Your document/s have been submitted',
+            '#translatable' => TRUE,
+        ];
     }
 
     private function documentStorageConfig(&$form)

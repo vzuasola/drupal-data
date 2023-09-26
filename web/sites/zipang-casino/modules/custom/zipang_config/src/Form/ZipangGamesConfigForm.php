@@ -149,6 +149,18 @@ class ZipangGamesConfigForm extends FormBase {
       '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
+
+    $form['games']['category_views'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Casino Page Game Category '),
+    ];
+
+    $form['games']['category_views']['enable_views_v2'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Casino Page Game Category V2 enable - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_views_v2'),
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionPagination(array &$form) {

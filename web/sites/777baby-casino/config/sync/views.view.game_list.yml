@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.lucky_baby_desktop_games_entity.field_enable_free_play
     - field.storage.lucky_baby_desktop_games_entity.field_enable_game
+    - field.storage.lucky_baby_desktop_games_entity.field_enable_game_mobile
     - field.storage.lucky_baby_desktop_games_entity.field_game_category
     - field.storage.lucky_baby_desktop_games_entity.field_game_code
     - field.storage.lucky_baby_desktop_games_entity.field_game_provider
@@ -163,6 +164,70 @@ display:
           table: lucky_baby_desktop_games_entity__field_enable_game
           field: field_enable_game
           plugin_id: field
+        views_bulk_operations_bulk_form:
+          id: views_bulk_operations_bulk_form
+          table: views
+          field: views_bulk_operations_bulk_form
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Views bulk operations'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          batch: true
+          batch_size: 50
+          form_step: true
+          buttons: false
+          clear_on_exposed: false
+          action_title: Action
+          selected_actions:
+            views_bulk_edit: views_bulk_edit
+            views_bulk_operations_delete_entity: 0
+            pathauto_update_alias: 0
+            'entity:save_action:lucky_baby_desktop_games_entity': 0
+          preconfiguration:
+            views_bulk_edit:
+              label_override: ''
+              get_bundles_from_results: 0
+          plugin_id: views_bulk_operations_bulk_form
       filters: {  }
       sorts:
         weight:
@@ -197,7 +262,7 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -219,6 +284,377 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+      filters:
+        field_game_title_value:
+          id: field_game_title_value
+          table: lucky_baby_desktop_games_entity__field_game_title
+          field: field_game_title_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_title_value_op
+            label: 'Game Title'
+            description: ''
+            use_operator: false
+            operator: field_game_title_value_op
+            identifier: field_game_title_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        langcode:
+          id: langcode
+          table: lucky_baby_desktop_games_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: 'Translation language'
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: lucky_baby_desktop_games_entity
+          entity_field: langcode
+          plugin_id: language
+        field_game_category_target_id:
+          id: field_game_category_target_id
+          table: lucky_baby_desktop_games_entity__field_game_category
+          field: field_game_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_category_target_id_op
+            label: 'Game Category'
+            description: ''
+            use_operator: false
+            operator: field_game_category_target_id_op
+            identifier: field_game_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: desktop_game_category
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_game_provider_target_id:
+          id: field_game_provider_target_id
+          table: lucky_baby_desktop_games_entity__field_game_provider
+          field: field_game_provider_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_provider_target_id_op
+            label: 'Game Provider'
+            description: ''
+            use_operator: false
+            operator: field_game_provider_target_id_op
+            identifier: field_game_provider_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: game_provider
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_game_tag_target_id:
+          id: field_game_tag_target_id
+          table: lucky_baby_desktop_games_entity__field_game_tag
+          field: field_game_tag_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_tag_target_id_op
+            label: 'Game Tag'
+            description: ''
+            use_operator: false
+            operator: field_game_tag_target_id_op
+            identifier: field_game_tag_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: game_tag
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_enable_game_value:
+          id: field_enable_game_value
+          table: lucky_baby_desktop_games_entity__field_enable_game
+          field: field_enable_game_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Enabled Game Desktop'
+            description: ''
+            use_operator: false
+            operator: field_enable_game_value_op
+            identifier: field_enable_game_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+        field_enable_game_mobile_value:
+          id: field_enable_game_mobile_value
+          table: lucky_baby_desktop_games_entity__field_enable_game_mobile
+          field: field_enable_game_mobile_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Enable Game Mobile'
+            description: ''
+            use_operator: false
+            operator: field_enable_game_mobile_value_op
+            identifier: field_enable_game_mobile_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+        field_enable_free_play_value:
+          id: field_enable_free_play_value
+          table: lucky_baby_desktop_games_entity__field_enable_free_play
+          field: field_enable_free_play_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Free Play'
+            description: ''
+            use_operator: false
+            operator: field_enable_free_play_value_op
+            identifier: field_enable_free_play_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        field_game_title_value:
+          id: field_game_title_value
+          table: lucky_baby_desktop_games_entity__field_game_title
+          field: field_game_title_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      rendering_language: '***LANGUAGE_language_interface***'
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -282,7 +718,7 @@ display:
           preconfiguration:
             views_bulk_edit:
               label_override: ''
-              get_bundles_from_results: 1
+              get_bundles_from_results: 0
           plugin_id: views_bulk_operations_bulk_form
         field_enable_game:
           id: field_enable_game
@@ -291,7 +727,72 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Enabled
+          label: 'Enable Game'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_enable_game_mobile:
+          id: field_enable_game_mobile
+          table: lucky_baby_desktop_games_entity__field_enable_game_mobile
+          field: field_enable_game_mobile
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Enable Game Mobile'
           exclude: false
           alter:
             alter_text: false
@@ -608,7 +1109,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Free Play'
+          label: 'Enable Free Play'
           exclude: false
           alter:
             alter_text: false
@@ -725,7 +1226,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
+          multi_type: separator
           separator: ', '
           field_api_classes: false
           plugin_id: field
@@ -780,338 +1281,7 @@ display:
           destination: false
           entity_type: lucky_baby_desktop_games_entity
           plugin_id: entity_operations
-      filters:
-        field_game_title_value:
-          id: field_game_title_value
-          table: lucky_baby_desktop_games_entity__field_game_title
-          field: field_game_title_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_game_title_value_op
-            label: 'Game Title'
-            description: ''
-            use_operator: false
-            operator: field_game_title_value_op
-            identifier: field_game_title_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
-        langcode:
-          id: langcode
-          table: lucky_baby_desktop_games_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: langcode_op
-            label: 'Translation language'
-            description: ''
-            use_operator: false
-            operator: langcode_op
-            identifier: langcode
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: lucky_baby_desktop_games_entity
-          entity_field: langcode
-          plugin_id: language
-        field_game_category_target_id:
-          id: field_game_category_target_id
-          table: lucky_baby_desktop_games_entity__field_game_category
-          field: field_game_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_game_category_target_id_op
-            label: 'Game Category'
-            description: ''
-            use_operator: false
-            operator: field_game_category_target_id_op
-            identifier: field_game_category_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: desktop_game_category
-          hierarchy: true
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_game_provider_target_id:
-          id: field_game_provider_target_id
-          table: lucky_baby_desktop_games_entity__field_game_provider
-          field: field_game_provider_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_game_provider_target_id_op
-            label: 'Game Provider'
-            description: ''
-            use_operator: false
-            operator: field_game_provider_target_id_op
-            identifier: field_game_provider_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: game_provider
-          hierarchy: true
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_game_tag_target_id:
-          id: field_game_tag_target_id
-          table: lucky_baby_desktop_games_entity__field_game_tag
-          field: field_game_tag_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_game_tag_target_id_op
-            label: 'Game Tag'
-            description: ''
-            use_operator: false
-            operator: field_game_tag_target_id_op
-            identifier: field_game_tag_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: game_tag
-          hierarchy: true
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_enable_game_value:
-          id: field_enable_game_value
-          table: lucky_baby_desktop_games_entity__field_enable_game
-          field: field_enable_game_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: All
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Enabled
-            description: ''
-            use_operator: false
-            operator: field_enable_game_value_op
-            identifier: field_enable_game_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-        field_enable_free_play_value:
-          id: field_enable_free_play_value
-          table: lucky_baby_desktop_games_entity__field_enable_free_play
-          field: field_enable_free_play_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: All
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Free Play'
-            description: ''
-            use_operator: false
-            operator: field_enable_free_play_value_op
-            identifier: field_enable_free_play_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      sorts:
-        weight:
-          id: weight
-          table: taxonomy_term_field_data
-          field: weight
-          relationship: field_game_tag
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: weight
-          plugin_id: standard
-        field_game_title_value:
-          id: field_game_title_value
-          table: lucky_baby_desktop_games_entity__field_game_title
-          field: field_game_title_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-      rendering_language: '***LANGUAGE_language_interface***'
+      enabled: false
     cache_metadata:
       max-age: 0
       contexts:
@@ -1122,6 +1292,7 @@ display:
       tags:
         - 'config:field.storage.lucky_baby_desktop_games_entity.field_enable_free_play'
         - 'config:field.storage.lucky_baby_desktop_games_entity.field_enable_game'
+        - 'config:field.storage.lucky_baby_desktop_games_entity.field_enable_game_mobile'
         - 'config:field.storage.lucky_baby_desktop_games_entity.field_game_category'
         - 'config:field.storage.lucky_baby_desktop_games_entity.field_game_code'
         - 'config:field.storage.lucky_baby_desktop_games_entity.field_game_provider'
@@ -1282,8 +1453,9 @@ display:
           plugin_id: standard
       rendering_language: '***LANGUAGE_language_interface***'
       title: 'Desktop Game List'
+      enabled: false
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_interface'
         - request_format

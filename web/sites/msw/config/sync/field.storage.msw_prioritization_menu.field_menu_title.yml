@@ -1,0 +1,21 @@
+uuid: d2c9eb6a-58c1-47c5-aefb-4023bc1ee53e
+langcode: en
+status: true
+dependencies:
+  module:
+    - msw_prioritization_menu
+id: msw_prioritization_menu.field_menu_title
+field_name: field_menu_title
+entity_type: msw_prioritization_menu
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

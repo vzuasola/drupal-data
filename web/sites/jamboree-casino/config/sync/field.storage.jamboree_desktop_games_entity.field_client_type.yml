@@ -16,7 +16,7 @@ settings:
       label: NGM2DT
     -
       value: live_desktop
-      label: Live
+      label: 'Live Desktop'
   allowed_values_function: ''
 module: options
 locked: false

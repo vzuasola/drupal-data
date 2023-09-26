@@ -142,6 +142,21 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
           ],
+          'suggestion_message_domains' => [
+            '#title' => 'Suggestion Message For PT and ES Languages',
+            '#type' => 'textfield',
+            '#description' => 'Suggestion Message',
+          ],
+          'list_accept_domains' => [
+            '#title' => 'List Accepted Domains For PT and ES Languages',
+            '#type' => 'textarea',
+            '#description' => 'e.g.(gmail.com outlook.com ...) List of Accepted Domains For PT and ES Languages',
+          ],
+          'suggestion_message_is_enabled' => [
+            '#title' => 'Toggle of Suggestion Message For PT and ES Languages',
+            '#type' => 'checkbox',
+            '#description' => 'Enable or Disable Suggestion Message Feature',
+          ],
         ],
       ],
 
@@ -175,6 +190,16 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'List of area codes that will be validated upon submission in which it had' .
             ' different min and max character allowed per country code and custom message validation for it',
+          ],
+          'additional_country_code_validation' => [
+            '#title' => 'Additional Custom Validation for +55 Country Code',
+            '#type' => 'textfield',
+            '#description' => 'e.g.(55|9|0|error message) Area code that will be validated then the third number must be a 9 and the fourth number cannot be 0 and error message',
+          ],
+          'list_states_codes_accept' => [
+            '#title' => 'List of states codes accept for +55 Country Code',
+            '#type' => 'textarea',
+            '#description' => 'e.g.(34,35,37,38) The first two numbers must be states code.',
           ],
         ],
       ],

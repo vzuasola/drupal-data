@@ -1,0 +1,51 @@
+uuid: 625f5e61-f446-4296-a68b-73a79acf9852
+langcode: ja
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.games_import
+    - field.field.feeds_feed.games_import.field_language
+  module:
+    - feeds
+    - options
+    - user
+id: feeds_feed.games_import.default
+targetEntityType: feeds_feed
+bundle: games_import
+mode: default
+content:
+  field_language:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  imported:
+    label: inline
+    type: timestamp_ago
+    weight: 1
+    region: content
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  next:
+    label: inline
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  source:
+    label: inline
+    type: feeds_uri_link
+    weight: -3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -8,8 +8,10 @@ dependencies:
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_category
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_arcade_game_filter
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type
+    - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_client_type_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_free_play
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game
+    - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_enable_game_mobile
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_external_game_id
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_game_category
     - field.field.lucky_baby_desktop_games_entity.lucky_baby_desktop_games_entity.field_game_code
@@ -32,7 +34,6 @@ dependencies:
     - field_group
     - image
     - lucky_baby_desktop_games
-    - text
 third_party_settings:
   field_group:
     group_for_casino_page:
@@ -40,32 +41,32 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 14
+      weight: 16
       format_type: fieldset
       format_settings:
         id: ''
         classes: ''
         description: 'fields for casino page'
-        required_fields: true
+        required_fields: false
       label: 'Casino (for casino page)'
     group_for_games_page:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 15
+      weight: 17
       format_type: fieldset
       format_settings:
         id: ''
         classes: ''
         description: 'fields for games page'
-        required_fields: true
+        required_fields: false
       label: 'Games (for games page)'
     group_arcade_for_arcade_page_:
       children:
         - field_arcade_game_category
         - field_arcade_game_filter
       parent_name: ''
-      weight: 17
+      weight: 19
       format_type: fieldset
       format_settings:
         id: ''
@@ -78,7 +79,7 @@ third_party_settings:
         - field_game_title_icon
         - field_game_icon_label
       parent_name: ''
-      weight: 18
+      weight: 20
       format_type: fieldset
       format_settings:
         id: ''
@@ -92,7 +93,7 @@ bundle: lucky_baby_desktop_games_entity
 mode: default
 content:
   field_all_games_category:
-    weight: 16
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -110,35 +111,48 @@ content:
     type: options_select
     region: content
   field_client_type:
-    weight: 7
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_client_type_mobile:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_enable_free_play:
-    weight: 9
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_enable_game:
-    weight: 0
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_game_mobile:
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_external_game_id:
-    type: string_textfield
-    weight: 6
-    region: content
+    weight: 8
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_category:
-    weight: 13
+    weight: 1
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -162,7 +176,7 @@ content:
     type: erviews_options_buttons
     region: content
   field_game_code:
-    weight: 4
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -170,24 +184,15 @@ content:
     type: string_textfield
     region: content
   field_game_code_icore:
-    weight: 5
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_game_description:
-    weight: 19
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
   field_game_filter:
-    weight: 14
+    weight: 2
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -243,19 +248,19 @@ content:
     type: string_textfield
     region: content
   field_game_provider:
-    weight: 12
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_tag:
-    weight: 8
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_thumbnail:
-    weight: 3
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -263,7 +268,7 @@ content:
     type: image_image
     region: content
   field_game_title:
-    weight: 1
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -279,30 +284,34 @@ content:
     type: image_image
     region: content
   field_game_type:
-    weight: 10
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_provider_product:
-    weight: 11
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
-  translation:
-    weight: 13
+  name:
+    type: string_textfield
+    weight: 0
     region: content
-    settings: {  }
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   feeds_item: true
-  name: true
+  field_game_description: true
+  translation: true
   user_id: true

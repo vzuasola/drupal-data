@@ -1,17 +1,17 @@
-uuid: a960d744-9f96-41bb-8fff-0ea0e31b10de
+uuid: 36aa3bf5-d014-4499-8e43-628a2aa16576
 langcode: en
 status: true
 dependencies:
   module:
+    - color_field
     - node
-    - taxonomy
-id: node.field_ri
-field_name: field_ri
+id: node.field_ribbon_text_color
+field_name: field_ribbon_text_color
 entity_type: node
-type: entity_reference
+type: color_field_type
 settings:
-  target_type: taxonomy_term
-module: core
+  format: '#HEXHEX'
+module: color_field
 locked: false
 cardinality: 1
 translatable: true

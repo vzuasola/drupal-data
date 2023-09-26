@@ -1,0 +1,20 @@
+uuid: b15a34ab-901a-4c41-849c-e434a25830b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.msw_prioritization_menu.field_menu_title
+  module:
+    - msw_prioritization_menu
+id: msw_prioritization_menu.msw_prioritization_menu.field_menu_title
+field_name: field_menu_title
+entity_type: msw_prioritization_menu
+bundle: msw_prioritization_menu
+label: 'Menu Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

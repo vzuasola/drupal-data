@@ -1,0 +1,8 @@
+uuid: ad4d9a61-a078-411f-9a5e-cdff7835d9cf
+langcode: en
+status: true
+dependencies: {  }
+id: help-center-menu
+label: 'Help Center'
+description: 'The floating menu at the bottom of the front page'
+locked: false
