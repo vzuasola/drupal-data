@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Page Load configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_config_browser",
+ *   id = "webcomposer_config_pageload",
  *   route = {
  *     "title" = "Page Load Configuration",
  *     "path" = "/admin/config/webcomposer/config/pageload",
