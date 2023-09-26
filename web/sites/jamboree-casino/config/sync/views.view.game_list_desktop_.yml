@@ -1887,6 +1887,7 @@ display:
           required: true
           plugin_id: standard
       group_by: false
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

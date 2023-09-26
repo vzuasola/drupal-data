@@ -1273,6 +1273,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      enabled: false
     cache_metadata:
       max-age: 0
       contexts:
@@ -1459,6 +1460,7 @@ display:
           required: true
           plugin_id: standard
       rendering_language: '***LANGUAGE_language_interface***'
+      enabled: true
     cache_metadata:
       max-age: -1
       contexts:
