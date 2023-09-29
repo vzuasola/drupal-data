@@ -1036,7 +1036,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: slider
+            image_style: thumbnail
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -2203,6 +2203,10 @@ display:
           formats:
             json: json
       display_description: ''
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
