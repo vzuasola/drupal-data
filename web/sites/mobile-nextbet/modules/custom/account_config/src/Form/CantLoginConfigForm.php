@@ -42,7 +42,7 @@ class CantLoginConfigForm extends FormBase {
     $this->integrationConfig($form);
     $this->tabMenuConfig($form);
     $this->resetPasswordConfig($form);
-    $this->passwordChecklisRules($form);
+    $this->passwordChecklistRules($form);
 
     return $form;
   }
@@ -202,7 +202,7 @@ class CantLoginConfigForm extends FormBase {
   /**
    * Messages form form password checklist
    */
-  private function passwordChecklisRules(&$form)
+  private function passwordChecklistRules(&$form)
   {
     $form['field_password_validation_box'] = [
       '#type' => 'details',
