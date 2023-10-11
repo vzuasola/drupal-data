@@ -48,14 +48,6 @@ class MobilePromotionsForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['promotions_configuration']['filter_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Filter Label'),
-      '#default_value' => $this->get('filter_label'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
     $form['promotions_configuration']['no_available_msg'] = [
       '#type' => 'textfield',
       '#title' => $this->t('No available promotions message'),
@@ -64,37 +56,6 @@ class MobilePromotionsForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['promotions_configuration']['more_info_link_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('More info link text'),
-      '#default_value' => $this->get('more_info_link_text'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['promotions_configuration']['countdown_format'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Countdown Format ([days] days, [hours] remaining)'),
-      '#default_value' => $this->get('countdown_format'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['promotions_configuration']['no_archive_msg'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('No available archived promotions message'),
-      '#default_value' => $this->get('no_archive_msg'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['promotions_configuration']['btn_archive_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Archive Button text'),
-      '#default_value' => $this->get('btn_archive_title'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
     return $form;
   }
 }
