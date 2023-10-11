@@ -1,14 +1,17 @@
-uuid: 137ecb74-1e29-4783-a111-f375a987f103
+uuid: f721a75d-9218-47dd-9ca2-481285749c50
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_hide_promotion
-field_name: field_hide_promotion
+id: node.field_url_slug
+field_name: field_url_slug
 entity_type: node
-type: boolean
-settings: {  }
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

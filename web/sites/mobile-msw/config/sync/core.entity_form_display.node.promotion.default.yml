@@ -3,148 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.promotion.body
     - field.field.node.promotion.field_banner_image
-    - field.field.node.promotion.field_banner_link
-    - field.field.node.promotion.field_banner_link_target
-    - field.field.node.promotion.field_casino_gold_only
-    - field.field.node.promotion.field_enable_disable_ribbon_tag
-    - field.field.node.promotion.field_field_enable_sticky_post
-    - field.field.node.promotion.field_field_enable_sticky_post2
-    - field.field.node.promotion.field_field_enable_sticky_pre
-    - field.field.node.promotion.field_field_enable_sticky_pre2
-    - field.field.node.promotion.field_hide_countdown
-    - field.field.node.promotion.field_hide_promotion
-    - field.field.node.promotion.field_is_archived
-    - field.field.node.promotion.field_mark_as_featured
-    - field.field.node.promotion.field_meta_tags
-    - field.field.node.promotion.field_post_banner_image
-    - field.field.node.promotion.field_post_banner_link
-    - field.field.node.promotion.field_post_banner_link_target
-    - field.field.node.promotion.field_post_body
-    - field.field.node.promotion.field_post_summary_blurb
-    - field.field.node.promotion.field_post_thumbnail_image
-    - field.field.node.promotion.field_product_category
-    - field.field.node.promotion.field_promo_availability
-    - field.field.node.promotion.field_ribbon_background_color
-    - field.field.node.promotion.field_ribbon_label
-    - field.field.node.promotion.field_ribbon_text_color
-    - field.field.node.promotion.field_sticky_background_post
-    - field.field.node.promotion.field_sticky_background_post2
-    - field.field.node.promotion.field_sticky_background_pre
-    - field.field.node.promotion.field_sticky_background_pre2
-    - field.field.node.promotion.field_sticky_link_target_post
-    - field.field.node.promotion.field_sticky_link_target_post2
-    - field.field.node.promotion.field_sticky_link_target_pre
-    - field.field.node.promotion.field_sticky_link_target_pre2
-    - field.field.node.promotion.field_sticky_text_color_post
-    - field.field.node.promotion.field_sticky_text_color_post2
-    - field.field.node.promotion.field_sticky_text_color_pre
-    - field.field.node.promotion.field_sticky_text_color_pre2
-    - field.field.node.promotion.field_sticky_url_post
-    - field.field.node.promotion.field_sticky_url_post2
-    - field.field.node.promotion.field_sticky_url_pre
-    - field.field.node.promotion.field_sticky_url_pre2
-    - field.field.node.promotion.field_summary_blurb
-    - field.field.node.promotion.field_summary_url
-    - field.field.node.promotion.field_summary_url_target
-    - field.field.node.promotion.field_thumbnail_image
-    - image.style.thumbnail
+    - field.field.node.promotion.field_promo_description
+    - field.field.node.promotion.field_promo_mechanics
+    - field.field.node.promotion.field_terms_conditions
+    - field.field.node.promotion.field_url_slug
     - node.type.promotion
   module:
-    - color_field
-    - entity_reference_views_select
     - field_group
     - image
-    - link
-    - metatag
     - path
     - scheduler
     - text
 third_party_settings:
   field_group:
-    group_details:
-      children:
-        - field_enable_disable_ribbon_tag
-        - field_ribbon_label
-        - field_ribbon_text_color
-        - field_ribbon_background_color
-      parent_name: ''
-      weight: 12
-      format_type: details
-      format_settings:
-        label: 'Ribbon Tags'
-        required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: 'Ribbon Tags'
-    group_pre:
-      children:
-        - group_summary
-        - group_promotion_banner
-        - body
-        - group_sticky_component_pre
-      parent_name: ''
-      weight: 10
-      format_type: details
-      format_settings:
-        label: 'Pre Login Promotion'
-        required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: 'Pre Login Promotion'
-    group_post_login_promotion:
-      children:
-        - group_promotion_summary
-        - group_promo
-        - field_post_body
-        - field_casino_gold_only
-        - group_sticky_component
-      parent_name: ''
-      weight: 11
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Post Login Promotion'
     group_promotion_banner:
       children:
         - field_banner_image
-        - field_banner_link
-        - field_banner_link_target
-      parent_name: group_pre
-      weight: 11
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: true
-        required_fields: true
-      label: 'Promotion Banner'
-    group_promotion_summary:
-      children:
-        - field_post_thumbnail_image
-        - field_post_summary_blurb
-      parent_name: group_post_login_promotion
-      weight: 24
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: true
-        required_fields: true
-      label: 'Promotion Summary'
-    group_promo:
-      children:
-        - field_post_banner_image
-        - field_post_banner_link
-        - field_post_banner_link_target
-      parent_name: group_post_login_promotion
-      weight: 25
+      parent_name: ''
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -153,11 +30,9 @@ third_party_settings:
         required_fields: true
       label: 'Promotion Banner'
     group_summary:
-      children:
-        - field_thumbnail_image
-        - field_summary_blurb
-      parent_name: group_pre
-      weight: 10
+      children: {  }
+      parent_name: ''
+      weight: 1
       format_type: details
       format_settings:
         label: 'Promotion Summary'
@@ -166,114 +41,14 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Promotion Summary'
-    group_sticky_component:
-      children:
-        - group_sticky_component_one
-        - group_component_two
-      parent_name: group_post_login_promotion
-      weight: 29
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Sticky Component'
-    group_sticky_component_one:
-      children:
-        - field_field_enable_sticky_post
-        - field_sticky_url_post
-        - field_sticky_link_target_post
-        - field_sticky_text_color_post
-        - field_sticky_background_post
-      parent_name: group_sticky_component
-      weight: 20
-      format_type: details
-      format_settings:
-        label: 'Component One'
-        required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: 'Component One'
-    group_component_two:
-      children:
-        - field_field_enable_sticky_post2
-        - field_sticky_url_post2
-        - field_sticky_link_target_post2
-        - field_sticky_text_color_post2
-        - field_sticky_background_post2
-      parent_name: group_sticky_component
-      weight: 21
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Component Two'
-    group_sticky_component_pre:
-      children:
-        - group_component_one_pre
-        - group_component_two_pre
-      parent_name: group_pre
-      weight: 14
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Sticky Component'
-    group_component_one_pre:
-      children:
-        - field_field_enable_sticky_pre
-        - field_sticky_url_pre
-        - field_sticky_link_target_pre
-        - field_sticky_text_color_pre
-        - field_sticky_background_pre
-      parent_name: group_sticky_component_pre
-      weight: 20
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Component One'
-    group_component_two_pre:
-      children:
-        - field_field_enable_sticky_pre2
-        - field_sticky_url_pre2
-        - field_sticky_link_target_pre2
-        - field_sticky_text_color_pre2
-        - field_sticky_background_pre2
-      parent_name: group_sticky_component_pre
-      weight: 22
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Component Two'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 13
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 18
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -285,120 +60,16 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_banner_link:
-    weight: 22
+  field_promo_description:
+    weight: 3
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: link_default
+    type: text_textarea
     region: content
-  field_banner_link_target:
-    weight: 24
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_casino_gold_only:
-    weight: 27
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_enable_disable_ribbon_tag:
-    weight: 10
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_field_enable_sticky_post:
-    weight: 136
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_field_enable_sticky_post2:
-    weight: 138
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_field_enable_sticky_pre:
-    weight: 135
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_field_enable_sticky_pre2:
-    weight: 137
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_hide_countdown:
-    weight: 6
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_hide_promotion:
+  field_promo_mechanics:
     weight: 5
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_is_archived:
-    weight: 7
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_mark_as_featured:
-    weight: 4
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_meta_tags:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_firehose
-    region: content
-  field_post_banner_image:
-    weight: 7
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_post_banner_link:
-    weight: 8
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_post_banner_link_target:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_post_body:
-    weight: 26
     settings:
       rows: 9
       summary_rows: 3
@@ -406,216 +77,37 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
-  field_post_summary_blurb:
-    weight: 30
+  field_terms_conditions:
+    weight: 6
     settings:
-      rows: 5
+      rows: 9
+      summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: text_textarea_with_summary
     region: content
-  field_post_thumbnail_image:
-    weight: 29
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_product_category:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: erviews_options_select
-    region: content
-  field_promo_availability:
+  field_url_slug:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_ribbon_background_color:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_ribbon_label:
-    weight: 11
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_ribbon_text_color:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_background_post:
-    weight: 141
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_background_post2:
-    weight: 142
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_background_pre:
-    weight: 139
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_background_pre2:
-    weight: 141
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_link_target_post:
-    weight: 138
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_sticky_link_target_post2:
-    weight: 140
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_sticky_link_target_pre:
-    weight: 137
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_sticky_link_target_pre2:
-    weight: 139
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_sticky_text_color_post:
-    weight: 139
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_text_color_post2:
-    weight: 141
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_text_color_pre:
-    weight: 138
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_text_color_pre2:
-    weight: 140
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_sticky_url_post:
-    weight: 137
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_sticky_url_post2:
-    weight: 139
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_sticky_url_pre:
-    weight: 136
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_sticky_url_pre2:
-    weight: 138
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_summary_blurb:
-    weight: 23
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_summary_url:
-    weight: 8
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_summary_url_target:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_thumbnail_image:
-    weight: 22
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  langcode:
-    type: language_select
-    weight: 1
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   path:
     type: path
-    weight: 19
+    weight: 11
     region: content
     settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 21
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 15
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -623,12 +115,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 23
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 22
+    weight: 13
     region: content
     settings:
       display_label: true
@@ -641,14 +133,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 13
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 20
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -657,8 +144,11 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
+  promote: true
+  translation: true

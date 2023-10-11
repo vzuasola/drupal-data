@@ -1,20 +1,20 @@
-uuid: d7362f4c-86f6-406e-b0ae-1bf016957b1d
+uuid: a5e5a6e1-607a-447c-84ac-e9b67b240f78
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_body
+    - field.storage.node.field_promo_mechanics
     - node.type.promotion
   module:
     - text
-id: node.promotion.field_post_body
-field_name: field_post_body
+id: node.promotion.field_promo_mechanics
+field_name: field_promo_mechanics
 entity_type: node
 bundle: promotion
-label: 'Body on Post Login'
+label: 'Promo Mechanics'
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
