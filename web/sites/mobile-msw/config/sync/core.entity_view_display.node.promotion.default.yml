@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.promotion.field_promo_description
     - field.field.node.promotion.field_promo_mechanics
     - field.field.node.promotion.field_terms_conditions
-    - field.field.node.promotion.field_url_slug
     - node.type.promotion
   module:
     - image
@@ -47,14 +46,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_url_slug:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
 hidden:
   langcode: true

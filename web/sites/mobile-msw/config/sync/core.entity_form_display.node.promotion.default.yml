@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.promotion.field_promo_description
     - field.field.node.promotion.field_promo_mechanics
     - field.field.node.promotion.field_terms_conditions
-    - field.field.node.promotion.field_url_slug
+    - image.style.thumbnail
     - node.type.promotion
   module:
     - field_group
@@ -30,17 +30,18 @@ third_party_settings:
         required_fields: true
       label: 'Promotion Banner'
     group_summary:
-      children: {  }
+      children:
+        - field_url_slug
       parent_name: ''
       weight: 1
       format_type: details
       format_settings:
-        label: 'Promotion Summary'
+        label: 'Promotion URL'
         open: true
         required_fields: true
         id: ''
         classes: ''
-      label: 'Promotion Summary'
+      label: 'Promotion URL'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -85,14 +86,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
-    region: content
-  field_url_slug:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   path:
     type: path

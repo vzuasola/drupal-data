@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.promotion.field_promo_description
     - field.field.node.promotion.field_promo_mechanics
     - field.field.node.promotion.field_terms_conditions
-    - field.field.node.promotion.field_url_slug
     - node.type.promotion
   module:
     - user
@@ -23,7 +22,7 @@ content:
 hidden:
   field_banner_image: true
   field_promo_description: true
+  field_promo_mechanics: true
   field_terms_conditions: true
   field_thumbnail_image: true
-  field_url_slug: true
   langcode: true
