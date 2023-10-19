@@ -1,11 +1,4 @@
 attributes:
-  postLoginURLEnabled:
-    label: 'Post-Login URL Enabled'
-    description: 'Check to enable different URL if user is logged in '
-    type: checkbox
-  postLoginURL:
-    label: 'Post Login URL'
-    description: 'Link that will be used if the above checkbox is enabled on post-login'
   class:
     label: ''
     description: ''
