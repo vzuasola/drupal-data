@@ -19,9 +19,9 @@ field_name: field_banner_image
 entity_type: node
 bundle: promotion
 label: 'Banner Image'
-description: 'Recommended size of image is 1190px x 330px'
-required: false
-translatable: true
+description: 'Recommended size of image is 760px x 215px'
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

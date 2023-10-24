@@ -43,15 +43,8 @@ class MobilePromotionsForm extends FormBase {
     $form['promotions_configuration']['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
+      '#description' => $this->t('Label to show on Header of Promotion page.'),
       '#default_value' => $this->get('title'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['promotions_configuration']['filter_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Filter Label'),
-      '#default_value' => $this->get('filter_label'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
@@ -59,42 +52,30 @@ class MobilePromotionsForm extends FormBase {
     $form['promotions_configuration']['no_available_msg'] = [
       '#type' => 'textfield',
       '#title' => $this->t('No available promotions message'),
+      '#description' => $this->t('Label to be show when no promotion was configured.'),
       '#default_value' => $this->get('no_available_msg'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['promotions_configuration']['more_info_link_text'] = [
+    $form['promotions_configuration']['promo_mechanics'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('More info link text'),
-      '#default_value' => $this->get('more_info_link_text'),
+      '#title' => $this->t('Promo Mechanics Label'),
+      '#default_value' => $this->get('promo_mechanics'),
+      '#description' => $this->t('Label to show on Header of Promo Mechanics on Inner Pages.'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['promotions_configuration']['countdown_format'] = [
+    $form['promotions_configuration']['terms_and_condition'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Countdown Format ([days] days, [hours] remaining)'),
-      '#default_value' => $this->get('countdown_format'),
+      '#title' => $this->t('Terms and Condition Label'),
+      '#default_value' => $this->get('terms_and_condition'),
+      '#description' => $this->t('Label to show on Header of Terms and Condition on Inner Pages.'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['promotions_configuration']['no_archive_msg'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('No available archived promotions message'),
-      '#default_value' => $this->get('no_archive_msg'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['promotions_configuration']['btn_archive_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Archive Button text'),
-      '#default_value' => $this->get('btn_archive_title'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
     return $form;
   }
 }

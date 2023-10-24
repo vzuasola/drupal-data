@@ -1,0 +1,22 @@
+uuid: e0657710-c33e-443d-a43e-5c5b3610da8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_terms_conditions
+    - node.type.promotion
+  module:
+    - text
+id: node.promotion.field_terms_conditions
+field_name: field_terms_conditions
+entity_type: node
+bundle: promotion
+label: 'Terms & Conditions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

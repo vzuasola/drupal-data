@@ -45,6 +45,7 @@ class MSWGeneralConfigurationForm extends FormBase {
     $this->mswHiddenTitle($form);
     $this->helpCenterConfig($form);
     $this->prioritizationMenuConfig($form);
+    $this->customerSupportNotificationsConfig($form);
 
     return $form;
   }
@@ -332,6 +333,42 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Help Center Title'),
       '#default_value' => $this->get('help_center_title'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function customerSupportNotificationsConfig(array &$form) {
+    $form['customer_support_notifications_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('CS Email Notification'),
+      '#group' => 'advanced'
+    ];
+    $form['customer_support_notifications_settings']['cs_reg_email_notification']['cs_reg_email_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Email notifications to cs on new player registration'),
+      '#default_value' => $this->get('cs_reg_email_enable'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['customer_support_notifications_settings']['cs_reg_email_notification']['cs_reg_email_sender'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sender'),
+      '#default_value' => $this->get('cs_reg_email_sender'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['customer_support_notifications_settings']['cs_reg_email_notification']['cs_reg_email_recipients'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Recipients'),
+      '#default_value' => $this->get('cs_reg_email_recipients'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['customer_support_notifications_settings']['cs_reg_email_notification']['cs_reg_email_template'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Email Template'),
+      '#default_value' => $this->get('cs_reg_email_template')['value'],
+      '#format' => $this->get('cs_reg_email_template')['format'],
       '#translatable' => TRUE,
     ];
   }

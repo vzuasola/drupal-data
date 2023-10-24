@@ -1,0 +1,21 @@
+uuid: 4af6eaef-0b9a-477e-be64-2be51fe44796
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_description
+    - node.type.promotion
+  module:
+    - text
+id: node.promotion.field_promo_description
+field_name: field_promo_description
+entity_type: node
+bundle: promotion
+label: 'Promo Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
