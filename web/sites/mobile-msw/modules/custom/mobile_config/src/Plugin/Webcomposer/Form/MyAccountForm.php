@@ -341,14 +341,14 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
       ],
 
       'password_icon_markup1' => [
-        'name' => 'Password mask icon markup',
+        'name' => 'Password mask icon markup 1',
         'type' => 'markup',
         'settings' => [
           'markup' => [
             '#title' => 'Password mask icon markup',
             '#type' => 'textarea',
             '#description' => 'A markup for password-mask-icon',
-            '#default_value' => '<span class="password-mask-icon mask"></span>',
+            '#default_value' => '<span class="password-mask-svg"></span>',
           ],
         ],
       ],
@@ -404,6 +404,19 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Security Answer 2 Annotation text',
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'password_icon_markup2' => [
+        'name' => 'Password mask icon markup 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Password mask icon markup',
+            '#type' => 'textarea',
+            '#description' => 'A markup for password-mask-icon',
+            '#default_value' => '<span class="password-mask-svg"></span>',
           ],
         ],
       ],
