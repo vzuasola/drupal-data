@@ -4,7 +4,6 @@ webcomposer_content_slider.admin_settings:
   parent: system.admin_config
   route_name: webcomposer_content_slider.admin_settings
 
-# Announcement menu items definition
 entity.content_slider_entity.collection:
   title: 'Content Slider List'
   route_name: entity.content_slider_entity.collection
