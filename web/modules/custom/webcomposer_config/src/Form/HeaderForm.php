@@ -378,6 +378,13 @@ class HeaderForm extends FormBase {
       '#default_value' => $this->get('dafacoin_balance_toggle'),
     ];
 
+    $form['balance_group']['dafacoin_guided_tour_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Dafacoin Guided Tour'),
+      '#description' => $this->t('If checked, it will open Guided Tour Popup on initial login'),
+      '#default_value' => $this->get('dafacoin_guided_tour_toggle'),
+    ];
+
     $form['balance_group']['dafacoin_total_balance_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Dafacoin Total Balance Label.'),

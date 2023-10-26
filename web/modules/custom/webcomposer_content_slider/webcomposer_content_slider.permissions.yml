@@ -1,0 +1,22 @@
+add content slider entity entities:
+  title: 'Create new content slider entity entities'
+
+administer content slider entity entities:
+  title: 'Administer content slider entity entities'
+  description: 'Allow to access the administration form to configure content slider entity entities.'
+  restrict access: true
+
+delete content slider entity entities:
+  title: 'Delete content slider entity entities'
+
+edit content slider entity entities:
+  title: 'Edit content slider entity entities'
+
+access content slider entity overview:
+  title: 'Access the content slider entity overview page'
+
+view published content slider entity entities:
+  title: 'View published content slider entity entities'
+
+view unpublished content slider entity entities:
+  title: 'View unpublished content slider entity entities'

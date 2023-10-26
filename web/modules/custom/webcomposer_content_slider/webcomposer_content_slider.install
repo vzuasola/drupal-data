@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_content_slider_uninstall() {
+  $keys = [
+    'core.entity_form_display.content_slider_entity.content_slider_entity.default',
+    'core.entity_view_display.content_slider_entity.content_slider_entity.default',
+    'field.field.content_slider_entity.content_slider_entity.field_enable_content',
+    'field.field.content_slider_entity.content_slider_entity.field_html_content',
+    'field.field.content_slider_entity.content_slider_entity.field_title',
+    'field.storage.content_slider_entity.field_enable_content',
+    'field.storage.content_slider_entity.field_html_content',
+    'field.storage.content_slider_entity.field_title',
+    'language.content_settings.content_slider_entity.content_slider_entity',
+    'views.view.webcomposer_content_slider'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
+
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - Added Enable Preview field
+ * - Added Tablet View field
+ * - Added Display Status field
+ */
+function webcomposer_content_slider_update_8001() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_content_slider');
+}
