@@ -318,7 +318,7 @@ class MSWAccountForm extends WebcomposerFormBase implements WebcomposerFormInter
 
       'security_answer_1' => [
         'name' => 'Security Answer 1',
-        'type' => 'textfield',
+        'type' => 'password',
         'settings' => [
           'label' => [
             '#title' => 'Security Answer 1 label',
@@ -373,7 +373,7 @@ class MSWAccountForm extends WebcomposerFormBase implements WebcomposerFormInter
 
       'security_answer_2' => [
         'name' => 'Security Answer 2',
-        'type' => 'textfield',
+        'type' => 'password',
         'settings' => [
           'label' => [
             '#title' => 'Security Answer 2 label',
