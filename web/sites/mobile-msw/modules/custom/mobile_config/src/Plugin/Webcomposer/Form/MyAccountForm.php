@@ -318,7 +318,7 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
 
       'security_answer_1' => [
         'name' => 'Security Answer 1',
-        'type' => 'textfield',
+        'type' => 'password',
         'settings' => [
           'label' => [
             '#title' => 'Security Answer 1 label',
@@ -336,6 +336,19 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Security Answer 1 Annotation text',
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'password_icon_markup1' => [
+        'name' => 'Password mask icon markup 1',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Password mask icon markup',
+            '#type' => 'textarea',
+            '#description' => 'A markup for password-mask-icon',
+            '#default_value' => '<span class="password-mask-svg"></span>',
           ],
         ],
       ],
@@ -373,7 +386,7 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
 
       'security_answer_2' => [
         'name' => 'Security Answer 2',
-        'type' => 'textfield',
+        'type' => 'password',
         'settings' => [
           'label' => [
             '#title' => 'Security Answer 2 label',
@@ -391,6 +404,19 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Security Answer 2 Annotation text',
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'password_icon_markup2' => [
+        'name' => 'Password mask icon markup 2',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Password mask icon markup',
+            '#type' => 'textarea',
+            '#description' => 'A markup for password-mask-icon',
+            '#default_value' => '<span class="password-mask-svg"></span>',
           ],
         ],
       ],
