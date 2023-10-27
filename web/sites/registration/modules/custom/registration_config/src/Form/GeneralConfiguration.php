@@ -118,6 +118,14 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('enable_reg_relic_custom_headers'),
     ];
 
+    $form['general']['enable_new_password_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable New Password Validation'),
+      '#description' => $this->t('Replace the old registration form that is using the strength meter with new one using the password validation box.'),
+      '#default_value' => $this->get('enable_new_password_validation'),
+      '#translatable' => TRUE,
+    ];
+
   }
 
   /**
