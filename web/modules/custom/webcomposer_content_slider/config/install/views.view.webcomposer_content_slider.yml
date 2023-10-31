@@ -15,7 +15,7 @@ dependencies:
     - webcomposer_content_slider
     - webcomposer_rest_extra
 _core:
-  default_config_hash: lvrtippCYDpS13RSJ8k36Y5MOrGFk1ZjVQIpEtzNoLQ
+  default_config_hash: P0_0W0d3XQlW9nBi1PajbU5gBkTV0MS4gLwhLTTc1fY
 id: webcomposer_content_slider
 label: 'Webcomposer Content Slider'
 module: views
@@ -445,6 +445,8 @@ display:
         row: false
         fields: false
         cache: false
+        filters: false
+        filter_groups: false
       row:
         type: data_entity
         options: {  }
@@ -638,6 +640,87 @@ display:
       cache:
         type: none
         options: {  }
+      filters:
+        langcode:
+          id: langcode
+          table: content_slider_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: content_slider_entity
+          entity_field: langcode
+          plugin_id: language
+        field_enable_content_value:
+          id: field_enable_content_value
+          table: content_slider_entity__field_enable_content
+          field: field_enable_content_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
