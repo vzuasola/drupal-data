@@ -1,0 +1,18 @@
+webcomposer_content_slider.admin_settings:
+  title: 'Webcomposer Content Slider'
+  description: 'Manage Content Slider'
+  parent: system.admin_config
+  route_name: webcomposer_content_slider.admin_settings
+
+entity.content_slider_entity.collection:
+  title: 'Content Slider List'
+  route_name: entity.content_slider_entity.collection
+  description: 'Manage Content Sliders'
+  parent: webcomposer_content_slider.admin_settings
+
+content_slider_entity.admin.structure.settings:
+  title: Content Slider Entity settings
+  description: 'Configure Content Slider entities'
+  route_name: content_slider_entity.settings
+  parent: webcomposer_content_slider.admin_settings
+  weight: 100

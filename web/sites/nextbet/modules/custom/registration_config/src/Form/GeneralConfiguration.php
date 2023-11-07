@@ -703,6 +703,7 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Enable New password validation'),
       '#description' => $this->t('If we check this checkbox new password validation will be active.'),
       '#default_value' => $this->get('enable_new_password_validation'),
+      '#translatable' => true
     ];
   }
 }

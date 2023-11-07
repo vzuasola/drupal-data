@@ -1,0 +1,5 @@
+entity.content_slider_entity.add_form:
+  route_name: entity.content_slider_entity.add_form
+  title: 'Add Webcomposer Content slider entity'
+  appears_on:
+    - entity.content_slider_entity.collection

@@ -1,0 +1,21 @@
+uuid: 9aff6fea-41eb-4c19-ba2f-02613ae37746
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_slider_entity.field_html_content
+  module:
+    - text
+    - webcomposer_content_slider
+id: content_slider_entity.content_slider_entity.field_html_content
+field_name: field_html_content
+entity_type: content_slider_entity
+bundle: content_slider_entity
+label: 'HTML Content'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

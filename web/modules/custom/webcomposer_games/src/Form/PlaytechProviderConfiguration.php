@@ -58,24 +58,6 @@ class PlaytechProviderConfiguration extends FormBase {
       '#access' => !$this->isTranslated() // Hide the integration config since all fields are non translatable
     ];
 
-    // This field is temporary
-    // Will be removed once futurama has been deployed to production and all sites have done the PAS cleanup.
-    $form['futurama_switch'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Futurama'),
-      '#description' => $this->t('This will enable futurama features.
-       This will disable the PAS login during player login and will transfer the logic on Game launch'),
-      '#default_value' => $this->get('futurama_switch'),
-    ];
-
-    $form['futurama_gold_switch'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Gold Futurama'),
-      '#description' => $this->t('This will enable futurama features for gold.
-       This will disable the PAS login during player login and will transfer the logic on Game launch'),
-      '#default_value' => $this->get('futurama_gold_switch'),
-    ];
-
     $form['javascript_assets'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Javascript Assets'),
