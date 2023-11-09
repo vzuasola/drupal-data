@@ -1,5 +1,15 @@
-javascript_assets: 'https://login.megasportcasino.com/jswrapper/integration.js.php?casino=mannycasino'
+javascript_assets: '/jswrapper/integration.js.php?min=1&casino=dafabetgames'
 playtech_pas_endpoint: 'https://login.megasportcasino.com/Login.php'
 lobby_url: 'https://www.google-analytics.com/lobby.js'
-playtech_pas_casino: mannycasino
-languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en"
+playtech_pas_casino: dafa888
+languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\nhi|en\r\nte|en\r\ngr|en\r\npl|en\r\nes|ES-MX\r\npt|PT"
+iapiconf_override: "clientUrl_casino|https://cachebanner.twik57bx.com/casinoclient.html\r\nclientPlatform|web"
+games_playtech_provider_form__active_tab: edit-integration-config
+error_mapping: "all|Service not available.\r\n6|Service unavailable. \r\n22|Your account is closed. Please contact customer support.\r\n23|Your account is closed. Please contact customer support.\r\n26|Your access is restricted. Please contact customer support."
+error_header_title_text: Notification
+error_button: 'OK|#close'
+ugl_switch: 0
+ugl_languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|ja\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en\r\nes|es-mx\r\npt|pt\r\nhi|en\r\nte|en"
+ugl_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nINR\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nPLN\r\nMMK\r\nLAK"
+ugl_url: 'https://login.[superdomain].com/GameLauncher.php?'
+ugl_parameters: "gameCodeName|gameCodeName\r\nusername|username\r\ncasino|casino\r\nclientPlatform|clientPlatform\r\nexternalToken|externalToken\r\nlobbyUrl|lobbyUrl"
