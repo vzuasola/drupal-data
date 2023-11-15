@@ -13,12 +13,14 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  *   name = "New Registration Form",
  * )
  */
-class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface {
+class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface
+{
 
   /**
    * Get Settings.
    */
-  public function getSettings() {
+  public function getSettings()
+  {
     return [
       'show' => [
         '#title' => 'Show this form',
@@ -36,7 +38,8 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
   /**
    * Set Fields.
    */
-  public function getFields() {
+  public function getFields()
+  {
     return [
 
       'back_button' => [
@@ -147,6 +150,34 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
         ],
       ],
 
+      'mobile_number_area_code' => [
+        'name' => 'Mobile Number Area Code',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Mobile Number Area Code Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for the Mobile Number Area Code field',
+          ],
+          'placeholder' => [
+            '#title' => 'Mobile Number Area Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Mobile number Area Code field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Mobile Number Area Code Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+          'toggle' => [
+            '#title' => 'Switch on/off',
+            '#type' => 'checkbox',
+            '#description' => 'Turn the feature on/off',
+            '#translatable' => true
+          ],
+        ],
+      ],
+
       'mobile_number' => [
         'name' => 'Mobile Number',
         'type' => 'textfield',
@@ -170,13 +201,13 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Country Area Codes',
             '#type' => 'textarea',
             '#description' => 'List of area codes that will appear beside the mobile number ' .
-            '(take note: must be a valid area code or the image will not appear beside the are code)',
+              '(take note: must be a valid area code or the image will not appear beside the are code)',
           ],
           'country_area_code_validation' => [
             '#title' => 'Country Area Code Custom Validation',
             '#type' => 'textarea',
             '#description' => 'List of area codes that will be validated upon submission in which it had' .
-            ' different min and max character allowed per country code and custom message validation for it',
+              ' different min and max character allowed per country code and custom message validation for it',
           ],
           'additional_country_code_validation' => [
             '#title' => 'Additional Custom Validation for +55 Country Code',
@@ -379,7 +410,7 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
             '#title' => 'Mapping of portal IDs to list of currencies',
             '#type' => 'textarea',
             '#description' => 'Mapping of icore portal IDs to the list of currencies, e.g 2|117,2,1 where 2 is the' .
-            'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
+              'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
             '#default_value' => implode(PHP_EOL, [
               '2|117,2,1',
               '3|117,2,1',
