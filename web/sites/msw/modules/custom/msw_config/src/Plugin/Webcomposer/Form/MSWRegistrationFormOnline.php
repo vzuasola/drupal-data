@@ -352,6 +352,66 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'placeofbirth' => [
+          'name' => 'Place of Birth',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Place of Birth Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the Place of Birth field',
+              '#default_value' => 'Place of Birth',
+            ],
+            'placeholder' => [
+              '#title' => 'Place of Birth',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for Place of Birth',
+              '#default_value' => 'Place of Birth',
+            ],
+            'groups' => [
+              '#title' => 'Place of Birth',
+              '#type' => 'textfield',
+              '#description' => 'Place of Birth',
+              '#default_value' => 'placeofbirth',
+            ],
+            'choices' => [
+              '#title' => 'Place of Birth Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>province|Province</small><br> <small>other|Others</small>',
+            ],
+          ],
+        ],
+
+        'outside_ph_select' => [
+          'name' => 'Outside the Philippines Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Outside the Philippines Select',
+              '#type' => 'textfield',
+              '#description' => 'Outside the Philippines field',
+              '#default_value' => 'Outside the Philippines',
+            ],
+            'placeholder' => [
+              '#title' => 'Outside the Philippines',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Outside the Philippines',
+            ],
+            'groups' => [
+              '#title' => 'Outside the Philippines',
+              '#type' => 'textfield',
+              '#description' => 'Outside the Philippines',
+              '#default_value' => 'outside_ph_select',
+            ],
+            'choices' => [
+              '#title' => 'Outside the Philippines Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>nationality|Nationality</small>',
+            ],
+          ],
+        ],
+
         'nationality_select' => [
           'name' => 'Nationality Select',
           'type' => 'select',
