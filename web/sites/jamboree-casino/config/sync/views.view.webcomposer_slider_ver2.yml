@@ -1,4 +1,4 @@
-uuid: c2807955-213e-4540-9231-e876b0ea9920
+uuid: e0fc1945-8379-48e1-b669-4edc51250cda
 langcode: ja
 status: true
 dependencies:
@@ -28,6 +28,8 @@ dependencies:
     - user
     - webcomposer_rest_extra
     - webcomposer_slider_v2
+_core:
+  default_config_hash: oWZSUUnHlwG3IXoEml9Nz5NxVftuSlIL5GPkG2qgzbA
 id: webcomposer_slider_ver2
 label: 'Webcomposer Slider 2.0'
 module: views
@@ -68,25 +70,45 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: mini
         options:
+          items_per_page: 10
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
-          columns: {  }
-          default: ''
-          info: {  }
           override: true
           sticky: false
-          order: asc
           caption: ''
           summary: ''
           description: ''
+          columns:
+            name: name
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
           empty_table: false
       row:
         type: fields
@@ -96,130 +118,16 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        field_banner_image_export:
-          id: field_banner_image_export
+        field_banner_image:
+          id: field_banner_image
           table: webcomposer_slider_v2_entity__field_banner_image
-          field: field_banner_image_export
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Banner Image (serializable)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: slider
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          field_api_classes: 0
-          plugin_id: field_export
-        field_post_banner_image_export:
-          id: field_post_banner_image_export
-          table: webcomposer_slider_v2_entity__field_post_banner_image
-          field: field_post_banner_image_export
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Post Banner Image (serializable)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: slider
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          field_api_classes: 0
-          plugin_id: field_export
+          field: field_banner_image
+          plugin_id: field
+        field_log_in_state:
+          id: field_log_in_state
+          table: webcomposer_slider_v2_entity__field_log_in_state
+          field: field_log_in_state
+          plugin_id: field
       filters:
         langcode:
           id: langcode
@@ -261,8 +169,8 @@ display:
           entity_type: webcomposer_slider_v2_entity
           entity_field: langcode
           plugin_id: language
-        field_publish_date_value:
-          id: field_publish_date_value
+        field_publish_date_value_3:
+          id: field_publish_date_value_3
           table: webcomposer_slider_v2_entity__field_publish_date
           field: field_publish_date_value
           relationship: none
@@ -288,9 +196,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -331,135 +236,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
-        langcode_1:
-          id: langcode_1
-          table: webcomposer_slider_v2_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: webcomposer_slider_v2_entity
-          entity_field: langcode
-          plugin_id: language
-        field_publish_date_value_1:
-          id: field_publish_date_value_1
-          table: webcomposer_slider_v2_entity__field_publish_date
-          field: field_publish_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '<'
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: date
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
-        field_unpublish_date_value_1:
-          id: field_unpublish_date_value_1
-          table: webcomposer_slider_v2_entity__field_unpublish_date
-          field: field_unpublish_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '>'
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: date
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -483,7 +259,7 @@ display:
           operator: in
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 3
+          group: 2
           exposed: false
           expose:
             operator_id: ''
@@ -525,7 +301,84 @@ display:
             min: ''
             max: ''
             value: now
-            type: date
+            type: offset
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_unpublish_date_value_1:
+          id: field_unpublish_date_value_1
+          table: webcomposer_slider_v2_entity__field_unpublish_date
+          field: field_unpublish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        langcode_1:
+          id: langcode_1
+          table: webcomposer_slider_v2_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 3
           exposed: false
           expose:
@@ -540,9 +393,49 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: webcomposer_slider_v2_entity
+          entity_field: langcode
+          plugin_id: language
+        field_publish_date_value_1:
+          id: field_publish_date_value_1
+          table: webcomposer_slider_v2_entity__field_publish_date
+          field: field_publish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
           is_grouped: false
           group_info:
             label: ''
@@ -568,7 +461,7 @@ display:
             min: ''
             max: ''
             value: ''
-            type: date
+            type: offset
           group: 3
           exposed: false
           expose:
@@ -583,9 +476,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -639,8 +529,8 @@ display:
           entity_type: webcomposer_slider_v2_entity
           entity_field: langcode
           plugin_id: language
-        field_publish_date_value_3:
-          id: field_publish_date_value_3
+        field_publish_date_value:
+          id: field_publish_date_value
           table: webcomposer_slider_v2_entity__field_publish_date
           field: field_publish_date_value
           relationship: none
@@ -666,9 +556,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -694,7 +581,7 @@ display:
             min: ''
             max: ''
             value: now
-            type: date
+            type: offset
           group: 4
           exposed: false
           expose:
@@ -709,9 +596,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -738,6 +622,21 @@ display:
           expose:
             label: ''
           plugin_id: standard
+        changed:
+          id: changed
+          table: webcomposer_slider_v2_entity_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: webcomposer_slider_v2_entity
+          entity_field: changed
+          plugin_id: date
       header: {  }
       footer: {  }
       empty: {  }
@@ -756,9 +655,10 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
       tags:
         - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_post_banner_image'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_log_in_state'
   page_1:
     display_plugin: page
     id: page_1
@@ -766,6 +666,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
+      path: admin/structure/webcomposer_slider_v2_entity
       filters:
         langcode:
           id: langcode
@@ -824,7 +725,7 @@ display:
             description: ''
             use_operator: false
             operator: field_title_value_op
-            identifier: field_title_value
+            identifier: title
             required: false
             remember: false
             multiple: false
@@ -833,7 +734,6 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -847,16 +747,103 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
+        langcode_2:
+          id: langcode_2
+          table: webcomposer_slider_v2_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: webcomposer_slider_v2_entity
+          entity_field: langcode
+          plugin_id: language
       defaults:
         filters: false
         filter_groups: false
-        fields: false
         sorts: false
+        style: false
+        row: false
+        fields: false
         empty: false
         access: false
+        pager: false
       filter_groups:
         operator: OR
-        groups: {  }
+        groups:
+          1: AND
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            name: name
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+        options:
+          inline: {  }
+          separator: ''
+          hide_empty: false
+          default_field_elements: true
       fields:
         name:
           table: webcomposer_slider_v2_entity_field_data
@@ -985,8 +972,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_banner_image:
-          id: field_banner_image
+        field_banner_image_1:
+          id: field_banner_image_1
           table: webcomposer_slider_v2_entity__field_banner_image
           field: field_banner_image
           relationship: none
@@ -1182,7 +1169,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Publish Date (Optional)'
+          label: 'Publish Date (optional)'
           exclude: false
           alter:
             alter_text: false
@@ -1246,7 +1233,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Unpublish Date (Optional)'
+          label: 'Unpublish Date (optional)'
           exclude: false
           alter:
             alter_text: false
@@ -1408,19 +1395,6 @@ display:
           destination: true
           entity_type: webcomposer_slider_v2_entity
           plugin_id: entity_operations
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
       empty:
         area_text_custom:
           id: area_text_custom
@@ -1433,10 +1407,6 @@ display:
           tokenize: false
           content: 'No content available.'
           plugin_id: text_custom
-      access:
-        type: perm
-        options:
-          perm: 'access content overview'
       menu:
         type: tab
         title: Sorting
@@ -1446,7 +1416,14 @@ display:
         weight: 1
         context: '0'
         menu_name: admin
-      path: admin/structure/webcomposer_slider_v2_entity
+      access:
+        type: perm
+        options:
+          perm: 'access content overview'
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: 0
       contexts:
@@ -1461,6 +1438,155 @@ display:
         - 'config:field.storage.webcomposer_slider_v2_entity.field_publish_date'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_title'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_unpublish_date'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Slider Preview'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: admin/structure/webcomposer_slider_preview
+      fields:
+        field_banner_image:
+          id: field_banner_image
+          table: webcomposer_slider_v2_entity__field_banner_image
+          field: field_banner_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Banner Image'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: slider
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_post_banner_image:
+          id: field_post_banner_image
+          table: webcomposer_slider_v2_entity__field_post_banner_image
+          field: field_post_banner_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Post Banner Image'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: slider
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      defaults:
+        fields: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+      tags:
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_post_banner_image'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -1468,175 +1594,21 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      display_description: ''
+      path: api/webcomposer_slider_v2
+      pager:
+        type: none
+        options:
+          offset: 0
       style:
         type: node_list_serializer
         options:
           uses_fields: false
           formats:
             json: json
-      path: api/webcomposer_slider_v2
-      pager:
-        type: none
-        options:
-          offset: 0
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        changed:
-          id: changed
-          table: webcomposer_slider_v2_entity_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: webcomposer_slider_v2_entity
-          entity_field: changed
-          plugin_id: date
-      defaults:
-        sorts: false
-        fields: false
       row:
         type: data_entity
         options: {  }
-      fields:
-        field_banner_image_export:
-          id: field_banner_image_export
-          table: webcomposer_slider_v2_entity__field_banner_image
-          field: field_banner_image_export
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Banner Image (serializable)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_url
-          settings:
-            image_style: slider
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          field_api_classes: 0
-          plugin_id: field_export
-        field_post_banner_image_export:
-          id: field_post_banner_image_export
-          table: webcomposer_slider_v2_entity__field_post_banner_image
-          field: field_post_banner_image_export
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Post Banner Image (serializable)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_url
-          settings:
-            image_style: slider
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          field_api_classes: 0
-          plugin_id: field_export
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -1645,41 +1617,27 @@ display:
         - request_format
       tags:
         - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_post_banner_image'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_log_in_state'
   rest_export_2:
     display_plugin: rest_export
     id: rest_export_2
-    display_title: 'Homepage REST export'
-    position: 3
+    display_title: 'Homepage Rest Export'
+    position: 4
     display_options:
       display_extenders: {  }
       path: api/webcomposer_slider_v2.1
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      display_description: ''
       row:
         type: data_field
         options:
           field_options:
-            field_log_in_state:
-              alias: ''
-              raw_output: false
-            field_post_banner_link:
-              alias: ''
-              raw_output: false
-            field_post_banner_link_target:
-              alias: ''
-              raw_output: false
-            field_banner_link:
-              alias: ''
-              raw_output: false
-            field_banner_link_target:
-              alias: ''
-              raw_output: false
-            field_status:
-              alias: ''
-              raw_output: false
             field_banner_image:
-              alias: ''
-              raw_output: false
-            field_post_banner_image:
               alias: ''
               raw_output: false
       fields:
@@ -1745,6 +1703,71 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_post_banner_image:
+          id: field_post_banner_image
+          table: webcomposer_slider_v2_entity__field_post_banner_image
+          field: field_post_banner_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_export
+          settings:
+            image_style: slider
+            export_alt: 0
+            export_title: false
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_post_banner_link:
           id: field_post_banner_link
           table: webcomposer_slider_v2_entity__field_post_banner_link
@@ -1756,7 +1779,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: '{{ field_post_banner_link__uri }}'
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1874,6 +1897,71 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_banner_image:
+          id: field_banner_image
+          table: webcomposer_slider_v2_entity__field_banner_image
+          field: field_banner_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_export
+          settings:
+            image_style: slider
+            export_alt: 0
+            export_title: false
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_banner_link:
           id: field_banner_link
           table: webcomposer_slider_v2_entity__field_banner_link
@@ -1885,7 +1973,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: '{{ field_banner_link__uri }}'
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1952,7 +2040,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_banner_link_target__value }}'
+            text: '{{ field_post_banner_link_target__value }}'
             make_link: false
             path: ''
             absolute: false
@@ -2065,148 +2153,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_banner_image:
-          id: field_banner_image
-          table: webcomposer_slider_v2_entity__field_banner_image
-          field: field_banner_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_export
-          settings:
-            image_style: slider
-            export_alt: 0
-            export_title: false
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_post_banner_image:
-          id: field_post_banner_image
-          table: webcomposer_slider_v2_entity__field_post_banner_image
-          field: field_post_banner_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_export
-          settings:
-            image_style: slider
-            export_alt: 0
-            export_title: false
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       defaults:
         fields: false
-      style:
-        type: node_list_serializer
-        options:
-          formats:
-            json: json
-      display_description: ''
-      pager:
-        type: none
-        options:
-          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
