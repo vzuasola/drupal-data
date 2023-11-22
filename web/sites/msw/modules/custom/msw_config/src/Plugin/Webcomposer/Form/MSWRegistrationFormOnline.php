@@ -363,15 +363,15 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#default_value' => 'Place of Birth',
             ],
             'placeholder' => [
-              '#title' => 'Place of Birth',
+              '#title' => 'Place of Birth placeholder',
               '#type' => 'textfield',
               '#description' => 'Placeholder value for Place of Birth',
               '#default_value' => 'Place of Birth',
             ],
             'groups' => [
-              '#title' => 'Place of Birth',
+              '#title' => 'Groups',
               '#type' => 'textfield',
-              '#description' => 'Place of Birth',
+              '#description' => 'Place of Birth Groups',
               '#default_value' => 'placeofbirth',
             ],
             'choices' => [
@@ -393,15 +393,15 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#default_value' => 'Outside the Philippines',
             ],
             'placeholder' => [
-              '#title' => 'Outside the Philippines',
+              '#title' => 'Outside the Philippines placeholder',
               '#type' => 'textfield',
               '#description' => 'Placeholder value for this textfield',
               '#default_value' => 'Outside the Philippines',
             ],
             'groups' => [
-              '#title' => 'Outside the Philippines',
+              '#title' => 'Groups',
               '#type' => 'textfield',
-              '#description' => 'Outside the Philippines',
+              '#description' => 'Outside the Philippines Groups',
               '#default_value' => 'outside_ph_select',
             ],
             'choices' => [

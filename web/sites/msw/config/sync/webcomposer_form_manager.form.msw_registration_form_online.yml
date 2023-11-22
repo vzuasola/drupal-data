@@ -32,6 +32,10 @@ weights:
     weight: '-7'
   birthdate:
     weight: '-6'
+  placeofbirth:
+    weight: '-5'
+  outside_ph_select:
+    weight: '-4'
   source_of_income_select:
     weight: '-5'
   source_of_income_others:
