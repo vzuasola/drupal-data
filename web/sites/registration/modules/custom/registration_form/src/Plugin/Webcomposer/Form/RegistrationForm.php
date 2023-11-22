@@ -13,12 +13,14 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  *   name = "Registration Form",
  * )
  */
-class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface {
+class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface
+{
 
   /**
    * Get Settings.
    */
-  public function getSettings() {
+  public function getSettings()
+  {
     return [
       'show' => [
         '#title' => 'Show this form',
@@ -36,7 +38,8 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
   /**
    * Set Fields.
    */
-  public function getFields() {
+  public function getFields()
+  {
     return [
 
       'back_button' => [
@@ -159,7 +162,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
-
       'mobile_number' => [
         'name' => 'Mobile Number',
         'type' => 'textfield',
@@ -183,13 +185,13 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Country Area Codes',
             '#type' => 'textarea',
             '#description' => 'List of area codes that will appear beside the mobile number ' .
-            '(take note: must be a valid area code or the image will not appear beside the are code)',
+              '(take note: must be a valid area code or the image will not appear beside the are code)',
           ],
           'country_area_code_validation' => [
             '#title' => 'Country Area Code Custom Validation',
             '#type' => 'textarea',
             '#description' => 'List of area codes that will be validated upon submission in which it had' .
-            ' different min and max character allowed per country code and custom message validation for it',
+              ' different min and max character allowed per country code and custom message validation for it',
           ],
           'additional_country_code_validation' => [
             '#title' => 'Additional Custom Validation for +55 Country Code',
@@ -392,7 +394,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Mapping of portal IDs to list of currencies',
             '#type' => 'textarea',
             '#description' => 'Mapping of icore portal IDs to the list of currencies, e.g 2|117,2,1 where 2 is the' .
-            'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
+              'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
             '#default_value' => implode(PHP_EOL, [
               '2|117,2,1',
               '3|117,2,1',

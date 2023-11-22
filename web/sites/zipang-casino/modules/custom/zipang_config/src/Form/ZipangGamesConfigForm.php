@@ -161,6 +161,19 @@ class ZipangGamesConfigForm extends FormBase {
       '#default_value' => $this->get('enable_views_v2'),
       '#translatable' => TRUE,
     ];
+
+    $form['games']['game_list_views'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Game List Views'),
+    ];
+
+    $form['games']['game_list_views']['enable_views_trimmed'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Switch Game List Views to Trimmed Version - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_views_trimmed'),
+      '#translatable' => TRUE,
+    ];
+
   }
 
   private function sectionPagination(array &$form) {
