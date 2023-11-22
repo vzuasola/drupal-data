@@ -42,6 +42,7 @@ class LuckyBabyHeaderForm extends FormBase {
     $this->sectionNotificationStrip($form);
     $this->sectionAccount($form);
     $this->sectionBalance($form);
+    $this->sectionFeatureFlags($form);
 
     return $form;
   }
@@ -271,6 +272,22 @@ class LuckyBabyHeaderForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Sportsbook logo link'),
       '#default_value' => $this->get('sportsbook_logo_link') ?? "",
+    ];
+  }
+
+  public function sectionFeatureFlags(array &$form) {
+    $form['feature_flags'] = [
+      '#type' => 'details',
+      '#title' => t('Feature Flags'),
+      '#group' => 'advanced',
+    ];
+
+    $form['feature_flags']['slider_v21'] = [
+      '#type' => 'checkbox',
+      '#title' => 'Enable Slider v2.1',
+      '#description' => $this->t('Slider v2.1 enables the image optimization libraries'),
+      '#default_value' => $this->get('slider_v21'),
+      '#translatable' => TRUE,
     ];
   }
 }

@@ -37,6 +37,9 @@ module:
   file: 0
   filter: 0
   image: 0
+  image_style_warmer: 0
+  imageapi_optimize: 0
+  imageapi_optimize_binaries: 0
   imce: 0
   lang_dropdown: 0
   language: 0
