@@ -46,6 +46,7 @@ class PlaytechProviderConfiguration extends FormBase {
 
     $this->integrationConfig($form['integration_config']);
     $this->errorHandlingConfig($form['error_handling_config']);
+    $this->uglConfiguration($form['ugl_config']);
     return $form;
   }
 
@@ -137,6 +138,58 @@ class PlaytechProviderConfiguration extends FormBase {
       <br/>Leave empty for no button'),
       '#default_value' => $this->get('error_button'),
       '#translatable' => true
+    ];
+  }
+
+  private function uglConfiguration(&$form) {
+    $form = [
+      '#type' => 'details',
+      '#title' => $this->t('UGL Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_playtech_provider_form'
+    ];
+
+    $form['ugl_switch'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable UGL Integration'),
+      '#description' => $this->t('This will enable ugl features.'),
+      '#default_value' => $this->get('ugl_switch'),
+    ];
+
+    $form['ugl_languages'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Language Mapping'),
+      '#description' => $this->t('Define the language mapping for ugl games launch. Pipe separated language code and value, one per line.
+          <br>
+          If no mapping specified, it will use the front end language prefix as is.
+          <br>
+          <strong>en|en-us</strong>'),
+      '#default_value' => $this->get('ugl_languages'),
+      '#required' => false
+    ];
+
+    $form['ugl_currency'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Supported Currencies'),
+      '#description' => $this->t('Currency Mapping'),
+      '#default_value' => $this->get('ugl_currency'),
+      '#required' => false,
+    ];
+
+    $form['ugl_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('URL Configuration'),
+      '#description' => $this->t('Defines the UGL endpoint'),
+      '#default_value' => $this->get('ugl_url'),
+      '#required' => false
+    ];
+
+    $form['ugl_parameters'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Request Parameters'),
+      '#description' => $this->t('Define the parameters that will be in request.'),
+      '#default_value' => $this->get('ugl_parameters'),
+      '#required' => false,
     ];
   }
 }

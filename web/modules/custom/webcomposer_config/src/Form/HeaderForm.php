@@ -420,6 +420,13 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+    $form['balance_group']['dafacoin_not_saved_popup_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Dafacoin Not Saved Popup Message'),
+      '#description' => $this->t('List of messages. One per line'),
+      '#default_value' => $this->get('dafacoin_not_saved_popup_message') ?? 'Balance settings not saved' . PHP_EOL . 'Please try again later',
+      '#translatable' => TRUE,
+    ];
 
     $form['balance_group']['dafacoin_notification_popup_display_time'] = [
       '#type' => 'number',
