@@ -506,7 +506,7 @@ class HeaderForm extends FormBase {
     $form['balance_group']['per_wallet_switch'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Per Wallet Switch'),
-      '#description' => $this->t('If checked will allow players to individually set wallet priority.'),
+      '#description' => $this->t('If checked, on the Dafacoin menu, will allow players to individually set wallet priority.'),
       '#default_value' => $this->get('per_wallet_switch') ?? '1',
     ];
 
