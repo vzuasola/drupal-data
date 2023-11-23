@@ -494,6 +494,36 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#description' => 'field annotation that will be displayed on focus',
             ],
           ],
+
+        ],
+        'nature_of_work_select' => [
+          'name' => 'Nature of work Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Nature of work Select',
+              '#type' => 'textfield',
+              '#description' => 'Nature of work field',
+              '#default_value' => 'Nature of work',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Nature of work',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Nature of work',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Nature of work',
+              '#default_value' => 'source-of-income',
+            ],
+            'choices' => [
+              '#title' => 'Nature of work Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>Education|Education</small>',
+            ],
+          ],
         ],
 
         'address_and_home_outlet' => [
