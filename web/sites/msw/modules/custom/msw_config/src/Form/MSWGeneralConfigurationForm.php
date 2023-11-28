@@ -208,6 +208,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['online_register_setting']['register']['register_online_form_fields']['enable_register_online_permanent_address'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Permanent Address'),
+      '#default_value' => $this->get('enable_register_online_permanent_address'),
+      '#translatable' => TRUE,
+    ];
+
     $form['online_register_setting']['register']['reg_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Reg API v3 URL'),
