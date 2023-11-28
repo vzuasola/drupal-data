@@ -382,6 +382,36 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'pob_city' => [
+          'name' => 'Place of Birth City',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Place of Birth City Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the City field',
+              '#default_value' => 'City',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a City',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'City',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Place of Birth city',
+              '#default_value' => 'city',
+            ],
+            'choices' => [
+              '#title' => 'City Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>province|City</small>',
+            ],
+          ],
+        ],
+
         'outside_ph_select' => [
           'name' => 'Outside the Philippines Select',
           'type' => 'select',
