@@ -760,7 +760,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'label' => [
               '#title' => 'City Label',
               '#type' => 'textfield',
-              '#description' => 'The Label for the Currency field',
+              '#description' => 'The Label for the Permanent Address City field',
               '#default_value' => 'City',
             ],
             'placeholder' => [
@@ -772,7 +772,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'groups' => [
               '#title' => 'Group Name',
               '#type' => 'textfield',
-              '#description' => 'Group name for Security Answer 1',
+              '#description' => 'Group name for Permanent Address City',
               '#default_value' => 'city',
             ],
             'choices' => [
