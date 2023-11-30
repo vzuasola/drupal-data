@@ -22,11 +22,11 @@ weights:
     weight: '-12'
   basic_information:
     weight: '-11'
-  last_name:
+  first_name:
     weight: '-10'
   middle_name:
     weight: '-9'
-  first_name:
+  last_name:
     weight: '-8'
   nationality_select:
     weight: '-7'
@@ -34,65 +34,81 @@ weights:
     weight: '-6'
   placeofbirth:
     weight: '-5'
+  pob_city:
+    weight: '-4'
   outside_ph_select:
-    weight: '-4'
-  source_of_income_select:
-    weight: '-5'
-  source_of_income_others:
-    weight: '-4'
-  address_and_home_outlet:
     weight: '-3'
-  province:
+  source_of_income_select:
     weight: '-2'
-  city:
+  source_of_income_others:
     weight: '-1'
-  address:
+  nature_of_work_select:
     weight: '0'
-  home_outlet_select:
+  address_and_home_outlet:
     weight: '1'
-  security_questions:
+  province:
     weight: '2'
-  security_questions_title:
+  city:
     weight: '3'
-  security_question_1:
+  address:
     weight: '4'
-  security_answer_1:
+  home_outlet_select:
     weight: '5'
-  security_question_2:
+  permanent_address_header:
     weight: '6'
-  security_answer_2:
+  same_as_current:
     weight: '7'
-  rfidpin:
+  same_as_current_markup:
     weight: '8'
-  photos_ID:
+  permanent_province:
     weight: '9'
-  id1:
+  permanent_city:
     weight: '10'
-  id_number1:
+  permanent_address:
     weight: '11'
-  upload_id_1:
+  security_questions:
     weight: '12'
-  btn_upload_id_1:
+  security_questions_title:
     weight: '13'
-  selfieWithID:
+  security_question_1:
     weight: '14'
-  upload_id_2:
+  security_answer_1:
     weight: '15'
-  btn_upload_id_2:
+  security_question_2:
     weight: '16'
-  legal_agreements:
+  security_answer_2:
     weight: '17'
-  terms_and_conditions:
+  rfidpin:
     weight: '18'
-  terms_and_conditions_markup:
+  photos_ID:
     weight: '19'
+  id_number1:
+    weight: '20'
+  id1:
+    weight: '20'
+  upload_id_1:
+    weight: '21'
+  btn_upload_id_1:
+    weight: '22'
+  selfieWithID:
+    weight: '23'
+  upload_id_2:
+    weight: '24'
+  btn_upload_id_2:
+    weight: '25'
+  legal_agreements:
+    weight: '26'
   citizenship:
-    weight: '20'
+    weight: '27'
   citizenship_markup:
-    weight: '20'
+    weight: '28'
+  terms_and_conditions:
+    weight: '29'
+  terms_and_conditions_markup:
+    weight: '30'
   awareness:
-    weight: '20'
+    weight: '31'
   awareness_markup:
-    weight: '20'
+    weight: '32'
   submit:
-    weight: '20'
+    weight: '33'
