@@ -156,9 +156,18 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
     $form[$key . '_use_playergame_api'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Use PlayerGame API'),
+      '#title' => $this->t('<b>Use PlayerGame API</b>'),
       '#description' => $this->t("Use PlayerGame API on game launching for " . $value),
       '#default_value' => $this->get($key . '_use_playergame_api'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+
+    $form[$key . '_use_html_param'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('<b>Use HTML Option</b>'),
+      '#description' => $this->t("Use HTML parameter for game launch with HTML content.<br />Available :<br /><ul><li><b>PGSOFT</b></li></ul>"),
+      '#default_value' => $this->get($key . '_use_html_param'),
       '#translatable' => false,
       '#required' => false,
     ];
@@ -326,7 +335,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'icore_games_integration_form'
     ];
-    
+
     $form[$key . '_use_playergame_api'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Use PlayerGame API'),
