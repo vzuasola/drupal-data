@@ -38,6 +38,9 @@ module:
   file: 0
   filter: 0
   image: 0
+  image_style_warmer: 0
+  imageapi_optimize: 0
+  imageapi_optimize_binaries: 0
   imce: 0
   jamboree_404: 0
   jamboree_all_games_config: 0
@@ -86,6 +89,8 @@ module:
   token: 0
   toolbar: 0
   user: 0
+  views_bulk_edit: 0
+  views_bulk_operations: 0
   views_data_export: 0
   views_ui: 0
   webcomposer_affilates: 0

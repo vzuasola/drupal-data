@@ -1,0 +1,97 @@
+field_settings:
+  label: 'Outside the Philippines'
+  placeholder: 'Outside the Philippines'
+  choices: "Philippines|Philippines\r\nAfghanistan|Afghanistan\r\nAlbania|Albania\r\nAlgeria|Algeria\r\nAndorra|Andorra\r\nAngola|Angola\r\nAntigua and Barbuda|Antigua and Barbuda\r\nArgentina|Argentina\r\nArmenia|Armenia\r\nAustralia|Australia\r\nAustria|Austria\r\nAzerbaijan|Azerbaijan\r\nBahamas|Bahamas\r\nBahrain|Bahrain\r\nBangladesh|Bangladesh\r\nBarbados|Barbados\r\nBelarus|Belarus\r\nBelgium|Belgium\r\nBelize|Belize\r\nBenin|Benin\r\nBhutan|Bhutan\r\nBolivia|Bolivia\r\nBosnia and Herzegovina|Bosnia and Herzegovina\r\nBotswana|Botswana\r\nBrazil|Brazil\r\nBrunei Darussalam|Brunei Darussalam\r\nBulgaria|Bulgaria\r\nBurkina Faso|Burkina Faso\r\nBurundi|Burundi\r\nCambodia|Cambodia\r\nCameroon|Cameroon\r\nCanada|Canada\r\nCape Verde|Cape Verde\r\nCentral African Republic|Central African Republic\r\nChad|Chad\r\nChile|Chile\r\nChina|China\r\nColombia|Colombia\r\nComoros|Comoros\r\nCongo|Congo\r\nCongo, Democratic Republic of the|Congo, Democratic Republic of the\r\nCosta Rica|Costa Rica\r\nCôte d'Ivoire|Côte d'Ivoire\r\nCroatia|Croatia\r\nCuba|Cuba\r\nCyprus|Cyprus\r\nCzech Republic|Czech Republic\r\nDenmark|Denmark\r\nDjibouti|Djibouti\r\nDominica|Dominica\r\nDominican Republic|Dominican Republic\r\nEast Timor|East Timor\r\nEcuador|Ecuador\r\nEgypt|Egypt\r\nEl Salvador|El Salvador\r\nEquatorial Guinea|Equatorial Guinea\r\nEritrea|Eritrea\r\nEstonia|Estonia\r\nEthiopia|Ethiopia\r\nFiji|Fiji\r\nFinland|Finland\r\nFrance|France\r\nGabon|Gabon\r\nGambia, The|Gambia, The\r\nGeorgia|Georgia\r\nGermany|Germany\r\nGhana|Ghana\r\nGreece|Greece\r\nGrenada|Grenada\r\nGuatemala|Guatemala\r\nGuinea|Guinea\r\nGuinea-Bissau|Guinea-Bissau\r\nGuyana|Guyana\r\nHaiti|Haiti\r\nHonduras|Honduras\r\nHungary|Hungary\r\nIceland|Iceland\r\nIndia|India\r\nIndonesia|Indonesia\r\nIran|Iran\r\nIraq|Iraq\r\nIreland|Ireland\r\nIsrael|Israel\r\nItaly|Italy\r\nJamaica|Jamaica\r\nJapan|Japan\r\nJordan|Jordan\r\nKazakhstan|Kazakhstan\r\nKenya|Kenya\r\nKiribati|Kiribati\r\nKorea, North|Korea, North\r\nKorea, South|Korea, South\r\nKosovo|Kosovo\r\nKuwait|Kuwait\r\nKyrgyzstan|Kyrgyzstan\r\nLaos|Laos\r\nLatvia|Latvia\r\nLebanon|Lebanon\r\nLesotho|Lesotho\r\nLiberia|Liberia\r\nLibya|Libya\r\nLiechtenstein|Liechtenstein\r\nLithuania|Lithuania\r\nLuxembourg|Luxembourg\r\nMacedonia|Macedonia\r\nMadagascar|Madagascar\r\nMalawi|Malawi\r\nMalaysia|Malaysia\r\nMaldives|Maldives\r\nMali|Mali\r\nMalta|Malta\r\nMarshall Islands|Marshall Islands\r\nMauritania|Mauritania\r\nMauritius|Mauritius\r\nMexico|Mexico\r\nMicronesia|Micronesia\r\nMoldova|Moldova\r\nMonaco|Monaco\r\nMongolia|Mongolia\r\nMontenegro|Montenegro\r\nMorocco|Morocco\r\nMozambique|Mozambique\r\nMyanmar|Myanmar\r\nNamibia|Namibia\r\nNauru|Nauru\r\nNepal|Nepal\r\nNetherlands, The|Netherlands, The\r\nNew Zealand|New Zealand\r\nNicaragua|Nicaragua\r\nNiger|Niger\r\nNigeria|Nigeria\r\nNorthern Ireland|Northern Ireland\r\nNorway|Norway\r\nOman|Oman\r\nPakistan|Pakistan\r\nPalau|Palau\r\nPalestinian State|Palestinian State\r\nPanama|Panama\r\nPapua New Guinea|Papua New Guinea\r\nParaguay|Paraguay\r\nPeru|Peru\r\nPoland|Poland\r\nPortugal|Portugal\r\nQatar|Qatar\r\nRomania|Romania\r\nRussia|Russia\r\nRwanda|Rwanda\r\nSamoa|Samoa\r\nSan Marino|San Marino\r\nSão Tomé and Príncipe|São Tomé and Príncipe\r\nSaudi Arabia|Saudi Arabia\r\nSenegal|Senegal\r\nSerbia|Serbia\r\nSeychelles|Seychelles\r\nSierra Leone|Sierra Leone\r\nSingapore|Singapore\r\nSlovakia|Slovakia\r\nSlovenia|Slovenia\r\nSolomon Islands|Solomon Islands\r\nSomalia|Somalia\r\nSouth Africa|South Africa\r\nSpain|Spain\r\nSri Lanka|Sri Lanka\r\nSt. Kitts and Nevis|St. Kitts and Nevis\r\nSt. Lucia|St. Lucia\r\nSt. Vincent and The Grenadines|St. Vincent and The Grenadines\r\nSudan|Sudan\r\nSuriname|Suriname\r\nSwaziland|Swaziland\r\nSweden|Sweden\r\nSwitzerland|Switzerland\r\nSyria|Syria\r\nTaiwan|Taiwan\r\nTajikistan|Tajikistan\r\nTanzania|Tanzania\r\nThailand|Thailand\r\nTogo|Togo\r\nTonga|Tonga\r\nTrinidad and Tobago|Trinidad and Tobago\r\nTunisia|Tunisia\r\nTurkey|Turkey\r\nTurkmenistan|Turkmenistan\r\nTuvalu|Tuvalu\r\nUganda|Uganda\r\nUkraine|Ukraine\r\nUnited Arab Emirates|United Arab Emirates\r\nUnited Kingdom of Great Britain|United Kingdom of Great Britain\r\nUnited States of America|United States of America\r\nUruguay|Uruguay\r\nUzbekistan|Uzbekistan\r\nVanuatu|Vanuatu\r\nVatican City (Holy See)|Vatican City (Holy See)\r\nVenezuela|Venezuela\r\nVietnam|Vietnam\r\nWestern Sahara|Western Sahara\r\nYemen|Yemen\r\nZaire|Zaire\r\nZambia|Zambia\r\nZimbabwe|Zimbabwe"
+field_validations:
+  required:
+    enable: 0
+    error_message: 'Field should be required'
+    rule_description: ''
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    rule_description: ''
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    rule_description: ''
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    rule_description: ''
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+    rule_description: ''
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+    rule_description: ''
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+    rule_description: ''
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+    rule_description: ''
+  min_length:
+    enable: 0
+    error_message: 'Minimum requirement not met'
+    rule_description: ''
+    parameters:
+      length: '2'
+  max_length:
+    enable: 0
+    error_message: 'Maximum requirement not met'
+    rule_description: ''
+    parameters:
+      length: '10'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    rule_description: ''
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
+    rule_description: ''
+  must_not_match:
+    enable: 0
+    error_message: 'This must not match deafult.'
+    rule_description: ''
+    parameters:
+      not_match: ''
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
+    rule_description: ''
+  not_match_username:
+    enable: 0
+    error_message: 'Password should not equal to username'
+    rule_description: ''
+  duplicated_security_question:
+    enable: 0
+    error_message: 'Security Questions should not be the same'
+    rule_description: ''
+  match_password:
+    enable: 0
+    error_message: 'Password not match'
+    rule_description: ''
+  valid_username_prefix:
+    enable: 0
+    error_message: 'Username Prefix not valid'
+    rule_description: ''
+    parameters:
+      prefixes: '000,000,000'

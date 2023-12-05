@@ -420,6 +420,13 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+    $form['balance_group']['dafacoin_not_saved_popup_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Dafacoin Not Saved Popup Message'),
+      '#description' => $this->t('List of messages. One per line'),
+      '#default_value' => $this->get('dafacoin_not_saved_popup_message') ?? 'Balance settings not saved' . PHP_EOL . 'Please try again later',
+      '#translatable' => TRUE,
+    ];
 
     $form['balance_group']['dafacoin_notification_popup_display_time'] = [
       '#type' => 'number',
@@ -494,6 +501,13 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Enable Balance Toggle'),
       '#description' => $this->t('If checked will allow balance toggle to be visible to the players.'),
       '#default_value' => $this->get('balance_toggle'),
+    ];
+
+    $form['balance_group']['per_wallet_switch'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Per Wallet Switch'),
+      '#description' => $this->t('If checked, on the Dafacoin menu, will allow players to individually set wallet priority.'),
+      '#default_value' => $this->get('per_wallet_switch') ?? '1',
     ];
 
     $form['balance_group']['deprecated'] = [
