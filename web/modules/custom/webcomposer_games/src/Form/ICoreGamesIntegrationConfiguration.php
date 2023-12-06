@@ -166,7 +166,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     $form[$key . '_use_html_param'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('<b>Use HTML Option</b>'),
-      '#description' => $this->t("Use HTML parameter for game launch with HTML content.<br />Available :<br /><ul><li><b>PGSOFT</b></li></ul>"),
+      '#description' => $this->t("Use HTML parameter for game launch with HTML content (iCore will return the game page HTML instead of the game URL).<br />Available :<br /><ul><li><b>PGSOFT</b></li></ul>"),
       '#default_value' => $this->get($key . '_use_html_param'),
       '#translatable' => false,
       '#required' => false,
