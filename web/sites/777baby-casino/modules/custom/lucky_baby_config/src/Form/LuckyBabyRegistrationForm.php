@@ -289,6 +289,12 @@ class LuckyBabyRegistrationForm extends FormBase {
       '#default_value' => $this->get('icore_email_validation'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['errors']['icore_blocked_ip'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Email is already exists'),
+      '#default_value' => $this->get('icore_blocked_ip'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
