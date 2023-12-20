@@ -149,6 +149,29 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
           ],
         ],
       ],
+
+      'mobile_number_area_code' => [
+        'name' => 'Mobile Number Area Code',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Mobile Number Area Code Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for the Mobile Number Area Code field',
+          ],
+          'placeholder' => [
+            '#title' => 'Mobile Number Area Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Mobile number Area Code field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Mobile Number Area Code Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
       'mobile_number' => [
         'name' => 'Mobile Number',
         'type' => 'textfield',
