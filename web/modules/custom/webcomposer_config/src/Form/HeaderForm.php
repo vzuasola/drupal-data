@@ -501,7 +501,6 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Dafacoin Currency Label Mapping'),
       '#description' => $this->t('List of currency label mapping. One per line e.g. <br/> INR|DPINR <br/>KRW|DPKRW'),
       '#default_value' => $this->get('dafacoin_currency_map') ?? '',
-      '#translatable' => TRUE,
     ];
 
     $form['balance_group']['balance_toggle'] = [
