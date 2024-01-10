@@ -352,6 +352,96 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'placeofbirth' => [
+          'name' => 'Place of Birth',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Place of Birth Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the Place of Birth field',
+              '#default_value' => 'Place of Birth',
+            ],
+            'placeholder' => [
+              '#title' => 'Place of Birth placeholder',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for Place of Birth',
+              '#default_value' => 'Place of Birth',
+            ],
+            'groups' => [
+              '#title' => 'Groups',
+              '#type' => 'textfield',
+              '#description' => 'Place of Birth Groups',
+              '#default_value' => 'placeofbirth',
+            ],
+            'choices' => [
+              '#title' => 'Place of Birth Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>province|Province</small><br> <small>other|Others</small>',
+            ],
+          ],
+        ],
+
+        'pob_city' => [
+          'name' => 'Place of Birth City',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Place of Birth City Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the City field',
+              '#default_value' => 'City',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a City',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'City',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Place of Birth city',
+              '#default_value' => 'city',
+            ],
+            'choices' => [
+              '#title' => 'City Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>province|City</small>',
+            ],
+          ],
+        ],
+
+        'outside_ph_select' => [
+          'name' => 'Outside the Philippines Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Outside the Philippines Select',
+              '#type' => 'textfield',
+              '#description' => 'Outside the Philippines field',
+              '#default_value' => 'Outside the Philippines',
+            ],
+            'placeholder' => [
+              '#title' => 'Outside the Philippines placeholder',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Outside the Philippines',
+            ],
+            'groups' => [
+              '#title' => 'Groups',
+              '#type' => 'textfield',
+              '#description' => 'Outside the Philippines Groups',
+              '#default_value' => 'outside_ph_select',
+            ],
+            'choices' => [
+              '#title' => 'Outside the Philippines Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>nationality|Nationality</small>',
+            ],
+          ],
+        ],
+
         'nationality_select' => [
           'name' => 'Nationality Select',
           'type' => 'select',
@@ -432,6 +522,36 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#title' => 'Source of Income Annotation text',
               '#type' => 'textarea',
               '#description' => 'field annotation that will be displayed on focus',
+            ],
+          ],
+
+        ],
+        'nature_of_work_select' => [
+          'name' => 'Nature of work Select',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Nature of work Select',
+              '#type' => 'textfield',
+              '#description' => 'Nature of work field',
+              '#default_value' => 'Nature of work',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Nature of work',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Nature of work',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Nature of work',
+              '#default_value' => 'source-of-income',
+            ],
+            'choices' => [
+              '#title' => 'Nature of work Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>Education|Education</small>',
             ],
           ],
         ],
@@ -559,6 +679,130 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#title' => 'Home Outlet Choices',
               '#type' => 'textarea',
               '#description' => 'Provide a pipe separated key value pair. <br> <small>key|My Value</small>',
+            ],
+          ],
+        ],
+
+        'permanent_address_header' => [
+          'name' => 'Permanent Address',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Permanent Address Header',
+              '#type' => 'textarea',
+              '#description' => 'Permanent Address',
+              '#default_value' => '<p class="msw-registration-online-permanent-address">Permanent Address</p>',
+            ],
+          ],
+        ],
+
+        'same_as_current' => [
+          'name' => 'Same as current address',
+          'title' => 'Same as current address Title',
+          'type' => 'checkbox',
+          'settings' => [
+            'label' => [
+              '#title' => 'Same as current address Markup',
+              '#type' => 'textarea',
+              '#description' => 'Same as current address',
+              '#default_value' => 'Same as current address',
+            ],
+          ],
+        ],
+
+        'same_as_current_markup' => [
+          'name' => 'Same as current address Markup',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Same as current address Markup',
+              '#type' => 'textarea',
+              '#description' => 'Same as current address',
+              '#default_value' => 'Same as current address',
+            ],
+          ],
+        ],
+
+        'permanent_province' => [
+          'name' => 'Permanent Address Province',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'Province Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the province field',
+              '#default_value' => 'Province',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a Province',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'Province',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Province',
+              '#default_value' => 'province',
+            ],
+            'choices' => [
+              '#title' => 'Province Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>province|Province</small>',
+            ],
+          ],
+        ],
+
+        'permanent_city' => [
+          'name' => 'Permanent Address City',
+          'type' => 'select',
+          'settings' => [
+            'label' => [
+              '#title' => 'City Label',
+              '#type' => 'textfield',
+              '#description' => 'The Label for the Permanent Address City field',
+              '#default_value' => 'City',
+            ],
+            'placeholder' => [
+              '#title' => 'Choose a City',
+              '#type' => 'textfield',
+              '#description' => 'Placeholder value for this textfield',
+              '#default_value' => 'City',
+            ],
+            'groups' => [
+              '#title' => 'Group Name',
+              '#type' => 'textfield',
+              '#description' => 'Group name for Permanent Address City',
+              '#default_value' => 'city',
+            ],
+            'choices' => [
+              '#title' => 'City Choices',
+              '#type' => 'textarea',
+              '#description' => 'Provide a pipe separated key value pair. <br> <small>province|City</small>',
+            ],
+          ],
+        ],
+
+        'permanent_address' => [
+          'name' => 'Permanent Address',
+          'type' => 'textfield',
+          'settings' => [
+            'label' => [
+              '#title' => 'Address Label',
+              '#type' => 'textfield',
+              '#description' => 'The label for the Address field',
+              '#default_value' => 'House Number',
+            ],
+            'placeholder' => [
+              '#title' => 'Address placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for Address field placeholder',
+              '#default_value' => 'House Number',
+            ],
+            'annotation' => [
+              '#title' => 'Address Annotation text',
+              '#type' => 'textarea',
+              '#description' => 'field annotation that will be displayed on focus',
             ],
           ],
         ],

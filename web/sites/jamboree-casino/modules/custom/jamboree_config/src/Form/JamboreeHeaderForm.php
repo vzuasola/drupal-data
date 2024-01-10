@@ -42,6 +42,7 @@ class JamboreeHeaderForm extends FormBase {
     $this->sectionCashier($form);
     $this->sectionNotificationStrip($form);
     $this->sectionAccount($form);
+    $this->sectionFeatureFlags($form);
 
     return $form;
   }
@@ -212,6 +213,7 @@ class JamboreeHeaderForm extends FormBase {
       'notif_strip_end_date',
       'user_id_label',
       'balance_label',
+      'slider_v21'
     ];
 
     foreach ($keys as $key) {
@@ -227,5 +229,21 @@ class JamboreeHeaderForm extends FormBase {
     }
 
     $this->save($data);
+  }
+
+  public function sectionFeatureFlags(array &$form) {
+    $form['feature_flags'] = [
+      '#type' => 'details',
+      '#title' => t('Feature Flags'),
+      '#group' => 'advanced',
+    ];
+
+    $form['feature_flags']['slider_v21'] = [
+      '#type' => 'checkbox',
+      '#title' => 'Enable Slider v2.1',
+      '#description' => $this->t('Slider v2.1 enables the image optimization libraries'),
+      '#default_value' => $this->get('slider_v21'),
+      '#translatable' => TRUE,
+    ];
   }
 }

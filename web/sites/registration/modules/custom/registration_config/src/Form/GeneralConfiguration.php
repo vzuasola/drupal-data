@@ -2,8 +2,8 @@
 
 namespace Drupal\registration_config\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 
 /**
  * General Configuration for Registration.
@@ -21,19 +21,14 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  * )
  */
-class GeneralConfiguration extends FormBase {
+class GeneralConfiguration extends FormBase
+{
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
-    return ['registration_config.general_configuration'];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function form(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state)
+  {
     $form['general_settings_tab'] = [
       '#type' => 'vertical_tabs',
       '#title' => $this->t('Settings'),
@@ -58,9 +53,18 @@ class GeneralConfiguration extends FormBase {
   }
 
   /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames()
+  {
+    return ['registration_config.general_configuration'];
+  }
+
+  /**
    * General Configuration for Registration.
    */
-  private function generalConfig(array &$form) {
+  private function generalConfig(array &$form)
+  {
     $form['general'] = [
       '#type' => 'details',
       '#title' => $this->t('General Settings'),
@@ -118,12 +122,29 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('enable_reg_relic_custom_headers'),
     ];
 
+    $form['general']['enable_new_password_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable New Password Validation'),
+      '#description' => $this->t('Replace the old registration form that is using the strength meter with new one using the password validation box.'),
+      '#default_value' => $this->get('enable_new_password_validation'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['area_code_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Area Code for LATAM'),
+      '#description' => $this->t('Add the area code field for +55 country code'),
+      '#default_value' => $this->get('area_code_enabled'),
+      '#translatable' => TRUE,
+    ];
+
   }
 
   /**
    * Integration Config.
    */
-  private function integrationConfig(array &$form) {
+  private function integrationConfig(array &$form)
+  {
     $form['integration'] = [
       '#type' => 'details',
       '#title' => $this->t('Integration'),
@@ -263,7 +284,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Restriction Config for Registration.
    */
-  private function restrictionConfig(array &$form) {
+  private function restrictionConfig(array &$form)
+  {
     $form['restriction'] = [
       '#type' => 'details',
       '#title' => $this->t('Restriction'),
@@ -325,7 +347,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Error Configuration for Registration.
    */
-  private function errorConfig(array &$form) {
+  private function errorConfig(array &$form)
+  {
     $form['error_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Error Settings'),
@@ -383,7 +406,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Proactive Livechat COnfiguration.
    */
-  private function proactiveConfig(array &$form) {
+  private function proactiveConfig(array &$form)
+  {
     $form['proactive_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Proactive Livechat'),
@@ -482,7 +506,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Cashier Configuration.
    */
-  private function cashierConfig(array &$form) {
+  private function cashierConfig(array &$form)
+  {
     $form['cashier_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Cashier Settings'),
@@ -533,7 +558,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Metrics Logging Configuration.
    */
-  private function logConfig(array &$form) {
+  private function logConfig(array &$form)
+  {
     $form['logging_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Metrics Logging'),
@@ -550,7 +576,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * S2S tracking Configuration.
    */
-  private function trackingConfig(array &$form) {
+  private function trackingConfig(array &$form)
+  {
     $form['s2s_tracking'] = [
       '#type' => 'details',
       '#title' => $this->t('S2S tracking'),
@@ -571,7 +598,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Tripwire Pop-up Configuration
    */
-  private function tripwirePopupConfig(array &$form) {
+  private function tripwirePopupConfig(array &$form)
+  {
     $form['tripwire_popup'] = [
       '#type' => 'details',
       '#title' => $this->t('Tripwire Popup'),
@@ -595,7 +623,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Text Over Banner Configuration
    */
-  private function textOverBannerConfig(array &$form) {
+  private function textOverBannerConfig(array &$form)
+  {
     $form['text_over_banner'] = [
       '#type' => 'details',
       '#title' => $this->t('Text Over Banner'),
@@ -643,7 +672,8 @@ class GeneralConfiguration extends FormBase {
   /**
    * Configuration regarding Aadhar ID upload
    */
-  private function aadharUploadConfiguration(array &$form){
+  private function aadharUploadConfiguration(array &$form)
+  {
     $form['aadhar_upload_configuration'] = [
       '#type' => 'details',
       '#title' => $this->t('Aadhar ID Configurations'),
@@ -693,7 +723,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Add upload image server URL'),
       '#default_value' => $this->get('upload_image_server') ?? "",
     ];
-       $form['pan_id_url_configuration']['secret_key'] = [
+    $form['pan_id_url_configuration']['secret_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Image server secret key'),
       '#description' => $this->t('Here we should put image server secret key.'),
@@ -782,7 +812,7 @@ class GeneralConfiguration extends FormBase {
       '#type' => 'number',
       '#title' => $this->t('Rate Limit Upload Operations'),
       '#description' => $this->t('Max number of PAN IP uploads per interval'),
-      '#default_value' =>  $this->get('rate_limit_upload_operations') ?? 1,
+      '#default_value' => $this->get('rate_limit_upload_operations') ?? 1,
       '#states' => array(
         "visible" => array(
           "input[name='upload_rate_limiting']" => array("checked" => TRUE)),

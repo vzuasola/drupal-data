@@ -378,6 +378,13 @@ class HeaderForm extends FormBase {
       '#default_value' => $this->get('dafacoin_balance_toggle'),
     ];
 
+    $form['balance_group']['dafacoin_guided_tour_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Dafacoin Guided Tour'),
+      '#description' => $this->t('If checked, it will open Guided Tour Popup on initial login'),
+      '#default_value' => $this->get('dafacoin_guided_tour_toggle'),
+    ];
+
     $form['balance_group']['dafacoin_total_balance_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Dafacoin Total Balance Label.'),
@@ -411,6 +418,13 @@ class HeaderForm extends FormBase {
       '#description' => $this->t('The message that appears in the popup after the changes has been successfully saved.'),
       '#default_value' => $this->get('dafacoin_saved_popup_message'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['balance_group']['dafacoin_not_saved_popup_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Dafacoin Not Saved Popup Message'),
+      '#description' => $this->t('List of messages. One per line'),
+      '#default_value' => $this->get('dafacoin_not_saved_popup_message') ?? 'Balance settings not saved' . PHP_EOL . 'Please try again later',
       '#translatable' => TRUE,
     ];
 
@@ -482,11 +496,25 @@ class HeaderForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['balance_group']['dafacoin_currency_map'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Dafacoin Currency Label Mapping'),
+      '#description' => $this->t('List of currency label mapping. One per line e.g. <br/> INR|DPINR <br/>KRW|DPKRW'),
+      '#default_value' => $this->get('dafacoin_currency_map') ?? '',
+    ];
+
     $form['balance_group']['balance_toggle'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Balance Toggle'),
       '#description' => $this->t('If checked will allow balance toggle to be visible to the players.'),
       '#default_value' => $this->get('balance_toggle'),
+    ];
+
+    $form['balance_group']['per_wallet_switch'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Per Wallet Switch'),
+      '#description' => $this->t('If checked, on the Dafacoin menu, will allow players to individually set wallet priority.'),
+      '#default_value' => $this->get('per_wallet_switch') ?? '1',
     ];
 
     $form['balance_group']['deprecated'] = [

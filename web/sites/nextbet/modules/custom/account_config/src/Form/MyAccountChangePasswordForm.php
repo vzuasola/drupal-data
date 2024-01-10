@@ -57,6 +57,14 @@ class MyAccountChangePasswordForm extends FormBase {
         '#translatable' => TRUE,
     ];
 
+    $form['header_configuration']['enable_new_password_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable New password validation'),
+      '#description' => $this->t('If we check this checkbox new password validation will be active.'),
+      '#default_value' => $this->get('enable_new_password_validation'),
+      "#translatable" => true
+    ];
+
     $form['field_icore_validation'] = [
       '#type' => 'details',
       '#title' => 'Integration Validation',
@@ -91,91 +99,6 @@ class MyAccountChangePasswordForm extends FormBase {
       '#default_value' => $this->get('change_password_mobile_failed_message'),
       '#required' => TRUE,
       '#translatable' => TRUE,
-    ];
-
-    $form['field_password_validation_box'] = [
-      '#type' => 'details',
-      '#title' => 'Password Validation Box',
-      '#group' => 'change_password',
-    ];
-
-    $form['field_password_validation_box']['min_max_length'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Minimum and Maximum Length'),
-      '#description' => $this->t('Add text that will be shown in box for minimum and maximum lenght'),
-      '#default_value' => $this->get('min_max_length'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['one_uppercase_letter'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Uppercase Letter Field'),
-      '#description' => $this->t('Here we should display text to user for one uppercase letter.'),
-      '#default_value' => $this->get('one_uppercase_letter'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['one_lowercase_letter'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Lowercase Letter Field'),
-      '#description' => $this->t('Here we should display text to user for one lowercase letter.'),
-      '#default_value' => $this->get('one_lowercase_letter'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['number_symbol'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Number Symbol'),
-      '#description' => $this->t('Add text that will be shown in box for number symbol that us required by user.'),
-      '#default_value' => $this->get('number_symbol'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['username_password_value'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Username Field and Banned Words'),
-      '#description' => $this->t('Add text that will inform a user that the password cannot be the same with the selected username or contain any words from the blacklist.'),
-      '#default_value' => $this->get('username_password_value'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['username_password_value'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Username Field and Banned Words'),
-      '#description' => $this->t('Add text that will inform a user that the password cannot be the same with the selected username or contain any words from the blacklist.'),
-      '#default_value' => $this->get('username_password_value'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['not_same_as_old_password'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Password can not be same as current password'),
-      '#description' => $this->t('Add message that will show user that he can not use old password.'),
-      '#default_value' => $this->get('not_same_as_old_password'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['new_and_confirm_must_match'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('New and Confirm Passwords must match'),
-      '#description' => $this->t('Add message that will show user that new and confirm password must not match.'),
-      '#default_value' => $this->get('new_and_confirm_must_match'),
-      '#required' => true,
-      '#translatable' => true
-    ];
-
-    $form['field_password_validation_box']['enable_new_password_validation'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable New password validation'),
-      '#description' => $this->t('If we check this checkbox new password validation will be active.'),
-      '#default_value' => $this->get('enable_new_password_validation'),
     ];
 
     return $form;

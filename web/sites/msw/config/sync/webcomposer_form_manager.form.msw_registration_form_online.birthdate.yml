@@ -1,5 +1,8 @@
 field_settings:
   label: ''
+  placeholder: 'Date of Birth'
+  date-format: YYYY/MM/DD
+  annotation: ''
 field_validations:
   required:
     enable: 1

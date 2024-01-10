@@ -69,7 +69,7 @@ class ManageField extends FormBase {
   }
 
   /**
-   * 
+   *
    */
   public function title() {
     $field = $this->field->getName();
@@ -239,6 +239,14 @@ class ManageField extends FormBase {
         '#description' => "Provides the default error message for this validation set",
         '#parents' => ['field_validations', $key, 'error_message'],
         '#default_value' => $fieldValidations[$key]['error_message'] ?? $value['error'] ?? "",
+      ];
+
+      $form[$key]['rule_description'] = [
+        '#type' => 'textarea',
+        '#title' => 'Rule description for password checklist',
+        '#description' => "Provides a description of the rule to be used by the password checklist. Adding a description here will make this description appear to the user through the checklist.",
+        '#parents' => ['field_validations', $key, 'rule_description'],
+        '#default_value' => $fieldValidations[$key]['rule_description'] ?? "",
       ];
 
       if (!empty($value['parameters'])) {
