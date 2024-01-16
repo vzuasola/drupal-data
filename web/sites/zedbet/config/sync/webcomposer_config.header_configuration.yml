@@ -46,7 +46,7 @@ product_balance_id: ''
 total_balance_label: 'Total balance'
 balance_mapping: ''
 balance_label_override: ''
-currency_balance_mapping: "5|THB,TUS\r\n16|THB,TUS"
+currency_balance_mapping: "5|THB,TUS,KRW\r\n16|THB,TUS,KRW"
 excluded_balance_mapping: ''
 currency_label_mapping: ''
 value: null
