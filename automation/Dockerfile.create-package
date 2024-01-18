@@ -1,0 +1,50 @@
+#::::::::::::::::: STAGES :::::::::::::::::
+# Stage #1 - Composer install
+# Stage #2 - Remove files and folders
+# Stage #3 - Create archive
+# Stage #4 - Upload archive to artifactory
+
+FROM php:7.2-alpine
+
+RUN apk update
+RUN apk add --no-cache openssh-client git bash
+
+RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+#::::::::::::::::: STAGE #1 - COMPOSER INSTALL :::::::::::::::::
+COPY --from=composer:1.5 /usr/bin/composer /usr/bin/composer
+RUN apk add --no-cache libpng libpng-dev && docker-php-ext-install gd && apk del libpng-dev
+RUN apk add --no-cache \
+        libzip-dev \
+        zip \
+  && docker-php-ext-configure zip --with-libzip \
+  && docker-php-ext-install zip
+RUN ssh-keyscan gitlab.com >> /root/.ssh/known_hosts
+RUN mkdir /var/www/html/app
+WORKDIR /var/www/html/app
+ARG SYMFONY_ENV=prod
+
+COPY composer.* .
+COPY config ./config
+COPY drush ./drush
+COPY scripts ./scripts
+COPY web ./web
+RUN --mount=type=ssh composer install  --optimize-autoloader --no-interaction --no-dev --profile --prefer-dist
+
+
+#::::::::::::::::: STAGE #2 - REMOVE FILES AND FOLDERS :::::::::::::::::
+WORKDIR /var/www/html/
+RUN find ./ -type f \( -name 'README.md' -o -name 'README' -o -name 'CHANGELOG.md' -o -name 'LICENSE' -o -name '*.txt' -o -name 'composer.json' -o -name '.gitkeep' \) -delete
+RUN find ./ -type d \( -name 'test' -o -name 'tests' -o -name 'build' -o -name 'example' -o -name '.composer-cache' \) -exec rm -rf "{}" \; || true
+
+#::::::::::::::::: STAGE #3 - CREATE ARCHIVE :::::::::::::::::
+ARG PACKAGE_VERSION
+ARG CI_PROJECT_NAME
+RUN tar -czf ${CI_PROJECT_NAME}-${PACKAGE_VERSION}.tar.gz -C app .
+
+#::::::::::::::::: STAGE #4 - UPLOAD ARCHIVE TO ARTIFACTORY :::::::::::::::::
+ARG ARTIFACTORY_URL
+ARG ARTIFACTORY_PASSWORD
+COPY automation/upload_to_artifactory.sh upload_to_artifactory.sh
+RUN chmod +x upload_to_artifactory.sh
+RUN ./upload_to_artifactory.sh
