@@ -249,6 +249,15 @@ class ManageField extends FormBase {
         '#default_value' => $fieldValidations[$key]['rule_description'] ?? "",
       ];
 
+      $form[$key]['weight'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Weight'),
+        '#description' => 'Provides order of messages depending on selected number, messages are sorted ascending',
+        '#options' => $this->getWeightOptions(),
+        '#parents' => ['field_validations', $key, 'weight'],
+        '#default_value' => $fieldValidations[$key]['weight'] ?? 0,
+      ];
+
       if (!empty($value['parameters'])) {
         $form[$key]['parameters_wrapper'] = [
           '#type' => 'details',
@@ -356,5 +365,17 @@ class ManageField extends FormBase {
 
     $this->saveRawConfigValue($name, 'field_validations', $data);
     $this->moduleHandler->invokeAll('webcomposer_form_config_schema_update', [$name . ".validation", $data, $before]);
+  }
+
+  /**
+   * Generates dropdown with number options
+   */
+  private function getWeightOptions()
+  {
+    $options = [];
+    for ($i = 0; $i <= 100; $i++) {
+      $options[$i] = $i;
+    }
+    return $options;
   }
 }
