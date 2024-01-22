@@ -305,6 +305,14 @@ class MyAccountProfileForm extends FormBase
             '#default_value' => $this->get('modal_preview_bottom_blurb'),
             '#translatable' => true,
         ];
+
+        $form['field_labels_modal_preview']['modal_preview_btn'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Button Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('modal_preview_btn'),
+            '#translatable' => true,
+        ];
     }
 
     private function validationConfig(&$form)
