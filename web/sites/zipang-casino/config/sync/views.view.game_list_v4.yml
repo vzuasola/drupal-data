@@ -1,4 +1,4 @@
-uuid: a72ad14d-3bcd-4905-8cb7-dc04c8df2dd4
+uuid: 066c19b3-683a-43db-8857-af957cf3f0a4
 langcode: ja
 status: true
 dependencies:
@@ -1320,6 +1320,15 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
+        field_game_provider_export:
+          id: field_game_provider_export
+          table: zipang_desktop_games_entity__field_game_provider
+          field: field_game_provider_export
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_provider: Taxonomy term'
+          required: true
+          plugin_id: standard
       defaults:
         relationships: false
         title: false
@@ -1327,6 +1336,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        arguments: false
       title: 'Game List (Desktop)'
       style:
         type: node_list_serializer
@@ -1343,20 +1353,23 @@ display:
             field_game_title:
               alias: game_title
               raw_output: false
+            field_enable_game_mobile:
+              alias: enable_game_mobile
+              raw_output: false
             field_enable_game:
               alias: enable_game
-              raw_output: false
-            field_game_code:
-              alias: game_code
-              raw_output: false
-            field_game_tag_export:
-              alias: game_tag
               raw_output: false
             field_enable_free_play_export:
               alias: enable_free_play
               raw_output: false
             field_client_type_export:
               alias: client_type
+              raw_output: false
+            field_client_type_mobile:
+              alias: client_type_mobile
+              raw_output: false
+            field_game_tag_export:
+              alias: game_tag
               raw_output: false
             field_game_code_icore_export:
               alias: game_code_icore
@@ -1403,20 +1416,14 @@ display:
             field_all_games_category_export:
               alias: all_games_categories
               raw_output: false
-            field_game_category_export_1:
-              alias: ''
-              raw_output: false
             field_game_provider_export_1:
               alias: provider
               raw_output: false
             field_provider_product_export:
               alias: provider_product
               raw_output: false
-            field_enable_game_mobile:
-              alias: enable_game_mobile
-              raw_output: false
-            field_client_type_mobile:
-              alias: client_type_mobile
+            field_game_provider_code:
+              alias: provider_code
               raw_output: false
       fields:
         id:
@@ -3094,52 +3101,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_game_provider_target_id:
-          id: field_game_provider_target_id
-          table: zipang_desktop_games_entity__field_game_provider
-          field: field_game_provider_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_game_provider_target_id_op
-            label: 'Game Provider (field_game_provider)'
-            description: ''
-            use_operator: false
-            operator: field_game_provider_target_id_op
-            identifier: provider
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: game_provider
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         field_game_filter_games_target_id:
           id: field_game_filter_games_target_id
           table: zipang_desktop_games_entity__field_game_filter_games
@@ -3416,6 +3377,46 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_game_provider_code_value:
+          id: field_game_provider_code_value
+          table: taxonomy_term__field_game_provider_code
+          field: field_game_provider_code_value
+          relationship: field_game_provider_export
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_provider_code_value_op
+            label: 'Game Provider Code (field_game_provider_code)'
+            description: ''
+            use_operator: false
+            operator: field_game_provider_code_value_op
+            identifier: provider
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
         field_game_title_value:
           id: field_game_title_value
           table: zipang_desktop_games_entity__field_game_title
@@ -3480,6 +3481,7 @@ display:
           table: zipang_desktop_games_entity__field_game_title
           field: field_game_title_value
           plugin_id: standard
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
