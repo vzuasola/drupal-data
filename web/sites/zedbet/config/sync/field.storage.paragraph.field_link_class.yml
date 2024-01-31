@@ -73,6 +73,9 @@ settings:
     -
       value: dafabet-connect
       label: 'Dafabet Connect'
+    -
+      value: cashier
+      label: Cashier
   allowed_values_function: ''
 module: options
 locked: false
