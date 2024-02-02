@@ -506,8 +506,8 @@ display:
           1: AND
       menu:
         type: normal
-        title: 'Manage Promotions Per Product'
-        description: 'Sort promotions per product'
+        title: 'Manage Promotions Sorting'
+        description: 'Sort promotions list'
         expanded: false
         parent: mobile_promotions.list
         weight: 10
