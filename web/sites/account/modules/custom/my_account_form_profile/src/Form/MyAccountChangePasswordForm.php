@@ -40,6 +40,8 @@ class MyAccountChangePasswordForm extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
+    $this->generalConfig($form);
+
     $form['field_icore_validation'] = [
       '#type' => 'details',
       '#title' => 'Integration Validation',
@@ -138,6 +140,24 @@ class MyAccountChangePasswordForm extends FormBase {
       '#description' => $this->t('Password Strong text for password strength.'),
       '#default_value' => $this->get('password_strong'),
       '#maxlength' => 255,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function generalConfig(array &$form) {
+    $form['general_config'] = [
+      '#type' => 'details',
+      '#title' => $this->t('General Configuration'),
+      '#collapsible' => TRUE,
+      '#group' => 'change_password',
+    ];
+
+    //password strength feature flag checkbox
+    $form['general_config']['use_password_checklist'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Use the password checklist box instead pf the password strength meter'),
+      '#description' => $this->t('Removes the password strength meter and replaces it with the checklist box.'),
+      '#default_value' => $this->get('use_password_checklist'),
       '#translatable' => TRUE,
     ];
   }
