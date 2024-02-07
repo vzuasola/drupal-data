@@ -63,4 +63,9 @@ function my_account_form_webcomposer_form_validation_alter(&$validations) {
     'description' => 'If this validation is enabled we need to pass one lower letter in input field.',
     'error' => 'Field requires at least one lower letter to be passed.',
   ];
+  $validations['new_password_different_from_current'] = [
+    'title' => 'New Pass Diff. From Current',
+    'description' => 'If this validation is enabled we need the new password to be different from the one entered in the "Current Password" field. Works only in Change Password Form',
+    'error' => 'Must not be the same as the current password.',
+  ];
 }
