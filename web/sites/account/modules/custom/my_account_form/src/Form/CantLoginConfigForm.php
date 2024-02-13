@@ -72,6 +72,14 @@ class CantLoginConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['cant_login_general_config']['use_password_checklist'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Use the password checklist box instead pf the password strength meter'),
+      '#description' => $this->t('Removes the password strength meter and replaces it with the checklist box.'),
+      '#default_value' => $this->get('use_password_checklist'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**

@@ -207,7 +207,6 @@ class FooterForm extends FormBase {
       '#title' => $this->t('Title'),
       '#description' => $this->t('Enter Title of Brand Ambassador Section'),
       '#default_value' => $this->get('ambassador_title'),
-      '#required' => true,
       '#translatable' => true,
     ];
 
@@ -217,7 +216,6 @@ class FooterForm extends FormBase {
       '#title' => $this->t('Ambassador Image'),
       '#default_value' => $this->get('ambassador_image'),
       '#upload_location' => 'public://',
-      '#required' => true,
       '#translatable' => true,
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg svg'],
@@ -267,7 +265,6 @@ class FooterForm extends FormBase {
       '#title' => $this->t('Copyright Label'),
       '#default_value' => $this->get('copyright'),
       '#translatable' => true,
-      '#required' => true,
     ];
 
     $form['copyright_group']['all_rights_reserved'] = [
@@ -275,7 +272,6 @@ class FooterForm extends FormBase {
       '#title' => $this->t('All Rights Reserved Label'),
       '#default_value' => $this->get('all_rights_reserved'),
       '#translatable' => true,
-      '#required' => true,
     ];
   }
   /**
@@ -292,7 +288,7 @@ class FooterForm extends FormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Footer Revamp'),
       '#default_value' => $this->get('enable_new_style'),
-      '#translatable' => TRUE,
+      '#translatable' => true,
     ];
   }
 }
