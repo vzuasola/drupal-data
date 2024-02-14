@@ -46,6 +46,7 @@ class MSWGeneralConfigurationForm extends FormBase {
     $this->helpCenterConfig($form);
     $this->prioritizationMenuConfig($form);
     $this->customerSupportNotificationsConfig($form);
+    $this->outletEmailNotification($form);
 
     return $form;
   }
@@ -408,5 +409,49 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+  }
+
+  private function outletEmailNotification(array &$form) {
+    $form['outlet_notifications_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Outlet Email Notification'),
+      '#group' => 'advanced'
+    ];
+    $form['outlet_notifications_settings']['outlet_notification']['outlet_email_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Email Notification to CS on Outlet Registration'),
+      '#default_value' => $this->get('outlet_email_enable'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['outlet_notifications_settings']['outlet_notification']['outlet_email_sender'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sender'),
+      '#default_value' => $this->get('outlet_email_sender'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['outlet_notifications_settings']['outlet_notification']['outlet_email_recipients'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Recipients'),
+      '#default_value' => $this->get('outlet_email_recipients'),
+      '#description' => $this->t('Seperated by comma if we need to add email. e.g firstname.lastname@sportserve.co, firstname1.lastname1@sportserve.co'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['outlet_notifications_settings']['outlet_notification']['outlet_email_subject'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Subject'),
+      '#default_value' => $this->get('outlet_email_subject'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['outlet_notifications_settings']['outlet_notification']['outlet_email_template'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Email Template'),
+      '#default_value' => $this->get('outlet_email_template')['value'],
+      '#format' => $this->get('outlet_email_template')['format'],
+      '#translatable' => TRUE,
+    ];
   }
 }
