@@ -487,20 +487,6 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
-    $form['balance_group']['dcoin_priority_fetch_error'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Error Shown if Priority cannot be fetched.'),
-      '#default_value' => $this->get('dcoin_priority_fetch_error') ?? 'Error fetching balance',
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-    $form['balance_group']['dcoin_balance_fetch_error'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Error Shown if Balance cannot be fetched.'),
-      '#default_value' => $this->get('dcoin_balance_fetch_error') ?? 'N/A',
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
 
     $form['balance_group']['dafacoin_enabled_currencies'] = [
       '#type' => 'textarea',
@@ -593,6 +579,14 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Product Balance Error Message'),
       '#description' => $this->t('Error message for the per product balance'),
       '#default_value' => $this->get('balance_error_text_product'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['balance_group']['dcoin_priority_fetch_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Error Shown if DP Priority cannot be fetched.'),
+      '#default_value' => $this->get('dcoin_priority_fetch_error') ?? 'Error fetching priority',
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
