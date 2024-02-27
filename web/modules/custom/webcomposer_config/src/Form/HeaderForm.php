@@ -583,6 +583,14 @@ class HeaderForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['balance_group']['dcoin_priority_fetch_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Error Shown if DP Priority cannot be fetched.'),
+      '#default_value' => $this->get('dcoin_priority_fetch_error') ?? 'Error fetching priority',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
     $form['balance_group']['balance_label_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Balances Label Mapping'),
