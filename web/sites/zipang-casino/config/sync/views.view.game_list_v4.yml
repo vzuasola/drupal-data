@@ -28,7 +28,6 @@ dependencies:
     - field.storage.zipang_desktop_games_entity.field_provider_product
     - taxonomy.vocabulary.all_games_category
     - taxonomy.vocabulary.arcade_game_category
-    - taxonomy.vocabulary.arcade_game_filter
     - taxonomy.vocabulary.desktop_game_category
     - taxonomy.vocabulary.game_provider
     - taxonomy.vocabulary.game_tag
@@ -1334,6 +1333,15 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_game_category: Taxonomy term'
+          required: false
+          plugin_id: standard
+        field_arcade_game_category:
+          id: field_arcade_game_category
+          table: zipang_desktop_games_entity__field_arcade_game_category
+          field: field_arcade_game_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_arcade_game_category: Taxonomy term'
           required: false
           plugin_id: standard
       defaults:
@@ -3310,52 +3318,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_arcade_game_filter_target_id:
-          id: field_arcade_game_filter_target_id
-          table: zipang_desktop_games_entity__field_arcade_game_filter
-          field: field_arcade_game_filter_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_arcade_game_filter_target_id_op
-            label: 'Arcade Game Filter (field_arcade_game_filter)'
-            description: ''
-            use_operator: false
-            operator: field_arcade_game_filter_target_id_op
-            identifier: arcade_filter
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: arcade_game_filter
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         field_game_provider_code_value:
           id: field_game_provider_code_value
           table: taxonomy_term__field_game_provider_code
@@ -3557,6 +3519,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
+        field_category_id_value_1:
+          id: field_category_id_value_1
+          table: taxonomy_term__field_category_id
+          field: field_category_id_value
+          relationship: field_arcade_game_category
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_category_id_value_1_op
+            label: 'Category ID (field_category_id)'
+            description: ''
+            use_operator: false
+            operator: field_category_id_value_1_op
+            identifier: arcade_game_category
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
       filter_groups:
         operator: AND
         groups:
@@ -3697,6 +3699,43 @@ display:
           transform_dash: false
           break_phrase: true
           plugin_id: string
+        field_arcade_game_filter_target_id:
+          id: field_arcade_game_filter_target_id
+          table: zipang_desktop_games_entity__field_arcade_game_filter
+          field: field_arcade_game_filter_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: query_parameter
+          default_argument_options:
+            query_param: arcade_filter
+            fallback: all
+            multiple: and
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: true
+          not: false
+          plugin_id: numeric
     cache_metadata:
       max-age: -1
       contexts:
