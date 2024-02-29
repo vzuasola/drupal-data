@@ -1,0 +1,21 @@
+uuid: 0a651013-e135-49c5-a666-0af71a2bb4d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_block_state
+    - node.type.game
+  module:
+    - options
+id: node.game.field_right_side_block_state
+field_name: field_right_side_block_state
+entity_type: node
+bundle: game
+label: 'Right-Side Block State'
+description: 'Select field(s) to show on Promotions - Right-Side Block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

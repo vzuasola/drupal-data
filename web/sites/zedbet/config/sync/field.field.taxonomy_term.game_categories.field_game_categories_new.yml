@@ -1,0 +1,23 @@
+uuid: f3ca325c-b8ea-4d91-9938-e207c07f400c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_categories_new
+    - taxonomy.vocabulary.game_categories
+id: taxonomy_term.game_categories.field_game_categories_new
+field_name: field_game_categories_new
+entity_type: taxonomy_term
+bundle: game_categories
+label: New
+description: 'If checked, this "NEW" ribbon will displayed.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
