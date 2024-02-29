@@ -1,0 +1,27 @@
+uuid: bfafea45-ee08-4b74-a0a6-8f3c510e19ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_right_side_block_state
+field_name: field_right_side_block_state
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Game Title'
+    -
+      value: '1'
+      label: 'Game Thumbnail Image'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

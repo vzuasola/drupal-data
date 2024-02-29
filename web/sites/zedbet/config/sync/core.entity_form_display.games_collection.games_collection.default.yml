@@ -1,0 +1,116 @@
+uuid: f6b226d1-3353-4d22-83ce-3be790af6d41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.games_collection.games_collection.field_category_arcade
+    - field.field.games_collection.games_collection.field_game_category
+    - field.field.games_collection.games_collection.field_games_arcade
+    - field.field.games_collection.games_collection.field_games_slots
+    - field.field.games_collection.games_collection.field_product
+    - field.field.games_collection.games_collection.field_type
+  module:
+    - conditional_fields
+    - field_group
+    - games_collection
+third_party_settings:
+  field_group:
+    group_slots:
+      children:
+        - field_game_category
+        - field_games_slots
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Slots
+    group_arcade:
+      children:
+        - field_category_arcade
+        - field_games_arcade
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Arcade
+id: games_collection.games_collection.default
+targetEntityType: games_collection
+bundle: games_collection
+mode: default
+content:
+  field_category_arcade:
+    weight: 6
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_select
+    region: content
+  field_game_category:
+    weight: 4
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_select
+    region: content
+  field_games_arcade:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_games_slots:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_product:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true
