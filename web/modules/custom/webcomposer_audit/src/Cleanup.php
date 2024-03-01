@@ -44,7 +44,7 @@ class Cleanup
                 ],
             ],
             "orderby" => [
-                "field" => "timestamp",
+                "field" => "id",
                 "sort" => "asc",
             ],
         ];
