@@ -9,7 +9,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  * SignupForm
  *
  * @WebcomposerForm(
- *   id = "sign_up_form",
+ *   id = "japan_sign_up_form",
  *   name = "Sign up Form",
  * )
  */
@@ -34,18 +34,41 @@ class SignupForm extends WebcomposerFormBase implements WebcomposerFormInterface
             '#type' => 'textfield',
             '#description' => 'The label for the Username field',
           ],
-        ],
-      ],
-      'password' => [
-        'name' => 'Password',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Password Label',
+          'placeholder' => [
+            '#title' => 'Username placeholder',
             '#type' => 'textfield',
-            '#description' => 'The label for the Password field',
+            '#description' => 'Username for password field',
+            '#default_value' => 'Username placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'Field annotation that will be displayed on focus',
           ],
         ],
+      ],
+      "password" => [
+          "name" => "Password",
+          "type" => "password",
+          "settings" => [
+              "label" => [
+                  "#title" => "Password Label",
+                  "#type" => "textfield",
+                  "#description" => "The label for the password field",
+                  "#default_value" => "Current Password",
+              ],
+              'placeholder' => [
+                '#title' => 'Password placeholder',
+                '#type' => 'textfield',
+                '#description' => 'Placeholder for password field',
+                '#default_value' => 'Password placeholder',
+              ],
+              'annotation' => [
+                '#title' => 'Annotation text',
+                '#type' => 'textarea',
+                '#description' => 'Field annotation that will be displayed on focus',
+              ],
+          ],
       ],
       'email' => [
         'name' => 'Email',
@@ -55,6 +78,17 @@ class SignupForm extends WebcomposerFormBase implements WebcomposerFormInterface
             '#title' => 'Email Label',
             '#type' => 'textfield',
             '#description' => 'The label for the Email field',
+          ],
+          'placeholder' => [
+            '#title' => 'Email placeholder',
+            '#type' => 'textfield',
+            '#description' => 'Email for password field',
+            '#default_value' => 'Email placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'Field annotation that will be displayed on focus',
           ],
         ],
       ],
