@@ -149,3 +149,14 @@ function webcomposer_audit_webcomposer_cache_signature_update($newsignature, $ol
     // do nothing
   }
 }
+
+
+/**
+ * Implements hook_cron()
+ * 
+ * Cleanup logic
+ * 
+ */
+function webcomposer_audit_cron(){
+  \Drupal\webcomposer_audit\Cleanup::runCleanup();
+}
