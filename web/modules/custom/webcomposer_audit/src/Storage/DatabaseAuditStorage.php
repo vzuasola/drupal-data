@@ -221,23 +221,31 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     try {
       $this->database
-        ->insert(self::TABLE)
-        ->fields([
-          'uid' => $this->user->id(),
-          'type' => $entity->getEntityTypeId(),
-          'eid' => $id,
-          'action' => AuditStorageInterface::DELETE,
-          'title' => $entity->label(),
-          'location' => $this->path->getPath(),
-          'timestamp' => time(),
-          'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
-          'entity' => serialize($entity),
-        ])
+        ->delete(self::TABLE)
+        ->condition('id', $id)
         ->execute();
     }
     catch (\Exception $e) {
       // do nothing
     }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function deleteByIds(array $entityIds): int {
+
+    try {
+      return $this->database
+        ->delete(self::TABLE)
+        ->condition('id', $entityIds, 'IN')
+        ->execute();
+    }
+    catch (\Exception $e) {
+      // do nothing
+    }
+
+    return false;
   }
 
   /**
