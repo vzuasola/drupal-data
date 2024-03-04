@@ -331,6 +331,22 @@ class MyAccountProfileForm extends FormBase
             '#default_value' => $this->get('server_side_validation'),
             '#translatable' => true,
         ];
+
+        $form['field_labels_validation_configuration']['password_min_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Min Length Error Message'),
+            '#required' => true,
+            '#default_value' => $this->get('password_min_length_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_validation_configuration']['password_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Max Length Error Message'),
+            '#required' => true,
+            '#default_value' => $this->get('password_max_length_validation'),
+            '#translatable' => true,
+        ];
     }
 
     private function smsConfig(&$form)
