@@ -115,7 +115,7 @@ class ZipangNewSigninAndSignupForm extends FormBase {
 
     $form['banner_config']['desktop_banner_en']['file_image_desktop_banner_en'] = [
       '#type' => 'managed_file',
-      '#title' => t('Signin Desktop Left Banner JA'),
+      '#title' => t('Signin Desktop Left Banner EN'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
