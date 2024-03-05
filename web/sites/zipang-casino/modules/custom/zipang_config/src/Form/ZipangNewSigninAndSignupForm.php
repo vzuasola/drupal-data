@@ -21,7 +21,7 @@ use Drupal\file\Entity\File;
  *     "title" = "New Sign in and Sign up Configuration",
  *     "description" = "Provides New Sign in and Sign up Configuration",
  *     "parent" = "zipang_config.zipang_config",
- *     "weight" = 30
+ *     "weight" = 40
  *   },
  * )
  */
@@ -41,6 +41,7 @@ class ZipangNewSigninAndSignupForm extends FormBase {
     ];
 
     $this->sectionSigninAndSignup($form);
+    $this->sectionBannerConfig($form);
 
     return $form;
   }
@@ -76,49 +77,57 @@ class ZipangNewSigninAndSignupForm extends FormBase {
       '#description' => $this->t('Text display on Signup tab'),
       '#translatable' => TRUE,
     ];
+  }
 
-    $form['signin_and_signup']['desktop_banner_en'] = [
-      '#type' => 'fieldset',
-      '#title' => t('Desktop Banner - EN'),
+  private function sectionBannerConfig(array &$form) {
+    $form['banner_config'] = [
+      '#type' => 'details',
+      '#title' => t('Banner Configuration'),
+      '#group' => 'advanced',
     ];
-    $config = $this->config('zipang_config.signin_and_signup_config');
-    $form['signin_and_signup']['desktop_banner_en']['file_desktop_banner_en'] = [
+
+    $form['banner_config']['desktop_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Singin Desktop Banner - JA')
+    ];
+
+    $form['banner_config']['desktop_banner_ja']['file_image_desktop_banner_ja'] = [
       '#type' => 'managed_file',
-      '#title' => t('Desktop Left Banner Image EN'),
+      '#title' => t('Signin Desktop Left Banner JA'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
-      '#upload_location' => 'public://upload',
+      '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
       ],
-      '#default_value' => $config->get('file_desktop_banner_en'),
+      '#default_value' => $this->get('file_image_desktop_banner_ja'),
     ];
 
-    $form['signin_and_signup']['desktop_banner_en']['desktop_banner_alt_text_en'] = [
-      '#type' => 'textfield',
-      '#title' => t('Alternative text'),
-      '#default_value' => $this->get('desktop_banner_alt_text_en'),
-    ];
-
-    $form['signin_and_signup']['desktop_banner_ja'] = [
-      '#type' => 'fieldset',
-      '#title' => t('Desktop Banner - JA'),
-    ];
-
-    $form['signin_and_signup']['desktop_banner_ja']['file_desktop_banner_ja'] = [
-      '#type' => 'managed_file',
-      '#title' => t('Desktop Left Banner JA'),
-      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
-      '#upload_location' => 'public://upload',
-      '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg gif'],
-      ],
-      '#default_value' => $config->get('file_desktop_banner_ja'),
-    ];
-
-    $form['signin_and_signup']['desktop_banner_ja']['desktop_banner_alt_text_ja'] = [
+   $form['banner_config']['desktop_banner_ja']['desktop_banner_alt_text_ja'] = [
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('desktop_banner_alt_text_ja'),
+    ];
+
+    $form['banner_config']['desktop_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Singin Desktop Banner - EN')
+    ];
+
+    $form['banner_config']['desktop_banner_en']['file_image_desktop_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Signin Desktop Left Banner JA'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_desktop_banner_en'),
+    ];
+
+   $form['banner_config']['desktop_banner_en']['desktop_banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('desktop_banner_alt_text_en'),
     ];
   }
 }

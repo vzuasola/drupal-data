@@ -9,7 +9,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  * SigninForm
  *
  * @WebcomposerForm(
- *   id = "sign_in_form",
+ *   id = "japan_sign_in_form",
  *   name = "Sign in Form",
  * )
  */
@@ -46,18 +46,31 @@ class SigninForm extends WebcomposerFormBase implements WebcomposerFormInterface
             '#type' => 'textfield',
             '#description' => 'The label for the Username field',
           ],
-        ],
-      ],
-      'password' => [
-        'name' => 'Password',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Password Label',
+          'placeholder' => [
+            '#title' => 'Username placeholder',
             '#type' => 'textfield',
-            '#description' => 'The label for the Password field',
+            '#description' => 'Username for password field',
+            '#default_value' => 'Username placeholder',
           ],
         ],
+      ],
+      "password" => [
+          "name" => "Password",
+          "type" => "password",
+          "settings" => [
+              "label" => [
+                  "#title" => "Password Label",
+                  "#type" => "textfield",
+                  "#description" => "The label for the password field",
+                  "#default_value" => "Password",
+              ],
+              'placeholder' => [
+                '#title' => 'Password placeholder',
+                '#type' => 'textfield',
+                '#description' => 'Placeholder for password field',
+                '#default_value' => 'Password placeholder',
+              ],
+          ],
       ],
       'remember_username' => [
         'name' => 'Remember Username',
