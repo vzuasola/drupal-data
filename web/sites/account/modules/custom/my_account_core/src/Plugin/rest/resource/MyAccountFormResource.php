@@ -91,6 +91,16 @@ class MyAccountFormResource extends ResourceBase
                 $values = $this->filter_array_exposed($config->get(), 'sms_verification');
                 break;
 
+            case 'my_account_validation_configuration':
+                // Get only sms verification section values.
+                $config = \Drupal::config('my_account_config.general_configuration');
+                $data = $config->get();
+                $values = [
+                    'password_min_length_validation' => $data['password_min_length_validation'],
+                    'password_max_length_validation' => $data['password_max_length_validation'],
+                ];
+                break;
+
             case 'my_account_header':
                 // Get only hader section values.
                 $config = \Drupal::config('my_account_core.header');

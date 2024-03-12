@@ -1,0 +1,20 @@
+uuid: 8bf8f8d6-66c2-419d-bb7c-84dcdd059d77
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_collection
+    - taxonomy
+id: games_collection.field_product
+field_name: field_product
+entity_type: games_collection
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

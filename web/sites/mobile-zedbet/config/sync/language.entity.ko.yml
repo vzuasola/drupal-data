@@ -1,0 +1,15 @@
+uuid: 55b35ebb-6ea7-452a-b162-249828f9c713
+langcode: ko
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_hidden: 0
+id: ko
+label: Korean
+direction: ltr
+weight: -7
+locked: false

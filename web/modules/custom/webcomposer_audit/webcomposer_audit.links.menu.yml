@@ -10,3 +10,9 @@ webcomposer_audit.audit_form:
   description: 'Views audit log entries'
   parent: webcomposer_audit.admin_list
 
+webcomposer_audit.cleanup_config_form:
+  title: 'Cleanup Audit Logs Config'
+  route_name: webcomposer_audit.cleanup_config_form
+  description: 'Configure Audit Log Cleanup'
+  parent: webcomposer_audit.admin_list
+

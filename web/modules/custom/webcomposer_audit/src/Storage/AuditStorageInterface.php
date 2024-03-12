@@ -72,6 +72,15 @@ interface AuditStorageInterface {
   public function delete(EntityInterface $entity);
 
   /**
+   * Deletes entries in the datable specified by the IDs provided
+   * 
+   * @param array $entityIds List of IDs to remove
+   * 
+   * @return int Number of rows that were deleted
+   */
+  public function deleteByIds(array $entityIds): int;
+
+  /**
    *
    */
   public function truncate();
