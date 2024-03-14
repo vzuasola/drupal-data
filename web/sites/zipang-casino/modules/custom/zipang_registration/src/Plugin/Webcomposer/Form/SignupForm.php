@@ -109,10 +109,10 @@ class SignupForm extends WebcomposerFormBase implements WebcomposerFormInterface
         'type' => 'submit',
         'settings' => [
           'label' => [
-            '#title' => 'Login Label',
+            '#title' => 'Signup Label',
             '#type' => 'textfield',
-            '#description' => 'Label for the login button',
-            '#default_value' => 'Login',
+            '#description' => 'Label for the Signup button',
+            '#default_value' => 'Signup',
           ],
         ],
       ]
