@@ -129,5 +129,49 @@ class ZipangNewSigninAndSignupForm extends FormBase {
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('desktop_banner_alt_text_en'),
     ];
+    // Mobile Banner
+    $form['banner_config']['mobile_banner_ja'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Singin Mobile Banner - JA')
+    ];
+
+    $form['banner_config']['mobile_banner_ja']['file_image_mobile_banner_ja'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Signin Mobile Left Banner JA'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_mobile_banner_ja'),
+    ];
+
+   $form['banner_config']['mobile_banner_ja']['mobile_banner_alt_text_ja'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('mobile_banner_alt_text_ja'),
+    ];
+
+    $form['banner_config']['mobile_banner_en'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Singin Mobile Banner - EN')
+    ];
+
+    $form['banner_config']['mobile_banner_en']['file_image_mobile_banner_en'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Signin Mobile Left Banner EN'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_mobile_banner_en'),
+    ];
+
+   $form['banner_config']['mobile_banner_en']['mobile_banner_alt_text_en'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('mobile_banner_alt_text_en'),
+    ];
   }
 }
