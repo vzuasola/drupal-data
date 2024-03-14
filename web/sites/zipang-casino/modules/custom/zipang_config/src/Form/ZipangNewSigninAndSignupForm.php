@@ -42,6 +42,7 @@ class ZipangNewSigninAndSignupForm extends FormBase {
 
     $this->sectionSigninAndSignup($form);
     $this->sectionBannerConfig($form);
+    $this->sectionSuccessPageConfig($form);
 
     return $form;
   }
@@ -172,6 +173,98 @@ class ZipangNewSigninAndSignupForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('mobile_banner_alt_text_en'),
+    ];
+  }
+
+  private function sectionSuccessPageConfig(array &$form) {
+    $form['signup_success_page'] = [
+      '#type' => 'details',
+      '#title' => t('SignUp Success Page'),
+      '#group' => 'advanced',
+    ];
+
+    $form['signup_success_page']['complete_logo'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Complete Logo')
+    ];
+
+    $form['signup_success_page']['complete_logo']['file_image_complete_logo'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Complete Logo'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_complete_logo'),
+    ];
+
+   $form['signup_success_page']['complete_logo']['file_image_complete_logo_alt_text'] = [
+      '#type' => 'textfield',
+      '#title' => t('Alternative text'),
+      '#default_value' => $this->get('file_image_complete_logo_alt_text'),
+    ];
+
+    $form['signup_success_page']['success_page_deposit_bonus_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Bonus Title'),
+      '#default_value' => $this->get('success_page_deposit_bonus_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('deposit_bonus_banner');
+    $form['signup_success_page']['deposit_bonus_banner'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Deposit Bonus Banner'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_success_page']['deposit_bonus_instruction_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Bonus Instruction Title'),
+      '#default_value' => $this->get('deposit_bonus_instruction_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('deposit_bonus_instruction');
+    $form['signup_success_page']['deposit_bonus_instruction'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Deposit Bonus Instructions'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_success_page']['game_information_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Information Title'),
+      '#default_value' => $this->get('game_information_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('game_information_body');
+    $form['signup_success_page']['game_information_body'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Game Information Content'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_success_page']['all_games_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('All Games Text'),
+      '#default_value' => $this->get('all_games_text'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_success_page']['all_games_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('All Games Link'),
+      '#default_value' => $this->get('all_games_link'),
+      '#translatable' => TRUE,
     ];
   }
 }
