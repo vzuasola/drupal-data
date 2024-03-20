@@ -58,9 +58,7 @@ class MyAccountRateLimit extends FormBase {
     $form['rate_limit_username']['rate_limit_username_type'] = [
       '#type' => 'select',
       '#options' => [
-        'user_mode' => $this->t('Username'),
         'ip_mode' => $this->t('IP'),
-        'user_ip_mode' => $this->t('Username & IP'),
       ],
       '#title' => t('Rate Limit Type'),
       '#description' => $this->t('Rate limit by IP/User ID/IP and User ID'),
