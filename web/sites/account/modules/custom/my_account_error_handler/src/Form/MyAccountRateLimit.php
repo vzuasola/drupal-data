@@ -55,6 +55,15 @@ class MyAccountRateLimit extends FormBase {
       '#group' => 'rate_limit',
       '#open' => TRUE,
     ];
+    $form['rate_limit_username']['rate_limit_username_type'] = [
+      '#type' => 'select',
+      '#options' => [
+        'ip_mode' => $this->t('IP'),
+      ],
+      '#title' => t('Rate Limit Type'),
+      '#description' => $this->t('Rate limit by IP/User ID/IP and User ID'),
+      '#default_value' => $this->get('rate_limit_username_type') ?? 'ip_mode',
+    ];
     $form['rate_limit_username']['rate_limit_username_interval'] = [
       '#type' => 'textfield',
       '#title' => t('Interval'),
@@ -77,6 +86,17 @@ class MyAccountRateLimit extends FormBase {
       '#title' => 'SMS Flood',
       '#group' => 'rate_limit',
       '#open' => TRUE,
+    ];
+    $form['rate_limit_sms']['rate_limit_sms_type'] = [
+      '#type' => 'select',
+      '#options' => [
+        'user_mode' => $this->t('Username'),
+        'ip_mode' => $this->t('IP'),
+        'user_ip_mode' => $this->t('Username & IP'),
+      ],
+      '#title' => t('Rate Limit Type'),
+      '#description' => $this->t('Rate limit by IP/Username/IP-Username'),
+      '#default_value' => $this->get('rate_limit_sms_type') ?? 'user_mode',
     ];
     $form['rate_limit_sms']['rate_limit_sms_interval'] = [
       '#type' => 'textfield',
@@ -114,6 +134,18 @@ class MyAccountRateLimit extends FormBase {
       '#title' => t('Enabled'),
       '#description' => $this->t('Check this if you want to enable rate limit'),
       '#default_value' => $this->get('rate_limit_bonus_code_enable'),
+    ];
+
+    $form['rate_limit_bonus_code']['rate_limit_bonus_code_type'] = [
+      '#type' => 'select',
+      '#options' => [
+        'user_mode' => $this->t('Username'),
+        'ip_mode' => $this->t('IP'),
+        'user_ip_mode' => $this->t('Username & IP'),
+      ],
+      '#title' => t('Rate Limit Type'),
+      '#description' => $this->t('Rate limit by IP/Username/IP-Username'),
+      '#default_value' => $this->get('rate_limit_bonus_code_type') ?? 'user_mode',
     ];
 
     $form['rate_limit_bonus_code']['rate_limit_bonus_code_interval'] = [
