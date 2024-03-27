@@ -2,6 +2,6 @@ title: Promotions
 filter_label: Filter
 no_available_msg: 'No available promotions'
 more_info_link_text: 'More Info &raquo;'
-countdown_format: days
+countdown_format: '[days] days, [hours] hours remaining'
 no_archive_msg: 'No available archive'
 btn_archive_title: Archive

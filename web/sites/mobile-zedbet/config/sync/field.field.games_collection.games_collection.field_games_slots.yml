@@ -1,0 +1,29 @@
+uuid: 1470cace-4800-42e3-9128-f8c1c0430eaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_collection.field_games_slots
+    - node.type.games_slots
+  module:
+    - games_collection
+id: games_collection.games_collection.field_games_slots
+field_name: field_games_slots
+entity_type: games_collection
+bundle: games_collection
+label: 'Games Slots'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      games_slots: games_slots
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

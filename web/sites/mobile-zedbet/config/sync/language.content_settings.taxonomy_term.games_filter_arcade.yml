@@ -1,0 +1,18 @@
+uuid: ea444b79-fdb4-4ef7-82b1-1a772eb2ed5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_filter_arcade
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.games_filter_arcade
+target_entity_type_id: taxonomy_term
+target_bundle: games_filter_arcade
+default_langcode: site_default
+language_alterable: true

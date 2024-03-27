@@ -1,0 +1,256 @@
+uuid: 2fdcdfa7-e376-418e-ad86-7abb40d95e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games_slots.field_all_games_category_ribbon
+    - field.field.node.games_slots.field_disable_game_loader
+    - field.field.node.games_slots.field_external_game_id
+    - field.field.node.games_slots.field_game_code
+    - field.field.node.games_slots.field_game_filter
+    - field.field.node.games_slots.field_game_provider
+    - field.field.node.games_slots.field_game_ribbon
+    - field.field.node.games_slots.field_games_list_category
+    - field.field.node.games_slots.field_games_subprovider
+    - field.field.node.games_slots.field_games_target
+    - field.field.node.games_slots.field_keywords
+    - field.field.node.games_slots.field_preview_mode
+    - field.field.node.games_slots.field_thumbnail_image
+    - image.style.thumbnail
+    - node.type.games_slots
+  module:
+    - field_group
+    - image
+    - path
+    - scheduler
+third_party_settings:
+  field_group:
+    group_category:
+      children:
+        - field_games_list_category
+      parent_name: ''
+      weight: 16
+      format_type: tab
+      format_settings:
+        label: 'Game Category'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Game Category'
+    group_game_thumbnail:
+      children:
+        - field_thumbnail_image
+        - field_games_target
+      parent_name: ''
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Game Thumbnail Settings'
+    group_game_ribbon:
+      children:
+        - field_all_games_category_ribbon
+        - field_game_ribbon
+      parent_name: ''
+      weight: 18
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Game Ribbon'
+    group_search_and_filter_settings:
+      children:
+        - field_game_filter
+        - field_keywords
+      parent_name: ''
+      weight: 19
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Search and Filter Settings'
+id: node.games_slots.default
+targetEntityType: node
+bundle: games_slots
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_all_games_category_ribbon:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_disable_game_loader:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_external_game_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_code:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_filter:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_game_provider:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_ribbon:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_games_list_category:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_games_subprovider:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_games_target:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_keywords:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_preview_mode:
+    weight: 25
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_thumbnail_image:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

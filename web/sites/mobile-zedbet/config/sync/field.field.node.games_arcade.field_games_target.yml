@@ -1,0 +1,23 @@
+uuid: ea4ce027-e4e3-4386-ae1f-24c2772cd5e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_target
+    - node.type.games_arcade
+  module:
+    - options
+id: node.games_arcade.field_games_target
+field_name: field_games_target
+entity_type: node
+bundle: games_arcade
+label: Target
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: popup
+default_value_callback: ''
+settings: {  }
+field_type: list_string

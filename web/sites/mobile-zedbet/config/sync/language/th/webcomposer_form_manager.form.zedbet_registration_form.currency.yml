@@ -1,7 +1,7 @@
 field_settings:
   label: สกุลเงิน
   placeholder: สกุลเงิน
-  choices: "103|ไทยบาท\r\n134|USDT"
+  choices: "103|บาท\r\n134|USDT"
   portal_id_to_currency_mapping: "289|2,103,134\r\n286|2,103,134\r\n288|2,103,134"
 field_validations:
   required:

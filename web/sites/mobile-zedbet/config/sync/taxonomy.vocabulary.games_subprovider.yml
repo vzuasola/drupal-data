@@ -1,0 +1,9 @@
+uuid: 8904f8f8-3017-4964-a465-e38baef95b77
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Subprovider'
+vid: games_subprovider
+description: 'List of Subproviders'
+hierarchy: 0
+weight: 0

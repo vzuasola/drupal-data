@@ -1,0 +1,31 @@
+title: การแจ้งเตือน
+empty: ไม่มีการแจ้งเตือนใหม่
+expired_message: ข้อเสนอหมดอายุแล้ว
+copied: คัดลอกไปที่คลิปบอร์ด
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+8'
+counter_message: ''
+promotions_tab_title: ''
+promotions_tab_empty_message:
+  value: ''
+  format: basic_html
+payments_tab_title: ''
+payments_tab_empty_message:
+  value: ''
+  format: basic_html
+dismiss_button_label: DISMISS
+dismiss_content:
+  value: ''
+  format: basic_html
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
+product_label_generic: Zedbet
+product_label_livedealer: 'Live Dealer'
+product_label_slots: ''
+product_label_arcade: ''
+product_label_sportsbook: ''
+cta_label_ok: ตกลง
+cta_label_accept: ยอมรับ
+cta_label_decline: ปฏิเสธ
+cta_label_proceed: 'ใช่, ทำรายการต่อ'
+cta_label_no: 'ไม่, ขอบคุณ'
