@@ -34,6 +34,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  games_collection: 0
   image: 0
   imce: 0
   lang_dropdown: 0
@@ -46,10 +47,12 @@ module:
   menu_ui: 0
   metatag: 0
   mobile_als: 0
+  mobile_arcade: 0
   mobile_config: 0
   mobile_live_dealer: 0
   mobile_product_menu: 0
   mobile_promotions: 0
+  mobile_slots: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -61,6 +64,7 @@ module:
   registration_theme: 0
   rest: 0
   rest_menu_items: 0
+  rest_views: 0
   restui: 0
   scheduler: 0
   serialization: 0
@@ -93,6 +97,7 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_mailer: 0
   webcomposer_marketing_script: 0
+  webcomposer_optimized_rest: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0

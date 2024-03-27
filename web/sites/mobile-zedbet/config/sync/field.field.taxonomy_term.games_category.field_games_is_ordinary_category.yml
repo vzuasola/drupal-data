@@ -1,0 +1,23 @@
+uuid: 7fe3099b-e9e8-4f2c-a7a9-880ee92ada7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_games_is_ordinary_category
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_games_is_ordinary_category
+field_name: field_games_is_ordinary_category
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Ordinary Category'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

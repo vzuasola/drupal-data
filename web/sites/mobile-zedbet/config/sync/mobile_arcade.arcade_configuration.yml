@@ -1,0 +1,7 @@
+arcade_lobby_infinite_scroll: 0
+more_provider_drawer: More
+title_provider_drawer: 'Game Providers'
+search_tab_title: Search
+provider_tab_title: Categories
+transfer_title: 'Instant Transfer'
+transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'

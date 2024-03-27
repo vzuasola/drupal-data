@@ -1,0 +1,16 @@
+search_v2: 1
+search_title: Search
+title_search_lightbox: Search
+games_filter_title: Filter
+filter_title_lightbox: Filter
+games_transfer_title: 'Instant Transfer'
+games_filter_submit: Submit
+games_filter_cancel: Cancel
+search_blurb: 'Showing {count} result/s for "<strong>{keyword}</strong>"'
+search_no_result_msg: 'No search results for <strong>{keyword}</strong>.'
+filter_no_result_msg: 'No filter results.'
+msg_recommended_available: 'You might want to try our recommended games.'
+msg_no_recommended: 'No Recommended Games available.'
+games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
+title_weight: '1.0'
+keywords_weight: '0.8'

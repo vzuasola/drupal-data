@@ -1,0 +1,19 @@
+uuid: 36b0beb1-5d96-4bce-bf2b-98cab6331649
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.games_arcade
+id: node.games_arcade.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: games_arcade
+label: Keywords
+description: 'Please separate each keyword with a space'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
