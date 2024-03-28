@@ -1,0 +1,18 @@
+uuid: 48fe135b-3c7d-40e6-bf25-a909d860832d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.game
+id: node.game.changed
+field_name: changed
+entity_type: node
+bundle: game
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

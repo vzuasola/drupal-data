@@ -1,0 +1,18 @@
+uuid: 88f3bf05-ec18-48ac-b041-0e0353ebffea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arcade_game
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.arcade_game
+target_entity_type_id: node
+target_bundle: arcade_game
+default_langcode: site_default
+language_alterable: true

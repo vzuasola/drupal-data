@@ -1,0 +1,23 @@
+uuid: c269d2d5-6206-4801-8c4e-cf86888feb32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_arcade_category_tooltip
+    - taxonomy.vocabulary.arcade_game_categories
+id: taxonomy_term.arcade_game_categories.field_arcade_category_tooltip
+field_name: field_arcade_category_tooltip
+entity_type: taxonomy_term
+bundle: arcade_game_categories
+label: 'Show Tooltip'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

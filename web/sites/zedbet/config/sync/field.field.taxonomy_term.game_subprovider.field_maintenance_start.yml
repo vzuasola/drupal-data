@@ -1,0 +1,21 @@
+uuid: 45cedf97-a5e6-4711-999c-25ae165396ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_maintenance_start
+    - taxonomy.vocabulary.game_subprovider
+  module:
+    - datetime
+id: taxonomy_term.game_subprovider.field_maintenance_start
+field_name: field_maintenance_start
+entity_type: taxonomy_term
+bundle: game_subprovider
+label: 'Under Maintenance Start'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

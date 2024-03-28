@@ -18,6 +18,7 @@ content:
     region: content
 hidden:
   field_all_category_ribbon_config: true
+  field_external_game_id: true
   field_game_categories: true
   field_game_code: true
   field_game_filters: true
@@ -37,4 +38,5 @@ hidden:
   field_maintenance_end: true
   field_maintenance_message: true
   field_maintenance_start: true
+  field_right_side_block_state: true
   langcode: true

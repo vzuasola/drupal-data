@@ -1,0 +1,20 @@
+uuid: f29c5e64-1b94-43a8-b6dd-8c00c59ae3b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mobile
+id: node.mobile.uid
+field_name: uid
+entity_type: node
+bundle: mobile
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -12,7 +12,7 @@ bundle: game
 label: 'Integration Parameters'
 description: 'Game URL parameter'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

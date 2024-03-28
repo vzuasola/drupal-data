@@ -1,0 +1,25 @@
+uuid: 5ed6feb0-341e-4f05-b9d8-ad61690a1bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_ribbon
+    - node.type.arcade_game
+id: node.arcade_game.field_game_ribbon
+field_name: field_game_ribbon
+entity_type: node
+bundle: arcade_game
+label: 'Ribbon Configuration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ribbon_entity_reference
+      display_name: ribbon_entity_reference
+      arguments: {  }
+field_type: entity_reference

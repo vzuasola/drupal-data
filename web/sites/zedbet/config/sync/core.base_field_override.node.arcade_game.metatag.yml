@@ -1,0 +1,18 @@
+uuid: 976b1eec-645c-48bf-a1a1-fa59b9b88291
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arcade_game
+id: node.arcade_game.metatag
+field_name: metatag
+entity_type: node
+bundle: arcade_game
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

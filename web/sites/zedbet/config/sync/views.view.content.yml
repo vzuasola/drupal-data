@@ -2,8 +2,12 @@ uuid: ff04111f-4199-46b3-a58b-86740e04a832
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.game_provider
+    - taxonomy.vocabulary.game_subprovider
   module:
     - node
+    - taxonomy
     - user
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
@@ -483,6 +487,98 @@ display:
           plugin_id: boolean
           entity_type: node
           entity_field: status
+        field_game_provider_target_id:
+          id: field_game_provider_target_id
+          table: node__field_game_provider
+          field: field_game_provider_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_provider_target_id_op
+            label: 'Game Provider'
+            description: ''
+            use_operator: false
+            operator: field_game_provider_target_id_op
+            identifier: field_game_provider_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: game_provider
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_game_subprovider_target_id:
+          id: field_game_subprovider_target_id
+          table: node__field_game_subprovider
+          field: field_game_subprovider_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_subprovider_target_id_op
+            label: 'Game Subprovider'
+            description: ''
+            use_operator: false
+            operator: field_game_subprovider_target_id_op
+            identifier: field_game_subprovider_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: game_subprovider
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
         langcode:
           id: langcode
           table: node_field_data

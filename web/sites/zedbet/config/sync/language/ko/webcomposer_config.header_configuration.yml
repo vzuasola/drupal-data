@@ -1,0 +1,41 @@
+header_settings_tab__active_tab: edit-welcome-text-group
+logo_title: 'Zedbet Logo TCT'
+logo_url: ''
+mobile_logo_url: ''
+registration_link: '{domain:zedbet}/{domain:lang_token}/join/'
+registration_link_mobile: ''
+capslock_notification: /
+login_join_now_text: 'mob join now text'
+default_cashier_link: /
+cashier_mapping: ''
+default_mcashier_link: /
+mcashier_link_target: _self
+mcashier_mapping: ''
+balance_label_override: ''
+currency_balance_mapping: "5|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,MMK,KHR,TUS\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,MMK,KHR,TUS\r\n7|RMB"
+excluded_balance_mapping: ''
+currency_label_mapping: ''
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>This is a critical announcement test test test</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
+lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+promotion_page_title: 'Promo page'
+links_title: 'quick links'
+join_now_text: 'JOIN KR'
+join_now_link: 'https://qa1-www.elysium-dfbt.com/en/casino/join{tracking.token}'
+login_issue_text: 'Cant login? KR'
+login_issue_link: 'https://www.google.com'
+product_balance_label: 'product balance label'
+total_balance_label: 'Total balance KR'
+balance_error_text: 'Error Retrieving.'
+welcome_text: '환영합니다 {username} 님'
+profile_link: '#'
+profile_logout_text: Logout
+balance_label_mapping: "6|Dafa Sports\r\n5|Live Dealer"
+balance_mapping: "6|Sports kr\r\n5|Common Wallet kr"
+cashier_link: /
