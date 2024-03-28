@@ -1,0 +1,18 @@
+uuid: 75b02d16-9f39-47e1-b5d1-fd9a2493bcc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mobile
+id: node.mobile.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: mobile
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

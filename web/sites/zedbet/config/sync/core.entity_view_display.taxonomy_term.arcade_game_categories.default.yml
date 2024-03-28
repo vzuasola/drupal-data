@@ -1,0 +1,94 @@
+uuid: c50695c5-4644-4dc5-afb1-bb024b397246
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_category_tooltext
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_category_tooltip
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_game_category_hover
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_game_category_icon
+    - field.field.taxonomy_term.arcade_game_categories.field_game_categories_alias
+    - field.field.taxonomy_term.arcade_game_categories.field_game_categories_disable
+    - field.field.taxonomy_term.arcade_game_categories.field_game_categories_new
+    - taxonomy.vocabulary.arcade_game_categories
+  module:
+    - image
+    - text
+id: taxonomy_term.arcade_game_categories.default
+targetEntityType: taxonomy_term
+bundle: arcade_game_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_arcade_category_tooltext:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_arcade_category_tooltip:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_arcade_game_category_hover:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_arcade_game_category_icon:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_categories_alias:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_game_categories_disable:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_game_categories_new:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

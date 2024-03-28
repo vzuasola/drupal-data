@@ -12,7 +12,7 @@ bundle: game
 label: Filters
 description: 'Select filters for this game.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,18 @@
+uuid: 0610a744-3aba-4ade-baa1-262292ff316b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mobile
+id: node.mobile.title
+field_name: title
+entity_type: node
+bundle: mobile
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

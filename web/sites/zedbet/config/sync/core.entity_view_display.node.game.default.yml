@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.game.field_all_category_ribbon_config
+    - field.field.node.game.field_external_game_id
     - field.field.node.game.field_game_categories
     - field.field.node.game.field_game_code
     - field.field.node.game.field_game_filters
@@ -210,4 +211,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_external_game_id: true
   langcode: true

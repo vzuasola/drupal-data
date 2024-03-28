@@ -1,0 +1,19 @@
+uuid: 3dfef980-f87a-4692-8021-dd42c79b87cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_integration
+    - node.type.arcade_game
+id: node.arcade_game.field_game_integration
+field_name: field_game_integration
+entity_type: node
+bundle: arcade_game
+label: 'Integration Parameters'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

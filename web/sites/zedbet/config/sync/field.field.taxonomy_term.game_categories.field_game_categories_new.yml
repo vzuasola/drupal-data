@@ -12,7 +12,7 @@ bundle: game_categories
 label: New
 description: 'If checked, this "NEW" ribbon will displayed.'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

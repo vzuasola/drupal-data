@@ -1,0 +1,18 @@
+uuid: 1f8ee801-8341-433b-b857-26ef56e3b8ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_filters
+id: taxonomy_term.game_filters.name
+field_name: name
+entity_type: taxonomy_term
+bundle: game_filters
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
