@@ -14,7 +14,7 @@ bundle: games_collection
 label: 'Game Category'
 description: '<i>Applicable only for <strong>top</strong> collection type.</i>'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

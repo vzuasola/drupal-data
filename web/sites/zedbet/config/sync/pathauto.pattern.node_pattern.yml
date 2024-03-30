@@ -9,17 +9,18 @@ label: 'node pattern'
 type: 'canonical_entities:node'
 pattern: '/[node:title]'
 selection_criteria:
-  a28b8c7d-6d44-47a8-9577-a19ab1b492fe:
+  cfd7dfc5-e001-4ce6-8e32-ca6d4f1f1e3b:
     id: node_type
     bundles:
       arcade_game: arcade_game
       game: game
       games_live_dealer: games_live_dealer
       page: page
+      promotion: promotion
     negate: false
     context_mapping:
       node: node
-    uuid: a28b8c7d-6d44-47a8-9577-a19ab1b492fe
+    uuid: cfd7dfc5-e001-4ce6-8e32-ca6d4f1f1e3b
 selection_logic: and
 weight: -5
 relationships: {  }

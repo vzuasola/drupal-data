@@ -1,0 +1,7 @@
+mobile_slots.admin_settings:
+  path: 'admin/config/slots-mobile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Slots Configurations'
+  requirements:
+    _permission: 'administer mobile config'
