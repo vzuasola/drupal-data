@@ -35,10 +35,28 @@ class MyAccountProfileForm extends FormBase {
      * @inheritdoc
      */
     public function form(array $form, FormStateInterface $form_state) {
+        $this->headerSection($form);
+        $this->genericSection($form);
+        $this->contactPreferenceSection($form);
+        $this->countryMappingSection($form);
+        $this->modalPreviewSection($form);
+        $this->validationConfigurationSection($form);
+        $this->mobileNumberSection($form);
+        $this->smsConfigurationSection($form);
+        $this->smsRateLimitSection($form);
+        $this->passwordChecklistConfiguration($form);
+
         $form['profile'] = [
             '#type' => 'vertical_tabs',
         ];
 
+        return $form;
+    }
+
+    /**
+     * Header section configuration
+     */
+    private function headerSection(array &$form) {
         $form['header_configuration'] = [
             '#type' => 'details',
             '#title' => 'Header Configuration',
@@ -56,43 +74,47 @@ class MyAccountProfileForm extends FormBase {
         ];
 
         $form['header_configuration']['welcome_text'] = [
-          '#type' => 'textfield',
-          '#title' => t('Welcome text'),
-          '#required' => TRUE,
-          '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
-          '#default_value' => $this->get('welcome_text'),
-          '#translatable' => TRUE,
+            '#type' => 'textfield',
+            '#title' => t('Welcome text'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
+            '#default_value' => $this->get('welcome_text'),
+            '#translatable' => TRUE,
         ];
 
         $form['header_configuration']['product_menu_new_tag'] = [
-          '#type' => 'textfield',
-          '#title' => t('New Tag'),
-          '#required' => TRUE,
-          '#description' => $this->t('Text for new tag'),
-          '#default_value' => $this->get('product_menu_new_tag'),
-          '#translatable' => TRUE,
+            '#type' => 'textfield',
+            '#title' => t('New Tag'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text for new tag'),
+            '#default_value' => $this->get('product_menu_new_tag'),
+            '#translatable' => TRUE,
         ];
 
         $form['header_configuration']['help_tooltip'] = [
-          '#type' => 'textfield',
-          '#title' => t('Help Tooltip'),
-          '#required' => TRUE,
-          '#description' => $this->t('Tooltip for help'),
-          '#default_value' => $this->get('help_tooltip'),
-          '#translatable' => TRUE,
+            '#type' => 'textfield',
+            '#title' => t('Help Tooltip'),
+            '#required' => TRUE,
+            '#description' => $this->t('Tooltip for help'),
+            '#default_value' => $this->get('help_tooltip'),
+            '#translatable' => TRUE,
         ];
 
         $form['header_configuration']['error_mid_down'] = [
-          '#type' => 'textarea',
-          '#title' => t('Error Message MID Down'),
-          '#size' => 500,
-          '#required' => TRUE,
-          '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
-          '#default_value' => $this->get('error_mid_down'),
-          '#translatable' => TRUE,
+            '#type' => 'textarea',
+            '#title' => t('Error Message MID Down'),
+            '#size' => 500,
+            '#required' => TRUE,
+            '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+            '#default_value' => $this->get('error_mid_down'),
+            '#translatable' => TRUE,
         ];
+    }
 
-
+    /**
+     * Function to show generic tab configuration
+     */
+    private function genericSection(array &$form) {
         $form['field_labels_generic_configuration'] = [
             '#type' => 'details',
             '#title' => 'Generic Configuration',
@@ -133,7 +155,12 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
             '#description' => 'Label for Change Password Tab.'
         ];
+    }
 
+    /**
+     * Contact Preference section configuration
+     */
+    private function contactPreferenceSection(array &$form) {
         $form['contact_preference'] = [
             '#type' => 'details',
             '#title' => 'Contact Prefrence',
@@ -156,7 +183,12 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('contact_preference_no_label'),
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Country mapping section configuration
+     */
+    private function countryMappingSection(array &$form) {
         $form['field_labels_country_mapping'] = [
             '#type' => 'details',
             '#title' => 'Country Mapping',
@@ -179,7 +211,12 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#default_value' => $this->get('country_code_mapping'),
         ];
+    }
 
+    /**
+     * Modal preview section configuration
+     */
+    private function modalPreviewSection(array &$form) {
         $form['field_labels_modal_preview'] = [
             '#type' => 'details',
             '#title' => 'Modal Preview',
@@ -226,7 +263,12 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('modal_preview_bottom_blurb'),
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Validation Configuration Section
+     */
+    private function validationConfigurationSection(array &$form) {
         $form['field_labels_validation_configuration'] = [
             '#type' => 'details',
             '#title' => 'Validation Configuration',
@@ -241,7 +283,12 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('server_side_validation'),
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Mobile number section
+     */
+    private function mobileNumberSection(array &$form) {
         $form['mobile_number_config'] = [
             '#type' => 'details',
             '#title' => 'Mobile Number Annotation',
@@ -257,7 +304,12 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * SMS Configuration Section
+     */
+    private function smsConfigurationSection(array &$form) {
         $form['sms_configuration'] = [
             '#type' => 'details',
             '#title' => 'SMS Verification Configuration',
@@ -341,7 +393,71 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('verification_code_response') ?? '',
             '#translatable' => true,
         ];
-
-        return $form;
     }
+
+    /**
+     * SMS Rate Limit Section configuration tab
+     */
+    private function smsRateLimitSection (array &$form) {
+        $form['rate_limit_sms'] = [
+            '#type' => 'details',
+            '#title' => 'SMS Flood',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_type'] = [
+            '#type' => 'select',
+            '#options' => [
+                'user_mode' => $this->t('Username'),
+                'ip_mode' => $this->t('IP'),
+                'user_ip_mode' => $this->t('Username & IP'),
+            ],
+            '#title' => t('Rate Limit Type'),
+            '#description' => $this->t('Rate limit by IP/Username/IP-Username'),
+            '#default_value' => $this->get('rate_limit_sms_type') ?? 'user_mode',
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_interval'] = [
+            '#type' => 'textfield',
+            '#title' => t('Interval'),
+            '#description' => $this->t('Rate limit interval in seconds'),
+            '#default_value' => $this->get('rate_limit_sms_interval') ?? 60,
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_operation'] = [
+            '#type' => 'textfield',
+            '#title' => t('Rate Limit Operation'),
+            '#description' => $this->t('Allowed Request'),
+            '#default_value' => $this->get('rate_limit_sms_operation') ?? 1,
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_error_message'] = [
+            '#type' => 'textfield',
+            '#title' => t('Rate Limit Error Message'),
+            '#description' => $this->t('The message to display when the rate limit is exceeded'),
+            '#default_value' => $this->get('rate_limit_sms_error_message') ?? 'You have exceeded the maximum number of SMS requests. Please try again later.',
+            '#translatable' => TRUE,
+        ];
+    }
+
+  /**
+   * Password checklist form
+   */
+  private function passwordChecklistConfiguration(&$form)
+  {
+    $form['field_password_validation_box'] = [
+      '#type' => 'details',
+      '#title' => 'Password Validation Box',
+      '#group' => 'my_account_group',
+    ];
+
+    $form['field_password_validation_box']['enable_new_password_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable New password validation'),
+      '#description' => $this->t('If we check this checkbox new password validation will be active.'),
+      '#default_value' => $this->get('enable_new_password_validation'),
+      '#translatable' => true
+    ];
+  }
 }
