@@ -25,6 +25,30 @@ class SigninForm extends WebcomposerFormBase implements WebcomposerFormInterface
      */
   public function getFields() {
     return [
+      'destination' => [
+        'name' => 'Login destination hidden field',
+        'type' => 'hidden',
+        'settings' => [
+          'label' => [
+            '#title' => 'Login destination Label',
+            '#type' => 'textfield',
+            '#description' => 'Login destination field',
+            '#default_value' => '/',
+          ],
+        ],
+      ],
+      'product' => [
+        'name' => 'Product hidden field',
+        'type' => 'hidden',
+        'settings' => [
+          'label' => [
+            '#title' => 'Login destination Label',
+            '#type' => 'textfield',
+            '#description' => 'Login destination field',
+            '#default_value' => '/',
+          ],
+        ],
+      ],
       'signin_header_text' => [
         'name' => 'Header Text',
         'type' => 'markup',
@@ -81,6 +105,16 @@ class SigninForm extends WebcomposerFormBase implements WebcomposerFormInterface
             '#type' => 'textarea',
             '#description' => 'A Markup text for Remember Username',
             '#default_value' => 'Remember Username',
+          ],
+        ],
+      ],
+      'signin_error_message' => [
+        'name' => 'Signin Error Message',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Signin Error Message',
+            '#type' => 'textarea',
           ],
         ],
       ],
