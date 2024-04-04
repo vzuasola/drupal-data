@@ -92,7 +92,9 @@ class MyAccountRateLimit extends FormBase {
       '#options' => [
         'user_mode' => $this->t('Username'),
         'ip_mode' => $this->t('IP'),
+        'phone_mode' => $this->t('Phone'),
         'user_ip_mode' => $this->t('Username & IP'),
+        'user_ip_phone_mode' => $this->t('Username & IP & Phone'),
       ],
       '#title' => t('Rate Limit Type'),
       '#description' => $this->t('Rate limit by IP/Username/IP-Username'),
@@ -116,6 +118,19 @@ class MyAccountRateLimit extends FormBase {
       '#description' => $this->t('The message to display when the rate limit is exceeded'),
       '#default_value' => $this->get('rate_limit_sms_error_message') ?? 'You have exceeded the maximum number of SMS requests. Please try again later.',
       '#translatable' => TRUE,
+    ];
+    $form['rate_limit_sms']['rate_limit_sms_block_countries_list'] = [
+        '#type' => 'textfield',
+        '#title' => t('Block SMS Verification p/Country'),
+        '#description' => $this->t('Blocks SMS number verification per country. <br>Example: "us;fr;..." or/mixed "us:+152;fr:+698;sp:+654,+652;..."'),
+        '#default_value' => $this->get('rate_limit_sms_block_countries_list') ?? '',
+    ];
+    $form['rate_limit_sms']['rate_limit_sms_block_countries_error_message'] = [
+        '#type' => 'textfield',
+        '#title' => t('Block SMS Verification p/Country Error Message'),
+        '#description' => $this->t('The message to display when the user country is in the blocked p/Country list'),
+        '#default_value' => $this->get('rate_limit_sms_block_countries_error_message') ?? 'Mobile number verification is currently not accessible for your territory.',
+        '#translatable' => TRUE,
     ];
   }
 
