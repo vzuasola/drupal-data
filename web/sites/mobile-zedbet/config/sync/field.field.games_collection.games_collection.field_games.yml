@@ -1,0 +1,29 @@
+uuid: d45e25c7-f491-42d1-a8f6-e1a4a6daadb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_collection.field_games
+    - node.type.games_arcade
+  module:
+    - games_collection
+id: games_collection.games_collection.field_games
+field_name: field_games
+entity_type: games_collection
+bundle: games_collection
+label: Games
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      games_arcade: games_arcade
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

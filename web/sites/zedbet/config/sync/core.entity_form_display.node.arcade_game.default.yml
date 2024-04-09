@@ -1,0 +1,219 @@
+uuid: e291fd07-46bb-4ced-947a-64f3e98c93b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.arcade_game.field_arc_game_categories
+    - field.field.node.arcade_game.field_external_game_id
+    - field.field.node.arcade_game.field_game_code
+    - field.field.node.arcade_game.field_game_integration
+    - field.field.node.arcade_game.field_game_meta_tags
+    - field.field.node.arcade_game.field_game_preview_mode
+    - field.field.node.arcade_game.field_game_provider
+    - field.field.node.arcade_game.field_game_ribbon
+    - field.field.node.arcade_game.field_game_subprovider
+    - field.field.node.arcade_game.field_game_thumbnail
+    - field.field.node.arcade_game.field_game_title
+    - field.field.node.arcade_game.field_right_side_block_state
+    - field.field.node.arcade_game.field_search_keywords
+    - image.style.thumbnail
+    - node.type.arcade_game
+  module:
+    - field_group
+    - image
+    - metatag
+    - path
+    - scheduler
+third_party_settings:
+  field_group:
+    group_game_thumbnail:
+      children:
+        - field_game_thumbnail
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        label: 'Game Thumbnail'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Game Thumbnail'
+    group_promotion_thumbnail_right_:
+      children:
+        - field_right_side_block_state
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Promotion Thumbnail (Right Side Block)'
+    group_game_launching:
+      children:
+        - field_game_provider
+        - field_game_subprovider
+        - field_game_code
+        - field_external_game_id
+        - field_game_integration
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Game Launching'
+id: node.arcade_game.default
+targetEntityType: node
+bundle: arcade_game
+mode: default
+content:
+  field_arc_game_categories:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_external_game_id:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_code:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_integration:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_game_meta_tags:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_game_preview_mode:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_provider:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_ribbon:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_subprovider:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail:
+    weight: 20
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_title:
+    weight: 2
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_right_side_block_state:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_search_keywords:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 20
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  translation: true
+  uid: true

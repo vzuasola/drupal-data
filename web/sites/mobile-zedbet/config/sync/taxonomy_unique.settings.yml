@@ -22,3 +22,13 @@ lobby_tab_live_dealer: 1
 lobby_tab_live_dealer_message: 'Term @term already exists in vocabulary @vocabulary.'
 product_integrations: 1
 product_integrations_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_category_arcade: 1
+games_category_arcade_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_collection_type: 1
+games_collection_type_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_filter_arcade: 1
+games_filter_arcade_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_filter: 1
+games_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_subprovider: 1
+games_subprovider_message: 'Term @term already exists in vocabulary @vocabulary.'

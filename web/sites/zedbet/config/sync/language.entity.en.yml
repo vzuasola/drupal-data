@@ -7,12 +7,12 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: site_default_language
-    webcomposer_language_custom_label: 'English (Korea)'
+    webcomposer_language_custom_label: English
     webcomposer_language_hidden: 0
 _core:
   default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
 id: en
-label: 'English (Korea)'
+label: English
 direction: ltr
 weight: -10
 locked: false

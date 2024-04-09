@@ -1,9 +1,9 @@
 unsupported_currency_configuration_form__active_tab: ''
 unsupported_currencies_title: 'Unsupported Currency'
 unsupported_currencies_message:
-  value: "<p>Sorry, your account currency is not supported by this <b>{game_provider}&nbsp;</b>game, <b>{game_name}</b>.\r\n  <br />\r\n  Please try other games.\r\n</p>"
+  value: "<p>Sorry, your account currency is not supported by this <b>{game_provider}&nbsp;</b>game, <b>{game_name}</b>.<br />\r\nPlease try other games.</p>\r\n"
   format: basic_html
 value: null
 format: null
 unsupported_currencies_button: OK
-game_provider_mapping: "voidbridge|Voidbridge\r\nasia_gaming|Asia Gaming\r\nevo_gaming|Evolution Gaming"
+game_provider_mapping: "voidbridge|Voidbridge\r\nasia_gaming|Asia Gaming\r\nevo_gaming|Evolution Gaming\r\nruby_play|Ruby Play\r\npgsoft|Pocket Games Soft"

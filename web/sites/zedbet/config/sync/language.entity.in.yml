@@ -6,8 +6,8 @@ dependencies:
     - webcomposer_language_hierarchy
 third_party_settings:
   webcomposer_language_hierarchy:
-    webcomposer_fallback_langcode: ''
-    webcomposer_language_hidden: 0
+    webcomposer_fallback_langcode: en
+    webcomposer_language_hidden: 1
     webcomposer_language_custom_label: 'English (India)'
 id: in
 label: 'English (India)'

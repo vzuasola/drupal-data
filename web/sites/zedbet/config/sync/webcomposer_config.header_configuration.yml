@@ -53,3 +53,22 @@ value: null
 format: null
 promotion_page_title: 'Promotions '
 links_title: 'quick links'
+dafacoin_balance_toggle: 0
+dafacoin_guided_tour_toggle: 0
+dafacoin_total_balance_label: 'Total Balance:'
+dafacoin_priority_switch_message: 'Switch between {currency} and Delta Platinum {currency} to prioritize usage of balance.'
+dafacoin_unsaved_changes_message: 'You have unsaved changes. Are you sure you want to close?'
+dafacoin_saved_popup_message: 'Balance settings saved'
+dafacoin_not_saved_popup_message: "Balance settings not saved\r\nPlease try again later"
+dafacoin_notification_popup_display_time: ''
+save_button_label: Save
+close_button_label: Close
+yes_button_label: 'Yes'
+no_button_label: 'No'
+wallet_header_dc_label: 'Dafa Coin (DC)'
+wallet_header_switch_label: Switch
+wallet_switch_all_label: 'Turn all wallets to Dafa Coin'
+dafacoin_enabled_currencies: INR
+per_wallet_switch: 1
+use_more_translation: 0
+more: More

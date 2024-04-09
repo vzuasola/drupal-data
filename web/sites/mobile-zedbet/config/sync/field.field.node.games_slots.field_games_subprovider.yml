@@ -1,0 +1,29 @@
+uuid: edf85fdc-c599-4268-a597-842845a3c05a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_subprovider
+    - node.type.games_slots
+    - taxonomy.vocabulary.games_subprovider
+id: node.games_slots.field_games_subprovider
+field_name: field_games_subprovider
+entity_type: node
+bundle: games_slots
+label: 'Games Subprovider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      games_subprovider: games_subprovider
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

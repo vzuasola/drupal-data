@@ -1,0 +1,22 @@
+uuid: 6a4eafc5-7d2e-4274-b2a1-9d9e0438e994
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_collection_type
+  module:
+    - text
+id: taxonomy_term.games_collection_type.default
+targetEntityType: taxonomy_term
+bundle: games_collection_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

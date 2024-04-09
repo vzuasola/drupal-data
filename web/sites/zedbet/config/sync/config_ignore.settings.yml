@@ -1,15 +1,4 @@
 ignored_config_entities:
-  0: 'webform.webform.*'
-  2: 'webcomposer_config.*'
-  4: 'system.menu.*'
-  6: 'block.*'
-  8: 'filter.*'
-  10: 'language.*'
-  12: 'devel.*'
-  14: 'views.view.*'
-  16: 'core.base_field_override.zedbet_front_block.*'
-  18: 'core.entity_form_display.zedbet_front_block.*'
-  20: core.entity_view_display.zedbet_front_block
-  22: 'registration_config.*'
+  - 'webcomposer_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

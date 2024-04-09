@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.games_ribbon.field_games_ribbon_color
     - field.field.taxonomy_term.games_ribbon.field_games_ribbon_label
-    - field.field.taxonomy_term.games_ribbon.field_ribbon_background_color
-    - field.field.taxonomy_term.games_ribbon.field_ribbon_text_color
+    - field.field.taxonomy_term.games_ribbon.field_games_text_color
     - taxonomy.vocabulary.games_ribbon
   module:
     - color_field
@@ -14,6 +14,12 @@ targetEntityType: taxonomy_term
 bundle: games_ribbon
 mode: default
 content:
+  field_games_ribbon_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_games_ribbon_label:
     weight: 1
     settings:
@@ -22,14 +28,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_ribbon_background_color:
+  field_games_text_color:
     weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_ribbon_text_color:
-    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5

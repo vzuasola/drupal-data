@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: eCJ_P_UMvyimNgpFcxTuqNTC1OoMY1--E09wIVZbGBw
 id: lobby_product_tiles.lobby_product_tiles

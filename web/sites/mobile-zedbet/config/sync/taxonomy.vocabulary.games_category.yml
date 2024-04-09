@@ -1,0 +1,9 @@
+uuid: 785da9ac-4ddb-41fe-bdfe-53e78e5fe05d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Category - Slots'
+vid: games_category
+description: 'List of Games Category for Slots'
+hierarchy: 0
+weight: 0

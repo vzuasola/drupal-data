@@ -1,0 +1,23 @@
+uuid: 27d992cf-20c7-4d45-94b6-a94f32ca4087
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_games_filter_disable
+    - taxonomy.vocabulary.games_filter
+id: taxonomy_term.games_filter.field_games_filter_disable
+field_name: field_games_filter_disable
+entity_type: taxonomy_term
+bundle: games_filter
+label: Disable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -1,13 +1,13 @@
-enable: 0
+enable: 1
 disableBonusAward: 0
-debug_display_all: 0
+debug_display_all: 1
 counter_enable: 0
-domain: 'https://pnxitct.chodeetsu.com'
+domain: 'https://pnx.dhongzhudan.com'
 retry_count: '34'
 delay_count: '500'
 expiry_delay_count: '10000'
 product_list: "Generic\r\nLive Dealer\r\nSlots\r\nArcade\r\nSportsbook"
-title: 'PUSH NOTIFICATIONS'
+title: NOTIFICATIONS
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
 copied: ''
@@ -25,12 +25,12 @@ payments_tab_empty_message:
   value: ''
   format: basic_html
 cta_button_list: "Ok\r\nAccept\r\nDecline\r\nProceed\r\nNo"
-dismiss_button_label: ''
+dismiss_button_label: DISMISS
 dismiss_content:
   value: ''
   format: basic_html
-dismiss_yes: ''
-dismiss_no: ''
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
 domains: "cashier|{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
 exclude_pages: /about
 debug_logging: 0
@@ -42,14 +42,14 @@ product_exclude_: null
 product_exclude_dismiss_: null
 cta_label_: null
 cta_actions_: null
-product_label_generic: ''
-product_type_id_generic: ''
-product_icon_generic: ''
+product_label_generic: Notifications
+product_type_id_generic: '1'
+product_icon_generic: generic
 product_exclude_generic: 0
 product_exclude_dismiss_generic: 0
-product_label_livedealer: ''
-product_type_id_livedealer: ''
-product_icon_livedealer: ''
+product_label_livedealer: 'Live Dealer'
+product_type_id_livedealer: '4'
+product_icon_livedealer: livedealer
 product_exclude_livedealer: 0
 product_exclude_dismiss_livedealer: 0
 product_label_slots: ''
@@ -67,13 +67,13 @@ product_type_id_sportsbook: ''
 product_icon_sportsbook: ''
 product_exclude_sportsbook: 0
 product_exclude_dismiss_sportsbook: 0
-cta_label_ok: ''
+cta_label_ok: OK
 cta_actions_ok: ''
-cta_label_accept: ''
+cta_label_accept: ACCEPT
 cta_actions_accept: ''
-cta_label_decline: ''
+cta_label_decline: DECLINE
 cta_actions_decline: ''
-cta_label_proceed: ''
-cta_actions_proceed: ''
-cta_label_no: ''
+cta_label_proceed: 'Yes, Proceed'
+cta_actions_proceed: 'popup::cashier'
+cta_label_no: 'No'
 cta_actions_no: ''

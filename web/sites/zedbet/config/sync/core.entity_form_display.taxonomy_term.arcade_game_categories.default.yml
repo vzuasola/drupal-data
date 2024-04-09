@@ -1,0 +1,124 @@
+uuid: 881cc47f-87f7-4daa-bc3c-efe4cdc8ecc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_category_tooltext
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_category_tooltip
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_game_category_hover
+    - field.field.taxonomy_term.arcade_game_categories.field_arcade_game_category_icon
+    - field.field.taxonomy_term.arcade_game_categories.field_game_categories_alias
+    - field.field.taxonomy_term.arcade_game_categories.field_game_categories_disable
+    - field.field.taxonomy_term.arcade_game_categories.field_game_categories_new
+    - image.style.thumbnail
+    - taxonomy.vocabulary.arcade_game_categories
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_icon:
+      children:
+        - field_arcade_game_category_icon
+        - field_arcade_game_category_hover
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Icon
+    group_tooltip:
+      children:
+        - field_arcade_category_tooltip
+        - field_arcade_category_tooltext
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Tooltip
+id: taxonomy_term.arcade_game_categories.default
+targetEntityType: taxonomy_term
+bundle: arcade_game_categories
+mode: default
+content:
+  field_arcade_category_tooltext:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_arcade_category_tooltip:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_arcade_game_category_hover:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_arcade_game_category_icon:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_categories_alias:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_categories_disable:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_categories_new:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  translation: true

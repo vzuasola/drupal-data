@@ -1,0 +1,29 @@
+uuid: 31e10917-56b3-4b77-b34a-de0d317c4943
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.games_arcade.body
+    - node.type.games_arcade
+  module:
+    - text
+    - user
+id: node.games_arcade.teaser
+targetEntityType: node
+bundle: games_arcade
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

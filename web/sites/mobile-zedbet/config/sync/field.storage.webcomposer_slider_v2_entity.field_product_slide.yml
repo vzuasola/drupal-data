@@ -17,6 +17,12 @@ settings:
     -
       value: live-dealer
       label: 'Live Dealer'
+    -
+      value: arcade
+      label: Arcade
+    -
+      value: slots
+      label: Slots
   allowed_values_function: ''
 module: options
 locked: false

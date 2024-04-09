@@ -43,6 +43,7 @@ class ZipangNewSigninAndSignupForm extends FormBase {
     $this->sectionSigninAndSignup($form);
     $this->sectionBannerConfig($form);
     $this->sectionSuccessPageConfig($form);
+    $this->sectionSignupDataConfig($form);
 
     return $form;
   }
@@ -173,6 +174,98 @@ class ZipangNewSigninAndSignupForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Alternative text'),
       '#default_value' => $this->get('mobile_banner_alt_text_en'),
+    ];
+  }
+
+  private function sectionSignupDataConfig(array &$form) {
+    $form['signup_data_config'] = [
+      '#type' => 'details',
+      '#title' => t('SignUp Default Data Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['signup_data_config']['signup_firstname_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('First Name Default Value'),
+      '#default_value' => $this->get('signup_firstname_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_lastname_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Last Name Default Value'),
+      '#default_value' => $this->get('signup_lastname_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_gender_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Gender Default Value'),
+      '#default_value' => $this->get('signup_gender_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_day_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Birth Day Default Value'),
+      '#default_value' => $this->get('signup_day_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_month_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Birth Month Default Value'),
+      '#default_value' => $this->get('signup_month_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_year_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Birth Year Default Value'),
+      '#default_value' => $this->get('signup_year_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_phonenum_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Phone Number Default Value'),
+      '#default_value' => $this->get('signup_phonenum_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_country_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Country Default Value'),
+      '#default_value' => $this->get('signup_country_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_zip_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Zip/Postal Code Default Value'),
+      '#default_value' => $this->get('signup_zip_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_state_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('State/Province Default Value'),
+      '#default_value' => $this->get('signup_state_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_city_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Town/City Default Value'),
+      '#default_value' => $this->get('signup_city_default_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['signup_data_config']['signup_housenum_default_value'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('House Name/Number Default Value'),
+      '#default_value' => $this->get('signup_housenum_default_value'),
+      '#translatable' => TRUE,
     ];
   }
 

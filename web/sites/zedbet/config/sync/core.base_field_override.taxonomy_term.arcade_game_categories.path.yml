@@ -1,0 +1,20 @@
+uuid: f252ea94-2355-493e-bd60-12086287ec4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.arcade_game_categories
+  module:
+    - path
+id: taxonomy_term.arcade_game_categories.path
+field_name: path
+entity_type: taxonomy_term
+bundle: arcade_game_categories
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

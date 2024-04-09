@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: DZ_w_CMTrghVruMACjWGUb6FLqoG2VNkJS3cWfgQetU
 id: mobile_product_menu.mobile_product_menu

@@ -1,0 +1,19 @@
+uuid: 0155e7cf-9283-4b53-a9cf-061502b89cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_title
+    - node.type.arcade_game
+id: node.arcade_game.field_game_title
+field_name: field_game_title
+entity_type: node
+bundle: arcade_game
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
