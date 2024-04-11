@@ -332,6 +332,20 @@ class LuckyBabyCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['inner_breadcrumb']['arcade_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Arcade'),
+      '#default_value' => $this->get('arcade_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['live_games_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Games'),
+      '#default_value' => $this->get('live_games_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
     $form['inner_breadcrumb']['promotions_breadcrumb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotion'),
