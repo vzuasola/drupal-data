@@ -11,7 +11,7 @@ notification_content:
   value: "<p>หมดเวลาการใช้งานของคุณ เนื่องจากไม่มีการใช้งาน</p>\r\n"
 mobile_login_button_label: เข้าสู่ระบบ/สมัคร
 mobile_cant_login_url: ''
-username_placeholder: Username
+username_placeholder: ยูสเซอร์เนม
 password_placeholder: รหัสผ่าน
 login_bottom_label: เข้าสู่ระบบ
 error_message_blank_username: กรุณากรอกยูสเซอร์เนม

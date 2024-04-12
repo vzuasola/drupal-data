@@ -1,0 +1,8 @@
+uuid: 7e18b418-a8eb-454e-9625-d098526b76e0
+langcode: ko
+status: true
+dependencies: {  }
+id: account-main-navigation-kr
+label: 'Account Main Navigation KR'
+description: 'Account Main Navigation KR'
+locked: false

@@ -1,0 +1,23 @@
+reg_api_url: 'https://m.zedbet.com/v3'
+step_one_text: '계정 개설'
+home_title: 'Start betting today with Zedbet! Sign up now!'
+success_title: '가입 성공'
+native_app_title: '계정 개설'
+general_settings_tab__active_tab: edit-new-password-configuration
+jpay_api: "ITCT|http://nb-tct.jpaysystem.com/api/cashier/\r\nISTG|http://nb-stg.jpaysystem.com/api/cashier/\r\nPRD|http://cms-jpayws.games.prd/api/cashier/"
+jpay_siteid: '301'
+generic_error_message: '계정 등록에 실패했습니다. 도움이 필요하시면  <a href="mailto:supportkr@zedbet.com">고객지원팀</a>에 문의하십시오. (i-1000)'
+unauthenticated_error_message: 'We are unable to authenticate you on Zedbet as it seems your account has been logged out. Please login to your account.'
+forbidden_request_error_message: '금지된 요청입니다.'
+portal_id_to_product_name_mapping: "3|OW Sports|sports\r\n28|OW Sports|sports\r\n130|OW Sports|sports\r\n106|OW Sports|sports\r\n10|OW Sports|sports\r\n47|OW Sports|sports\r\n140|OW Sports|sports\r\n112|OW Sports|sports\r\n22|Dafa Sports|sports-df\r\n26|Dafa Sports|sports-df\r\n29|Dafa Sports|sports-df\r\n48|Dafa Sports|sports-df\r\n131|Dafa Sports|sports-df\r\n123|Dafa Sports|sports-df\r\n4|Casino|casino\r\n11|Casino|casino\r\n16|Casino|casino\r\n18|Casino|casino\r\n30|Casino|casino\r\n49|Casino|casino\r\n23|Casino|casino\r\n132|Casino|casino\r\n107|Casino|casino\r\n159|Casino|casino\r\n119|Casino|casino\r\n19|Casino Gold|casino-gold\r\n20|Casino Gold|casino-gold\r\n21|Casino Gold|casino-gold\r\n35|Casino Gold|casino-gold\r\n54|Casino Gold|casino-gold\r\n137|Casino Gold|casino-gold\r\n120|Casino Gold|casino-gold\r\n6|Live Dealer|live-dealer\r\n33|Live Dealer|live-dealer\r\n135|Live Dealer|live-dealer\r\n109|Live Dealer|live-dealer\r\n15|Live Dealer|live-dealer\r\n52|Live Dealer|live-dealer\r\n145|Live Dealer|live-dealer\r\n116|Live Dealer|live-dealer\r\n5|Poker|poker\r\n12|Poker|poker\r\n17|Poker|poker\r\n31|Poker|poker\r\n50|Poker|poker\r\n133|Poker|poker\r\n108|Poker|poker\r\n24|Arcade|fish-hunter\r\n25|Arcade|fish-hunter\r\n34|Arcade|fish-hunter\r\n53|Arcade|fish-hunter\r\n136|Arcade|fish-hunter\r\n125|Arcade|fish-hunter\r\n8|Games|games\r\n14|Games|games\r\n32|Games|games\r\n51|Games|games\r\n134|Games|games\r\n110|Games|games\r\n56|Virtuals|virtuals\r\n57|Virtuals|virtuals\r\n58|Virtuals|virtuals\r\n59|Virtuals|virtuals\r\n151|Virtuals|virtuals\r\n149|Virtuals|virtuals\r\n55|Lottery|keno\r\n45|Lottery|keno\r\n60|Lottery|keno\r\n61|Lottery|keno\r\n138|Lottery|keno\r\n148|Lottery|keno\r\n66|Exchange|exchange\r\n67|Exchange|exchange\r\n68|Exchange|exchange\r\n69|Exchange|exchange\r\n157|Exchange|exchange\r\n155|Exchange|exchange\r\n167|Soda Casino|soda\r\n168|Soda Casino|soda\r\n169|Soda Casino|soda\r\n170|Soda Casino|soda\r\n171|Soda Casino|soda\r\n172|Soda Casino|soda\r\n286|Live Dealer|live-dealer\r\n289|Entry|entry\r\n288|Dafa Sports|sports-df"
+country_restriction_message: '[product] is not available in your region'
+mbtc_restriction_message: 'Bitcoin currency is only available in Zedbet.'
+text_over_banner_mobile:
+  value: ''
+  format: basic_html
+min_max_length: '비밀번호 길이: 최소 10자 - 최대 15자'
+one_uppercase_letter: '최소 1자의 영문 대문자를 사용해 주세요.'
+one_lowercase_letter: '최소 1자의 영문 소문자를 사용해 주세요.'
+number_symbol: '최소 1자의 숫자를 사용해 주세요.'
+username_password_value: '아이디 혹은 일반적으로 사용되는 비밀번호가 아니어야 합니다.'
+enable_new_password_validation: 1

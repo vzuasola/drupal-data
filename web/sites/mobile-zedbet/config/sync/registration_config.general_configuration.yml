@@ -28,5 +28,5 @@ min_max_length: 'Password Length: Min. 10 - Max. 15'
 one_uppercase_letter: 'Must contain at least 1 uppercase letter'
 one_lowercase_letter: 'Must contain at least 1 lowercase letter'
 number_symbol: 'Must contain at least 1 number'
-username_password_value: 'Must not be your username or other dictionary word.'
-enable_new_password_validation: 0
+username_password_value: 'Must not be your username or another commonly used password.'
+enable_new_password_validation: 1

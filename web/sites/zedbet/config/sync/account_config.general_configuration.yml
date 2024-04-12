@@ -1,4 +1,4 @@
-change_password__active_tab: edit-field-success-message-group
+change_password__active_tab: edit-field-password-validation-box
 cp_page_title: 'Change Password'
 integration_error: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nCHANGE_PASSWORD_FAILED|There was an error changing your password.  Please try again or you may contact us: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> Live Chat </a> (Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|Your password has been successfully changed."
 change_password_mobile_success_message: 'Your password has been successfully changed.'
@@ -36,3 +36,11 @@ verification_code_required_message: 'This is a required field.'
 verification_code_numeric_message: 'Field should be numeric.'
 verification_code_min_length_message: 'Please enter at least 6 characters.'
 verification_code_max_length_message: 'Please enter no more than 6 characters.'
+min_max_length: 'Password Length: Min. 10 - Max. 15'
+one_uppercase_letter: 'Must contain at least 1 uppercase letter'
+one_lowercase_letter: 'Must contain at least 1 lowercase letter'
+number_symbol: 'Must contain at least 1 number'
+username_password_value: 'Must not be your username or another commonly used password.'
+not_same_as_old_password: 'Must not be the same as current password'
+new_and_confirm_must_match: 'New and Confirm Passwords must match'
+enable_new_password_validation: 1

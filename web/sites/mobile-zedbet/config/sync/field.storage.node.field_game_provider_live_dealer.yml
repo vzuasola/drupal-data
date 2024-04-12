@@ -15,6 +15,9 @@ settings:
       value: skywind
       label: Skywind
     -
+      value: jsystem
+      label: JSystem
+    -
       value: voidbridge
       label: Voidbridge
     -

@@ -56,4 +56,6 @@ content:
     third_party_settings: {  }
 hidden:
   description: true
+  field_ribbon_background_color: true
+  field_ribbon_text_color: true
   path: true
