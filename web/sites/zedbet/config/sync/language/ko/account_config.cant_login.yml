@@ -1,0 +1,25 @@
+my_account_group__active_tab: edit-cant-login-general-config
+cant_login_title: 'Zedbet 계정에 로그인 할 수 없나요?'
+reset_title: '비밀번호 재설정 요청'
+cant_login_response_mapping: "INTERNAL_ERROR|내부 서버 에러\r\nFORGOT_PASSWORD_SUCCESS|비밀번호 찾기 성공\r\nFORGOT_PASSWORD_FAILED|유효하지 않은 아이디/이메일\r\nFORGOT_USERNAME_SUCCESS|아이디 찾기 성공\r\nFORGOT_USERNAME_FAILED|유효하지 않은 이메일\r\nCHANGE_FORGOTTEN_PASSWORD_SUCCESS|비밀번호 초기화 성공\r\nCHANGE_FORGOTTEN_PASSWORD_FAILED|비밀번호 초기화 실패"
+forgot_password_tab_menu: '비밀번호를 잊으셨나요? '
+forgot_password_success_message:
+  value: "<h3 class=\"text-blue text-semibold\"><span class=\"icon-success\">&nbsp;</span> <font size=\"5\">비밀번호 재설정 요청 전송</font></h3>\r\n\r\n<p>가입시 등록하신 이메일 주소로 이메일을 보냈습니다.</p>\r\n\r\n<p>24시간 이내로 비밀번호를 재설정 해주시기 바랍니다.</p>\r\n\r\n<p>문의사항이 있으시다면, 일반문의 전용 <a href=\"linkto:avaya\">라이브채팅</a> 으로 연락주시기 바랍니다.</p>\r\n\r\n<p><strong><a class=\"btn btn-gray btn-small\" href=\"#\">창 닫기</a></strong></p>\r\n"
+  format: basic_html
+forgot_username_tab_menu: '아이디를 잊으셨나요?'
+forgot_username_success_message:
+  value: "<h3 class=\"text-blue text-semibold\"><span class=\"icon-success\">&nbsp;</span>아이디 찾기 요청 이메일 전송</h3>\r\n\r\n<p>가입시 등록하신 이메일 주소로 이메일을 보냈습니다.</p>\r\n\r\n<p>등록하신 Zedbet 아이디를 이메일에서 확인하시기 바랍니다.</p>\r\n\r\n<p>문의사항이 있으시다면, 일반문의 전용 <a href=\"linkto:avaya\">라이브채팅</a>으로 연락주시기 바랍니다.</p>\r\n\r\n<p><a class=\"btn btn-gray btn-small\" href=\"#\">창 닫기</a></p>\r\n"
+  format: basic_html
+reset_password_success_message:
+  value: "<h2 class=\"text-center text-semibold text-blue text-20\"><span class=\"icon-success\">&nbsp;</span>비밀번호 초기화 성공</h2>\r\n\r\n<p>패스워드가 성공적으로 재설정 되었습니다.</p>\r\n\r\n<div class=\"blurb blurb-bottom\">\r\n<p>문의가 있으신 경우 <a href=\"linkto:avaya\"> 고객 지원팀 </a>으로 연락주시기 바랍니다.</p>\r\n</div>\r\n\r\n<div>\r\n<p><a class=\"btn btn-gray btn-small\" href=\"{domain:zedbet}/{domain:lang_token}/entry[query:({tracking})]\" target=\"_blank\">홈페이지로 돌아가기</a></p>\r\n</div>\r\n"
+  format: basic_html
+reset_expired_message:
+  value: "<p class=\"text-align-center\"><svg class=\"exclamation-icon mb-5\" viewbox=\"0 0 47.49 47.49\"> <use xlink:href=\"#exclamation-icon\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> </use> </svg></p>\r\n\r\n<h3 class=\"text-semibold text-align-center\">재설정 링크가 유효하지 않음</h3>\r\n\r\n<p class=\"text-align-center\">죄송합니다, 접속하시려는 링크가 유효하지 않습니다.</p>\r\n\r\n<p class=\"text-align-center\">비밀번호 재설정을 다시 요청하셔서 비밀번호 변경을 시도해주십시오. 아래의 버튼을 클릭하세요.</p>\r\n\r\n<p class=\"text-align-center mt-20 mb-20\"><a class=\"btn btn-zedbet-red btn-small\" data-popup=\"true\" data-popup-height=\"810\" data-popup-position=\"center\" data-popup-width=\"820\" href=\"/{lang}/cant-login?regvia=285[query:({tracking})]\" target=\"_blank\">로그인이 안 되시나요?</a></p>\r\n\r\n<div class=\"contact-info-blurb\">\r\n<p class=\"text-align-center\">문의가 있으신 경우 저희 <a href=\"linkto:avaya\">고객 센터</a> 로 연락해 주세요.</p>\r\n</div>\r\n"
+  format: basic_html
+min_max_length: '비밀번호 길이: 최소 10자 - 최대 15자'
+one_uppercase_letter: '최소 1자의 영문 대문자를 사용해 주세요.'
+one_lowercase_letter: '최소 1자의 영문 소문자를 사용해 주세요.'
+number_symbol: '최소 1자의 숫자를 사용해 주세요.'
+username_password_value: '일반적으로 사용되는 비밀번호가 아니어야 합니다.'
+new_and_confirm_must_match: '새 비밀번호와 비밀번호 확인이 일치해야 합니다.'
+enable_new_password_validation: 1

@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.games_live_dealer.field_game_subprovider
     - field.field.node.games_live_dealer.field_game_title
     - field.field.node.games_live_dealer.field_image_size
+    - field.field.node.games_live_dealer.field_launcher_type
     - field.field.node.games_live_dealer.field_maintenance_blurb
     - field.field.node.games_live_dealer.field_maintenance_end
     - field.field.node.games_live_dealer.field_maintenance_start
@@ -106,6 +107,13 @@ content:
     region: content
   field_image_size:
     weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_launcher_type:
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
