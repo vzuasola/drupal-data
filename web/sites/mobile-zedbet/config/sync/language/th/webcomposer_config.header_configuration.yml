@@ -34,6 +34,21 @@ links_title: ลิงค์ด่วน
 mobile_slot_title: 'เล่นสล็อตคาสิโนบนมือถือที่ Zedbet โมบาย!'
 mobile_live_dealer_title: 'Zedbet มอบประสบการณ์คาสิโนดีลเลอร์สดระดับโลก!'
 mobile_arcade_title: 'Zedbet นำเสนอเกมอาเขตบนมือถือที่หลากหลาย!'
+dafacoin_total_balance_label: 'Total Balance:'
+dafacoin_priority_switch_message: 'Switch between {currency} and Delta Platinum {currency} to prioritize usage of balance.'
+dafacoin_unsaved_changes_message: 'You have unsaved changes. Are you sure you want to close?'
+dafacoin_saved_popup_message: 'Balance settings saved'
+dafacoin_not_saved_popup_message: 'Balance settings are not saved. Please try again later.'
+save_button_label: Save
+close_button_label: Close
+yes_button_label: 'Yes'
+no_button_label: 'No'
+wallet_header_dc_label: 'Delta Platinum {currency} (DP{currency}) '
+wallet_header_switch_label: Switch
+wallet_switch_all_label: 'Turn on all wallets to Delta Platinum {currency}'
+dafacoin_enabled_currencies: INR
+use_more_translation: 0
+more: More
 join_now_text: สมัครสมาชิก
 join_now_link: '{domain:registration_link}[query:(regvia=191&{tracking})]'
 login_issue_text: เข้าสู่ระบบไม่ได้
@@ -50,19 +65,3 @@ profile_logout_text: ออกจากระบบ
 balance_label_mapping: "5|คาสิโน\r\n16|กีฬา"
 balance_mapping: "5|คาสิโน\r\n16|กีฬา"
 cashier_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
-dafacoin_total_balance_label: 'Total Balance:'
-dafacoin_priority_switch_message: 'Switch between {currency} and Delta Platinum {currency} to prioritize usage of balance.'
-dafacoin_unsaved_changes_message: 'You have unsaved changes. Are you sure you want to close?'
-dafacoin_saved_popup_message: 'Balance settings saved'
-dafacoin_not_saved_popup_message: 'Balance settings are not saved. Please try again later.'
-save_button_label: Save
-close_button_label: Close
-yes_button_label: 'Yes'
-no_button_label: 'No'
-wallet_header_dc_label: 'Delta Platinum {currency} (DP{currency}) '
-wallet_header_switch_label: Switch
-wallet_switch_all_label: 'Turn on all wallets to Delta Platinum {currency}'
-dafacoin_enabled_currencies: INR
-balance_error_text_product: N/A
-use_more_translation: 0
-more: More

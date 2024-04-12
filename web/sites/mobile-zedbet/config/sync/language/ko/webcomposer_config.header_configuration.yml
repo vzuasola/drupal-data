@@ -5,17 +5,9 @@ mobile_logo_url: ''
 logo_title_slots: '모바일 슬롯'
 logo_title_live_dealer: '모바일 라이브 딜러'
 logo_title_arcade: '모바일 아케이드'
-join_now_text: 가입하기
 registration_link: '{domain:registration_link}[query:(regvia=289&{tracking})]'
 registration_link_mobile: ''
-join_now_link: '{domain:registration_link}[query:(regvia=191&{tracking})]'
 capslock_notification: '캡스락 키 켜짐'
-login_issue_text: '로그인이 안 되시나요?'
-login_issue_link: '{domain:entry}/cant-login'
-profile_logout_text: 로그아웃
-cashier_icon_hover_text: 캐쉬어
-profile_icon_hover_text: '내 프로필'
-cashier_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
 mobile_remember: '아이디 기억하기'
 mobile_login_reg: 로그인/가입
 login_join_now_text: 로그인/가입
@@ -37,19 +29,11 @@ wallet_header_dc_label: 'Delta Platinum {currency} (DP{currency}) '
 wallet_header_switch_label: Switch
 wallet_switch_all_label: 'Turn on all wallets to Delta Platinum {currency}'
 dafacoin_enabled_currencies: INR
-total_balance_label: '전체 잔액:'
-balance_mapping: "5|카지노\r\n16|Zedbet 스포츠북"
 balance_label_override: ''
-balance_error_text: '검색하는 중 오류가 발생했습니다.'
-balance_error_text_product: N/A
 dcoin_priority_fetch_error: 'Error fetching priority'
-balance_label_mapping: "5|카지노\r\n16|Zedbet 스포츠북"
 currency_balance_mapping: "5|THB,TUS,KRW\r\n6|THB,TUS,KRW"
 excluded_balance_mapping: ''
 currency_label_mapping: ''
-product_menu_new_tag: 신규
-welcome_text: '{username}'
-profile_link: '/my-account[query:({tracking})]'
 critical_announcement: 0
 critical_announcement_content:
   value: "<p>This is a critical announcement test test test</p>\r\n"
@@ -66,3 +50,19 @@ links_title: 바로가기
 mobile_slot_title: 'Zedbet 모바일에서 모바일 카지노 슬롯을 플레이해보세요!'
 mobile_live_dealer_title: '세계적 수준의 라이브 딜러 카지노 경험을 제공하는 Zedbet!'
 mobile_arcade_title: 'Zedbet은 다양한 모바일 아케이드 게임을 제공합니다!'
+join_now_text: 가입하기
+join_now_link: '{domain:registration_link}[query:(regvia=191&{tracking})]'
+login_issue_text: '로그인이 안 되시나요?'
+login_issue_link: '{domain:entry}/cant-login'
+product_balance_label: Balance
+total_balance_label: '전체 잔액:'
+balance_error_text: '검색하는 중 오류가 발생했습니다.'
+profile_icon_hover_text: '내 프로필'
+cashier_icon_hover_text: 캐쉬어
+product_menu_new_tag: 신규
+welcome_text: '{username}'
+profile_link: '/my-account[query:({tracking})]'
+profile_logout_text: 로그아웃
+balance_label_mapping: "5|카지노\r\n16|Zedbet 스포츠북"
+balance_mapping: "5|카지노\r\n16|Zedbet 스포츠북"
+cashier_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
