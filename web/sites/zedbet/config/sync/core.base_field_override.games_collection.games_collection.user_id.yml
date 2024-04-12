@@ -11,7 +11,7 @@ bundle: games_collection
 label: 'Authored by'
 description: 'The user ID of author of the Games Collection entity.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_game_thumbnail
     - node.type.game
   module:
+    - content_translation
     - image
 third_party_settings:
   content_translation:
