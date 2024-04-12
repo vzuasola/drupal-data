@@ -1,4 +1,4 @@
-base_url: 'https://www.cs-livechat.com/ccaas/v1/en/zedbet'
+base_url: 'https://www.cs-livechat.com/ccaas/v2/en/zedbet'
 url_post: 'https://www.cs-livechat.com/s/jwt'
 url_post_timout: '5000'
 jwt_key: secret-jwt-key
@@ -6,3 +6,4 @@ validity_time: '1800'
 xdomain_proxy: 'https://www.cs-livechat.com'
 avaya__active_tab: edit-field-configuration
 livechat_text: ''
+web_rtc_url: ''

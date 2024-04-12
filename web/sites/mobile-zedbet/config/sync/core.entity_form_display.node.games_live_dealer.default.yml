@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.games_live_dealer.field_game_platform_live_dealer
     - field.field.node.games_live_dealer.field_game_provider_live_dealer
     - field.field.node.games_live_dealer.field_game_ribbon_live_dealer
+    - field.field.node.games_live_dealer.field_launcher_type
     - field.field.node.games_live_dealer.field_lobby_tab_ld
     - field.field.node.games_live_dealer.field_preview_mode_ld
     - field.field.node.games_live_dealer.field_provider_logo_ld
@@ -17,9 +18,9 @@ dependencies:
     - node.type.games_live_dealer
   module:
     - field_group
-    - image
     - path
     - scheduler
+    - svg_image
 third_party_settings:
   field_group:
     group_game_thumbnail_settings_id:
@@ -90,6 +91,12 @@ content:
     region: content
   field_game_ribbon_live_dealer:
     weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_launcher_type:
+    weight: 129
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -1,5 +1,8 @@
 ignored_config_entities:
   0: mobile_als.als_configuration
-  2: webcomposer_config.icore_games_integration
+  2: 'webcomposer_config.*'
+  4: 'webcomposer_form_manager.*'
+  6: 'account_config.*'
+  8: 'registration_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

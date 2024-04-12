@@ -1,0 +1,8 @@
+uuid: 28012552-b649-48ce-8c15-37408feb473c
+langcode: ko
+status: true
+dependencies: {  }
+id: mobile-footer-kr
+label: 'Mobile Footer KR'
+description: ''
+locked: false
