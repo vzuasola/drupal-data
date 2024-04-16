@@ -132,7 +132,7 @@ class ProfileForm extends WebcomposerFormBase implements WebcomposerFormInterfac
       ],
 
       'birth_year' => [
-        'name' => 'Birth Year',
+        'name' => 'Birthdate',
         'type' => 'select',
         'settings' => [
             'label' => [
@@ -216,7 +216,7 @@ class ProfileForm extends WebcomposerFormBase implements WebcomposerFormInterfac
       
       'verify_email' => [
           'name' => 'verify_email',
-          'type' => 'submit',
+          'type' => 'button',
           'settings' => [
               'label' => [
                   '#title' => 'Verify',
@@ -285,7 +285,7 @@ class ProfileForm extends WebcomposerFormBase implements WebcomposerFormInterfac
         ],
       ],
 
-      'mobile_number_1' => [
+      'mobile' => [
         'name' => 'Mobile Number',
         'type' => 'textfield',
         'settings' => [
@@ -294,33 +294,12 @@ class ProfileForm extends WebcomposerFormBase implements WebcomposerFormInterfac
             '#type' => 'textfield',
             '#description' => 'The label for the Mobile Number field',
           ],
-          'placeholder' => [
-            '#title' => 'Mobile Number placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for Mobile number field placeholder',
-          ],
-          'annotation' => [
-            '#title' => 'Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-          'tooltip-content' => [
-            '#title' => 'Tooltip text',
-            '#type' => 'textarea',
-            '#description' => 'Tooltip text that will be displayed on focus of info icon',
-          ],
-          'country_area_code_validation' => [
-            '#title' => 'Country Area Code Custom Validation',
-            '#type' => 'textarea',
-            '#description' => 'List of country codes that will be validated upon submission in which it had' .
-            ' different min and max character allowed per country code and custom message validation for it',
-          ],
         ],
       ],
 
       'verify_mobile' => [
         'name' => 'verify_mobile',
-        'type' => 'submit',
+        'type' => 'button',
         'settings' => [
           'label' => [
             '#title' => 'Verify',
@@ -454,6 +433,32 @@ class ProfileForm extends WebcomposerFormBase implements WebcomposerFormInterfac
             '#title' => 'Coupon Code Label',
             '#type' => 'textfield',
             '#description' => 'The label for the Coupon Code field',
+          ],
+        ],
+      ],
+
+      'redeem_coupon' => [
+          'name' => 'Redeem Coupon',
+          'type' => 'button',
+          'settings' => [
+              'label' => [
+                  '#title' => 'Redeem',
+                  '#type' => 'textfield',
+                  '#description' => 'Label for the Redeem',
+                  '#default_value' => 'Redeem',
+              ],
+          ],
+      ],
+
+      'updates_markup' => [
+        'name' => 'Updates Markup',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Review Update details for with Horizontal Line Markup',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text my profile form',
+            '#default_value' => 'Receive Updates<hr>',
           ],
         ],
       ],
