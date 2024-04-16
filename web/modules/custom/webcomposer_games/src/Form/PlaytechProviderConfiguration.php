@@ -196,7 +196,7 @@ class PlaytechProviderConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Error Handling'),
       '#description' => $this->t('Define error messages for corresponding UGL error codes<br/>
-          pattern: <strong>code|message|button</strong><br/>'),
+          pattern: <strong>code|message|button|header</strong><br/>'),
       '#default_value' => $this->get('ugl_errors'),
       '#required' => false,
       '#translatable' => true
