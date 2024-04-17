@@ -18,15 +18,6 @@ settings:
       value: voidbridge
       label: Voidbridge
     -
-      value: cq9
-      label: CQ9
-    -
-      value: micro_gaming
-      label: Microgaming
-    -
-      value: solid_gaming
-      label: 'Solid Gaming'
-    -
       value: pgsoft
       label: PGSoft
     -
