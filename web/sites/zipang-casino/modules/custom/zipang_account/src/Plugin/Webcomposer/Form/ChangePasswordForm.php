@@ -9,7 +9,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  * ChangePasswordForm
  *
  * @WebcomposerForm(
- *   id = "japan_change_password_form",
+ *   id = "change_password_form",
  *   name = "Change Password Form",
  * )
  */
