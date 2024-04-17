@@ -2,8 +2,13 @@ uuid: ff04111f-4199-46b3-a58b-86740e04a832
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_game_provider
+    - taxonomy.vocabulary.games_subprovider
   module:
     - node
+    - options
+    - taxonomy
     - user
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
@@ -242,6 +247,68 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
+        field_game_provider:
+          id: field_game_provider
+          table: node__field_game_provider
+          field: field_game_provider
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Provider'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         name:
           id: name
           table: users_field_data
@@ -437,6 +504,134 @@ display:
           plugin_id: bundle
           entity_type: node
           entity_field: type
+        field_game_provider_value:
+          id: field_game_provider_value
+          table: node__field_game_provider
+          field: field_game_provider_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_provider_value_op
+            label: 'Game Provider'
+            description: ''
+            use_operator: false
+            operator: field_game_provider_value_op
+            identifier: field_game_provider_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_game_provider_live_dealer_value:
+          id: field_game_provider_live_dealer_value
+          table: node__field_game_provider_live_dealer
+          field: field_game_provider_live_dealer_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_game_provider_live_dealer_value_op
+            label: 'Game Provider LD'
+            description: ''
+            use_operator: false
+            operator: field_game_provider_live_dealer_value_op
+            identifier: field_game_provider_live_dealer_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_games_subprovider_target_id:
+          id: field_games_subprovider_target_id
+          table: node__field_games_subprovider
+          field: field_games_subprovider_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_games_subprovider_target_id_op
+            label: 'Games Subprovider'
+            description: ''
+            use_operator: false
+            operator: field_games_subprovider_target_id_op
+            identifier: field_games_subprovider_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: games_subprovider
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
         status:
           id: status
           table: node_field_data
@@ -573,7 +768,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_game_provider'
   page_1:
     display_options:
       path: admin/content/node
@@ -605,4 +801,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_game_provider'

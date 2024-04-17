@@ -21,9 +21,6 @@ settings:
       value: voidbridge
       label: Voidbridge
     -
-      value: playtech
-      label: Playtech
-    -
       value: evo_gaming
       label: 'Evolution Gaming'
     -
@@ -32,15 +29,6 @@ settings:
     -
       value: sa_gaming
       label: 'SA Gaming'
-    -
-      value: micro_gaming
-      label: Microgaming
-    -
-      value: cq9
-      label: CQ9
-    -
-      value: ptplus
-      label: PTPlus
   allowed_values_function: ''
 module: options
 locked: false
