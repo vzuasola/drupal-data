@@ -39,6 +39,7 @@ class ZipangMyAccountConfigForm extends FormBase {
     ];
 
     $this->sectionPageSetting($form);
+    $this->sectionChangePassword($form);
 
     return $form;
   }
@@ -318,6 +319,24 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Modal Button Label'),
       '#default_value' => $this->get('modal_button_label') ?? "OK",
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionChangePassword(array &$form) {
+    $form['change_pass'] = [
+      '#type' => 'details',
+      '#title' => t('Change Password'),
+      '#group' => 'advanced',
+    ];
+
+    $form['change_pass']['change_pass_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Page Header Title'),
+      '#default_value' => $this->get('change_pass_title') ?? "Change Password",
       '#translatable' => TRUE,
     ];
   }
