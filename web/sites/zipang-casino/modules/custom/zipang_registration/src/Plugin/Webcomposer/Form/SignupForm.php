@@ -100,7 +100,7 @@ class SignupForm extends WebcomposerFormBase implements WebcomposerFormInterface
             '#title' => 'Terms Condition Text',
             '#type' => 'textarea',
             '#description' => 'A Forgot Password Link on Sign in',
-            '#default_value' => '<div class="fieldset-wrapper text-center display-text">I am atlease 18 years old and have read and accepted the Terms and Condition</div>',
+            '#default_value' => '<div class="fieldset-wrapper text-center display-text">I am at least 18 years old and have read and accepted the Terms and Condition</div>',
           ],
         ],
       ],
