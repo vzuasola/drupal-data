@@ -49,4 +49,6 @@ content:
     type: color_field_formatter_text
     region: content
 hidden:
+  field_ribbon_background_color: true
+  field_ribbon_text_color: true
   langcode: true

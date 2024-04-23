@@ -226,6 +226,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'e.g.(34,35,37,38) The first two numbers must be states code.',
           ],
+          'additional_country_code_validation_list' => [
+            '#title' => 'Additional Custom Validation for list Country Code',
+            '#type' => 'textarea',
+            '#description' => 'e.g.(62|8|error message) Area code that will be validated.',
+          ],
         ],
       ],
 

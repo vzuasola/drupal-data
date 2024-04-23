@@ -11,36 +11,7 @@ dependencies:
     - field.field.games_collection.games_collection.field_type
   module:
     - conditional_fields
-    - field_group
     - games_collection
-third_party_settings:
-  field_group:
-    group_slots:
-      children:
-        - field_game_category
-        - field_games_slots
-      parent_name: ''
-      weight: 20
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: false
-      label: Slots
-    group_arcade:
-      children:
-        - field_category_arcade
-        - field_games_arcade
-      parent_name: ''
-      weight: 20
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: false
-      label: Arcade
 id: games_collection.games_collection.default
 targetEntityType: games_collection
 bundle: games_collection
@@ -50,14 +21,56 @@ content:
     weight: 6
     settings: {  }
     third_party_settings:
-      conditional_fields: {  }
+      conditional_fields:
+        7910aa58-bdd5-4359-a137-f710ecd127b4:
+          dependee: field_product
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '63'
+            effect: fade
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: games_collection
+          bundle: games_collection
     type: options_select
     region: content
   field_game_category:
     weight: 4
     settings: {  }
     third_party_settings:
-      conditional_fields: {  }
+      conditional_fields:
+        3c624979-9f32-4a3a-8c5d-a0af0aa885cd:
+          dependee: field_product
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '62'
+            effect: fade
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: games_collection
+          bundle: games_collection
     type: options_select
     region: content
   field_games_arcade:
@@ -67,7 +80,28 @@ content:
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields: {  }
+      conditional_fields:
+        1f46d12a-c656-455e-a8a4-77fd6a3aa11e:
+          dependee: field_product
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '63'
+            effect: fade
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: games_collection
+          bundle: games_collection
     type: entity_reference_autocomplete
     region: content
   field_games_slots:
@@ -77,7 +111,28 @@ content:
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields: {  }
+      conditional_fields:
+        b01b4a84-7929-4970-ab1b-13c23179f2d7:
+          dependee: field_product
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '62'
+            effect: fade
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: games_collection
+          bundle: games_collection
     type: entity_reference_autocomplete
     region: content
   field_product:

@@ -191,5 +191,15 @@ class PlaytechProviderConfiguration extends FormBase {
       '#default_value' => $this->get('ugl_parameters'),
       '#required' => false,
     ];
+
+    $form['ugl_errors'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Error Handling'),
+      '#description' => $this->t('Define error messages for corresponding UGL error codes<br/>
+          pattern: <strong>code|message|button|header</strong><br/>'),
+      '#default_value' => $this->get('ugl_errors'),
+      '#required' => false,
+      '#translatable' => true
+    ];
   }
 }

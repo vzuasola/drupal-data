@@ -1,0 +1,8 @@
+uuid: 2d4f5c45-d533-4aa5-9cff-44bed7e9e33a
+langcode: en
+status: true
+dependencies: {  }
+id: profile-menu-kr
+label: 'Profile Menu KR'
+description: ''
+locked: false

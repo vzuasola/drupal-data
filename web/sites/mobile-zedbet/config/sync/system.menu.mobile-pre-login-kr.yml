@@ -1,0 +1,8 @@
+uuid: 35f2c2e3-30f8-475f-b475-8b02548b96cc
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-pre-login-kr
+label: 'Mobile Pre Login KR'
+description: ''
+locked: false

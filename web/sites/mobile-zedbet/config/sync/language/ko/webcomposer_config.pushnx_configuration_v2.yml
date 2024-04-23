@@ -1,0 +1,31 @@
+title: 알림
+empty: '새로운 알림이 없습니다.'
+expired_message: '본 프로모션은 이미 종료되었습니다.'
+copied: ''
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+8'
+counter_message: ''
+promotions_tab_title: ''
+promotions_tab_empty_message:
+  value: ''
+  format: basic_html
+payments_tab_title: ''
+payments_tab_empty_message:
+  value: ''
+  format: basic_html
+dismiss_button_label: '모두 닫기'
+dismiss_content:
+  value: ''
+  format: basic_html
+dismiss_yes: 예
+dismiss_no: 아니오
+product_label_generic: 알림
+product_label_livedealer: '라이브 딜러'
+product_label_slots: ''
+product_label_arcade: ''
+product_label_sportsbook: ''
+cta_label_ok: 확인
+cta_label_accept: 수락
+cta_label_decline: 거절
+cta_label_proceed: 네
+cta_label_no: 아니오

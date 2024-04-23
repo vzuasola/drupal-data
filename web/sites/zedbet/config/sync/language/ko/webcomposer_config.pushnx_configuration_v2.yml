@@ -1,0 +1,28 @@
+title: 알림
+empty: '새로운 알림이 없습니다.'
+expired_message: '본 프로모션은 이미 종료되었습니다.'
+copied: '클립보드에 복사됨'
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+8'
+counter_message: ''
+promotions_tab_title: ''
+promotions_tab_empty_message:
+  value: ''
+  format: basic_html
+payments_tab_title: ''
+payments_tab_empty_message:
+  value: ''
+  format: basic_html
+dismiss_button_label: '모두 닫기'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">계속 진행하시겠습니까?\r\n  <br />\r\n  모든 알림 닫기</span></strong>\r\n</p>\r\n<p class=\"text-align-center\"><span class=\"text-white\">모든 알림을 닫을 경우\r\n  <br />\r\n  받을 수 있는 모든 프로모션 거부됩니다</span>\r\n</p>\r\n"
+  format: basic_html
+dismiss_yes: 예
+dismiss_no: 아니오
+product_label_generic: Notifications
+product_label_live-dealer: 'Live Dealer'
+cta_label_ok: 확인
+cta_label_accept: 수락
+cta_label_decline: 거절
+cta_label_proceed: 네
+cta_label_no: 아니오

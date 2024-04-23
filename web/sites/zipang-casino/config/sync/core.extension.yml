@@ -49,11 +49,13 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  monolog: 0
   node: 0
   options: 0
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
+  promotions_page_config: 0
   quickedit: 0
   rdf: 0
   rest: 0
@@ -70,6 +72,8 @@ module:
   token: 0
   toolbar: 0
   user: 0
+  views_bulk_edit: 0
+  views_bulk_operations: 0
   views_data_export: 0
   views_ui: 0
   webcomposer_affilates: 0
@@ -88,6 +92,7 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_mailer: 0
   webcomposer_marketing_script: 0
+  webcomposer_monolog: 0
   webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
@@ -101,6 +106,7 @@ module:
   webform_rest: 0
   webform_ui: 0
   zipang_404: 0
+  zipang_account: 0
   zipang_all_games_config: 0
   zipang_big_winner: 0
   zipang_config: 0

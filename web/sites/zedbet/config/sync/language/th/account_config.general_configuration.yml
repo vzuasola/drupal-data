@@ -1,4 +1,4 @@
-change_password__active_tab: edit-field-success-message-group
+change_password__active_tab: edit-field-password-validation-box
 cp_page_title: เปลี่ยนรหัสผ่าน
 integration_error: "INTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)\r\nCHANGE_PASSWORD_FAILED|เกิดข้อผิดพลาดในการเปลี่ยนรหัสผ่านของคุณ กรุณาลองอีกครั้งหรือคุณอาจติดต่อเรา: (รหัส: 800): <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> แชทสด </a> (Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|รหัสผ่านของคุณเปลี่ยนสำเร็จแล้ว."
 change_password_mobile_success_message: รหัสผ่านของคุณถูกเปลี่ยนเรียบร้อยแล้ว
@@ -34,3 +34,11 @@ modal_verification_code_placeholder: รหัสยืนยัน
 modal_verification_resend_code_text: ส่งรหัสอีกครั้ง
 modal_verification_submit_text: ส่ง
 verification_code_response: "SMS_VERIFICATION_SUCCESS|รหัสยืนยันถูกส่งไปยังหมายเลขโทรศัพท์มือถือของคุณแล้ว\r\nSMS_VERIFICATION_FAILED|ขออภัย มีข้อผิดพลาดในการยืนยันหมายเลขโทรศัพท์มือถือของคุณ กรุณาลองใหม่อีกครั้งหรือติดต่อหาเราได้ที่: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">แชทสด</a> หรือ <a href=\"mailto:ensupport@nextbet.com\"> อีเมล </a> (รหัส:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|หมายเลขโทรศัพท์มือถือของคุณได้รับการยืนยันเรียบร้อยแล้ว\r\nSMS_VERIFICATION_SUBMIT_FAILED|คุณกรอกรหัสยืนยันที่ไม่ถูกต้อง กรุณาลองอีกครั้ง (รหัส:111)\r\nINTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)"
+min_max_length: 'ความยาวรหัสผ่าน: ต่ำสุด 10 - สูงสุด 15 ตัวอักษร'
+one_uppercase_letter: 'ต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อย 1 ตัวอักษร'
+one_lowercase_letter: 'ต้องมีอักษรตัวพิมพ์เล็กอย่างน้อย 1 ตัวอักษร'
+number_symbol: 'ต้องมีอย่างน้อย 1 ตัวเลข'
+username_password_value: ต้องไม่ใช่ยูสเซอร์เนมของคุณหรือรหัสผ่านอื่นที่ใช้กันทั่วไป
+not_same_as_old_password: จะต้องไม่เหมือนกับรหัสผ่านปัจจุบัน
+new_and_confirm_must_match: ยืนยันรหัสผ่านใหม่อีกครั้งและจะต้องตรงกัน
+enable_new_password_validation: 1

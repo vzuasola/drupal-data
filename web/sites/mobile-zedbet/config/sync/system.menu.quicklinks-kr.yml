@@ -1,0 +1,8 @@
+uuid: a3ada4a3-254f-458b-8c0b-9495019aba5f
+langcode: ko
+status: true
+dependencies: {  }
+id: quicklinks-kr
+label: 'Quicklinks KR'
+description: ''
+locked: false

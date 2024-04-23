@@ -43,7 +43,7 @@ product_exclude_dismiss_: null
 cta_label_: null
 cta_actions_: null
 product_label_generic: Notifications
-product_type_id_generic: '1'
+product_type_id_generic: '0'
 product_icon_generic: generic
 product_exclude_generic: 0
 product_exclude_dismiss_generic: 0

@@ -1,0 +1,18 @@
+uuid: 9b7b94b4-7e04-419f-a511-6a47f4569de0
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_collection
+id: games_collection.games_collection.metatag
+field_name: metatag
+entity_type: games_collection
+bundle: games_collection
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

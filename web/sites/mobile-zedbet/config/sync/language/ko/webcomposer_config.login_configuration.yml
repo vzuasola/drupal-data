@@ -1,0 +1,30 @@
+advanced__active_tab: edit-login-form-error-messages-details
+rememberme_label: '아이디 기억하기'
+lightbox_blurb: '아직 Zedbet 회원이 아니신가요?'
+login_page_blurb: ''
+error_message_account_created: ''
+error_message_restricted_country: '접속 제한 지역에서 당사 사이트를 접속하고 계십니다. 고객지원팀에 문의하시기 바랍니다.'
+autologout_box_content:
+  format: basic_html
+  value: "<p>{seconds}초 후에 세션이 만료됩니다. 세션을 계속하시겠습니까?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>활동이 없어 세션 시간이 초과되었습니다.</p>\r\n"
+mobile_login_button_label: 로그인/가입
+mobile_cant_login_url: ''
+username_placeholder: 아이디
+password_placeholder: 비밀번호
+login_bottom_label: 로그인
+error_message_blank_username: '아이디는 필수 항목입니다.'
+error_message_blank_password: '비밀번호는 필수 항목입니다.'
+error_message_blank_passname: '아이디와 비밀번호는 필수 항목입니다.'
+error_message_invalid_passname: '죄송합니다. 입력하신 아이디와 비밀번호가 일치하지 않습니다. 다시 시도하십시오.'
+error_message_service_not_available: 'Service not available. '
+error_message_account_suspended: '계정이 폐쇄되었습니다. 고객지원팀에 문의하십시오.'
+error_message_account_locked: '로그인 시도 실패로 인해 회원님의 계정이 잠겼습니다. 고객지원팀에 문의하십시오.'
+autologout_box_title: 리마인더
+affirmative_button_text: 예
+negative_button_text: 아니오
+notification_title: '세션 타임아웃'
+notification_window_title: '세션 타임아웃'
+mobile_login_url: '#'
