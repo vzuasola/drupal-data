@@ -1,0 +1,21 @@
+uuid: f09d8f81-3d23-4ef2-bbee-7fa0886ce3c8
+langcode: ja
+status: true
+dependencies:
+  module:
+    - payment_method_list
+id: payment_method_list_entity.field_payment_method_title
+field_name: field_payment_method_title
+entity_type: payment_method_list_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

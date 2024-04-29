@@ -1,0 +1,22 @@
+# Payment Method List entity routing definition
+payment_method_list_entity.settings_tab:
+  route_name: payment_method_list_entity.settings
+  title: 'Settings'
+  base_route: payment_method_list_entity.settings
+
+entity.payment_method_list_entity.canonical:
+  route_name: entity.payment_method_list_entity.canonical
+  base_route: entity.payment_method_list_entity.canonical
+  title: 'View'
+
+entity.payment_method_list_entity.edit_form:
+  route_name: entity.payment_method_list_entity.edit_form
+  base_route: entity.payment_method_list_entity.canonical
+  title: 'Edit'
+
+entity.payment_method_list_entity.delete_form:
+  route_name:  entity.payment_method_list_entity.delete_form
+  base_route:  entity.payment_method_list_entity.canonical
+  title: Delete
+  weight: 10
+
