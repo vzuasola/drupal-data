@@ -1,0 +1,30 @@
+uuid: 65f051d9-b884-4432-ac35-0b347e2c91f1
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - payment_method_list
+id: payment_method_list_entity.field_payment_method_image
+field_name: field_payment_method_image
+entity_type: payment_method_list_entity
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
