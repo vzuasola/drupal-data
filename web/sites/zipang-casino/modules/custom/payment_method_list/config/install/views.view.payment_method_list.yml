@@ -453,7 +453,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Enable
+          label: Enabled
           exclude: false
           alter:
             alter_text: false
@@ -701,9 +701,8 @@ display:
       display_extenders: {  }
       path: api/payment_method_list
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: serializer
