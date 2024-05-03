@@ -10,7 +10,7 @@ id: payment_method_list_entity.payment_method_list_entity.field_payment_method_e
 field_name: field_payment_method_enable
 entity_type: payment_method_list_entity
 bundle: payment_method_list_entity
-label: Payment Method Enable
+label: Payment Method Enabled
 description: ''
 required: false
 translatable: true
