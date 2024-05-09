@@ -1,0 +1,22 @@
+add payment method list entity entities:
+  title: 'Create new Payment Method  entity entities'
+
+administer payment method list entity entities:
+  title: 'Administer Payment Method List entity entities'
+  description: 'Allow to access the administration form to configure payment method list entity entities.'
+  restrict access: true
+
+delete payment method list entity entities:
+  title: 'Delete Payment Method entity entities'
+
+edit payment method list entity entities:
+  title: 'Edit Payment Method entity entities'
+
+access payment method list entity overview:
+  title: 'Access the Payment Method entity overview page'
+
+view published payment method list entity entities:
+  title: 'View published Payment Method entity entities'
+
+view unpublished payment method list entity entities:
+  title: 'View unpublished Payment Method entity entities'

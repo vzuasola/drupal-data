@@ -1,0 +1,38 @@
+uuid: 52bf83a9-189e-43af-80ca-573923634a47
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.payment_method_list_entity.field_payment_method_image
+  module:
+    - image
+    - payment_method_list
+id: payment_method_list_entity.payment_method_list_entity.field_payment_method_image
+field_name: field_payment_method_image
+entity_type: payment_method_list_entity
+bundle: payment_method_list_entity
+label: 'Payment Method Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
