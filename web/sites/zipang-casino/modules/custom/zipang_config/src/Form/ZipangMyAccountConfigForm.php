@@ -337,6 +337,23 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Page Header Title'),
       '#default_value' => $this->get('change_pass_title') ?? "Change Password",
+      '#description' => 'Page title to display on Change Password page.',
+      '#translatable' => TRUE,
+    ];
+
+    $form['change_pass']['change_pass_success_msg'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success Message Text'),
+      '#default_value' => $this->get('change_pass_success_msg') ?? "Successful",
+      '#description' => 'Text to display when change password is successful.',
+      '#translatable' => TRUE,
+    ];
+
+    $form['change_pass']['password_not_match'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Password not match text'),
+      '#default_value' => $this->get('password_not_match') ?? "Password not match",
+      '#description' => 'Text to display when new password and confirm password is not match.',
       '#translatable' => TRUE,
     ];
   }
