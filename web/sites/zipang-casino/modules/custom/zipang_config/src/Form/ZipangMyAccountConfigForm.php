@@ -349,6 +349,14 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['change_pass']['invalid_old_password'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Invalid Old Password Text'),
+      '#default_value' => $this->get('invalid_old_password') ?? "Old password is invalid",
+      '#description' => 'Text to display when user input a invalid password.',
+      '#translatable' => TRUE,
+    ];
+
     $form['change_pass']['password_not_match'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Password not match text'),
