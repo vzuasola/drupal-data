@@ -33,7 +33,7 @@ dependencies:
     - taxonomy.vocabulary.game_tag
     - taxonomy.vocabulary.game_type
   content:
-    - 'taxonomy_term:game_type:8ae1f5e2-16c0-4f2d-8d08-3d314c192742'
+    - 'taxonomy_term:game_type:4f850f05-6913-4357-875a-36123fdceb33'
   module:
     - options
     - rest
@@ -4067,9 +4067,6 @@ display:
             field_external_game_id_export:
               alias: external_game_id
               raw_output: false
-            field_game_provider_export:
-              alias: game_provider
-              raw_output: false
             field_game_category_export:
               alias: game_category
               raw_output: false
@@ -4084,9 +4081,6 @@ display:
               raw_output: false
             field_game_description_export:
               alias: game_description
-              raw_output: false
-            field_arcade_game_category_export:
-              alias: arcade_game_category
               raw_output: false
             field_arcade_game_filter_export:
               alias: arcade_game_filter
@@ -4106,14 +4100,14 @@ display:
             field_all_games_category_export:
               alias: all_games_categories
               raw_output: false
-            field_game_provider_export_1:
-              alias: provider
-              raw_output: false
             field_provider_product_export:
               alias: provider_product
               raw_output: false
-            field_game_provider:
-              alias: provider_search
+            field_arcade_game_category_export:
+              alias: arcade_game_category
+              raw_output: false
+            field_game_provider_export:
+              alias: provider
               raw_output: false
       fields:
         id:
@@ -5619,6 +5613,73 @@ display:
           delta_first_last: 0
           field_api_classes: 0
           plugin_id: field_export
+        field_game_provider_export:
+          id: field_game_provider_export
+          table: zipang_desktop_games_entity__field_game_provider
+          field: field_game_provider_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: id
+              title: 0
+              url: 0
+              type: 0
+              bundle: 0
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
       pager:
         type: full
         options:
@@ -5690,7 +5751,7 @@ display:
           admin_label: 'Arcade game type'
           operator: or
           value:
-            - 296
+            - 322
           group: 1
           exposed: false
           expose:
@@ -6088,6 +6149,7 @@ display:
         - 'config:field.storage.zipang_desktop_games_entity.field_game_filter'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_filter_games'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_icon_label'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_provider'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_tag'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_thumbnail'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_title'
