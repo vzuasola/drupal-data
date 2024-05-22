@@ -21,6 +21,7 @@
         ['Dark Gray', 'text-dark-gray'],
         ['Black', 'text-black'],
         ['Light Gold', 'text-light-gold'],
+        ['NB Blue', 'text-nb-blue'],
     ];
 
     var fontSizesStr = '';
@@ -37,7 +38,7 @@
     CKEDITOR.config.fontSizesDefaultLabel = '';
     CKEDITOR.config.fontSizeStyle = {
         element: 'span',
-        attributes: { 
+        attributes: {
             'class': '#(size)'
         }
     };
@@ -46,7 +47,7 @@
     CKEDITOR.config.fontColorsDefaultLabel = '';
     CKEDITOR.config.fontColorStyle = {
         element: 'span',
-        attributes: { 
+        attributes: {
             'class': '#(color)'
         }
     };
@@ -272,7 +273,7 @@
                 });
                 CKEDITOR.dialog.add( 'link', this.path + 'js/dialogs/link.js' );
             },
-           
+
         }
     );
 

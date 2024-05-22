@@ -37,9 +37,12 @@
 
 .text-dark-gray {
   color: #373737; }
-  
+
 .text-light-gold {
   color: #ffd27e; }
+
+.text-nb-blue {
+  color: rgb(0,60,121); }
 
 
 .btn {
@@ -171,6 +174,6 @@ fieldset[disabled] a.btn {
   width: 100%; }
   .btn-block + .btn-block {
     margin-top: 5px; }
-    
+
 .btn-lower-case {
   text-transform: none; }
