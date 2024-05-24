@@ -109,8 +109,9 @@ class MyAccountDocumentsForm extends FormBase
             '#translatable' => TRUE,
         ];
         $form['feature_configuration']['submit_success'] = [
-            '#type' => 'textfield',
+            '#type' => 'textarea',
             '#title' => $this->t('Submission Success'),
+            '#size' => 25,
             '#required' => FALSE,
             '#description' => $this->t('Message shown after successful form submission'),
             '#default_value' => $this->get('submit_success') ?? 'Your document/s have been submitted',
