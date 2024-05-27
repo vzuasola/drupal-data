@@ -1,0 +1,14 @@
+webcomposer_catchpoint.admin_settings:
+  path: 'admin/config/webcomposer/catchpoint'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Catchpoint Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+webcomposer_catchpoint.overview_form:
+  path: '/admin/config/webcomposer/catchpoint/application'
+  defaults:
+    _form: '\Drupal\webcomposer_catchpoint\Form\CatchpointConfigurationForm'
+    _title: 'Application Configuration'
+  requirements:
+    _permission: 'administer site configuration'

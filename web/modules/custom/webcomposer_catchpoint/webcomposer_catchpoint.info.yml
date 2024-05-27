@@ -1,0 +1,5 @@
+name: Webcomposer Catchpoint
+type: module
+description: This module handles the Catchpoint configuration.
+core: 8.x
+package: Web Composer
