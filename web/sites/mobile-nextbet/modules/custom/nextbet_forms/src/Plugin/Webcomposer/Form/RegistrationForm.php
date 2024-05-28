@@ -175,6 +175,12 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'List of area codes that will be validated upon submission in which it had' .
             ' different min and max character allowed per country code and custom message validation for it',
           ],
+          'additional_country_area_code_validation' => [
+            '#title' => 'Additional Country Area Code Custom Validation',
+            '#type' => 'textarea',
+            '#description' => 'List of area codes that will be validated upon submission in which it had' .
+              ' different start number allowed per country code and custom message validation for it',
+          ],
         ],
       ],
 
