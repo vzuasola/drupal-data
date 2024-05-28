@@ -1,0 +1,11 @@
+webcomposer_catchpoint.admin_list:
+  title: 'Webcomposer Catchpoint Configuration'
+  parent: system.admin_config
+  route_name: webcomposer_form_manager.admin_settings
+  description: 'Manages Webcomposer Catchpoint configuration'
+
+webcomposer_catchpoint.admin_overview_list:
+  title: 'Catchpoint Application'
+  parent: webcomposer_catchpoint.admin_list
+  route_name: webcomposer_catchpoint.overview_form
+  description: 'Manages Catchpoint application ID'
