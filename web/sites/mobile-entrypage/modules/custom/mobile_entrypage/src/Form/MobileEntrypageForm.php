@@ -42,7 +42,6 @@ class MobileEntrypageForm extends FormBase {
     $this->sectionEntrypageConfigs($form);
     $this->sectionEntrypageFooter($form);
     $this->sectionDownloadLightbox($form);
-    $this->sectionPerformanceMetricsConfigs($form);
     $this->sectionFaqsConfigs($form);
 
     return $form;
@@ -272,22 +271,6 @@ class MobileEntrypageForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Launch Game'),
       '#default_value' => $this->get('launch_app_link'),
-      '#translatable' => TRUE,
-    ];
-  }
-
-  private function sectionPerformanceMetricsConfigs(array &$form)
-  {
-    $form['performance_metrics_configuration'] = [
-      '#type' => 'details',
-      '#title' => t('Performance Metrics Configurationn'),
-      '#group' => 'advanced',
-    ];
-
-    $form['performance_metrics_configuration']['metricsEndpoint'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Performance Metrics Endpoint'),
-      '#default_value' => $this->get('metricsEndpoint'),
       '#translatable' => TRUE,
     ];
   }
