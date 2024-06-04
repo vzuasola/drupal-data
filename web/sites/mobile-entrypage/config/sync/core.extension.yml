@@ -94,6 +94,7 @@ module:
   webcomposer_cdn: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
+  webcomposer_content_slider: 0
   webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
@@ -117,6 +118,7 @@ module:
   webcomposer_slider_v2: 0
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
+  webcomposer_webform: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
