@@ -1,0 +1,19 @@
+uuid: 1958e749-8f59-45ae-82dd-741b5aabe424
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_game_id
+    - node.type.ptplus
+id: node.ptplus.field_external_game_id
+field_name: field_external_game_id
+entity_type: node
+bundle: ptplus
+label: 'External Game ID'
+description: 'External Game ID using PlayerGame API'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
