@@ -1,0 +1,14 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  header_markup:
+    weight: '1'
+  verification_code:
+    weight: '2'
+  messages_markup:
+    weight: '3'
+  request_new_otp:
+    weight: '4'
+  submit:
+    weight: '5'
