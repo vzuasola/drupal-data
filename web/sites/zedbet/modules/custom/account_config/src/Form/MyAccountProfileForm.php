@@ -36,13 +36,30 @@ class MyAccountProfileForm extends FormBase {
      */
     public function form(array $form, FormStateInterface $form_state) {
         $form['profile'] = [
-            '#type' => 'vertical_tabs',
+          '#type' => 'vertical_tabs',
         ];
 
+        $this->headerSection($form);
+        $this->genericSection($form);
+        $this->contactSection($form);
+        $this->countryCodeMappingSection($form);
+        $this->modalPreviewSection($form);
+        $this->validationConfigurationSection($form);
+        $this->mobileNumberSection($form);
+        $this->smsConfigurationSection($form);
+        $this->smsRateLimitSection($form);
+
+        return $form;
+    }
+
+    /**
+     * Header section
+     */
+    private function headerSection(array &$form){
         $form['header_configuration'] = [
             '#type' => 'details',
             '#title' => 'Header Configuration',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -56,47 +73,51 @@ class MyAccountProfileForm extends FormBase {
         ];
 
         $form['header_configuration']['welcome_text'] = [
-          '#type' => 'textfield',
-          '#title' => t('Welcome text'),
-          '#required' => TRUE,
-          '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
-          '#default_value' => $this->get('welcome_text'),
-          '#translatable' => TRUE,
+            '#type' => 'textfield',
+            '#title' => t('Welcome text'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
+            '#default_value' => $this->get('welcome_text'),
+            '#translatable' => TRUE,
         ];
 
         $form['header_configuration']['product_menu_new_tag'] = [
-          '#type' => 'textfield',
-          '#title' => t('New Tag'),
-          '#required' => TRUE,
-          '#description' => $this->t('Text for new tag'),
-          '#default_value' => $this->get('product_menu_new_tag'),
-          '#translatable' => TRUE,
+            '#type' => 'textfield',
+            '#title' => t('New Tag'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text for new tag'),
+            '#default_value' => $this->get('product_menu_new_tag'),
+            '#translatable' => TRUE,
         ];
 
         $form['header_configuration']['help_tooltip'] = [
-          '#type' => 'textfield',
-          '#title' => t('Help Tooltip'),
-          '#required' => TRUE,
-          '#description' => $this->t('Tooltip for help'),
-          '#default_value' => $this->get('help_tooltip'),
-          '#translatable' => TRUE,
+            '#type' => 'textfield',
+            '#title' => t('Help Tooltip'),
+            '#required' => TRUE,
+            '#description' => $this->t('Tooltip for help'),
+            '#default_value' => $this->get('help_tooltip'),
+            '#translatable' => TRUE,
         ];
 
         $form['header_configuration']['error_mid_down'] = [
-          '#type' => 'textarea',
-          '#title' => t('Error Message MID Down'),
-          '#size' => 500,
-          '#required' => TRUE,
-          '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
-          '#default_value' => $this->get('error_mid_down'),
-          '#translatable' => TRUE,
+            '#type' => 'textarea',
+            '#title' => t('Error Message MID Down'),
+            '#size' => 500,
+            '#required' => TRUE,
+            '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+            '#default_value' => $this->get('error_mid_down'),
+            '#translatable' => TRUE,
         ];
+    }
 
-
+    /**
+     * Header Section
+     */
+    private function genericSection(array &$form){
         $form['field_labels_generic_configuration'] = [
             '#type' => 'details',
             '#title' => 'Generic Configuration',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -133,11 +154,16 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
             '#description' => 'Label for Change Password Tab.'
         ];
+    }
 
+    /**
+     * Contact Preference Section
+     */
+    private function contactSection(array &$form) {
         $form['contact_preference'] = [
             '#type' => 'details',
-            '#title' => 'Contact Prefrence',
-            '#open' => False,
+            '#title' => 'Contact Preference',
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -156,11 +182,16 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('contact_preference_no_label'),
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Country Code Mapping Section
+     */
+    private function countryCodeMappingSection(array &$form) {
         $form['field_labels_country_mapping'] = [
             '#type' => 'details',
             '#title' => 'Country Mapping',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -179,11 +210,16 @@ class MyAccountProfileForm extends FormBase {
             '#required' => TRUE,
             '#default_value' => $this->get('country_code_mapping'),
         ];
+    }
 
+    /**
+     * Modal Preview Section
+     */
+    private function modalPreviewSection(array &$form) {
         $form['field_labels_modal_preview'] = [
             '#type' => 'details',
             '#title' => 'Modal Preview',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -226,11 +262,16 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('modal_preview_bottom_blurb'),
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Validation Configuration Section\
+     */
+    private function validationConfigurationSection(array &$form) {
         $form['field_labels_validation_configuration'] = [
             '#type' => 'details',
             '#title' => 'Validation Configuration',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -241,11 +282,16 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('server_side_validation'),
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Mobile Number Section
+     */
+    private function mobileNumberSection(array &$form) {
         $form['mobile_number_config'] = [
             '#type' => 'details',
             '#title' => 'Mobile Number Annotation',
-            '#open' => false,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -257,11 +303,16 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
             '#translatable' => true,
         ];
+    }
 
+    /**
+     * Sms Configuration Section
+     */
+    private function smsConfigurationSection(array &$form) {
         $form['sms_configuration'] = [
             '#type' => 'details',
             '#title' => 'SMS Verification Configuration',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -372,7 +423,51 @@ class MyAccountProfileForm extends FormBase {
             '#default_value' => $this->get('verification_code_max_length_message'),
             '#translatable' => true,
         ];
+    }
 
-        return $form;
+    /**
+     * SMS Rate Limit Section configuration tab
+     */
+    private function smsRateLimitSection(array &$form) {
+        $form['rate_limit_sms'] = [
+            '#type' => 'details',
+            '#title' => 'SMS Flood',
+            '#open' => FALSE,
+            '#group' => 'profile',
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_type'] = [
+            '#type' => 'select',
+            '#options' => [
+                'user_mode' => $this->t('Username'),
+                'ip_mode' => $this->t('IP'),
+                'user_ip_mode' => $this->t('Username & IP'),
+            ],
+            '#title' => t('Rate Limit Type'),
+            '#description' => $this->t('Rate limit by IP/Username/IP-Username'),
+            '#default_value' => $this->get('rate_limit_sms_type') ?? 'user_mode',
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_interval'] = [
+            '#type' => 'textfield',
+            '#title' => t('Interval'),
+            '#description' => $this->t('Rate limit interval in seconds'),
+            '#default_value' => $this->get('rate_limit_sms_interval') ?? 60,
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_operation'] = [
+            '#type' => 'textfield',
+            '#title' => t('Rate Limit Operation'),
+            '#description' => $this->t('Allowed Request'),
+            '#default_value' => $this->get('rate_limit_sms_operation') ?? 1,
+        ];
+
+        $form['rate_limit_sms']['rate_limit_sms_error_message'] = [
+            '#type' => 'textfield',
+            '#title' => t('Rate Limit Error Message'),
+            '#description' => $this->t('The message to display when the rate limit is exceeded'),
+            '#default_value' => $this->get('rate_limit_sms_error_message') ?? 'You have exceeded the maximum number of SMS requests. Please try again later.',
+            '#translatable' => TRUE,
+        ];
     }
 }

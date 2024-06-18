@@ -167,6 +167,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['online_register_setting']['register']['enable_mobile_verification'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Mobile Verification - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_mobile_verification'),
+      '#translatable' => TRUE,
+    ];
+
     $form['online_register_setting']['register']['register_online_form_fields'] = [
       '#type' => 'details',
       '#title' => $this->t('Registration Online Fields - (✓)hide | (✕)show'),
@@ -278,6 +285,30 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#default_value' => $this->get('video_call_URL'),
       '#description' => $this->t('Customer Support Video Call'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['mobile_verification_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Verification Title'),
+      '#default_value' => $this->get('mobile_verification_title'),
+      '#description' => $this->t('Text to show on Mobile Verification popup header'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['resend_otp_success_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Resend OTP Success Message'),
+      '#default_value' => $this->get('resend_otp_success_message'),
+      '#description' => $this->t('Success message to show when Resend OTP was successful'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['online_register_setting']['register']['contact_verification_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Contact Verification Error Message'),
+      '#default_value' => $this->get('contact_verification_error_message'),
+      '#description' => $this->t('Error message to show on contact verification submission'),
       '#translatable' => TRUE,
     ];
 
