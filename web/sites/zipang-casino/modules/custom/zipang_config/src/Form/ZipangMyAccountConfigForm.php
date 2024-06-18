@@ -40,6 +40,8 @@ class ZipangMyAccountConfigForm extends FormBase {
 
     $this->sectionPageSetting($form);
     $this->sectionChangePassword($form);
+    $this->sectionProfileModal($form);
+    $this->sectionProfileUpdate($form);
 
     return $form;
   }
@@ -362,6 +364,82 @@ class ZipangMyAccountConfigForm extends FormBase {
       '#title' => $this->t('Password not match text'),
       '#default_value' => $this->get('password_not_match') ?? "Password not match",
       '#description' => 'Text to display when new password and confirm password is not match.',
+      '#translatable' => TRUE,
+    ];
+  }
+
+    private function sectionProfileModal(array &$form) {
+    $form['profile_modal'] = [
+      '#type' => 'details',
+      '#title' => t('Profile Modal Preview'),
+      '#group' => 'advanced',
+    ];
+
+    $form['profile_modal']['modal_preview_header'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal Preview Header Title'),
+      '#default_value' => $this->get('modal_preview_header') ?? "Save Account Changes",
+      '#description' => 'Page title to display on Profile Modal Preview',
+      '#translatable' => TRUE,
+    ];
+
+    $form['profile_modal']['modal_preview_top_blurb'] = [
+      '#type' => 'textarea',
+      '#title' => t('Pages listed here will be redirected to maintenance page.'),
+      '#default_value' => $this->get('modal_preview_top_blurb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['profile_modal']['modal_preview_current_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal Preview Current Text'),
+      '#default_value' => $this->get('modal_preview_current_label') ?? "Current",
+      '#description' => 'Page title to display on Profile Modal Preview Current Label',
+      '#translatable' => TRUE,
+    ];
+
+    $form['profile_modal']['modal_preview_new_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal Preview New Text'),
+      '#default_value' => $this->get('modal_preview_new_label') ?? "New",
+      '#description' => 'Page title to display on Profile Modal Preview Current Label',
+      '#translatable' => TRUE,
+    ];
+
+    $form['profile_modal']['modal_preview_bottom_blurb'] = [
+      '#type' => 'textarea',
+      '#title' => t('Modal Preview Bottom Blurb'),
+      '#default_value' => $this->get('modal_preview_bottom_blurb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['profile_modal']['modal_preview_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Modal Preview Save Text'),
+      '#default_value' => $this->get('modal_preview_button') ?? "Save Changes",
+      '#description' => 'Page title to display on Profile Modal Preview Save Label',
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionProfileUpdate(array &$form) {
+    $form['profile_update'] = [
+      '#type' => 'details',
+      '#title' => t('Profile Update Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['profile_update']['profile_general_error_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Profile Update General Error Message'),
+      '#default_value' => $this->get('profile_general_error_message'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['profile_update']['server_validation_message'] = [
+      '#type' => 'textarea',
+      '#title' => t('Profile Update Server Side Validation Message Mapping'),
+      '#default_value' => $this->get('server_validation_message'),
       '#translatable' => TRUE,
     ];
   }
