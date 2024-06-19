@@ -30,6 +30,13 @@ class MyAccountProfileForm extends FormBase {
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getFormId() {
+        return 'webcomposer_my_account_profile_form';
+    }
+
+    /**
      * Build the form.
      *
      * @inheritdoc
@@ -43,8 +50,6 @@ class MyAccountProfileForm extends FormBase {
         $this->validationConfigurationSection($form);
         $this->mobileNumberSection($form);
         $this->smsConfigurationSection($form);
-        $this->smsRateLimitSection($form);
-        $this->passwordChecklistConfiguration($form);
 
         $form['profile'] = [
             '#type' => 'vertical_tabs',
@@ -60,7 +65,7 @@ class MyAccountProfileForm extends FormBase {
         $form['header_configuration'] = [
             '#type' => 'details',
             '#title' => 'Header Configuration',
-            '#open' => False,
+            '#open' => FALSE,
             '#group' => 'profile',
         ];
 
@@ -394,70 +399,4 @@ class MyAccountProfileForm extends FormBase {
             '#translatable' => true,
         ];
     }
-
-    /**
-     * SMS Rate Limit Section configuration tab
-     */
-    private function smsRateLimitSection (array &$form) {
-        $form['rate_limit_sms'] = [
-            '#type' => 'details',
-            '#title' => 'SMS Flood',
-            '#open' => False,
-            '#group' => 'profile',
-        ];
-
-        $form['rate_limit_sms']['rate_limit_sms_type'] = [
-            '#type' => 'select',
-            '#options' => [
-                'user_mode' => $this->t('Username'),
-                'ip_mode' => $this->t('IP'),
-                'user_ip_mode' => $this->t('Username & IP'),
-            ],
-            '#title' => t('Rate Limit Type'),
-            '#description' => $this->t('Rate limit by IP/Username/IP-Username'),
-            '#default_value' => $this->get('rate_limit_sms_type') ?? 'user_mode',
-        ];
-
-        $form['rate_limit_sms']['rate_limit_sms_interval'] = [
-            '#type' => 'textfield',
-            '#title' => t('Interval'),
-            '#description' => $this->t('Rate limit interval in seconds'),
-            '#default_value' => $this->get('rate_limit_sms_interval') ?? 60,
-        ];
-
-        $form['rate_limit_sms']['rate_limit_sms_operation'] = [
-            '#type' => 'textfield',
-            '#title' => t('Rate Limit Operation'),
-            '#description' => $this->t('Allowed Request'),
-            '#default_value' => $this->get('rate_limit_sms_operation') ?? 1,
-        ];
-
-        $form['rate_limit_sms']['rate_limit_sms_error_message'] = [
-            '#type' => 'textfield',
-            '#title' => t('Rate Limit Error Message'),
-            '#description' => $this->t('The message to display when the rate limit is exceeded'),
-            '#default_value' => $this->get('rate_limit_sms_error_message') ?? 'You have exceeded the maximum number of SMS requests. Please try again later.',
-            '#translatable' => TRUE,
-        ];
-    }
-
-  /**
-   * Password checklist form
-   */
-  private function passwordChecklistConfiguration(&$form)
-  {
-    $form['field_password_validation_box'] = [
-      '#type' => 'details',
-      '#title' => 'Password Validation Box',
-      '#group' => 'my_account_group',
-    ];
-
-    $form['field_password_validation_box']['enable_new_password_validation'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable New password validation'),
-      '#description' => $this->t('If we check this checkbox new password validation will be active.'),
-      '#default_value' => $this->get('enable_new_password_validation'),
-      '#translatable' => true
-    ];
-  }
 }

@@ -1,0 +1,61 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function account_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+    if ($form_id !== 'webcomposer_my_account_profile_form') {
+        return;
+    }
+
+    $drupalService = \Drupal::service('webcomposer_config_schema.schema');
+
+    $rateLimitSmsType = $drupalService->getConfigValue('account_config.general_configuration', 'rate_limit_sms_type');
+    $rateLimitSmsInterval = $drupalService->getConfigValue('account_config.general_configuration', 'rate_limit_sms_interval');
+    $rateLimitSmsOperation = $drupalService->getConfigValue('account_config.general_configuration', 'rate_limit_sms_operation');
+    $rateLimitErrorMessage = $drupalService->getConfigValue('account_config.general_configuration', 'rate_limit_sms_error_message');
+
+    $form['rate_limit_sms'] = [
+        '#type' => 'details',
+        '#title' => 'SMS Flood',
+        '#open' => FALSE,
+        '#group' => 'profile',
+    ];
+
+    $form['rate_limit_sms']['rate_limit_sms_type'] = [
+        '#type' => 'select',
+        '#options' => [
+            'user_mode' => t('Username'),
+            'ip_mode' => t('IP'),
+            'user_ip_mode' => t('Username & IP'),
+        ],
+        '#title' => t('Rate Limit Type'),
+        '#description' => t('Rate limit by IP/Username/IP-Username'),
+        '#default_value' => $rateLimitSmsType ?? 'user_mode',
+    ];
+
+    $form['rate_limit_sms']['rate_limit_sms_interval'] = [
+        '#type' => 'textfield',
+        '#title' => t('Interval'),
+        '#description' => t('Rate limit interval in seconds'),
+        '#default_value' => $rateLimitSmsInterval ?? 60,
+    ];
+
+    $form['rate_limit_sms']['rate_limit_sms_operation'] = [
+        '#type' => 'textfield',
+        '#title' => t('Rate Limit Operation'),
+        '#description' => t('Allowed Request'),
+        '#default_value' => $rateLimitSmsOperation ?? 1,
+    ];
+
+    $form['rate_limit_sms']['rate_limit_sms_error_message'] = [
+        '#type' => 'textfield',
+        '#title' => t('Rate Limit Error Message'),
+        '#description' => t('The message to display when the rate limit is exceeded'),
+        '#default_value' => $rateLimitErrorMessage ?? 'TEst',
+        '#translatable' => TRUE,
+    ];
+}
