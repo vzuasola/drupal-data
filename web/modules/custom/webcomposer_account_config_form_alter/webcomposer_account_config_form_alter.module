@@ -5,7 +5,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_alter().
  */
-function account_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
+function webcomposer_account_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
     if ($form_id !== 'webcomposer_my_account_profile_form') {
         return;
