@@ -3,6 +3,17 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Default value for the RATE LIMITER settings
+ */
+define('RATE_LIMITER_TYPE_DEFAULT_VALUE', 'user_mode');
+define('RATE_LIMITER_INTERVAL_DEFAULT_VALUE', 60);
+define('RATE_LIMITER_OPERATION_DEFAULT_VALUE', 1);
+define(
+  'RATE_LIMITER_ERROR_MESSAGE_DEFAULT_VALUE',
+  'You have exceeded the limit of sending verification code.'
+);
+
+/**
  * Implements hook_form_alter().
  */
 function webcomposer_account_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
@@ -10,14 +21,6 @@ function webcomposer_account_config_form_alter(&$form, FormStateInterface $form_
     if ($form_id !== 'webcomposer_my_account_profile_form') {
         return;
     }
-
-    define('RATE_LIMITER_TYPE_DEFAULT_VALUE', 'user_mode');
-    define('RATE_LIMITER_INTERVAL_DEFAULT_VALUE', 60);
-    define('RATE_LIMITER_OPERATION_DEFAULT_VALUE', 1);
-    define(
-        'RATE_LIMITER_ERROR_MESSAGE_DEFAULT_VALUE',
-        'You have exceeded the limit of sending verification code.'
-    );
 
     $drupalService = \Drupal::service('webcomposer_config_schema.schema');
 
