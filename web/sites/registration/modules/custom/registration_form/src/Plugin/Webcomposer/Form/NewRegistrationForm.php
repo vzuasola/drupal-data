@@ -415,6 +415,24 @@ class NewRegistrationForm extends WebcomposerFormBase implements WebcomposerForm
               '3|117,2,1',
             ]),
           ],
+          'latam_currency_mapping_enabled' => [
+            '#title' => 'Enable LATAM currencies filtering',
+            '#type' => 'checkbox',
+            '#description' => 'Filtering of LATAM currencies switch.',
+            '#default_value' => false,
+          ],
+          'latam_currency_mapping' => [
+            '#title' => 'Mapping of currencies for LATAM teritories',
+            '#type' =>'textarea',
+            '#description' => 'Mapping of currencies to be filtered out based on players GEO Location {COUNTRY_CODE|CURRENCIES}',
+            '#default_value' => implode(PHP_EOL, [
+              'BR|BRL,USD,USDT,BTC',
+              'PE|PEN,USD,USDT,BTC',
+              'MX|MXN,USD,USDT,BTC',
+              'AR|ARS,USD,USDT,BTC',
+              'CH|CLP,USD,USDT,BTC',
+            ])
+          ]
         ],
       ],
 
