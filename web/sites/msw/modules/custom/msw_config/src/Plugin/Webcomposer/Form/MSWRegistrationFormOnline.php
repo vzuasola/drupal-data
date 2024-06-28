@@ -1191,6 +1191,32 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
+        'gaming_employee_terms' => [
+          'name' => 'Gaming Employment License',
+          'title' => 'Terms for Gaming Employment License',
+          'type' => 'checkbox',
+          'settings' => [
+            'label' => [
+              '#title' => 'Gaming Employment License Markup',
+              '#type' => 'textarea',
+              '#description' => 'Gaming Employment License Terms',
+            ],
+          ],
+        ],
+
+        'gaming_employee_markup' => [
+          'name' => 'Gaming Employment License Markup',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Gaming Employment License Markup',
+              '#type' => 'textarea',
+              '#description' => 'Terms for Gaming Employment License Markup',
+              '#default_value' => 'I am not a Gaming Employment License (GEL) holder.',
+            ],
+          ],
+        ],
+
         'awareness' => [
           'name' => 'Awareness',
           'title' => 'Awareness Title',
@@ -1214,6 +1240,19 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#type' => 'textarea',
               '#description' => 'Awareness',
               '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',
+            ],
+          ],
+        ],
+
+        'registration_notes_markup' => [
+          'name' => 'Registration Notes',
+          'type' => 'markup',
+          'settings' => [
+            'markup' => [
+              '#title' => 'Registration Notes Markup',
+              '#type' => 'textarea',
+              '#description' => 'Registration Notes Markup',
+              '#default_value' => 'Registration Notes',
             ],
           ],
         ],
