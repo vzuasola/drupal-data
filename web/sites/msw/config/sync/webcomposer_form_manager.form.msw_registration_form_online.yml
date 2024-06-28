@@ -106,9 +106,15 @@ weights:
     weight: '29'
   terms_and_conditions_markup:
     weight: '30'
-  awareness:
+  gaming_employee_terms:
     weight: '31'
-  awareness_markup:
+  gaming_employee_markup:
     weight: '32'
-  submit:
+  awareness:
     weight: '33'
+  awareness_markup:
+    weight: '34'
+  registration_notes_markup:
+    weight: '35'
+  submit:
+    weight: '36'
