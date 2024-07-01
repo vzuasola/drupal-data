@@ -30,7 +30,8 @@ function my_account_form_webcomposer_form_validation_alter(&$validations) {
   // password validation
   $validations['not_match_username'] = [
     'title' => 'Not Match Username',
-    'description' => 'Validation to disallow current username as password',
+    'description' => 'Validation to disallow current username as password.
+    <br><br> <strong>Note:</strong> This rule should only be enabled on forms <u>where the username is available </u> eg:( New User Registration, Account Update on post-login ).',
     'error' => 'Password should not equal to username',
   ];
 
@@ -65,7 +66,8 @@ function my_account_form_webcomposer_form_validation_alter(&$validations) {
   ];
   $validations['new_password_different_from_current'] = [
     'title' => 'New Pass Diff. From Current',
-    'description' => 'If this validation is enabled we need the new password to be different from the one entered in the "Current Password" field. Works only in Change Password Form',
+    'description' => 'If this validation is enabled we need the new password to be different from the one entered in the "Current Password" field.
+      <br><br> <strong>Note:</strong> This rule should only be enabled in pages <u>where there is a "current password" input field</u>.',
     'error' => 'Must not be the same as the current password.',
   ];
 }

@@ -47,6 +47,7 @@ class MSWGeneralConfigurationForm extends FormBase {
     $this->prioritizationMenuConfig($form);
     $this->customerSupportNotificationsConfig($form);
     $this->outletEmailNotification($form);
+    $this->mobileNumberVerification($form);
 
     return $form;
   }
@@ -164,13 +165,6 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Join Button - (✓)enable | (✕)disable'),
       '#default_value' => $this->get('enable_register_online_join_btn'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['online_register_setting']['register']['enable_mobile_verification'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Mobile Verification - (✓)enable | (✕)disable'),
-      '#default_value' => $this->get('enable_mobile_verification'),
       '#translatable' => TRUE,
     ];
 
@@ -293,22 +287,6 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#title' => $this->t('Mobile Verification Title'),
       '#default_value' => $this->get('mobile_verification_title'),
       '#description' => $this->t('Text to show on Mobile Verification popup header'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['online_register_setting']['register']['resend_otp_success_message'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Resend OTP Success Message'),
-      '#default_value' => $this->get('resend_otp_success_message'),
-      '#description' => $this->t('Success message to show when Resend OTP was successful'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['online_register_setting']['register']['contact_verification_error_message'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Contact Verification Error Message'),
-      '#default_value' => $this->get('contact_verification_error_message'),
-      '#description' => $this->t('Error message to show on contact verification submission'),
       '#translatable' => TRUE,
     ];
 
@@ -482,6 +460,101 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#title' => $this->t('Email Template'),
       '#default_value' => $this->get('outlet_email_template')['value'],
       '#format' => $this->get('outlet_email_template')['format'],
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function  mobileNumberVerification(array &$form) {
+    $form['mobile_number_verification'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mobile Number Verification'),
+      '#group' => 'advanced'
+    ];
+
+    $form['mobile_number_verification']['number_verification']['enable_mobile_verification'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Mobile Verification - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_mobile_verification'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['enable_email_notification'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Email Notification - (✓)enable | (✕)disable'),
+      '#default_value' => $this->get('enable_email_notification'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['resend_otp_success_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Resend OTP Success Message'),
+      '#default_value' => $this->get('resend_otp_success_message'),
+      '#description' => $this->t('Success message to show on contact verification submission'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['contact_verification_error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Verification Error Message'),
+      '#default_value' => $this->get('contact_verification_error_message'),
+      '#description' => $this->t('Error message to show on mobile verification submission'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['verification_link_expiration'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Email Link Expiration'),
+      '#default_value' => $this->get('verification_link_expiration'),
+      '#description' => $this->t('How long should email link is valid for. Enter a time in minutes'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['verification_email_sender'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sender'),
+      '#default_value' => $this->get('verification_email_sender'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['verification_email_cc'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Emails on CC'),
+      '#default_value' => $this->get('verification_email_cc'),
+      '#description' => $this->t('Seperated by comma if we need to add email on CC. e.g firstname.lastname@sportserve.co, firstname1.lastname1@sportserve.co'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['verification_email_subject'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Subject'),
+      '#default_value' => $this->get('verification_email_subject'),
+      '#translatable' => TRUE,
+    ];
+     
+    $form['mobile_number_verification']['number_verification']['verification_email_template'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Mobile Verification Email Template'),
+      '#default_value' => $this->get('verification_email_template')['value'],
+      '#format' => $this->get('verification_email_template')['format'],
+      '#description' => $this->t('Notification email message template on mobile number verification'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['invalid_link_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Invalid Link Message'),
+      '#default_value' => $this->get('invalid_link_message')['value'],
+      '#format' => $this->get('invalid_link_message')['format'],
+      '#description' => $this->t('Message to show on mobile number verification when link are invalid'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_number_verification']['number_verification']['expired_link_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Verified Account Message'),
+      '#default_value' => $this->get('expired_link_message')['value'],
+      '#format' => $this->get('expired_link_message')['format'],
+      '#description' => $this->t('Message to show on mobile number verification when link are already expired'),
       '#translatable' => TRUE,
     ];
   }
