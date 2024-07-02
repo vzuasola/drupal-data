@@ -18,6 +18,8 @@ trait FilterHtmlTrait {
   public function filterHtml($markup) {
     $document = new Html();
 
+    // due to a bug in Drupal Html class, Windows new line symbol (\r) gets converted to "&#13;"
+    $markup = str_replace("\r", '', $markup);
     $htmlDoc = $document->load($markup);
     $domObject = simplexml_import_dom($htmlDoc);
 
