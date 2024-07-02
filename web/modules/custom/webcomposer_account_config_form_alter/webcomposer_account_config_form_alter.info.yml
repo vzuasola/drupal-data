@@ -1,5 +1,0 @@
-name: 'Webcomposer Account Config Form Alter'
-type: module
-description: 'A module to demonstrate hook_form_alter usage in an account config form.'
-core: 8.x
-package: Custom
