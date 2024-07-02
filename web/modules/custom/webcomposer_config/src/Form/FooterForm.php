@@ -238,6 +238,7 @@ class FooterForm extends FormBase {
         '_blank' => 'New Tab',
         'window' => 'New Window'
       ],
+      '#translatable' => true,
       '#title' => $this->t('Redirection Link Target'),
       '#description' => $this->t('Select a Redirection link target'),
       '#default_value' => $this->get('ambassador_link_target'),
