@@ -8,12 +8,14 @@ dependencies:
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_filter
     - field.field.node.games.field_game_platform
+    - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
     - field.field.node.games.field_games_list_thumb_img_small
     - field.field.node.games.field_games_target
     - field.field.node.games.field_keywords
     - field.field.node.games.field_preview_mode
+    - field.field.node.games.field_table_id
     - node.type.games
   module:
     - image
@@ -106,6 +108,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_table_id:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden:
   field_game_provider: true
