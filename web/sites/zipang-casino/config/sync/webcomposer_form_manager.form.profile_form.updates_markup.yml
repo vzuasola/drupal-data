@@ -1,5 +1,5 @@
 field_settings:
-  markup: "<div class=\"form-item ProfileForm_update_markup\"><div class=\"text-bold\">＊最新のプロモーション、アップデート、特典などのお知らせを受け取りますか？</div>\r\n<div class=\"contact-preference-label text-center mt-10\">\r\n    <input type=\"checkbox\" id=\"ProfileForm_contact_preference\" name=\"MyProfileForm[contact_preference_field]\" class=\"field_contact_preference_field\" no_validate=\"no_validate\" enable_tooltip=\"0\" tooltip_blurb=\"test\" data_field=\"contact_preference_field\" value=\"1\">\r\n    <label for=\"ProfileForm_contact_preference\">\r\n    <span class=\"label-inwrapper text-14 text-right\">はい。メールの受信を希望します。</span>\r\n    </label>\r\n</div>\r\n</div>"
+  markup: "<div class=\"form-item ProfileForm_update_markup\"><div class=\"text-bold\">＊最新のプロモーション、アップデート、特典などのお知らせを受け取りますか？</div>\r\n<div class=\"receive-news-label text-center mt-10\">\r\n    <input type=\"checkbox\" id=\"ProfileForm_receive_news\" name=\"MyProfileForm[receive_news_field]\" class=\"field_receive_news_field\" no_validate=\"no_validate\" enable_tooltip=\"0\" tooltip_blurb=\"test\" data_field=\"receive_news_field\" value=\"1\">\r\n    <label for=\"ProfileForm_receive_news\">\r\n    <span class=\"label-inwrapper text-14 text-right\">はい。メールの受信を希望します。</span>\r\n    </label>\r\n</div>\r\n</div>"
 field_validations:
   required:
     enable: 0
