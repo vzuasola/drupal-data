@@ -1,0 +1,16 @@
+uuid: b986aa84-7472-40eb-9081-ad59f22bb868
+langcode: hi
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'Hindi (India)'
+    webcomposer_language_hidden: 0
+id: hi
+label: Hindi
+direction: ltr
+weight: 4
+locked: false
