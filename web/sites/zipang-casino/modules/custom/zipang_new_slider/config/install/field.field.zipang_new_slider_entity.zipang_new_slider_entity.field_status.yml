@@ -1,0 +1,23 @@
+uuid: b0f84f50-8df8-499f-9dd0-e351ba224cd5
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_new_slider_entity.field_status
+  module:
+    - options
+    - zipang_new_slider
+id: zipang_new_slider_entity.zipang_new_slider_entity.field_status
+field_name: field_status
+entity_type: zipang_new_slider_entity
+bundle: zipang_new_slider_entity
+label: Status
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

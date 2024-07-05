@@ -1,0 +1,27 @@
+uuid: b077919c-131b-4924-bc12-75ccca5dabc5
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - zipang_new_slider
+id: zipang_new_slider_entity.field_status
+field_name: field_status
+entity_type: zipang_new_slider_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Disabled
+    -
+      value: '1'
+      label: Enabled
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

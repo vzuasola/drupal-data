@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_new_slider.module. */
+
+ use Drupal\Core\Routing\RouteMatchInterface;
+
+ /**
+ * Implements hook_help().
+ */
+
+function zipang_new_slider_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_new_slider module.
+    case 'help.page.zipang_new_slider':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang New Slider') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,23 @@
+uuid: beb9a466-fcab-4e8f-989d-382123a3aa51
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_new_slider_entity.field_banner_link
+  module:
+    - link
+    - zipang_new_slider
+id: zipang_new_slider_entity.zipang_new_slider_entity.field_banner_link
+field_name: field_banner_link
+entity_type: zipang_new_slider_entity
+bundle: zipang_new_slider_entity
+label: 'Pre Banner Link'
+description: 'The link when this banner is clicked'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

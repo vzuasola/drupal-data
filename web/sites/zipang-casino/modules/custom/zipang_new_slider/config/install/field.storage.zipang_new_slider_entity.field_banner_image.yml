@@ -1,0 +1,30 @@
+uuid: 238fe95e-b1d0-4c5e-b44c-901dfe2b079c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_new_slider
+id: zipang_new_slider_entity.field_banner_image
+field_name: field_banner_image
+entity_type: zipang_new_slider_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

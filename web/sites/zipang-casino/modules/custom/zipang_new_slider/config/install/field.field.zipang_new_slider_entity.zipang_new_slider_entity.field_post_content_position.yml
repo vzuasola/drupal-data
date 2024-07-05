@@ -1,0 +1,21 @@
+uuid: 945b5b18-52a1-448b-9da4-8d6155a6f02a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_new_slider_entity.field_post_content_position
+  module:
+    - options
+    - zipang_new_slider
+id: zipang_new_slider_entity.zipang_new_slider_entity.field_post_content_position
+field_name: field_post_content_position
+entity_type: zipang_new_slider_entity
+bundle: zipang_new_slider_entity
+label: 'Post Caption Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
