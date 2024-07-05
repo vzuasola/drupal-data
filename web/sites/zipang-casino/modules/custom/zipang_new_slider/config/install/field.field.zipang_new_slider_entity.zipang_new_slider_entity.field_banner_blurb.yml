@@ -1,0 +1,21 @@
+uuid: 50c4bdba-d0af-4db9-88e5-a384ffa06bcd
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_new_slider_entity.field_banner_blurb
+  module:
+    - text
+    - zipang_new_slider
+id: zipang_new_slider_entity.zipang_new_slider_entity.field_banner_blurb
+field_name: field_banner_blurb
+entity_type: zipang_new_slider_entity
+bundle: zipang_new_slider_entity
+label: 'Pre Banner Caption'
+description: 'The body for this banner'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

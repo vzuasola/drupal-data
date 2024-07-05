@@ -1,0 +1,21 @@
+uuid: e0eba9bd-d2ab-42a7-918c-8f6efd504800
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_new_slider_entity.field_log_in_state
+  module:
+    - options
+    - zipang_new_slider
+id: zipang_new_slider_entity.zipang_new_slider_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: zipang_new_slider_entity
+bundle: zipang_new_slider_entity
+label: 'Log-in State'
+description: 'Control where this slider will show up.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
