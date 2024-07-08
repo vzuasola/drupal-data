@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains msw_legal_agreement.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function msw_legal_agreement_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the msw_legal_agreement module.
+    case 'help.page.msw_legal_agreement':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Registration Legal Agreement') . '</p>';
+      return $output;
+
+    default:
+  }
+}
