@@ -1,0 +1,19 @@
+uuid: e0de7a10-8421-4d16-900f-ed4f4e2e64ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - msw_legal_agreement
+    - text
+id: msw_legal_agreement.field_legal_agreement_text
+field_name: field_legal_agreement_text
+entity_type: msw_legal_agreement
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,32 @@
+uuid: da8af21f-3119-4a66-8680-5e16fe59ebe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.msw_legal_agreement.msw_legal_agreement.field_legal_agreement_text
+  module:
+    - msw_legal_agreement
+    - text
+id: msw_legal_agreement.msw_legal_agreement.default
+targetEntityType: msw_legal_agreement
+bundle: msw_legal_agreement
+mode: default
+content:
+  field_legal_agreement_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true
