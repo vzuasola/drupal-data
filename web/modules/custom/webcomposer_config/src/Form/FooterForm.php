@@ -210,12 +210,12 @@ class FooterForm extends FormBase {
       '#translatable' => true,
     ];
 
-    $form['brand_ambassador_group']['ambassador_image'] = [
-      '#name' => 'ambassador_image',
+    $form['brand_ambassador_group']['file_image_ambassador_image'] = [
+      '#name' => 'file_image_ambassador_image',
       '#type' => 'managed_file',
       '#title' => $this->t('Ambassador Image'),
-      '#default_value' => $this->get('ambassador_image'),
-      '#upload_location' => 'public://',
+      '#default_value' => $this->get('file_image_ambassador_image'),
+      '#upload_location' => 'public://ambassadors/',
       '#translatable' => true,
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg svg'],
