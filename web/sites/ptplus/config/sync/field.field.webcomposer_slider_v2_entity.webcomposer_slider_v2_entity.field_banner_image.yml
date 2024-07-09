@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.webcomposer_slider_v2_entity.field_banner_image
   module:
+    - content_translation
     - image
     - webcomposer_slider_v2
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: KaeWJJV3dlD-xtsBx9X17putfZSd_E0_fwdP2vlij1Y
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
@@ -16,7 +23,7 @@ bundle: webcomposer_slider_v2_entity
 label: 'Banner Image'
 description: 'Recommended dimension of image is 767px x 376px.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

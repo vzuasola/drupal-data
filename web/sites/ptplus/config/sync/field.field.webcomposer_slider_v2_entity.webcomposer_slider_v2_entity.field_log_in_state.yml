@@ -16,7 +16,7 @@ bundle: webcomposer_slider_v2_entity
 label: 'Log-in State'
 description: 'Control where this slider will show up.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
