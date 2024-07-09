@@ -210,6 +210,7 @@ class FooterForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $enabledV2 = $this->get('enable_new_style') ? true : false;
     $form['brand_ambassador_group']['file_image_ambassador_image'] = [
       '#name' => 'file_image_ambassador_image',
       '#type' => 'managed_file',
@@ -221,6 +222,7 @@ class FooterForm extends FormBase {
         'file_validate_extensions' => ['gif png jpg jpeg svg'],
         'file_validate_unique' => [],
       ],
+      '#required' => $enabledV2,
     ];
 
     $form['brand_ambassador_group']['ambassador_redirection_link'] = [
