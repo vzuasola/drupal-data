@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.entrypage_front_block.entrypage_front_block.field_body
     - field.field.entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_1
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_subtitle_line_2
@@ -18,6 +19,7 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2
     - field.field.entrypage_front_block.entrypage_front_block.field_published
     - field.field.entrypage_front_block.entrypage_front_block.field_short_title
+    - field.field.entrypage_front_block.entrypage_front_block.field_sub_title
     - field.field.entrypage_front_block.entrypage_front_block.field_title
     - field.field.entrypage_front_block.entrypage_front_block.field_url
     - image.style.thumbnail
@@ -113,6 +115,14 @@ targetEntityType: entrypage_front_block
 bundle: entrypage_front_block
 mode: default
 content:
+  field_body:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_enable_for_agent_players:
     weight: 4
     settings: {  }
@@ -251,4 +261,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_short_title: true
+  field_sub_title: true
   user_id: true
