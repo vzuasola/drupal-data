@@ -147,10 +147,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_body: true
   field_image_target: true
   field_link: true
   field_link_target: true
   field_link_text_hover_1: true
   field_link_text_hover_2: true
+  field_sub_title: true
   langcode: true
   user_id: true
