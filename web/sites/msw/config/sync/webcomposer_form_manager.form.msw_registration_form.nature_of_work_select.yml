@@ -1,0 +1,11 @@
+field_settings:
+  label: 'Nature of work'
+  placeholder: 'Nature of work'
+  groups: source-of-income
+  choices: "Advertising and Marketing|Advertising and Marketing\r\nAgriculture and Forestry|Agriculture and Forestry\r\nCommunity and Social Services|Community and Social Services\r\nComputer and technology|Computer and technology\r\nConstruction, Engineering and Architechural|Construction, Engineering and Architechural\r\nConsultancy|Consultancy\r\nEducation|Education\r\nEnergy, Gas and Water Supply|Energy, Gas and Water Supply\r\nEntertainment|Entertainment\r\nFashion|Fashion\r\nFinance and Banking|Finance and Banking\r\nHealth Care and Medical Professional|Health Care and Medical Professional\r\nHoldings Company|Holdings Company\r\nHotel, Restaurants and Hospitality|Hotel, Restaurants and Hospitality\r\nManufacturing|Manufacturing\r\nMedia and news|Media and news\r\nMining and Quarrying|Mining and Quarrying\r\nPharmaceutical|Pharmaceutical\r\nReal Estate and Rental Business|Real Estate and Rental Business\r\nTelecommunication|Telecommunication\r\nTransportation|Transportation"
+field_validations:
+  required:
+    enable: 0
+    error_message: 'Field should be required'
+    rule_description: ''
+
