@@ -1,0 +1,5 @@
+entrypage_config.add_form:
+  route_name: 'node.add'
+  title: 'Add Custom Config'
+  route_parameters:
+      node_type: 'config'

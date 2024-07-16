@@ -2,41 +2,61 @@
 
 namespace Drupal\entrypage_config\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
-class EntrypageCustomConfigForm extends ConfigFormBase {
-
+/**
+ * Description form plugin
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "entrypage_config",
+ *   route = {
+ *     "title" = "Entrypage Custom Configuration",
+ *     "path" = "/admin/config/entrypage_config/custom",
+ *   },
+ *   menu = {
+ *     "title" = "Entrypage Custom Configuration",
+ *     "description" = "Configure the Entrypage Custom configuration",
+ *     "parent" = "entrypage_config.list",
+ *   },
+ * )
+ */
+class EntrypageCustomConfigForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['entrypage_config.entrypage_configuration'];
+    return ['entrypage_config.entrypage_configuration_form'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
-    return 'entrypage_config.entrypage_configuration_form';
-  }
+  public function form(array $form, FormStateInterface $form_state) {
 
-  /**
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('entrypage_config.entrypage_configuration');
-
-    $form['advanced'] = array(
+    $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Entrypage Configuration'),
-    );
+    ];
 
+    $this->customSettings($form);
+
+    return $form;
+  }
+
+  private function customSettings(array &$form) {
     $form['trust_element'] = array(
       '#type' => 'details',
       '#title' => t('Trust Element'),
       '#group' => 'advanced',
+    );
+
+    $trust_element = $this->get('trust_element_content');
+    $form['trust_element']['trust_element_content'] = array(
+        '#type' => 'text_format',
+        '#title' => $this->t('Content'),
+        '#default_value' => $trust_element['value'],
+        '#translatable' => TRUE,
     );
 
     $form['faqs_configuration'] = array(
@@ -45,19 +65,11 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
       '#group' => 'advanced',
     );
 
-    $config_tec= $config->get('trust_element_content');
-    $form['trust_element']['trust_element_content'] = array(
-        '#type' => 'text_format',
-        '#title' => $this->t('Content'),
-        '#default_value' => $config_tec['value'],
-        '#format' => $config_tec['format']
-    );
-
     $form['faqs_configuration']['faq_url'] = array(
         '#type' => 'textfield',
         '#title' => $this->t('Faq page URL'),
-        '#default_value' => $config->get('faq_url'),
-        '#translatable' => false,
+        '#default_value' => $this->get('faq_url'),
+        '#translatable' => TRUE,
     );
 
     $form['feature_flags_configuration'] = array(
@@ -68,35 +80,8 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
     $form['feature_flags_configuration']['front_blocks'] = array(
       '#type' => 'checkbox',
       '#title' => $this->t('Front Blocks V2'),
-      '#default_value' => $config->get('front_blocks'),
-      '#translatable' => true,
+      '#default_value' => $this->get('front_blocks'),
+      '#translatable' => TRUE,
     );
-
-    return parent::buildForm($form, $form_state);
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'trust_element_content',
-      'faq_url',
-      'front_blocks'
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('entrypage_config.entrypage_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-
-    parent::submitForm($form, $form_state);
-  }
-
 }

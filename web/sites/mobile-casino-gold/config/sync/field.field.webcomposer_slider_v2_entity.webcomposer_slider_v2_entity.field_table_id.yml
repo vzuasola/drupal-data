@@ -1,0 +1,20 @@
+uuid: 3f3a2dd4-67d0-4926-9ed4-f08730371bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_table_id
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_table_id
+field_name: field_table_id
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Table ID/ Launch Alias'
+description: "Use this field to for Direct Table Launch the following game integrations:\r\n<ul>\r\n<li>Playtech - Please provide launch alias</li>\r\n</ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,5 @@
+name: Zipang New Slider
+type: module
+description: Handles Zipang New Slider Configuration
+core: 8.x
+package: Zipang

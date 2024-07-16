@@ -26,6 +26,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_table_id
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
@@ -260,6 +261,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_table_id:
+    weight: 28
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_title:
     weight: 2

@@ -1,0 +1,22 @@
+add msw legal agreement entities:
+  title: 'Create new Registration Legal Agreement entities'
+
+administer msw legal agreement entities:
+  title: 'Administer Registration Legal Agreement entities'
+  description: 'Allow to access the administration form to configure Registration Legal Agreement entities.'
+  restrict access: true
+
+delete msw legal agreement entities:
+  title: 'Delete Registration Legal Agreement entities'
+
+edit msw legal agreement entities:
+  title: 'Edit Registration Legal Agreement entities'
+
+access msw legal agreement overview:
+  title: 'Access the Registration Legal Agreement overview page'
+
+view published msw legal agreement entities:
+  title: 'View published Registration Legal Agreement entities'
+
+view unpublished msw legal agreement entities:
+  title: 'View unpublished Registration Legal Agreement entities'
