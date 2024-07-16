@@ -1,0 +1,21 @@
+uuid: a959d6cc-b362-41a5-a2bd-700e55ba96fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_sponsor_list_v2
+id: mobile_sponsor_list_v2.field_subtitle
+field_name: field_subtitle
+entity_type: mobile_sponsor_list_v2
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
