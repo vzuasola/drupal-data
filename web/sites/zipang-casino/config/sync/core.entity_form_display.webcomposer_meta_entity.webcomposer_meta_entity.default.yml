@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
-    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_tag
   module:
     - paragraphs
     - webcomposer_seo

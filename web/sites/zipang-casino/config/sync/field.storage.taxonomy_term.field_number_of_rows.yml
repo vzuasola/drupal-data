@@ -1,0 +1,27 @@
+uuid: 9879150f-7d0d-47c4-99d8-a289d6d921f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_number_of_rows
+field_name: field_number_of_rows
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: '1 Row'
+    -
+      value: '1'
+      label: '2 Rows'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
