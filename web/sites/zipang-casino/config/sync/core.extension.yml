@@ -55,6 +55,7 @@ module:
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
+  payment_method_list: 0
   promotions_page_config: 0
   quickedit: 0
   rdf: 0
@@ -65,6 +66,7 @@ module:
   scheduler: 0
   serialization: 0
   shortcut: 0
+  svg_image: 0
   system: 0
   taxonomy: 0
   taxonomy_unique: 0

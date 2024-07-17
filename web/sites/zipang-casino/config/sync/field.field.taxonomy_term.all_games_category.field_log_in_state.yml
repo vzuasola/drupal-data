@@ -1,0 +1,21 @@
+uuid: ab4ae403-9bba-4548-9c5e-e1b1afb79c12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_log_in_state
+    - taxonomy.vocabulary.all_games_category
+  module:
+    - options
+id: taxonomy_term.all_games_category.field_log_in_state
+field_name: field_log_in_state
+entity_type: taxonomy_term
+bundle: all_games_category
+label: 'Log-in State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

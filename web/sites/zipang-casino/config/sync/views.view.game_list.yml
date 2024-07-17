@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.storage.zipang_desktop_games_entity.field_all_games_category
     - field.storage.zipang_desktop_games_entity.field_enable_free_play
     - field.storage.zipang_desktop_games_entity.field_enable_game
     - field.storage.zipang_desktop_games_entity.field_game_category
@@ -10,6 +11,7 @@ dependencies:
     - field.storage.zipang_desktop_games_entity.field_game_provider
     - field.storage.zipang_desktop_games_entity.field_game_tag
     - field.storage.zipang_desktop_games_entity.field_game_title
+    - taxonomy.vocabulary.all_games_category
     - taxonomy.vocabulary.desktop_game_category
     - taxonomy.vocabulary.game_provider
     - taxonomy.vocabulary.game_tag
@@ -17,7 +19,6 @@ dependencies:
     - rest
     - serialization
     - taxonomy
-    - views_bulk_operations
     - webcomposer_rest_extra
     - zipang_desktop_games
 _core:
@@ -223,70 +224,6 @@ display:
       path: admin/structure/zipang_desktop_games_entity
       display_description: ''
       fields:
-        views_bulk_operations_bulk_form:
-          id: views_bulk_operations_bulk_form
-          table: views
-          field: views_bulk_operations_bulk_form
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Views bulk operations'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          batch: true
-          batch_size: 50
-          form_step: true
-          buttons: false
-          clear_on_exposed: false
-          action_title: Action
-          selected_actions:
-            views_bulk_edit: views_bulk_edit
-            views_bulk_operations_delete_entity: 0
-            pathauto_update_alias: 0
-            'entity:save_action:zipang_desktop_games_entity': 0
-          preconfiguration:
-            views_bulk_edit:
-              label_override: ''
-              get_bundles_from_results: 1
-          plugin_id: views_bulk_operations_bulk_form
         field_enable_game:
           id: field_enable_game
           table: zipang_desktop_games_entity__field_enable_game
@@ -732,6 +669,69 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_all_games_category:
+          id: field_all_games_category
+          table: zipang_desktop_games_entity__field_all_games_category
+          field: field_all_games_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Main Lobby Categories (All Games Category)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         operations:
           id: operations
           table: zipang_desktop_games_entity
@@ -1094,6 +1094,53 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        field_all_games_category_target_id:
+          id: field_all_games_category_target_id
+          table: zipang_desktop_games_entity__field_all_games_category
+          field: field_all_games_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: 'Main Lobby Categories (All Games Category)'
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_all_games_category_target_id_op
+            label: 'Main Lobby Categories (All Games Category)'
+            description: ''
+            use_operator: false
+            operator: field_all_games_category_target_id_op
+            identifier: field_all_games_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+              users_all_except_admin_permissions_: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: all_games_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -1164,6 +1211,7 @@ display:
         - url.query_args
         - user
       tags:
+        - 'config:field.storage.zipang_desktop_games_entity.field_all_games_category'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_free_play'
         - 'config:field.storage.zipang_desktop_games_entity.field_enable_game'
         - 'config:field.storage.zipang_desktop_games_entity.field_game_category'

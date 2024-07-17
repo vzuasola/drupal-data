@@ -1,0 +1,21 @@
+uuid: e4d22b3e-cfc7-4e4e-8866-9ea8de34b705
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_thumbnail_size
+    - taxonomy.vocabulary.all_games_category
+  module:
+    - options
+id: taxonomy_term.all_games_category.field_thumbnail_size
+field_name: field_thumbnail_size
+entity_type: taxonomy_term
+bundle: all_games_category
+label: 'Thumbnail Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
