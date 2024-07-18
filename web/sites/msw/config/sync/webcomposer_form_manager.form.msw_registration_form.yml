@@ -14,15 +14,15 @@ weights:
     weight: '-16'
   middle_name:
     weight: '-15'
-  birthdate:
-    weight: '-14'
-  placeofbirth:
-    weight: '-13'
-  pob_city:
-    weight: '-12'
-  outside_ph_select:
-    weight: '-11'
   nationality_select:
+    weight: '-14'
+  birthdate:
+    weight: '-13'
+  placeofbirth:
+    weight: '-12'
+  pob_city:
+    weight: '-11'
+  outside_ph_select:
     weight: '-10'
   source_of_income_select:
     weight: '-9'
@@ -42,15 +42,15 @@ weights:
     weight: '-2'
   username:
     weight: '-1'
-  mobile_phone:
-    weight: '0'
   password:
-    weight: '1'
-  email:
-    weight: '2'
-  password_meter:
-    weight: '3'
+    weight: '0'
   confirm_password:
+    weight: '1'
+  mobile_phone:
+    weight: '2'
+  email:
+    weight: '3'
+  password_meter:
     weight: '4'
   column_1_close:
     weight: '5'
@@ -62,13 +62,13 @@ weights:
     weight: '8'
   security_question_1:
     weight: '9'
-  security_question_2:
-    weight: '10'
   security_answer_1:
-    weight: '11'
-  security_answer_2:
-    weight: '12'
+    weight: '10'
   rfidpin:
+    weight: '11'
+  security_question_2:
+    weight: '12'
+  security_answer_2:
     weight: '13'
   photos_ID:
     weight: '14'
