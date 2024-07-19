@@ -98,23 +98,9 @@ weights:
     weight: '25'
   legal_agreements:
     weight: '26'
-  citizenship:
+  legal_agreements_markup:
     weight: '27'
-  citizenship_markup:
-    weight: '28'
-  terms_and_conditions:
-    weight: '29'
-  terms_and_conditions_markup:
-    weight: '30'
-  gaming_employee_terms:
-    weight: '31'
-  gaming_employee_markup:
-    weight: '32'
-  awareness:
-    weight: '33'
-  awareness_markup:
-    weight: '34'
   registration_notes_markup:
-    weight: '35'
+    weight: '28'
   submit:
-    weight: '36'
+    weight: '29'
