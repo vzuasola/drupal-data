@@ -1,0 +1,19 @@
+uuid: 4c1703ae-352f-4398-879f-c5cb462078b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.games_virtuals
+  module:
+    - user
+id: node.games_virtuals.teaser
+targetEntityType: node
+bundle: games_virtuals
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
