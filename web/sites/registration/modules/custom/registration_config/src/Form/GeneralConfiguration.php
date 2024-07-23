@@ -48,6 +48,7 @@ class GeneralConfiguration extends FormBase
     $this->aadharUploadConfiguration($form);
     $this->generalPasswordStrengthConfig($form);
     $this->calendarConfig($form);
+    $this->geocomplyConfig($form);
 
     return $form;
   }
@@ -949,6 +950,72 @@ class GeneralConfiguration extends FormBase
       '#default_value' => $this->get('weekdays_short'),
       '#maxlength' => 255,
       '#translatable' => TRUE,
+    ];
+  }
+
+
+  private function geocomplyConfig(array &$form) {
+    $form['geocomply'] = [
+      '#type' => 'details',
+      '#title' => $this->t('GeoComply'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+
+    $form['geocomply']['geocomply_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Geocomply integration'),
+      '#default_value' => $this->get('geocomply_enabled'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['geocomply']['geocomply_script_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Script URI'),
+      '#description' => $this->t('Location of Solus script in Geocomply\'s CDN'),
+      '#default_value' => $this->get('geocomply_script_uri'),
+      '#maxlength' => 255,
+    ];
+
+    $form['geocomply']['geocomply_domain_limiter_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Domain Limiter'),
+      '#default_value' => $this->get('geocomply_domain_limiter_enabled'),
+    ];
+
+    $form['geocomply']['geocomply_domain_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('List of domains to enable GeoComply'),
+      '#description' => $this->t('One domain per line, no http(s):// or trailing slashes'),
+      '#default_value' => $this->get('geocomply_domain_list'),
+      '#states' => array(
+        // Only show this field when the 'geocomply_domain_limiter_enabled' checkbox is enabled.
+        'visible' => array(
+          ':input[name="geocomply_domain_limiter_enabled"]' => array(
+            'checked' => TRUE,
+          ),
+        ),
+      ),
+    ];
+
+    $form['geocomply']['geocomply_language_limiter_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Language Limiter'),
+      '#default_value' => $this->get('geocomply_language_limiter_enabled'),
+    ];
+    $form['geocomply']['geocomply_language_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('List of languages to enable GeoComply'),
+      '#description' => $this->t('One languge per line'),
+      '#default_value' => $this->get('geocomply_language_list'),
+      '#states' => array(
+        // Only show this field when the 'geocomply_language_limiter_enabled' checkbox is enabled.
+        'visible' => array(
+          ':input[name="geocomply_language_limiter_enabled"]' => array(
+            'checked' => TRUE,
+          ),
+        ),
+      ),
     ];
   }
 }
