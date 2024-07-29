@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: games-quicklinks
 label: 'Games Quicklinks'
-description: 'Quicklinks for New Games Page'
+description: 'Quicklinks for New Games Lobby'
 locked: false
