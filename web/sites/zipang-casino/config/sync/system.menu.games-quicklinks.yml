@@ -1,0 +1,8 @@
+uuid: 862cb375-5fc8-4761-ba06-7ec6ba94745f
+langcode: ja
+status: true
+dependencies: {  }
+id: games-quicklinks
+label: 'Games Quicklinks'
+description: 'Quicklinks for New Games Page'
+locked: false
