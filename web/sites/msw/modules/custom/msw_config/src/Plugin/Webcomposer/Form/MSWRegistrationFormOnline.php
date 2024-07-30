@@ -1137,109 +1137,15 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           ],
         ],
 
-        'terms_and_conditions' => [
-          'name' => 'Terms and Conditions',
-          'title' => 'Terms and Conditions Title',
-          'type' => 'checkbox',
-          'settings' => [
-            'label' => [
-              '#title' => 'Terms and Conditions Markup',
-              '#type' => 'textarea',
-              '#description' => 'Terms and Conditions',
-              '#default_value' => 'I am at least 21 years old and have read and accepted the Terms and Conditions.',
-            ],
-          ],
-        ],
-
-        'terms_and_conditions_markup' => [
-          'name' => 'Terms and Conditions Markup',
+        'legal_agreements_markup' => [
+          'name' => 'Legal Agreement Checkboxes',
           'type' => 'markup',
           'settings' => [
             'markup' => [
-              '#title' => 'Terms and Conditions Markup',
+              '#title' => 'Legal Agreement Checkboxes Markup',
               '#type' => 'textarea',
-              '#description' => 'Terms and Conditions',
-              '#default_value' => 'I am at least 21 years old and have read and accepted the Terms and Conditions.',
-            ],
-          ],
-        ],
-
-        'citizenship' => [
-          'name' => 'Citizenship',
-          'title' => 'Citizenship Title',
-          'type' => 'checkbox',
-          'settings' => [
-            'label' => [
-              '#title' => 'Citizenship Markup',
-              '#type' => 'textarea',
-              '#description' => 'Citizenship',
-              '#default_value' => 'I confirm I am NOT a Philippine Government Employee.',
-            ],
-          ],
-        ],
-
-        'citizenship_markup' => [
-          'name' => 'Citizenship Markup',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Citizenship Markup',
-              '#type' => 'textarea',
-              '#description' => 'Citizenship',
-              '#default_value' => 'I confirm I am NOT a Philippine Government Employee.',
-            ],
-          ],
-        ],
-
-        'gaming_employee_terms' => [
-          'name' => 'Gaming Employment License',
-          'title' => 'Terms for Gaming Employment License',
-          'type' => 'checkbox',
-          'settings' => [
-            'label' => [
-              '#title' => 'Gaming Employment License Markup',
-              '#type' => 'textarea',
-              '#description' => 'Gaming Employment License Terms',
-            ],
-          ],
-        ],
-
-        'gaming_employee_markup' => [
-          'name' => 'Gaming Employment License Markup',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Gaming Employment License Markup',
-              '#type' => 'textarea',
-              '#description' => 'Terms for Gaming Employment License Markup',
-              '#default_value' => 'I am not a Gaming Employment License (GEL) holder.',
-            ],
-          ],
-        ],
-
-        'awareness' => [
-          'name' => 'Awareness',
-          'title' => 'Awareness Title',
-          'type' => 'checkbox',
-          'settings' => [
-            'label' => [
-              '#title' => 'Awareness Markup',
-              '#type' => 'textarea',
-              '#description' => 'Awareness',
-              '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',
-            ],
-          ],
-        ],
-        
-        'awareness_markup' => [
-          'name' => 'Awareness Markup',
-          'type' => 'markup',
-          'settings' => [
-            'markup' => [
-              '#title' => 'Awareness Markup',
-              '#type' => 'textarea',
-              '#description' => 'Awareness',
-              '#default_value' => 'I am aware that this site uses cookies. By continuing to use this site, I agree to the use of cookies and its Privacy Policy.',
+              '#description' => 'Legal Agreement Checkboxes Markup',
+              '#default_value' => '',
             ],
           ],
         ],

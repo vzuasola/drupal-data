@@ -23,6 +23,9 @@ settings:
     -
       value: mobile-nextbet-live-dealer
       label: 'Live Dealer'
+    -
+      value: mobile-nextbet-virtuals
+      label: Virtuals
   allowed_values_function: ''
 module: options
 locked: false

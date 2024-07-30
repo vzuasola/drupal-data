@@ -1,24 +1,26 @@
-uuid: 9176962b-2ffa-4f3b-be2a-2237f97be6da
+uuid: 128507c4-8195-48f5-9f62-8777076f279d
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
+    - field.storage.node.field_redirection_url
+    - field.storage.node.field_ribbon_text
+    - field.storage.node.field_thumbnail
+    - node.type.games_virtuals
   module:
-    - draggableviews
-    - msw_legal_agreement
+    - node
     - rest
+    - rest_views
     - serialization
-    - webcomposer_rest_extra
-_core:
-  default_config_hash: tQN-CS06Kc1mLsiaqYCANjdR8Qa3xirz6O7QDMuireQ
-id: legal_agreement_tiles_entity_api
-label: 'Legal Agreement Tiles Entity API'
+    - user
+    - webcomposer_optimized_rest
+id: virtual_games
+label: 'Virtual Games'
 module: views
-description: ''
+description: 'List of Virtual Games'
 tag: ''
-base_table: msw_legal_agreement_field_data
-base_field: id
+base_table: node_field_data
+base_field: nid
 core: 8.x
 display:
   default:
@@ -28,8 +30,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -52,32 +55,25 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: mini
         options:
+          items_per_page: 10
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            name: name
-          info:
-            name:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
+        type: serializer
       row:
         type: fields
         options:
@@ -86,13 +82,10 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        name:
-          table: msw_legal_agreement_field_data
-          field: name
-          id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
+        field_redirection_url:
+          id: field_redirection_url
+          table: node__field_redirection_url
+          field: field_redirection_url
           relationship: none
           group_type: group
           admin_label: ''
@@ -129,7 +122,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -139,7 +132,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings: {  }
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -150,14 +144,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        operations:
-          id: operations
-          table: msw_legal_agreement
-          field: operations
+          plugin_id: field
+        field_thumbnail_export:
+          id: field_thumbnail_export
+          table: node__field_thumbnail
+          field: field_thumbnail_export
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Operations links'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -190,7 +185,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -198,17 +193,29 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: false
-          entity_type: msw_legal_agreement
-          plugin_id: entity_operations
-        draggableviews:
-          id: draggableviews
-          table: msw_legal_agreement_field_data
-          field: draggableviews
+          click_sort_column: target_id
+          type: image_export
+          settings:
+            image_style: ''
+            export_alt: 1
+            export_title: false
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
+        field_ribbon_text_export:
+          id: field_ribbon_text_export
+          table: node__field_ribbon_text
+          field: field_ribbon_text_export
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Registration Legal Agreement'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -241,7 +248,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -249,105 +256,76 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: msw_legal_agreement
-          entity_field: id
-          plugin_id: draggable_views_field
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: 0
+          plugin_id: field_export
       filters:
-        langcode:
-          id: langcode
-          table: msw_legal_agreement_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
             operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: msw_legal_agreement
-          entity_field: langcode
-          plugin_id: language
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            games_virtuals: games_virtuals
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          granularity: second
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      title: 'Legal Agreement Ordering'
+      title: Virtuals
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
         - url.query_args
-      tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: 'Legal Agreement Ordering'
-    position: 2
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      path: admin/config/msw_legal_agreement/ordering
-      menu:
-        type: normal
-        title: 'Registration Legal Agreement Sorting'
-        description: 'Sorting for the Registration Legal Agreement'
-        expanded: false
-        parent: msw_legal_agreement.list
-        weight: 99
-        context: '0'
-        menu_name: admin
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_redirection_url'
+        - 'config:field.storage.node.field_ribbon_text'
+        - 'config:field.storage.node.field_thumbnail'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -355,24 +333,49 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/legal_agreement
+      path: api/virtual_games
       pager:
         type: none
         options:
           offset: 0
       style:
-        type: node_list_serializer
+        type: optimized_field_serializer
         options:
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
           pager: 0
       row:
-        type: data_entity
-        options: {  }
+        type: data_field
+        options:
+          field_options:
+            field_redirection_url:
+              alias: url
+              raw_output: false
+            field_thumbnail_export:
+              alias: thumbnail
+              raw_output: false
+            field_ribbon_color_export:
+              alias: ribbon_color
+              raw_output: false
+            field_ribbon_text_export:
+              alias: ribbon_text
+              raw_output: false
+            field_ribbon_text_color:
+              alias: ribbon_text_color
+              raw_output: false
+            field_target:
+              alias: target
+              raw_output: false
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-      tags: {  }
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_redirection_url'
+        - 'config:field.storage.node.field_ribbon_text'
+        - 'config:field.storage.node.field_thumbnail'

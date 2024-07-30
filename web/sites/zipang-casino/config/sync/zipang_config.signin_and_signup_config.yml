@@ -33,15 +33,15 @@ game_information_body:
   format: basic_html
 all_games_text: すべてのゲームはこちら
 all_games_link: '/games?provider=all'
-signup_firstname_default_value: taro
-signup_lastname_default_value: yamada
+signup_firstname_default_value: 'First Name'
+signup_lastname_default_value: 'Last Name'
 signup_gender_default_value: M
 signup_day_default_value: '1'
 signup_month_default_value: '1'
 signup_year_default_value: '1990'
 signup_phonenum_default_value: '123456789'
 signup_country_default_value: '109'
-signup_zip_default_value: '1000000'
-signup_state_default_value: tokyo
-signup_city_default_value: chiyoda
-signup_housenum_default_value: '123'
+signup_zip_default_value: '0000000'
+signup_state_default_value: Prefecture
+signup_city_default_value: Town/City
+signup_housenum_default_value: Address
