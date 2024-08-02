@@ -15,6 +15,7 @@ dependencies:
     - field.field.paragraph.game_list.field_target
     - field.field.paragraph.game_list.field_use_game_loader
     - field.field.paragraph.game_list.field_use_lobby
+    - field.field.paragraph.game_list.field_visibility
     - image.style.thumbnail
     - paragraphs.paragraphs_type.game_list
   module:
@@ -127,6 +128,13 @@ content:
     region: content
   field_use_lobby:
     weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_visibility:
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
