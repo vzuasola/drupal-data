@@ -6,9 +6,12 @@ dependencies:
     - field.field.paragraph.promotion_games_list.field_game_image
     - field.field.paragraph.promotion_games_list.field_game_title
     - field.field.paragraph.promotion_games_list.field_game_url
+    - field.field.paragraph.promotion_games_list.field_games_link_target
+    - field.field.paragraph.promotion_games_list.field_visibility
     - paragraphs.paragraphs_type.promotion_games_list
   module:
     - image
+    - options
 id: paragraph.promotion_games_list.default
 targetEntityType: paragraph
 bundle: promotion_games_list
@@ -38,5 +41,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_games_link_target:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_visibility:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
 hidden: {  }

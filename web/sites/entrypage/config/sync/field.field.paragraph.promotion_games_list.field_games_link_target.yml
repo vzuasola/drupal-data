@@ -1,4 +1,4 @@
-uuid: e99d8c9d-5493-473f-93d7-a49dbc7392b9
+uuid: 13ccea8d-b2d6-4861-900c-98bbdffd3764
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: promotion_games_list
 label: 'Games Link Target'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: _top

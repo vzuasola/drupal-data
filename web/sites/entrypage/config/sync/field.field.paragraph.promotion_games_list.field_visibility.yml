@@ -1,0 +1,23 @@
+uuid: 182968ec-f346-4008-a2b2-1cfe9f2fd81d
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_visibility
+    - paragraphs.paragraphs_type.promotion_games_list
+id: paragraph.promotion_games_list.field_visibility
+field_name: field_visibility
+entity_type: paragraph
+bundle: promotion_games_list
+label: Visibility
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
