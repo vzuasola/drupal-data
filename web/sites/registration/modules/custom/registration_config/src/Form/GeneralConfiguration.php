@@ -267,17 +267,10 @@ class GeneralConfiguration extends FormBase
     ];
     $form['integration']['jpay_api'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('JPAY API Endpoint'),
-      '#description' => $this->t('Endpoint for JPAY API'),
+      '#title' => $this->t('JPAY API Endpoint Mappings'),
+      '#description' => $this->t('Endpoint Mappings for JPAY API'),
       '#default_value' => $this->get('jpay_api'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-    $form['integration']['jpay_siteid'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('JPAY SiteId'),
-      '#description' => $this->t('JPay Site ID'),
-      '#default_value' => $this->get('jpay_siteid'),
       '#translatable' => TRUE,
     ];
   }
