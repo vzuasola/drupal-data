@@ -74,7 +74,7 @@ mbtc_restriction_message: "Bitcoin Currency is available only in DafaSports, Liv
 iovation_portal_ids: '22,123,26,128,29,131,48,141,2,105,9,111,27,129,46,139,3,106,10,112,28,130,47,140'
 enable_reg_api_auth: 1
 reg_api_key: '%k;-y2&mAy*B.z7)Hu$cX!'
-jpay_api: '*|http://cms-jpayws.games.prd/api/cashier'
+jpay_api: '*|1|http://cms-jpayws.games.prd/api/cashier'
 forbidden_request_error_message: 'This is a forbidden request.'
 jpay_siteid: ''
 upload_image_server: 'https://cms-imgserver.ricecashasia.com/depositslip/save'
