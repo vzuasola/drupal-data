@@ -965,8 +965,7 @@ class GeneralConfiguration extends FormBase
     $form['geocomply']['geocomply_enabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Geocomply integration'),
-      '#default_value' => $this->get('geocomply_enabled'),
-      '#translatable' => TRUE,
+      '#default_value' => $this->get('geocomply_enabled')
     ];
 
     $form['geocomply']['geocomply_script_uri'] = [
