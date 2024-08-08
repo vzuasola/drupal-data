@@ -8115,6 +8115,15 @@ display:
       display_extenders: {  }
       path: api/game_list_v4_games
       relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: zipang_desktop_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
         field_game_provider_export:
           id: field_game_provider_export
           table: zipang_desktop_games_entity__field_game_provider
@@ -10009,6 +10018,20 @@ display:
           1: AND
           2: OR
       sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
           table: zipang_desktop_games_entity__field_game_title
