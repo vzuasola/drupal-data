@@ -266,18 +266,11 @@ class GeneralConfiguration extends FormBase
       '#translatable' => TRUE,
     ];
     $form['integration']['jpay_api'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('JPAY API Endpoint'),
-      '#description' => $this->t('Endpoint for JPAY API'),
+      '#type' => 'textarea',
+      '#title' => $this->t('JPAY API Endpoint Mappings'),
+      '#description' => $this->t('Endpoint Mappings for JPAY API'),
       '#default_value' => $this->get('jpay_api'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-    $form['integration']['jpay_siteid'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('JPAY SiteId'),
-      '#description' => $this->t('JPay Site ID'),
-      '#default_value' => $this->get('jpay_siteid'),
       '#translatable' => TRUE,
     ];
   }
@@ -965,8 +958,7 @@ class GeneralConfiguration extends FormBase
     $form['geocomply']['geocomply_enabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Geocomply integration'),
-      '#default_value' => $this->get('geocomply_enabled'),
-      '#translatable' => TRUE,
+      '#default_value' => $this->get('geocomply_enabled')
     ];
 
     $form['geocomply']['geocomply_script_uri'] = [

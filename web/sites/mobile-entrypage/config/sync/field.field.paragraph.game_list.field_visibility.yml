@@ -1,0 +1,23 @@
+uuid: 0a763d25-1a4a-47d5-add6-c82a8ca703e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_visibility
+    - paragraphs.paragraphs_type.game_list
+id: paragraph.game_list.field_visibility
+field_name: field_visibility
+entity_type: paragraph
+bundle: game_list
+label: Visibility
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

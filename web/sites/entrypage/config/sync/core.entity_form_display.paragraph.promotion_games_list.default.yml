@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.promotion_games_list.field_game_image
     - field.field.paragraph.promotion_games_list.field_game_title
     - field.field.paragraph.promotion_games_list.field_game_url
+    - field.field.paragraph.promotion_games_list.field_games_link_target
+    - field.field.paragraph.promotion_games_list.field_visibility
     - image.style.thumbnail
     - paragraphs.paragraphs_type.promotion_games_list
   module:
@@ -38,6 +40,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_games_link_target:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_visibility:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   translation:
     weight: 10

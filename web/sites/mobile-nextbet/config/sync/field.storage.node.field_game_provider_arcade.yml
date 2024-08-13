@@ -32,6 +32,9 @@ settings:
     -
       value: jsystem
       label: JSystem
+    -
+      value: ruby_play
+      label: 'Ruby Play'
   allowed_values_function: ''
 module: options
 locked: false

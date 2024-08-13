@@ -1,4 +1,4 @@
-uuid: 010fdf68-15f7-46e4-af71-8c70c94af949
+uuid: e1420449-1961-4bca-a737-c3ce24b6b722
 langcode: en
 status: true
 dependencies:
@@ -18,7 +18,7 @@ settings:
       value: _blank
       label: 'New Tab'
     -
-      value: window
+      value: _window
       label: 'New Window'
   allowed_values_function: ''
 module: options

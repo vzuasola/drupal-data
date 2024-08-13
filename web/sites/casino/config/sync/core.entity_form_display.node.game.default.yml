@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_preview_display_only
     - field.field.node.game.field_ribbon_configuration
+    - field.field.node.game.field_table_id
     - image.style.thumbnail
     - node.type.game
   module:
@@ -52,7 +53,7 @@ third_party_settings:
         - field_play_for_fun_toggle
         - field_game_provider
         - field_game_code
-        - field_game_type
+        - field_table_id
         - field_game_platform
       parent_name: ''
       weight: 10
@@ -213,6 +214,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_table_id:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   langcode:
     type: language_select
