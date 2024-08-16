@@ -38,6 +38,9 @@ settings:
     -
       value: jsystem
       label: JSystem
+    -
+      value: ezugi
+      label: 'Ezugi Gaming'
   allowed_values_function: ''
 module: options
 locked: false
