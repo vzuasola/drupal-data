@@ -498,7 +498,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/zipang_game_promotions
+      path: admin/structure/zipang_game_promotions_entity
     cache_metadata:
       max-age: 0
       contexts:
