@@ -5,6 +5,8 @@ dependencies:
   module:
     - msw_legal_agreement
     - text
+_core:
+  default_config_hash: O2IvJ-6iKh5WDl_0GCxIN1s0yaFtPkYwFbg5h8dlMuA
 id: msw_legal_agreement.field_legal_agreement_text
 field_name: field_legal_agreement_text
 entity_type: msw_legal_agreement

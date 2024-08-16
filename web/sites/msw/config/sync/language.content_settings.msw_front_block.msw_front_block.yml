@@ -8,6 +8,10 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 9fw82Gandd9ay2dQLF2sthCAAvm2QV4FGxRtUtC_c-8
 id: msw_front_block.msw_front_block
 target_entity_type_id: msw_front_block
 target_bundle: msw_front_block

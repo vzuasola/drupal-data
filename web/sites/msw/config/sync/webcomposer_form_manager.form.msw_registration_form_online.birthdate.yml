@@ -1,12 +1,12 @@
 field_settings:
-  label: ''
+  label: 'Date of Birth'
   placeholder: 'Date of Birth'
   date-format: YYYY/MM/DD
   annotation: ''
 field_validations:
   required:
     enable: 1
-    error_message: 'Field should be required'
+    error_message: 'This field is required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -54,7 +54,7 @@ field_validations:
     parameters:
       regex_value: ''
   valid_date:
-    enable: 0
+    enable: 1
     error_message: 'Date is invalid'
   must_not_match:
     enable: 0

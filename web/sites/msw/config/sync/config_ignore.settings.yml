@@ -11,18 +11,24 @@ ignored_config_entities:
   18: system.action.user_add_role_action.test
   20: system.action.user_remove_role_action.test
   22: user.role.test
-  24: 'webcomposer_form_manager.form.msw_registration_form.*'
-  26: 'webcomposer_form_manager.form.msw_reset_password_form.*'
-  28: "field.field.paragraph.right_side_block_content.field_image\t"
-  30: field.field.left_floating_banner_entity.left_floating_banner_entity.field_image
-  32: field.field.paragraph.right_side_block_content.field_image
-  34: 'webcomposer_form_manager.form.msw_forgot_password_form.*'
-  36: 'language.content_settings.*'
-  38: webcomposer_config.announcements_configuration
-  40: webcomposer_config.footer_configuration
-  42: webcomposer_config.header_configuration
-  44: webcomposer_config.login_configuration
-  46: msw_config.general_configuration
-  48: msw_terms_of_use.msw_terms_of_use_configuration
+  24: 'webcomposer_form_manager.form.msw_reset_password_form.*'
+  26: "field.field.paragraph.right_side_block_content.field_image\t"
+  28: field.field.left_floating_banner_entity.left_floating_banner_entity.field_image
+  30: field.field.paragraph.right_side_block_content.field_image
+  32: 'webcomposer_form_manager.form.msw_forgot_password_form.*'
+  34: 'language.content_settings.*'
+  36: webcomposer_config.announcements_configuration
+  38: webcomposer_config.footer_configuration
+  40: webcomposer_config.header_configuration
+  42: webcomposer_config.login_configuration
+  44: msw_config.general_configuration
+  46: 'config_ignore.settings.*'
+  48: core.extension
+  50: '~field.storage.msw_legal_agreement.*'
+  52: '~field.storage.msw_legal_agreement.field_legal_agreement_text.*'
+  54: '~field.field.msw_legal_agreement.msw_legal_agreement.field_legal_agreement_text.*'
+  56: '~core.entity_view_display.msw_legal_agreement.msw_legal_agreement.default.*'
+  58: '~core.entity_form_display.msw_legal_agreement.msw_legal_agreement.default.*'
+  60: '~views.view.legal_agreement_tiles_entity_api.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

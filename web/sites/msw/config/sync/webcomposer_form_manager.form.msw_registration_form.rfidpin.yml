@@ -1,6 +1,6 @@
 field_settings:
   label: 'RFID Pin'
-  placeholder: 'RFID PIN'
+  placeholder: 'RFID PIN (6-digit code)'
   annotation: ''
 field_validations:
   required:

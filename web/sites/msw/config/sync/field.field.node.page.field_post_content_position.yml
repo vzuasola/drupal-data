@@ -1,0 +1,21 @@
+uuid: cefaf08d-096b-4736-9e74-d8906c0886c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_content_position
+    - node.type.page
+  module:
+    - options
+id: node.page.field_post_content_position
+field_name: field_post_content_position
+entity_type: node
+bundle: page
+label: 'Post Content Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

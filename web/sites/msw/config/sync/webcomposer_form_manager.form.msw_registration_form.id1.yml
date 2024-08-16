@@ -5,8 +5,8 @@ field_settings:
   choices: "11|Driver’s License\r\n101|Alien/Immigrant Certificate of Registration\r\n102|Firearms License issued by PNP\r\n103|Integrated Bar of the Philippines ID\r\n104|National Bureau of Investigation (NBI) Clearance\r\n105|Overseas Filipino Worker (OFW) ID\r\n106|Overseas Workers Welfare Administration (OWWA) ID \r\n107|Passport including foreign issued\r\n108|PhilHealth ID\r\n109|Police Clearance Certificate\r\n110|Postal ID\r\n111|Professional Regulations Commission (PRC) ID\r\n112|Seaman's Book\r\n113|Senior Citizen Card\r\n114|Social Security System (SSS) Card\r\n115|Tax Identification (TIN) ID\r\n116|Unified Multi-Purpose ID (UMID)\r\n117|Voter's ID\r\n118|Philippine National ID (PhilSys)\r\n119|Marina ID"
 field_validations:
   required:
-    enable: 0
-    error_message: 'Field should be required'
+    enable: 1
+    error_message: 'This field is required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'

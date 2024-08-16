@@ -15,7 +15,7 @@ field_validations:
     enable: 1
     error_message: 'Field should be alphanumeric'
     parameters:
-      spaces: 1
+      spaces: 0
   alpha_multi:
     enable: 0
     error_message: 'Value is not a valid multilingual character'

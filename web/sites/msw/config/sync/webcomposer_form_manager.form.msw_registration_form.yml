@@ -85,12 +85,12 @@ weights:
   btn_upload_id_2:
     weight: '20'
   upload_id_1:
-    weight: '21'
+    weight: '20'
   upload_id_2:
-    weight: '22'
+    weight: '20'
   terms_and_conditions:
-    weight: '23'
+    weight: '20'
   submit:
-    weight: '24'
+    weight: '20'
   column_2_close:
-    weight: '25'
+    weight: '20'
