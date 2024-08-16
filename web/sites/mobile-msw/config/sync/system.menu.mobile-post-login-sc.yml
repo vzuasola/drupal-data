@@ -1,0 +1,8 @@
+uuid: 392fc327-3af0-43fc-afa9-a5c10b5e74c9
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-post-login-sc
+label: 'Mobile Post Login SC'
+description: ''
+locked: false

@@ -1,4 +1,8 @@
-als_url: 'https://als-dafabet-in1.elysium-dfbt.com/m/en'
-als_cookie_url_pre: "mobileUrl|https://https://qa1-mobile-entrypagewww.elysium-dfbt.com/en\r\nlogin|https://qa1-mobile-entrypagewww.elysium-dfbt.com/en/login?product=als\r\nlogout|https://qa1-mobile-entrypagewww.elysium-dfbt.com/en/logout\r\nregistration|https://qa1-www.elysium-dfbt.com/en/join\r\ndesktopUrl|https://qa1-www.elysium-dfbt.com/en/"
-als_cookie_url_post: "cashier|[dafabet_mobile:cashier_url][dafabet_mobile:als_cashier_deep_link]\r\ncashierDeposit|https://qa1-mcashier.elysium-dfbt.com/en/alsports/transaction/deposit\r\ncashierDeposit|https://qa1-mcashier.elysium-dfbt.com/en/alsports/transaction/deposit\r\ncashierTransfer|https://qa1-mcashier.elysium-dfbt.com/en/alsports/transaction/transfer\r\ncashierCashPoints|https://qa1-mcashier.elysium-dfbt.com/en/alsports/transaction/cashpoints\r\ncashierWithdrawal|https://qa1-mcashier.elysium-dfbt.com/en/alsports/transaction/withdrawal"
+als_url: 'https://sports.dafa8et08.com/m/en'
+als_cookie_url_pre: "mobileUrl|https://m.msw.ph/en\r\nlogin|https://m.msw.ph/en/login?product=als\r\nlogout|https://m.msw.ph/en/logout\r\nregistration|https://m.msw.ph/en/join\r\ndesktopUrl|https://m.msw.ph/en/"
+als_cookie_url_post: "cashier|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierDeposit|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierTransfer|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierCashPoints|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierWithdrawal|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]"
 als_enable_domain: 0
+product_instance_id: sports
+product_integration_id: als
+product_login_via: mobile-msw-sports
+registration_url: '{domain:registration_link}sports-df[query:(regvia=26&{tracking})]'

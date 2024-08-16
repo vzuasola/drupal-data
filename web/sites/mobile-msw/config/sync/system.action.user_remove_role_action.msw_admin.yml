@@ -1,0 +1,14 @@
+uuid: eb8c0cde-612a-4b45-8b1f-26700df5eb83
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.msw_admin
+  module:
+    - user
+id: user_remove_role_action.msw_admin
+label: 'Remove the MSW Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: msw_admin

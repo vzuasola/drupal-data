@@ -45,12 +45,11 @@ third_party_settings:
       weight: 6
       format_type: tab
       format_settings:
-        label: 'Scheduler Settings'
+        id: ''
+        classes: ''
         formatter: closed
         description: ''
         required_fields: true
-        id: scheduler-settings
-        classes: ''
       label: 'Scheduler Settings'
     group_pre_banner_fields:
       children:
@@ -64,11 +63,10 @@ third_party_settings:
       weight: 3
       format_type: fieldset
       format_settings:
-        label: 'Pre Banner Fields'
+        id: ''
+        classes: ''
         description: ''
         required_fields: true
-        id: pre-banner-fields
-        classes: ''
       label: 'Pre Banner Fields'
     group_post_banner_fields:
       children:
@@ -84,11 +82,10 @@ third_party_settings:
       weight: 4
       format_type: fieldset
       format_settings:
-        label: 'Post Banner Fields'
+        id: ''
+        classes: ''
         description: ''
         required_fields: true
-        id: post-banner-fields
-        classes: ''
       label: 'Post Banner Fields'
     group_pr:
       children:
@@ -100,11 +97,11 @@ third_party_settings:
       weight: 8
       format_type: tab
       format_settings:
-        label: 'Product Ribbon'
+        id: ''
+        classes: ''
+        formatter: closed
         description: ''
         required_fields: true
-        id: product-ribbon
-        classes: ''
       label: 'Product Ribbon'
 _core:
   default_config_hash: grNge8IdAFipcGU_JTCGQyYAXWDj5WKraQLVYoMygN8
