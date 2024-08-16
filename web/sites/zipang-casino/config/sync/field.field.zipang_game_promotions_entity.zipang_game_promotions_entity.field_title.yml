@@ -1,0 +1,20 @@
+uuid: cc718b62-1479-4b70-ae46-a5dfb97481e9
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_game_promotions_entity.field_title
+  module:
+    - zipang_game_promotions
+id: zipang_game_promotions_entity.zipang_game_promotions_entity.field_title
+field_name: field_title
+entity_type: zipang_game_promotions_entity
+bundle: zipang_game_promotions_entity
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
