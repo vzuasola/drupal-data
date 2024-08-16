@@ -7,6 +7,8 @@ dependencies:
   module:
     - msw_legal_agreement
     - text
+_core:
+  default_config_hash: IYfkJ9d812CsAw7H_1GIdj27CHN5rPZUCov6XnshLGI
 id: msw_legal_agreement.msw_legal_agreement.default
 targetEntityType: msw_legal_agreement
 bundle: msw_legal_agreement

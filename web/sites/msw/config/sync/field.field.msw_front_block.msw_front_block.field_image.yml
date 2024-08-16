@@ -6,8 +6,8 @@ dependencies:
     - field.storage.msw_front_block.field_image
   module:
     - content_translation
-    - msw_front_blocks
     - image
+    - msw_front_blocks
 third_party_settings:
   content_translation:
     translation_sync:

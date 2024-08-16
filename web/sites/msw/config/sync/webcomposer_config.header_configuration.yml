@@ -1,19 +1,19 @@
-join_now_text: 'Join Nows'
+join_now_text: 'Join Now'
 join_now_link: 'https://qa1-www.elysium-dfbt.com/en/casino/join{tracking.token}'
-login_issue_text: 'Cant login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: 'Can''t login?'
+login_issue_link: 'https://www.msw.ph/en/cant-login'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: 'Error Retrieving.'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
-welcome_text: '{username}'
-profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+welcome_text: 'Welcome, {username}'
+profile_link: 'https://www.msw.ph/my-account'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+lobby_page_title: MegaSportsWorld
 critical_announcement: '0'
 critical_announcement_content:
   value: "<p>This is a critical announcement test test test</p>\r\n"
@@ -22,5 +22,36 @@ news_announcement: '0'
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports"
 balance_error_text_product: N/A
+header_settings_tab__active_tab: edit-cashier-group
+logo_title: MSW
+logo_url: /en
+mobile_logo_url: /en
+registration_link: 'https://www.msw.ph/en/register'
+registration_link_mobile: ''
+password_mask_toggle: 0
+caps_lock_toggle: 0
+capslock_notification: 'Caps lock is on'
+cashier_link: /cashier
+login_join_now_text: LOGIN
+default_cashier_link: 'https://pay.msw.ph/c/msw/en[query:(ticket={auth.token}&title=headerPopup&width=820&height=720)]'
+cashier_mapping: ''
+default_mcashier_link: /cashier
+mcashier_link_target: _self
+mcashier_mapping: ''
+balance_toggle: 1
+product_balance_label: MSW
+product_balance_id: ''
+total_balance_label: 'Total Account Balance'
+balance_mapping: ''
+balance_label_override: ''
+currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,MMK,KHR,PHP\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC,LAK,MMK,KHR,PHP"
+excluded_balance_mapping: ''
+currency_label_mapping: PHP|PHP
+value: null
+format: null
+promotion_page_title: promotion
+links_title: quicklinks
+use_more_translation: 0
+more: More

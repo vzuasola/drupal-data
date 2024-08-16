@@ -1,5 +1,5 @@
 field_settings:
-  markup: "<p>Please enter the OTP sent to your mobile number (valid for 10 minutes) or contact our Customer Support at support@megasportsworld.com for assistance</p>\r\n\r\n<p>You can request for a new OTP after 5 minutes</p>\r\n"
+  markup: "<p>Account has been successfully created.</p>\r\n\r\n<p>Please enter the OTP sent to your mobile number <strong>(valid for 10 minutes)</strong> for final verification.</p>\r\n\r\n<p>You can request for a new OTP after 5 minutes or contact our Customer Support through the <a href=\"https://contact.msw.ph/\" style=\"color:#EB6123\">MVP video call</a> for assistance.</p>\r\n"
 field_validations:
   required:
     enable: 0

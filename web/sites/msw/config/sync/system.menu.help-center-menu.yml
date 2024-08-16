@@ -1,8 +1,8 @@
-uuid: ad4d9a61-a078-411f-9a5e-cdff7835d9cf
+uuid: 376f6368-1253-4840-afa0-d762900dcfaa
 langcode: en
 status: true
 dependencies: {  }
 id: help-center-menu
-label: 'Help Center'
+label: 'Help Center Menu'
 description: 'The floating menu at the bottom of the front page'
 locked: false

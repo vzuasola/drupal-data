@@ -15,7 +15,7 @@ bundle: webcomposer_slider_v2_entity
 label: 'Disable in Tablet'
 description: 'Check if the slider entry is only available in Desktop.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: downloadable_entity.downloadable_entity
 target_entity_type_id: downloadable_entity
 target_bundle: downloadable_entity

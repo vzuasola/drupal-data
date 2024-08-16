@@ -1,0 +1,21 @@
+uuid: 9bd19ee5-fa2b-4ce8-ad9e-701acb058575
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_position
+    - node.type.page
+  module:
+    - options
+id: node.page.field_content_position
+field_name: field_content_position
+entity_type: node
+bundle: page
+label: 'Pre Content Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
