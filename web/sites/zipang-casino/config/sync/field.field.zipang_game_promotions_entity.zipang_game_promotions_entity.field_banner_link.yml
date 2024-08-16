@@ -1,0 +1,20 @@
+uuid: d546ffdc-c3e6-4a0e-a59e-9094001be6a0
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_game_promotions_entity.field_banner_link
+  module:
+    - zipang_game_promotions
+id: zipang_game_promotions_entity.zipang_game_promotions_entity.field_banner_link
+field_name: field_banner_link
+entity_type: zipang_game_promotions_entity
+bundle: zipang_game_promotions_entity
+label: 'Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
