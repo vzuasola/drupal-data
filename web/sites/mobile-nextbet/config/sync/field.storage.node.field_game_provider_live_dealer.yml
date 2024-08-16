@@ -39,7 +39,7 @@ settings:
       value: jsystem
       label: JSystem
     -
-      value: ezugi
+      value: ezugi_gaming
       label: 'Ezugi Gaming'
   allowed_values_function: ''
 module: options
