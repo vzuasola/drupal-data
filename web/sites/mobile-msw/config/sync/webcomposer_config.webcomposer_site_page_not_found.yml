@@ -1,5 +1,5 @@
 page_not_found_settings_tab__active_tab: edit-products-settings
-page_not_found_product_list: "mobile-entrypage\r\nmobile-soda-casino"
+page_not_found_product_list: "mobile-entrypage\r\nmobile-soda-casino\r\nmobile-msw"
 page_not_found_title_casino: ''
 page_not_found_content_casino:
   value: ''
@@ -21,4 +21,8 @@ page_not_found_content_mobile-entrypage:
 page_not_found_title_mobile-soda-casino: 'soda casino title'
 page_not_found_content_mobile-soda-casino:
   value: "<div class=\"container\">\r\n<h3 class=\"text-align-center\"><strong>Ooops, that was unexpected.</strong></h3>\r\n\r\n<p class=\"text-align-center\">The page doesn't exist. You may have followed a bad link or typed the address (URL) incorrectly. We'll help you get around though.<br />\r\n&nbsp;</p>\r\n\r\n<p class=\"text-align-center\"><a class=\"btn btn-yellow btn-small mobile-soda-casino-btn left\" href=\"javascript:history.go(-1)\">GO BACK</a> <a class=\"btn btn-yellow btn-small mobile-soda-casino-btn right\" href=\"/soda\">HOME</a></p>\r\n</div>\r\n"
+  format: basic_html
+page_not_found_title_mobile-msw: 'Ooops, that was unexpected.'
+page_not_found_content_mobile-msw:
+  value: "<p><img alt=\"404.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"184\" src=\"/en/2020-06/404.png\" width=\"1921\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: basic_html

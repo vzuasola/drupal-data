@@ -1,0 +1,15 @@
+title: お知らせ
+empty: 新しいお知らせはございません。
+expired_message: こちらのプロモーションは期限切れです。
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+9'
+dismiss_button_label: 'Dismiss All'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'Yes'
+dismiss_no: 'No'
+product_label_generic: Generic
+cta_label_ok: OK
+cta_label_accept: 承認
+cta_label_decline: 拒否

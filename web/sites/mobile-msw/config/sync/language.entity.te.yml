@@ -1,0 +1,16 @@
+uuid: 89d736e1-17ca-4520-89be-d643cd9838d9
+langcode: te
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: తెలుగు
+    webcomposer_language_hidden: 0
+id: te
+label: Telugu
+direction: ltr
+weight: 1
+locked: false
