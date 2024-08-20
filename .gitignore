@@ -8,7 +8,6 @@ web/core
 !/logs/.gitkeep
 
 # Ignore Drupal's file directory
-web/sites/*/files
 web/sites/*/files/*
 !web/sites/*/files/.htaccess
 
