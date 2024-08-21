@@ -34,7 +34,7 @@ class ZipangGameLobbyConfig extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Game Lobby Quicklinks'),
+      '#title' => t('Game Lobby Config'),
     ];
 
     $this->sectionPageSetting($form);
@@ -48,7 +48,7 @@ class ZipangGameLobbyConfig extends FormBase {
   private function sectionPageSetting(array &$form) {
     $form['page_setting'] = [
       '#type' => 'details',
-      '#title' => t('PGame Lobby Quicklinks'),
+      '#title' => t('Game Lobby Quicklinks'),
       '#group' => 'advanced',
     ];
 
