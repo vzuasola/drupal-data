@@ -6,7 +6,7 @@ error_message_blank_password: 'Password is required.'
 error_message_blank_passname: 'Username and Password is required.'
 error_message_invalid_passname: 'Sorry the Username and Password you entered do not match. Please try again.'
 error_message_service_not_available: 'Service not available.'
-error_message_account_suspended: 'Your account is closed. Please contact customer support.'
+error_message_account_suspended: 'This account is suspended. <br>For assistance, <a href="https://contact.msw.ph?t=ACCNT_ACTVN_REACTVN_DEPO_CONCERN">Click here</a> or send us a message via <a href="http://m.me/megasportsworld">Facebook Messenger</a> '
 error_message_account_locked: 'Your account has been locked due to failed login attempts. Please contact Customer Support.'
 session_maxtime: '60'
 autologout_box_title: REMINDER
@@ -24,11 +24,12 @@ _core:
   default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
 notification_window_title: 'Session Timeout'
 mobile_login_url: '#'
-advanced__active_tab: edit-mobile-login
+advanced__active_tab: edit-login-form-error-messages-details
 login_page_blurb: ''
 value: null
 format: null
 mobile_login_button_label: LOGIN/JOIN
 rememberme_label: 'Remember Username'
 error_message_restricted_country: 'You are accessing our site from a prohibited location. Please contact our Customer Support. '
-mobile_cant_login_url: ''
+mobile_cant_login_url: /cant-login
+error_message_account_created: 'Pending Account Activation'

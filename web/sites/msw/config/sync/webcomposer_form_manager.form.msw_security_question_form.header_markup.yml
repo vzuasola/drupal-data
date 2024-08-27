@@ -1,5 +1,5 @@
 field_settings:
-  markup: "<p>For account security, please answer the security question below</p>\r\n"
+  markup: "<p>For account security, please answer the security question below.</p>\r\n\r\n<p>If you can't remember the answer to your security question, please contact our Customer Support at <a href=\"/emailto: support@megasportsworld.com\" style=\"color: #eb6123\" target=\"_blank\">support@megasportsworld.com</a> for assistance.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
 field_validations:
   required:
     enable: 0

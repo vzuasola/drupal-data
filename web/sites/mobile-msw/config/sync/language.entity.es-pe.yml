@@ -1,0 +1,15 @@
+uuid: 651a8818-2c58-4549-9717-eaaf8f126c14
+langcode: es-pe
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 1
+id: es-pe
+label: 'Spanish, Peru'
+direction: ltr
+weight: 7
+locked: false

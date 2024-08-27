@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_banner_content
     - field.field.node.page.field_banner_link
     - field.field.node.page.field_banner_link_target
+    - field.field.node.page.field_content_position
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
     - field.field.node.page.field_post_banner_content
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.page.field_post_banner_link
     - field.field.node.page.field_post_banner_link_target
     - field.field.node.page.field_post_body
+    - field.field.node.page.field_post_content_position
     - node.type.page
   module:
     - image
@@ -56,6 +58,13 @@ content:
     region: content
   field_banner_link_target:
     weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_content_position:
+    weight: 112
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -118,6 +127,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_post_content_position:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 101

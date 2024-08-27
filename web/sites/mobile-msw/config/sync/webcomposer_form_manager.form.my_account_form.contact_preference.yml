@@ -1,5 +1,5 @@
 field_settings:
-  label: 'Contact preference'
+  label: 'Yes. Send me the latest promotions, updates and offers.'
 field_validations:
   required:
     enable: 0

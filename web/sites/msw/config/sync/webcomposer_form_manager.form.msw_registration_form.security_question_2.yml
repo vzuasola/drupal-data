@@ -1,11 +1,11 @@
 field_settings:
   label: 'Security Question 2'
-  placeholder: 'Select your question...'
+  placeholder: 'Select your security question...'
   groups: security-question
   choices: "1|What is your mother’s maiden name?\r\n2|What is your father’s first name?\r\n3|What is the model of your first car?\r\n4|What is the name of your first school?\r\n5|What is the name of your first pet?\r\n6|Place of Birth?\r\n7|Favorite celebrity?\r\n8|Favorite food?\r\n9|Favorite sport team?\r\n10|Place of work?\r\n11|Ask for security answer\r\n12|What is the name of your pet?\r\n13|What is your favorite color?\r\n14|What is your date of birth?"
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alpha:
     enable: 0

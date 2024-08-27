@@ -1,0 +1,116 @@
+field_settings:
+  label: 'Home Outlet'
+  placeholder: 'Home Outlet'
+  groups: home-outlet
+  choices: "1|G5SO|eS Bleachers Bacolod|eS Bleachers Bacolod|12206\r\n2|TBTI|BB Extreme Bingo Club (Timog)|BB Extreme Bingo Club (Timog)|3030\r\n3|ABLSEI|BB Greenhills Town Center|BB Greenhills Town Center|3105\r\n4|B7AC|eB Robinsons Novaliches|eB Robinsons Novaliches|3035\r\n5|NDMBCVI|eB Vasra (NDM Center)|eB Vasra (NDM Center)|3078\r\n6|AGAC|eB Cafe Florencio Cotobato|eB Cafe Florencio Cotobato|3179\r\n7|AGAC|eB Fiesta Cotobato|eB Fiesta Cotobato|3065\r\n8|FOURLEAF|eS StandAlone Angeles (FourLeaf)|eS StandAlone Angeles (FourLeaf)|3111\r\n9|BIGSHOTS|eS Bigshots CDO|eS Bigshots CDO|3159\r\n10|BGAI|eS Bigbang Sportsbar|eS Bigbang Sportsbar|3214\r\n11|YGGI|eG-Meycauayan 2|eG-Meycauayan 2|3079\r\n12|YGGI|eG-Laoag 2|eG-Laoag 2|3032\r\n13|JDFLI|eG-Bacolod 2|eG-Bacolod 2|3097\r\n14|ONPSEC|eG-Naga|eG-Naga|3042\r\n15|REINWAY|eG-Balagtas|eG-Balagtas|3141\r\n16|TESI|eG-Royal Place|eG-Royal Place|3117\r\n17|168OG|eG-Marikina 3|eG-Marikina 3|3066\r\n18|ALLSTARAC|eG-Las Pinas 2|eG-Las Pinas 2|3120\r\n19|MMGAC|eG-Madison Square Las Pinas|eG-Madison Square Las Pinas|3119\r\n20|FIVEAVC|eG Iligan|eG Iligan|6406\r\n21||TGXI Paco (Otis)|TGXI Paco (Otis)|3206\r\n22|TGXI|TGXI Madison Square|TGXI Madison Square|3102\r\n23|TGXI|TGXI Kawit|TGXI Kawit|3134\r\n24|TGXI|TGXI Starmall 2|TGXI Starmall 2|3088\r\n25|TGXI|TGXI Don Antonio|TGXI Don Antonio|3186\r\n26||TGXI Silver City|TGXI Silver City|3083\r\n27||TGXI Maybunga|TGXI Maybunga|3175\r\n28|TGXI|TGXI Puregold Valenzuela 2|TGXI Puregold Valenzuela 2|3051\r\n29||TGXI Visayas Ave. 2|TGXI Visayas Ave. 2|3149\r\n30||TGXI Mabalacat 2|TGXI Mabalacat 2|3135\r\n31|TGXI|TGXI Valenzuela|TGXI Valenzuela|3203\r\n32||TGXI Parañaque 2|TGXI Parañaque 2|3156\r\n33|TGXI|TGXI Cainta 4|TGXI Cainta 4|3043\r\n34|TGXI|TGXI Malabon 1|TGXI Malabon 1|3099\r\n35|BETWIN|eH-Tayabas|eH-Tayabas|11006\r\n36|PAGJSGAMINGI|eH-Antipolo|eH-Antipolo|14806\r\n37|AGGAGAMINGI|eB Commonwealth Market|eB Commonwealth Market|15006\r\n38|CARMEN29|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n39|PAPS888|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n40|HOBBYS88|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n41|RIZZA28|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n42|MRUDY22|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n43|BFC83TZ|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n44|BOBBY27|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n45|BETWIN88|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n46|BGI|BGI - JAKA PLAZA|BGI - JAKA PLAZA|3195\r\n47|BGI|BGI - PARKMALL CEBU|BGI - PARKMALL CEBU|3085\r\n48|NDMCALAPAN|BGI - JAKA PLAZA|BGI - JAKA PLAZA|3195\r\n49|MSWTEST|||\r\n50|AIGSI|eC Resorts World Manila|eC Resorts World Manila|3094\r\n51|AIGSI|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n52|AIGSI|CF - Cebu|CF - Cebu|3209\r\n53|RWM|eC Resorts World Manila|eC Resorts World Manila|3094\r\n54|WINFORD|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n55|CFCEBU|CF - Cebu|CF - Cebu|3209\r\n56|SKYBISTRO|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n57|ICBI|eI Sta.Ana|eI Sta.Ana|17806\r\n58|EGANTIPOLO|eG-Decoro Antipolo|eG-Decoro Antipolo|18006\r\n59|DPTN|eC Winford Hotel and Casino|eC Winford Hotel and Casino|3048\r\n60|BACLARAN|eI Baclaran|eI Baclaran|18806\r\n61|AIGSI|eS Sharks Arena and Sportsbar|eS Sharks Arena and Sportsbar|18206\r\n62|BINONDO|eI Binondo|eI Binondo|19206\r\n63|ESPANYA|eI Espana|eI Espana|19006\r\n64|TGXICTC|TGXI Congressional Town Center|TGXI Congressional Town Center|19606\r\n65|TGXITLJ|TGXI TLJ Mabalacat|TGXI TLJ Mabalacat|19406\r\n66|TGXIMS|TGXI Madison Square|TGXI Madison Square|3102\r\n67|TGXIKW|TGXI Kawit|TGXI Kawit|3134\r\n68|TGXISM|TGXI Starmall 2|TGXI Starmall 2|3088\r\n69|TGXIDA|TGXI Don Antonio|TGXI Don Antonio|3186\r\n70|TGXIPVAL|TGXI Puregold Valenzuela 2|TGXI Puregold Valenzuela 2|3051\r\n71|TGXIVAL|TGXI Valenzuela|TGXI Valenzuela|3203\r\n72|TGXICA4|TGXI Cainta 4|TGXI Cainta 4|3043\r\n73|TGXIMA|TGXI Malabon 1|TGXI Malabon 1|3099"
+field_validations:
+  required:
+    enable: 1
+    error_message: 'This field is required'
+    rule_description: ''
+    weight: '0'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+    rule_description: ''
+    weight: '0'
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+    rule_description: ''
+    weight: '0'
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+    rule_description: ''
+    weight: '0'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+    rule_description: ''
+    weight: '0'
+  min_length:
+    enable: 0
+    error_message: 'Minimum requirement not met'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      length: '2'
+  max_length:
+    enable: 0
+    error_message: 'Maximum requirement not met'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      length: '10'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
+    rule_description: ''
+    weight: '0'
+  must_not_match:
+    enable: 0
+    error_message: 'This must not match deafult.'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      not_match: ''
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
+    rule_description: ''
+    weight: '0'
+  not_match_username:
+    enable: 0
+    error_message: 'Password should not equal to username'
+    rule_description: ''
+    weight: '0'
+  duplicated_security_question:
+    enable: 0
+    error_message: 'Security Questions should not be the same'
+    rule_description: ''
+    weight: '0'
+  match_password:
+    enable: 0
+    error_message: 'Password not match'
+    rule_description: ''
+    weight: '0'
+  valid_username_prefix:
+    enable: 0
+    error_message: 'Username Prefix not valid'
+    rule_description: ''
+    weight: '0'
+    parameters:
+      prefixes: '000,000,000'

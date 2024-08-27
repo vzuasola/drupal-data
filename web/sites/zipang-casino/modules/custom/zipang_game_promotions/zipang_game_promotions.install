@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_game_promotions_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_game_promotions_entity.zipang_game_promotions_entity.metatag.yml',
+    'core.entity_form_display.zipang_game_promotions_entity.zipang_game_promotions_entity.default.yml',
+    'core.entity_view_display.zipang_game_promotions_entity.zipang_game_promotions_entity.default.yml',
+    'field.field.zipang_game_promotions_entity.zipang_game_promotions_entity.field_banner.yml',
+    'field.field.zipang_game_promotions_entity.zipang_game_promotions_entity.field_banner_link.yml',
+    'field.field.zipang_game_promotions_entity.zipang_game_promotions_entity.field_title.yml',
+    'field.storage.zipang_game_promotions_entity.field_banner.yml',
+    'field.storage.zipang_game_promotions_entity.field_banner_link.yml',
+    'field.storage.zipang_game_promotions_entity.field_title.yml',
+    'language.content_settings.zipang_game_promotions_entity.zipang_game_promotions_entity.yml',
+    'views.view.zipang_game_promotions_notification.yml'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

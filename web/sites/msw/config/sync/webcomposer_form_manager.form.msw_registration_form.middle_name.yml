@@ -4,7 +4,7 @@ field_settings:
   annotation: ''
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alpha:
     enable: 0

@@ -1,5 +1,5 @@
 field_settings:
-  markup: '<label for="RegisterFormOnline_gaming_employee" class="pure-checkbox">I am not a Gaming Employment License (GEL) holder.</label>'
+  markup: '<label for="RegisterFormOnline_gaming_employee" class="pure-checkbox">I am not a Gaming Employment License (GEL) holder</label>'
 field_validations:
   required:
     enable: 0

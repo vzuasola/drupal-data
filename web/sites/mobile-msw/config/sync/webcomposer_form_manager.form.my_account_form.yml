@@ -1,0 +1,52 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  account_markup:
+    weight: '-20'
+  first_name:
+    weight: '-19'
+  middle_name:
+    weight: '-18'
+  last_name:
+    weight: '-17'
+  telebet_pin:
+    weight: '-16'
+  username:
+    weight: '-15'
+  email:
+    weight: '-14'
+  communication_markup:
+    weight: '-13'
+  mobile_number:
+    weight: '-12'
+  address_markup:
+    weight: '-11'
+  address:
+    weight: '-10'
+  province:
+    weight: '-9'
+  city:
+    weight: '-8'
+  security_questions_markup:
+    weight: '-7'
+  security_question_1:
+    weight: '-6'
+  security_answer_1:
+    weight: '-5'
+  password_icon_markup1:
+    weight: '-4'
+  security_question_2:
+    weight: '-3'
+  security_answer_2:
+    weight: '-2'
+  password_icon_markup2:
+    weight: '-1'
+  contact_preference:
+    weight: '0'
+  preference_markup:
+    weight: '1'
+  button_cancel:
+    weight: '2'
+  submit:
+    weight: '3'

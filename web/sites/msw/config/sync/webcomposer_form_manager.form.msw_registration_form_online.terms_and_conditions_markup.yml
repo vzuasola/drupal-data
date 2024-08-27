@@ -1,5 +1,5 @@
 field_settings:
-  markup: '<label for="RegisterFormOnline_terms_and_conditions" class="pure-checkbox">I am at least 21 years old and have read and accepted the <a href="https://www.google.com/">Terms and Conditions.</a></label>'
+  markup: '<label for="RegisterFormOnline_terms_and_conditions" class="pure-checkbox">I am at least 21 years old and have read and accepted the <a href="https://sports.msw.ph/en/info/terms-and-conditions">Terms and Conditions.</a></label>'
 field_validations:
   required:
     enable: 1

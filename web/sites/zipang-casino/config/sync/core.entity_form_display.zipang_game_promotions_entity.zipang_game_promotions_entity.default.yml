@@ -1,0 +1,56 @@
+uuid: 95e21c45-9a23-4459-979c-69e2b37befff
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_game_promotions_entity.zipang_game_promotions_entity.field_banner
+    - field.field.zipang_game_promotions_entity.zipang_game_promotions_entity.field_banner_link
+    - field.field.zipang_game_promotions_entity.zipang_game_promotions_entity.field_title
+    - image.style.thumbnail
+  module:
+    - image
+    - zipang_game_promotions
+id: zipang_game_promotions_entity.zipang_game_promotions_entity.default
+targetEntityType: zipang_game_promotions_entity
+bundle: zipang_game_promotions_entity
+mode: default
+content:
+  field_banner:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

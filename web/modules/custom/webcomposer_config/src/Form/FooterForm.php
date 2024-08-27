@@ -292,5 +292,11 @@ class FooterForm extends FormBase {
       '#default_value' => $this->get('enable_new_style'),
       '#translatable' => true,
     ];
+    $form['footer_version_check']['enable_mobile_footerV3'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Mobile Footer Revamp V3.0'),
+      '#default_value' => $this->get('enable_mobile_footerV3'),
+      '#translatable' => true,
+    ];
   }
 }

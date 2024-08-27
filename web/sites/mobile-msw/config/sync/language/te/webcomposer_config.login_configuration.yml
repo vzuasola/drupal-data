@@ -1,0 +1,29 @@
+advanced__active_tab: edit-login-form-details
+rememberme_label: 'వినియోగదారుని  పేరు గుర్తుంచుకో'
+lightbox_blurb: 'ఇంకా డాఫాబెట్ సభ్యులు  కాలేదా?'
+login_page_blurb: ''
+error_message_restricted_country: 'మీరు మా సైట్‌ను నిషేధిత స్థానం నుండి యాక్సెస్ చేస్తున్నారు. దయచేసి మా వినియోగదారుల మద్దతు కేంద్రాన్ని సంప్రదించండి.'
+autologout_box_content:
+  format: basic_html
+  value: "<p>మీ సెషన్ {seconds} సెకన్లలో ముగుస్తుంది. మీరు మీ సెషన్‌ను కొనసాగించాలనుకుంటున్నారా?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>నిష్క్రియాత్మకత కారణంగా మీ సెషన్ సమయం ముగిసింది.</p>\r\n"
+mobile_login_button_label: 'లాగిన్ / చేరండి'
+mobile_cant_login_url: ''
+username_placeholder: Username
+password_placeholder: పాస్వర్డ్
+login_bottom_label: లాగిన్
+error_message_blank_username: 'వినియోగదారుని  పేరు అవసరం.'
+error_message_blank_password: 'పాస్వర్డ్ అవసరం.'
+error_message_blank_passname: 'వినియోగదారుని  పేరు మరియు పాస్‌వర్డ్ అవసరం.'
+error_message_invalid_passname: 'క్షమించండి, మీరు నమోదు చేసిన వినియోగదారు పేరు మరియు పాస్‌వర్డ్ సరిపోలడం లేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.'
+error_message_service_not_available: 'సేవ అందుబాటులో లేదు.'
+error_message_account_suspended: 'మీ ఖాతా మూసివేయబడింది. దయచేసి వినియోగదారుల మద్దతు కేంద్రాన్ని సంప్రదించండి.'
+error_message_account_locked: 'లాగిన్ ప్రయత్నాలు విఫలమైనందున మీ ఖాతా లాక్ చేయబడింది. దయచేసి వినియోగదారుల మద్దతు కేంద్రాన్ని సంప్రదించండి.'
+autologout_box_title: రిమైండర్
+affirmative_button_text: అవును
+negative_button_text: వొద్దు
+notification_title: నోటిఫికేషన్
+notification_window_title: 'సెషన్ గడువు ముగిసింది'
+mobile_login_url: '#'
