@@ -1,0 +1,5 @@
+mobile_virtuals.list:
+  title: 'Mobile Virtuals Configuration'
+  description: 'Provides configuration for Mobile Virtuals'
+  parent: system.admin_config
+  route_name: mobile_virtuals.admin_settings
