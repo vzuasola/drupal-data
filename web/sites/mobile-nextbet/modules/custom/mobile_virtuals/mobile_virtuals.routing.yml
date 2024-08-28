@@ -1,7 +1,7 @@
-mobile_live_dealer.admin_settings:
-  path: 'admin/config/live-dealer-mobile'
+mobile_virtuals.admin_settings:
+  path: 'admin/config/mobile-virtuals'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Mobile Live Dealer Configurations'
+    _title: 'Mobile Virtuals Configurations'
   requirements:
     _permission: 'administer mobile config'
