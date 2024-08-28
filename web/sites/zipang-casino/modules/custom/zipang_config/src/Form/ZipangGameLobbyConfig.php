@@ -74,5 +74,12 @@ class ZipangGameLobbyConfig extends FormBase {
       '#default_value' => $this->get('games_not_matched'),
       '#translatable' => TRUE,
     ];
+
+    $form['game_search']['top_search_result'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Top Search Result'),
+      '#default_value' => $this->get('top_search_result'),
+      '#translatable' => TRUE,
+    ];
   }
 }
