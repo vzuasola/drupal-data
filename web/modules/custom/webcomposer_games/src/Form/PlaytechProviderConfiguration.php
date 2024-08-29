@@ -201,5 +201,23 @@ class PlaytechProviderConfiguration extends FormBase {
       '#required' => false,
       '#translatable' => true
     ];
+
+    $form['ugl_use_iframe'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('<b>Enable IFrame Launch</b>'),
+      '#description' => $this->t("Enable game launch via IFrame on this Provider"),
+      '#default_value' => $this->get('ugl_use_iframe'),
+      '#translatable' => true,
+      '#required' => false,
+    ];
+
+    $form['ugl_disable_iframe_subprovider'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Disable IFrame on the following Sub Providers'),
+      '#description' => $this->t("One Sub Provider per line (Case Sensitive)"),
+      '#default_value' => $this->get('ugl_disable_iframe_subprovider'),
+      '#translatable' => true,
+      '#required' => false,
+    ];
   }
 }
