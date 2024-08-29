@@ -140,7 +140,7 @@ class GpiProviderConfiguration extends FormBase {
       '#title' => $this->t('<b>Enable IFrame Launch</b>'),
       '#description' => $this->t("Enable game launch via IFrame on this Provider"),
       '#default_value' => $this->get($key . '_use_iframe'),
-      '#translatable' => true,
+      '#translatable' => false,
       '#required' => false,
     ];
 
@@ -149,7 +149,7 @@ class GpiProviderConfiguration extends FormBase {
       '#title' => $this->t('Disable IFrame on the following Sub Providers'),
       '#description' => $this->t("One Sub Provider per line (Case Sensitive)"),
       '#default_value' => $this->get($key . '_disable_iframe_subprovider'),
-      '#translatable' => true,
+      '#translatable' => false,
       '#required' => false,
     ];
 
