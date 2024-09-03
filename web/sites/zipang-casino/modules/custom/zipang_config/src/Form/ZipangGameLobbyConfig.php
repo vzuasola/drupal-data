@@ -38,6 +38,7 @@ class ZipangGameLobbyConfig extends FormBase {
     ];
 
     $this->sectionPageSetting($form);
+    $this->sectionGameSearch($form);
 
     return $form;
   }
@@ -58,5 +59,35 @@ class ZipangGameLobbyConfig extends FormBase {
       '#default_value' => $this->get('quicklinks_title'),
       '#translatable' => TRUE,
     ];
+  }
+
+  private function sectionGameSearch(array &$form) {
+    $form['game_search'] = [
+      '#type' => 'details',
+      '#title' => t('Game Search Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['game_search']['games_not_matched'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Title Not Matched'),
+      '#default_value' => $this->get('games_not_matched'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['game_search']['top_search_result'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Top Search Result'),
+      '#default_value' => $this->get('top_search_result'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['game_search']['default_category'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Category'),
+      '#default_value' => $this->get('default_category'),
+      '#translatable' => TRUE,
+    ];
+
   }
 }
