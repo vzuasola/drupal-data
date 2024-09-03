@@ -40,7 +40,6 @@ class ArcadeConfigurationForm extends FormBase {
 
     $this->arcadeHeaderSettingsOverride($form);
     $this->arcadeCategorySetting($form);
-    $this->gamesLaunchingConfiguration($form);
 
     return $form;
   }
@@ -145,21 +144,5 @@ class ArcadeConfigurationForm extends FormBase {
       '#required' => FALSE,
       '#translatable' => true
     );
-  }
-
-  private function gamesLaunchingConfiguration(&$form) {
-    $form['game_launching_config_group'] = array(
-      '#type' => 'details',
-      '#title' => $this->t('Game Launching Behavior'),
-      '#collapsible' => TRUE,
-      '#group' => 'arcade_configuration_tab'
-    );
-  
-    $form['game_launching_config_group']['launch_via_iframe'] = array(
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable launching games via IFrame'),
-      '#default_value' => $this->get('launch_via_iframe'),
-      '#description' => 'Enable launching games via IFrame.',
-    );  
   }
 }
