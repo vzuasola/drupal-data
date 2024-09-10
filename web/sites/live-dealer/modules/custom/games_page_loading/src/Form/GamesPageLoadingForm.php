@@ -82,20 +82,6 @@ class GamesPageLoadingForm extends FormBase {
       '#type' => 'vertical_tabs',
       '#title' => t('Game Launching Behavior'),
     ];
-
-    $form['game_launching'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Game Launching Behavior'),
-      '#collapsible' => TRUE,
-      '#group' => 'games_loading_configuration_tab'
-    ];
-
-    $form['game_launching']['launch_via_iframe'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable launching games via IFrame'),
-      '#default_value' => $this->get('launch_via_iframe'),
-      '#description' => 'Enable launching games via IFrame.',
-    ];
     return $form;
   }
 

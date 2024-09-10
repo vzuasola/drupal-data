@@ -135,6 +135,24 @@ class GpiProviderConfiguration extends FormBase {
       '#required' => false,
     ];
 
+    $form[$key . '_use_iframe'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('<b>Enable IFrame Launch</b>'),
+      '#description' => $this->t("Enable game launch via IFrame on this Provider"),
+      '#default_value' => $this->get($key . '_use_iframe'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+
+    $form[$key . '_disable_iframe_subprovider'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Disable IFrame on the following Sub Providers'),
+      '#description' => $this->t("One Sub Provider per line (Case Sensitive)"),
+      '#default_value' => $this->get($key . '_disable_iframe_subprovider'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+
   }
 
 }
