@@ -9,6 +9,10 @@ dependencies:
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_casino_gold_only
+    - field.field.node.promotion.field_chickpea_enabled_post
+    - field.field.node.promotion.field_chickpea_enabled_pre
+    - field.field.node.promotion.field_chickpea_event_name
+    - field.field.node.promotion.field_chickpea_script
     - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_field_enable_sticky_post
     - field.field.node.promotion.field_field_enable_sticky_post2
@@ -56,10 +60,10 @@ dependencies:
     - color_field
     - entity_reference_revisions
     - field_group
-    - image
     - link
     - metatag
     - options
+    - svg_image
     - text
     - user
 third_party_settings:
@@ -132,6 +136,46 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_chickpea_enabled_post:
+    weight: 49
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_chickpea_enabled_pre:
+    weight: 50
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_chickpea_event_name:
+    weight: 52
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_chickpea_script:
+    weight: 51
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_enable_disable_ribbon_tag:
     weight: 25
