@@ -1,0 +1,19 @@
+uuid: 3c4226a2-47ae-4db6-8e8c-95257b8af948
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_chickpea_script
+field_name: field_chickpea_script
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

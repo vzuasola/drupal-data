@@ -11,6 +11,11 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_banner_link_target_post
     - field.field.node.promotion.field_body_post
+    - field.field.node.promotion.field_chickpea_enabled_post
+    - field.field.node.promotion.field_chickpea_enabled_pre
+    - field.field.node.promotion.field_chickpea_event_name
+    - field.field.node.promotion.field_chickpea_script
+    - field.field.node.promotion.field_enable_game_launch
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_hide_right_side_block
@@ -25,6 +30,7 @@ dependencies:
     - field.field.node.promotion.field_promotion_link_target
     - field.field.node.promotion.field_promotion_summary
     - field.field.node.promotion.field_promotion_summary_link
+    - field.field.node.promotion.field_promotions_games_list
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
@@ -45,6 +51,7 @@ dependencies:
     - image
     - link
     - metatag
+    - paragraphs
     - path
     - scheduler
     - text
@@ -52,6 +59,7 @@ third_party_settings:
   field_group:
     group_promotions_banner:
       children:
+        - field_enable_game_launch
         - group_pre_login_banner_fields
         - group_post_login_banner_fields
       parent_name: ''
@@ -70,7 +78,7 @@ third_party_settings:
         - field_right_side_block_title
         - field_right_side_block_content
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: details
       format_settings:
         label: 'Right Side Block'
@@ -85,7 +93,7 @@ third_party_settings:
         - field_text_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: details
       format_settings:
         id: ''
@@ -101,7 +109,7 @@ third_party_settings:
         - field_promotion_summary
         - field_hide_countdown
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: details
       format_settings:
         label: 'Promotion Thumbnail ( summary page )'
@@ -113,7 +121,7 @@ third_party_settings:
     group_inner_page_right_side_bloc:
       children: {  }
       parent_name: ''
-      weight: 16
+      weight: 17
       format_type: details
       format_settings:
         id: ''
@@ -128,7 +136,7 @@ third_party_settings:
         - field_thumbnail_image
         - field_thumbnail_summary
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: details
       format_settings:
         id: ''
@@ -157,7 +165,7 @@ third_party_settings:
         - field_banner_link_target
         - field_banner_content
       parent_name: group_promotions_banner
-      weight: 20
+      weight: 22
       format_type: tab
       format_settings:
         id: ''
@@ -173,7 +181,7 @@ third_party_settings:
         - field_banner_link_target_post
         - field_banner_content_post
       parent_name: group_promotions_banner
-      weight: 21
+      weight: 23
       format_type: tab
       format_settings:
         id: ''
@@ -225,6 +233,34 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Post Login Body'
+    group_promotion_games:
+      children:
+        - field_promotions_games_list
+      parent_name: ''
+      weight: 27
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotion Games'
+    group_chickpea_video:
+      children:
+        - field_chickpea_enabled_pre
+        - field_chickpea_enabled_post
+        - field_chickpea_script
+        - field_chickpea_event_name
+      parent_name: ''
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Chickpea Video'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
@@ -300,6 +336,43 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_chickpea_enabled_post:
+    weight: 30
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_chickpea_enabled_pre:
+    weight: 29
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_chickpea_event_name:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_chickpea_script:
+    weight: 31
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_enable_game_launch:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_hide_countdown:
     weight: 78
     settings:
@@ -350,7 +423,7 @@ content:
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 24
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -389,6 +462,18 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_promotions_games_list:
+    type: paragraphs
+    weight: 29
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
   field_ribbon_background_color:
     weight: 82
     settings: {  }
@@ -486,7 +571,7 @@ content:
     type: image_image
     region: content
   field_thumbnail_summary:
-    weight: 64
+    weight: 65
     settings:
       rows: 5
       placeholder: ''
@@ -502,7 +587,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -510,17 +595,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 23
+    weight: 24
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 19
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 21
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -528,14 +613,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 25
+    weight: 26
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 22
+    weight: 23
     region: content
     third_party_settings: {  }
   title:
@@ -547,7 +632,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -562,7 +647,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 20
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
