@@ -1,0 +1,24 @@
+uuid: 08b8b2fa-5a7d-4237-a458-936a308dbac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_enable_geocomply
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_enable_geocomply
+field_name: field_enable_geocomply
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Enable Geocomply Integration'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
