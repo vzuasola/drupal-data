@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: responsive_sponsor
 label: 'Alternative Text'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
