@@ -9,7 +9,7 @@ id: paragraph.responsive_sponsor.field_mobile_sponsor_subtext
 field_name: field_mobile_sponsor_subtext
 entity_type: paragraph
 bundle: responsive_sponsor
-label: 'Mobile Sponsor Subtext'
+label: 'Sponsor Subtext'
 description: ''
 required: false
 translatable: true

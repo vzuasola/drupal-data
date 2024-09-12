@@ -34,21 +34,59 @@ class SponsorResponsiveConfigForm extends FormBase {
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['webcomposer_sponsor_responsive']['field_mobile_sponsor_text_font_size'] = [
+    $form['advanced'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Sponsor Configuration'),
+    ];
+    $this->mobileFont($form);
+    $this->desktopFont($form);
+
+    return $form;
+  }
+
+  private function mobileFont(array &$form)
+  {
+    $form['mobile_font_details'] = [
+      '#type' => 'details',
+      '#title' => t('Mobile'),
+      '#group' => 'advanced',
+    ];
+    $form['mobile_font_details']['field_mobile_sponsor_text_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font Size - Sponsor Title'),
       '#default_value' => $this->get('field_mobile_sponsor_text_font_size'),
       '#translatable' => TRUE,
       '#description' => "font size should be like e.g (12px or 1.2rem)",
     ];
-    $form['webcomposer_sponsor_responsive']['field_mobile_sponsor_subtext_font_size'] = [
+    $form['mobile_font_details']['field_mobile_sponsor_subtext_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font Size - Subtitle'),
       '#default_value' => $this->get('field_mobile_sponsor_subtext_font_size'),
       '#translatable' => TRUE,
       '#description' => "font size should be like e.g (12px or 1.2rem)",
     ];
+  }
 
-    return $form;
+  private function desktopFont(array &$form)
+  {
+    $form['desktop_font_details'] = [
+      '#type' => 'details',
+      '#title' => t('Desktop'),
+      '#group' => 'advanced',
+    ];
+    $form['desktop_font_details']['field_desktop_sponsor_text_font_size'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Font Size - Sponsor Title'),
+      '#default_value' => $this->get('field_desktop_sponsor_text_font_size'),
+      '#translatable' => TRUE,
+      '#description' => "font size should be like e.g (12px or 1.2rem)",
+    ];
+    $form['desktop_font_details']['field_desktop_sponsor_subtext_font_size'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Font Size - Subtitle'),
+      '#default_value' => $this->get('field_desktop_sponsor_subtext_font_size'),
+      '#translatable' => TRUE,
+      '#description' => "font size should be like e.g (12px or 1.2rem)",
+    ];
   }
 }
