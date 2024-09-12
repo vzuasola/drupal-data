@@ -1,0 +1,19 @@
+uuid: 65720cc4-10b1-4f1b-af9a-c955b053530a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor_title
+    - paragraphs.paragraphs_type.sponsor_cmi
+id: paragraph.sponsor_cmi.field_sponsor_title
+field_name: field_sponsor_title
+entity_type: paragraph
+bundle: sponsor_cmi
+label: 'Sponsor Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
