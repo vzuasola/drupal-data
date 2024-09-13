@@ -1,0 +1,23 @@
+uuid: 23375ac0-f409-4ece-a9af-c26283f9eb60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chickpea_enabled_post
+    - node.type.promotion
+id: node.promotion.field_chickpea_enabled_post
+field_name: field_chickpea_enabled_post
+entity_type: node
+bundle: promotion
+label: 'Replace post-login banner with Chickpea video'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

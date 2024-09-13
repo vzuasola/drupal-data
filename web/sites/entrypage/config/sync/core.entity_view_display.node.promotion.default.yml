@@ -11,6 +11,11 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_banner_link_target_post
     - field.field.node.promotion.field_body_post
+    - field.field.node.promotion.field_chickpea_enabled_post
+    - field.field.node.promotion.field_chickpea_enabled_pre
+    - field.field.node.promotion.field_chickpea_event_name
+    - field.field.node.promotion.field_chickpea_script
+    - field.field.node.promotion.field_enable_game_launch
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_hide_right_side_block
@@ -25,6 +30,7 @@ dependencies:
     - field.field.node.promotion.field_promotion_link_target
     - field.field.node.promotion.field_promotion_summary
     - field.field.node.promotion.field_promotion_summary_link
+    - field.field.node.promotion.field_promotions_games_list
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
@@ -117,6 +123,46 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_chickpea_enabled_post:
+    weight: 144
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_chickpea_enabled_pre:
+    weight: 145
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_chickpea_event_name:
+    weight: 147
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_chickpea_script:
+    weight: 146
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_full_tile_image:
     weight: 108
@@ -365,6 +411,8 @@ content:
     weight: 100
     region: content
 hidden:
+  field_enable_game_launch: true
   field_hide_promotion: true
   field_hide_right_side_block: true
+  field_promotions_games_list: true
   langcode: true
