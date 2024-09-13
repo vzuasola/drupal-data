@@ -9,6 +9,10 @@ dependencies:
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_casino_gold_only
+    - field.field.node.promotion.field_chickpea_enabled_post
+    - field.field.node.promotion.field_chickpea_enabled_pre
+    - field.field.node.promotion.field_chickpea_event_name
+    - field.field.node.promotion.field_chickpea_script
     - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_field_enable_sticky_post
     - field.field.node.promotion.field_field_enable_sticky_post2
@@ -57,12 +61,12 @@ dependencies:
     - color_field
     - entity_reference_views_select
     - field_group
-    - image
     - link
     - metatag
     - paragraphs
     - path
     - scheduler
+    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -73,7 +77,7 @@ third_party_settings:
         - field_ribbon_text_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 13
+      weight: 3
       format_type: details
       format_settings:
         label: 'Ribbon Tags'
@@ -89,7 +93,7 @@ third_party_settings:
         - body
         - group_sticky_component_pre
       parent_name: ''
-      weight: 11
+      weight: 1
       format_type: details
       format_settings:
         label: 'Pre Login Promotion'
@@ -106,7 +110,7 @@ third_party_settings:
         - field_casino_gold_only
         - group_sticky_component
       parent_name: ''
-      weight: 12
+      weight: 2
       format_type: details
       format_settings:
         id: ''
@@ -264,7 +268,7 @@ third_party_settings:
       children:
         - field_games_list
       parent_name: ''
-      weight: 22
+      weight: 12
       format_type: details
       format_settings:
         label: 'Configure Multiple Games'
@@ -277,7 +281,7 @@ third_party_settings:
       children:
         - field_banner_game_launch
       parent_name: ''
-      weight: 21
+      weight: 11
       format_type: details
       format_settings:
         id: ''
@@ -307,6 +311,22 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Promotion List Details'
+    group_chickpea_video:
+      children:
+        - field_chickpea_enabled_pre
+        - field_chickpea_enabled_post
+        - field_chickpea_script
+        - field_chickpea_event_name
+      parent_name: ''
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Chickpea Video'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -323,7 +343,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 19
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -367,6 +387,36 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_chickpea_enabled_post:
+    weight: 145
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_chickpea_enabled_pre:
+    weight: 144
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_chickpea_event_name:
+    weight: 147
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_chickpea_script:
+    weight: 146
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_enable_disable_ribbon_tag:
     weight: 10
@@ -444,7 +494,7 @@ content:
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 15
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -671,25 +721,25 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 20
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 24
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 16
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -697,12 +747,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 26
+    weight: 17
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 25
+    weight: 15
     region: content
     settings:
       display_label: true
@@ -716,13 +766,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 14
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 23
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -731,7 +781,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 18
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

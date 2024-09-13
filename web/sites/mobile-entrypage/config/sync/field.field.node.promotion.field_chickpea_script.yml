@@ -1,0 +1,23 @@
+uuid: dc0fa223-95ae-4103-91a4-38c1d2c607d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chickpea_script
+    - node.type.promotion
+  module:
+    - link
+id: node.promotion.field_chickpea_script
+field_name: field_chickpea_script
+entity_type: node
+bundle: promotion
+label: 'Chickpea script'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
