@@ -38,6 +38,7 @@ class ZipangGameLobbyConfig extends FormBase {
     ];
 
     $this->sectionPageSetting($form);
+    $this->sectionGameQuicklinks($form);
     $this->sectionGameSearch($form);
 
     return $form;
@@ -46,6 +47,7 @@ class ZipangGameLobbyConfig extends FormBase {
   /**
    * {@inheritdoc}
    */
+
   private function sectionPageSetting(array &$form) {
     $form['page_setting'] = [
       '#type' => 'details',
@@ -53,7 +55,22 @@ class ZipangGameLobbyConfig extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['page_setting']['quicklinks_title'] = [
+    $form['page_setting']['enable_lobby'] = [
+      '#type' => 'checkbox',
+      '#title' => 'Enable Game Lobby',
+      '#default_value' => $this->get('enable_lobby'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionGameQuicklinks(array &$form) {
+    $form['game_quicklinks'] = [
+      '#type' => 'details',
+      '#title' => t('Game Lobby Quicklinks'),
+      '#group' => 'advanced',
+    ];
+
+    $form['game_quicklinks']['quicklinks_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Quicklinks Title'),
       '#default_value' => $this->get('quicklinks_title'),
@@ -74,20 +91,5 @@ class ZipangGameLobbyConfig extends FormBase {
       '#default_value' => $this->get('games_not_matched'),
       '#translatable' => TRUE,
     ];
-
-    $form['game_search']['top_search_result'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Top Search Result'),
-      '#default_value' => $this->get('top_search_result'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['game_search']['default_category'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Default Category'),
-      '#default_value' => $this->get('default_category'),
-      '#translatable' => TRUE,
-    ];
-
   }
 }
