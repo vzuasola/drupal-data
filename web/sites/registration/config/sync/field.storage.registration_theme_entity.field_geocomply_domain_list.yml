@@ -1,19 +1,20 @@
-uuid: c3e40028-e146-45c8-b679-2578c153ab22
+uuid: 73164895-1b4a-47e0-bd6d-e9385a217b77
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_geocomply_domain_list
   module:
     - registration_theme
-id: registration_theme_entity.field_geocomply_domain_list
+id: registration_theme_entity.registration_theme_entity.field_geocomply_domain_list
 field_name: field_geocomply_domain_list
 entity_type: registration_theme_entity
-type: string_long
-settings:
-  case_sensitive: false
-module: core
-locked: false
-cardinality: 1
+bundle: registration_theme_entity
+label: 'Geocomply Domain List'
+description: "Geocomply will be enabled on the specified domains.\r\ni.e For OW Enable it for this language and dafabet.com / dafawin.com domains"
+required: false
 translatable: true
-indexes: {  }
-persist_with_no_fields: false
-custom_storage: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
