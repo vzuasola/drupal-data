@@ -1,0 +1,18 @@
+uuid: 15088977-525b-4201-9d8c-5cc5dc6fdbec
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.field_enable_geocomply
+field_name: field_enable_geocomply
+entity_type: registration_theme_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }field.storage.registration_theme_entity.field_enable_geocomply.yml
+persist_with_no_fields: false
+custom_storage: false

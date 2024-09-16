@@ -12,10 +12,13 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_dafabet_logo
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
+    - field.field.registration_theme_entity.registration_theme_entity.field_enable_geocomply
     - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_favicon
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_title_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_geocomply_domain_list
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
@@ -38,9 +41,10 @@ dependencies:
   module:
     - color_field
     - field_group
-    - image
+    - file
     - link
     - registration_theme
+    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -146,6 +150,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Background Banner'
+    group_geocomply_integration:
+      children:
+        - field_enable_geocomply
+        - field_geocomply_domain_list
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Geocomply Integration'
 id: registration_theme_entity.registration_theme_entity.default
 targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
@@ -198,7 +215,7 @@ content:
     type: text_textarea
     region: content
   field_dafabet_logo:
-    weight: 38
+    weight: 14
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -213,6 +230,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_enable_geocomply:
+    weight: 38
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_enable_two_columns:
     weight: 30
     settings:
@@ -226,6 +250,13 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
+  field_favicon:
+    weight: 15
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
   field_form_font_color:
     weight: 7
     settings: {  }
@@ -237,6 +268,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_geocomply_domain_list:
+    weight: 39
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_link_color:
     weight: 8
@@ -277,7 +316,7 @@ content:
     type: options_select
     region: content
   field_registration_skin_colors:
-    weight: 39
+    weight: 16
     settings:
       rows: 5
       placeholder: ''
