@@ -1,0 +1,27 @@
+uuid: c14535ca-aa74-4c33-92a7-72ba727e0ede
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_favicon
+  module:
+    - file
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_favicon
+field_name: field_favicon
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: Favicon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: ico
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
