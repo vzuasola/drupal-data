@@ -21,18 +21,21 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  * )
  */
-class FooterForm extends FormBase {
+class FooterForm extends FormBase
+{
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames()
+  {
     return ['webcomposer_config.footer_configuration'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state)
+  {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Footer Configuration'),
@@ -47,6 +50,7 @@ class FooterForm extends FormBase {
     $this->sectionAmbassador($form);
     $this->sectionCopyright($form);
     $this->footerVersionCheck($form);
+    $this->sectionResponsibleGaming($form);
 
     return $form;
   }
@@ -54,7 +58,8 @@ class FooterForm extends FormBase {
   /**
    *
    */
-  private function sectionAbout(array &$form) {
+  private function sectionAbout(array &$form)
+  {
     $form['about_dafabet_details'] = [
       '#type' => 'details',
       '#title' => t('About Dafabet'),
@@ -84,7 +89,8 @@ class FooterForm extends FormBase {
   /**
    *
    */
-  private function sectionQuicklinks(array &$form) {
+  private function sectionQuicklinks(array &$form)
+  {
     $form['quicklinks_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Quicklinks'),
@@ -105,7 +111,8 @@ class FooterForm extends FormBase {
   /**
    *
    */
-  private function sectionSocials(array &$form) {
+  private function sectionSocials(array &$form)
+  {
     $form['social_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Social Media'),
@@ -125,7 +132,8 @@ class FooterForm extends FormBase {
   /**
    *
    */
-  private function sectionBackToTop(array &$form) {
+  private function sectionBackToTop(array &$form)
+  {
     $form['back_to_top'] = [
       '#type' => 'details',
       '#title' => $this->t('Back To Top'),
@@ -145,7 +153,8 @@ class FooterForm extends FormBase {
   /**
    *
    */
-  private function sectionResponsive(array &$form) {
+  private function sectionResponsive(array &$form)
+  {
     $form['responsive_footer'] = [
       '#type' => 'details',
       '#title' => $this->t('Responsive'),
@@ -166,7 +175,8 @@ class FooterForm extends FormBase {
   /**
    * Cookie Notification Config
    */
-  private function sectionCookieNotification(array &$form) {
+  private function sectionCookieNotification(array &$form)
+  {
     $form['cookie_notification_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Cookie Notification'),
@@ -194,7 +204,8 @@ class FooterForm extends FormBase {
   /**
    * Brand Ambassadors Config
    */
-  private function sectionAmbassador(array &$form) {
+  private function sectionAmbassador(array &$form)
+  {
     $form['brand_ambassador_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Brand Ambassador'),
@@ -247,7 +258,8 @@ class FooterForm extends FormBase {
     ];
   }
 
-  private function sectionCopyright(array &$form) {
+  private function sectionCopyright(array &$form)
+  {
     $form['copyright_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Copyright'),
@@ -279,7 +291,8 @@ class FooterForm extends FormBase {
   /**
    * footer version config
    */
-  private function footerVersionCheck(array &$form) {
+  private function footerVersionCheck(array &$form)
+  {
     $form['footer_version_check'] = [
       '#type' => 'details',
       '#title' => $this->t('Footer Version Config'),
@@ -297,6 +310,60 @@ class FooterForm extends FormBase {
       '#title' => $this->t('Enable Mobile Footer Revamp V3.0'),
       '#default_value' => $this->get('enable_mobile_footerV3'),
       '#translatable' => true,
+    ];
+  }
+
+  /**
+   * Responsible Gaming section.
+   */
+  private function sectionResponsibleGaming(array &$form)
+  {
+    $form['responsible_gaming_details'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Responsible Gaming'),
+      '#collapsible' => TRUE,
+      '#group' => 'advanced',
+    ];
+
+    $form['responsible_gaming_details']['enable_18plus'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable +18 Sign'),
+      '#default_value' => $this->get('enable_18plus'),
+      '#description' => $this->t('Check to enable the +18 sign in the footer.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['responsible_gaming_details']['file_18plus_image'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('+18 Sign Image'),
+      '#default_value' => $this->get('file_18plus_image'),
+      '#upload_location' => 'public://footer_images/',
+      '#description' => $this->t('Upload a PNG image for the +18 sign.'),
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+      ],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['responsible_gaming_details']['redirect_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Redirect URL'),
+      '#default_value' => $this->get('redirect_url'),
+      '#description' => $this->t('URL to redirect when clicking on the +18 sign.'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    
+    $d = $this->get('responsible_gaming_message');
+    $form['responsible_gaming_details']['responsible_gaming_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Message'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#description' => $this->t('Enter the explanatory message for Responsible Gaming.'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
   }
 }
