@@ -334,25 +334,16 @@ class FooterForm extends FormBase
     ];
 
     $form['responsible_gaming_details']['file_18plus_image'] = [
+      '#name' => 'file_18plus_image',
       '#type' => 'managed_file',
-      '#title' => $this->t('+18 Sign Image'),
+      '#title' => $this->t('+18 Sign Image (PNG)'),
       '#default_value' => $this->get('file_18plus_image'),
-      '#upload_location' => 'public://footer_images/',
-      '#description' => $this->t('Upload a PNG image for the +18 sign.'),
+      '#upload_location' => 'public://footer-images/',
+      '#translatable' => TRUE,
       '#upload_validators' => [
         'file_validate_extensions' => ['png'],
       ],
       '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
-    $form['responsible_gaming_details']['redirect_url'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Redirect URL'),
-      '#default_value' => $this->get('redirect_url'),
-      '#description' => $this->t('URL to redirect when clicking on the +18 sign.'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
     
     $d = $this->get('responsible_gaming_message');
