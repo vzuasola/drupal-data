@@ -619,7 +619,7 @@ class HeaderForm extends FormBase {
     $form['balance_group']['excluded_balance_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Excluded Balance Mapping'),
-      '#description' => $this->t('Define product IDs one per line'),
+      '#description' => $this->t('Wallet id\'s set here will not load their balance on page load. User needs to manually trigger the load to view wallet balance. <br>Define product IDs one per line'),
       '#default_value' => $this->get('excluded_balance_mapping'),
       '#translatable' => TRUE,
     ];

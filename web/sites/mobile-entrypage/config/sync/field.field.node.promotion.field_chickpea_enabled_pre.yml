@@ -1,0 +1,23 @@
+uuid: d1e31d48-00db-40ec-b566-7ef595d855bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chickpea_enabled_pre
+    - node.type.promotion
+id: node.promotion.field_chickpea_enabled_pre
+field_name: field_chickpea_enabled_pre
+entity_type: node
+bundle: promotion
+label: 'Replace pre-login banner with Chickpea video'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

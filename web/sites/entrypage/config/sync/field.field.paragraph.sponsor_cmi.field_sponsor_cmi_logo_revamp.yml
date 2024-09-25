@@ -1,10 +1,10 @@
-uuid: ec4ef7dc-6b8a-48c3-b9bb-89a2ec0c83d0
+uuid: 480ac4e6-e325-4a21-bd4f-c595e99a4f84
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_res_sponsor_tablet_logo
-    - paragraphs.paragraphs_type.responsive_sponsor
+    - field.storage.paragraph.field_sponsor_cmi_logo_revamp
+    - paragraphs.paragraphs_type.sponsor_cmi
   module:
     - content_translation
     - image
@@ -14,11 +14,11 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-id: paragraph.responsive_sponsor.field_res_sponsor_tablet_logo
-field_name: field_res_sponsor_tablet_logo
+id: paragraph.sponsor_cmi.field_sponsor_cmi_logo_revamp
+field_name: field_sponsor_cmi_logo_revamp
 entity_type: paragraph
-bundle: responsive_sponsor
-label: 'Tablet Logo'
+bundle: sponsor_cmi
+label: 'Logo Revamp'
 description: ''
 required: false
 translatable: true
@@ -30,8 +30,8 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
-  alt_field_required: true
+  alt_field: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:
