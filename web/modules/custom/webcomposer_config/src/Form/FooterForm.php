@@ -333,17 +333,17 @@ class FooterForm extends FormBase
       '#translatable' => TRUE,
     ];
 
-    $form['responsible_gaming_details']['file_18plus_image'] = [
-      '#name' => 'file_18plus_image',
+    $form['responsible_gaming_details']['file_image_18plus_image'] = [
+      '#name' => 'file_image_18plus_image',
       '#type' => 'managed_file',
       '#title' => $this->t('+18 Sign Image (PNG)'),
-      '#default_value' => $this->get('file_18plus_image'),
+      '#default_value' => $this->get('file_image_18plus_image'),
       '#upload_location' => 'public://footer-images/',
       '#translatable' => TRUE,
       '#upload_validators' => [
         'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
       ],
-      '#required' => TRUE,
     ];
     
     $d = $this->get('responsible_gaming_message');
@@ -353,7 +353,6 @@ class FooterForm extends FormBase
       '#default_value' => $d['value'],
       '#format' => $d['format'],
       '#description' => $this->t('Enter the explanatory message for Responsible Gaming.'),
-      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
   }

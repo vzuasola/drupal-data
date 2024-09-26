@@ -161,12 +161,6 @@ class ConfigurationResource extends ResourceBase {
             $data['ambassador_image_url'] = $this->generateUrlFromFile($file);
           }
 
-          $file_id = $data['file_18plus_image'][0];
-          $file = File::load($file_id);
-          if ($file) {
-            $data['file_18plus_image_url'] = $this->generateUrlFromFile($file);
-          }
-
         case 'page_not_found':
           $file_id = $data['page_not_found_image'][0];
 

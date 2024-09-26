@@ -42,7 +42,6 @@ class FooterConfiguration extends ConfigFormBase
     $this->sectionSocials($form);
     $this->sectionBackToTop($form);
     $this->sectionResponsive($form);
-    $this->sectionResponsibleGaming($form);
 
     return parent::buildForm($form, $form_state);
   }
@@ -174,31 +173,6 @@ class FooterConfiguration extends ConfigFormBase
   public function validateForm(array &$form, FormStateInterface $form_state)
   {
   }
-
-  /**
-   * Responsible Gaming section
-   */
-  private function sectionResponsibleGaming(array &$form)
-  {
-    $config = $this->config('webcomposer_config.footer_configuration');
-
-    $form['responsible_gaming_details'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Responsible Gaming'),
-      '#group' => 'advanced',
-    ];
-
-    $d = $config->get('responsible_gaming_message');
-    
-    $form['responsible_gaming_details']['responsible_gaming_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Responsible Gaming Message'),
-      '#default_value' => $d['value'],
-      '#format' => $d['format'] ?? 'basic_html',
-      '#required' => TRUE,
-    ];
-  }
-
 
   /**
    * {@inheritdoc}
