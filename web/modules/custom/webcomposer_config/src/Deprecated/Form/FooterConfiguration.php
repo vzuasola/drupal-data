@@ -8,26 +8,30 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Config form for Footer.
  */
-class FooterConfiguration extends ConfigFormBase {
+class FooterConfiguration extends ConfigFormBase
+{
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames()
+  {
     return ['webcomposer_config.footer_configuration'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormId()
+  {
     return 'webcomposer_config_footer_settings_form';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state)
+  {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Footer Configuration'),
@@ -45,7 +49,8 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    *
    */
-  private function sectionAbout(array &$form) {
+  private function sectionAbout(array &$form)
+  {
     $config = $this->config('webcomposer_config.footer_configuration');
 
     $form['about_dafabet_details'] = [
@@ -75,7 +80,8 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    *
    */
-  private function sectionQuicklinks(array &$form) {
+  private function sectionQuicklinks(array &$form)
+  {
     $config = $this->config('webcomposer_config.footer_configuration');
 
     $form['quicklinks_group'] = [
@@ -97,7 +103,8 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    *
    */
-  private function sectionSocials(array &$form) {
+  private function sectionSocials(array &$form)
+  {
     $config = $this->config('webcomposer_config.footer_configuration');
 
     $form['social_group'] = [
@@ -118,7 +125,8 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    *
    */
-  private function sectionBackToTop(array &$form) {
+  private function sectionBackToTop(array &$form)
+  {
     $config = $this->config('webcomposer_config.footer_configuration');
 
     $form['back_to_top'] = [
@@ -139,7 +147,8 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    *
    */
-  private function sectionResponsive(array &$form) {
+  private function sectionResponsive(array &$form)
+  {
     $config = $this->config('webcomposer_config.footer_configuration');
 
     $form['responsive_footer'] = [
@@ -161,13 +170,15 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
+  public function validateForm(array &$form, FormStateInterface $form_state)
+  {
   }
 
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state)
+  {
     $keys = [
       // About Dafabet Section
       'about_dafabet_title',
@@ -184,6 +195,7 @@ class FooterConfiguration extends ConfigFormBase {
 
       // Responsive Section
       'sponsor_mobile_desc',
+      'responsible_gaming_message',
     ];
 
     foreach ($keys as $key) {
