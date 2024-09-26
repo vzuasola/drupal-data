@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.promotions_product_filter.field_filter_name
     - field.field.taxonomy_term.promotions_product_filter.field_product_category_id
     - field.field.taxonomy_term.promotions_product_filter.field_product_filter_id
+    - field.field.taxonomy_term.promotions_product_filter.field_show_in_flutter_app
     - taxonomy.vocabulary.promotions_product_filter
 id: taxonomy_term.promotions_product_filter.default
 targetEntityType: taxonomy_term
@@ -43,6 +44,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_show_in_flutter_app:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   name:
     type: string_textfield
