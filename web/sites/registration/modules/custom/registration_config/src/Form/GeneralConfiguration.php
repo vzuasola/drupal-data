@@ -299,6 +299,18 @@ class GeneralConfiguration extends FormBase
       '#required' => TRUE,
     ];
 
+    $form['restriction']['remove_country_by_portal_id'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Remove Countries from registration list on specific portal IDs based on country id'),
+      '#description' => $this->t('Mapping that will be used for removing countries from the ' .
+        'country list on registration e.g. 24|27,39,23 where 24 is the ' .
+        'portal ID of fish hunter and 27,39,23 are the icore country codes'),
+      '#default_value' => $this->get('remove_country_by_portal_id'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+
+    ];
+
     $form['restriction']['portal_id_to_product_name_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Portal ID to Product Name Mapping'),
