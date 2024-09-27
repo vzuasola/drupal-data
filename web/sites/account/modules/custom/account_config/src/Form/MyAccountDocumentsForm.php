@@ -70,7 +70,7 @@ class MyAccountDocumentsForm extends FormBase
             '#type' => 'checkbox',
             '#title' => $this->t('Force Enable'),
             '#required' => FALSE,
-            '#description' => $this->t('Check to force showing of the documents feature even if the Status is not "Pending Upload"'),
+            '#description' => $this->t('Check to force showing of the documents feature and document status lightbox if the status is not "Pending Upload(2)"'),
             '#default_value' => $this->get('force_enable'),
             '#translatable' => TRUE,
         ];
@@ -99,6 +99,15 @@ class MyAccountDocumentsForm extends FormBase
             '#default_value' => $this->get('label') ?? 'Documents',
             '#translatable' => TRUE,
         ];
+
+        $form['feature_configuration']['back'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Back'),
+            '#required' => FALSE,
+            '#description' => $this->t('The back text to display on the modal ligtbox'),
+            '#default_value' => $this->get('back') ?? 'Back',
+            '#translatable' => TRUE,
+        ];
         $form['feature_configuration']['submit_error'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Submission Error'),
@@ -106,6 +115,15 @@ class MyAccountDocumentsForm extends FormBase
             '#required' => TRUE,
             '#description' => $this->t('Error shown if form validation fails during submission, <small>e.g.</small> failure|<i>Generic Error Message.</i>'),
             '#default_value' => $this->get('submit_error'),
+            '#translatable' => TRUE,
+        ];
+        $form['feature_configuration']['document_status'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Document Status'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Status shown if documents are <small>e.g.</small> <i>0|Generic Status Message.</i>'),
+            '#default_value' => $this->get('document_status'),
             '#translatable' => TRUE,
         ];
         $form['feature_configuration']['submit_success'] = [
