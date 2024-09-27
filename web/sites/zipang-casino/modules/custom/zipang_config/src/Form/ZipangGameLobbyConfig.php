@@ -64,7 +64,7 @@ class ZipangGameLobbyConfig extends FormBase {
 
     $form['page_setting']['show_all'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Show All'),
+      '#title' => $this->t('Show All Game Category'),
       '#default_value' => $this->get('show_all'),
       '#translatable' => TRUE,
     ];
