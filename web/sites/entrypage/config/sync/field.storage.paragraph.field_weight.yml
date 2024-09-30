@@ -1,0 +1,20 @@
+uuid: 2a3983f6-ec9b-4555-adf9-e6c8e3e89ebc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_weight
+field_name: field_weight
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
