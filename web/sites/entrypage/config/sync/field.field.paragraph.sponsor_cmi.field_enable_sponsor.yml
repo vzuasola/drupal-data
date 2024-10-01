@@ -1,0 +1,23 @@
+uuid: b81eaab9-21e1-4c6a-9d00-34b1cdc9d3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_sponsor
+    - paragraphs.paragraphs_type.sponsor_cmi
+id: paragraph.sponsor_cmi.field_enable_sponsor
+field_name: field_enable_sponsor
+entity_type: paragraph
+bundle: sponsor_cmi
+label: 'Enable Sponsor'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

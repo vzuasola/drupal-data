@@ -1,0 +1,25 @@
+uuid: 02cea0a5-e3e6-46a9-80c8-c4493c4571be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_weight
+    - paragraphs.paragraphs_type.sponsor_cmi
+id: paragraph.sponsor_cmi.field_weight
+field_name: field_weight
+entity_type: paragraph
+bundle: sponsor_cmi
+label: Weight
+description: 'Higher weight sorts the sponsor last.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
