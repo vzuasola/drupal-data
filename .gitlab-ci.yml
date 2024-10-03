@@ -200,6 +200,7 @@ production:
   image: registry.gitlab.com/sportion/marketing/websites/websites-commons/shared-images/deployment
   only:
     - /^release-.*$/
+    - /^hotfix-.*$/
     - tags
     - /^jenkins/
 
@@ -223,6 +224,7 @@ production-mobile-stack:
   image: registry.gitlab.com/sportion/marketing/websites/websites-commons/shared-images/deployment
   only:
     - /^release-.*$/
+    - /^hotfix-.*$/
     - tags
     - /^jenkins/
 
@@ -242,6 +244,7 @@ production-japan-stack:
     expire_in: 1 month
   only:
     - /^release-.*$/
+    - /^hotfix-.*$/
     - tags
 
 production-row-stack:
@@ -256,6 +259,7 @@ production-row-stack:
     - staging
   only:
     - /^release-.*$/
+    - /^hotfix-.*$/
     - tags
     - /^jenkins/
   tags:
@@ -281,5 +285,6 @@ production-nextbet-stack:
   image: registry.gitlab.com/sportion/marketing/websites/websites-commons/shared-images/deployment
   only:
     - /^release-.*$/
+    - /^hotfix-.*$/
     - tags
     - /^jenkins/
