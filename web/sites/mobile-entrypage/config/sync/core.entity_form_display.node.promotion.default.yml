@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.promotion.field_chickpea_enabled_pre
     - field.field.node.promotion.field_chickpea_event_name
     - field.field.node.promotion.field_chickpea_script
+    - field.field.node.promotion.field_chickpea_video_thumbnail
     - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_field_enable_sticky_post
     - field.field.node.promotion.field_field_enable_sticky_post2
@@ -317,6 +318,7 @@ third_party_settings:
         - field_chickpea_enabled_post
         - field_chickpea_script
         - field_chickpea_event_name
+        - field_chickpea_video_thumbnail
       parent_name: ''
       weight: 16
       format_type: tab
@@ -417,6 +419,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_chickpea_video_thumbnail:
+    weight: 148
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_enable_disable_ribbon_tag:
     weight: 10

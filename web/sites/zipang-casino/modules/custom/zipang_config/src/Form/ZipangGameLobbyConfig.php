@@ -61,6 +61,13 @@ class ZipangGameLobbyConfig extends FormBase {
       '#default_value' => $this->get('enable_lobby'),
       '#translatable' => TRUE,
     ];
+
+    $form['page_setting']['show_all'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show All Game Category'),
+      '#default_value' => $this->get('show_all'),
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionGameQuicklinks(array &$form) {

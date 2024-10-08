@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.sponsor_cmi.field_enable_sponsor
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link_target
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_logo
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_logo_revamp
     - field.field.paragraph.sponsor_cmi.field_sponsor_subtitle
     - field.field.paragraph.sponsor_cmi.field_sponsor_title
+    - field.field.paragraph.sponsor_cmi.field_weight
     - image.style.thumbnail
     - paragraphs.paragraphs_type.sponsor_cmi
   module:
@@ -20,8 +22,15 @@ targetEntityType: paragraph
 bundle: sponsor_cmi
 mode: default
 content:
+  field_enable_sponsor:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_sponsor_cmi_link:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -29,13 +38,13 @@ content:
     type: string_textfield
     region: content
   field_sponsor_cmi_link_target:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sponsor_cmi_logo:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -43,7 +52,7 @@ content:
     type: image_image
     region: content
   field_sponsor_cmi_logo_revamp:
-    weight: 0
+    weight: 1
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -51,7 +60,7 @@ content:
     type: image_image
     region: content
   field_sponsor_subtitle:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -59,15 +68,22 @@ content:
     type: string_textfield
     region: content
   field_sponsor_title:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_weight:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   translation:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

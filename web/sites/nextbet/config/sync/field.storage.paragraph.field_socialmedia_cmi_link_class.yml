@@ -23,9 +23,6 @@ settings:
       value: messenger
       label: Messenger
     -
-      value: google
-      label: 'Google Plus'
-    -
       value: youtube
       label: Youtube
     -
@@ -46,6 +43,27 @@ settings:
     -
       value: kakaotalk
       label: KakaoTalk
+    -
+      value: tiktok
+      label: TikTok
+    -
+      value: viber
+      label: Viber
+    -
+      value: zalo
+      label: Zalo
+    -
+      value: qq
+      label: QQ
+    -
+      value: whatsapp
+      label: WhatsApp
+    -
+      value: bbm
+      label: BBM
+    -
+      value: telegram
+      label: Telegram
   allowed_values_function: ''
 module: options
 locked: false
