@@ -7,6 +7,7 @@ dependencies:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_all_games_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_arcade_game_category
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_arcade_game_filter
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_bet_range
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type_mobile
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_free_play
@@ -27,6 +28,7 @@ dependencies:
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_title_icon
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_type
     - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_provider_product
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_rtp
     - image.style.thumbnail
   module:
     - conditional_fields
@@ -112,6 +114,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_bet_range:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_client_type:
     weight: 8
@@ -307,6 +317,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_rtp:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   langcode:
     type: language_select
     weight: 3

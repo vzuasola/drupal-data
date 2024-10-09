@@ -40,6 +40,7 @@ class ZipangGameLobbyConfig extends FormBase {
     $this->sectionPageSetting($form);
     $this->sectionGameQuicklinks($form);
     $this->sectionGameSearch($form);
+    $this->sectionGameDetails($form);
 
     return $form;
   }
@@ -110,6 +111,35 @@ class ZipangGameLobbyConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Default Category'),
       '#default_value' => $this->get('default_category'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionGameDetails(array &$form) {
+    $form['game_details'] = [
+      '#type' => 'details',
+      '#title' => t('Game Details Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['game_details']['play_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Play Button Label'),
+      '#default_value' => $this->get('play_button_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['game_details']['rtp_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('RTP Label'),
+      '#default_value' => $this->get('rtp_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['game_details']['bet_range_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Bet Range Label'),
+      '#default_value' => $this->get('bet_range_label'),
       '#translatable' => TRUE,
     ];
   }
