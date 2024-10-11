@@ -1,0 +1,19 @@
+uuid: 0953f13b-1305-44ab-b0da-0fa0c01518b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_key
+    - taxonomy.vocabulary.esports_provider
+id: taxonomy_term.esports_provider.field_game_provider_key
+field_name: field_game_provider_key
+entity_type: taxonomy_term
+bundle: esports_provider
+label: 'Product Provider Key'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

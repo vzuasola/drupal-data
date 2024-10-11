@@ -1,0 +1,9 @@
+uuid: 390a801d-a5b7-446d-8732-88464de35570
+langcode: en
+status: true
+dependencies: {  }
+name: 'Esports Provider'
+vid: esports_provider
+description: 'Mapping for Esports Providers.'
+hierarchy: 0
+weight: 0

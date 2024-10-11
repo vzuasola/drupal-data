@@ -1,0 +1,22 @@
+uuid: 7d56909b-490a-4dda-9b70-21847c4b2967
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.products_esports
+  module:
+    - text
+id: node.products_esports.body
+field_name: body
+entity_type: node
+bundle: products_esports
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

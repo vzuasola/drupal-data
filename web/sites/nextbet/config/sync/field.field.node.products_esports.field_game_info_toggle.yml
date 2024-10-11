@@ -1,0 +1,23 @@
+uuid: dc8b60e8-2b67-4aa1-8bdf-c312b4767cf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_info_toggle
+    - node.type.products_esports
+id: node.products_esports.field_game_info_toggle
+field_name: field_game_info_toggle
+entity_type: node
+bundle: products_esports
+label: 'Show Product Info Button'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

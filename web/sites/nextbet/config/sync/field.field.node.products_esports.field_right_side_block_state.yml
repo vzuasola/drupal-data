@@ -1,0 +1,25 @@
+uuid: 413e14d4-9a55-4c34-af1f-c7d2eec3d27f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_block_state
+    - node.type.products_esports
+  module:
+    - options
+id: node.products_esports.field_right_side_block_state
+field_name: field_right_side_block_state
+entity_type: node
+bundle: products_esports
+label: 'Right-Side Block State'
+description: 'Select field(s) to show on Promotions - Right-Side Block.'
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

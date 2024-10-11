@@ -1,0 +1,172 @@
+uuid: 4eb556b5-8287-48ef-acb6-437ce5cbc5b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.products_esports.body
+    - field.field.node.products_esports.field_banner_link
+    - field.field.node.products_esports.field_esports_provider
+    - field.field.node.products_esports.field_game_icon
+    - field.field.node.products_esports.field_game_image
+    - field.field.node.products_esports.field_game_image_large
+    - field.field.node.products_esports.field_game_info_toggle
+    - field.field.node.products_esports.field_game_preview_mode
+    - field.field.node.products_esports.field_game_ribbon
+    - field.field.node.products_esports.field_game_title
+    - field.field.node.products_esports.field_hide
+    - field.field.node.products_esports.field_image_size
+    - field.field.node.products_esports.field_maintenance_blurb
+    - field.field.node.products_esports.field_maintenance_end
+    - field.field.node.products_esports.field_maintenance_start
+    - field.field.node.products_esports.field_right_side_block_state
+    - node.type.products_esports
+  module:
+    - datetime
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.products_esports.default
+targetEntityType: node
+bundle: products_esports
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_link:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_esports_provider:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_icon:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_image:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_image_large:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_info_toggle:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_game_preview_mode:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_game_title:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hide:
+    weight: 12
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_image_size:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maintenance_blurb:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_maintenance_end:
+    weight: 11
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maintenance_start:
+    weight: 10
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_right_side_block_state:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_game_ribbon: true
+  langcode: true
