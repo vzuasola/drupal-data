@@ -46,6 +46,39 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
   $settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
 }
 
+if (isset($_SERVER['REDIS_SERVER_ODD']) && isset($_SERVER['REDIS_SERVICE_ODD'])
+  && isset($_SERVER['REDIS_SERVER_EVEN']) && isset($_SERVER['REDIS_SERVICE_EVEN'])) {
+
+  $clients = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER_ODD']);
+  $clients2 = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER_EVEN']);
+
+  $redisService = $_SERVER['REDIS_SERVICE_ODD'];
+  $redisService2 = $_SERVER['REDIS_SERVICE_EVEN'];
+
+  $options = [
+    'replication' => 'sentinel',
+    'service' => $redisService,
+    'parameters' => ['database' => 1],
+  ];
+
+  $options2 = [
+    'replication' => 'sentinel',
+    'service' => $redisService2,
+    'parameters' => ['database' => 1],
+  ];
+
+  $settings['webcomposer_cache']['multiple_redis'] = [
+    'clients' => [
+      'redis_odd' => $clients,
+      'redis_even' => $clients2
+    ],
+    'options' => [
+      'redis_odd' => $options,
+      'redis_even' => $options2
+    ],
+  ];
+}
+
 // if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
 //   $settings['cache']['default'] = 'cache.backend.redis';
 //   $settings['cache_prefix'] = "drupal.cache.$product";
