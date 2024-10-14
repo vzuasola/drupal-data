@@ -1,0 +1,9 @@
+uuid: a50ab4ff-fb1d-4e75-b4a1-bd945f4e2b80
+langcode: en
+status: true
+dependencies: {  }
+id: kk
+label: Kazakh
+direction: ltr
+weight: 11
+locked: false
