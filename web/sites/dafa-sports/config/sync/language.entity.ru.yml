@@ -1,0 +1,16 @@
+uuid: c3b7b0b0-0bd6-4732-95b3-dbf27e59e287
+langcode: ru
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'Russian (Kazakhstan)'
+    webcomposer_language_hidden: 0
+id: ru
+label: Russian
+direction: ltr
+weight: 16
+locked: false
