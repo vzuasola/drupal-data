@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: '1 Row'
+      label: '1'
     -
       value: '1'
-      label: '2 Rows'
+      label: '2'
   allowed_values_function: ''
 module: options
 locked: false

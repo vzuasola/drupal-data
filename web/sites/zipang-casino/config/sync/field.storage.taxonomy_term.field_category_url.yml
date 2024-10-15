@@ -1,0 +1,19 @@
+uuid: ca2b4fbb-9079-498f-8bd7-0a9ecd85d479
+langcode: ja
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_category_url
+field_name: field_category_url
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
