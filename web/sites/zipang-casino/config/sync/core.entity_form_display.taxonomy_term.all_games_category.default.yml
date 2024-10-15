@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.all_games_category.field_category_icon
+    - field.field.taxonomy_term.all_games_category.field_category_url
     - field.field.taxonomy_term.all_games_category.field_icon
     - field.field.taxonomy_term.all_games_category.field_log_in_state
     - field.field.taxonomy_term.all_games_category.field_number_of_rows
@@ -13,6 +14,7 @@ dependencies:
     - taxonomy.vocabulary.all_games_category
   module:
     - field_group
+    - link
     - path
     - svg_image
     - text
@@ -64,6 +66,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_category_url:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_icon:
     weight: 8
