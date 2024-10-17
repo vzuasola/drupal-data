@@ -91,6 +91,19 @@ settings:
     -
       value: nextbet
       label: 'Nextbet'
+    -
+      value: linkedin
+      label: 'LinkedIn'
+    -
+      value: instagram
+      label: 'Instagram'
+    -
+      value: tiktok
+      label: 'TikTok'
+    -
+      value: telegram
+      label: 'Telegram'
+
   allowed_values_function: ''
 module: options
 locked: false
