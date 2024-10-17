@@ -10,7 +10,7 @@ third_party_settings:
     webcomposer_language_custom_label: 'Russian (Kazakhstan)'
     webcomposer_language_hidden: 0
 id: ru
-label: Russian
+label: 'Russian (Kazakhstan)'
 direction: ltr
 weight: 16
 locked: false
