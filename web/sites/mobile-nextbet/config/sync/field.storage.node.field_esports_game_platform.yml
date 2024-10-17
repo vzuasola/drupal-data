@@ -1,0 +1,21 @@
+uuid: 53fedf56-a67e-4759-88f3-3c651509edde
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_esports_game_platform
+field_name: field_esports_game_platform
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

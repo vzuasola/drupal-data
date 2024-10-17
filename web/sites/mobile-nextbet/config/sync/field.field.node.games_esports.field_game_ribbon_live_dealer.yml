@@ -1,0 +1,29 @@
+uuid: 0f8d1e40-9f83-4e83-ae2e-5f46736b26c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_ribbon_live_dealer
+    - node.type.games_esports
+    - taxonomy.vocabulary.games_ribbon
+id: node.games_esports.field_game_ribbon_live_dealer
+field_name: field_game_ribbon_live_dealer
+entity_type: node
+bundle: games_esports
+label: 'Esports Game Ribbon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      games_ribbon: games_ribbon
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: games_ribbon
+field_type: entity_reference
