@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: ru
-label: Russian
+label: 'Russian (Kazakhstan)'
 direction: ltr
 weight: 17
 locked: false
