@@ -1,0 +1,19 @@
+uuid: 9cd1b3fc-3e26-4d8b-b402-81c48cc5f151
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_esports_url
+    - node.type.games_esports
+id: node.games_esports.field_esports_url
+field_name: field_esports_url
+entity_type: node
+bundle: games_esports
+label: 'Esports URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

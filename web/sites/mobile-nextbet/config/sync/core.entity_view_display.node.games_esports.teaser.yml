@@ -1,0 +1,19 @@
+uuid: d1cbcc2c-edbf-4a7c-b307-484b08b87582
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.games_esports
+  module:
+    - user
+id: node.games_esports.teaser
+targetEntityType: node
+bundle: games_esports
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
