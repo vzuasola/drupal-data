@@ -1,17 +1,17 @@
-uuid: ab4ae403-9bba-4548-9c5e-e1b1afb79c12
-langcode: en
+uuid: 4c945cf7-eb8a-4be8-b2f7-78db30e00524
+langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_log_in_state
+    - field.storage.taxonomy_term.field_category_log_in_state
     - taxonomy.vocabulary.all_games_category
   module:
     - options
-id: taxonomy_term.all_games_category.field_log_in_state
-field_name: field_log_in_state
+id: taxonomy_term.all_games_category.field_category_log_in_state
+field_name: field_category_log_in_state
 entity_type: taxonomy_term
 bundle: all_games_category
-label: 'Menu Bar Log-in State'
+label: 'Category field Log-in State'
 description: ''
 required: false
 translatable: true
