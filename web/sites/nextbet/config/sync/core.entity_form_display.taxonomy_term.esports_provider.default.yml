@@ -1,0 +1,52 @@
+uuid: b08d1f69-7805-4ecf-b7cf-6870104f5c69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.esports_provider.field_game_provider_key
+    - field.field.taxonomy_term.esports_provider.field_game_provider_product_type
+    - taxonomy.vocabulary.esports_provider
+id: taxonomy_term.esports_provider.default
+targetEntityType: taxonomy_term
+bundle: esports_provider
+mode: default
+content:
+  field_game_provider_key:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_provider_product_type:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

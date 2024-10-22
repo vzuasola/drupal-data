@@ -1,0 +1,21 @@
+uuid: 8f4df886-33b1-4446-8e78-fb0a8779492d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_esports_game_provider
+    - node.type.games_esports
+  module:
+    - options
+id: node.games_esports.field_esports_game_provider
+field_name: field_esports_game_provider
+entity_type: node
+bundle: games_esports
+label: 'Esports Game Provider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

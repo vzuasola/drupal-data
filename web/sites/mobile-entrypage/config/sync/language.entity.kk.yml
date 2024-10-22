@@ -1,0 +1,15 @@
+uuid: e02dcda4-7826-4cd0-b947-c624221f80de
+langcode: kk
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_hidden: 0
+id: kk
+label: Kazakh
+direction: ltr
+weight: 3
+locked: false

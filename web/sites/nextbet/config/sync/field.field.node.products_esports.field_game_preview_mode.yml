@@ -1,0 +1,23 @@
+uuid: 1ec5ae77-24ef-4449-ad0c-a34ba403b266
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_preview_mode
+    - node.type.products_esports
+id: node.products_esports.field_game_preview_mode
+field_name: field_game_preview_mode
+entity_type: node
+bundle: products_esports
+label: 'Preview Mode'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

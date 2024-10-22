@@ -1,0 +1,16 @@
+uuid: cb93027f-e973-4b03-b090-8929c43fa92a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.esports_provider
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.esports_provider
+target_entity_type_id: taxonomy_term
+target_bundle: esports_provider
+default_langcode: site_default
+language_alterable: true

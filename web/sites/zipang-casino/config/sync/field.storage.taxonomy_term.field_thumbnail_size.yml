@@ -12,13 +12,13 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: '0'
+      value: 150x300
       label: 'Vertical (150x300)'
     -
-      value: '1'
+      value: 150x150
       label: 'Square (150x150)'
     -
-      value: '2'
+      value: 310x1502
       label: 'Horizontal (310x150)'
   allowed_values_function: ''
 module: options

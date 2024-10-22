@@ -35,3 +35,8 @@ customer_support_blurb:
   format: basic_html
 account_tab: Account
 history_tab: History
+enable_revise_password: 1
+revise_password_title: 'Security Update<br> Password Change Required'
+revise_password_content:
+  value: "<p>To enhance your account's security, please update your password.\r\n</p>\r\n<h1>New Password Requirements:\r\n</h1>\r\n<ul>\r\n  <li>Minimum 8 characters; Maximum:10 characters</li>\r\n  <li>Includes at least one uppercase and one lowercase letter</li>\r\n  <li>Contains at least one number</li>\r\n  <li>Includes at least one special character (e.g.,!,@,#,$)</li>\r\n</ul>\r\n<p class=\"btn-container\"><a class=\"btn btn-small\" data-popup=\"true\" data-popup-width=\"820\" data-popup-height=\"700\" href=\"https://www.msw.ph/en/my-account#change-password-content\">Update Now</a>\r\n</p>\r\n"
+  format: basic_html

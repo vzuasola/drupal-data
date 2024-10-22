@@ -1,0 +1,21 @@
+uuid: 3c641f8c-929f-4e00-bc33-d967d2c84360
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_esports_url
+field_name: field_esports_url
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

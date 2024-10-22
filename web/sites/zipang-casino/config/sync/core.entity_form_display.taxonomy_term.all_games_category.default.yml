@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.all_games_category.field_category_icon
+    - field.field.taxonomy_term.all_games_category.field_category_url
     - field.field.taxonomy_term.all_games_category.field_icon
     - field.field.taxonomy_term.all_games_category.field_log_in_state
     - field.field.taxonomy_term.all_games_category.field_number_of_rows
@@ -13,7 +14,7 @@ dependencies:
     - taxonomy.vocabulary.all_games_category
   module:
     - field_group
-    - path
+    - link
     - svg_image
     - text
 third_party_settings:
@@ -65,13 +66,13 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_icon:
-    weight: 8
+  field_category_url:
+    weight: 7
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: image_image
+    type: link_default
     region: content
   field_log_in_state:
     weight: 4
@@ -114,15 +115,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   translation:
     weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_icon: true
+  path: true

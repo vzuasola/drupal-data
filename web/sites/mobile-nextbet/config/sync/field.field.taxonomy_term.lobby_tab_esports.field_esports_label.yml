@@ -1,0 +1,19 @@
+uuid: 859bae08-bc81-485b-99a8-10bee3ebd31f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_esports_label
+    - taxonomy.vocabulary.lobby_tab_esports
+id: taxonomy_term.lobby_tab_esports.field_esports_label
+field_name: field_esports_label
+entity_type: taxonomy_term
+bundle: lobby_tab_esports
+label: 'Esports Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

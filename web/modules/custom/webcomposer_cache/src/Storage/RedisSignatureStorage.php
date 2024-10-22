@@ -18,6 +18,11 @@ class RedisSignatureStorage implements SignatureStorageInterface {
    */
   private $redis;
 
+   /**
+   * Predis client instance
+   */
+  private $redis2;
+
   /**
    * The product code
    *
@@ -35,7 +40,16 @@ class RedisSignatureStorage implements SignatureStorageInterface {
 
     $settings = Settings::get('webcomposer_cache');
 
-    if (!empty($settings['redis'])) {
+    if (isset($settings['multiple_redis'])) {
+      $this->redis = new Redis(
+          $settings['multiple_redis']['clients']['redis_odd'],
+          $settings['multiple_redis']['options']['redis_odd']
+      );
+      $this->redis2 = new Redis(
+        $settings['multiple_redis']['clients']['redis_even'],
+        $settings['multiple_redis']['options']['redis_even']
+      );
+    } else if (!empty($settings['redis'])) {
       $this->redis = new Redis($settings['redis']['clients'], $settings['redis']['options']);
     }
   }
@@ -72,6 +86,10 @@ class RedisSignatureStorage implements SignatureStorageInterface {
     );
 
     $this->redis->set($this->cacheKey, $signature);
+
+    if ($this->redis2) {
+      $this->redis2->set($this->cacheKey, $signature);
+    }
   }
 
   /**
@@ -89,6 +107,10 @@ class RedisSignatureStorage implements SignatureStorageInterface {
    */
   public function deleteSignature() {
     $this->redis->del($this->cacheKey);
+
+    if ($this->redis2) {
+      $this->redis2->del($this->cacheKey);
+    }
   }
 
   /**

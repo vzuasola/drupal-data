@@ -1,0 +1,27 @@
+uuid: 20d288b6-efe4-453a-92e6-5cd01516a168
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_esports_game_provider
+field_name: field_esports_game_provider
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: esportsbull
+      label: eSportsbull
+    -
+      value: pinnacle
+      label: Pinnacle
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -47,6 +47,7 @@ class MyAccountConfigForm extends FormBase {
     $this->sectionPageSetting($form);
     $this->fieldMessage($form);
     $this->verifyPassword($form);
+    $this->revisePasswordAlert($form);
 
     return $form;
   }
@@ -330,5 +331,36 @@ class MyAccountConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+  }
+
+  private function revisePasswordAlert(array &$form) {
+      $form['revise_password'] = [
+          '#type' => 'details',
+          '#title' => t('Revise Password Alert'),
+          '#group' => 'advanced',
+      ];
+
+      $form['revise_password']['enable_revise_password'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Enable revise password alert - (✓)enable | (✕)disable'),
+        '#default_value' => $this->get('enable_revise_password'),
+        '#translatable' => TRUE,
+      ];
+
+      $form['revise_password']['revise_password_title'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Revise password alert title'),
+          '#required' => true,
+          '#default_value' => $this->get('revise_password_title'),
+          '#translatable' => true,
+      ];
+
+      $content = $this->get('revise_password_content');
+      $form['revise_password']['revise_password_content'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Revise Password Alert Content'),
+          '#default_value' => $content['value'],
+          '#translatable' => TRUE,
+      ];
   }
 }
