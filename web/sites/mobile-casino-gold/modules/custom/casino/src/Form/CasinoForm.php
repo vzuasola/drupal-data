@@ -66,13 +66,6 @@ class CasinoForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['general']['launch_via_iframe'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable launching games via IFrame'),
-      '#default_value' => $this->get('launch_via_iframe'),
-      '#description' => 'Enable launching games via IFrame.',
-    ];
-
     return $form;
   }
 }
