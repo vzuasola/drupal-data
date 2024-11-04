@@ -50,7 +50,7 @@ class JamboreeLoginConfigForm extends FormBase {
 
     $form['login_form'] = [
       '#type' => 'details',
-      '#title' => $this->t('Jamboree Login Form Configuration'),
+      '#title' => $this->t('DLC Login Form Configuration'),
       '#group' => 'jamboree_settings_tab',
     ];
 
@@ -168,6 +168,15 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Registration Link'),
       '#default_value' => $default_registration_link,
       '#description' => $this->t('Registration link.'),
+      '#translatable' => TRUE,
+    ];
+
+    $download_update_text = $this->get('download_update_text');
+    $form['login_form']['download_update_text'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Download Text for Update new DLC'),
+      '#default_value' => $download_update_text['value'],
+      '#format' => $download_update_text['format'],
       '#translatable' => TRUE,
     ];
     

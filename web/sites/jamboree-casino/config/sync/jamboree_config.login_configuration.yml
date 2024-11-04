@@ -18,4 +18,24 @@ login_registration_link: /registration
 login_button_label_main: LOGIN
 login_button_label_sub: SUB
 login_session_time: '60'
-session_timeout: 'Session Timeout.'
+session_timeout: 'Session Timeout'
+change_pass_form_title: 'CHANGE PASSWORD'
+change_pass_current_password: 'Old Password'
+change_pass_new_password: 'New Password'
+change_pass_confirm_new_password: 'Confirm New Password'
+change_pass_submit: 'Confirm New Password'
+change_pass_old_password_error: 'OLD PASSWORD ERROR'
+change_pass_new_password_error: 'Password must be 5-10 alphanumeric characters.'
+change_pass_confirm_new_password_error: 'Password did not match. '
+change_pass_failed: 'Service Unavailable'
+reset_token_title: 'TOKEN EXPIRED'
+reset_token_description:
+  value: "<p>Sorry, your token has already been used or expired. To request again please go to this link:&nbsp;<a href=\"/\" target=\"_blank\">Homepage</a></p>\r\n"
+  format: basic_html
+value: null
+format: null
+login_already_member: 'Already a member? 1'
+login_new_customer: 'For new customer 1'
+download_update_text:
+  value: "<p>Please download new client from <a href=\"https://cachedownload-ptstg3229.ptstaging.eu/installer/casino/SetupCasino.exe\">HERE</a> .\r\n</p>\r\n"
+  format: basic_html
