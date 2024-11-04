@@ -18,7 +18,7 @@ login_registration_link: /registration
 login_button_label_main: LOGIN
 login_button_label_sub: SUB
 login_session_time: '60'
-session_timeout: 'Session Timeout'
+session_timeout: 'Session Timeout.'
 change_pass_form_title: 'CHANGE PASSWORD'
 change_pass_current_password: 'Old Password'
 change_pass_new_password: 'New Password'
@@ -34,8 +34,8 @@ reset_token_description:
   format: basic_html
 value: null
 format: null
-login_already_member: 'Already a member? 1'
-login_new_customer: 'For new customer 1'
+login_already_member: 'Already a member?'
+login_new_customer: 'For new customer'
 download_update_text:
   value: "<p>Please download new client from <a href=\"https://cachedownload-ptstg3229.ptstaging.eu/installer/casino/SetupCasino.exe\">HERE</a> .\r\n</p>\r\n"
   format: basic_html
