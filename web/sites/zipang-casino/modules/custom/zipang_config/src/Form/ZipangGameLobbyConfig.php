@@ -39,6 +39,7 @@ class ZipangGameLobbyConfig extends FormBase {
 
     $this->sectionPageSetting($form);
     $this->sectionGameQuicklinks($form);
+    $this->sectionGamePromotionsConfig($form);
     $this->sectionGameSearch($form);
     $this->sectionGameDetails($form);
 
@@ -83,6 +84,37 @@ class ZipangGameLobbyConfig extends FormBase {
       '#title' => $this->t('Quicklinks Title'),
       '#default_value' => $this->get('quicklinks_title'),
       '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionGamePromotionsConfig(array &$form) {
+    $form['game_promotions'] = [
+      '#type' => 'details',
+      '#title' => t('Game Lobby Promotions Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['game_promotions']['promotions_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Title'),
+      '#default_value' => $this->get('promotions_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['game_promotions']['promotions_icon'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Promotions Icon')
+    ];
+
+    $form['game_promotions']['promotions_icon']['file_image_promotions_icon'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Promotions Icon'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif, svg'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif svg'],
+      ],
+      '#default_value' => $this->get('file_image_promotions_icon'),
     ];
   }
 

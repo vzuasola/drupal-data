@@ -1,0 +1,8 @@
+advanced__active_tab: edit-maya-config
+enable_maintenance: 0
+maintenance_title: Maintenance<br>Advisory
+maintenance_content:
+  value: "<p>We are currently performing scheduled system maintenance. Please check back again soon.</p>\r\n"
+  format: basic_html
+value: null
+format: null

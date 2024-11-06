@@ -1,9 +1,9 @@
-uuid: 4cd9d81d-e0cf-4b9a-84c1-730d1bf993d2
+uuid: 1e00e655-7f12-42f8-ae33-0540c7513e3a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_show_on_mobile_site
+    - field.storage.node.field_show_on_the_maya_mini_app
     - node.type.promotion
     - system.menu.admin
   module:
@@ -13,8 +13,8 @@ dependencies:
     - serialization
     - user
     - webcomposer_rest_extra
-id: promotions
-label: Promotions
+id: maya_promotions
+label: 'Maya Promotions'
 module: views
 description: ''
 tag: ''
@@ -250,7 +250,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: Promotions
+      title: 'Maya Promotions'
       header: {  }
       footer: {  }
       empty: {  }
@@ -272,7 +272,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: admin/config/mobile_promotions/products
+      path: admin/config/maya_promotions
       fields:
         title:
           id: title
@@ -391,14 +391,14 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: draggable_views_field
-        field_show_on_mobile_site:
-          id: field_show_on_mobile_site
-          table: node__field_show_on_mobile_site
-          field: field_show_on_mobile_site
+        field_show_on_the_maya_mini_app:
+          id: field_show_on_the_maya_mini_app
+          table: node__field_show_on_the_maya_mini_app
+          field: field_show_on_the_maya_mini_app
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Show on Mobile Site'
+          label: 'Show on the MAYA Mini App'
           exclude: false
           alter:
             alter_text: false
@@ -464,10 +464,10 @@ display:
         row: false
         arguments: false
       filters:
-        field_show_on_mobile_site_value_1:
-          id: field_show_on_mobile_site_value_1
-          table: node__field_show_on_mobile_site
-          field: field_show_on_mobile_site_value
+        field_show_on_the_maya_mini_app_value:
+          id: field_show_on_the_maya_mini_app_value
+          table: node__field_show_on_the_maya_mini_app
+          field: field_show_on_the_maya_mini_app_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -597,8 +597,8 @@ display:
           1: AND
       menu:
         type: normal
-        title: 'Manage Promotions Sorting'
-        description: 'Sort promotions list'
+        title: 'Maya Promotions Sorting'
+        description: 'Sort maya promotions list'
         expanded: false
         parent: mobile_promotions.list
         weight: 10
@@ -655,7 +655,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_show_on_mobile_site'
+        - 'config:field.storage.node.field_show_on_the_maya_mini_app'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -663,7 +663,7 @@ display:
     position: 4
     display_options:
       display_extenders: {  }
-      path: api/promotions
+      path: api/maya_promotions
       style:
         type: node_list_serializer
         options:
@@ -730,10 +730,10 @@ display:
         type: none
         options: {  }
       filters:
-        field_show_on_mobile_site_value:
-          id: field_show_on_mobile_site_value
-          table: node__field_show_on_mobile_site
-          field: field_show_on_mobile_site_value
+        field_show_on_the_maya_mini_app_value:
+          id: field_show_on_the_maya_mini_app_value
+          table: node__field_show_on_the_maya_mini_app
+          field: field_show_on_the_maya_mini_app_value
           relationship: none
           group_type: group
           admin_label: ''

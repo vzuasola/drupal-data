@@ -39,6 +39,7 @@ class PromotionForm extends FormBase {
         ];
 
         $this->sectionPageSetting($form);
+        $this->sectionMayaSetting($form);
 
         return $form;
     }
@@ -51,7 +52,7 @@ class PromotionForm extends FormBase {
         // Title
         $form['page_title'] = [
             '#type' => 'details',
-            '#title' => t('title'),
+            '#title' => t('Mobile Promotion'),
             '#group' => 'advanced',
         ];
 
@@ -64,6 +65,29 @@ class PromotionForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
+    }
+
+
+    /**
+     * {@inheritdoc}
+     */
+    private function sectionMayaSetting(array &$form) {
+
+        // Title
+        $form['maya_config'] = [
+            '#type' => 'details',
+            '#title' => t('Maya Promotion'),
+            '#group' => 'advanced',
+        ];
+
+        $form['maya_config']['maya_promotion_title'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Promotion Page Title.'),
+            '#description' => $this->t('Promotion Page Title.'),
+            '#default_value' => $this->get('maya_promotion_title'),
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+        ];
     }
 
 }
