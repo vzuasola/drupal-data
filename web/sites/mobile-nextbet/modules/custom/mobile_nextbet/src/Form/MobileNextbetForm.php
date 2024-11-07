@@ -39,6 +39,7 @@ class MobileNextbetForm extends FormBase {
     ];
 
     $this->sectionNextbetConfigs($form);
+    $this->sectionFooterConfig($form);
 
     return $form;
   }
@@ -83,6 +84,21 @@ class MobileNextbetForm extends FormBase {
       '#title' => $this->t('Partners and Sponsors Here'),
       '#default_value' => $this->get('parnerts_and_sponsor_title_text'),
       '#translatable' => true,
+    ];
+  }
+
+  private function sectionFooterConfig(array &$form) {
+    $form['nextbet_footer_configuration'] = [
+      '#type' => 'details',
+      '#title' => t('Nextbet Footer Sections'),
+      '#group' => 'advanced',
+    ];
+
+    $form['nextbet_footer_configuration']['enable_social_media'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Social Media'),
+      '#default_value' => $this->get('enable_social_media'),
+      '#translatable' => TRUE,
     ];
   }
 }
