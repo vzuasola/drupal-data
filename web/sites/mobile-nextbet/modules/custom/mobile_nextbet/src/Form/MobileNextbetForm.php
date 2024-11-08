@@ -94,14 +94,14 @@ class MobileNextbetForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['nextbet_footer_configuration']['enable_social_media'] = [
+    $form['nextbet_footer_configuration']['is_social_media_enabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Social Media'),
       '#default_value' => $this->get('enable_social_media'),
       '#translatable' => TRUE,
     ];
 
-    $form['nextbet_footer_configuration']['enable_about_section'] = [
+    $form['nextbet_footer_configuration']['is_about_section_enabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable About Section'),
       '#default_value' => $this->get('enable_about_section'),
