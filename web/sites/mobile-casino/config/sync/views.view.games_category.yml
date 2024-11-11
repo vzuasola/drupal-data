@@ -3,19 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block.block.languagedropdownswitcher_2
     - field.storage.taxonomy_term.field_games_alias
     - field.storage.taxonomy_term.field_games_category_logo
     - field.storage.taxonomy_term.field_isordinarycategory
     - field.storage.taxonomy_term.field_publish_date
     - field.storage.taxonomy_term.field_unpublish_date
+    - system.menu.admin
     - taxonomy.vocabulary.games_category
   module:
     - datetime
+    - draggableviews
     - image
     - node
     - rest
     - serialization
     - taxonomy
+    - user
     - webcomposer_rest_extra
 id: games_category
 label: 'Games - Category'
@@ -75,7 +79,84 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: serializer
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_games_alias: field_games_alias
+            name: name
+            tid: tid
+            tid_1: tid_1
+            field_isordinarycategory: field_isordinarycategory
+            field_publish_date: field_publish_date
+            field_unpublish_date: field_unpublish_date
+            field_games_category_logo: field_games_category_logo
+          info:
+            field_games_alias:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            tid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            tid_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_isordinarycategory:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_publish_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_unpublish_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_games_category_logo:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
         options:
@@ -694,7 +775,7 @@ display:
       sorts:
         weight:
           id: weight
-          table: taxonomy_term_field_data
+          table: draggableviews_structure
           field: weight
           relationship: none
           group_type: group
@@ -703,8 +784,6 @@ display:
           exposed: false
           expose:
             label: ''
-          entity_type: taxonomy_term
-          entity_field: weight
           plugin_id: standard
         name:
           id: name
@@ -741,12 +820,12 @@ display:
         operator: OR
         groups:
           1: AND
+      title: 'Category Sorting'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - request_format
         - url.query_args
       tags:
         - 'config:field.storage.taxonomy_term.field_games_alias'
@@ -754,6 +833,420 @@ display:
         - 'config:field.storage.taxonomy_term.field_isordinarycategory'
         - 'config:field.storage.taxonomy_term.field_publish_date'
         - 'config:field.storage.taxonomy_term.field_unpublish_date'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: admin/config/categories/sorting
+      pager:
+        type: none
+        options:
+          offset: 0
+      defaults:
+        title: true
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+        sorts: true
+        pager: false
+        relationships: false
+        group_by: false
+        cache: false
+        header: false
+        access: false
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_games_alias: field_games_alias
+            name: name
+            tid: tid
+            tid_1: tid_1
+            field_isordinarycategory: field_isordinarycategory
+            field_publish_date: field_publish_date
+            field_unpublish_date: field_unpublish_date
+            field_games_category_logo: field_games_category_logo
+          info:
+            field_games_alias:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            tid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            tid_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_isordinarycategory:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_publish_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_unpublish_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_games_category_logo:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+        options:
+          inline: {  }
+          separator: ''
+          hide_empty: false
+          default_field_elements: true
+      fields:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+        draggableviews:
+          id: draggableviews
+          table: taxonomy_term_field_data
+          field: draggableviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Taxonomy term'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: draggable_views_field
+        operations:
+          id: operations
+          table: taxonomy_term_data
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Operations links'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: false
+          entity_type: taxonomy_term
+          plugin_id: entity_operations
+      relationships: {  }
+      group_by: false
+      cache:
+        type: none
+        options: {  }
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
+      filters:
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          value:
+            games_category: games_category
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          group: 1
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_games_disable_value:
+          id: field_games_disable_value
+          table: taxonomy_term__field_games_disable
+          field: field_games_disable_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: OR
+        groups:
+          1: AND
+      menu:
+        type: normal
+        title: 'Manage Categories'
+        description: 'Sorting of Categories'
+        expanded: false
+        parent: casino.list
+        weight: 2
+        context: '0'
+        menu_name: admin
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags: {  }
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
