@@ -107,5 +107,12 @@ class MobileNextbetForm extends FormBase {
       '#default_value' => $this->get('is_about_section_enabled'),
       '#translatable' => TRUE,
     ];
+
+    $form['nextbet_footer_configuration']['is_partner_section_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Partner Section'),
+      '#default_value' => $this->get('is_partner_section_enabled'),
+      '#translatable' => TRUE,
+    ];
   }
 }
