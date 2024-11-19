@@ -39,6 +39,7 @@ class MobileNextbetForm extends FormBase {
     ];
 
     $this->sectionNextbetConfigs($form);
+    $this->sectionFooterConfig($form);
 
     return $form;
   }
@@ -83,6 +84,35 @@ class MobileNextbetForm extends FormBase {
       '#title' => $this->t('Partners and Sponsors Here'),
       '#default_value' => $this->get('parnerts_and_sponsor_title_text'),
       '#translatable' => true,
+    ];
+  }
+
+  private function sectionFooterConfig(array &$form) {
+    $form['nextbet_footer_configuration'] = [
+      '#type' => 'details',
+      '#title' => t('Nextbet Footer Sections'),
+      '#group' => 'advanced',
+    ];
+
+    $form['nextbet_footer_configuration']['is_social_media_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Social Media'),
+      '#default_value' => $this->get('is_social_media_enabled'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['nextbet_footer_configuration']['is_about_section_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable About Section'),
+      '#default_value' => $this->get('is_about_section_enabled'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['nextbet_footer_configuration']['is_partner_section_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Partner Section'),
+      '#default_value' => $this->get('is_partner_section_enabled'),
+      '#translatable' => TRUE,
     ];
   }
 }
