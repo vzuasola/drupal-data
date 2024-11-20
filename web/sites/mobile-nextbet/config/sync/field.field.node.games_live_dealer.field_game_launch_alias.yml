@@ -1,0 +1,19 @@
+uuid: 0fcaef7c-2c1d-4c13-8cb6-817b38fb0b00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_launch_alias
+    - node.type.games_live_dealer
+id: node.games_live_dealer.field_game_launch_alias
+field_name: field_game_launch_alias
+entity_type: node
+bundle: games_live_dealer
+label: 'Game Launch Alias'
+description: "<p>Needed to be able to launch a direct table for Playtech UGL integration, i.e.:</p>\r\n<ul>\r\n<li><strong>rol_aogroulette</strong></li>\r\n<li><strong>cbjl_cashbackbj</strong></li>\r\n<li><strong>blj_blackjack6</strong></li>\r\n<li>etc.</li>\r\n</ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
