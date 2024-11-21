@@ -1,0 +1,24 @@
+uuid: 66eb7417-88a5-4acf-a7cf-56014f949722
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.partner_responsive_entity.field_enable_partner
+  module:
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.field_enable_partner
+field_name: field_enable_partner
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
+label: 'Enable Partner'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
