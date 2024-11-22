@@ -1,0 +1,20 @@
+uuid: a4226202-16b0-4901-9564-0e9ea3bc9f5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.user_id
+field_name: user_id
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
+label: 'Authored by'
+description: 'The user ID of author of the Partner entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

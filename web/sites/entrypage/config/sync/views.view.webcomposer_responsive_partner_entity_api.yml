@@ -1,20 +1,24 @@
-uuid: 1eaf2b72-a986-4310-8155-fc7b1fcc314a
+uuid: 8c0599e7-7e90-48b7-9e9d-50c40826dee4
 langcode: en
 status: true
 dependencies:
+  config:
+    - block.block.languagedropdownswitcher_2
+    - system.menu.admin
   module:
     - draggableviews
     - rest
     - serialization
-    - webcomposer_partner
+    - user
+    - webcomposer_partner_responsive
 _core:
-  default_config_hash: ooftllmgxB9bxCBUqemN9VMZ3yBVUXhuIlc-i8PQEPo
-id: webcomposer_partner_entity_api
-label: 'Webcomposer Partner Entity API'
+  default_config_hash: o9mWA7adO5n-Cc7mEfrbzjYWP_kmSkZZh3FKNEKj6zI
+id: webcomposer_responsive_partner_entity_api
+label: 'Webcomposer Responsive Partner Entity API'
 module: views
 description: ''
 tag: ''
-base_table: partner_entity
+base_table: partner_responsive_entity_field_data
 base_field: id
 core: 8.x
 display:
@@ -49,32 +53,25 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: mini
         options:
+          items_per_page: 10
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            name: name
-          info:
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
+        type: serializer
       row:
         type: fields
         options:
@@ -84,7 +81,7 @@ display:
           default_field_elements: true
       fields:
         name:
-          table: partner_entity
+          table: partner_responsive_entity_field_data
           field: name
           id: name
           entity_type: null
@@ -147,27 +144,48 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        draggableviews:
-          id: draggableviews
-          table: partner_entity
-          field: draggableviews
-          entity_type: partner_entity
-          entity_field: id
-          plugin_id: draggable_views_field
-      filters: {  }
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+      filters:
+        langcode:
+          id: langcode
+          table: partner_responsive_entity_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
           exposed: false
           expose:
+            operator_id: ''
             label: ''
-          plugin_id: standard
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: partner_responsive_entity
+          entity_field: langcode
+          plugin_id: language
+      sorts: {  }
       header: {  }
       footer: {  }
       empty: {  }
@@ -175,55 +193,33 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags: {  }
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: api/partner
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: serializer
-        options:
-          grouping: {  }
-          uses_fields: false
-          formats: {  }
-      row:
-        type: data_entity
-        options: {  }
-    cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url.query_args
       tags: {  }
-  webcomposer_partner_manage:
+  page_1:
     display_plugin: page
-    id: webcomposer_partner_manage
+    id: page_1
     display_title: Page
     position: 2
     display_options:
       display_extenders: {  }
+      path: admin/structure/webcomposer_partner_responsive/partner_entity/manage
       fields:
         name:
-          id: name
-          table: partner_entity
+          table: partner_responsive_entity_field_data
           field: name
+          id: name
+          entity_type: null
+          entity_field: name
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -266,8 +262,7 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: false
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -278,12 +273,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: null
-          entity_field: name
-          plugin_id: field
         operations:
           id: operations
-          table: partner_entity
+          table: partner_responsive_entity
           field: operations
           relationship: none
           group_type: group
@@ -330,16 +322,16 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: true
-          entity_type: partner_entity
+          entity_type: partner_responsive_entity
           plugin_id: entity_operations
         draggableviews:
           id: draggableviews
-          table: partner_entity
+          table: partner_responsive_entity_field_data
           field: draggableviews
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Partner entity'
+          label: 'Partner Entity'
           exclude: false
           alter:
             alter_text: false
@@ -383,17 +375,207 @@ display:
           action_title: Action
           include_exclude: exclude
           selected_actions: {  }
-          entity_type: partner_entity
+          entity_type: partner_responsive_entity
           entity_field: id
           plugin_id: draggable_views_field
       defaults:
         fields: false
+        style: false
+        row: false
+        pager: false
+        access: false
+        cache: false
+        header: false
         title: false
-      path: admin/structure/webcomposer_partner/partner_entity/manage
-      title: 'Manage Partners'
+        sorts: false
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            name: name
+            operations: operations
+            draggableviews: draggableviews
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            operations:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            draggableviews:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+        options:
+          inline: {  }
+          separator: ''
+          hide_empty: false
+          default_field_elements: true
+      pager:
+        type: none
+        options:
+          offset: 0
+      menu:
+        type: normal
+        title: 'Partner Sorting'
+        description: 'Sorting of Partners'
+        expanded: false
+        parent: entity.partner_responsive_entity.manage
+        weight: 0
+        context: '0'
+        menu_name: admin
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: none
+        options: {  }
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
+      title: 'Footer Partners Sorting'
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
+      tags: {  }
+  rest_export_1:
+    display_plugin: rest_export
+    id: rest_export_1
+    display_title: 'REST export'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: api/partner
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: serializer
+        options:
+          grouping: {  }
+          uses_fields: false
+          formats: {  }
+      row:
+        type: data_entity
+        options: {  }
+      filters:
+        langcode:
+          id: langcode
+          table: partner_responsive_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: partner_responsive_entity
+          entity_field: langcode
+          plugin_id: language
+      defaults:
+        filters: false
+        filter_groups: false
+        cache: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      cache:
+        type: tag
+        options: {  }
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
       tags: {  }
