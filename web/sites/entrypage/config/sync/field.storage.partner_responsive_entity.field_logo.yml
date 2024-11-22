@@ -1,14 +1,14 @@
-uuid: 8760c4b5-dc4d-4df4-be5a-1f33d6399211
+uuid: c9cc2dce-191c-471d-a184-3cb6d2239462
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - webcomposer_partner
-id: partner_entity.field_logo
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.field_logo
 field_name: field_logo
-entity_type: partner_entity
+entity_type: partner_responsive_entity
 type: image
 settings:
   uri_scheme: public

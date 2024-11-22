@@ -1,20 +1,20 @@
-uuid: 7a19be6a-40ea-4716-9ce2-a0ca2a1c9783
+uuid: 69075dbe-8b90-462d-8615-26e6546ce469
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.partner_entity.field_logo
+    - field.storage.partner_responsive_entity.field_logo
   module:
     - image
-    - webcomposer_partner
-id: partner_entity.partner_entity.field_logo
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.field_logo
 field_name: field_logo
-entity_type: partner_entity
-bundle: partner_entity
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
 label: Logo
-description: 'The logo image of this specific partner entry.'
+description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
