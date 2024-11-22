@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.games_live_dealer.field_external_game_id
     - field.field.node.games_live_dealer.field_game_code_live_dealer
+    - field.field.node.games_live_dealer.field_game_launch_alias
     - field.field.node.games_live_dealer.field_game_platform_live_dealer
     - field.field.node.games_live_dealer.field_game_provider_live_dealer
     - field.field.node.games_live_dealer.field_game_ribbon_live_dealer
@@ -29,6 +30,7 @@ third_party_settings:
         - field_provider_logo_ld
         - field_game_code_live_dealer
         - field_external_game_id
+        - field_game_launch_alias
         - field_game_platform_live_dealer
       parent_name: ''
       weight: 8
@@ -67,13 +69,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_external_game_id:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_game_code_live_dealer:
     type: string_textfield
     weight: 1
@@ -82,9 +84,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_game_launch_alias:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_platform_live_dealer:
     type: options_select
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -175,7 +185,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
