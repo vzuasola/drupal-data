@@ -68,6 +68,14 @@ class AvayaChatConfiguration extends FormBase {
       '#description' => $this->t('Avaya API url'),
     ];
 
+    $form['field_configuration']['bearer_token'] = [
+      '#rows' => 1,
+      '#type' => 'textarea',
+      '#title' => $this->t('Bearer Token for Authorization Header'),
+      '#default_value' => $this->get('bearer_token'),
+      '#description' => $this->t('Bearer Token'),
+    ];
+
     $form['field_configuration']['url_post_timout'] = [
       '#type' => 'number',
       '#maxlength' => 255,
