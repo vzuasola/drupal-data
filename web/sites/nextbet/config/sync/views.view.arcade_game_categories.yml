@@ -14,6 +14,7 @@ dependencies:
     - draggableviews
     - image
     - rest
+    - rest_views
     - serialization
     - taxonomy
     - user
@@ -716,6 +717,15 @@ display:
             field_game_categories_alias:
               alias: alias
               raw_output: false
+            field_add_to_secondary_menu:
+              alias: ''
+              raw_output: false
+            field_arcade_category_icon:
+              alias: ''
+              raw_output: false
+            field_is_ordinary_category:
+              alias: ''
+              raw_output: false
       fields:
         tid:
           id: tid
@@ -1154,10 +1164,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: image_export
           settings:
             image_style: ''
-            image_link: ''
+            export_alt: 0
+            export_title: false
           group_column: ''
           group_columns: {  }
           group_rows: true
