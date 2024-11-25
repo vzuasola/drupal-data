@@ -53,6 +53,66 @@ class ArcadeConfigSettingsForm extends FormBase {
       '#translatable' => FALSE,
     );
 
+    $form['general']['more_providers_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('More Providers Label'),
+      '#default_value' => $this->get('more_providers_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['file_image_more_providers'] = [
+      '#name' => 'file_image_more_providers',
+      '#type' => 'managed_file',
+      '#title' => $this->t('More Providers Icon (PNG)'),
+      '#default_value' => $this->get('file_image_more_providers'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    ];
+
+    $form['general']['more_categories_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('More Categories Label'),
+      '#default_value' => $this->get('more_categories_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['file_image_more_categories'] = [
+      '#name' => 'file_image_more_categories',
+      '#type' => 'managed_file',
+      '#title' => $this->t('More Categories Icon (PNG)'),
+      '#default_value' => $this->get('file_image_more_categories'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    ];
+
+    $form['general']['back_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Back Label'),
+      '#default_value' => $this->get('back_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['file_image_back'] = [
+      '#name' => 'file_image_back',
+      '#type' => 'managed_file',
+      '#title' => $this->t('Back Icon (PNG)'),
+      '#default_value' => $this->get('file_image_back'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    ];
+
     return $form;
   }
 }
