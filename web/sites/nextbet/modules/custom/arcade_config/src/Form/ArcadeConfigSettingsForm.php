@@ -123,7 +123,7 @@ class ArcadeConfigSettingsForm extends FormBase {
     $form['general']['file_image_sort_by_title_ascending'] = [
       '#name' => 'file_image_sort_by_title_ascending',
       '#type' => 'managed_file',
-      '#title' => $this->t('Back Icon (PNG)'),
+      '#title' => $this->t('Sort by Title (Ascending) Icon (PNG)'),
       '#default_value' => $this->get('file_image_sort_by_title_ascending'),
       '#upload_location' => 'public://',
       '#translatable' => false,
@@ -135,7 +135,7 @@ class ArcadeConfigSettingsForm extends FormBase {
 
     $form['general']['sort_by_title_descending_label'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Sort by Title (Ascending) Label'),
+      '#title' => $this->t('Sort by Title (Descending) Label'),
       '#default_value' => $this->get('sort_by_title_ascending_label'),
       '#translatable' => TRUE,
     ];
@@ -143,7 +143,7 @@ class ArcadeConfigSettingsForm extends FormBase {
     $form['general']['file_image_sort_by_title_descending'] = [
       '#name' => 'file_image_sort_by_title_descending',
       '#type' => 'managed_file',
-      '#title' => $this->t('Back Icon (PNG)'),
+      '#title' => $this->t('Sort by Title (Descending) (PNG)'),
       '#default_value' => $this->get('file_image_sort_by_title_descending'),
       '#upload_location' => 'public://',
       '#translatable' => false,
