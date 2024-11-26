@@ -175,7 +175,7 @@ class ZipangGameLobbyConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
-     $form['page_setting']['enable_betrange'] = [
+     $form['game_details']['enable_betrange'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Bet Range Display',
       '#default_value' => $this->get('enable_betrange'),
