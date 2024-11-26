@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function footer_casino_providers_uninstall()
+{
+   $keys = [
+      'core.base_field_override.footer_casino_providers.footer_casino_providers.user_id.yml',
+      'core.entity_form_display.footer_casino_providers.footer_casino_providers.default.yml',
+      'core.entity_view_display.footer_casino_providers.footer_casino_providers.default.yml',
+      'field.field.footer_casino_providers.footer_casino_providers.field_image.yml',
+      'field.field.footer_casino_providers.footer_casino_providers.field_partner_link.yml',
+      'field.storage.footer_casino_providers.field_image.yml',
+      'field.storage.footer_casino_providers.field_partner_link.yml',
+      'field.field.footer_casino_providers.footer_casino_providers.field_partner_link_target.yml',
+      'field.storage.footer_casino_providers.field_partner_link_target.yml',
+      'language.content_settings.footer_casino_providers.footer_casino_providers.yml',
+      'views.view.footer_casino_providers.yml'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

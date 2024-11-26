@@ -1,0 +1,45 @@
+uuid: 0f984ddb-b85e-4da4-a486-b48cefd86567
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.footer_casino_providers.field_footer_casino_image
+  module:
+    - content_translation
+    - footer_casino_providers
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: footer_casino_providers.footer_casino_providers.field_footer_casino_image
+field_name: field_footer_casino_image
+entity_type: footer_casino_providers
+bundle: footer_casino_providers
+label: 'Footer Casino Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

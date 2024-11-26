@@ -1,0 +1,19 @@
+uuid: 561ef704-ea7e-415a-bd3b-d3fc67adb8c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - footer_casino_providers
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: TjDtunwgGn3kNJXL5dTMo1OJgGTgTiJ49F1nksHUsnk
+id: footer_casino_providers.footer_casino_providers
+target_entity_type_id: footer_casino_providers
+target_bundle: footer_casino_providers
+default_langcode: site_default
+language_alterable: false
