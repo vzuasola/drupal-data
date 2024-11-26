@@ -1,0 +1,18 @@
+footer_casino_providers.list:
+  title: 'Footer Casino Provider Configuration'
+  description: 'List Footer Casino Provider Configuration'
+  parent: system.admin_config
+  route_name: footer_casino_providers.admin_settings
+
+# Footer Casino Provider menu items definition
+entity.footer_casino_providers.collection:
+  title: 'Footer Casino Provider list'
+  route_name: entity.footer_casino_providers.collection
+  description: 'List Footer Casino Provider entities'
+  parent: footer_casino_providers.list
+
+footer_casino_providers.admin.structure.settings:
+  title: Footer Casino Provider settings
+  description: 'Configure Footer Casino Provider entities'
+  route_name: footer_casino_providers.settings
+  parent: footer_casino_providers.list
