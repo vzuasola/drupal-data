@@ -113,6 +113,46 @@ class ArcadeConfigSettingsForm extends FormBase {
       ],
     ];
 
+    $form['general']['sort_by_title_ascending_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sort by Title (Ascending) Label'),
+      '#default_value' => $this->get('sort_by_title_ascending_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['file_image_sort_by_title_ascending'] = [
+      '#name' => 'file_image_sort_by_title_ascending',
+      '#type' => 'managed_file',
+      '#title' => $this->t('Back Icon (PNG)'),
+      '#default_value' => $this->get('file_image_sort_by_title_ascending'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    ];
+
+    $form['general']['sort_by_title_descending_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sort by Title (Ascending) Label'),
+      '#default_value' => $this->get('sort_by_title_ascending_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['general']['file_image_sort_by_title_descending'] = [
+      '#name' => 'file_image_sort_by_title_descending',
+      '#type' => 'managed_file',
+      '#title' => $this->t('Back Icon (PNG)'),
+      '#default_value' => $this->get('file_image_sort_by_title_descending'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    ];
+
     return $form;
   }
 }

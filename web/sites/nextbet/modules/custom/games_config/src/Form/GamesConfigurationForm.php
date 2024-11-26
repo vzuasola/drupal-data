@@ -161,7 +161,7 @@ class GamesConfigurationForm extends FormBase {
     $form['category_group']['special_categories']['file_image_recently_played_icon'] = array(
       '#name' => 'file_image_recently_played_icon',
       '#type' => 'managed_file',
-      '#title' => $this->t('Favorites Tab Icon (PNG)'),
+      '#title' => $this->t('Recently Played Tab Icon (PNG)'),
       '#default_value' => $this->get('file_image_recently_played_icon'),
       '#upload_location' => 'public://',
       '#translatable' => false,
@@ -180,7 +180,7 @@ class GamesConfigurationForm extends FormBase {
     $form['category_group']['special_categories']['file_image_all_games_category_icon'] = array(
       '#name' => 'file_image_all_games_category_icon',
       '#type' => 'managed_file',
-      '#title' => $this->t('Favorites Tab Icon (PNG)'),
+      '#title' => $this->t('All Games Tab Icon (PNG)'),
       '#default_value' => $this->get('file_image_all_games_category_icon'),
       '#upload_location' => 'public://',
       '#translatable' => false,
