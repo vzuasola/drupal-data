@@ -1,0 +1,23 @@
+uuid: 820c4420-a79e-4689-80cd-d2c032c3ca39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schema_toggle
+    - node.type.cricket_page
+id: node.cricket_page.field_schema_toggle
+field_name: field_schema_toggle
+entity_type: node
+bundle: cricket_page
+label: 'schema toggle'
+description: 'Enables SEO Schema on cricket pages. Allows search engines to index pages based on Schema Markup Language.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
