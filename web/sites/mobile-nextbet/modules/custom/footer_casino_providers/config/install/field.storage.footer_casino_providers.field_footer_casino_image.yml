@@ -1,14 +1,14 @@
-uuid: 8760c4b5-dc4d-4df4-be5a-1f33d6399211
+uuid: 29dc39fc-9883-425d-82e9-4ff85ae786b8
 langcode: en
 status: true
 dependencies:
   module:
     - file
+    - footer_casino_providers
     - image
-    - webcomposer_partner
-id: partner_entity.field_logo
-field_name: field_logo
-entity_type: partner_entity
+id: footer_casino_providers.field_footer_casino_image
+field_name: field_footer_casino_image
+entity_type: footer_casino_providers
 type: image
 settings:
   uri_scheme: public

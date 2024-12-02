@@ -138,6 +138,18 @@ class GamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => true,
     );
+    $form['category_group']['special_categories']['file_image_favorites_icon'] = array(
+      '#name' => 'file_image_favorites_icon',
+      '#type' => 'managed_file',
+      '#title' => $this->t('Favorites Tab Icon (PNG)'),
+      '#default_value' => $this->get('file_image_favorites_icon'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    );
     $form['category_group']['special_categories']['recently_played_text'] = array(
       '#type' => 'textfield',
       '#title' => t('Recently Played Text'),
@@ -146,12 +158,36 @@ class GamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => true,
     );
+    $form['category_group']['special_categories']['file_image_recently_played_icon'] = array(
+      '#name' => 'file_image_recently_played_icon',
+      '#type' => 'managed_file',
+      '#title' => $this->t('Recently Played Tab Icon (PNG)'),
+      '#default_value' => $this->get('file_image_recently_played_icon'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
+    );
     $form['category_group']['special_categories']['allgames_categories_text'] = array(
       '#type' => 'textfield',
       '#title' => t('All Games Categories Text'),
       '#description' => t('The text to display for the all games category. <i>Leave blank to not show.</i>'),
       '#default_value' => $this->get('allgames_categories_text'),
       '#translatable' => true,
+    );
+    $form['category_group']['special_categories']['file_image_all_games_category_icon'] = array(
+      '#name' => 'file_image_all_games_category_icon',
+      '#type' => 'managed_file',
+      '#title' => $this->t('All Games Tab Icon (PNG)'),
+      '#default_value' => $this->get('file_image_all_games_category_icon'),
+      '#upload_location' => 'public://',
+      '#translatable' => false,
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png'],
+        'file_validate_unique' => [],
+      ],
     );
   }
 

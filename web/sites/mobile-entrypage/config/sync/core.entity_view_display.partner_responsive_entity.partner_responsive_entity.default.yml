@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_enable_partner
     - field.field.partner_responsive_entity.partner_responsive_entity.field_id
     - field.field.partner_responsive_entity.partner_responsive_entity.field_partner_alternative_text
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_desktop_logo
@@ -19,6 +20,16 @@ targetEntityType: partner_responsive_entity
 bundle: partner_responsive_entity
 mode: default
 content:
+  field_enable_partner:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_id:
     weight: 5
     label: above

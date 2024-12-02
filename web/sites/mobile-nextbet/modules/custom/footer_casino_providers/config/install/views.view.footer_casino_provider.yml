@@ -1,20 +1,27 @@
-uuid: 1eaf2b72-a986-4310-8155-fc7b1fcc314a
+uuid: 48ec5f25-d829-46d2-bdb6-fdb8e4afecd4
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.footer_casino_providers.field_footer_casino_image
+    - image.style.thumbnail
+    - system.menu.admin
   module:
     - draggableviews
+    - footer_casino_providers
+    - image
     - rest
     - serialization
-    - webcomposer_partner
+    - user
+    - webcomposer_rest_extra
 _core:
-  default_config_hash: ooftllmgxB9bxCBUqemN9VMZ3yBVUXhuIlc-i8PQEPo
-id: webcomposer_partner_entity_api
-label: 'Webcomposer Partner Entity API'
+  default_config_hash: MgDEA1CQdCyyUOO_T8VJBrUfG3oDUbMZop28nuqKK-Y
+id: footer_casino_provider
+label: 'Footer Casino Provider'
 module: views
 description: ''
 tag: ''
-base_table: partner_entity
+base_table: footer_casino_providers_field_data
 base_field: id
 core: 8.x
 display:
@@ -25,8 +32,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -65,10 +73,24 @@ display:
           description: ''
           columns:
             name: name
+            field_footer_casino_image: field_footer_casino_image
+            draggableviews: draggableviews
           info:
             name:
               sortable: false
               default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_footer_casino_image:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            draggableviews:
               align: ''
               separator: ''
               empty_column: false
@@ -84,7 +106,7 @@ display:
           default_field_elements: true
       fields:
         name:
-          table: partner_entity
+          table: footer_casino_providers_field_data
           field: name
           id: name
           entity_type: null
@@ -147,83 +169,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        draggableviews:
-          id: draggableviews
-          table: partner_entity
-          field: draggableviews
-          entity_type: partner_entity
-          entity_field: id
-          plugin_id: draggable_views_field
-      filters: {  }
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        field_footer_casino_image:
+          id: field_footer_casino_image
+          table: footer_casino_providers__field_footer_casino_image
+          field: field_footer_casino_image
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags: {  }
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: api/partner
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: serializer
-        options:
-          grouping: {  }
-          uses_fields: false
-          formats: {  }
-      row:
-        type: data_entity
-        options: {  }
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-      tags: {  }
-  webcomposer_partner_manage:
-    display_plugin: page
-    id: webcomposer_partner_manage
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      fields:
-        name:
-          id: name
-          table: partner_entity
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Name
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -256,7 +209,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -264,11 +217,12 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: image
           settings:
-            link_to_entity: false
-          group_column: value
+            image_style: thumbnail
+            image_link: ''
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -278,12 +232,64 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: null
-          entity_field: name
           plugin_id: field
+        draggableviews:
+          id: draggableviews
+          table: footer_casino_providers_field_data
+          field: draggableviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+          entity_type: footer_casino_providers
+          entity_field: id
+          plugin_id: draggable_views_field
         operations:
           id: operations
-          table: partner_entity
+          table: footer_casino_providers
           field: operations
           relationship: none
           group_type: group
@@ -329,71 +335,132 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: true
-          entity_type: partner_entity
+          destination: false
+          entity_type: footer_casino_providers
           plugin_id: entity_operations
-        draggableviews:
-          id: draggableviews
-          table: partner_entity
-          field: draggableviews
+      filters:
+        langcode:
+          id: langcode
+          table: footer_casino_providers_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Partner entity'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: partner_entity
-          entity_field: id
-          plugin_id: draggable_views_field
-      defaults:
-        fields: false
-        title: false
-      path: admin/structure/webcomposer_partner/partner_entity/manage
-      title: 'Manage Partners'
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: footer_casino_providers
+          entity_field: langcode
+          plugin_id: language
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-      tags: {  }
+        - user.permissions
+      tags:
+        - 'config:field.storage.footer_casino_providers.field_footer_casino_image'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Footer Casino Provider Sorting'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: admin/config/footer-casino-provider/footer-casino-provider-sorting
+      menu:
+        type: normal
+        title: 'Footer Casino Providers Sorting'
+        description: 'Sort footer casino providers images'
+        expanded: false
+        parent: footer_casino_providers.list
+        weight: 0
+        context: '0'
+        menu_name: admin
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.footer_casino_providers.field_footer_casino_image'
+  rest_export_1:
+    display_plugin: rest_export
+    id: rest_export_1
+    display_title: 'REST export'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: api/footer_casino_providers
+      pager:
+        type: some
+        options:
+          items_per_page: 10
+          offset: 0
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+          pager: 0
+      row:
+        type: data_entity
+        options: {  }
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - user.permissions
+      tags:
+        - 'config:field.storage.footer_casino_providers.field_footer_casino_image'

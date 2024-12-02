@@ -1,4 +1,4 @@
-uuid: 89c10135-6a84-4f27-89f6-09fa75d3879c
+uuid: 20cc259d-b25c-4a20-8196-a1c4d258f2d3
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ settings:
   id: 'language_dropdown_block:language_interface'
   label: 'Language dropdown switcher'
   provider: lang_dropdown
-  label_display: visible
+  label_display: '0'
   showall: 0
   tohome: 0
   width: '165'

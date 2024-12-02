@@ -1,20 +1,27 @@
-uuid: 7a19be6a-40ea-4716-9ce2-a0ca2a1c9783
+uuid: 0f984ddb-b85e-4da4-a486-b48cefd86567
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.partner_entity.field_logo
+    - field.storage.footer_casino_providers.field_footer_casino_image
   module:
+    - content_translation
+    - footer_casino_providers
     - image
-    - webcomposer_partner
-id: partner_entity.partner_entity.field_logo
-field_name: field_logo
-entity_type: partner_entity
-bundle: partner_entity
-label: Logo
-description: 'The logo image of this specific partner entry.'
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: footer_casino_providers.footer_casino_providers.field_footer_casino_image
+field_name: field_footer_casino_image
+entity_type: footer_casino_providers
+bundle: footer_casino_providers
+label: 'Footer Casino Image'
+description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
