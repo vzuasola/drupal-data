@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\mobile_nextbet\Form;
+namespace Drupal\gcb_seal\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,24 +9,24 @@ use Drupal\Core\Form\FormStateInterface;
  * Header configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "mobile_nextbet",
+ *   id = "gcb_seal",
  *   route = {
- *     "title" = "Mobile Nextbet Configuration",
- *     "path" = "/admin/config/mobile/nextbet/configuration",
+ *     "title" = "GCB Seal Configuration",
+ *     "path" = "/admin/config/gcbseal/configuration",
  *   },
  *   menu = {
- *     "title" = "Mobile Nextbet Configuration",
- *     "description" = "Provides configuration for Nextbet",
+ *     "title" = "GCB Seal Configuration",
+ *     "description" = "Provides configuration for GCB Seal certificate",
  *     "parent" = "mobile_config.list",
  *   },
  * )
  */
-class MobileNextbetForm extends FormBase {
+class GCBSealForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['mobile_nextbet.nextbet_configuration'];
+    return ['gcb_seal.gcb_seal_configuration'];
   }
 
   /**
@@ -35,98 +35,47 @@ class MobileNextbetForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Nextbet Configuration'),
+      '#title' => t('GCB Seal Configuration'),
     ];
 
-    $this->sectionNextbetConfigs($form);
-    $this->sectionFooterConfig($form);
+    $this->sectionGCBSealConfigs($form);
 
     return $form;
   }
 
-  private function sectionNextbetConfigs(array &$form) {
-    $form['nextbet_configuration'] = [
+  private function sectionGCBSealConfigs(array &$form) {
+    $form['gcb_seal_configuration'] = [
       '#type' => 'details',
-      '#title' => t('Nextbet Configuration'),
+      '#title' => t('GCB Seal Configuration'),
       '#group' => 'advanced',
     ];
 
-    $form['nextbet_configuration']['all_apps_text'] = [
+    $form['gcb_seal_configuration']['gcb_seal_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('View All Apps Here'),
-      '#default_value' => $this->get('all_apps_text'),
+      '#title' => $this->t('GCB Seal URL'),
+      '#default_value' => $this->get('gcb_seal_url'),
       '#translatable' => TRUE,
     ];
 
-    $form['nextbet_configuration']['view_less_text'] = [
+    $form['gcb_seal_configuration']['gcb_seal_image_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('View Less Here'),
-      '#default_value' => $this->get('view_less_text'),
+      '#title' => $this->t('GCB Seal Image URL'),
+      '#default_value' => $this->get('gcb_seal_image_url'),
       '#translatable' => true,
     ];
 
-    $form['nextbet_configuration']['download_app_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Download App Here'),
-      '#default_value' => $this->get('download_app_text'),
+    $form['gcb_seal_configuration']['gcb_seal_domain_whitelist'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Whitelist domain where GCB Seal will be displayed'),
+      '#default_value' => $this->get('gcb_seal_domain_whitelist'),
       '#translatable' => true,
     ];
 
-    $form['nextbet_configuration']['contact_us_home_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Contact Us Here'),
-      '#default_value' => $this->get('contact_us_home_text'),
-      '#translatable' => true,
-    ];
-
-    $form['nextbet_configuration']['partners_and_sponsor_title_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Partners and Sponsors Here'),
-      '#default_value' => $this->get('partners_and_sponsor_title_text'),
-      '#translatable' => true,
-    ];
-
-    $form['nextbet_configuration']['quicklinks_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Quick Links Section Title'),
-      '#default_value' => $this->get('quicklinks_title'),
-      '#translatable' => true,
-    ];
-  }
-
-  private function sectionFooterConfig(array &$form) {
-    $form['nextbet_footer_configuration'] = [
-      '#type' => 'details',
-      '#title' => t('Nextbet Section Headings'),
-      '#group' => 'advanced',
-    ];
-
-    $form['nextbet_footer_configuration']['is_social_media_enabled'] = [
+    $form['gcb_seal_configuration']['enable_gcb_seal'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Enable Social Media'),
-      '#default_value' => $this->get('is_social_media_enabled'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['nextbet_footer_configuration']['is_about_section_enabled'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable About Section'),
-      '#default_value' => $this->get('is_about_section_enabled'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['nextbet_footer_configuration']['is_partner_section_enabled'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Partner Section'),
-      '#default_value' => $this->get('is_partner_section_enabled'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['nextbet_footer_configuration']['is_footer_casino_providers_enabled'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Footer Casino Providers Section'),
-      '#default_value' => $this->get('is_footer_casino_providers_enabled'),
-      '#translatable' => TRUE,
+      '#title' => $this->t('Enable GCB Seal'),
+      '#default_value' => $this->get('enable_gcb_seal'),
+      '#translatable' => true,
     ];
   }
 }

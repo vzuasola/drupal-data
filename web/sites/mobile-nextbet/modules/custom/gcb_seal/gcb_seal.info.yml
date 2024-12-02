@@ -1,5 +1,5 @@
-name: Mobile Nextbet
+name: GCB Seal
 type: module
-description: Mobile Nextbet configuration
+description: GCB Seal Configuration
 core: 8.x
 package: Web Composer

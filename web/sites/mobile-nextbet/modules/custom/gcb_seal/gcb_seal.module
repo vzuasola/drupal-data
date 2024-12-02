@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains mobile_nextbet.module.
+ * Contains gcb_seal.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
