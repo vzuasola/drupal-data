@@ -60,9 +60,9 @@ class GCBSealForm extends FormBase {
 
     $form['gcb_seal_configuration']['gcb_seal_image_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Enter the URL for the image that will be displayed from the GCB site'),
+      '#title' => $this->t('GCB Seal image URL'),
       '#default_value' => $this->get('gcb_seal_image_url'),
-      '#description' => $this->t('GCB Seal image URL.'),
+      '#description' => $this->t('Enter the URL for the image that will be displayed to us from the GCB site.'),
       '#translatable' => true,
     ];
 
