@@ -60,7 +60,7 @@ class GCBSealForm extends FormBase {
 
     $form['gcb_seal_configuration']['gcb_seal_image_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('GCB Seal Image URL'),
+      '#title' => $this->t('Enter the URL for the image that will be displayed from the GBC site'),
       '#default_value' => $this->get('gcb_seal_image_url'),
       '#description' => $this->t('GCB Seal image URL.'),
       '#translatable' => true,
@@ -70,8 +70,10 @@ class GCBSealForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Whitelist domain where GCB Seal will be displayed'),
       '#default_value' => $this->get('gcb_seal_domain_whitelist'),
-      '#description' => $this->t('Please enter the domains where the GCB seal will be displayed.
-                        Separate multiple domains with placing them in new line'),
+      '#description' => $this->t(
+        'Please enter the domains where the GCB seal will be displayed. ' .
+        'Separate multiple domains with placing them in new line'
+      ),
       '#translatable' => true,
     ];
 
