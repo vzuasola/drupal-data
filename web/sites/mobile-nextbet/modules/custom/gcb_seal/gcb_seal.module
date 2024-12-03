@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains gcb_seal.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function gcb_seal_configuration($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_nextbet module.
+    case 'help.page.gcb_seal':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('GCB Seal configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
