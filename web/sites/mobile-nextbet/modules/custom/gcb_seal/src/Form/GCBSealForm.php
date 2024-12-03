@@ -70,9 +70,8 @@ class GCBSealForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Whitelist domain where GCB Seal will be displayed'),
       '#default_value' => $this->get('gcb_seal_domain_whitelist'),
-      '#description' => $this->t('Please enter the domains where the GBC seal will be displayed.
-                                        Separate multiple domains with a vertical bar
-                                        (|) for example "https://test.com|https://test2.com."'),
+      '#description' => $this->t('Please enter the domains where the GCB seal will be displayed.
+                        Separate multiple domains with placing them in new line'),
       '#translatable' => true,
     ];
 
@@ -80,7 +79,7 @@ class GCBSealForm extends FormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable GCB Seal'),
       '#default_value' => $this->get('enable_gcb_seal'),
-      '#description' => $this->t('If checkbox is clicked gbc seal will be enabled on FE'),
+      '#description' => $this->t('If checkbox is clicked gcb seal will be enabled on FE'),
       '#translatable' => true,
     ];
   }
