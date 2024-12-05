@@ -100,5 +100,14 @@ class MSWMayaConfigurationForm extends FormBase
           '#default_value' => $content['value'],
           '#translatable' => TRUE,
       ];
+
+      $content = $this->get('mismatch_details_msg');
+      $form['maya_error_messages']['mismatch_details_msg'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Player details do not match'),
+          '#description' => $this->t('Error message to display when a players details in iCore do not match the details in the Maya mini app.'),
+          '#default_value' => $content['value'],
+          '#translatable' => TRUE,
+      ];
     }
 }
