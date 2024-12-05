@@ -6,3 +6,6 @@ maintenance_content:
   format: basic_html
 value: null
 format: null
+account_created_msg:
+  value: "<h1 class=\"title\">Pending account activation\r\n</h1>\r\n<p class=\"message\">Please call our\r\n  <br />\r\n  Customer Support below\r\n  <br />\r\n  for assistance.\r\n</p>\r\n<p><a class=\"btn btn-proceed\" href=\"https://contact.msw.ph/?t=ACCNT_ACTVN_REACTVN\">Proceed to video Call</a>\r\n</p>\r\n<ul class=\"contact-list\">\r\n  <li>You may also contact us at :</li>\r\n  <li><img alt=\"Contact Us\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"80\" src=\"https://m.msw.ph/images/svg/maya/phone-icon.svg\" width=\"80\" />&nbsp;(02) 8424 8230</li>\r\n  <li><img alt=\"Contact Us\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"80\" src=\"https://m.msw.ph/images/svg/maya/email-icon.svg\" width=\"80\" />&nbsp;support@megasportsworld.com</li>\r\n</ul>\r\n"
+  format: basic_html
