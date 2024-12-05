@@ -125,8 +125,15 @@ class SettingsForm {
       '#upload_location' => 'public://',
     ];
 
-    // Translated backgrounds
+    // webform background color
+    $form['third_party_settings']['webcomposer_webform']['webform_background']['form_background_color'] = [
+      '#type' => 'color',
+      '#title' => t('Form Background Color'),
+      '#description' => t('The background color of the form'),
+      '#default_value' => $configs['form_background_color'] ?? '#ffffff',
+    ];
 
+    // Translated backgrounds
     $form['third_party_settings']['webcomposer_webform']['webform_background']['translated'] = [
       '#type' => 'details',
       '#title' => t('Translated Backgrounds'),
@@ -142,10 +149,17 @@ class SettingsForm {
 
         $form['third_party_settings']['webcomposer_webform']['webform_background']['translated']["background_image_$langKey"] = [
           '#type' => 'webform_image_file',
-          '#title' => "Form Background Image for " . strtoupper($langKey) ,
+          '#title' => "Form Background Image for " . strtoupper($langKey),
           '#description' => t('The background image of the form'),
           '#default_value' => $configs["background_image_$langKey"] ?? NULL,
           '#upload_location' => 'public://',
+        ];
+
+        $form['third_party_settings']['webcomposer_webform']['webform_background']['translated']["form_background_color_$langKey"] = [
+          '#type' => 'color',
+          '#title' => "Form Background Color for " . strtoupper($langKey),
+          '#description' => t('The background color of the form'),
+          '#default_value' => $configs["form_background_color_$langKey"] ?? "#ffffff",
         ];
       }
     }
@@ -248,8 +262,8 @@ class SettingsForm {
     $third_party_settings = $form_state->getValue('third_party_settings');
 
     $default_bg_fid = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
-      ['background_image']['fids'])
-    ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+    ['background_image']['fids'])
+      ? $form['third_party_settings']['webcomposer_webform']['webform_background']
       ['background_image']['fids']['#value'] : false;
 
     /* checking if fid is set
@@ -277,8 +291,8 @@ class SettingsForm {
 
         if ($langKey) {
           $bg_image_lang = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
-            ['translated']["background_image_$langKey"]['fids'])
-         ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+          ['translated']["background_image_$langKey"]['fids'])
+            ? $form['third_party_settings']['webcomposer_webform']['webform_background']
             ['translated']["background_image_$langKey"]['fids']['#value'] : false;
 
           if ($bg_image_lang) {
