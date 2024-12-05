@@ -9,15 +9,15 @@ use Drupal\Core\Form\FormStateInterface;
  * Header configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "gcb_seal",
+ *   id = "webcomposer_gcb_seal",
  *   route = {
  *     "title" = "GCB Seal Configuration",
- *     "path" = "/admin/config/gcbseal/configuration",
+ *     "path" = "/admin/config/webcomposer/gcbseal/configuration",
  *   },
  *   menu = {
  *     "title" = "GCB Seal Configuration",
  *     "description" = "Provides configuration for GCB Seal certificate",
- *     "parent" = "mobile_config.list",
+ *     "parent" = "webcomposer_config.list",
  *   },
  * )
  */
@@ -26,7 +26,7 @@ class GCBSealForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['gcb_seal.gcb_seal_configuration'];
+    return ['webcomposer_gcb_seal.gcb_seal_configuration'];
   }
 
   /**
