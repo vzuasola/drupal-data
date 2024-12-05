@@ -41,6 +41,7 @@ class MSWMayaConfigurationForm extends FormBase
         ];
 
         $this->maintenanceSection($form);
+        $this->errorMessageSection($form);
 
         return $form;
     }
@@ -75,6 +76,27 @@ class MSWMayaConfigurationForm extends FormBase
       $form['maya_config']['maintenance_content'] = [
           '#type' => 'text_format',
           '#title' => $this->t('Maintenance page Content'),
+          '#default_value' => $content['value'],
+          '#translatable' => TRUE,
+      ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    private function errorMessageSection(array &$form)
+    {
+        $form['maya_error_messages'] = [
+            '#type' => 'details',
+            '#title' => $this->t('Error Messages'),
+            '#group' => 'advanced',
+        ];
+
+      $content = $this->get('account_created_msg');
+      $form['maya_error_messages']['account_created_msg'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Account Created or Activation Pending'),
+          '#description' => $this->t('Error message to display when a players status is Account Created or Activation Pending.'),
           '#default_value' => $content['value'],
           '#translatable' => TRUE,
       ];
