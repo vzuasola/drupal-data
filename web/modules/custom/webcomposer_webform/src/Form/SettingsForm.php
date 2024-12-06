@@ -125,14 +125,6 @@ class SettingsForm {
       '#upload_location' => 'public://',
     ];
 
-    // webform background color
-    $form['third_party_settings']['webcomposer_webform']['webform_background']['form_background_color'] = [
-      '#type' => 'color',
-      '#title' => t('Form Background Color'),
-      '#description' => t('The background color of the form'),
-      '#default_value' => $configs['form_background_color'] ?? '#ffffff',
-    ];
-
     // Translated backgrounds
     $form['third_party_settings']['webcomposer_webform']['webform_background']['translated'] = [
       '#type' => 'details',
@@ -155,6 +147,7 @@ class SettingsForm {
           '#upload_location' => 'public://',
         ];
 
+        // webform background color
         $form['third_party_settings']['webcomposer_webform']['webform_background']['translated']["form_background_color_$langKey"] = [
           '#type' => 'color',
           '#title' => "Form Background Color for " . strtoupper($langKey),
