@@ -273,13 +273,13 @@ content:
     type: boolean_checkbox
     region: content
   field_external_game_id:
+    type: string_textfield
     weight: 12
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_game_launching:
     weight: 3
     settings: {  }
