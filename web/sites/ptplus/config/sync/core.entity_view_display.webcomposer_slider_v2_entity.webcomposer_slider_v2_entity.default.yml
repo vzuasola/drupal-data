@@ -1,4 +1,4 @@
-uuid: b7021706-18f8-4f4c-9aa7-1b3f85b4a64c
+uuid: 364b70a8-f049-4a6d-be76-c3a8e4dcadc8
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_external_game_id
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
@@ -271,6 +272,14 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_external_game_id:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_game_launching:
     weight: 3
     settings: {  }
@@ -479,7 +488,7 @@ content:
     type: string_textfield
     region: content
   field_slider_game_provider:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -1,0 +1,20 @@
+uuid: 169c4e02-cdba-4197-ae7c-30c0e132fce1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_external_game_id
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_external_game_id
+field_name: field_external_game_id
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'External Game ID'
+description: 'External Game ID using PlayerGame API'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
