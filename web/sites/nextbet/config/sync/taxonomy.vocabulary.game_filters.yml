@@ -1,9 +1,0 @@
-uuid: 0de12f11-e798-458f-9ef4-b0f9d9d50145
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Filters'
-vid: game_filters
-description: 'Filter categories for games'
-hierarchy: 1
-weight: 0

@@ -1,8 +1,0 @@
-uuid: 52bd49f1-23c4-47a6-b12a-6514f282cc04
-langcode: ko
-status: true
-dependencies: {  }
-id: mobile-footer-kr
-label: 'Mobile Footer KR'
-description: James
-locked: false

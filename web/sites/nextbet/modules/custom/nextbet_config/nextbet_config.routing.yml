@@ -1,7 +1,0 @@
-nextbet_config.admin_settings:
-  path: 'admin/config/nextbet'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Nextbet Configurations'
-  requirements:
-    _permission: 'administer nextbet config'

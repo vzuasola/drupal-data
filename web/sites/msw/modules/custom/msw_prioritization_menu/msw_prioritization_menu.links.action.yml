@@ -1,5 +1,0 @@
-entity.msw_prioritization_menu.add_form:
-  route_name: entity.msw_prioritization_menu.add_form
-  title: 'Add Video Call Prioritization Menu'
-  appears_on:
-    - entity.msw_prioritization_menu.collection

@@ -1,9 +1,0 @@
-uuid: 64d7d33a-02c0-4065-816b-8a1f3625f6e5
-langcode: en
-status: true
-dependencies: {  }
-id: ru
-label: 'Russian (Kazakhstan)'
-direction: ltr
-weight: 17
-locked: false

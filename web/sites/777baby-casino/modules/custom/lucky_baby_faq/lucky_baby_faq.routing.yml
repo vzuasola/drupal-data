@@ -1,7 +1,0 @@
-lucky_baby_faq.admin_settings:
-  path: 'admin/config/lucky_baby/lucky_baby_faq'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Webcomposer Slider'
-  requirements:
-    _permission: 'administer site configuration'

@@ -1,9 +1,0 @@
-uuid: d3322a50-3e6f-4bbc-973b-8dc7031f9be3
-langcode: en
-status: true
-dependencies: {  }
-name: 'Lobby Tab - Esports'
-vid: lobby_tab_esports
-description: 'List of lobby tabs for esports'
-hierarchy: 0
-weight: 0

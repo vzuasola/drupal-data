@@ -1,3 +1,0 @@
-default_value:
-  -
-    value: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'

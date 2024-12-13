@@ -1,7 +1,0 @@
-lucky_baby_jackpot.admin_settings:
-  path: 'admin/config/luckybaby/jackpot'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Jackpot'
-  requirements:
-    _permission: 'administer site configuration'

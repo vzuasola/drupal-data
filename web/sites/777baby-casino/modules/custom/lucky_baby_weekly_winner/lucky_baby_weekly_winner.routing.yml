@@ -1,7 +1,0 @@
-lucky_baby_weekly_winner.admin_settings:
-  path: 'admin/config/lucky_baby/weekly_winner'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Weekly Winner'
-  requirements:
-    _permission: 'administer site configuration'

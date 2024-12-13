@@ -1,9 +1,0 @@
-uuid: 057e9287-e6f4-4fb7-a76e-fb3ea6b6f159
-langcode: en
-status: true
-dependencies: {  }
-name: 'Release Year'
-vid: release_year
-description: ''
-hierarchy: 0
-weight: 0

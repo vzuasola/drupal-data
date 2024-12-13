@@ -1,8 +1,0 @@
-lobby_infinite_scroll: 0
-more_provider_drawer: Thêm
-title_provider_drawer: 'Nhà Cung Cấp Trò Chơi'
-all_quicklaunch_title: 'Tất Cả'
-all_quicklaunch_alt: ''
-games_transfer_title: 'Chuyển quỹ'
-games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
-games_maintenance_text: 'ĐANG BẢO TRÌ'

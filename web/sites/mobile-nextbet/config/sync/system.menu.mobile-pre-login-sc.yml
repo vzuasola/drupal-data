@@ -1,8 +1,0 @@
-uuid: 5d7cbf3f-4aab-4c2a-9939-804f572f0dc9
-langcode: en
-status: true
-dependencies: {  }
-id: mobile-pre-login-sc
-label: 'Mobile Pre Login SC'
-description: ''
-locked: false

@@ -1,9 +1,0 @@
-uuid: 125d4aa7-9175-4710-af22-33b41f273002
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Category - Slots'
-vid: games_category
-description: 'Games category lists'
-hierarchy: 0
-weight: 0

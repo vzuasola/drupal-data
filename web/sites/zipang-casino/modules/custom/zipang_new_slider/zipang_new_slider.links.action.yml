@@ -1,5 +1,0 @@
-entity.zipang_new_slider_entity.add_form:  
-  route_name: entity.zipang_new_slider_entity.add_form  
-  title: 'Add Zipang new slider entity'
-  appears_on:
-    - entity.zipang_new_slider_entity.collection

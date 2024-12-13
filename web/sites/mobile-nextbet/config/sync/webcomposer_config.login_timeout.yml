@@ -1,8 +1,0 @@
-login_timeout_configuration_form__active_tab: ''
-login_timeout_title: 'Session Expired'
-login_timeout_message:
-  value: "<p>Please login again.</p>\r\n"
-  format: basic_html
-value: null
-format: null
-login_timeout_button: Ok

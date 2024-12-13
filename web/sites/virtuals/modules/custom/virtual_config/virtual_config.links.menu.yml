@@ -1,6 +1,0 @@
-virtual_config.virtual_config_list:
-  title: 'Virtuals Configuration'
-  description: Virtuals Configuration
-  parent: system.admin_config
-  route_name: virtual_config.admin_settings
-

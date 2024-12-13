@@ -1,7 +1,0 @@
-msw_config.admin_settings:
-  path: 'admin/config/msw'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'MSW Configuration'
-  requirements:
-    _permission: 'administer site configuration'

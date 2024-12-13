@@ -1,7 +1,0 @@
-games_search.admin_settings:
-  path: 'admin/games'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Games Search Configuration'
-  requirements:
-    _permission: 'administer site configuration'

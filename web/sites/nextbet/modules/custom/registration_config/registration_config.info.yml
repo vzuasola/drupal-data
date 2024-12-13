@@ -1,6 +1,0 @@
-name: Registration Configs
-description: Configuration for Registration
-package: Registration
-
-type: module
-core: 8.x

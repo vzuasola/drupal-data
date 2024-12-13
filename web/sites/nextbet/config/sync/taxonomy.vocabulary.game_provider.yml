@@ -1,9 +1,0 @@
-uuid: c7156484-2cb7-4588-9b38-7b6fa36b7760
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Provider'
-vid: game_provider
-description: 'Mapping for Game Providers.'
-hierarchy: 0
-weight: 0

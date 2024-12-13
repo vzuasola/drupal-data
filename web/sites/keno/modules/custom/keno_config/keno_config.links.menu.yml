@@ -1,5 +1,0 @@
-keno_config.keno_config_list:
-  title: 'Keno Configuration'
-  description: Keno Configuration
-  parent: system.admin_config
-  route_name: keno_config.admin_settings

@@ -1,8 +1,0 @@
-uuid: ed541990-5753-4bcd-833b-b9090d40c88c
-langcode: sw
-status: true
-dependencies: {  }
-id: profile-menu-ke
-label: 'Profile Menu KE'
-description: 'Profile Menu Items KE'
-locked: false

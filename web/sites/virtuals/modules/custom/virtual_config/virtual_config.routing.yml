@@ -1,7 +1,0 @@
-virtual_config.admin_settings:
-  path: 'admin/config/virtual'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Virtual Configuration'
-  requirements:
-    _permission: 'administer site configuration'

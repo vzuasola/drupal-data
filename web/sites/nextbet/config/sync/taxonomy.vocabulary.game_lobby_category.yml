@@ -1,9 +1,0 @@
-uuid: 25e47196-0ed5-4ad8-9e36-e21435ae57c4
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Lobby Category'
-vid: game_lobby_category
-description: 'Live Dealer''s launch specific category inside the game.'
-hierarchy: 0
-weight: 0

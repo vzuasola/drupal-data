@@ -1,5 +1,0 @@
-soda_casino_games.search_configuration:
-  title: 'Games Custom Configuration'
-  base_route_name: soda_casino_games_search.search_configuration
-  names:
-    - 'soda_casino_games.search_configuration'

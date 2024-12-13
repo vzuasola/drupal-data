@@ -1,9 +1,0 @@
-uuid: bad3919c-55bb-4316-b04f-ea0075acdd83
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Collection Type'
-vid: games_collection_type
-description: 'List of Games Collection types.'
-hierarchy: 0
-weight: 0

@@ -1,5 +1,0 @@
-entity.msw_front_block.add_form:
-  route_name: entity.msw_front_block.add_form
-  title: 'Add MSW front block'
-  appears_on:
-    - entity.msw_front_block.collection

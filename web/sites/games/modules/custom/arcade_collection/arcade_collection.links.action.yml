@@ -1,5 +1,0 @@
-entity.arcade_collection.add_form:
-  route_name: entity.arcade_collection.add_form
-  title: 'Add Arcade collection'
-  appears_on:
-    - entity.arcade_collection.collection

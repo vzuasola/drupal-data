@@ -1,8 +1,0 @@
-javascript_assets: "https://login.megasportcasino.com/jswrapper/integration.js.php?casino=mannycasino"
-playtech_pas_casino: "mannycasino"
-languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en\r\nen|en"
-ugl_switch: 0
-ugl_languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en\r\nen|en"
-ugl_currency: "RMB\r\nMYR\r\nUSD\r\nGBP\r\nEUR\r\nKRW\r\nTHB\r\nVND\r\nIDR\r\nINR\r\nRUB\r\nPLN\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nLAK\r\nMMK\r\nKHR"
-ugl_url: "https://login.nxb8.com/GameLauncher"
-ugl_parameters: "language|{language}\r\nplayMode|1\r\nclientPlatform|web\r\ncasino|nextbetcasino\r\ngameCodeName|{gameCodeName}\r\nusername|{username}\r\nexternalToken|{externalToken}@{playerId}\r\nlobbyUrl|{domain:nextbet}/{domain:lang_token}/slots\r\nlaunch_alias|{launch_alias}"

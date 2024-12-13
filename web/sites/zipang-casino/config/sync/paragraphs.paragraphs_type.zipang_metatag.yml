@@ -1,7 +1,0 @@
-uuid: c93f93e4-31dc-4415-8571-1c5d94f85cd7
-langcode: ja
-status: true
-dependencies: {  }
-id: zipang_metatag
-label: 'Zipang Metatag'
-behavior_plugins: {  }

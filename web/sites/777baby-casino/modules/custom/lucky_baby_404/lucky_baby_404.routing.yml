@@ -1,7 +1,0 @@
-lucky_baby_404.admin_settings:
-  path: 'admin/config/lucky_baby/lucky_baby_404'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby 404 Images'
-  requirements:
-    _permission: 'administer site configuration'

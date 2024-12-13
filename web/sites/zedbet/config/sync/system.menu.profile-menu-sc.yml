@@ -1,8 +1,0 @@
-uuid: d19cd3ce-b8cc-4820-9a43-e5f9647aec99
-langcode: en
-status: true
-dependencies: {  }
-id: profile-menu-sc
-label: 'Profile Menu SC'
-description: ''
-locked: false

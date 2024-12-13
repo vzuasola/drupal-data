@@ -1,7 +1,0 @@
-unsupported_currency_configuration_form__active_tab: ''
-unsupported_currencies_title: ไม่รองรับสกุลเงินนี้
-unsupported_currencies_message:
-  value: "<p>ขออภัยค่ะ สกุลเงินในบัญชีของคุณไม่สามารถใช้งานในเกมส์ <b>{game_provider}&nbsp;</b><b>{game_name}</b>.\r\n  <br />\r\n  กรุณาลองใช้เกมส์อื่น\r\n</p>\r\n"
-  format: basic_html
-unsupported_currencies_button: OK
-game_provider_mapping: "asia_gaming|Asia Gaming\r\ncq9|CQ9\r\nevolution|Evolution\r\nmicro_gaming|Microgaming\r\npgsoft|PGSoft\r\nsa_gaming| SA Gaming\r\nflow_gaming|Flow Gaming\r\nplaytech|Playtech\r\nruby_play|Ruby Play\r\nskywind|Skywind\r\nvoidbridge|Voidbridge\r\nsolid_gaming|Solid Gaming\r\njsystem|JSystem\r\nezugi_gaming|Ezugi Gaming"

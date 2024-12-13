@@ -1,9 +1,0 @@
-uuid: 550310a2-2997-40cf-ac1b-456e243ef76b
-langcode: ja
-status: true
-dependencies: {  }
-name: 'Game Tag'
-vid: game_tag
-description: 'Game Tag'
-hierarchy: 0
-weight: 0

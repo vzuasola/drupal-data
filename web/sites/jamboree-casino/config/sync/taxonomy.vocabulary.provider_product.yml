@@ -1,9 +1,0 @@
-uuid: 387619c7-6cea-4e43-8c53-6000091d7cf9
-langcode: en
-status: true
-dependencies: {  }
-name: 'Provider Product'
-vid: provider_product
-description: ''
-hierarchy: 0
-weight: 0

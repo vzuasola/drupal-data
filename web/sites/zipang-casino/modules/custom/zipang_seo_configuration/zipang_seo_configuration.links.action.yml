@@ -1,5 +1,0 @@
-entity.zipang_seo_config_entity.add_form:
-  route_name: entity.zipang_seo_config_entity.add_form
-  title: 'Add Zipang seo config entity'
-  appears_on:
-    - entity.zipang_seo_config_entity.collection

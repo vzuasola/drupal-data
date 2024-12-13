@@ -1,8 +1,0 @@
-uuid: 9ed37b55-ac03-4a64-a992-80c2c7bf56e7
-langcode: id
-status: true
-dependencies: {  }
-id: mobile-post-login-id
-label: 'Mobile Post Login ID'
-description: 'ID - Prili'
-locked: false

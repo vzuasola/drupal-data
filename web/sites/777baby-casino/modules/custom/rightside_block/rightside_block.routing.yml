@@ -1,7 +1,0 @@
-rightside_block.admin_settings:
-  path: 'admin/config/luckybaby/rightside_block'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Rightside Block'
-  requirements:
-    _permission: 'administer site configuration'

@@ -1,7 +1,0 @@
-mobile_virtuals.admin_settings:
-  path: 'admin/config/mobile-virtuals'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Mobile Virtuals Configurations'
-  requirements:
-    _permission: 'administer mobile config'

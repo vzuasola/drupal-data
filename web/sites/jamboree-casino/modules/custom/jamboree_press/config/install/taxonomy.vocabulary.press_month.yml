@@ -1,9 +1,0 @@
-uuid: 4dfa15ec-e0a5-4645-9cd2-6074e95c2066
-langcode: en
-status: true
-dependencies: {  }
-name: 'Press Month'
-vid: press_month
-description: ''
-hierarchy: 0
-weight: 0

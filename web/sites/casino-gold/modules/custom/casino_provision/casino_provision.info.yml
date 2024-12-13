@@ -1,5 +1,0 @@
-name: Casino Provision Reports
-type: module
-description: This module provides Casino-Provision Reporting tool.
-core: 8.x
-package: Casino

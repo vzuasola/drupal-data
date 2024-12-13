@@ -1,5 +1,0 @@
-entity.poker_vip_entity.add_form:
-  route_name: entity.poker_vip_entity.add_form
-  title: 'Add Poker vip entity'
-  appears_on:
-    - entity.poker_vip_entity.collection

@@ -1,9 +1,0 @@
-uuid: dc3789d5-26cf-484d-a5af-4821d2615afd
-langcode: und
-status: true
-dependencies: {  }
-name: 'Desktop Game Category'
-vid: desktop_game_category
-description: 'Desktop Game Category'
-hierarchy: 0
-weight: 0

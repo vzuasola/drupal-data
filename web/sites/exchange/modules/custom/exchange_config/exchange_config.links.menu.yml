@@ -1,5 +1,0 @@
-exchange_config.exchange_config_list:
-  title: 'Exchange Configuration'
-  description: Exchange  Configuration
-  parent: system.admin_config
-  route_name: exchange_config.admin_settings

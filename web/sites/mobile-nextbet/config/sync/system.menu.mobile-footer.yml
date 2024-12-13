@@ -1,8 +1,0 @@
-uuid: 611eada6-0635-47f3-a9bf-d2a35c3668ca
-langcode: en
-status: true
-dependencies: {  }
-id: mobile-footer
-label: 'Mobile Footer'
-description: ''
-locked: false

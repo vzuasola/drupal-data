@@ -1,9 +1,0 @@
-uuid: 8418b025-58bb-4e58-857f-0361e9d35c7e
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Filter - Slots'
-vid: games_filter
-description: 'Filters for games under search'
-hierarchy: 0
-weight: 0

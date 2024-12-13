@@ -1,5 +1,0 @@
-arcade.list:
-  title: 'Arcade Mobile Configuration'
-  description: 'Provides configuration for Arcade Mobile Site'
-  parent: system.admin_config
-  route_name: arcade.admin_settings

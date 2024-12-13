@@ -1,8 +1,0 @@
-page_not_found_settings_tab__active_tab: edit-products-settings
-page_not_found_product_list: mobile-nextbet
-page_not_found_title_mobile-nextbet: 'Ooops, that was unexpected.'
-page_not_found_content_mobile-nextbet:
-  value: "<section>\r\n  <p>&nbsp;\r\n  </p>\r\n  <p>The page doesn't exist. You may have followed a bad link or typed the address (URL) incorrectly. We'll help you get around though.\r\n  </p>\r\n  <p>What are you looking for?\r\n  </p>\r\n  <ul>\r\n    <li><a href=\"/en\" target=\"_self\">Go to Lobby</a></li>\r\n    <li><a href=\"/en/arcade?token=\" target=\"_self\">Arcade</a></li>\r\n    <li><a href=\"/en/live-dealer?token=\" target=\"_self\">Live Dealer</a></li>\r\n    <li><a href=\"/en/slots?token=\" target=\"_self\">Slots</a></li>\r\n  </ul>\r\n</section>\r\n"
-  format: basic_html
-value: null
-format: null

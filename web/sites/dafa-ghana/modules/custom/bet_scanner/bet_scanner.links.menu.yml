@@ -1,5 +1,0 @@
-bet_scanner.list:
-  title: 'Bet Scanner Configuration'
-  description: 'Bet Scanner Configurations'
-  parent: system.admin_config
-  route_name: bet_scanner.admin_settings

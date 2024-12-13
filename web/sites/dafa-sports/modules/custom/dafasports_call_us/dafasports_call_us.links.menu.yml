@@ -1,5 +1,0 @@
-dafasports_call_us.list:
-  title: 'Dafa Sports Call Us Configuration'
-  description: 'Dafa Sports Call Us config settings'
-  parent: system.admin_config
-  route_name: dafasports_call_us.admin_settings

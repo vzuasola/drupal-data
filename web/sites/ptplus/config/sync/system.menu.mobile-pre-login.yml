@@ -1,8 +1,0 @@
-uuid: 91e02089-f1f0-4369-be54-962890aa19fd
-langcode: en
-status: true
-dependencies: {  }
-id: mobile-pre-login
-label: 'Mobile Pre Login'
-description: ''
-locked: false

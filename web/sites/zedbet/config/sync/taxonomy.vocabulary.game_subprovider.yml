@@ -1,9 +1,0 @@
-uuid: 7685bc40-55f9-414d-8b44-fcc5eb68c752
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Subprovider'
-vid: game_subprovider
-description: 'Mapping for Game Subproviders.'
-hierarchy: 0
-weight: 0

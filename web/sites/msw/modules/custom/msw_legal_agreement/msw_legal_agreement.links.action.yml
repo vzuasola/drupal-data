@@ -1,5 +1,0 @@
-entity.msw_legal_agreement.add_form:
-  route_name: entity.msw_legal_agreement.add_form
-  title: 'Add Registration Legal Agreement'
-  appears_on:
-    - entity.msw_legal_agreement.collection

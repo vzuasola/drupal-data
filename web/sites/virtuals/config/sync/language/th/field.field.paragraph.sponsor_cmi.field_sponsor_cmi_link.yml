@@ -1,3 +1,0 @@
-default_value:
-  -
-    value: '/{domain:cashier_domain}/{domain:cashier_lang}/?ticket={auth.token}&product=dafabet{tracking.token}'

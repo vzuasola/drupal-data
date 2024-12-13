@@ -1,5 +1,0 @@
-zipang_canonical.zipang_canonical:
-  title: 'Zipang Canonical Configuration'
-  description: Zipang Casino Canonical Configuration
-  parent: system.admin_config
-  route_name: zipang_canonical.admin_settings

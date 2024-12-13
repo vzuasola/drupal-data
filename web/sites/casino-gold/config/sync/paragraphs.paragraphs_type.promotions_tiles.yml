@@ -1,7 +1,0 @@
-uuid: 502662c8-180c-4bfb-b1d1-55717e70641b
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: promotions_tiles
-label: 'Promotions Tiles'
-behavior_plugins: {  }

@@ -1,9 +1,0 @@
-uuid: 12442492-be8f-4b74-964a-2cbb8eadd553
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Category'
-vid: games_category
-description: 'Soda Casino Games Category List'
-hierarchy: 0
-weight: 0

@@ -1,8 +1,0 @@
-uuid: 55c677c7-d3b0-43eb-ab1c-6796bfffa98a
-langcode: en
-status: true
-dependencies: {  }
-id: mobile-post-login-th
-label: 'Mobile Post Login TH'
-description: ''
-locked: false

@@ -1,8 +1,0 @@
-uuid: 2f1f9d69-3adf-4e6f-9f2d-be8d985cf18b
-langcode: th
-status: true
-dependencies: {  }
-id: account-main-navigation-th
-label: 'Account Main Navigation TH'
-description: 'Account Main Navigation TH'
-locked: false

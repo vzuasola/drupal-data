@@ -1,5 +1,0 @@
-mobile_slots.list:
-  title: 'Slots Mobile Configuration'
-  description: 'Provides configuration for Slots Mobile Site'
-  parent: system.admin_config
-  route_name: mobile_slots.admin_settings

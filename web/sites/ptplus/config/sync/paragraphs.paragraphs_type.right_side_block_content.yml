@@ -1,7 +1,0 @@
-uuid: cb374ee0-a2c0-4df7-8f16-fc02247867f9
-langcode: en
-status: true
-dependencies: {  }
-id: right_side_block_content
-label: 'Right side block content'
-behavior_plugins: {  }

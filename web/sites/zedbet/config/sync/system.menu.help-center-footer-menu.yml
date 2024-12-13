@@ -1,8 +1,0 @@
-uuid: c228f6ce-67bf-43ad-98a5-62828c1b0656
-langcode: en
-status: true
-dependencies: {  }
-id: help-center-footer-menu
-label: 'Help Center Footer Menu'
-description: 'Help Center'
-locked: false

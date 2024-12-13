@@ -1,5 +1,0 @@
-entity.payment_method_list_entity.add_form:
-  route_name: entity.payment_method_list_entity.add_form
-  title: 'Add Payment Method List entity'
-  appears_on:
-    - entity.payment_method_list_entity.collection

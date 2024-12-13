@@ -1,9 +1,0 @@
-uuid: 4202c072-20dd-4209-8baf-5d9539b000bc
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Provider'
-vid: game_provider
-description: 'Game Providers'
-hierarchy: 0
-weight: 0

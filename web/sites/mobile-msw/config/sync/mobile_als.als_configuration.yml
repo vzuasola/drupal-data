@@ -1,8 +1,0 @@
-als_url: 'https://sports.dafa8et08.com/m/en'
-als_cookie_url_pre: "mobileUrl|https://m.msw.ph/en\r\nlogin|https://m.msw.ph/en/login?product=als\r\nlogout|https://m.msw.ph/en/logout\r\nregistration|https://m.msw.ph/en/join\r\ndesktopUrl|https://m.msw.ph/en/"
-als_cookie_url_post: "cashier|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierDeposit|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierTransfer|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierCashPoints|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]\r\ncashierWithdrawal|https://pay.msw.ph/c/msw/en/transaction-history[query:(ticket={auth.token})]"
-als_enable_domain: 0
-product_instance_id: sports
-product_integration_id: als
-product_login_via: mobile-msw-sports
-registration_url: '{domain:registration_link}sports-df[query:(regvia=26&{tracking})]'

@@ -1,5 +1,0 @@
-name: Mobile Product Menu
-type: module
-description: Left Menu Entity for products
-core: 8.x
-package: Web Composer

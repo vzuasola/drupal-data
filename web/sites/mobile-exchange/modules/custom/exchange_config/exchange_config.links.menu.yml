@@ -1,5 +1,0 @@
-exchange_config.exchange_config_list:
-  title: 'Mobile Exchange Configuration'
-  description: Mobile Exchange  Configuration
-  parent: system.admin_config
-  route_name: exchange_config.admin_settings

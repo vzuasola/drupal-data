@@ -1,9 +1,0 @@
-uuid: 37b03202-b02b-4fcb-9305-b12df38d37e0
-langcode: en
-status: true
-dependencies: {  }
-name: Product
-vid: product
-description: 'List of all Products.'
-hierarchy: 0
-weight: 0

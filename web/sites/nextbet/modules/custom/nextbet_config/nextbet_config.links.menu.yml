@@ -1,5 +1,0 @@
-nextbet_config.list:
-  title: 'Nextbet Configuration'
-  description: 'Provides configuration for Nextbet Sites'
-  parent: system.admin_config
-  route_name: nextbet_config.admin_settings

@@ -1,5 +1,0 @@
-name: Nextbet Payments
-type: module
-description: This module shows Nextbet payments.
-core: 8.x
-package: Custom

@@ -1,9 +1,0 @@
-uuid: 279d9186-8eba-4c71-a79e-05d255d69058
-langcode: zh-hans
-status: true
-dependencies: {  }
-name: 'Games Category'
-vid: games_category
-description: 'Categories for games.'
-hierarchy: 0
-weight: 0

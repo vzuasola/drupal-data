@@ -1,7 +1,0 @@
-entity.sportsbook_widget_api.settings:
-  path: 'admin/config/webcomposer/sportsbook_widget_api'
-  defaults:
-    _title: 'Sportsbook Widget API'
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-  requirements:
-    _permission: 'administer sportsbook widget api'

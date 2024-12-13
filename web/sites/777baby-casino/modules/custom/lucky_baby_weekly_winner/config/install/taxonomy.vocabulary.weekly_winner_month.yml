@@ -1,9 +1,0 @@
-uuid: f7325570-a6cc-46cd-8a81-9ba5e5d2b9ca
-langcode: ja
-status: true
-dependencies: {  }
-name: 'Weekly Winner Month'
-vid: weekly_winner_month
-description: ''
-hierarchy: 0
-weight: 0

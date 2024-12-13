@@ -1,9 +1,0 @@
-uuid: a1aae03e-6a76-4bf9-b283-cc6280680445
-langcode: en
-status: true
-dependencies: {  }
-id: bd
-label: Bengali(Bangladesh)
-direction: ltr
-weight: -2
-locked: false

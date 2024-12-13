@@ -1,9 +1,0 @@
-uuid: f30d2915-e978-4999-ad58-219f79741617
-langcode: en
-status: true
-dependencies: {  }
-name: 'Product Promotions'
-vid: promotions_product_filter
-description: 'Promotions product category filter'
-hierarchy: 0
-weight: 0

@@ -1,9 +1,0 @@
-uuid: caf504fc-4c76-4f75-b0e4-0c25d4c95181
-langcode: ja
-status: true
-dependencies: {  }
-name: 'Game Provider'
-vid: game_provider
-description: 'Game Providers'
-hierarchy: 0
-weight: 0

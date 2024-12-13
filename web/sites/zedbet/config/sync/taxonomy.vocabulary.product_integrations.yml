@@ -1,9 +1,0 @@
-uuid: 5319dddd-058c-43b4-ab80-e092db86dff3
-langcode: en
-status: true
-dependencies: {  }
-name: 'Product Integrations'
-vid: product_integrations
-description: 'Product integration taxonomies'
-hierarchy: 0
-weight: 0

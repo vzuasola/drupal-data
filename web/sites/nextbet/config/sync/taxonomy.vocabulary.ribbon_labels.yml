@@ -1,9 +1,0 @@
-uuid: 5be7805c-55e1-4bbb-9b46-05a28b72205a
-langcode: en
-status: true
-dependencies: {  }
-name: 'Ribbon labels'
-vid: ribbon_labels
-description: 'Use this taxonomy to add ribbon labels'
-hierarchy: 0
-weight: 0

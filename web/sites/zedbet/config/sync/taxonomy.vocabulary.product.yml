@@ -1,9 +1,0 @@
-uuid: 92cb7c47-69af-40b9-8b16-0428f16aa716
-langcode: en
-status: true
-dependencies: {  }
-name: Product
-vid: product
-description: 'List of Products'
-hierarchy: 0
-weight: 0

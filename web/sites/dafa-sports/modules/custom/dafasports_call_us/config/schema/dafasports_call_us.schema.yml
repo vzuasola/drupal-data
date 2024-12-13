@@ -1,7 +1,0 @@
-dafasports_call_us.call_us_configuration:
-  type: config_object
-  label: 'Dafa Sports Call Us Configuration'
-  mapping:
-    link_url:
-      type: text
-      label: 'Dafa Sports Call Us Base URL'

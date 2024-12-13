@@ -1,8 +1,0 @@
-uuid: 249fecc0-802d-4822-a772-98e5295573a7
-langcode: en
-status: true
-dependencies: {  }
-id: mobile-post-login-kr
-label: 'Mobile Post Login KR'
-description: ''
-locked: false

@@ -1,7 +1,0 @@
-administer account form entities:
-  title: 'Administer Account form config entities'
-  description: 'Allow to access the administration form to configure Account form.'
-  restrict access: true
-
-edit account form config entities:
-  title: 'Edit Account form config'

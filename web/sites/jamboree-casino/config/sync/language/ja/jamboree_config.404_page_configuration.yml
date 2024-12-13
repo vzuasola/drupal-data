@@ -1,5 +1,0 @@
-jamboree_settings_tab__active_tab: ''
-not_found_title: 'PAGE NOT FOUND'
-not_found_body:
-  value: "<ul>\r\n  <li><strong><a href=\"/\">トップページにもどる</a></strong></li>\r\n  <li><strong><a href=\"/games\">ゲームをプレイする</a></strong></li>\r\n  <li><strong><a href=\"/how-to-start/download\">登録方法</a></strong></li>\r\n  <li><strong><a href=\"/deposit-options\">入金方法</a></strong></li>\r\n</ul>\r\n"
-  format: basic_html

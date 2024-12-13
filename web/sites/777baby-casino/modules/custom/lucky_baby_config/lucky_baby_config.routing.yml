@@ -1,7 +1,0 @@
-lucky_baby_config.admin_settings:
-  path: 'admin/config/lucky_baby'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Configuration'
-  requirements:
-    _permission: 'administer site configuration'

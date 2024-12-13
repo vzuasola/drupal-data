@@ -1,5 +1,0 @@
-name: Zedbet Config
-type: module
-description: Custom module for zedbet specific updates
-core: 8.x
-package: Web Composer

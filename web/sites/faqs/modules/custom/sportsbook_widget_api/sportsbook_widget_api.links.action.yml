@@ -1,6 +1,0 @@
-sportsbook_widget_api.add_form:
-  route_name: entity.sportsbook_widget_api.add_form
-  title: 'Add sportsbook widget api'
-  appears_on:
-    - entity.sportsbook_widget_api.collection
-

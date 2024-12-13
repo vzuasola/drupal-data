@@ -1,8 +1,0 @@
-uuid: d9745ac0-fa4f-44d9-85f9-ea5667841046
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: product-menu-sc
-label: 'Product Menu SC'
-description: ''
-locked: false

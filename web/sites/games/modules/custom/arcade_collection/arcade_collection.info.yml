@@ -1,8 +1,0 @@
-name: Arcade Collection
-type: module
-description: Sort top games per category.
-core: 8.x
-package: Custom
-dependencies:
-  - games_config
-  - arcade_config

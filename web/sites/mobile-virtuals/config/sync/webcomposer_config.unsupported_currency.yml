@@ -1,9 +1,0 @@
-unsupported_currency_configuration_form__active_tab: ''
-unsupported_currencies_title: 'Unsupported Currency'
-unsupported_currencies_message:
-  value: "<p>Unsupported Currency -<br />\r\nSorry, your account currency is not supported by this {game_provider} game, {game_name}</p>\r\n"
-  format: basic_html
-value: null
-format: null
-unsupported_currencies_button: OK
-game_provider_mapping: "video_racing|Video Racing\r\ngpi_keno|GPI Keno\r\ngpi_thai|Thai Virtuals\r\ngpi_pk|PK10\r\ngpi_sode|Sode"

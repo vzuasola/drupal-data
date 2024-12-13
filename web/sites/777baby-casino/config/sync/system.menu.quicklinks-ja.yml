@@ -1,8 +1,0 @@
-uuid: 87e5ce89-721c-4f89-9186-9ffa676f400b
-langcode: ja
-status: true
-dependencies: {  }
-id: quicklinks-ja
-label: 'Quicklinks JA'
-description: 'Menu to add the quicklink items [Japanese Language]'
-locked: false

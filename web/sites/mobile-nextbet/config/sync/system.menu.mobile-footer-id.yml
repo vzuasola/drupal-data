@@ -1,8 +1,0 @@
-uuid: 6c5f17a5-cc03-462c-b3e6-d801dc8bd167
-langcode: id
-status: true
-dependencies: {  }
-id: mobile-footer-id
-label: 'Mobile Footer ID'
-description: 'ID - Prili'
-locked: false

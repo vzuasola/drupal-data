@@ -1,7 +1,0 @@
-name: MSW Urls
-type: module
-description: MSW Urls specific configurations
-core: 8.x
-package: Web Composer
-dependencies:
-  - msw_config

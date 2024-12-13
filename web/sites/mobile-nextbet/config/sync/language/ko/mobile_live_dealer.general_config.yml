@@ -1,8 +1,0 @@
-lobby_infinite_scroll: 0
-more_provider_drawer: '더 보기'
-title_provider_drawer: '게임 제공 업체'
-all_quicklaunch_title: 모두
-all_quicklaunch_alt: ''
-games_transfer_title: '잔액 이동'
-games_transfer_link: '{cashier}[query:(ticket={ticket.token}&{tracking})]'
-games_maintenance_text: '점검이 진행 중입니다'

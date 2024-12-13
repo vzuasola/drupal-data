@@ -1,5 +1,0 @@
-name: Nextbet Esports Config
-type: module
-description: Custom module for nextbet esports specific updates
-core: 8.x
-package: Custom

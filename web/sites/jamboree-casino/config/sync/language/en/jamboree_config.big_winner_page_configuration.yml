@@ -1,9 +1,0 @@
-advanced__active_tab: edit-page-setting
-page_description:
-  value: "<p>&nbsp;</p>\r\n\r\n<p class=\"text-align-center\">「出たっ!!!」　みんなに自慢したいけど、パチンコ屋みたいに周りに自慢できる人がいない…&nbsp;<br />\r\nそんな人はここで思いっきり自慢しちゃってください。</p>\r\n<style type=\"text/css\">.big-winner-list .big-winner {\r\n  position: relative;\r\n  padding: 1.5rem .7rem;\r\n  background: #fff9ed;\r\n  border-radius: 1rem;\r\n  padding-right: 10px;\r\n  }\r\n  .big-winner-list .bw-body-summary {\r\n    color: #002600;\r\n    font-size: 1.5rem;\r\n    font-weight: 700;\r\n  }\r\n  .bw-see-more{\r\n    font-weight: 800;\r\n  }\r\n</style>\r\n"
-  format: basic_html
-category_text: 大勝利者の声
-read_more_text: 続きを読む
-custom_block:
-  value: "<div class=\"back-button-link text-center\"><a class=\"btn btn-shrink jamboree-button\" href=\"/\" target=\"_self\">TOPページに戻る </a></div>\r\n"
-  format: basic_html

@@ -1,5 +1,0 @@
-name: Lucky Baby 404
-type: module
-description: Exception 404 Module
-core: 8.x
-package: Custom

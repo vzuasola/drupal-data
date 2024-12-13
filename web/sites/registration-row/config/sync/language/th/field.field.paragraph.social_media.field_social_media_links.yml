@@ -1,3 +1,0 @@
-default_value:
-  -
-    value: 'https://stg-cashier.elysium-dfbt.com/th/?ticket={auth.token}&product=dafabet{tracking.token}'

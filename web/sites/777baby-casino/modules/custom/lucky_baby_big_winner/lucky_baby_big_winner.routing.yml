@@ -1,7 +1,0 @@
-lucky_baby_big_winner.admin_settings:
-  path: 'admin/config/lucky_baby/lucky_baby_big_winner'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Big Winner'
-  requirements:
-    _permission: 'administer site configuration'

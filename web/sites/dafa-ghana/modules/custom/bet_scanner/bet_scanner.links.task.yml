@@ -1,4 +1,0 @@
-bet_scanner.general_configuration_tab:
-  route_name: bet_scanner.general_configuration_form
-  title: 'General'
-  base_route: bet_scanner.general_configuration_form

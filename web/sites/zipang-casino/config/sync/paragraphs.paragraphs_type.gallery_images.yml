@@ -1,7 +1,0 @@
-uuid: c36f1ffc-d4c8-4539-897f-e6229b510c8f
-langcode: ja
-status: true
-dependencies: {  }
-id: gallery_images
-label: 'Gallery Images'
-behavior_plugins: {  }

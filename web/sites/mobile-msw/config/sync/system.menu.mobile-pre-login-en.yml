@@ -1,8 +1,0 @@
-uuid: f8160cf1-b485-4206-99f0-8045b2b04074
-langcode: en
-status: true
-dependencies: {  }
-id: mobile-pre-login-en
-label: 'Mobile Pre Login EN'
-description: ''
-locked: false

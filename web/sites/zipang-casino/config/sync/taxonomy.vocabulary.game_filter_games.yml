@@ -1,9 +1,0 @@
-uuid: b2c5fce9-1d29-48ce-ac79-9929567b24d9
-langcode: ja
-status: true
-dependencies: {  }
-name: 'Game Filter (games)'
-vid: game_filter_games
-description: ''
-hierarchy: 0
-weight: 0

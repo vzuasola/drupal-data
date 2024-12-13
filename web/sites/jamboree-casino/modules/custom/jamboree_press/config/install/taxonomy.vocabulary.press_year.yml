@@ -1,9 +1,0 @@
-uuid: 62c85d4a-760f-4adb-8340-89f84647c94a
-langcode: en
-status: true
-dependencies: {  }
-name: 'Press Year'
-vid: press_year
-description: ''
-hierarchy: 0
-weight: 0

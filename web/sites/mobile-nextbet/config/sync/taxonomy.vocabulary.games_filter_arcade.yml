@@ -1,9 +1,0 @@
-uuid: 979c938a-1ad2-4572-bf8e-2b64dd87570a
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Filter - Arcade'
-vid: games_filter_arcade
-description: 'List of Games Filters for Arcade'
-hierarchy: 1
-weight: 0

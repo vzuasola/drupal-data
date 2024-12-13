@@ -1,9 +1,0 @@
-uuid: d76ce4a7-33b2-4190-b0a3-e4c0922c5641
-langcode: en
-status: true
-dependencies: {  }
-name: 'All Games Category'
-vid: all_games_category
-description: ''
-hierarchy: 0
-weight: 0

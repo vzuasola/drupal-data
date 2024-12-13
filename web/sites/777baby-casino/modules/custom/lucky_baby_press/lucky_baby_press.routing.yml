@@ -1,7 +1,0 @@
-lucky_baby_press.admin_settings:
-  path: 'admin/config/lucky_baby/press'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Press'
-  requirements:
-    _permission: 'administer site configuration'

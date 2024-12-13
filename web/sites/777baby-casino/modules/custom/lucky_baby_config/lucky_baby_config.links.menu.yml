@@ -1,5 +1,0 @@
-lucky_baby_config.lucky_baby_config:
-  title: 'Lucky Baby Configuration'
-  description: Lucky Baby Casino Configuration
-  parent: system.admin_config
-  route_name: lucky_baby_config.admin_settings

@@ -1,9 +1,0 @@
-uuid: c2565bf7-5e80-4514-b5ca-5608818419a4
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Providers - Live Dealer'
-vid: games_providers_live_dealer
-description: ''
-hierarchy: 0
-weight: 0

@@ -1,9 +1,0 @@
-uuid: bf839e34-65ba-4963-a239-e8322991198e
-langcode: ja
-status: true
-dependencies: {  }
-name: 'Game Filter (casino)'
-vid: game_filter
-description: 'Game Page Filters for Casino Page'
-hierarchy: 1
-weight: 0

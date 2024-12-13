@@ -1,5 +1,0 @@
-entity.nextbet_payment.add_form:
-  route_name: entity.nextbet_payment.add_form
-  title: 'Add Nextbet payment'
-  appears_on:
-    - entity.nextbet_payment.collection

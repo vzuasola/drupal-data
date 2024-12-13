@@ -1,7 +1,0 @@
-dafasports_call_us.admin_settings:
-  path: 'admin/config/callus/config'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Dafa Sports Call Us Config'
-  requirements:
-    _permission: 'administer site configuration'

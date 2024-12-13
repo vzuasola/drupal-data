@@ -1,7 +1,0 @@
-deposit_and_withdrawal.admin_settings:
-  path: 'admin/config/lucky_baby_config/deposit_and_withdrawal'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Deposit and Withdrawal'
-  requirements:
-    _permission: 'administer site configuration'

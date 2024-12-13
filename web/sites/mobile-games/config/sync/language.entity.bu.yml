@@ -1,9 +1,0 @@
-uuid: f8ca9bca-4718-48ab-a391-084250f1033b
-langcode: en
-status: true
-dependencies: {  }
-id: bu
-label: Burmese
-direction: ltr
-weight: 3
-locked: false

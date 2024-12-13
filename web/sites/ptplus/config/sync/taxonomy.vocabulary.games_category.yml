@@ -1,9 +1,0 @@
-uuid: 59fa38c5-f869-4cec-9562-1b86d56d8671
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Category'
-vid: games_category
-description: 'Games category lists'
-hierarchy: 0
-weight: 0

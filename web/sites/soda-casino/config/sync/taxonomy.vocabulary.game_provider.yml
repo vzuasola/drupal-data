@@ -1,9 +1,0 @@
-uuid: 6a94e140-ce72-4d12-81ae-494815a681e6
-langcode: zh-hans
-status: true
-dependencies: {  }
-name: 'Game Provider'
-vid: game_provider
-description: 'List of Game Provider'
-hierarchy: 0
-weight: 0

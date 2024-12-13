@@ -1,8 +1,0 @@
-uuid: 6341e1e5-08e6-4a57-bc19-802f1c128319
-langcode: id
-status: true
-dependencies: {  }
-id: profile-menu-id
-label: 'Profile Menu ID'
-description: ''
-locked: false

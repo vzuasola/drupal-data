@@ -1,4 +1,0 @@
-dafasports_call_us.configuration_tab:
-  route_name: dafasports_call_us.configuration_form
-  title: 'Dafa Sports Call Us Configuration'
-  base_route: dafasports_call_us.configuration_form

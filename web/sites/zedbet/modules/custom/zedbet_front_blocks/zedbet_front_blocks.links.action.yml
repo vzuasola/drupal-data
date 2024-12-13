@@ -1,5 +1,0 @@
-entity.zedbet_front_block.add_form:
-  route_name: entity.zedbet_front_block.add_form
-  title: 'Add Zedbet front block'
-  appears_on:
-    - entity.zedbet_front_block.collection

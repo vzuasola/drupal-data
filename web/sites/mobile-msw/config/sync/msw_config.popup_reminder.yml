@@ -1,7 +1,0 @@
-advanced__active_tab: edit-popup-reminder
-popup_reminder_title: 'Important Notice'
-popup_reminder_content:
-  value: "<p>The following personalities are not allowed to register and/or play in this online gaming website.\r\n</p>\r\n<ul>\r\n  <li>Goverment Official or employee connected directly with the operation of the Goverment or any of its agencies</li>\r\n  <li>Member of the Armed Forces of the Phillipines, including the Army, Navy, Air Force, or the Phillipine National Police</li>\r\n  <li>Person under 21 years of age</li>\r\n  <li>Person included in the PAGCOR's National Database of Restricted Person (NDRP)</li>\r\n  <li>Gaming Employment License (GEL) holder</li>\r\n</ul>\r\n<p>Funds or credits in the Account of player who will be found ineligible shall mean forfeiture of said funds/credits in favor of the Goverment. Funds and credits of those who will fail to complete the Know-Your-Customer (KYC) process within the prescribed period shall be frozen/suspended unit the KYC process is completed\r\n</p>\r\n<p class=\"btn-container\"><a class=\"btn btn-small\" id=\"popup-reminder-ok\">OK</a>\r\n</p>\r\n"
-  format: basic_html
-value: null
-format: null

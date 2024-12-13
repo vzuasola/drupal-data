@@ -1,9 +1,0 @@
-uuid: 34c62d33-3c05-4040-ac23-48b3076e9802
-langcode: en
-status: true
-dependencies: {  }
-id: lo
-label: Lao
-direction: ltr
-weight: -2
-locked: false

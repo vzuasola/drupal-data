@@ -1,5 +1,0 @@
-entity.nextbet_front_block.add_form:
-  route_name: entity.nextbet_front_block.add_form
-  title: 'Add Nextbet front block'
-  appears_on:
-    - entity.nextbet_front_block.collection

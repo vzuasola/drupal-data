@@ -1,5 +1,0 @@
-name: Games Config
-type: module
-description: Games Custom Configuration
-core: 8.x
-package: Custom

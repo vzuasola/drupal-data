@@ -1,9 +1,0 @@
-uuid: 35327075-7df2-4cdd-a7dd-b084b4f4133c
-langcode: ja
-status: true
-dependencies: {  }
-name: 'Weekly Winner Year'
-vid: weekly_winner_year
-description: ''
-hierarchy: 0
-weight: 0

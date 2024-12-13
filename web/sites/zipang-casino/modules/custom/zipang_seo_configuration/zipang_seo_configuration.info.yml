@@ -1,5 +1,0 @@
-name: Zipang SEO Configuration
-type: module
-description: Zipang metatag entity
-core: 8.x
-package: Zipang seo configuration

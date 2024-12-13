@@ -1,7 +1,0 @@
-uuid: 251ee9f7-8701-49ea-aef0-0b80e484a962
-langcode: en
-status: true
-dependencies: {  }
-id: press_images
-label: 'Press Images'
-behavior_plugins: {  }

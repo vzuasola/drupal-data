@@ -1,8 +1,0 @@
-uuid: ad83664b-6109-4f09-bb63-94d7db7de31e
-langcode: ja
-status: true
-dependencies: {  }
-id: my-account-menu
-label: 'My Account Menu'
-description: ''
-locked: false

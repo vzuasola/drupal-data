@@ -1,7 +1,0 @@
-footer_casino_providers.admin_settings:
-  path: 'admin/config/footer_casino_providers'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Footer Casino Providers blocks'
-  requirements:
-    _permission: 'administer site configuration'

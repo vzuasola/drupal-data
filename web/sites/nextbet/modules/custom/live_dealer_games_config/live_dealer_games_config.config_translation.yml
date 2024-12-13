@@ -1,5 +1,0 @@
-live_dealer_games_config.games_configuration:
-  title: 'Live Dealer Games Custom Configuration'
-  base_route_name: live_dealer_games_config.games_configuration
-  names:
-    - 'live_dealer_games_config.games_configuration'

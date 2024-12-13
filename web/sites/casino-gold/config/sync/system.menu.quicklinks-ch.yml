@@ -1,8 +1,0 @@
-uuid: 0fe33c57-1459-45d0-9028-65480667c9a6
-langcode: zh-hant
-status: true
-dependencies: {  }
-id: quicklinks-ch
-label: Quicklinks-CH
-description: 'Menu to add the quicklink items in CH Language'
-locked: false

@@ -1,9 +1,0 @@
-uuid: 2b7ba0f8-7bac-4724-813e-6cd8b426cd30
-langcode: en
-status: true
-dependencies: {  }
-name: 'Lobby Tab - Live Dealer'
-vid: lobby_tab_ld
-description: 'List of lobby tabs for live dealer'
-hierarchy: 0
-weight: 0

@@ -1,7 +1,0 @@
-msw_legal_agreement.admin_settings:
-  path: 'admin/config/msw/msw_legal_agreement'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Legal Agreement List'
-  requirements:
-    _permission: 'administer legal agreement configuration'

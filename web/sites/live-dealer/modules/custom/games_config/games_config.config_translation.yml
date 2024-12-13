@@ -1,5 +1,0 @@
-games_config.games_configuration:
-  title: 'Games Custom Configuration'
-  base_route_name: games_config.games_configuration
-  names:
-    - 'games_config.games_configuration'

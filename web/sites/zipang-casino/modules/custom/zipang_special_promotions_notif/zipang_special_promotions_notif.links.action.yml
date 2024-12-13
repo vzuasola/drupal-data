@@ -1,5 +1,0 @@
-entity.zipang_special_promotions_entity.add_form:
-  route_name: entity.zipang_special_promotions_entity.add_form
-  title: 'Add special promotions notification entity'
-  appears_on:
-    - entity.zipang_special_promotions_entity.collection

@@ -1,9 +1,0 @@
-uuid: acf91b79-0f82-4c68-80c9-1fde0c175a4b
-langcode: en
-status: true
-dependencies: {  }
-name: Product
-vid: product
-description: 'Tag entities to product.'
-hierarchy: 0
-weight: 0

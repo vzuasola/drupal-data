@@ -1,8 +1,0 @@
-uuid: 024a9d63-ccd4-4c23-8d32-530875d42ce7
-langcode: hi
-status: true
-dependencies: {  }
-id: mobile-post-login-hi
-label: 'Mobile Post Login HI'
-description: ''
-locked: false

@@ -1,2 +1,0 @@
-label: 'Publish Date (optional)'
-description: "<p>If this is set the slider will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the slider will be available upon saving.</p>"

@@ -1,5 +1,0 @@
-zedbet_config.list:
-  title: 'Zedbet Configuration'
-  description: 'Provides configuration for Zedbet Sites'
-  parent: system.admin_config
-  route_name: zedbet_config.admin_settings

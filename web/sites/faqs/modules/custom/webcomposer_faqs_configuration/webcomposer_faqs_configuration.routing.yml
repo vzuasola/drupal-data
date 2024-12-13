@@ -1,7 +1,0 @@
-webcomposer_faqs_configuration.admin_settings:
-  path: 'admin/config/webcomposer/faqs'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Webcomposer Faqs Configuration'
-  requirements:
-    _permission: 'administer site configuration'

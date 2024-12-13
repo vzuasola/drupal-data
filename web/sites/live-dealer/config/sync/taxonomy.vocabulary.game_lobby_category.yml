@@ -1,9 +1,0 @@
-uuid: 1f19dbb0-cae7-4022-a2da-f553d94a0553
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Lobby Category'
-vid: game_lobby_category
-description: 'Launch specific category inside the game.'
-hierarchy: 0
-weight: 0

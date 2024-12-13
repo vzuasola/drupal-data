@@ -1,8 +1,0 @@
-uuid: 19fa3eb9-4972-4567-868a-44bf785c9b6d
-langcode: sw
-status: true
-dependencies: {  }
-id: cashier-menu-ke
-label: 'Cashier Menu KE'
-description: ''
-locked: false

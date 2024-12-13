@@ -1,5 +1,0 @@
-name: Nextbet Urls
-type: module
-description: Nextbet Urls specific configurations
-core: 8.x
-package: Web Composer

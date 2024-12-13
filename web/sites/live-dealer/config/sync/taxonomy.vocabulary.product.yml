@@ -1,9 +1,0 @@
-uuid: 7dd13e5e-68c7-4438-8833-89d79b2a4176
-langcode: en
-status: true
-dependencies: {  }
-name: Product
-vid: product
-description: 'List of product sites.'
-hierarchy: 0
-weight: 0

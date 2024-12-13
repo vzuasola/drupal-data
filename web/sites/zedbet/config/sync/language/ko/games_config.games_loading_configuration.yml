@@ -1,9 +1,0 @@
-games_loading_configuration_tab__active_tab: edit-loading-message
-loading_message_content:
-  value: "<p class=\"mt-80 text-center\">&nbsp;\r\n</p>\r\n<p class=\"mt-80 text-center\"><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/images/zedbet_logo.png\" width=\"230\" />\r\n</p>\r\n"
-  format: basic_html
-value: null
-format: null
-loading_error_message:
-  value: "<p class=\"mt-80 text-center\">&nbsp;\r\n</p>\r\n<p><img alt=\"zedbet-logo.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"70\" src=\"/images/zedbet_logo.png\" width=\"230\" />\r\n</p>\r\n<p><span class=\"text-grey\">예상치 못한 오류가 발생했습니다.\r\n  <br />\r\n이 창은 몇 초 후에 닫힙니다.</span>\r\n</p>\r\n<p><span class=\"text-grey\">잠시 후 다시 시도해 주세요.</span>\r\n</p>\r\n"
-  format: basic_html

@@ -1,9 +1,0 @@
-uuid: 9a93de2b-f6eb-4148-974f-4880f4d27b19
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Collection Type'
-vid: games_collection_type
-description: 'List of Games Collection types.'
-hierarchy: 0
-weight: 0

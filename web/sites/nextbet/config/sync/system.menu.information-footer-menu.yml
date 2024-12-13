@@ -1,8 +1,0 @@
-uuid: f7e3456e-3074-407c-b9e0-368d1c463c46
-langcode: en
-status: true
-dependencies: {  }
-id: information-footer-menu
-label: 'Information Footer Menu'
-description: ''
-locked: false

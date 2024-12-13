@@ -1,7 +1,0 @@
-lucky_baby_mobile_block.admin_settings:
-  path: 'admin/config/lucky_baby/lucky_baby_mobile_block'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby mobile block configuration'
-  requirements:
-    _permission: 'administer site configuration'

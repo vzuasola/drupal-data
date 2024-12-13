@@ -1,8 +1,0 @@
-#dafasports call us config
-enabled: false
-link_url: '/linkto:avaya'
-link_param: null
-link_class: null
-link_text: 'CALL US'
-file_image_init_icon: null
-file_image_expanded_icon: null

@@ -1,8 +1,0 @@
-bet_scanner.admin_settings:
-  path: '/admin/config/bet-scanner'
-  defaults:
-    _title: 'Bet Scanner Configurations'
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-  requirements:
-    _permission: 'administer site configuration'
-

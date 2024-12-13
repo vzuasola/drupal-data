@@ -1,8 +1,0 @@
-uuid: c0b4574b-e33c-4e3f-9edd-9dfd05f1635c
-langcode: en
-status: true
-dependencies: {  }
-id: account-main-navigation
-label: 'Account Main Navigation'
-description: 'Account Main Navigation'
-locked: false

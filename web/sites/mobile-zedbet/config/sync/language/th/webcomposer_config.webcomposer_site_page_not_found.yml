@@ -1,6 +1,0 @@
-page_not_found_settings_tab__active_tab: edit-products-settings
-page_not_found_product_list: mobile-zedbet
-page_not_found_title_mobile-zedbet: ''
-page_not_found_content_mobile-zedbet:
-  value: "<section><img alt=\"404.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"184\" src=\"https://istg-mobile-zedbet-www.elysium-dfbt.com/en/404.png\" width=\"1921\" />\r\n<h2 class=\"mt-10 mb-5\"><span class=\"text-14\"><strong>อุ๊บส์ นั่นเป็นสิ่งที่ไม่คาดคิด</strong></span></h2>\r\n\r\n<p>ไม่มีหน้านี้. คุณอาจใช้ลิงก์ที่ไม่ถูกต้องหรือพิมพ์ที่อยู่ (URL) ไม่ถูกต้อง. เราจะช่วยให้คุณไปถึง.</p>\r\n\r\n<p>&nbsp;</p>\r\n</section>\r\n\r\n<p><a href=\"/{lang}[query:({tracking})]\" target=\"_self\">ไปที่ล็อบบี้</a></p>\r\n"
-  format: basic_html

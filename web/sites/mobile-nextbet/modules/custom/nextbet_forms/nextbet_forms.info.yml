@@ -1,7 +1,0 @@
-name: Nextbet Forms
-type: module
-description: Config Form for nextbet
-core: 8.x
-package: Nextbet
-dependencies:
-  - webcomposer_form_manager

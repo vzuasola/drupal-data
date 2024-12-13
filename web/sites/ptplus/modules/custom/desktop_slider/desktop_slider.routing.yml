@@ -1,7 +1,0 @@
-desktop_slider.admin_settings:
-  path: 'admin/config/webcomposer/desktop_slider'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Desktop Slider'
-  requirements:
-    _permission: 'administer site configuration'

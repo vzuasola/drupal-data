@@ -1,8 +1,0 @@
-uuid: 2fa9d472-8a9a-4297-a8a3-78295ac06409
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: cashier-menu-ch
-label: 'Cashier Menu CH'
-description: "Cashier Menu Items for CH Language\t"
-locked: false

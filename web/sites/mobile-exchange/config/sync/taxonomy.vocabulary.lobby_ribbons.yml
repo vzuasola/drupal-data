@@ -1,9 +1,0 @@
-uuid: cdd0945f-0eee-4158-9a0b-0e7d65ee2608
-langcode: en
-status: true
-dependencies: {  }
-name: 'Exchange Lobby Ribbons'
-vid: lobby_ribbons
-description: 'List of Ribbons that will appear in lobby thumbnails'
-hierarchy: 0
-weight: 0

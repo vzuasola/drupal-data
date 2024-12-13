@@ -1,9 +1,0 @@
-uuid: 61782a4d-fe54-43d9-b1d6-21e752fcc340
-langcode: zh-hans
-status: true
-dependencies: {  }
-name: 'Games Collection Type'
-vid: games_collection_type
-description: 'List of Games Collection types.'
-hierarchy: 0
-weight: 0

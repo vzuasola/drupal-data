@@ -1,8 +1,0 @@
-uuid: 16f43409-549e-4bac-a013-c751fef87e90
-langcode: th
-status: true
-dependencies: {  }
-id: mobile-footer-th
-label: 'Mobile Footer TH'
-description: TH-AMY
-locked: false

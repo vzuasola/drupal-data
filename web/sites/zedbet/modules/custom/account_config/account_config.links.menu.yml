@@ -1,5 +1,0 @@
-account_config.list:
-  title: 'My Account Configuration'
-  description: 'Configuration for My Account'
-  parent: system.admin_config
-  route_name: account_config.admin_settings

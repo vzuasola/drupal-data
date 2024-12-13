@@ -1,7 +1,0 @@
-lucky_baby_promotions.admin_settings:
-  path: 'admin/config/lucky_baby/promotions'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Promotions'
-  requirements:
-    _permission: 'administer site configuration'

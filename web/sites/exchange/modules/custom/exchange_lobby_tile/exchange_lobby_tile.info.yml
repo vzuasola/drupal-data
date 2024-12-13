@@ -1,5 +1,0 @@
-name: Exchange Lobby Tile
-type: module
-description: Handles Exchange lobby tile configurations
-core: 8.x
-package: Exchange

@@ -1,7 +1,0 @@
-uuid: 1c48f1f5-20aa-46e7-942b-d26cbbdf0ee9
-langcode: ja
-status: true
-dependencies: {  }
-id: dropdown_menu_items
-label: 'Dropdown Menu Items'
-behavior_plugins: {  }

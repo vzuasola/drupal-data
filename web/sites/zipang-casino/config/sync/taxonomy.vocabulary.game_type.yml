@@ -1,9 +1,0 @@
-uuid: 02012174-8077-4bc4-95b0-d6bc1433f3d4
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Type'
-vid: game_type
-description: ''
-hierarchy: 0
-weight: 0

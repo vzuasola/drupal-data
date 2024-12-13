@@ -1,5 +1,0 @@
-entity.lucky_baby_mobile_block_entity.add_form:
-  route_name: entity.lucky_baby_mobile_block_entity.add_form
-  title: 'Add Lucky baby mobile block entity'
-  appears_on:
-    - entity.lucky_baby_mobile_block_entity.collection

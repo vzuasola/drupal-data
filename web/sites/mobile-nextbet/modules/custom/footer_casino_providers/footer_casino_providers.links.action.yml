@@ -1,5 +1,0 @@
-entity.footer_casino_providers.add_form:
-  route_name: entity.footer_casino_providers.add_form
-  title: 'Add Footer Casino Provider'
-  appears_on:
-    - entity.footer_casino_providers.collection

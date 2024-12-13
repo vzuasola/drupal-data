@@ -1,8 +1,0 @@
-uuid: 35f8d4aa-0039-44e5-9303-643ee738bf7b
-langcode: en
-status: true
-dependencies: {  }
-id: cricket-menu
-label: 'Cricket Menu'
-description: ''
-locked: false

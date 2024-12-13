@@ -1,7 +1,0 @@
-username_placeholder: Username
-error_message_invalid_passname: 'Sorry the Username and Password you entered does not match. Please try again.'
-error_message_account_suspended: 'Your account is locked. Please contact customer support.'
-error_message_account_locked: 'Your account is locked. Please contact customer support.'
-autologout_box_title: Reminder
-notification_title: Notification
-notification_window_title: 'Session has timed out'

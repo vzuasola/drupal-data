@@ -1,9 +1,0 @@
-uuid: 89128649-652d-4ddb-928d-ed5d2bdac80b
-langcode: en
-status: true
-dependencies: {  }
-id: in
-label: 'English (India)'
-direction: ltr
-weight: -10
-locked: false

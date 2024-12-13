@@ -1,8 +1,0 @@
-uuid: 86f6ad9d-f0d1-47fe-9e52-adf6f01a1448
-langcode: eu
-status: true
-dependencies: {  }
-id: secondary-menu-eu
-label: 'Secondary Menu EU'
-description: ''
-locked: false

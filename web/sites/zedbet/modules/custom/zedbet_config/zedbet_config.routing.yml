@@ -1,7 +1,0 @@
-zedbet_config.admin_settings:
-  path: 'admin/config/zedbet'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Zedbet Configurations'
-  requirements:
-    _permission: 'administer zedbet config'

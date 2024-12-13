@@ -1,5 +1,0 @@
-entity.game_page_background.add_form:
-  route_name: entity.game_page_background.add_form
-  title: 'Add Game Page Background'
-  appears_on:
-    - entity.game_page_background.collection

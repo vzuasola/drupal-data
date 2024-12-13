@@ -1,8 +1,0 @@
-uuid: 9099c634-fb9d-41c4-8bab-3199f9ab0607
-langcode: in
-status: true
-dependencies: {  }
-id: mobile-post-login-in
-label: 'Mobile Post Login IN'
-description: ''
-locked: false

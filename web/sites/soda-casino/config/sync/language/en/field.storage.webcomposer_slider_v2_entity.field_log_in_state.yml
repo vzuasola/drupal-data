@@ -1,6 +1,0 @@
-settings:
-  allowed_values:
-    -
-      label: 'Pre Login'
-    -
-      label: 'Post Login'

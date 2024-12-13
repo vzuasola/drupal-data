@@ -1,8 +1,0 @@
-uuid: a30e00c9-91b0-453d-9ea8-e9638f63f5d2
-langcode: ja
-status: true
-dependencies: {  }
-name: slider
-label: Slider
-effects: {  }
-pipeline: local_binaries

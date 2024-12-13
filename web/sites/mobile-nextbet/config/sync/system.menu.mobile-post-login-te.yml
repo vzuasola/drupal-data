@@ -1,8 +1,0 @@
-uuid: 2be35f36-2cf1-4234-be61-8089207d7034
-langcode: te
-status: true
-dependencies: {  }
-id: mobile-post-login-te
-label: 'Mobile Post Login TE'
-description: ''
-locked: false

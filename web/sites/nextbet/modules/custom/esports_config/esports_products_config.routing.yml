@@ -1,7 +1,0 @@
-esports_products_config.admin_settings:
-  path: 'admin/esports_products'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Esports Products Configuration'
-  requirements:
-    _permission: 'administer site configuration'

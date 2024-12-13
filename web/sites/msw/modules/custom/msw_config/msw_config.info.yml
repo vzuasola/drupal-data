@@ -1,5 +1,0 @@
-name: MSW Config
-type: module
-description: MSW Configuration
-core: 8.x
-package: MSW

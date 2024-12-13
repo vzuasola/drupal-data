@@ -1,5 +1,0 @@
-entity.lucky_baby_fair_gaming_entity.add_form:
-  route_name: entity.lucky_baby_fair_gaming_entity.add_form
-  title: 'Add Lucky baby fair gaming entity'
-  appears_on:
-    - entity.lucky_baby_fair_gaming_entity.collection

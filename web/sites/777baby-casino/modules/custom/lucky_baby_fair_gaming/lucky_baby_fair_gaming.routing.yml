@@ -1,7 +1,0 @@
-lucky_baby_fair_gaming.admin_settings:
-  path: 'admin/config/lucky_baby/fair_gaming'
-  defaults:
-    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Lucky Baby Fair Gaming'
-  requirements:
-    _permission: 'administer site configuration'

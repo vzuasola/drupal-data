@@ -1,9 +1,0 @@
-uuid: 344d1a27-6dd6-40dc-be3d-aa8a180afdf9
-langcode: en
-status: true
-dependencies: {  }
-name: 'Games Category'
-vid: games_category
-description: 'List of Games Category for Arcade'
-hierarchy: 0
-weight: 0

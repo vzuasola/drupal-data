@@ -1,4 +1,0 @@
-soda_casino_games_search.search_configuration_tab:
-  route_name: soda_casino_games_search.search_configuration
-  title: 'Configure Games Search'
-  base_route: soda_casino_games_search.search_configuration

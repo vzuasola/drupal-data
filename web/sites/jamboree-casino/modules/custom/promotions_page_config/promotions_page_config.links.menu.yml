@@ -1,5 +1,0 @@
-promotions_page_config.list:
-  title: 'Promotions Page Configuration'
-  description: 'Provides a form for defining custom sample configuration'
-  parent: system.admin_config
-  route_name: promotions_page_config.admin_settings

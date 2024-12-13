@@ -1,8 +1,0 @@
-uuid: e89a61d8-1009-4706-8dae-23d502e550f2
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: cashier-menu-sc
-label: 'Cashier Menu SC'
-description: 'Cashier Menu Items for SC Language'
-locked: false

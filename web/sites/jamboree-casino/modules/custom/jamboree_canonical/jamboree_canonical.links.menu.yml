@@ -1,5 +1,0 @@
-jamboree_canonical.jamboree_canonical:
-  title: 'Jamboree Canonical Configuration'
-  description: Jamboree Casino Canonical Configuration
-  parent: system.admin_config
-  route_name: jamboree_canonical.admin_settings

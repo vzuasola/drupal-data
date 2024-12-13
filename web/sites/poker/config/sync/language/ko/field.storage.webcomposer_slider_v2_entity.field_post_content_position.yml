@@ -1,6 +1,0 @@
-settings:
-  allowed_values:
-    2:
-      label: 왼쪽
-    3:
-      label: 오른쪽
